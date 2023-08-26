@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Player
 {
@@ -10,8 +11,9 @@ namespace Player
         [SerializeField] private float speed;
         [SerializeField] private float radius = 0.7f;
         [SerializeField] private float height;
-        private Coroutine movement;
+        [SerializeField] private float rotationSpeed = 10f;
         [SerializeField] private bool activateGizmos;
+        private Coroutine movement;
 
 
         private void OnEnable()
@@ -50,6 +52,7 @@ namespace Player
                 {
                     transform.position += moveDir * (time * speed);
                 }
+                Rotation(moveDir);
 
                 yield return null;
             }
@@ -102,6 +105,10 @@ namespace Player
             return Physics.CapsuleCast(position, position + Vector3.up * height, radius, moveDir, speed * time);
         }
 
+        private void Rotation(Vector3 moveDir)
+        {
+            transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime* rotationSpeed);
+        }
         private void OnDrawGizmosSelected()
         {
             if (!activateGizmos) return;
