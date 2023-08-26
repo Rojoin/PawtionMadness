@@ -47,10 +47,6 @@ namespace GameInputs
             {
                 OnInteractChannel.RaiseEvent();
             }
-            else if (ctx.canceled)
-            {
-                OnInteractChannel.RaiseEvent();
-            }
         }
 
         public void OnPauseMode(InputAction.CallbackContext ctx)
