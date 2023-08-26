@@ -47,12 +47,12 @@ namespace Player
             {
                 Vector3 moveDir = new Vector3(dir.x, 0, dir.y);
                 float time = Time.deltaTime;
+                Rotation(moveDir);
                 bool canMove = CanMove(dir, time, ref moveDir);
                 if (canMove)
                 {
                     transform.position += moveDir * (time * speed);
                 }
-                Rotation(moveDir);
 
                 yield return null;
             }
@@ -107,8 +107,9 @@ namespace Player
 
         private void Rotation(Vector3 moveDir)
         {
-            transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime* rotationSpeed);
+            transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotationSpeed);
         }
+
         private void OnDrawGizmosSelected()
         {
             if (!activateGizmos) return;
