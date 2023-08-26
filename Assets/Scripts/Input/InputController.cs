@@ -9,9 +9,9 @@ namespace GameInputs
         [Header("Inputs")]
         [SerializeField] private Vector2ChannelSO OnMoveChannel;
         [SerializeField] private Vector2ChannelSO OnGridMoveChannel;
-        [SerializeField] private VoidChannelSO OnRollChannel;
+        //[SerializeField] private VoidChannelSO OnRollChannel;
         [SerializeField] private VoidChannelSO OnPauseChannel;
-        [SerializeField] private BoolChannelSO OnActionChannel;
+        [SerializeField] private VoidChannelSO OnInteractChannel;
         private Vector2 previousGridInput = Vector2.zero;
 
         public void OnMove(InputAction.CallbackContext ctx)
@@ -31,26 +31,25 @@ namespace GameInputs
             {
                 OnGridMoveChannel.RaiseEvent(Vector2.zero);
             }
-            
         }
 
-        public void OnRollInput(InputAction.CallbackContext ctx)
+        // public void OnRollInput(InputAction.CallbackContext ctx)
+        // {
+        //     if (ctx.performed)
+        //     {
+        //         OnRollChannel.RaiseEvent();
+        //     }
+        // }
+
+        public void OnInteract(InputAction.CallbackContext ctx)
         {
             if (ctx.performed)
             {
-                OnRollChannel.RaiseEvent();
-            }
-        }
-
-        public void OnAction(InputAction.CallbackContext ctx)
-        {
-            if (ctx.performed)
-            {
-                OnActionChannel.RaiseEvent(true);
+                OnInteractChannel.RaiseEvent();
             }
             else if (ctx.canceled)
             {
-                OnActionChannel.RaiseEvent(false);
+                OnInteractChannel.RaiseEvent();
             }
         }
 
