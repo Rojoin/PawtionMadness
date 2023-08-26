@@ -1,4 +1,5 @@
 ﻿using System;
+using Interfaces;
 using UnityEngine;
 
 namespace Player
@@ -23,9 +24,12 @@ namespace Player
 
         public void OnInteract()
         {
-            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, _interactDistance))
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, _interactDistance) )
             {
-                Debug.Log(raycastHit);
+                if (raycastHit.transform.TryGetComponent<ITableInteractable>(out var interactable))
+                {
+                    interactable.OnInteraction();
+                }
             }
 
 
