@@ -14,8 +14,6 @@ namespace Health
 
         private float currentHealth;
 
-        public event Action OnDeath;
-
         public float MaxHealth { get => maxHealth; set => maxHealth = value; }
         public bool IsAlive { get => isAlive; set => isAlive = value; }
         public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
@@ -37,7 +35,7 @@ namespace Health
             if (CurrentHealth <= 0)
             {
                 IsAlive = false;
-                OnDeath();
+                Destroy(gameObject);
             }
         }
 
