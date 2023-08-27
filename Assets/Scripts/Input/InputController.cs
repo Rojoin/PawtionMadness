@@ -12,6 +12,7 @@ namespace GameInputs
         //[SerializeField] private VoidChannelSO OnRollChannel;
         [SerializeField] private VoidChannelSO OnPauseChannel;
         [SerializeField] private VoidChannelSO OnInteractChannel;
+        [SerializeField] private VoidChannelSO OnBackInteractChannel;
         private Vector2 previousGridInput = Vector2.zero;
 
         public void OnMove(InputAction.CallbackContext ctx)
@@ -46,6 +47,13 @@ namespace GameInputs
             if (ctx.performed)
             {
                 OnInteractChannel.RaiseEvent();
+            }
+        } 
+        public void OnBackInteract(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                OnBackInteractChannel.RaiseEvent();
             }
         }
 
