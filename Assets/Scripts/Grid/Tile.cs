@@ -22,7 +22,10 @@ namespace Grid
 
         public void SetTurret(BaseTurret turret)
         {
-            _turret = turret;
+            if (turret)
+            {
+                _turret = Instantiate(turret, transform.position, Quaternion.identity, transform);
+            }
         }
 
         public bool IsAvailable()

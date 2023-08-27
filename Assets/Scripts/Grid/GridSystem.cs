@@ -44,6 +44,10 @@ namespace Grid
             {
                 tile.SetTurret(turret);
             }
+            else
+            {
+                Debug.Log("There's already a Turret Here");
+            }
         }
     }
 }
