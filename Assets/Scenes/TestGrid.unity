@@ -1836,8 +1836,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns: 7
   rows: 3
-  deltaX: 2
-  deltaY: 4
+  deltaX: 1
+  deltaY: 1
   grid: {fileID: 0}
   cube: {fileID: 7904715573084830938, guid: 3a442b7b7f53a574f95ae323ac9c5b28, type: 3}
 --- !u!156049354 &1270615632
@@ -1848,8 +1848,8 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270615629}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 1}
-  m_CellGap: {x: 0, y: 0, z: 0}
+  m_CellSize: {x: 2, y: 1, z: 2}
+  m_CellGap: {x: 0.8, y: 0, z: 0.8}
   m_CellLayout: 0
   m_CellSwizzle: 0
 --- !u!114 &1270615633
@@ -2180,26 +2180,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521041421}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1593606849 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1334040627386593003, guid: 97bb2532fcc9f3d44a575b5a7114e4ce, type: 3}
-  m_PrefabInstance: {fileID: 8262279103748227858}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1593606856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593606849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56ee66915084a3841897f8d1c6c9dcd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pickable: {fileID: 0}
-  _interactDistance: 2.5
-  InteractChannel: {fileID: 11400000, guid: 38d87044a7ab8284a8146a0e7c7fc405, type: 2}
 --- !u!1 &1640281990
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,8 +2453,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1334040627386593003, guid: 97bb2532fcc9f3d44a575b5a7114e4ce, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1593606856}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97bb2532fcc9f3d44a575b5a7114e4ce, type: 3}
