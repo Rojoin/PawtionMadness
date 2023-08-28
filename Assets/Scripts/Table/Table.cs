@@ -9,5 +9,10 @@ namespace Table
         {
             Debug.Log("Interaction!", gameObject);
         }
+
+        public bool TryInteract()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

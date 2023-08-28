@@ -9,15 +9,16 @@ namespace Table
     {
         [SerializeField] private VoidChannelSO ChangeToGridChannel;
         [SerializeField] private VoidChannelSO ChangeToPlayerChannel;
-        [SerializeField]private GridController _grid;
-        [SerializeField]private PlayerMovement _playerMovement;
-        [SerializeField]private PlayerInteract _playerInteract;
+        [SerializeField] private GridController _grid;
+        [SerializeField] private PlayerMovement _playerMovement;
+        [SerializeField] private PlayerInteract _playerInteract;
 
         private void OnEnable()
         {
             ChangeToGridChannel.Subscribe(ChangeControllerToGrid);
             ChangeToPlayerChannel.Subscribe(ChangeControllerToMovement);
-        } 
+        }
+
         private void OnDisable()
         {
             ChangeToGridChannel.Unsubscribe(ChangeControllerToGrid);
@@ -30,6 +31,7 @@ namespace Table
             _playerMovement.enabled = false;
             _playerInteract.enabled = false;
         }
+
         public void ChangeControllerToMovement()
         {
             _grid.enabled = false;
