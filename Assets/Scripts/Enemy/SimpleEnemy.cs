@@ -13,6 +13,9 @@ public class SimpleEnemy : BaseEnemy
     {
         stopMoving = false;
     }
+    //TODO:Cambiar logica para no utiizar rb
+    //TODO:Cambiar logica update a IEnumerator
+    //TODO:Hacer FST
     private void Update()
     {
         if (!canAttack) 
