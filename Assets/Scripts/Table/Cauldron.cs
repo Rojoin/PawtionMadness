@@ -57,6 +57,9 @@ namespace Table
                     AddIngredientToCook(playerInventory.GetPickable());
                     playerInventory.DestroyPickable();
                     break;
+                case CauldronState.Cooking when !playerInventory.hasPickable():
+                case CauldronState.Empty when !playerInventory.hasPickable():
+                    break;
             }
         }
 
@@ -74,7 +77,7 @@ namespace Table
             currentTime = 0.0f;
             timerMax = 0.0f;
             image.fillAmount = 0;
-            state = CauldronState.Done;
+            state = CauldronState.Empty;
             image.enabled = false;
         }
     }

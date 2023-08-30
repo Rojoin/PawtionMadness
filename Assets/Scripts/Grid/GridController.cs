@@ -95,6 +95,7 @@ namespace Grid
             {
                 currentTile.SetTurret(_baseTurret);
                 playerInventory.DestroyPickable();
+                OnBackChannel();
             }
         }
 
