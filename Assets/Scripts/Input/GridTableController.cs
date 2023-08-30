@@ -1,5 +1,6 @@
 ﻿using System;
 using Grid;
+using Player;
 using UnityEngine;
 
 namespace Table
@@ -7,7 +8,7 @@ namespace Table
     public class GridTableController : Table
     {
         [SerializeField] private VoidChannelSO ChangeToGridChannel;
-        public override void OnInteraction()
+        public override void OnInteraction(PlayerInventory playerInventory = null)
         {
             ChangeToGridChannel.RaiseEvent();
         }

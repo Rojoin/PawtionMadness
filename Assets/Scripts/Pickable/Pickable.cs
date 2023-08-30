@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 
-public class Pickable : MonoBehaviour
+namespace Pickable
 {
-    private GameObject model;
-    
+    public abstract class Pickable : MonoBehaviour
+    {
+        [SerializeField]protected GameObject model;
+        public float timeToCook;
+    }
 }

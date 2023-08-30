@@ -1,8 +1,10 @@
-﻿namespace Interfaces
+﻿using Player;
+
+namespace Interfaces
 {
     public interface ITableInteractable
     {
-        void OnInteraction();
+        void OnInteraction(PlayerInventory playerInventory = null);
         bool TryInteract();
     }
 }

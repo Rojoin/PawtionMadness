@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
   shootSpeed: 1
-  attackDamage: 10
+  attackDamage: 25
   projectile: {fileID: 6930803183062165713, guid: df5872770e60cd14b81bad29e053b7be, type: 3}
   initialShootPosition: {fileID: 3865119762721035764}
   projectileSpeed: 500
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67de8d984102dc745b1d277193753fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 100
   isAlive: 0
 --- !u!65 &263899017366062727
 BoxCollider:

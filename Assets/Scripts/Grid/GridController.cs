@@ -11,6 +11,7 @@ namespace Grid
         private GridSystem grid;
         private Tile currentTile;
         [SerializeField] private BaseTurret _baseTurret;
+        [SerializeField] private PlayerInventory playerInventory;
         private Vector2Int cursorPos = new Vector2Int(0, 0);
         private Vector2Int previousInput = new Vector2Int(0, 0);
         [SerializeField] private Vector2ChannelSO movementChannel;
@@ -28,11 +29,15 @@ namespace Grid
         {
             cursorPos = new Vector2Int(0, 0);
             SelectCurrentTile();
+     
+        }
+
+        private void OnEnable()
+        {
             movementChannel.Subscribe(OnMove);
             interactChannel.Subscribe(OnInteract);
             backInputChannel.Subscribe(OnBackChannel);
         }
-
 
         private void OnDisable()
         {
@@ -86,12 +91,13 @@ namespace Grid
         /// </summary>
         private void OnInteract()
         {
-            if (currentTile.IsAvailable())
+            if (currentTile.IsAvailable() && playerInventory.hasPotion())
             {
                 currentTile.SetTurret(_baseTurret);
+                playerInventory.DestroyPickable();
             }
-
         }
+
         /// <summary>
         /// Deactivates the GridController
         /// </summary>

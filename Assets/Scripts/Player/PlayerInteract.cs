@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using Interfaces;
 using UnityEngine;
 
@@ -6,9 +6,11 @@ namespace Player
 {
     public class PlayerInteract : MonoBehaviour
     {
-        [SerializeField] private Pickable _pickable;
+        [SerializeField] private PlayerInventory _playerInventory;
+        
         [SerializeField] private float _interactDistance;
         [SerializeField] private VoidChannelSO InteractChannel;
+     
 
 
         private void OnEnable()
@@ -28,14 +30,12 @@ namespace Player
             {
                 if (raycastHit.transform.TryGetComponent<ITableInteractable>(out var interactable))
                 {
-                    interactable.OnInteraction();
+                    interactable.OnInteraction(_playerInventory);
                 }
             }
-
-
-            if (_pickable == null)
-            {
-            }
+            
+         
         }
+      
     }
 }
