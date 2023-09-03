@@ -1,6 +1,19 @@
-﻿namespace Table
+﻿using UnityEngine;
+
+namespace Table
 {
-    class TrashCan : Table
+    public class TrashCan : Table
     {
+        public override void OnInteraction(PlayerInventory playerInventory = null)
+        {
+            if (playerInventory.hasPickable())
+            {
+                playerInventory.DestroyPickable();
+            }
+            else
+            {
+                Debug.Log("The player doesn´t have an Item");
+            }
+        }
     }
 }
