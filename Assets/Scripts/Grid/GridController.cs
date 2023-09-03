@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Health;
 using Turret;
 using UnityEngine;
 
@@ -29,7 +30,6 @@ namespace Grid
         {
             cursorPos = new Vector2Int(0, 0);
             SelectCurrentTile();
-     
         }
 
         private void OnEnable()
@@ -95,6 +95,11 @@ namespace Grid
             {
                 currentTile.SetTurret(_baseTurret);
                 playerInventory.DestroyPickable();
+                OnBackChannel();
+            }
+            else if (!currentTile.IsAvailable() && !playerInventory.hasPotion())
+            {
+                currentTile.DestroyTurret();
                 OnBackChannel();
             }
         }

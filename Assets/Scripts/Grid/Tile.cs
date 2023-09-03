@@ -1,4 +1,5 @@
 ﻿using System;
+using Health;
 using Turret;
 using UnityEngine;
 
@@ -27,7 +28,15 @@ namespace Grid
                 _turret = Instantiate(turret, transform.position, Quaternion.identity, transform);
             }
         }
-
+        
+        public void DestroyTurret()
+        {
+            if(_turret)
+            {
+                var turretHealth = _turret.GetComponent<EntityHealth>();
+                turretHealth.ReceiveDamage(turretHealth.CurrentHealth);
+            }
+        }
         public bool IsAvailable()
         {
             return _turret == null;
