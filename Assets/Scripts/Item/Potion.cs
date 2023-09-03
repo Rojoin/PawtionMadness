@@ -1,4 +1,4 @@
-namespace Pickable
+namespace Item
 {
     public class Potion : Pickable
     {

@@ -1,5 +1,5 @@
 using System;
-using Pickable;
+using Item;
 using Player;
 using UnityEngine;
 using UnityEngine.UI;
@@ -63,7 +63,7 @@ namespace Table
             }
         }
 
-        private void AddIngredientToCook(Pickable.Pickable getPickable)
+        private void AddIngredientToCook(Item.Pickable getPickable)
         {
             if (!image.enabled)
             {

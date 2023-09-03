@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Pickable
+namespace Item
 {
     public abstract class Pickable : MonoBehaviour
     {

@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using Pickable;
+using Item;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private Transform pickableSpot;
-    [SerializeField] private Pickable.Pickable _pickable;
+    [SerializeField] private Item.Pickable _pickable;
 
 
     public bool hasPickable()
@@ -14,7 +14,7 @@ public class PlayerInventory : MonoBehaviour
         return _pickable != null;
     }
 
-    public void SetPickable(Pickable.Pickable item)
+    public void SetPickable(Item.Pickable item)
     {
         _pickable = Instantiate(item, pickableSpot.position, Quaternion.identity, pickableSpot);
     }
@@ -27,5 +27,5 @@ public class PlayerInventory : MonoBehaviour
 
     public bool hasPotion() => _pickable is Potion;
 
-    public Pickable.Pickable GetPickable() => _pickable;
+    public Item.Pickable GetPickable() => _pickable;
 }
