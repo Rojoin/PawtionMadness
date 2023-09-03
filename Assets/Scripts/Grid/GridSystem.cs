@@ -21,6 +21,10 @@ namespace Grid
 
         private void Awake()
         {
+            foreach (var tile in tileList)
+            {
+                Destroy(tile);
+            }
             grid = GetComponent<UnityEngine.Grid>();
             tileSet = new Tile[columns, rows];
             tileList = new List<GameObject>();
@@ -55,6 +59,28 @@ namespace Grid
             else
             {
                 Debug.Log("There's already a Turret Here");
+            }
+        }
+        [ContextMenu("Create MockUp of grid")]
+        private void CreateGrid()
+        {
+            foreach (var tile in tileList)
+            {
+                DestroyImmediate(tile);
+            }
+            grid = GetComponent<UnityEngine.Grid>();
+            tileSet = new Tile[columns, rows];
+            tileList = new List<GameObject>();
+            for (int i = 0; i < columns; i++)
+            {
+                for (int j = 0; j < rows; j++)
+                {
+                    var worldPos = grid.GetCellCenterWorld(new Vector3Int(i * deltaX, 0, (j - 1) * deltaY));
+                    var tile = Instantiate(cube, worldPos, Quaternion.identity, this.transform);
+                    tileList.Add(tile.gameObject);
+                    tileSet[i, j] = tile;
+                    tileSet[i, j].SetTurret(null);
+                }
             }
         }
     }
