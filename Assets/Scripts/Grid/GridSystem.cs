@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Turret;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,22 +16,28 @@ namespace Grid
         [SerializeField] private int deltaY = 4;
         [SerializeField] private UnityEngine.Grid grid;
         [SerializeField] private Tile cube;
+        [SerializeField] private List<GameObject> tileList;
+
 
         private void Awake()
         {
             grid = GetComponent<UnityEngine.Grid>();
             tileSet = new Tile[columns, rows];
+            tileList = new List<GameObject>();
             for (int i = 0; i < columns; i++)
             {
                 for (int j = 0; j < rows; j++)
                 {
                     var worldPos = grid.GetCellCenterWorld(new Vector3Int(i * deltaX, 0, (j - 1) * deltaY));
                     var tile = Instantiate(cube, worldPos, Quaternion.identity, this.transform);
+                    tileList.Add(tile.gameObject);
                     tileSet[i, j] = tile;
                     tileSet[i, j].SetTurret(null);
                 }
             }
         }
+
+    
 
         public Tile GetTile(Vector2Int coord)
         {
