@@ -45,7 +45,7 @@ public class SimpleEnemy : BaseEnemy
         transform.position += transform.forward * (Time.deltaTime * MoveSpeed);
     }
 
-    private void Attack(EntityHealth targetDamage)
+    private void Attack(IHealthComponent targetDamage)
     {
         if (canAttack)
         {
@@ -54,7 +54,7 @@ public class SimpleEnemy : BaseEnemy
             timer -= timerCooldown;
         }
 
-        if (!targetDamage.IsAlive)
+        if (!targetDamage.IsAlive())
         {
             stopMoving = false;
         }
@@ -67,7 +67,7 @@ public class SimpleEnemy : BaseEnemy
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, AttackRange))
         {
-            if (hit.collider.gameObject.TryGetComponent<EntityHealth>(out var entity))
+            if (hit.collider.gameObject.TryGetComponent<IHealthComponent>(out var entity))
             {
                 stopMoving = true;
                 if (canAttack)

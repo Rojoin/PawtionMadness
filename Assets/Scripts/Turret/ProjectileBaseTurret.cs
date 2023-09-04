@@ -14,7 +14,10 @@ public class ProjectileBaseTurret : AttackTurret
         if (ShootSpeedTimer > ShootSpeed)
         {
             ShootSpeedTimer = 0;
-            Shoot();
+            if (DetectEntity())
+            {
+            }
+                Shoot();
         }
     }
     public override void Shoot()

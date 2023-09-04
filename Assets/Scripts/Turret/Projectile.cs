@@ -26,7 +26,7 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("enemy") && collision.gameObject.TryGetComponent<EntityHealth>(out var entity))
+        if (collision.gameObject.TryGetComponent<IHealthComponent>(out var entity))
         {
             entity.ReceiveDamage(Damage);
             Destroy(gameObject);

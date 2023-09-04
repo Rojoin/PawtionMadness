@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface IHealthComponent
 {
-   public void ReceiveDamage();
-   public void Death();
+    public void ReceiveDamage(float damage);
+    public void Death();
+    public bool IsAlive();
 }
