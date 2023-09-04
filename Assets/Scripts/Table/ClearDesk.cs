@@ -14,6 +14,7 @@ namespace Table
             {
                 _pickable = Instantiate(playerInventory.GetPickable(), _itemPos.position, Quaternion.identity,
                     _itemPos);
+                _pickable.TransferData(playerInventory.GetPickable());
                 playerInventory.DestroyPickable();
             }
             else if (_pickable && !playerInventory.hasPickable())

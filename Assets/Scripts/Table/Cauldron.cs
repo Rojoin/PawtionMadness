@@ -13,6 +13,7 @@ namespace Table
         Cooking,
         Done
     }
+
     public class Cauldron : Table
     {
         [SerializeField] private Image image;
@@ -31,7 +32,6 @@ namespace Table
             if (state == CauldronState.Cooking)
             {
                 currentTime += Time.deltaTime;
-                Debug.Log(currentTime);
                 if (currentTime > timerMax)
                 {
                     state = CauldronState.Done;
@@ -39,8 +39,6 @@ namespace Table
 
                 image.fillAmount = currentTime / timerMax;
             }
-
-            
         }
 
         public override void OnInteraction(PlayerInventory playerInventory = null)
@@ -51,27 +49,26 @@ namespace Table
                     ResetCauldron();
                     playerInventory.SetPickable(potion);
                     break;
-                case CauldronState.Done when playerInventory.hasPickable():
-                case CauldronState.Cooking when playerInventory.hasPickable():
-                case CauldronState.Empty when playerInventory.hasPickable():
-                    AddIngredientToCook(playerInventory.GetPickable());
+                case CauldronState.Done when playerInventory.hasIngredient():
+                case CauldronState.Cooking when playerInventory.hasIngredient():
+                case CauldronState.Empty when playerInventory.hasIngredient():
+                    AddIngredientToCook(playerInventory.GetPickable() as Ingredient);
                     playerInventory.DestroyPickable();
-                    break;
-                case CauldronState.Cooking when !playerInventory.hasPickable():
-                case CauldronState.Empty when !playerInventory.hasPickable():
                     break;
             }
         }
 
-        private void AddIngredientToCook(Item.Pickable getPickable)
+        private void AddIngredientToCook(Ingredient getPickable)
         {
             if (!image.enabled)
             {
                 image.enabled = true;
             }
-            timerMax += getPickable.timeToCook;
+
+            timerMax += getPickable.IsProcessed() ? getPickable.timeToCook / 2.0f : getPickable.timeToCook;
             state = CauldronState.Cooking;
         }
+
         private void ResetCauldron()
         {
             currentTime = 0.0f;

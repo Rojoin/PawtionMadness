@@ -16,7 +16,14 @@ public class PlayerInventory : MonoBehaviour
 
     public void SetPickable(Item.Pickable item)
     {
-        _pickable = Instantiate(item, pickableSpot.position, Quaternion.identity, pickableSpot);
+            _pickable = Instantiate(item, pickableSpot.position, Quaternion.identity, pickableSpot);
+            _pickable.TransferData(item);
+    }
+
+    public void SetPickableExt(Item.Pickable item)
+    {
+        item.transform.SetParent(pickableSpot);
+        _pickable = item;
     }
 
     public void DestroyPickable()
@@ -26,6 +33,7 @@ public class PlayerInventory : MonoBehaviour
     }
 
     public bool hasPotion() => _pickable is Potion;
+    public bool hasIngredient() => _pickable is Ingredient;
 
     public Item.Pickable GetPickable() => _pickable;
 }
