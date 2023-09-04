@@ -22,7 +22,7 @@ public class ProjectileBaseTurret : AttackTurret
         for (int i = 0; i < projectileQuantity; i++)
         {
             Projectile newProjectile = Instantiate(projectile, initialShootPosition.position, initialShootPosition.rotation);
-            newProjectile.GetComponent<Rigidbody>().AddForce(initialShootPosition.forward * projectileSpeed, ForceMode.Acceleration);
+            newProjectile.ProjectileSpeed = projectileSpeed;
             newProjectile.Damage = AttackDamage;
         }
     }

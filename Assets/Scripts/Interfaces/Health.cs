@@ -10,9 +10,8 @@ namespace Health
     public class EntityHealth : MonoBehaviour
     {
         [SerializeField] private float maxHealth;
+        [SerializeField] private float currentHealth;
         [SerializeField] private bool isAlive;
-
-        private float currentHealth;
 
         public float MaxHealth { get => maxHealth; set => maxHealth = value; }
         public bool IsAlive { get => isAlive; set => isAlive = value; }

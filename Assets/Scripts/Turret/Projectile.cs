@@ -6,9 +6,11 @@ public class Projectile : MonoBehaviour
     [SerializeField] private GameObject Prefab;
     [SerializeField] private float lifeTime;
     private float lifeTimer;
+    private float projectileSpeed;
     private float damage;
 
     public float Damage { get => damage; set => damage = value; }
+    public float ProjectileSpeed { get => projectileSpeed; set => projectileSpeed = value; }
 
     private void Update()
     {
@@ -18,6 +20,8 @@ public class Projectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        transform.position += transform.forward * (Time.deltaTime * ProjectileSpeed);
     }
 
     private void OnCollisionEnter(Collision collision)

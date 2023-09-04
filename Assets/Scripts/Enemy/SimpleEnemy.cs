@@ -1,6 +1,7 @@
 using UnityEngine;
 using Enemy;
 using Health;
+using Palmmedia.ReportGenerator.Core.CodeAnalysis;
 
 public class SimpleEnemy : BaseEnemy
 {
@@ -12,19 +13,24 @@ public class SimpleEnemy : BaseEnemy
     private void Awake()
     {
         stopMoving = false;
+        canAttack = false;
+        timerCooldown = AttackSpeed;
     }
-    //TODO:Cambiar logica para no utiizar rb
+
     //TODO:Cambiar logica update a IEnumerator
     //TODO:Hacer FST
     private void Update()
     {
-        if (!canAttack) 
+        DetectEntity();
+
+        if (!canAttack)
         {
             timer += Time.deltaTime;
+            Debug.Log(timer);
         }
 
-        if (timer > timerCooldown) 
-        { 
+        if (timer > timerCooldown)
+        {
             canAttack = true;
         }
 
@@ -36,14 +42,17 @@ public class SimpleEnemy : BaseEnemy
 
     public void Movement()
     {
-        Rigidbody.velocity = transform.forward * MoveSpeed;
+        transform.position += transform.forward * (Time.deltaTime * MoveSpeed);
     }
 
     private void Attack(EntityHealth targetDamage)
     {
-        targetDamage.ReceiveDamage(Damage);
-        canAttack = false;
-        timer -= timerCooldown;
+        if (canAttack)
+        {
+            targetDamage.ReceiveDamage(Damage);
+            canAttack = false;
+            timer -= timerCooldown;
+        }
 
         if (!targetDamage.IsAlive)
         {
@@ -53,15 +62,25 @@ public class SimpleEnemy : BaseEnemy
         Debug.Log("Attack");
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void DetectEntity()
     {
-        if (collision.gameObject.TryGetComponent<EntityHealth>(out var entity))
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, AttackRange))
         {
-            stopMoving = true;
-            if (canAttack)
+            if (hit.collider.gameObject.TryGetComponent<EntityHealth>(out var entity))
             {
-                Attack(entity);
+                stopMoving = true;
+                if (canAttack)
+                {
+                    Attack(entity);
+                }
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + transform.forward * AttackRange);
     }
 }
