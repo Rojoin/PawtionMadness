@@ -1,4 +1,5 @@
-﻿using Item;
+﻿using System;
+using Item;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,13 @@ namespace Table
         [SerializeField] private Ingredient ingredient;
         [SerializeField] private Transform _itemPos;
          private float cutCounter;
-        public override void OnInteraction(PlayerInventory playerInventory = null)
+
+         public void Awake()
+         {
+             ResetCount();
+         }
+
+         public override void OnInteraction(PlayerInventory playerInventory = null)
         {
             if (!playerInventory.hasPickable())
             {
@@ -32,6 +39,7 @@ namespace Table
                     _itemPos);
                 playerInventory.DestroyPickable();
                 progressBar.enabled = true;
+                progressBar.fillAmount = 0;
             }
         }
 
