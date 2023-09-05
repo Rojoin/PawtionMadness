@@ -33,8 +33,7 @@ namespace Grid
         {
             if(_turret)
             {
-                var turretHealth = _turret.GetComponent<EntityHealth>();
-                turretHealth.ReceiveDamage(turretHealth.CurrentHealth);
+                _turret.ReceiveDamage(_turret.CurrentHealth);
             }
         }
         public bool IsAvailable()

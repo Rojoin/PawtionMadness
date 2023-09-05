@@ -1,7 +1,6 @@
 using UnityEngine;
 using Enemy;
 using Health;
-using Palmmedia.ReportGenerator.Core.CodeAnalysis;
 
 public class SimpleEnemy : BaseEnemy
 {
