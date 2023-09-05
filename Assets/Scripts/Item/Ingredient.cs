@@ -1,3 +1,7 @@
+
+using Turret;
+using UnityEngine;
+
 namespace Item
 {
     public class Ingredient : Pickable
@@ -5,6 +9,7 @@ namespace Item
         public float timeToCook;
         public int interactionToProcesses;
         private bool isProcessed = false;
+       public BaseTurret turret;
 
         public bool IsProcessed() => isProcessed;
 

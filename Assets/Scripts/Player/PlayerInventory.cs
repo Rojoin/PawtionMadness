@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using Item;
+using Turret;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private Transform pickableSpot;
     [SerializeField] private Item.Pickable _pickable;
+    [SerializeField] private BaseTurret _turret;
 
 
     public bool hasPickable()
@@ -36,4 +38,14 @@ public class PlayerInventory : MonoBehaviour
     public bool hasIngredient() => _pickable is Ingredient;
 
     public Item.Pickable GetPickable() => _pickable;
+
+    public void SetTurret(BaseTurret turret)
+    {
+        this._turret = turret;
+    }
+
+    public BaseTurret GetTurret()
+    {
+        return _turret;
+    }
 }

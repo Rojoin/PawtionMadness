@@ -11,7 +11,6 @@ namespace Grid
     {
         private GridSystem grid;
         private Tile currentTile;
-        [SerializeField] private BaseTurret _baseTurret;
         [SerializeField] private PlayerInventory playerInventory;
         private Vector2Int cursorPos = new Vector2Int(0, 0);
         private Vector2Int previousInput = new Vector2Int(0, 0);
@@ -93,7 +92,7 @@ namespace Grid
         {
             if (currentTile.IsAvailable() && playerInventory.hasPotion())
             {
-                currentTile.SetTurret(_baseTurret);
+                currentTile.SetTurret(playerInventory.GetTurret());
                 playerInventory.DestroyPickable();
                 OnBackChannel();
             }
