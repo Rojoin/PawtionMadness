@@ -5433,6 +5433,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
+      propertyPath: baseEnemy
+      value: 
+      objectReference: {fileID: 1551146121632253173, guid: 2799e6bdaa7d8b54ba4f59a0370d6896, type: 3}
+    - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
+      propertyPath: enemyTypes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
+      propertyPath: EnemyTypeList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
+      propertyPath: EnemyTypeList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: d0091abd3ac8fef4f81e6b41a62d88cf, type: 2}
+    - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
+      propertyPath: enemyTypes.Array.data[0].Type
+      value: 
+      objectReference: {fileID: 11400000, guid: d0091abd3ac8fef4f81e6b41a62d88cf, type: 2}
+    - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
+      propertyPath: enemyTypes.Array.data[0].probability
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2997678524761425701, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
       propertyPath: m_Name
       value: EnemySpawner 1

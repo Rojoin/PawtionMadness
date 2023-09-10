@@ -25,7 +25,6 @@ public class SimpleEnemy : BaseEnemy
         if (!canAttack)
         {
             timer += Time.deltaTime;
-            Debug.Log(timer);
         }
 
         if (timer > timerCooldown)
