@@ -7,7 +7,8 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private Transform pickableSpot;
-    [SerializeField] private Item.Pickable _pickable;
+    [SerializeField] private Pickable _pickable;
+    [SerializeField] private KitchenObjectSO kitchenObject;
     [SerializeField] private BaseTurret _turret;
 
 
@@ -18,8 +19,9 @@ public class PlayerInventory : MonoBehaviour
 
     public void SetPickable(Item.Pickable item)
     {
-            _pickable = Instantiate(item, pickableSpot.position, Quaternion.identity, pickableSpot);
-            _pickable.TransferData(item);
+            item.SetNewParent(this.pickableSpot);
+            _pickable = item;
+          
     }
 
     public void SetPickableExt(Item.Pickable item)
@@ -31,6 +33,10 @@ public class PlayerInventory : MonoBehaviour
     public void DestroyPickable()
     {
         Destroy(_pickable.gameObject);
+        _pickable = null;
+    } 
+    public void NullPickable()
+    {
         _pickable = null;
     }
 

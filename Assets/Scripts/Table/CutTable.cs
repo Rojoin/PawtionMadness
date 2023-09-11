@@ -7,7 +7,7 @@ namespace Table
 {
     public class CutTable : Table
     {
-        
+        [SerializeField] private CuttingRecipeSO[] _cuttingRecipeArray;
         [SerializeField] private Image progressBar;
         [SerializeField] private Ingredient ingredient;
         [SerializeField] private Transform _itemPos;
@@ -22,22 +22,22 @@ namespace Table
         {
             if (!playerInventory.hasPickable())
             {
-                if (cutCounter < ingredient.interactionToProcesses)
+                if (cutCounter < ingredient.InteractionToProcesses)
                 {
                     CutIngredient();
                 }
                 else
                 {
                     playerInventory.SetPickable(ingredient);
-                    Destroy(ingredient.gameObject);
+                    ingredient = null;
                     ResetCount();
                 }
             }
             else if (playerInventory.hasIngredient())
             {
-                ingredient = Instantiate(playerInventory.GetPickable() as Ingredient, _itemPos.position, Quaternion.identity,
-                    _itemPos);
-                playerInventory.DestroyPickable();
+                playerInventory.GetPickable().SetNewParent(_itemPos);
+                ingredient = playerInventory.GetPickable() as Ingredient;
+                playerInventory.NullPickable();
                 progressBar.enabled = true;
                 progressBar.fillAmount = 0;
             }
@@ -57,7 +57,7 @@ namespace Table
                 progressBar.enabled = true;
             }
             cutCounter++;
-            float progressBarFillAmount = (cutCounter / ingredient.interactionToProcesses);
+            float progressBarFillAmount = (cutCounter / ingredient.InteractionToProcesses);
             progressBar.fillAmount = progressBarFillAmount;
             if (progressBarFillAmount == 1)
             {

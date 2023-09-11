@@ -12,15 +12,14 @@ namespace Table
         {
             if (!_pickable && playerInventory.hasPickable())
             {
-                _pickable = Instantiate(playerInventory.GetPickable(), _itemPos.position, Quaternion.identity,
-                    _itemPos);
-                _pickable.TransferData(playerInventory.GetPickable());
-                playerInventory.DestroyPickable();
+                playerInventory.GetPickable().SetNewParent(_itemPos);
+                _pickable = playerInventory.GetPickable();
+                playerInventory.NullPickable();
             }
             else if (_pickable && !playerInventory.hasPickable())
             {
                 playerInventory.SetPickable(_pickable);
-                Destroy(_pickable.gameObject);
+                _pickable = null;
             }
         }
     }

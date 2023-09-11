@@ -1,15 +1,17 @@
 
 using Turret;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Item
 {
     public class Ingredient : Pickable
     {
-        public float timeToCook;
-        public int interactionToProcesses;
+        [SerializeField] private KitchenObjectSO ingredientSO;
+        public float TimeToCook => ingredientSO.timeToCook;
+        public int InteractionToProcesses => ingredientSO.interactionToProcesses;
         private bool isProcessed = false;
-       public BaseTurret turret;
+         public BaseTurret turret;
 
         public bool IsProcessed() => isProcessed;
 
@@ -17,13 +19,10 @@ namespace Item
         {
             isProcessed = state;
         }
-
-        public override void TransferData(Pickable pick)
+    
+        public Sprite GetIngredientImage()
         {
-           Ingredient aux = pick as Ingredient;
-           isProcessed = aux.IsProcessed();
-           timeToCook = aux.timeToCook;
-           interactionToProcesses = aux.interactionToProcesses;
+            return ingredientSO.sprite;
         }
     }
 }
