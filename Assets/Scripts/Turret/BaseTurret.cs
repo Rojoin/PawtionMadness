@@ -7,9 +7,9 @@ namespace Turret
     {
         [SerializeField] private Tile tile;
 
-        [SerializeField] private float maxHealth;
-        [SerializeField] private float currentHealth;
-        [SerializeField] private bool isAlive;
+        private float maxHealth;
+        private float currentHealth;
+        private bool isAlive;
 
         public float MaxHealth { get => maxHealth; set => maxHealth = value; }
         public float CurrentHealth { get => currentHealth; set => currentHealth = value; }

@@ -26,6 +26,7 @@ namespace Grid
             if (turret)
             {
                 _turret = Instantiate(turret, transform.position, Quaternion.identity, transform);
+                _turret.transform.Rotate(0,90,0);
             }
         }
         

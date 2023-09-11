@@ -4,16 +4,16 @@ using UnityEngine;
 
 public abstract class AttackTurret : BaseTurret
 {
-    [SerializeField] private float shootSpeed;
-    [SerializeField] private int attackDamage;
-    [SerializeField] private int attackRange;
 
-    private float shootSpeedTimer;
+    [SerializeField] private AttackTurretType turretType;
 
-    public float ShootSpeedTimer { get => shootSpeedTimer; set => shootSpeedTimer = value; }
-    public float ShootSpeed { get => shootSpeed; set => shootSpeed = value; }
-    public int AttackDamage { get => attackDamage; set => attackDamage = value; }
-    public int AttackRange { get => attackRange; set => attackRange = value; }
+    protected float shootSpeedTimer = 0;
+    private Vector3 endShoot;
+
+
+    public float ShootSpeed { get => turretType.shootSpeed; }
+    public int AttackDamage { get => turretType.attackDamage; }
+    public int AttackRange { get => turretType.attackRange; }
 
     public abstract void Shoot();
 
@@ -22,12 +22,18 @@ public abstract class AttackTurret : BaseTurret
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, AttackRange))
         {
-            if (hit.collider.gameObject.TryGetComponent<EntityHealth>(out var entity))
+            if (hit.collider.tag == "enemy")
             {
                 return true;
             }
         }
 
         return false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        //Gizmos.DrawLine(transform.position, transform.position + (transform.forward * AttackRange));
     }
 }
