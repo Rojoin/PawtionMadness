@@ -20,7 +20,8 @@ namespace Table
 
          public override void OnInteraction(PlayerInventory playerInventory = null)
         {
-            if (!playerInventory.hasPickable())
+            
+            if (!playerInventory.hasPickable() && ingredient)
             {
                 if (cutCounter < ingredient.InteractionToProcesses)
                 {
@@ -32,7 +33,7 @@ namespace Table
                     ingredient = null;
                     ResetCount();
                 }
-            }
+            } 
             else if (playerInventory.hasIngredient())
             {
                 playerInventory.GetPickable().SetNewParent(_itemPos);

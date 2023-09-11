@@ -1,3 +1,4 @@
+using Turret;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Turret", menuName = "Turret")]
@@ -22,6 +23,6 @@ public class ProyectileTurretSO : AttackTurretSO
 [CreateAssetMenu(fileName = "New Base Turret", menuName = "Base Turret")]
 public class BaseTurretSO : ScriptableObject
 {
-    public GameObject asset;
+    public BaseTurret asset;
     public float maxHealth;
 }

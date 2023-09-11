@@ -9,7 +9,6 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private Transform pickableSpot;
     [SerializeField] private Pickable _pickable;
     [SerializeField] private KitchenObjectSO kitchenObject;
-    [SerializeField] private BaseTurret _turret;
 
 
     public bool hasPickable()
@@ -19,22 +18,17 @@ public class PlayerInventory : MonoBehaviour
 
     public void SetPickable(Item.Pickable item)
     {
-            item.SetNewParent(this.pickableSpot);
-            _pickable = item;
-          
-    }
-
-    public void SetPickableExt(Item.Pickable item)
-    {
-        item.transform.SetParent(pickableSpot);
+        item.SetNewParent(this.pickableSpot);
         _pickable = item;
     }
+    
 
     public void DestroyPickable()
     {
         Destroy(_pickable.gameObject);
         _pickable = null;
-    } 
+    }
+
     public void NullPickable()
     {
         _pickable = null;
@@ -45,13 +39,8 @@ public class PlayerInventory : MonoBehaviour
 
     public Item.Pickable GetPickable() => _pickable;
 
-    public void SetTurret(BaseTurret turret)
-    {
-        this._turret = turret;
-    }
-
     public BaseTurret GetTurret()
     {
-        return _turret;
+        return (_pickable as Potion)._baseTurretSo.asset;
     }
 }

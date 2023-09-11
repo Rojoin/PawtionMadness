@@ -48,16 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  maxHealth: 100
-  currentHealth: 0
-  isAlive: 0
-  shootSpeed: 1
-  attackDamage: 10
-  attackRange: 10000
-  projectile: {fileID: 6930803183062165713, guid: df5872770e60cd14b81bad29e053b7be, type: 3}
-  initialShootPosition: {fileID: 3865119762721035764}
-  projectileSpeed: 10
-  projectileQuantity: 1
+  turretType: {fileID: 11400000, guid: 74ea892627157a34ca8e7742957b168c, type: 2}
 --- !u!65 &263899017366062727
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -25,8 +25,10 @@ namespace Table
         [SerializeField] private float timerMax;
         [SerializeField] private float currentTime = 0.0f;
         private CauldronState state;
+
         [FormerlySerializedAs("potion")] [SerializeField]
         private Potion defaultPotion;
+
         [SerializeField] private BaseTurret turret;
         [SerializeField] private KitchenObjectSO[] ingredientsInCauldron;
         [SerializeField] private PotionRecipeSO[] posiblePotions;
@@ -64,10 +66,8 @@ namespace Table
             switch (state)
             {
                 case CauldronState.Done when !playerInventory.hasPickable():
-                    playerInventory.SetTurret(turret);
+                    playerInventory.SetPickable(GetRecipePotion());
                     ResetCauldron();
-                    var potionToGive = Instantiate(defaultPotion, transform.position, Quaternion.identity);
-                    playerInventory.SetPickable(potionToGive);
                     break;
                 case CauldronState.Empty when playerInventory.hasIngredient():
                 case CauldronState.Cooking when playerInventory.hasIngredient():
@@ -122,38 +122,25 @@ namespace Table
 
             foreach (var recipe in posiblePotions)
             {
-                nextPotion = CheckRecipe(ingredientsInCauldron, recipe);
+                var dict = CreateCoockingDictionary();
+                nextPotion = CheckRecipe(dict, recipe);
                 if (nextPotion)
                 {
                     break;
                 }
             }
 
-            return nextPotion ? nextPotion.potion : defaultPotion;
+            return nextPotion
+                ? Instantiate(nextPotion.potion, transform.position, Quaternion.identity)
+                : Instantiate(defaultPotion, transform.position, Quaternion.identity);
         }
 
-        private PotionRecipeSO CheckRecipe(KitchenObjectSO[] cauldron, PotionRecipeSO recipe)
+        private PotionRecipeSO CheckRecipe(Dictionary<ScriptableObject, int> dict, PotionRecipeSO recipe)
         {
-            var dict = new Dictionary<ScriptableObject, int>();
-
-            foreach (var item in cauldron)
-            {
-                if (dict.ContainsKey(item))
-                {
-                    dict[item]++;
-                }
-                else
-                {
-                    dict[item] = 1;
-                }
-            }
-
-            // Iterate through the second array and decrement the counts in the dictionary
             foreach (var item in recipe.itemsNeeded)
             {
                 if (!dict.ContainsKey(item))
                 {
-                    // If an item from the second array is not found in the dictionary, or the count reaches zero, the arrays are not equal
                     return null;
                 }
                 else
@@ -161,13 +148,25 @@ namespace Table
                     dict[item]--;
                     if (dict[item] == 0)
                     {
-                        // Remove the item from the dictionary when its count reaches zero
                         dict.Remove(item);
                     }
                 }
             }
 
             return dict.Count == 0 ? recipe : null;
+        }
+
+        private Dictionary<ScriptableObject, int> CreateCoockingDictionary()
+        {
+            var dict = new Dictionary<ScriptableObject, int>();
+
+            foreach (var item in ingredientsInCauldron)
+            {
+                if (!dict.TryAdd(item, 1))
+                    dict[item]++;
+            }
+
+            return dict;
         }
     }
 }

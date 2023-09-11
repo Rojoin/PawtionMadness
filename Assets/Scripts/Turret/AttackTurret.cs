@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class AttackTurret : BaseTurret
 {
 
-    [SerializeField] private AttackTurretSO turretType;
+    [SerializeField] protected AttackTurretSO turretType;
 
     protected float shootSpeedTimer = 0;
     private Vector3 endShoot;

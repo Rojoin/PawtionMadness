@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class ProjectileBaseTurret : AttackTurret
 {
-    [SerializeField] ProyectileTurretSO ProyectileTurretType;
+    
 
-    public Projectile Projectile { get => ProyectileTurretType.projectile;}
-    public Transform InitialShootPosition { get => ProyectileTurretType.initialShootPosition; }
-    public float ProjectileSpeed { get => ProyectileTurretType.projectileSpeed; }
-    public float ProjectileQuantity { get => ProyectileTurretType.projectileQuantity; }
+    public Projectile Projectile { get => (turretType as ProyectileTurretSO).projectile;}
+    public Transform InitialShootPosition { get => (turretType as ProyectileTurretSO).initialShootPosition; }
+    public float ProjectileSpeed { get => (turretType as ProyectileTurretSO).projectileSpeed; }
+    public float ProjectileQuantity { get => (turretType as ProyectileTurretSO).projectileQuantity; }
 
     public void Update()
     {
@@ -26,7 +26,7 @@ public class ProjectileBaseTurret : AttackTurret
     {
         for (int i = 0; i < ProjectileQuantity; i++)
         {
-            Projectile newProjectile = Instantiate(Projectile, InitialShootPosition.position, InitialShootPosition.rotation);
+            Projectile newProjectile = Instantiate(Projectile, transform.position, transform.rotation);
             newProjectile.ProjectileSpeed = ProjectileSpeed;
             newProjectile.Damage = AttackDamage;
         }

@@ -25,6 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3164575471598420053}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.26, y: 1.68, z: -11.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,7 +35,6 @@ Transform:
   - {fileID: 5378570947634799560}
   - {fileID: 465728571523423257}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2420864373878096277
 BoxCollider:
@@ -72,9 +72,10 @@ MonoBehaviour:
   image: {fileID: 7290753673956145561}
   timerMax: 0
   currentTime: 0
-  potion: {fileID: -3134171079223218267, guid: f14313bb83d5f6745a701421f490ea66, type: 3}
+  defaultPotion: {fileID: -3134171079223218267, guid: f14313bb83d5f6745a701421f490ea66, type: 3}
   turret: {fileID: 0}
   ingredientsInCauldron: []
+  posiblePotions: []
   maxIngredientInCauldron: 3
   ingredientsImages:
   - {fileID: 8533843976385752875}
@@ -138,7 +139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5481734214977771340, guid: 34d51bd6d244d36499e72def9930e492, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.145
       objectReference: {fileID: 0}
     - target: {fileID: 5481734214977771340, guid: 34d51bd6d244d36499e72def9930e492, type: 3}
       propertyPath: m_LocalRotation.w
@@ -162,7 +163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5481734214977771340, guid: 34d51bd6d244d36499e72def9930e492, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1
+      value: -0.145
       objectReference: {fileID: 0}
     - target: {fileID: 5481734214977771340, guid: 34d51bd6d244d36499e72def9930e492, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -365,7 +366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314053301977442404, guid: 356cff9aa5c5cd747b1320fd4aebdedb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.203
       objectReference: {fileID: 0}
     - target: {fileID: 5314053301977442404, guid: 356cff9aa5c5cd747b1320fd4aebdedb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -389,7 +390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5314053301977442404, guid: 356cff9aa5c5cd747b1320fd4aebdedb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1
+      value: 1.203
       objectReference: {fileID: 0}
     - target: {fileID: 5314053301977442404, guid: 356cff9aa5c5cd747b1320fd4aebdedb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
