@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Turret", menuName = "Turret")]
-public class AttackTurretType : BaseTurretType
+public class AttackTurretSO : BaseTurretSO
 {
     public float shootSpeed;
     public int attackDamage;
@@ -10,7 +10,7 @@ public class AttackTurretType : BaseTurretType
 }
 
 [CreateAssetMenu(fileName = "New Proyctile Turret", menuName = "Proyctile Turret")]
-public class ProyectileTurretType : AttackTurretType
+public class ProyectileTurretSO : AttackTurretSO
 {
     public Projectile projectile;
     public Transform initialShootPosition;
@@ -20,7 +20,7 @@ public class ProyectileTurretType : AttackTurretType
 }
 
 [CreateAssetMenu(fileName = "New Base Turret", menuName = "Base Turret")]
-public class BaseTurretType : ScriptableObject
+public class BaseTurretSO : ScriptableObject
 {
     public GameObject asset;
     public float maxHealth;

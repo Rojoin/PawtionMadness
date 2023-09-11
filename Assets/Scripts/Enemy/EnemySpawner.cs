@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject baseEnemy;
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private EnemyTypePorb[] enemyTypes;
-    private List<EnemyType> probList = new List<EnemyType>();
+    private List<EnemySO> probList = new List<EnemySO>();
 
     [SerializeField] private float spawnTime;
     private float spawnTimer;
@@ -42,7 +42,7 @@ public class EnemySpawner : MonoBehaviour
 [System.Serializable]
 public class EnemyTypePorb
 {
-    public EnemyType Type;
+    public EnemySO Type;
     [Range(1.0f, 10.0f)]
     public int probability;
 }

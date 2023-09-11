@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ProjectileBaseTurret : AttackTurret
 {
-    [SerializeField] ProyectileTurretType ProyectileTurretType;
+    [SerializeField] ProyectileTurretSO ProyectileTurretType;
 
     public Projectile Projectile { get => ProyectileTurretType.projectile;}
     public Transform InitialShootPosition { get => ProyectileTurretType.initialShootPosition; }

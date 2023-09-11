@@ -5,7 +5,7 @@ namespace Enemy
 {
     public class BaseEnemy : MonoBehaviour, IHealthComponent
     {
-        public EnemyType type;
+        public EnemySO type;
         private float moveSpeed;
         private float damage;
         private float attackSpeed;
