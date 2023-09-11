@@ -1,7 +1,10 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Item;
 using Player;
 using Turret;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -22,9 +25,11 @@ namespace Table
         [SerializeField] private float timerMax;
         [SerializeField] private float currentTime = 0.0f;
         private CauldronState state;
-        [SerializeField] private Potion potion;
+        [FormerlySerializedAs("potion")] [SerializeField]
+        private Potion defaultPotion;
         [SerializeField] private BaseTurret turret;
-        [SerializeField] private Ingredient[] ingredientsInCauldron;
+        [SerializeField] private KitchenObjectSO[] ingredientsInCauldron;
+        [SerializeField] private PotionRecipeSO[] posiblePotions;
         [SerializeField] private int maxIngredientInCauldron = 3;
         private int currentIngredientCounter = 0;
         [SerializeField] private Image[] ingredientsImages;
@@ -61,7 +66,7 @@ namespace Table
                 case CauldronState.Done when !playerInventory.hasPickable():
                     playerInventory.SetTurret(turret);
                     ResetCauldron();
-                    var potionToGive = Instantiate(potion, transform.position, Quaternion.identity);
+                    var potionToGive = Instantiate(defaultPotion, transform.position, Quaternion.identity);
                     playerInventory.SetPickable(potionToGive);
                     break;
                 case CauldronState.Empty when playerInventory.hasIngredient():
@@ -83,7 +88,7 @@ namespace Table
                 image.enabled = true;
             }
 
-            ingredientsInCauldron[currentIngredientCounter] = ingredient;
+            ingredientsInCauldron[currentIngredientCounter] = ingredient.GetSO();
             ingredient.SetNewParent(this.transform);
             ingredient.gameObject.SetActive(false);
             ingredientsImages[currentIngredientCounter].sprite = ingredient.GetIngredientImage();
@@ -96,7 +101,7 @@ namespace Table
 
         private void ResetCauldron()
         {
-            ingredientsInCauldron = new Ingredient[maxIngredientInCauldron];
+            ingredientsInCauldron = new KitchenObjectSO[maxIngredientInCauldron];
             currentTime = 0.0f;
             timerMax = 0.0f;
             image.fillAmount = 0;
@@ -109,6 +114,60 @@ namespace Table
                 uiImages.sprite = null;
                 uiImages.enabled = false;
             }
+        }
+
+        private Potion GetRecipePotion()
+        {
+            PotionRecipeSO nextPotion = null;
+
+            foreach (var recipe in posiblePotions)
+            {
+                nextPotion = CheckRecipe(ingredientsInCauldron, recipe);
+                if (nextPotion)
+                {
+                    break;
+                }
+            }
+
+            return nextPotion ? nextPotion.potion : defaultPotion;
+        }
+
+        private PotionRecipeSO CheckRecipe(KitchenObjectSO[] cauldron, PotionRecipeSO recipe)
+        {
+            var dict = new Dictionary<ScriptableObject, int>();
+
+            foreach (var item in cauldron)
+            {
+                if (dict.ContainsKey(item))
+                {
+                    dict[item]++;
+                }
+                else
+                {
+                    dict[item] = 1;
+                }
+            }
+
+            // Iterate through the second array and decrement the counts in the dictionary
+            foreach (var item in recipe.itemsNeeded)
+            {
+                if (!dict.ContainsKey(item))
+                {
+                    // If an item from the second array is not found in the dictionary, or the count reaches zero, the arrays are not equal
+                    return null;
+                }
+                else
+                {
+                    dict[item]--;
+                    if (dict[item] == 0)
+                    {
+                        // Remove the item from the dictionary when its count reaches zero
+                        dict.Remove(item);
+                    }
+                }
+            }
+
+            return dict.Count == 0 ? recipe : null;
         }
     }
 }

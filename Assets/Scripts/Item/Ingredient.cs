@@ -23,6 +23,10 @@ namespace Item
         public Sprite GetIngredientImage()
         {
             return ingredientSO.sprite;
+        } 
+        public KitchenObjectSO GetSO()
+        {
+            return ingredientSO;
         }
     }
 }
