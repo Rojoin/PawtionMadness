@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class ProjectileBaseTurret : AttackTurret
 {
-    
-
     public Projectile Projectile { get => (turretType as ProyectileTurretSO).projectile;}
     public Transform InitialShootPosition { get => (turretType as ProyectileTurretSO).initialShootPosition; }
     public float ProjectileSpeed { get => (turretType as ProyectileTurretSO).projectileSpeed; }

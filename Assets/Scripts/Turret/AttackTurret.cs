@@ -8,8 +8,6 @@ public abstract class AttackTurret : BaseTurret
     [SerializeField] protected AttackTurretSO turretType;
 
     protected float shootSpeedTimer = 0;
-    private Vector3 endShoot;
-
 
     public float ShootSpeed { get => turretType.shootSpeed; }
     public int AttackDamage { get => turretType.attackDamage; }
