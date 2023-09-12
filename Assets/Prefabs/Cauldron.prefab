@@ -72,10 +72,13 @@ MonoBehaviour:
   image: {fileID: 7290753673956145561}
   timerMax: 0
   currentTime: 0
-  defaultPotion: {fileID: -3134171079223218267, guid: f14313bb83d5f6745a701421f490ea66, type: 3}
+  defaultPotion: {fileID: -3134171079223218267, guid: bb0286b7130336f4997d4b7458bb0a00, type: 3}
   turret: {fileID: 0}
   ingredientsInCauldron: []
-  posiblePotions: []
+  posiblePotions:
+  - {fileID: 11400000, guid: 77f8dcf0966ffb847a373075a468dbc9, type: 2}
+  - {fileID: 11400000, guid: 8819c0610e70f224ca595b113e23f663, type: 2}
+  - {fileID: 11400000, guid: 2d1821439e0556c458219dda1cae863d, type: 2}
   maxIngredientInCauldron: 3
   ingredientsImages:
   - {fileID: 8533843976385752875}

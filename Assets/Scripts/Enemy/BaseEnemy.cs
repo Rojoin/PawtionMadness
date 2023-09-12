@@ -6,30 +6,20 @@ namespace Enemy
     public class BaseEnemy : MonoBehaviour, IHealthComponent
     {
         public EnemySO type;
-        private float moveSpeed;
-        private float damage;
-        private float attackSpeed;
-        private float attackRange;
-        private float maxHealth;
+ 
+
         private float currentHealth;
         private bool isAlive;
 
-        public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
-        public float Damage { get => damage; set => damage = value; }
-        public float AttackSpeed { get => attackSpeed; set => attackSpeed = value; }
-        public float AttackRange { get => attackRange; set => attackRange = value; }
-        public float MaxHealth { get => maxHealth; set => maxHealth = value; }
+        public float MoveSpeed { get => type.moveSpeed; }
+        public float Damage { get => type.damage;  }
+        public float AttackSpeed { get => type.attackSpeed;  }
+        public float AttackRange { get => type.attackRange;  }
         public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
 
         private void Start()
         {
-            moveSpeed = type.moveSpeed;
-            damage = type.damage;
-            attackSpeed = type.attackSpeed;
-            attackRange = type.attackRange;
-            maxHealth = type.maxHealth;
-
-            CurrentHealth = maxHealth;
+            CurrentHealth = type.maxHealth;
             isAlive = true;
 
             Instantiate(type.asset, transform.position, transform.rotation, transform);

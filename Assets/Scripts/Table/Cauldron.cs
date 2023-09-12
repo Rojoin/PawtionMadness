@@ -25,11 +25,8 @@ namespace Table
         [SerializeField] private float timerMax;
         [SerializeField] private float currentTime = 0.0f;
         private CauldronState state;
-
-        [FormerlySerializedAs("potion")] [SerializeField]
-        private Potion defaultPotion;
-
-        [SerializeField] private BaseTurret turret;
+        
+        [SerializeField] private Potion defaultPotion;
         [SerializeField] private KitchenObjectSO[] ingredientsInCauldron;
         [SerializeField] private PotionRecipeSO[] posiblePotions;
         [SerializeField] private int maxIngredientInCauldron = 3;
@@ -94,7 +91,6 @@ namespace Table
             ingredientsImages[currentIngredientCounter].sprite = ingredient.GetIngredientImage();
             ingredientsImages[currentIngredientCounter].enabled = true;
             timerMax += ingredient.IsProcessed() ? ingredient.TimeToCook / 2.0f : ingredient.TimeToCook;
-            turret = ingredient.turret;
             state = CauldronState.Cooking;
             currentIngredientCounter++;
         }
@@ -105,7 +101,6 @@ namespace Table
             currentTime = 0.0f;
             timerMax = 0.0f;
             image.fillAmount = 0;
-            turret = null;
             state = CauldronState.Empty;
             image.enabled = false;
             currentIngredientCounter = 0;

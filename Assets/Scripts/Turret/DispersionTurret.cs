@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class DispersionTurret : AttackTurret
 { 
-    public float ProjectileQuantity { get => (turretType as ProyectileTurretSO).projectileQuantity; }
-
     public void Update()
     {
         shootSpeedTimer += Time.deltaTime;

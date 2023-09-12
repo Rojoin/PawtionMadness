@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7483951904999194688}
   - component: {fileID: 6414676308316224321}
   - component: {fileID: 2663239920300573646}
+  - component: {fileID: 2347047456568114724}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -25,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2836566035947589402}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.5, y: 2.69, z: -11.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &6414676308316224321
 BoxCollider:
@@ -52,8 +53,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 3.3680513, z: 9.934695}
-  m_Center: {x: 0, y: 0.19572031, z: -0.023730755}
+  m_Size: {x: 0.1, y: 5, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2663239920300573646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,3 +68,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoseScreen: {fileID: 0}
+  PauseScreen: {fileID: 0}
+  pauseChannelSO: {fileID: 11400000, guid: 31fd85e9f5e17714a82062a5719bdd7d, type: 2}
+--- !u!54 &2347047456568114724
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836566035947589402}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0

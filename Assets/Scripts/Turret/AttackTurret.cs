@@ -4,14 +4,11 @@ using UnityEngine;
 
 public abstract class AttackTurret : BaseTurret
 {
-
-    [SerializeField] protected AttackTurretSO turretType;
-
     protected float shootSpeedTimer = 0;
 
-    public float ShootSpeed { get => turretType.shootSpeed; }
-    public int AttackDamage { get => turretType.attackDamage; }
-    public int AttackRange { get => turretType.attackRange; }
+    public float ShootSpeed { get => (turretType as AttackTurretSO).shootSpeed; }
+    public int AttackDamage { get => (turretType as AttackTurretSO).attackDamage; }
+    public int AttackRange { get => (turretType as AttackTurretSO).attackRange; }
 
     public abstract void Shoot();
 

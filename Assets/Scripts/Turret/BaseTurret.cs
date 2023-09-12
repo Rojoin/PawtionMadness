@@ -5,18 +5,18 @@ namespace Turret
 {
     public abstract class BaseTurret : MonoBehaviour, IHealthComponent
     {
+        [SerializeField] protected BaseTurretSO turretType;
         [SerializeField] private Tile tile;
-
-        private float maxHealth;
+        
         private float currentHealth;
         private bool isAlive;
 
-        public float MaxHealth { get => maxHealth; set => maxHealth = value; }
+        public float MaxHealth { get => turretType.maxHealth; }
         public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
 
         private void Awake()
         {
-            CurrentHealth = maxHealth;
+            CurrentHealth = MaxHealth;
             isAlive = true;
         }
         public virtual void Death()

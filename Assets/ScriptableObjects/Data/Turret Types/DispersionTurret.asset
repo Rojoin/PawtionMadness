@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab6d9c0596a292459701866c1f7ee28, type: 3}
-  m_Name: SimpleEnemy
+  m_Script: {fileID: 11500000, guid: 5a4aa938c347a6542ba82b6d42b63e9e, type: 3}
+  m_Name: DispersionTurret
   m_EditorClassIdentifier: 
-  asset: {fileID: 7601820083345458681, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
-  moveSpeed: 0.34
-  damage: 10
-  attackSpeed: 2
+  asset: {fileID: 2804196864711947729, guid: 7019b72d904e8704884a45d54aeed311, type: 3}
+  maxHealth: 100
+  shootSpeed: 5
+  attackDamage: 40
   attackRange: 2
-  maxHealth: 30

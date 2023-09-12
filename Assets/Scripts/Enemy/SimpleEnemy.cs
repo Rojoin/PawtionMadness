@@ -13,7 +13,6 @@ public class SimpleEnemy : BaseEnemy
     {
         stopMoving = false;
         canAttack = false;
-        timerCooldown = AttackSpeed;
     }
 
     //TODO:Cambiar logica update a IEnumerator
@@ -27,7 +26,7 @@ public class SimpleEnemy : BaseEnemy
             timer += Time.deltaTime;
         }
 
-        if (timer > timerCooldown)
+        if (timer > type.attackSpeed)
         {
             canAttack = true;
         }
@@ -45,13 +44,11 @@ public class SimpleEnemy : BaseEnemy
 
     private void Attack(IHealthComponent targetDamage)
     {
-        if (canAttack)
-        {
-            targetDamage.ReceiveDamage(Damage);
-            canAttack = false;
-            timer -= timerCooldown;
-        }
-
+        Debug.Log(Damage);
+        targetDamage.ReceiveDamage(Damage);
+        canAttack = false;
+        timer -= type.attackSpeed;
+        
         if (!targetDamage.IsAlive())
         {
             stopMoving = false;
@@ -65,7 +62,7 @@ public class SimpleEnemy : BaseEnemy
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, AttackRange))
         {
-            if (hit.collider.gameObject.TryGetComponent<IHealthComponent>(out var entity))
+            if (hit.collider.gameObject.TryGetComponent<IHealthComponent>(out var entity) && canAttack)
             {
                 stopMoving = true;
                 if (canAttack)
