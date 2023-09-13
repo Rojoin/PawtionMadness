@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 38f2fb37ba5c4b8eb2ee190c235b7cb9, type: 3}
   m_Name: ProyectileTurretSO
   m_EditorClassIdentifier: Assembly-CSharp::ProyectileTurretSO
   asset: {fileID: 7632185328495556519, guid: 694c0c1e813ca9442aed801551de1c61, type: 3}
-  maxHealth: 100
-  shootSpeed: 1
+  maxHealth: 200
+  shootSpeed: 2.75
   attackDamage: 10
-  attackRange: 500
+  attackRange: 15
   projectile: {fileID: 6930803183062165713, guid: df5872770e60cd14b81bad29e053b7be, type: 3}
   initialShootPosition: {fileID: 0}
   projectileSpeed: 10

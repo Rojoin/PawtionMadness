@@ -34,7 +34,7 @@ namespace Table
                     ResetCount();
                 }
             } 
-            else if (playerInventory.hasIngredient())
+            else if (playerInventory.hasIngredient() && !(playerInventory.GetPickable() as Ingredient).IsProcessed())
             {
                 playerInventory.GetPickable().SetNewParent(_itemPos);
                 ingredient = playerInventory.GetPickable() as Ingredient;
