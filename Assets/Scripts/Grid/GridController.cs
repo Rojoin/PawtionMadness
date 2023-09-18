@@ -14,6 +14,7 @@ namespace Grid
         [SerializeField] private PlayerInventory playerInventory;
         private Vector2Int cursorPos = new Vector2Int(0, 0);
         private Vector2Int previousInput = new Vector2Int(0, 0);
+        [SerializeField] private GameObject gridIndicator;
         [SerializeField] private Vector2ChannelSO movementChannel;
         [SerializeField] private VoidChannelSO interactChannel;
         [SerializeField] private VoidChannelSO backInputChannel;
@@ -23,6 +24,7 @@ namespace Grid
         private void Awake()
         {
             grid = GetComponent<GridSystem>();
+            gridIndicator.SetActive(false);
         }
 
         private void Start()
@@ -40,7 +42,7 @@ namespace Grid
 
         private void OnDisable()
         {
-            currentTile.SelectTile(false);
+            gridIndicator.SetActive(false);
             movementChannel.Unsubscribe(OnMove);
             interactChannel.Unsubscribe(OnInteract);
             backInputChannel.Unsubscribe(OnBackChannel);
@@ -76,13 +78,12 @@ namespace Grid
 
         private void SelectCurrentTile()
         {
-            if (currentTile != null)
+            if (!gridIndicator.activeSelf)
             {
-                currentTile.SelectTile(false);
+                gridIndicator.SetActive(true);
             }
-
             currentTile = grid.GetTile(cursorPos);
-            currentTile.SelectTile(true);
+            gridIndicator.transform.position = currentTile.transform.position;
         }
 
         /// <summary>
