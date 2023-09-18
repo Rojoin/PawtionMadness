@@ -6,12 +6,12 @@ namespace Grid
     public class Tile : MonoBehaviour
     {
         [SerializeField] private BaseTurret _turret;
-        
+        [SerializeField] private Transform _turretPosition;
         public void SetTurret(BaseTurret turret)
         {
             if (turret)
             {
-                _turret = Instantiate(turret, transform.position, Quaternion.identity, transform);
+                _turret = Instantiate(turret, _turretPosition.position, Quaternion.identity, transform);
                 _turret.transform.Rotate(0,90,0);
             }
         }
