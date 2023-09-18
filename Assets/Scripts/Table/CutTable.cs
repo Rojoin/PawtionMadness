@@ -29,6 +29,7 @@ namespace Table
                 }
                 else
                 {
+                    ingredient.SetIconVisible(true);
                     playerInventory.SetPickable(ingredient);
                     ingredient = null;
                     ResetCount();
@@ -40,6 +41,7 @@ namespace Table
                 ingredient = playerInventory.GetPickable() as Ingredient;
                 playerInventory.NullPickable();
                 progressBar.enabled = true;
+                ingredient.SetIconVisible(true);
                 progressBar.fillAmount = 0;
             }
         }

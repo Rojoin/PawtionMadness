@@ -15,6 +15,7 @@ namespace Table
             if (!playerInventory.hasPickable())
             {
                 var ingredientToGive = Instantiate(item, transform.position, Quaternion.identity);
+                ingredientToGive.SetIconVisible(false);
                 playerInventory.SetPickable(ingredientToGive);
             }
             else
