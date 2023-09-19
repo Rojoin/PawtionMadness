@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using Player;
+using UnityEngine;
 
 namespace Table
 {
@@ -6,10 +8,32 @@ namespace Table
     {
         [SerializeField] private VoidChannelSO activateRecipesCanvasChannel;
         private bool isCanvasActive = false;
-        public override void OnInteraction(PlayerInventory playerInventory = null)
+        private Coroutine isPlayerOnObject;
+
+        public override void OnInteraction(PlayerInventory playerInventory = null, PlayerInteract playerInteract = null)
         {
             isCanvasActive = !isCanvasActive;
             activateRecipesCanvasChannel.RaiseEvent();
+            if (!isCanvasActive)
+            {
+                StopCoroutine(isPlayerOnObject);
+            }
+            else
+            {
+                isPlayerOnObject = StartCoroutine(CheckIfPlayerIsColliding(playerInteract));
+            }
+
+        }
+
+        private IEnumerator CheckIfPlayerIsColliding(PlayerInteract playerInteract)
+        {
+            while (playerInteract.IsPlayerLookingAtObject(this.gameObject) && isCanvasActive)
+            {
+                yield return null;
+            }
+            isCanvasActive = false;
+            activateRecipesCanvasChannel.RaiseEvent();
+            yield break;
         }
     }
 }

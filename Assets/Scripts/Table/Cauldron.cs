@@ -58,7 +58,7 @@ namespace Table
             }
         }
 
-        public override void OnInteraction(PlayerInventory playerInventory = null)
+        public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
             switch (state)
             {

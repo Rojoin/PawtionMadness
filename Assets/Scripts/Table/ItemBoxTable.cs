@@ -10,7 +10,7 @@ namespace Table
     {
         [SerializeField] private Ingredient item;
 
-        public override void OnInteraction(PlayerInventory playerInventory = null)
+        public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
             if (!playerInventory.hasPickable())
             {

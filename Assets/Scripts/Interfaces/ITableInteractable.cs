@@ -4,7 +4,7 @@ namespace Interfaces
 {
     public interface ITableInteractable
     {
-        void OnInteraction(PlayerInventory playerInventory = null);
+        void OnInteraction(PlayerInventory playerInventory = null, PlayerInteract playerInteract = null);
         bool TryInteract();
     }
 }

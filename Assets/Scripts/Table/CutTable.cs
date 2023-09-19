@@ -1,5 +1,6 @@
 ﻿using System;
 using Item;
+using Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +19,7 @@ namespace Table
              ResetCount();
          }
 
-         public override void OnInteraction(PlayerInventory playerInventory = null)
+         public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
             
             if (!playerInventory.hasPickable() && ingredient)
