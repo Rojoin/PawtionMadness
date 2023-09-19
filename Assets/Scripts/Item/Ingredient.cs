@@ -23,7 +23,7 @@ namespace Item
         }
 
         public bool IsProcessed() => isProcessed;
-        public bool IsITemIconVisible() => _isItemIconVisible;
+        public bool IsItemIconVisible() => _isItemIconVisible;
 
         public void SetProcessed(bool state = true)
         {
@@ -34,6 +34,7 @@ namespace Item
         {
             _isItemIconVisible = state;
             imageIcon.sprite = _isItemIconVisible ? ingredientSO.sprite : null;
+            imageIcon.enabled = state;
         }
     
         public Sprite GetIngredientImage()
