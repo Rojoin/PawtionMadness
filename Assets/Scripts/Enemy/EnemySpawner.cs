@@ -1,6 +1,8 @@
+
 using Enemy;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -34,8 +36,8 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnNewEnemy()
     {
         Transform spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Length)];
-        GameObject newEnemy = Instantiate(baseEnemy, spawnPosition.transform.position, spawnPoints[0].rotation);
-        newEnemy.GetComponent<BaseEnemy>().type = probList[Random.Range(0, probList.Count)];
+        var type = probList[Random.Range(0, probList.Count)];
+        GameObject newEnemy = Instantiate(type.asset, spawnPosition.transform.position, spawnPoints[0].rotation);
     }
 }
 

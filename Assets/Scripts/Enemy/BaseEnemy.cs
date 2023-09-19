@@ -22,7 +22,7 @@ namespace Enemy
             CurrentHealth = type.maxHealth;
             isAlive = true;
 
-            Instantiate(type.asset, transform.position, transform.rotation, transform);
+      
         }
         public virtual void Death()
         {
