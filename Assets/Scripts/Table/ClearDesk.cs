@@ -1,4 +1,5 @@
 ﻿using Item;
+using Player;
 using UnityEngine;
 
 namespace Table
@@ -8,7 +9,7 @@ namespace Table
         private Pickable _pickable;
         [SerializeField] private Transform _itemPos;
 
-        public override void OnInteraction(PlayerInventory playerInventory = null)
+        public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
             if (!_pickable && playerInventory.hasPickable())
             {

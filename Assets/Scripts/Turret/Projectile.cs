@@ -1,16 +1,27 @@
 using Health;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private GameObject Prefab;
+    [SerializeField] private ParticleSystem hitParticle;
     [SerializeField] private float lifeTime;
+    public UnityEvent onCollision;
     private float lifeTimer;
     private float projectileSpeed;
     private float damage;
 
-    public float Damage { get => damage; set => damage = value; }
-    public float ProjectileSpeed { get => projectileSpeed; set => projectileSpeed = value; }
+    public float Damage
+    {
+        get => damage;
+        set => damage = value;
+    }
+    public float ProjectileSpeed
+    {
+        get => projectileSpeed;
+        set => projectileSpeed = value;
+    }
 
     private void Update()
     {
@@ -26,6 +37,7 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.TryGetComponent<IHealthComponent>(out var entity))
         {
             entity.ReceiveDamage(Damage);

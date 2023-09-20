@@ -8,7 +8,7 @@ namespace Table
     public class GridTableController : Table
     {
         [SerializeField] private VoidChannelSO ChangeToGridChannel;
-        public override void OnInteraction(PlayerInventory playerInventory = null)
+        public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
             ChangeToGridChannel.RaiseEvent();
         }

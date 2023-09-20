@@ -1,5 +1,4 @@
-﻿
-using Interfaces;
+﻿using Interfaces;
 using UnityEngine;
 
 namespace Player
@@ -7,10 +6,9 @@ namespace Player
     public class PlayerInteract : MonoBehaviour
     {
         [SerializeField] private PlayerInventory _playerInventory;
-        
+
         [SerializeField] private float _interactDistance;
         [SerializeField] private VoidChannelSO InteractChannel;
-     
 
 
         private void OnEnable()
@@ -26,16 +24,23 @@ namespace Player
 
         public void OnInteract()
         {
-            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, _interactDistance) )
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, _interactDistance))
             {
                 if (raycastHit.transform.TryGetComponent<ITableInteractable>(out var interactable))
                 {
-                    interactable.OnInteraction(_playerInventory);
+                    interactable.OnInteraction(_playerInventory,this);
                 }
             }
-            
-         
         }
-      
+
+        public bool IsPlayerLookingAtObject(GameObject thisObject)
+        {
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, _interactDistance))
+            {
+                return raycastHit.collider.gameObject == thisObject;
+            }
+
+            return false;
+        }
     }
 }

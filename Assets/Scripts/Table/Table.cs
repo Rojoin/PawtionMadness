@@ -6,7 +6,7 @@ namespace Table
 {
     public class Table : MonoBehaviour, ITableInteractable
     {
-        public virtual void OnInteraction(PlayerInventory playerInventory = null)
+        public virtual void OnInteraction(PlayerInventory playerInventory = null, PlayerInteract playerInteract = null)
         {
             Debug.Log("Interaction!", gameObject);
         }

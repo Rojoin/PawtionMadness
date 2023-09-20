@@ -25,7 +25,7 @@ namespace Table
         [SerializeField] private float timerMax;
         [SerializeField] private float currentTime = 0.0f;
         private CauldronState state;
-        
+
         [SerializeField] private Potion defaultPotion;
         [SerializeField] private KitchenObjectSO[] ingredientsInCauldron;
         [SerializeField] private PotionRecipeSO[] posiblePotions;
@@ -58,7 +58,7 @@ namespace Table
             }
         }
 
-        public override void OnInteraction(PlayerInventory playerInventory = null)
+        public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
             switch (state)
             {
@@ -125,9 +125,11 @@ namespace Table
                 }
             }
 
-            return nextPotion
+            var potionToReturn = nextPotion
                 ? Instantiate(nextPotion.potion, transform.position, Quaternion.identity)
                 : Instantiate(defaultPotion, transform.position, Quaternion.identity);
+            potionToReturn.SetIconVisible(true);
+            return potionToReturn;
         }
 
         private PotionRecipeSO CheckRecipe(Dictionary<ScriptableObject, int> dict, PotionRecipeSO recipe)

@@ -1,5 +1,6 @@
 ﻿using System;
 using Item;
+using Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +19,7 @@ namespace Table
              ResetCount();
          }
 
-         public override void OnInteraction(PlayerInventory playerInventory = null)
+         public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
             
             if (!playerInventory.hasPickable() && ingredient)
@@ -29,6 +30,7 @@ namespace Table
                 }
                 else
                 {
+                    ingredient.SetIconVisible(true);
                     playerInventory.SetPickable(ingredient);
                     ingredient = null;
                     ResetCount();
@@ -40,6 +42,7 @@ namespace Table
                 ingredient = playerInventory.GetPickable() as Ingredient;
                 playerInventory.NullPickable();
                 progressBar.enabled = true;
+                ingredient.SetIconVisible(true);
                 progressBar.fillAmount = 0;
             }
         }

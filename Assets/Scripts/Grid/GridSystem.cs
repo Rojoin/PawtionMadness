@@ -9,7 +9,6 @@ namespace Grid
 {
     public class GridSystem : MonoBehaviour
     {
-        private Tile[,] tileSet;
         [SerializeField] private int columns;
         [SerializeField] private int rows;
         [SerializeField] private int deltaX = 2;
@@ -17,6 +16,7 @@ namespace Grid
         [SerializeField] private UnityEngine.Grid grid;
         [SerializeField] private Tile cube;
         [SerializeField] private List<GameObject> tileList;
+        private Tile[,] tileSet;
 
 
         private void Awake()
