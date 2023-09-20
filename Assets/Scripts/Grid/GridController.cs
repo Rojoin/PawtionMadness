@@ -38,6 +38,7 @@ namespace Grid
             movementChannel.Subscribe(OnMove);
             interactChannel.Subscribe(OnInteract);
             backInputChannel.Subscribe(OnBackChannel);
+            SelectCurrentTile();
         }
 
         private void OnDisable()
