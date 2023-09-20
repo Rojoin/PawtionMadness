@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DispersionTurret : AttackTurret
-{ 
+{
+    public UnityEvent onAttack;
+
     public void Update()
     {
         shootSpeedTimer += Time.deltaTime;
@@ -17,13 +20,15 @@ public class DispersionTurret : AttackTurret
             }
         }
     }
+
     public override void Shoot()
     {
         RaycastHit[] hits;
-        hits = Physics.RaycastAll(transform.position, transform.forward, AttackRange);
+        hits = Physics.RaycastAll(transform.position, transform.forward, AttackRange,LayerMask.NameToLayer("Enemy"));
 
-        for (int i = 0; i < hits.Length; i++) 
-        { 
+        onAttack.Invoke();
+        for (int i = 0; i < hits.Length; i++)
+        {
             RaycastHit hit = hits[i];
 
             if (hit.transform.TryGetComponent<IHealthComponent>(out var entity))
