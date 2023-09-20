@@ -54,13 +54,14 @@ public class SimpleEnemy : BaseEnemy
             stopMoving = false;
         }
 
-        Debug.Log("Attack");
     }
 
     private void DetectEntity()
     {
+        int layerMask = 1 << gameObject.layer;
+        layerMask = ~layerMask;
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, AttackRange))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, AttackRange,layerMask))
         {
             if (hit.collider.gameObject.TryGetComponent<IHealthComponent>(out var entity) && canAttack)
             {
@@ -70,6 +71,10 @@ public class SimpleEnemy : BaseEnemy
                     Attack(entity);
                 }
             }
+        }
+        else if (stopMoving && canAttack)
+        {
+            stopMoving = false;
         }
     }
 

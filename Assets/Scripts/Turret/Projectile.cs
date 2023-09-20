@@ -37,11 +37,10 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.TryGetComponent<IHealthComponent>(out var entity))
         {
             entity.ReceiveDamage(Damage);
-            var hit = Instantiate(hitParticle);
-            hit.Play();
             Destroy(gameObject);
         }
     }
