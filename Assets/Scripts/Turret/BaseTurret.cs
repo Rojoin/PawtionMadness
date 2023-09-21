@@ -1,5 +1,6 @@
 ﻿using Grid;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Turret
 {
@@ -7,7 +8,7 @@ namespace Turret
     {
         [SerializeField] protected BaseTurretSO turretType;
         [SerializeField] private Tile tile;
-        
+        [SerializeField] private UnityEvent _onHit;
         private float currentHealth;
         private bool isAlive;
 
@@ -32,7 +33,8 @@ namespace Turret
         public virtual void ReceiveDamage(float damage)
         {
             CurrentHealth -= damage;
-
+            
+            _onHit.Invoke();
             if (CurrentHealth <= 0)
             {
                 isAlive = false;

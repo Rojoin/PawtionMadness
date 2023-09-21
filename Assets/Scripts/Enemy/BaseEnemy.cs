@@ -1,13 +1,14 @@
 using UnityEngine;
 using Health;
+using UnityEngine.Events;
 
 namespace Enemy
 {
     public class BaseEnemy : MonoBehaviour, IHealthComponent
     {
         public EnemySO type;
- 
 
+        [SerializeField] private UnityEvent onDamage;
         private float currentHealth;
         private bool isAlive;
 
@@ -37,7 +38,7 @@ namespace Enemy
         public virtual void ReceiveDamage(float damage)
         {
             CurrentHealth -= damage;
-
+            onDamage.Invoke();
             if (CurrentHealth <= 0)
             {
                 isAlive = false;

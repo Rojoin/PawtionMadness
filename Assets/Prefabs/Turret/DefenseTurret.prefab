@@ -69,6 +69,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretType: {fileID: 11400000, guid: 673589b900f07624e90b0f78ee1c9c27, type: 2}
   tile: {fileID: 0}
+  _onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9194015698608461476}
+        m_TargetAssemblyTypeName: Visuals.BlinkOnDamage, Assembly-CSharp
+        m_MethodName: StartBlinking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   currentMesh: {fileID: 0}
   StateMesh: []
 --- !u!1001 &1934151755317826934
@@ -133,3 +148,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
   m_PrefabInstance: {fileID: 1934151755317826934}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9194015698608461476 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1927320365541440558, guid: ea71f2975c7399546a75910b5570773d, type: 3}
+  m_PrefabInstance: {fileID: 1934151755317826934}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a53793e4f247128e86a04717843683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
