@@ -47,6 +47,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: d0091abd3ac8fef4f81e6b41a62d88cf, type: 2}
+  onDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1507721350665612067}
+        m_TargetAssemblyTypeName: Visuals.BlinkOnDamage, Assembly-CSharp
+        m_MethodName: StartBlinking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &2486498811297812854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95,6 +110,18 @@ PrefabInstance:
     - target: {fileID: 2969364328842807739, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069722225348803698, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
+      propertyPath: values
+      value: 
+      objectReference: {fileID: 11400000, guid: 21aa31fec8daa44449ff13457274bd60, type: 2}
+    - target: {fileID: 3069722225348803698, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
+      propertyPath: blinkSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3069722225348803698, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
+      propertyPath: blinkDuration
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3183509826415399353, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
       propertyPath: m_Layer
@@ -202,3 +229,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3844842003656667409, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
   m_PrefabInstance: {fileID: 4500600765638465361}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1507721350665612067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3069722225348803698, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
+  m_PrefabInstance: {fileID: 4500600765638465361}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a53793e4f247128e86a04717843683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
