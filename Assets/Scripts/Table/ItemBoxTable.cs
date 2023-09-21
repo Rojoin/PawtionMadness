@@ -8,13 +8,13 @@ namespace Table
 {
     public class ItemBoxTable : Table
     {
-        [SerializeField] private Ingredient item;
+        [SerializeField] private KitchenObjectSO item;
 
         public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
             if (!playerInventory.hasPickable())
             {
-                var ingredientToGive = Instantiate(item, transform.position, Quaternion.identity);
+                var ingredientToGive = Instantiate(item.prefab, transform.position, Quaternion.identity);
                 ingredientToGive.SetIconVisible(false);
                 playerInventory.SetPickable(ingredientToGive);
             }
