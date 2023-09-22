@@ -14,6 +14,7 @@ namespace Visuals
         private List<Renderer> childRenderers;
         private List<Color> originalColors;
         private Coroutine _blinking;
+        private Color _colorToBlink => values.color;
 
         private void Awake()
         {
@@ -49,7 +50,7 @@ namespace Visuals
                 float t = Mathf.PingPong(elapsedTime * blinkSpeed, 1.0f);
                 for (int i = 0; i < childRenderers.Count; i++)
                 {
-                    Color blinkColor = Color.Lerp(originalColors[i], Color.red, t);
+                    Color blinkColor = Color.Lerp(originalColors[i], _colorToBlink, t);
                     childRenderers[i].material.color = blinkColor;
                 }
 

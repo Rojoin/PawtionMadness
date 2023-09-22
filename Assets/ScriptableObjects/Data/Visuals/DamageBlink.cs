@@ -7,6 +7,7 @@ namespace ScriptableObjects.Data.Visuals
     {
         [Range(0.1f, 1.0f)] public float blinkTime;
         public float blinkSpeed;
+        public Color color = Color.red;
     }
     
     
