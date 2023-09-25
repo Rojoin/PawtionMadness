@@ -8,6 +8,7 @@ public class SimpleEnemy : BaseEnemy
     private bool canAttack;
     private float timerCooldown;
     private float timer;
+    private Vector3 initRayPosition;
 
     private void Awake()
     {
@@ -40,6 +41,7 @@ public class SimpleEnemy : BaseEnemy
     public void Movement()
     {
         transform.position += transform.forward * (Time.deltaTime * MoveSpeed);
+        initRayPosition = transform.position + (-transform.forward * transform.localScale.x/2);
     }
 
     private void Attack(IHealthComponent targetDamage)
@@ -61,7 +63,7 @@ public class SimpleEnemy : BaseEnemy
         int layerMask = 1 << gameObject.layer;
         layerMask = ~layerMask;
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, AttackRange,layerMask))
+        if (Physics.Raycast(initRayPosition, transform.forward, out hit, AttackRange,layerMask))
         {
             if (hit.collider.gameObject.TryGetComponent<IHealthComponent>(out var entity) && canAttack)
             {
@@ -81,6 +83,7 @@ public class SimpleEnemy : BaseEnemy
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.position + transform.forward * AttackRange);
+        Gizmos.DrawLine(initRayPosition, initRayPosition + transform.forward * AttackRange);
+        Gizmos.DrawSphere(initRayPosition, 0.01f);
     }
 }
