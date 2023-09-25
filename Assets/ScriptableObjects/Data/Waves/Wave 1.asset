@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90920f0f7a4d4e249be2f071b44e6a01, type: 3}
   m_Name: Wave 1
   m_EditorClassIdentifier: 
-  enemyTypes: []
-  enemyCount: 0
-  totalEnemyBeforeWave: 0
-  spawnTime: 0
-  totalEnemyWave: 0
-  reductionSpawnTime: 0
-  delayAfterWave: 0
+  enemyTypes:
+  - Type: {fileID: 11400000, guid: d0091abd3ac8fef4f81e6b41a62d88cf, type: 2}
+    probability: 10
+  newSpawnTime: 2
+  totalEnemyBeforeWave: 2
+  delayBeforeWave: 5
+  totalEnemyWave: 5
+  SpawnTimeInWave: 0.5
+  delayAfterWave: 7
