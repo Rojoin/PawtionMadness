@@ -1,6 +1,5 @@
-
-using Enemy;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,11 +7,14 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject baseEnemy;
     [SerializeField] private Transform[] spawnPoints;
-    [SerializeField] private EnemyTypePorb[] enemyTypes;
+    [SerializeField] private WaveSO[] waveList;
     private List<EnemySO> probList = new List<EnemySO>();
 
     [SerializeField] private float spawnTime;
     private float spawnTimer;
+    private bool delayTimer;
+
+    private int actualWave = 0;
 
     private void Update()
     {
@@ -20,7 +22,13 @@ public class EnemySpawner : MonoBehaviour
 
         if (spawnTimer > spawnTime)
         {
-            foreach (EnemyTypePorb newEnemyType in enemyTypes)
+            if (delayTimer) 
+            {
+                delayTimer = false;
+                //spawnTimer = waveList[actualWave].spawnTime;
+            }
+
+            foreach (EnemyTypeProb newEnemyType in waveList[actualWave].enemyTypes)
             {
                 for (int i = 0; i < newEnemyType.probability; i++)
                 {
@@ -29,6 +37,20 @@ public class EnemySpawner : MonoBehaviour
             }
 
             SpawnNewEnemy();
+            waveList[actualWave].enemyCount++;
+
+            if (waveList[actualWave].activeWave && waveList[actualWave].enemyCount <= waveList[actualWave].totalEnemyWave)
+            {
+                actualWave++;
+                spawnTimer = waveList[actualWave].delayAfterWave;
+                delayTimer = true;
+            }
+            else if (waveList[actualWave].enemyCount <= waveList[actualWave].totalEnemyBeforeWave)
+            {
+                waveList[actualWave].activeWave = true;
+            }
+
+
             spawnTimer -= spawnTime;
         }
     }
@@ -39,12 +61,4 @@ public class EnemySpawner : MonoBehaviour
         var type = probList[Random.Range(0, probList.Count)];
         GameObject newEnemy = Instantiate(type.asset, spawnPosition.transform.position, spawnPoints[0].rotation);
     }
-}
-
-[System.Serializable]
-public class EnemyTypePorb
-{
-    public EnemySO Type;
-    [Range(1.0f, 10.0f)]
-    public int probability;
 }
