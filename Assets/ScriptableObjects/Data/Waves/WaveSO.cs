@@ -5,15 +5,14 @@ public class WaveSO : ScriptableObject
 {
     public EnemyTypeProb[] enemyTypes;
 
-    public int enemyCount;
-    public bool activeWave;
+    public int newSpawnTime;
 
     [Header("Before Wave")]
     public int totalEnemyBeforeWave;
-    public int newSpawnTime;
+    public float delayBeforeWave;
 
     [Header("Wave")]
     public int totalEnemyWave;
-    public float reductionSpawnTime;
+    public float SpawnTimeInWave;
     public float delayAfterWave;
 }

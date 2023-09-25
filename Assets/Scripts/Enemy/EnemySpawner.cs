@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,48 +9,75 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private WaveSO[] waveList;
     private List<EnemySO> probList = new List<EnemySO>();
 
-    [SerializeField] private float spawnTime;
     private float spawnTimer;
+    private float spawnTime;
     private bool delayTimer;
 
+    private int enemyCount;
+    private bool activeWave;
     private int actualWave = 0;
+
+    private void Awake()
+    {
+        spawnTime = waveList[actualWave].newSpawnTime;
+    }
 
     private void Update()
     {
-        spawnTimer += Time.deltaTime;
-
-        if (spawnTimer > spawnTime)
+        if (actualWave < waveList.Length)
         {
-            if (delayTimer) 
-            {
-                delayTimer = false;
-                //spawnTimer = waveList[actualWave].spawnTime;
-            }
+            spawnTimer += Time.deltaTime;
 
-            foreach (EnemyTypeProb newEnemyType in waveList[actualWave].enemyTypes)
+
+            if (spawnTimer > spawnTime)
             {
-                for (int i = 0; i < newEnemyType.probability; i++)
+                if (activeWave)
                 {
-                    probList.Add(newEnemyType.Type);
+                    spawnTime = waveList[actualWave].SpawnTimeInWave;
                 }
+
+                if (delayTimer)
+                {
+                    delayTimer = false;
+                    activeWave = false;
+                    actualWave++;
+                    spawnTime = waveList[actualWave].newSpawnTime;
+                    enemyCount = 0;
+                }
+
+                foreach (EnemyTypeProb newEnemyType in waveList[actualWave].enemyTypes)
+                {
+                    for (int i = 0; i < newEnemyType.probability; i++)
+                    {
+                        probList.Add(newEnemyType.Type);
+                    }
+                }
+
+                SpawnNewEnemy();
+                enemyCount++;
+
+                spawnTimer = 0;
+                if (activeWave && enemyCount >= waveList[actualWave].totalEnemyWave)
+                {
+                    spawnTime = waveList[actualWave].delayAfterWave;
+                    delayTimer = true;
+                    enemyCount = 0;
+                    Debug.Log("Next Wave");
+                }
+                else if (!activeWave && enemyCount >= waveList[actualWave].totalEnemyBeforeWave)
+                {
+                    activeWave = true;
+                    spawnTime = waveList[actualWave].delayBeforeWave;
+                    enemyCount = 0;
+                    Debug.Log("Wave Incoming!");
+                }
+
             }
 
-            SpawnNewEnemy();
-            waveList[actualWave].enemyCount++;
-
-            if (waveList[actualWave].activeWave && waveList[actualWave].enemyCount <= waveList[actualWave].totalEnemyWave)
-            {
-                actualWave++;
-                spawnTimer = waveList[actualWave].delayAfterWave;
-                delayTimer = true;
-            }
-            else if (waveList[actualWave].enemyCount <= waveList[actualWave].totalEnemyBeforeWave)
-            {
-                waveList[actualWave].activeWave = true;
-            }
-
-
-            spawnTimer -= spawnTime;
+        }
+        else
+        {
+            Debug.Log("you win");
         }
     }
 
@@ -60,5 +86,6 @@ public class EnemySpawner : MonoBehaviour
         Transform spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Length)];
         var type = probList[Random.Range(0, probList.Count)];
         GameObject newEnemy = Instantiate(type.asset, spawnPosition.transform.position, spawnPoints[0].rotation);
+        Debug.Log("New Enemy");
     }
 }
