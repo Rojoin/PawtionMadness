@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
@@ -11,7 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CanvasGroup RecipesScreen;
     [SerializeField] private VoidChannelSO pauseChannelSO;
     [SerializeField] private VoidChannelSO showRecipesChannelSO;
-
+    public UnityEvent deActivateRecipe;
     private bool isPaused;
     private bool isRecipesOn;
 
@@ -85,7 +86,7 @@ public class GameManager : MonoBehaviour
     {
         if (isRecipesOn)
         {
-            ShowRecipes();
+            deActivateRecipe.Invoke();
         }
         else
         {
