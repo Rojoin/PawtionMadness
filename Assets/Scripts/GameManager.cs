@@ -50,17 +50,22 @@ public class GameManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("enemy"))
         {
-            LoseScreen.alpha = 1;
-            LoseScreen.interactable = true;
-            LoseScreen.blocksRaycasts = true;
-            Time.timeScale = 0;
-            PauseScreen.alpha = 0;
-            PauseScreen.interactable = false;
-            PauseScreen.blocksRaycasts = false;
-            RecipesScreen.alpha = 0;
-            RecipesScreen.interactable = false;
-            RecipesScreen.blocksRaycasts = false;
+            Invoke(nameof(GameOver),5);
         }
+    }
+
+    private void GameOver()
+    {
+        LoseScreen.alpha = 1;
+        LoseScreen.interactable = true;
+        LoseScreen.blocksRaycasts = true;
+        Time.timeScale = 0;
+        PauseScreen.alpha = 0;
+        PauseScreen.interactable = false;
+        PauseScreen.blocksRaycasts = false;
+        RecipesScreen.alpha = 0;
+        RecipesScreen.interactable = false;
+        RecipesScreen.blocksRaycasts = false;
     }
 
     private void ShowRecipes()
