@@ -30,6 +30,7 @@ namespace Table
                 }
                 else
                 {
+                    
                     ingredient.SetIconVisible(true);
                     playerInventory.SetPickable(ingredient);
                     ingredient = null;
@@ -65,6 +66,10 @@ namespace Table
             progressBar.fillAmount = progressBarFillAmount;
             if (progressBarFillAmount == 1)
             {
+                var cutIngredient = Instantiate(ingredient.GetIngredientSO().cutIngredient);
+                cutIngredient.SetNewParent(_itemPos);
+                Destroy(ingredient.gameObject);
+                ingredient = cutIngredient;
                 ingredient.SetProcessed();
             }
         }

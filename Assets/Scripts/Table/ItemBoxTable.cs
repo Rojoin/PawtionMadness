@@ -14,7 +14,7 @@ namespace Table
         {
             if (!playerInventory.hasPickable())
             {
-                var ingredientToGive = Instantiate(item.prefab, transform.position, Quaternion.identity);
+                var ingredientToGive = Instantiate(item.ingredientModel, transform.position, Quaternion.identity);
                 ingredientToGive.SetIconVisible(false);
                 playerInventory.SetPickable(ingredientToGive);
             }

@@ -35,5 +35,9 @@ namespace Table
             activateRecipesCanvasChannel.RaiseEvent();
             yield break;
         }
+        public void setCanvasActiveBool(bool state = false)
+        {
+            isCanvasActive = state;
+        }
     }
 }

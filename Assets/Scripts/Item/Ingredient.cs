@@ -23,6 +23,7 @@ namespace Item
         }
 
         public bool IsProcessed() => isProcessed;
+        public KitchenObjectSO GetIngredientSO() => ingredientSO;
         public bool IsItemIconVisible() => _isItemIconVisible;
 
         public void SetProcessed(bool state = true)
