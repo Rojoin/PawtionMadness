@@ -1,13 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject baseEnemy;
+    [SerializeField]  private UnityEvent activateWinScreenChannel;
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private WaveSO[] waveList;
     private List<EnemySO> probList = new List<EnemySO>();
+    private List<GameObject> enemySpawned;
 
     private float spawnTimer;
     private float spawnTime;
@@ -19,6 +22,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Awake()
     {
+        enemySpawned = new List<GameObject>();
         spawnTime = waveList[actualWave].newSpawnTime;
     }
 
@@ -41,7 +45,11 @@ public class EnemySpawner : MonoBehaviour
                     delayTimer = false;
                     activeWave = false;
                     actualWave++;
-                    spawnTime = waveList[actualWave].newSpawnTime;
+                    if (actualWave < waveList.Length)
+                    {
+                        spawnTime = waveList[actualWave].newSpawnTime;
+                    }
+
                     enemyCount = 0;
                 }
 
@@ -71,14 +79,23 @@ public class EnemySpawner : MonoBehaviour
                     enemyCount = 0;
                     Debug.Log("Wave Incoming!");
                 }
-
             }
-
         }
-        else
+        else if (!AreEnemiesAlive())
         {
-            Debug.Log("you win");
+            activateWinScreenChannel.Invoke();
         }
+    }
+
+    private bool AreEnemiesAlive()
+    {
+        foreach (var enemy in enemySpawned)
+        {
+            if (enemy)
+                return true;
+        }
+
+        return false;
     }
 
     private void SpawnNewEnemy()
@@ -87,5 +104,6 @@ public class EnemySpawner : MonoBehaviour
         var type = probList[Random.Range(0, probList.Count)];
         GameObject newEnemy = Instantiate(type.asset, spawnPosition.transform.position, spawnPoints[0].rotation);
         Debug.Log("New Enemy");
+        enemySpawned.Add(newEnemy);
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private CanvasGroup LoseScreen;
+    [SerializeField] private CanvasGroup WinScreen;
     [SerializeField] private CanvasGroup PauseScreen;
     [SerializeField] private CanvasGroup RecipesScreen;
     [SerializeField] private VoidChannelSO pauseChannelSO;
@@ -34,6 +35,9 @@ public class GameManager : MonoBehaviour
         LoseScreen.alpha = 0;
         LoseScreen.interactable = false;
         LoseScreen.blocksRaycasts = false;
+        WinScreen.alpha = 0;
+        WinScreen.interactable = false;
+        WinScreen.blocksRaycasts = false;
         PauseScreen.alpha = 0;
         PauseScreen.interactable = false;
         PauseScreen.blocksRaycasts = false;
@@ -74,11 +78,26 @@ public class GameManager : MonoBehaviour
 
     public void PauseLevel()
     {
-        isPaused = !isPaused;
-        PauseScreen.alpha = isPaused ? 1 : 0;
-        PauseScreen.interactable = isPaused;
-        PauseScreen.blocksRaycasts = isPaused;
-        Time.timeScale = isPaused ? 0 : 1;
+        if (isRecipesOn)
+        {
+            ShowRecipes();
+        }
+        else
+        {
+            isPaused = !isPaused;
+            PauseScreen.alpha = isPaused ? 1 : 0;
+            PauseScreen.interactable = isPaused;
+            PauseScreen.blocksRaycasts = isPaused;
+            Time.timeScale = isPaused ? 0 : 1;
+        }
+    }
+
+    public void WinGame()
+    {
+        WinScreen.alpha = 1;
+        WinScreen.interactable = true;
+        WinScreen.blocksRaycasts = true;
+        Time.timeScale = 0;
     }
 
     public void GoToMenu()
