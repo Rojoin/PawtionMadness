@@ -10,7 +10,8 @@ public class CustomSlider : MonoBehaviour
     [SerializeField] private RectTransform barEndPos;
     private float fillAmount;
     private int waveCounter = 0;
-    public float FillAmount 
+
+    public float FillAmount
     {
         get => fillAmount;
         set
@@ -27,6 +28,16 @@ public class CustomSlider : MonoBehaviour
 
     public void AddWaveImage(float position)
     {
+        float rectX = barEndPos.anchoredPosition.x * position;
+        Debug.Log(barEndPos.rect.x);
+
+        Vector2 newPos = new Vector2(rectX, barEndPos.anchoredPosition.y);
+
+        GameObject newWaveIcon = Instantiate(waveIcon, foreGround.transform);
+        newWaveIcon.SetActive(true);
         
+        RectTransform rect = newWaveIcon.GetComponent<RectTransform>();
+        rect.anchoredPosition = newPos;
+        rect.sizeDelta = barEndPos.rect.size;
     }
 }

@@ -31,11 +31,24 @@ public class EnemySpawner : MonoBehaviour
 
         foreach (var wave in waveList)
         {
-            maxGameBarTimer += wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave +
+            float waveTimerBeforeWave = wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave;
+
+            maxGameBarTimer += waveTimerBeforeWave +
                                wave.delayAfterWave;
         }
 
         gameBar.FillAmount = timerGameBar / maxGameBarTimer;
+        
+        float waveTimer = 0;
+        foreach (var wave in waveList)
+        {
+            float imageNormalizePosition =
+                (waveTimer + wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave) / maxGameBarTimer;
+            
+            waveTimer += wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.delayAfterWave;
+            Debug.Log(imageNormalizePosition);
+            gameBar.AddWaveImage(imageNormalizePosition);
+        }
     }
 
     private void Update()
@@ -102,7 +115,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (!AreEnemiesAlive())
         {
-            Invoke(nameof(WinGame),5);
+            Invoke(nameof(WinGame), 5);
         }
     }
 
