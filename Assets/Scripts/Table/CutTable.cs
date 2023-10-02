@@ -37,7 +37,7 @@ namespace Table
                     ResetCount();
                 }
             } 
-            else if (playerInventory.hasIngredient() && !(playerInventory.GetPickable() as Ingredient).IsProcessed())
+            else if (playerInventory.hasIngredient() && !(playerInventory.GetPickable() as Ingredient).IsProcessed() && !ingredient)
             {
                 playerInventory.GetPickable().SetNewParent(_itemPos);
                 ingredient = playerInventory.GetPickable() as Ingredient;
@@ -46,6 +46,7 @@ namespace Table
                 ingredient.SetIconVisible(true);
                 progressBar.fillAmount = 0;
             }
+          
         }
 
         private void ResetCount()
