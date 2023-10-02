@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject baseEnemy;
     [SerializeField] private UnityEvent activateWinScreenChannel;
     [SerializeField] private Transform[] spawnPoints;
-    [SerializeField] private Slider gameBar;
+    [SerializeField] private CustomSlider gameBar;
     [SerializeField] private WaveSO[] waveList;
     private List<EnemySO> probList = new List<EnemySO>();
     private List<GameObject> enemySpawned;
@@ -35,7 +35,7 @@ public class EnemySpawner : MonoBehaviour
                                wave.delayAfterWave;
         }
 
-        gameBar.value = timerGameBar / maxGameBarTimer;
+        gameBar.FillAmount = timerGameBar / maxGameBarTimer;
     }
 
     private void Update()
@@ -45,7 +45,7 @@ public class EnemySpawner : MonoBehaviour
             timerGameBar += Time.deltaTime;
         }
 
-        gameBar.value = timerGameBar / maxGameBarTimer;
+        gameBar.FillAmount = timerGameBar / maxGameBarTimer;
         if (actualWave < waveList.Length)
         {
             spawnTimer += Time.deltaTime;
@@ -91,14 +91,12 @@ public class EnemySpawner : MonoBehaviour
                     spawnTime = waveList[actualWave].delayAfterWave;
                     delayTimer = true;
                     enemyCount = 0;
-                    Debug.Log("Next Wave");
                 }
                 else if (!activeWave && enemyCount >= waveList[actualWave].totalEnemyBeforeWave)
                 {
                     activeWave = true;
                     spawnTime = waveList[actualWave].delayBeforeWave;
                     enemyCount = 0;
-                    Debug.Log("Wave Incoming!");
                 }
             }
         }
@@ -129,7 +127,6 @@ public class EnemySpawner : MonoBehaviour
         Transform spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Length)];
         var type = probList[Random.Range(0, probList.Count)];
         GameObject newEnemy = Instantiate(type.asset, spawnPosition.transform.position, spawnPoints[0].rotation);
-        Debug.Log("New Enemy");
         enemySpawned.Add(newEnemy);
     }
 }

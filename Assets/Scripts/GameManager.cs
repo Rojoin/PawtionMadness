@@ -6,15 +6,19 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Panels")]
     [SerializeField] private CanvasGroup LoseScreen;
     [SerializeField] private CanvasGroup WinScreen;
     [SerializeField] private CanvasGroup PauseScreen;
     [SerializeField] private CanvasGroup RecipesScreen;
+    [Header("Channels")]
     [SerializeField] private VoidChannelSO pauseChannelSO;
     [SerializeField] private VoidChannelSO showRecipesChannelSO;
+    [Header("Events")]
     public UnityEvent deActivateRecipe;
     private bool isPaused;
     private bool isRecipesOn;
+    
 
     private void Awake()
     {
