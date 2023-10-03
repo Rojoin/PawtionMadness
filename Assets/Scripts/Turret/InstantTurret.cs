@@ -3,15 +3,15 @@ using UnityEngine;
 
 public class InstantTurret : BaseTurret
 {
-    public int ExplosiveDamage
+    public float ExplosiveDamage
     {
         get => (turretType as InstantTurretSO).explosiveDamage;
     }
-    public int castTime
+    public float castTime
     {
         get => (turretType as InstantTurretSO).castTime;
     }
-    public int range
+    public float range
     {
         get => (turretType as InstantTurretSO).range;
     }

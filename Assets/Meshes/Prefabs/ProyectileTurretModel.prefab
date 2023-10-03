@@ -31,6 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3494626423074228035}
+  - {fileID: 2678471355357323220}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -38, y: 90, z: 0}
 --- !u!114 &3970247158357224402
@@ -46,6 +47,84 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   values: {fileID: 11400000, guid: 626d6e97ce9b2ac43b46e1d41e4dfc77, type: 2}
+--- !u!1001 &2495397700701042751
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4139248497758671050}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.572
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.601
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+      propertyPath: m_Name
+      value: TurturretV3(Smooth)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+--- !u!4 &2678471355357323220 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1ad04d51fa34bab4c85b61fd520081da, type: 3}
+  m_PrefabInstance: {fileID: 2495397700701042751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8022048517851322605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -141,6 +220,10 @@ PrefabInstance:
     - target: {fileID: 6080055227833304340, guid: aa4929660b374cd43943b96f29c9b9c3, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6080055227833304340, guid: aa4929660b374cd43943b96f29c9b9c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6257026483810365135, guid: aa4929660b374cd43943b96f29c9b9c3, type: 3}
       propertyPath: m_Layer
