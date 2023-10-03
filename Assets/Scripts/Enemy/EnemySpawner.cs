@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,8 +10,11 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject baseEnemy;
     [SerializeField] private UnityEvent activateWinScreenChannel;
     [SerializeField] private Transform[] spawnPoints;
-    [SerializeField] private CustomSlider gameBar;
     [SerializeField] private WaveSO[] waveList;
+    [SerializeField] private CustomSlider gameBar;
+    [SerializeField] private GameObject textBeforeWave;
+    [SerializeField] private float waveTextTimer;
+    
     private List<EnemySO> probList = new List<EnemySO>();
     private List<GameObject> enemySpawned;
     private float maxGameBarTimer = 0;
@@ -110,6 +114,7 @@ public class EnemySpawner : MonoBehaviour
                     activeWave = true;
                     spawnTime = waveList[actualWave].delayBeforeWave;
                     enemyCount = 0;
+                    StartCoroutine(SpawnWaveText());
                 }
             }
         }
@@ -141,5 +146,12 @@ public class EnemySpawner : MonoBehaviour
         var type = probList[Random.Range(0, probList.Count)];
         GameObject newEnemy = Instantiate(type.asset, spawnPosition.transform.position, spawnPoints[0].rotation);
         enemySpawned.Add(newEnemy);
+    }
+    private IEnumerator SpawnWaveText()
+    {
+        textBeforeWave.SetActive(true);
+        yield return new WaitForSeconds(waveTextTimer);
+        textBeforeWave.SetActive(false);
+        yield break;
     }
 }

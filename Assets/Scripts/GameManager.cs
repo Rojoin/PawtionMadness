@@ -6,23 +6,29 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Entities")]
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject enemySpawner;
     [Header("Panels")]
     [SerializeField] private CanvasGroup LoseScreen;
     [SerializeField] private CanvasGroup WinScreen;
     [SerializeField] private CanvasGroup PauseScreen;
     [SerializeField] private CanvasGroup RecipesScreen;
+    [SerializeField] private CanvasGroup TutorialScreen;
     [Header("Channels")]
+    [SerializeField] private VoidChannelSO actionChannelSO;
     [SerializeField] private VoidChannelSO pauseChannelSO;
     [SerializeField] private VoidChannelSO showRecipesChannelSO;
     [Header("Events")]
     public UnityEvent deActivateRecipe;
     private bool isPaused;
     private bool isRecipesOn;
-    
+
 
     private void Awake()
     {
         pauseChannelSO.Subscribe(PauseLevel);
+        actionChannelSO.Subscribe(TutorialSequence);
         showRecipesChannelSO.Subscribe(ShowRecipes);
     }
 
@@ -49,13 +55,29 @@ public class GameManager : MonoBehaviour
         RecipesScreen.alpha = 0;
         RecipesScreen.interactable = false;
         RecipesScreen.blocksRaycasts = false;
+        TutorialScreen.alpha = 1;
+        TutorialScreen.interactable = true;
+        TutorialScreen.blocksRaycasts = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("enemy"))
         {
-            Invoke(nameof(GameOver),5);
+            Invoke(nameof(GameOver), 5);
+        }
+    }
+
+    private void TutorialSequence()
+    {
+        if (TutorialScreen.GetComponent<TutorialCanvas>().NextTutorial())
+        {
+            player.SetActive(true);
+            enemySpawner.SetActive(true);
+            TutorialScreen.alpha = 0;
+            TutorialScreen.interactable = false;
+            TutorialScreen.blocksRaycasts = false;
+            actionChannelSO.Unsubscribe(TutorialSequence);
         }
     }
 
