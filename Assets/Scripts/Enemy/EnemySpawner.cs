@@ -131,13 +131,7 @@ public class EnemySpawner : MonoBehaviour
 
     private bool AreEnemiesAlive()
     {
-        foreach (var enemy in enemySpawned)
-        {
-            if (enemy)
-                return true;
-        }
-
-        return false;
+        return enemySpawned.Count >0;
     }
 
     private void SpawnNewEnemy()

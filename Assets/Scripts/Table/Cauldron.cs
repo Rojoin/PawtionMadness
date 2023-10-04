@@ -27,11 +27,13 @@ namespace Table
         private CauldronState state;
 
         [SerializeField] private Potion defaultPotion;
+        [SerializeField] private Potion potionFromRecipe;
         [SerializeField] private KitchenObjectSO[] ingredientsInCauldron;
         [SerializeField] private PotionRecipeSO[] posiblePotions;
         [SerializeField] private int maxIngredientInCauldron = 3;
         private int currentIngredientCounter = 0;
         [SerializeField] private Image[] ingredientsImages;
+        private List<IngredientData> cauldronStuff = new List<IngredientData>();
 
         private void Start()
         {
@@ -47,6 +49,9 @@ namespace Table
                     if (currentIngredientCounter == maxIngredientInCauldron)
                     {
                         state = CauldronState.Done;
+                        PotionRecipeSO potionToGet = GetRecipePotion();
+                        potionFromRecipe = InstantiatePotion(potionToGet);
+                        cauldronStuff.Clear();
                     }
                 }
                 else
@@ -58,12 +63,12 @@ namespace Table
             }
         }
 
-        public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
+        public override void OnInteraction(PlayerInventory playerInventory = null, PlayerInteract playerInteract = null)
         {
             switch (state)
             {
                 case CauldronState.Done when !playerInventory.hasPickable():
-                    playerInventory.SetPickable(GetRecipePotion());
+                    playerInventory.SetPickable(potionFromRecipe);
                     ResetCauldron();
                     break;
                 case CauldronState.Empty when playerInventory.hasIngredient():
@@ -93,6 +98,22 @@ namespace Table
             timerMax += ingredient.IsProcessed() ? ingredient.TimeToCook / 2.0f : ingredient.TimeToCook;
             state = CauldronState.Cooking;
             currentIngredientCounter++;
+
+            KitchenObjectSO so = ingredient.GetSO();
+
+            bool addNewIngredient = true;
+            for (var i = 0; i < cauldronStuff.Count; i++)
+            {
+                var ingredientData = cauldronStuff[i];
+                if (ingredientData.item == so)
+                {
+                    ingredientData.amount++;
+                    addNewIngredient = false;
+                }
+            }
+
+            if (addNewIngredient)
+                cauldronStuff.Add(new IngredientData { item = so, amount = 1 });
         }
 
         private void ResetCauldron()
@@ -110,60 +131,35 @@ namespace Table
                 uiImages.enabled = false;
             }
         }
+        
+        
 
-        private Potion GetRecipePotion()
+        private PotionRecipeSO GetRecipePotion()
         {
             PotionRecipeSO nextPotion = null;
 
-            foreach (var recipe in posiblePotions)
+            for (var i = 0; i < posiblePotions.Length; i++)
             {
-                var dict = CreateCoockingDictionary();
-                nextPotion = CheckRecipe(dict, recipe);
-                if (nextPotion)
-                {
-                    break;
-                }
-            }
+                PotionRecipeSO recipe = posiblePotions[i];
 
-            var potionToReturn = nextPotion
-                ? Instantiate(nextPotion.potion, transform.position, Quaternion.identity)
-                : Instantiate(defaultPotion, transform.position, Quaternion.identity);
-            potionToReturn.SetIconVisible(true);
-            return potionToReturn;
+                if (recipe.IsSameRecipe(cauldronStuff))
+                    return recipe;
+            }
+            return null;
+            
         }
 
-        private PotionRecipeSO CheckRecipe(Dictionary<ScriptableObject, int> dict, PotionRecipeSO recipe)
+        private Potion InstantiatePotion(PotionRecipeSO recipe)
         {
-            foreach (var item in recipe.itemsNeeded)
-            {
-                if (!dict.ContainsKey(item))
-                {
-                    return null;
-                }
-                else
-                {
-                    dict[item]--;
-                    if (dict[item] == 0)
-                    {
-                        dict.Remove(item);
-                    }
-                }
-            }
+            Potion potion;
+            if (recipe)
+                potion = Instantiate(recipe.potion, transform.position, Quaternion.identity);
+            else
+                potion = Instantiate(defaultPotion, transform.position, Quaternion.identity);
 
-            return dict.Count == 0 ? recipe : null;
+            potion.SetIconVisible(true);
+            return potion;
         }
 
-        private Dictionary<ScriptableObject, int> CreateCoockingDictionary()
-        {
-            var dict = new Dictionary<ScriptableObject, int>();
-
-            foreach (var item in ingredientsInCauldron)
-            {
-                if (!dict.TryAdd(item, 1))
-                    dict[item]++;
-            }
-
-            return dict;
-        }
     }
 }
