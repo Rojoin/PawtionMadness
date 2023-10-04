@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        pauseChannelSO.Subscribe(PauseLevel);
         actionChannelSO.Subscribe(TutorialSequence);
         showRecipesChannelSO.Subscribe(ShowRecipes);
     }
@@ -78,6 +77,7 @@ public class GameManager : MonoBehaviour
             TutorialScreen.interactable = false;
             TutorialScreen.blocksRaycasts = false;
             actionChannelSO.Unsubscribe(TutorialSequence);
+            pauseChannelSO.Subscribe(PauseLevel);
         }
     }
 
