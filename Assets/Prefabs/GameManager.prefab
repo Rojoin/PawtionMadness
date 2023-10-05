@@ -67,9 +67,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b1874cebac34242bac521e3fcb2f02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoseScreen: {fileID: 0}
-  PauseScreen: {fileID: 0}
+  player: {fileID: 0}
+  enemySpawner: {fileID: 0}
+  uiManager: {fileID: 0}
+  actionChannelSO: {fileID: 11400000, guid: 38d87044a7ab8284a8146a0e7c7fc405, type: 2}
   pauseChannelSO: {fileID: 11400000, guid: 31fd85e9f5e17714a82062a5719bdd7d, type: 2}
+  showRecipesChannelSO: {fileID: 11400000, guid: b728d78206d9b544d9ae56791cbedc92, type: 2}
+  deActivateRecipe:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Table.BookTable, Assembly-CSharp
+        m_MethodName: setCanvasActiveBool
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &2347047456568114724
 Rigidbody:
   m_ObjectHideFlags: 0
