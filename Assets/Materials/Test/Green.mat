@@ -19,7 +19,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _IndirectLightMinColor
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -91,8 +91,8 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
-    - _CelShadeMidPoint: -0.5
-    - _CelShadeSoftness: 0.05
+    - _CelShadeMidPoint: 0.27
+    - _CelShadeSoftness: 0.87
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -137,14 +137,14 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.3100191, g: 0.49056602, b: 0.24759701, a: 1}
+    - _BaseColor: {r: 0.24842763, g: 0.5, b: 0.36194476, a: 1}
     - _Color: {r: 0.14136331, g: 0.3773585, b: 0.1263795, a: 1}
     - _EmissionColor: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
     - _EmissionMapChannelMask: {r: 1, g: 1, b: 1, a: 0}
-    - _IndirectLightMinColor: {r: 0, g: 0, b: 0, a: 1}
+    - _IndirectLightMinColor: {r: 0, g: 0.007111257, b: 0.2735849, a: 1}
     - _OcclusionMapChannelMask: {r: 1, g: 0, b: 0, a: 0}
     - _OutlineColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _ShadowMapColor: {r: 1, g: 0.825, b: 0.78, a: 1}
+    - _ShadowMapColor: {r: 0.07966196, g: 0.07179299, b: 0.5188679, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &678511992300946670
