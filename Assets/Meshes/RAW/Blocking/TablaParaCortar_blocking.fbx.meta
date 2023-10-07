@@ -3,7 +3,22 @@ guid: 789769f40fa291545b1afdfdfb84c26d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Puertas
+    second: {fileID: 2100000, guid: e602c2f257d2fe14cac9fe8f714c4f6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Techo
+    second: {fileID: 2100000, guid: 250b1542ae2d82c4eaf65760fe5fa017, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 3782482f4fa3b8c4d81e89ea52ada106, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,6 +55,7 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

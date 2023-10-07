@@ -3,7 +3,12 @@ guid: 35824e1fda915ae408211b214eef25c8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Puertas
+    second: {fileID: 2100000, guid: e602c2f257d2fe14cac9fe8f714c4f6b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,6 +45,7 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
