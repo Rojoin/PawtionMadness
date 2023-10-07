@@ -29,6 +29,7 @@ public class DispersionTurret : AttackTurret
         hits = Physics.RaycastAll(transform.position, transform.forward*AttackRange, AttackRange);
 
         onAttack.Invoke();
+        base.Shoot();
         for (int i = 0; i < hits.Length; i++)
         {
             RaycastHit hit = hits[i];

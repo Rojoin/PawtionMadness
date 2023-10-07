@@ -4,6 +4,7 @@ namespace Turret
 {
     public abstract class AttackTurret : BaseTurret
     {
+        private static readonly int ShootTriggerAnim = Animator.StringToHash("Shoot");
         protected float shootSpeedTimer = 0;
 
         public float ShootSpeed
@@ -19,7 +20,13 @@ namespace Turret
             get => (turretType as AttackTurretSO).attackRange;
         }
 
-        public abstract void Shoot();
+        public virtual void Shoot()
+        {
+            if (animator)
+            {
+                animator.SetTrigger(ShootTriggerAnim);
+            }
+        }
 
         public bool DetectEntity()
         {

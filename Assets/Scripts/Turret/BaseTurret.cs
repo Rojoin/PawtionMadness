@@ -6,6 +6,7 @@ namespace Turret
 {
     public abstract class BaseTurret : MonoBehaviour, IHealthComponent
     {
+        [SerializeField] protected Animator animator;
         [SerializeField] protected BaseTurretSO turretType;
         [SerializeField] private Tile tile;
         [SerializeField] private UnityEvent _onHit;

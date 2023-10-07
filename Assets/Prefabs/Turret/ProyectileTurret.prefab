@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392bfd6f95beb39449beb361b79740e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 4644371335603066670}
   turretType: {fileID: 11400000, guid: 74ea892627157a34ca8e7742957b168c, type: 2}
   tile: {fileID: 0}
   _onHit:
@@ -173,6 +174,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d20fbebb063514549960ccc9545e3b22, type: 3}
+--- !u!95 &4644371335603066670 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 50510999494416340, guid: d20fbebb063514549960ccc9545e3b22, type: 3}
+  m_PrefabInstance: {fileID: 4667818715171897594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8637423197972540200 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3970247158357224402, guid: d20fbebb063514549960ccc9545e3b22, type: 3}
