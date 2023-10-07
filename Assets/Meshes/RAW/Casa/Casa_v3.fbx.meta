@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9cb32d811f5894449907d404072f6152
+guid: d21f0c2d39d07174e973757e24f68f26
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert5
-    second: {fileID: 2100000, guid: 50ea62da9ef7e154c9379e61bf10e853, type: 2}
+      name: Mat_Luna
+    second: {fileID: 2100000, guid: b0ac6e4df7ec74e48bc261d99e3e369a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert7
-    second: {fileID: 2100000, guid: 92a5687a3027f0c4ca0fdac7d268e532, type: 2}
+      name: Mat_Puertas
+    second: {fileID: 2100000, guid: 97e1d5203dd792c4fa9a2edbea8fac30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_casa
+    second: {fileID: 2100000, guid: 0a6bdfd7b73e179459ad070c1f414ff9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_pasto
+    second: {fileID: 2100000, guid: 990308e0328be8b4796164e28acf464c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_techo
+    second: {fileID: 2100000, guid: a3f4fddcb637e2045a450aea2ed55b6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MesaToon_Mat_mesa
+    second: {fileID: 2100000, guid: 7959061a27c3fe845a250e9820255e3e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -42,7 +62,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -80,8 +100,8 @@ ModelImporter:
     useFileScale: 0
     strictVertexDataChecks: 0
   tangentSpace:
-    normalSmoothAngle: 180
-    normalImportMode: 1
+    normalSmoothAngle: 60
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
