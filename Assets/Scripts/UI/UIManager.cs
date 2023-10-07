@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class UIManager : MonoBehaviour
@@ -10,6 +11,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private CanvasGroup RecipesScreen;
     [SerializeField] private CanvasGroup TutorialScreen;
     
+    [Header("InGame")]
+    [SerializeField] private CustomSlider waveGameBar;
+    [SerializeField] private GameObject textBeforeWave;
+    [SerializeField] private float waveTextTimer;
     
     public void Start()
     {
@@ -42,7 +47,7 @@ public class UIManager : MonoBehaviour
         return false;
     }
 
-    public void activateGameOverCanvas()
+    public void ActivateGameOverCanvas()
     {
         LoseScreen.alpha = 1;
         LoseScreen.interactable = true;
@@ -62,17 +67,36 @@ public class UIManager : MonoBehaviour
         RecipesScreen.blocksRaycasts = isRecipesOn;
     }
 
-    public void activateWinScreen()
+    public void ActivateWinScreen()
     {
         WinScreen.alpha = 1;
         WinScreen.interactable = true;
         WinScreen.blocksRaycasts = true;
     }
 
-    public void togglePauseMenu(bool isPaused)
+    public void UpdateGameBar(float value)
+    {
+        waveGameBar.FillAmount = value;
+    }
+    public void AddWaveIcon(float normalizePosition)
+    {
+        waveGameBar.AddWaveImage(normalizePosition);
+    }
+    public void TogglePauseMenu(bool isPaused)
     {
         PauseScreen.alpha = isPaused ? 1 : 0;
         PauseScreen.interactable = isPaused;
         PauseScreen.blocksRaycasts = isPaused;
+    }
+    public void ShowNewWaveAlert()
+    {
+        StartCoroutine(SpawnWaveText());
+    }
+    public IEnumerator SpawnWaveText()
+    {
+        textBeforeWave.SetActive(true);
+        yield return new WaitForSeconds(waveTextTimer);
+        textBeforeWave.SetActive(false);
+        yield break;
     }
 }

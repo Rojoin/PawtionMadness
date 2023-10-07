@@ -35,7 +35,7 @@ public class CustomSlider : MonoBehaviour
 
         GameObject newWaveIcon = Instantiate(waveIcon, foreGround.transform);
         newWaveIcon.SetActive(true);
-        
+        Debug.Log(newWaveIcon,gameObject);
         RectTransform rect = newWaveIcon.GetComponent<RectTransform>();
         rect.anchoredPosition = newPos;
         rect.sizeDelta = barEndPos.rect.size;

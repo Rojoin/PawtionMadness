@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     [Header("Entities")]
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject enemySpawner;
+    [SerializeField] private EnemySpawner enemySpawner;
     [SerializeField] private UIManager uiManager;
 
     [Header("Channels")]
@@ -25,12 +25,20 @@ public class GameManager : MonoBehaviour
     {
         actionChannelSO.Subscribe(TutorialSequence);
         showRecipesChannelSO.Subscribe(ShowRecipes);
+        player.SetActive(false);
+        enemySpawner.gameObject.SetActive(false);
+        enemySpawner.OnNewWaveAdded.AddListener(uiManager.AddWaveIcon);
+        enemySpawner.OnGameBarUpdated.AddListener(uiManager.UpdateGameBar);
+        enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
     }
 
     private void OnDestroy()
     {
         pauseChannelSO.Unsubscribe(PauseLevel);
         showRecipesChannelSO.Unsubscribe(ShowRecipes);
+        enemySpawner.OnGameBarUpdated.RemoveListener(uiManager.UpdateGameBar);
+        enemySpawner.OnNewWaveAdded.RemoveListener(uiManager.AddWaveIcon);
+        enemySpawner.OnIncomingWave.RemoveListener(uiManager.ShowNewWaveAlert);
     }
 
     private void Start()
@@ -53,7 +61,7 @@ public class GameManager : MonoBehaviour
         if (uiManager.HasTutorialEnded())
         {
             player.SetActive(true);
-            enemySpawner.SetActive(true);
+            enemySpawner.gameObject.SetActive(true);
             actionChannelSO.Unsubscribe(TutorialSequence);
             pauseChannelSO.Subscribe(PauseLevel);
         }
@@ -62,7 +70,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         Time.timeScale = 0;
-        uiManager.activateGameOverCanvas();
+        uiManager.ActivateGameOverCanvas();
     }
 
     private void ShowRecipes()
@@ -85,14 +93,14 @@ public class GameManager : MonoBehaviour
         else
         {
             isPaused = !isPaused;
-            uiManager.togglePauseMenu(isPaused);
+            uiManager.TogglePauseMenu(isPaused);
             Time.timeScale = isPaused ? 0 : 1;
         }
     }
 
     public void WinGame()
     {
-        uiManager.activateWinScreen();
+        uiManager.ActivateWinScreen();
         Time.timeScale = 0;
     }
 

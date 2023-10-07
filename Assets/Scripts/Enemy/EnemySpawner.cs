@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -11,10 +12,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private UnityEvent activateWinScreenChannel;
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private WaveSO[] waveList;
-    [SerializeField] private CustomSlider gameBar;
-    [SerializeField] private GameObject textBeforeWave;
-    [SerializeField] private float waveTextTimer;
-    
+
+
     private List<EnemySO> probList = new List<EnemySO>();
     private List<GameObject> enemySpawned;
     private float maxGameBarTimer = 0;
@@ -24,9 +23,15 @@ public class EnemySpawner : MonoBehaviour
     private float spawnTime;
     private bool delayTimer;
 
+    private float currentTimer;
+
     private int enemyCount;
     private bool activeWave;
     private int actualWave = 0;
+    [Header("Events")]
+    public UnityEvent<float> OnGameBarUpdated = new UnityEvent<float>();
+    public UnityEvent<float> OnNewWaveAdded = new UnityEvent<float>();
+    public UnityEvent OnIncomingWave = new UnityEvent();
 
     private void Awake()
     {
@@ -41,17 +46,17 @@ public class EnemySpawner : MonoBehaviour
                                wave.delayAfterWave;
         }
 
-        gameBar.FillAmount = timerGameBar / maxGameBarTimer;
-        
+        currentTimer = timerGameBar / maxGameBarTimer;
+        OnGameBarUpdated.Invoke(currentTimer);
+
         float waveTimer = 0;
         foreach (var wave in waveList)
         {
             float imageNormalizePosition =
                 (waveTimer + wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave) / maxGameBarTimer;
-            
+
             waveTimer += wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.delayAfterWave;
-            Debug.Log(imageNormalizePosition);
-            gameBar.AddWaveImage(imageNormalizePosition);
+            OnNewWaveAdded.Invoke(imageNormalizePosition);
         }
     }
 
@@ -62,7 +67,9 @@ public class EnemySpawner : MonoBehaviour
             timerGameBar += Time.deltaTime;
         }
 
-        gameBar.FillAmount = timerGameBar / maxGameBarTimer;
+        currentTimer = timerGameBar / maxGameBarTimer;
+        OnGameBarUpdated.Invoke(currentTimer);
+        
         if (actualWave < waveList.Length)
         {
             spawnTimer += Time.deltaTime;
@@ -114,7 +121,8 @@ public class EnemySpawner : MonoBehaviour
                     activeWave = true;
                     spawnTime = waveList[actualWave].delayBeforeWave;
                     enemyCount = 0;
-                    StartCoroutine(SpawnWaveText());
+                    OnIncomingWave.Invoke();
+                    
                 }
             }
         }
@@ -131,7 +139,7 @@ public class EnemySpawner : MonoBehaviour
 
     private bool AreEnemiesAlive()
     {
-        return enemySpawned.Count >0;
+        return enemySpawned.Count > 0;
     }
 
     private void SpawnNewEnemy()
@@ -141,11 +149,6 @@ public class EnemySpawner : MonoBehaviour
         GameObject newEnemy = Instantiate(type.asset, spawnPosition.transform.position, spawnPoints[0].rotation);
         enemySpawned.Add(newEnemy);
     }
-    private IEnumerator SpawnWaveText()
-    {
-        textBeforeWave.SetActive(true);
-        yield return new WaitForSeconds(waveTextTimer);
-        textBeforeWave.SetActive(false);
-        yield break;
-    }
+
+  
 }

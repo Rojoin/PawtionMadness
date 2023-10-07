@@ -59,6 +59,9 @@ MonoBehaviour:
   PauseScreen: {fileID: 7806973522877198821}
   RecipesScreen: {fileID: 1296710488481577502}
   TutorialScreen: {fileID: 5408192697655646865}
+  waveGameBar: {fileID: 2367346682796420830}
+  textBeforeWave: {fileID: 9142765372023678382}
+  waveTextTimer: 3
 --- !u!1001 &1228681516560648649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -398,9 +401,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1634d4138dc753848b8e5203150232cb, type: 3}
+--- !u!114 &2367346682796420830 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7516333624664837297, guid: 1634d4138dc753848b8e5203150232cb, type: 3}
+  m_PrefabInstance: {fileID: 5230333762042028655}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9ae68def94413fbce0ade6e671200d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3834528904478837717 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9053109777882851770, guid: 1634d4138dc753848b8e5203150232cb, type: 3}
+  m_PrefabInstance: {fileID: 5230333762042028655}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9142765372023678382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3923832033969293249, guid: 1634d4138dc753848b8e5203150232cb, type: 3}
   m_PrefabInstance: {fileID: 5230333762042028655}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5841342870866328682
