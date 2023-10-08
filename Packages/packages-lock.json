@@ -1,14 +1,5 @@
 {
   "dependencies": {
-    "com.deltation.toon-shader": {
-      "version": "https://github.com/Delt06/urp-toon-shader.git?path=Packages/com.deltation.toon-shader",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.render-pipelines.universal": "12.1.6"
-      },
-      "hash": "9382d9261621ab148f2b67fa0810d94451018667"
-    },
     "com.unity.2d.animation": {
       "version": "9.0.3",
       "depth": 1,
@@ -138,7 +129,7 @@
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -173,8 +164,8 @@
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.24",
-      "depth": 1,
+      "version": "3.0.25",
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.ext.nunit": "1.0.6"
@@ -218,15 +209,6 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.postprocessing": {
-      "version": "3.2.2",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.physics": "1.0.0"
-      },
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
