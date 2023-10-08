@@ -8,39 +8,47 @@ public class UIManager : MonoBehaviour
     [SerializeField] private CanvasGroup LoseScreen;
     [SerializeField] private CanvasGroup WinScreen;
     [SerializeField] private CanvasGroup PauseScreen;
+    [SerializeField] private CanvasGroup SettingsScreen;
     [SerializeField] private CanvasGroup RecipesScreen;
     [SerializeField] private CanvasGroup TutorialScreen;
-    
+
     [Header("InGame")]
     [SerializeField] private CustomSlider waveGameBar;
     [SerializeField] private GameObject textBeforeWave;
     [SerializeField] private float waveTextTimer;
-    
+
     public void Start()
     {
-        LoseScreen.alpha = 0;
-        LoseScreen.interactable = false;
-        LoseScreen.blocksRaycasts = false;
-        WinScreen.alpha = 0;
-        WinScreen.interactable = false;
-        WinScreen.blocksRaycasts = false;
-        PauseScreen.alpha = 0;
-        PauseScreen.interactable = false;
-        PauseScreen.blocksRaycasts = false;
-        RecipesScreen.alpha = 0;
-        RecipesScreen.interactable = false;
-        RecipesScreen.blocksRaycasts = false;
-        TutorialScreen.alpha = 1;
-        TutorialScreen.interactable = true;
-        TutorialScreen.blocksRaycasts = true;
+        SetCanvasVisibility(LoseScreen, false);
+        SetCanvasVisibility(WinScreen, false);
+        SetCanvasVisibility(PauseScreen, false);
+        SetCanvasVisibility(RecipesScreen, false);
+        SetCanvasVisibility(SettingsScreen, false);
+        SetCanvasVisibility(TutorialScreen, true);
+    }
+
+    private void SetCanvasVisibility(CanvasGroup canvas, bool state)
+    {
+        canvas.alpha = state ? 1 : 0;
+        canvas.interactable = state;
+        canvas.blocksRaycasts = state;
+    }
+
+    public void SetSettingsOn()
+    {
+        SetCanvasVisibility(PauseScreen,false);
+        SetCanvasVisibility(SettingsScreen,true);
+    } 
+    public void GoBackToPause()
+    {
+        SetCanvasVisibility(PauseScreen,true);
+        SetCanvasVisibility(SettingsScreen,false);
     }
     public bool HasTutorialEnded()
     {
         if (TutorialScreen.GetComponent<TutorialCanvas>().NextTutorial())
         {
-            TutorialScreen.alpha = 0;
-            TutorialScreen.interactable = false;
-            TutorialScreen.blocksRaycasts = false;
+            SetCanvasVisibility(TutorialScreen, false);
             return true;
         }
 
@@ -49,50 +57,42 @@ public class UIManager : MonoBehaviour
 
     public void ActivateGameOverCanvas()
     {
-        LoseScreen.alpha = 1;
-        LoseScreen.interactable = true;
-        LoseScreen.blocksRaycasts = true;
-        PauseScreen.alpha = 0;
-        PauseScreen.interactable = false;
-        PauseScreen.blocksRaycasts = false;
-        RecipesScreen.alpha = 0;
-        RecipesScreen.interactable = false;
-        RecipesScreen.blocksRaycasts = false;
+        SetCanvasVisibility(LoseScreen,true);
+        SetCanvasVisibility(PauseScreen,false);
+        SetCanvasVisibility(RecipesScreen,false);
     }
 
     public void ShowRecipesCanvas(bool isRecipesOn)
     {
-        RecipesScreen.alpha = isRecipesOn ? 1 : 0;
-        RecipesScreen.interactable = isRecipesOn;
-        RecipesScreen.blocksRaycasts = isRecipesOn;
+        SetCanvasVisibility(RecipesScreen,isRecipesOn);
     }
 
     public void ActivateWinScreen()
     {
-        WinScreen.alpha = 1;
-        WinScreen.interactable = true;
-        WinScreen.blocksRaycasts = true;
+        SetCanvasVisibility(WinScreen,true);
     }
 
     public void UpdateGameBar(float value)
     {
         waveGameBar.FillAmount = value;
     }
+
     public void AddWaveIcon(float normalizePosition)
     {
         waveGameBar.AddWaveImage(normalizePosition);
     }
+
     public void TogglePauseMenu(bool isPaused)
     {
-        PauseScreen.alpha = isPaused ? 1 : 0;
-        PauseScreen.interactable = isPaused;
-        PauseScreen.blocksRaycasts = isPaused;
+        SetCanvasVisibility(PauseScreen,isPaused);
     }
+
     public void ShowNewWaveAlert()
     {
         StartCoroutine(SpawnWaveText());
     }
-    public IEnumerator SpawnWaveText()
+
+    private IEnumerator SpawnWaveText()
     {
         textBeforeWave.SetActive(true);
         yield return new WaitForSeconds(waveTextTimer);
