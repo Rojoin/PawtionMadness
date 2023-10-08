@@ -24,6 +24,7 @@ public class EnemySpawner : MonoBehaviour
     private bool delayTimer;
 
     private float currentTimer;
+    [SerializeField] private float timeUntilWin = 5f;
 
     private int enemyCount;
     private bool activeWave;
@@ -69,7 +70,7 @@ public class EnemySpawner : MonoBehaviour
 
         currentTimer = timerGameBar / maxGameBarTimer;
         OnGameBarUpdated.Invoke(currentTimer);
-        
+
         if (actualWave < waveList.Length)
         {
             spawnTimer += Time.deltaTime;
@@ -116,19 +117,19 @@ public class EnemySpawner : MonoBehaviour
                     delayTimer = true;
                     enemyCount = 0;
                 }
-                else if (!activeWave && enemyCount >= waveList[actualWave].totalEnemyBeforeWave)
+                else if (!activeWave && actualWave < waveList.Length &&
+                         enemyCount >= waveList[actualWave].totalEnemyBeforeWave)
                 {
                     activeWave = true;
                     spawnTime = waveList[actualWave].delayBeforeWave;
                     enemyCount = 0;
                     OnIncomingWave.Invoke();
-                    
                 }
             }
         }
         else if (!AreEnemiesAlive())
         {
-            Invoke(nameof(WinGame), 5);
+            Invoke(nameof(WinGame), timeUntilWin);
         }
     }
 
@@ -149,6 +150,4 @@ public class EnemySpawner : MonoBehaviour
         GameObject newEnemy = Instantiate(type.asset, spawnPosition.transform.position, spawnPoints[0].rotation);
         enemySpawned.Add(newEnemy);
     }
-
-  
 }
