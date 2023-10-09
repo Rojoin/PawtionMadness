@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8232723196618809625}
   - component: {fileID: 2486498811297812854}
   m_Layer: 6
-  m_Name: BaseEnemy
+  m_Name: SimpleEnemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fccb4a1acba1104689c6f9e276e4bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: {fileID: 11400000, guid: d0091abd3ac8fef4f81e6b41a62d88cf, type: 2}
+  enemyType: {fileID: 11400000, guid: d0091abd3ac8fef4f81e6b41a62d88cf, type: 2}
   onDamage:
     m_PersistentCalls:
       m_Calls:

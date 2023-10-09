@@ -1,17 +1,29 @@
 using UnityEngine;
 using Enemy;
 
-public class SimpleEnemy : BaseEnemy
+public class ChargeEnemy : BaseEnemy
 {
     private bool stopMoving;
     private bool canAttack;
+    private bool isCharging;
     private float timer;
     private Vector3 initRayPosition;
+
+    public float ChargeSpeed
+    {
+        get => (enemyType as EnemyChargeSO).chargeSpeed;
+    }
+
+    public float ChargeDamage
+    {
+        get => (enemyType as EnemyChargeSO).chargeDamage;
+    }
 
     private void Awake()
     {
         stopMoving = false;
         canAttack = false;
+        isCharging = true;
     }
 
     //TODO:Cambiar logica update a IEnumerator
@@ -34,20 +46,38 @@ public class SimpleEnemy : BaseEnemy
         {
             Movement();
         }
+
     }
 
     public void Movement()
     {
-        transform.position += transform.forward * (Time.deltaTime * MoveSpeed);
-        initRayPosition = transform.position + (-transform.forward * transform.localScale.x/2);
+        if (isCharging)
+        {
+            transform.position += transform.forward * (Time.deltaTime * ChargeSpeed);
+        }
+        else
+        {
+            transform.position += transform.forward * (Time.deltaTime * MoveSpeed);
+        }
+
+        initRayPosition = transform.position + (-transform.forward * transform.localScale.x / 2);
     }
 
     private void Attack(IHealthComponent targetDamage)
     {
-        targetDamage.ReceiveDamage(Damage);
+        if (isCharging)
+        {
+            targetDamage.ReceiveDamage(ChargeDamage);
+            isCharging = false;
+        }
+        else
+        {
+            targetDamage.ReceiveDamage(Damage);
+        }
+
         canAttack = false;
         timer -= enemyType.attackSpeed;
-        
+
         if (!targetDamage.IsAlive())
         {
             stopMoving = false;
@@ -60,7 +90,7 @@ public class SimpleEnemy : BaseEnemy
         int layerMask = 1 << gameObject.layer;
         layerMask = ~layerMask;
         RaycastHit hit;
-        if (Physics.Raycast(initRayPosition, transform.forward, out hit, AttackRange,layerMask))
+        if (Physics.Raycast(initRayPosition, transform.forward, out hit, AttackRange, layerMask))
         {
             if (hit.collider.gameObject.TryGetComponent<IHealthComponent>(out var entity) && canAttack)
             {

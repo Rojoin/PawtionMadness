@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="New Enemy", menuName = "Enemy")]
+[CreateAssetMenu(fileName ="New Base Enemy", menuName = "Create Enemy/Base Enemy")]
 public class EnemySO : ScriptableObject
 {
     public GameObject asset;
