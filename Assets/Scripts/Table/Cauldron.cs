@@ -153,7 +153,10 @@ namespace Table
         {
             Potion potion;
             if (recipe)
+            {
+                Debug.Log(recipe.name);
                 potion = Instantiate(recipe.potion, transform.position, Quaternion.identity);
+            }
             else
                 potion = Instantiate(defaultPotion, transform.position, Quaternion.identity);
 

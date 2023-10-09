@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using Item;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [CreateAssetMenu(menuName = "Create PotionRecipeSO", fileName = "PotionRecipeSO", order = 0)]
 public class PotionRecipeSO : ScriptableObject
 {
-    public KitchenObjectSO[] itemsNeeded;
     public Potion potion;
     public List<IngredientData> recipe;
-    
 
     void OnValidate()
     {
@@ -29,23 +28,32 @@ public class PotionRecipeSO : ScriptableObject
                 }
             }
         }
-        
     }
 
     public bool IsSameRecipe(List<IngredientData> otherRecipe)
     {
-        if (recipe.Count != otherRecipe.Count)
-            return false;
-
-        for (var i = 0; i < recipe.Count; i++)
+        for (int i = 0; i < recipe.Count; i++)
         {
-            var data01 = recipe[i];
+            IngredientData data01 = recipe[i];
+            bool isItemFound = false;
             for (var j = 0; j < otherRecipe.Count; j++)
             {
                 var data02 = otherRecipe[j];
-                if (data01.item == data02.item &&
-                    data01.amount != data02.amount)
-                    return false;
+
+                if (data01.item == data02.item)
+                {
+                    isItemFound = true;
+                    if (data01.amount != data02.amount)
+                    {
+                        return false;
+                    }
+                    break;
+                }
+            }
+
+            if (!isItemFound)
+            {
+                return false;
             }
         }
 
