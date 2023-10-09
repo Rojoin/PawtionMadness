@@ -38,6 +38,7 @@ public class ModelReference : MonoBehaviour
 
         DeactivateOutline();
     }
+    
 
     public void ActivateOutline()
     {

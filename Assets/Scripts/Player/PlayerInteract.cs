@@ -1,5 +1,7 @@
-﻿using Interfaces;
+﻿using System;
+using Interfaces;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Player
 {
@@ -9,6 +11,8 @@ namespace Player
 
         [SerializeField] private float _interactDistance;
         [SerializeField] private VoidChannelSO InteractChannel;
+        
+        public UnityEvent<RaycastHit> OnInteractableAtRange { get; set; } = new UnityEvent<RaycastHit>();
 
 
         private void OnEnable()
@@ -21,6 +25,18 @@ namespace Player
             InteractChannel.Unsubscribe(OnInteract);
         }
 
+        public void Update()
+        {
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, _interactDistance))
+            {
+                OnInteractableAtRange.Invoke(raycastHit);
+            }
+            else
+            {
+                RaycastHit hit = new RaycastHit();
+                OnInteractableAtRange.Invoke(hit);
+            }
+        }
 
         public void OnInteract()
         {
