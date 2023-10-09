@@ -29,13 +29,11 @@ public class CustomSlider : MonoBehaviour
     public void AddWaveImage(float position)
     {
         float rectX = barEndPos.anchoredPosition.x * position;
-        Debug.Log(barEndPos.rect.x);
 
         Vector2 newPos = new Vector2(rectX, barEndPos.anchoredPosition.y);
 
         GameObject newWaveIcon = Instantiate(waveIcon, foreGround.transform);
         newWaveIcon.SetActive(true);
-        Debug.Log(newWaveIcon,gameObject);
         RectTransform rect = newWaveIcon.GetComponent<RectTransform>();
         rect.anchoredPosition = newPos;
         rect.sizeDelta = barEndPos.rect.size;
