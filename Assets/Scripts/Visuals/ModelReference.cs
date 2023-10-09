@@ -22,6 +22,7 @@ public class ModelReference : MonoBehaviour
             {
                 Outline newOutLine = mesh.gameObject.AddComponent<Outline>();
                 newOutLine.OutlineMode = outlineMode;
+                newOutLine.precomputeOutline = true;
                 outlinedMeshes.Add(newOutLine);
             }
         }
@@ -32,6 +33,7 @@ public class ModelReference : MonoBehaviour
             {
                 Outline newOutLine = mesh.gameObject.AddComponent<Outline>();
                 newOutLine.OutlineMode = outlineMode;
+                newOutLine.precomputeOutline = true;
                 outlinedMeshes.Add(newOutLine);
             }
         }
