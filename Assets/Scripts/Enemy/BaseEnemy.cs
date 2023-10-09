@@ -7,9 +7,9 @@ namespace Enemy
     public class BaseEnemy : MonoBehaviour, IHealthComponent
     {
         [SerializeField] protected EnemySO enemyType;
-        [SerializeField] private UnityEvent onDamage;
+        [SerializeField] protected UnityEvent onDamage;
         private float currentHealth;
-        private bool isAlive;
+        protected bool isAlive;
 
         public float MoveSpeed { get => enemyType.moveSpeed; }
         public float Damage { get => enemyType.damage;  }
