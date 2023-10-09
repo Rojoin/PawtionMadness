@@ -16,14 +16,14 @@ public class ExplosiveTurret : InstantTurret
 
     private void ExplodeTurret()
     {
-        RaycastHit[] hits;
-        hits = Physics.BoxCastAll(transform.position, new Vector3(range / 2, range / 2, range / 2), transform.forward, transform.rotation);
+        Collider[] hits;
+        hits = Physics.OverlapBox(transform.position, new Vector3(range / 2, range / 2, range / 2), transform.rotation);
 
         for (int i = 0; i < hits.Length; i++)
         {
-            RaycastHit hit = hits[i];
+            Collider hit = hits[i];
 
-            if (hit.transform.TryGetComponent<IHealthComponent>(out var entity) && hit.collider.CompareTag("enemy"))
+            if (hit.transform.TryGetComponent<IHealthComponent>(out var entity) && hit.CompareTag("enemy"))
             {
                 entity.ReceiveDamage(ExplosiveDamage);
             }
