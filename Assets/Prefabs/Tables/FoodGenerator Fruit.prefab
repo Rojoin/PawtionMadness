@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 8414907712105026615}
   - component: {fileID: 784169635174901281}
   - component: {fileID: 4070459960089540922}
+  - component: {fileID: 8371265266998325815}
   m_Layer: 0
   m_Name: FoodGenerator Fruit
   m_TagString: Untagged
@@ -144,6 +145,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 586ef693023c10b4e99d0482bd540410, type: 2}
+--- !u!114 &8371265266998325815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2878388273904672128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144f21f6ff5b6c7418c4d163d39376ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outlineConfig: {fileID: 11400000, guid: e15b8a632493d3b4595d0d34357d7a1f, type: 2}
 --- !u!1 &8682363507791463514
 GameObject:
   m_ObjectHideFlags: 0

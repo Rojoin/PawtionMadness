@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5391951938090106690}
   - component: {fileID: 1808285976846051515}
   - component: {fileID: 7163254133791438829}
+  - component: {fileID: 3780869395991066987}
   m_Layer: 0
   m_Name: FoodGenerator Teeth
   m_TagString: Untagged
@@ -69,6 +70,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 80eae94900a5d3d4596e2ed2d9e8718c, type: 2}
+--- !u!114 &3780869395991066987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301425965914552185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144f21f6ff5b6c7418c4d163d39376ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outlineConfig: {fileID: 11400000, guid: e15b8a632493d3b4595d0d34357d7a1f, type: 2}
 --- !u!1 &5212549419664793040
 GameObject:
   m_ObjectHideFlags: 0

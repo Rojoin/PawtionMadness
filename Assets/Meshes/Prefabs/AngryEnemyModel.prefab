@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7601820083345458681
+--- !u!1 &3925934823543552165
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,52 +8,56 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3844842003656667409}
-  - component: {fileID: 3069722225348803698}
+  - component: {fileID: 7664898500604087373}
+  - component: {fileID: 8475061897259106606}
   m_Layer: 6
-  m_Name: BaseEnemyModel
+  m_Name: AngryEnemyModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3844842003656667409
+--- !u!4 &7664898500604087373
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7601820083345458681}
+  m_GameObject: {fileID: 3925934823543552165}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.32556805, w: 0.9455186}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6337959671367649429}
+  - {fileID: 644115079935325641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -38}
---- !u!114 &3069722225348803698
+--- !u!114 &8475061897259106606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7601820083345458681}
+  m_GameObject: {fileID: 3925934823543552165}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3a53793e4f247128e86a04717843683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   values: {fileID: 11400000, guid: 21aa31fec8daa44449ff13457274bd60, type: 2}
---- !u!1001 &5800158860385955710
+--- !u!1001 &1115452612984508962
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 3844842003656667409}
+    m_TransformParent: {fileID: 7664898500604087373}
     m_Modifications:
+    - target: {fileID: -9158636819078260051, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d850c50cd580cb4ba4d0079fae27630, type: 2}
     - target: {fileID: -8679921383154817045, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.35
@@ -110,17 +114,57 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6822343713258076425, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d850c50cd580cb4ba4d0079fae27630, type: 2}
+    - target: {fileID: -4795165560744122111, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d850c50cd580cb4ba4d0079fae27630, type: 2}
+    - target: {fileID: -4171001361061973571, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d850c50cd580cb4ba4d0079fae27630, type: 2}
+    - target: {fileID: -3035608602465568333, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d850c50cd580cb4ba4d0079fae27630, type: 2}
+    - target: {fileID: -425565630206218756, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d850c50cd580cb4ba4d0079fae27630, type: 2}
+    - target: {fileID: 569169282116888178, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d850c50cd580cb4ba4d0079fae27630, type: 2}
     - target: {fileID: 919132149155446097, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
       propertyPath: m_Name
       value: RataEnemyV2
       objectReference: {fileID: 0}
+    - target: {fileID: 2869344807088711131, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d850c50cd580cb4ba4d0079fae27630, type: 2}
+    - target: {fileID: 3566390031902043909, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d850c50cd580cb4ba4d0079fae27630, type: 2}
+    - target: {fileID: 5901893356585517859, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d850c50cd580cb4ba4d0079fae27630, type: 2}
+    - target: {fileID: 7483894711331120201, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8d850c50cd580cb4ba4d0079fae27630, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
---- !u!4 &6337959671367649429 stripped
+--- !u!4 &644115079935325641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 49e160437f93a0642ada3967a6f901de, type: 3}
-  m_PrefabInstance: {fileID: 5800158860385955710}
+  m_PrefabInstance: {fileID: 1115452612984508962}
   m_PrefabAsset: {fileID: 0}
