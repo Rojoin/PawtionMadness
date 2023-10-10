@@ -1,4 +1,5 @@
 using UnityEngine;
+using Enemy;
 
 public class AngryEnemy : ChangingEnemy
 {
@@ -6,6 +7,16 @@ public class AngryEnemy : ChangingEnemy
     private bool canAttack;
     private float timer;
     private Vector3 initRayPosition;
+
+    public float AngryAttackSpeed
+    {
+        get => (enemyType as AngryEnemySO).angryAttackSpeed;
+    }
+
+    public float AngryMoveSpeed
+    {
+        get => (enemyType as AngryEnemySO).angryMoveSpeed;
+    }
 
     private void Awake()
     {
@@ -37,15 +48,31 @@ public class AngryEnemy : ChangingEnemy
 
     public void Movement()
     {
-        transform.position += transform.forward * (Time.deltaTime * MoveSpeed);
-        initRayPosition = transform.position + (-transform.forward * transform.localScale.x / 2);
+        if (!changedState)
+        {
+            transform.position += transform.forward * (Time.deltaTime * MoveSpeed);
+            initRayPosition = transform.position + (-transform.forward * transform.localScale.x / 2);
+        }
+        else
+        {
+            transform.position += transform.forward * (Time.deltaTime * AngryMoveSpeed);
+            initRayPosition = transform.position + (-transform.forward * transform.localScale.x / 2);
+        }
     }
 
     private void Attack(IHealthComponent targetDamage)
     {
         targetDamage.ReceiveDamage(Damage);
         canAttack = false;
-        timer -= enemyType.attackSpeed;
+
+        if (!changedState)
+        {
+            timer -= enemyType.attackSpeed;
+        }
+        else
+        {
+            timer -= AngryAttackSpeed;
+        }
 
         if (!targetDamage.IsAlive())
         {
