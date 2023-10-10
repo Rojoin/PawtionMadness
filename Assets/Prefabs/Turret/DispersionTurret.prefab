@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2804196864711947729}
   m_Layer: 7
   m_Name: DispersionTurret
-  m_TagString: Untagged
+  m_TagString: turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2877f36b0144fe438a2f3e262fd6d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   turretType: {fileID: 11400000, guid: a0590aedf314ceb4cbcd2b5be93568d5, type: 2}
   tile: {fileID: 0}
   _onHit:

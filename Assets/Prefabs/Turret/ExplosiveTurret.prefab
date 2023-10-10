@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2336076344106375985}
   m_Layer: 7
   m_Name: ExplosiveTurret
-  m_TagString: Untagged
+  m_TagString: turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94b13a7a7b52f544a987c39ee790e1b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   turretType: {fileID: 11400000, guid: 2f67640d15f77524397dc4536bb226fc, type: 2}
   tile: {fileID: 0}
   _onHit:
