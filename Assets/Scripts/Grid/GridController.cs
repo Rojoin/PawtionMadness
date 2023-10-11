@@ -19,6 +19,7 @@ namespace Grid
         [SerializeField] private VoidChannelSO interactChannel;
         [SerializeField] private VoidChannelSO backInputChannel;
         [SerializeField] private VoidChannelSO changeToPlayerChannel;
+        [SerializeField] private PlayerStats _playerStats;
         private Coroutine moveGrid;
 
         private void Awake()
@@ -38,6 +39,10 @@ namespace Grid
             movementChannel.Subscribe(OnMove);
             interactChannel.Subscribe(OnInteract);
             backInputChannel.Subscribe(OnBackChannel);
+            if (_playerStats.shouldGridControllerReset)
+            {
+                cursorPos = Vector2Int.zero;
+            }
             SelectCurrentTile();
         }
 
@@ -83,6 +88,7 @@ namespace Grid
             {
                 gridIndicator.SetActive(true);
             }
+
             currentTile = grid.GetTile(cursorPos);
             gridIndicator.transform.position = currentTile.transform.position;
         }

@@ -85,6 +85,7 @@ public class UIManager : MonoBehaviour
     public void TogglePauseMenu(bool isPaused)
     {
         SetCanvasVisibility(PauseScreen,isPaused);
+        SetCanvasVisibility(SettingsScreen,false);
     }
 
     public void ShowNewWaveAlert()

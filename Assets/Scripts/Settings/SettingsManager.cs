@@ -18,7 +18,8 @@ namespace Settings
         private FullScreenMode currentFullScreen = FullScreenMode.FullScreenWindow;
         private Resolution currentResolution;
 
-
+        [SerializeField] private Toggle shouldGridReset;
+        [SerializeField] private PlayerStats playerStats;
         private int currentResolutionIndex = 0;
 
         private void Awake()
@@ -50,15 +51,23 @@ namespace Settings
                 }
             }
 
+            shouldGridReset.isOn = playerStats.shouldGridControllerReset;
             resolutionDropdown.AddOptions(options);
             resolutionDropdown.value = currentResolutionIndex;
             resolutionDropdown.RefreshShownValue();
             resolutionDropdown.onValueChanged.AddListener(SetResolution);
+            shouldGridReset.onValueChanged.AddListener(ChangeToggleReset);
+        }
+
+        private void ChangeToggleReset(bool value)
+        {
+            playerStats.shouldGridControllerReset = value;
         }
 
         private void OnDisable()
         {
             resolutionDropdown.onValueChanged.RemoveListener(SetResolution);
+            shouldGridReset.onValueChanged.RemoveListener(ChangeToggleReset);
         }
 
         private void SetResolution(int resolutionIndex)
@@ -74,8 +83,5 @@ namespace Settings
             Screen.fullScreenMode = currentFullScreen;
         }
     }
-
-    public class OptionsMenu : ScriptableObject
-    {
-    }
+    
 }
