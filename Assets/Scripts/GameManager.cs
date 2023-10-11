@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VoidChannelSO actionChannelSO;
     [SerializeField] private VoidChannelSO pauseChannelSO;
     [SerializeField] private VoidChannelSO showRecipesChannelSO;
+    [Header("Values")]
+    
     [Header("Events")]
     public UnityEvent deActivateRecipe;
     private bool isPaused;
@@ -30,6 +32,7 @@ public class GameManager : MonoBehaviour
         enemySpawner.OnNewWaveAdded.AddListener(uiManager.AddWaveIcon);
         enemySpawner.OnGameBarUpdated.AddListener(uiManager.UpdateGameBar);
         enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
+        enemySpawner.activateWinScreenChannel.AddListener(WinGame);
     }
 
     private void OnDestroy()
@@ -39,6 +42,7 @@ public class GameManager : MonoBehaviour
         enemySpawner.OnGameBarUpdated.RemoveListener(uiManager.UpdateGameBar);
         enemySpawner.OnNewWaveAdded.RemoveListener(uiManager.AddWaveIcon);
         enemySpawner.OnIncomingWave.RemoveListener(uiManager.ShowNewWaveAlert);
+        enemySpawner.activateWinScreenChannel.RemoveListener(WinGame);
     }
 
     private void Start()

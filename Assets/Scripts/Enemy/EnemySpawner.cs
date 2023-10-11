@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject baseEnemy;
-    [SerializeField] private UnityEvent activateWinScreenChannel;
+    [SerializeField] public UnityEvent activateWinScreenChannel;
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private WaveSO[] waveList;
 
@@ -140,7 +140,12 @@ public class EnemySpawner : MonoBehaviour
 
     private bool AreEnemiesAlive()
     {
-        return enemySpawned.Count > 0;
+        foreach (GameObject enemy in enemySpawned)
+        {
+            return enemy;
+        }
+
+        return false;
     }
 
     private void SpawnNewEnemy()
