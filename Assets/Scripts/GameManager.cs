@@ -26,10 +26,11 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        actionChannelSO.Subscribe(TutorialSequence);
+        player.SetActive(true);
+        enemySpawner.gameObject.SetActive(true);
+        pauseChannelSO.Subscribe(PauseLevel);
+ 
         showRecipesChannelSO.Subscribe(ShowRecipes);
-        player.SetActive(false);
-        enemySpawner.gameObject.SetActive(false);
         enemySpawner.OnNewWaveAdded.AddListener(uiManager.AddWaveIcon);
         enemySpawner.OnGameBarUpdated.AddListener(uiManager.UpdateGameBar);
         enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
@@ -65,10 +66,7 @@ public class GameManager : MonoBehaviour
     {
         if (uiManager.HasTutorialEnded())
         {
-            player.SetActive(true);
-            enemySpawner.gameObject.SetActive(true);
             actionChannelSO.Unsubscribe(TutorialSequence);
-            pauseChannelSO.Subscribe(PauseLevel);
         }
     }
 
