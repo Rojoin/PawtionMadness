@@ -26,15 +26,15 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        player.SetActive(true);
-        enemySpawner.gameObject.SetActive(true);
         pauseChannelSO.Subscribe(PauseLevel);
- 
         showRecipesChannelSO.Subscribe(ShowRecipes);
         enemySpawner.OnNewWaveAdded.AddListener(uiManager.AddWaveIcon);
         enemySpawner.OnGameBarUpdated.AddListener(uiManager.UpdateGameBar);
         enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
         enemySpawner.activateWinScreenChannel.AddListener(WinGame);
+        
+        player.SetActive(true);
+        enemySpawner.gameObject.SetActive(true);
     }
 
     private void OnDestroy()
