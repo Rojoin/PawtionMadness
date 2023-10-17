@@ -142,7 +142,10 @@ public class EnemySpawner : MonoBehaviour
     {
         foreach (GameObject enemy in enemySpawned)
         {
-            return enemy;
+            if (enemy)
+            {
+                return true;
+            }
         }
 
         return false;
