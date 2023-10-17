@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VoidChannelSO pauseChannelSO;
     [SerializeField] private VoidChannelSO showRecipesChannelSO;
     [Header("Values")]
-    
+    [SerializeField] float timeUntilGameOver = 0.2f;
+
     [Header("Events")]
     public UnityEvent deActivateRecipe;
     private bool isPaused;
@@ -56,7 +57,7 @@ public class GameManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("enemy"))
         {
-            Invoke(nameof(GameOver), 5);
+            Invoke(nameof(GameOver), timeUntilGameOver);
         }
     }
 
@@ -73,6 +74,7 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+        pauseChannelSO.Unsubscribe(PauseLevel);
         Time.timeScale = 0;
         uiManager.ActivateGameOverCanvas();
     }
@@ -104,6 +106,7 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
+        pauseChannelSO.Unsubscribe(PauseLevel);
         uiManager.ActivateWinScreen();
         Time.timeScale = 0;
     }
