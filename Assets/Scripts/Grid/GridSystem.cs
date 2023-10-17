@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Turret;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 namespace Grid
@@ -14,31 +15,14 @@ namespace Grid
         [SerializeField] private int deltaX = 2;
         [SerializeField] private int deltaY = 4;
         [SerializeField] private UnityEngine.Grid grid;
-        [SerializeField] private Tile cube;
+        [FormerlySerializedAs("cube")] [SerializeField] private Tile tile;
         [SerializeField] private List<GameObject> tileList;
         private Tile[,] tileSet;
 
 
         private void Awake()
         {
-            foreach (var tile in tileList)
-            {
-                Destroy(tile);
-            }
-            grid = GetComponent<UnityEngine.Grid>();
-            tileSet = new Tile[columns, rows];
-            tileList = new List<GameObject>();
-            for (int i = 0; i < columns; i++)
-            {
-                for (int j = 0; j < rows; j++)
-                {
-                    var worldPos = grid.GetCellCenterWorld(new Vector3Int(i * deltaX, 0, (j - 1) * deltaY));
-                    var tile = Instantiate(cube, worldPos, Quaternion.identity, this.transform);
-                    tileList.Add(tile.gameObject);
-                    tileSet[i, j] = tile;
-                    tileSet[i, j].SetTurret(null);
-                }
-            }
+            
         }
 
     
@@ -76,9 +60,10 @@ namespace Grid
                 for (int j = 0; j < rows; j++)
                 {
                     var worldPos = grid.GetCellCenterWorld(new Vector3Int(i * deltaX, 0, (j - 1) * deltaY));
-                    var tile = Instantiate(cube, worldPos, Quaternion.identity, this.transform);
-                    tileList.Add(tile.gameObject);
-                    tileSet[i, j] = tile;
+                    var newTile = Instantiate(this.tile, worldPos, Quaternion.identity, this.transform);
+                    newTile.ChangeModel(Color.white);
+                    tileList.Add(newTile.gameObject);
+                    tileSet[i, j] = newTile;
                     tileSet[i, j].SetTurret(null);
                 }
             }

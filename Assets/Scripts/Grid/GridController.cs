@@ -12,6 +12,7 @@ namespace Grid
         private GridSystem grid;
         private Tile currentTile;
         [SerializeField] private PlayerInventory playerInventory;
+        [SerializeField] private float indicatorYOffset;
         private Vector2Int cursorPos = new Vector2Int(0, 0);
         private Vector2Int previousInput = new Vector2Int(0, 0);
         [SerializeField] private GameObject gridIndicator;
@@ -90,7 +91,9 @@ namespace Grid
             }
 
             currentTile = grid.GetTile(cursorPos);
-            gridIndicator.transform.position = currentTile.transform.position;
+            Vector3 position = currentTile.transform.position;
+            gridIndicator.transform.position = new Vector3(position.x,indicatorYOffset,position.z);
+            
         }
 
         /// <summary>
