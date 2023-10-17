@@ -71,6 +71,7 @@ namespace Table
 
         public override void OnInteraction(PlayerInventory playerInventory = null, PlayerInteract playerInteract = null)
         {
+            OnInteract.Invoke();
             switch (state)
             {
                 case CauldronState.Done when !playerInventory.hasPickable():

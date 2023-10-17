@@ -10,6 +10,7 @@ namespace Table
         [SerializeField] private VoidChannelSO ChangeToGridChannel;
         public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
+            OnInteract.Invoke();
             ChangeToGridChannel.RaiseEvent();
         }
     }

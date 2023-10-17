@@ -21,7 +21,7 @@ namespace Table
 
          public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
-            
+            OnInteract.Invoke();
             if (!playerInventory.hasPickable() && ingredient)
             {
                 if (cutCounter < ingredient.InteractionToProcesses)
