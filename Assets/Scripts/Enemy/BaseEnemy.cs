@@ -8,14 +8,18 @@ namespace Enemy
     {
         [SerializeField] protected EnemySO enemyType;
         [SerializeField] protected UnityEvent onDamage;
+        [SerializeField] protected Animator _animator;
         private float currentHealth;
         protected bool isAlive;
+        private static readonly int Death1 = Animator.StringToHash("Death");
+        private static readonly int Damage1 = Animator.StringToHash("Damage");
 
         public float MoveSpeed { get => enemyType.moveSpeed; }
         public float Damage { get => enemyType.damage;  }
         public float AttackSpeed { get => enemyType.attackSpeed;  }
         public float AttackRange { get => enemyType.attackRange;  }
         public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
+        public float DeathTime { get => enemyType.deathTime; }
 
         private void Start()
         {
@@ -23,6 +27,12 @@ namespace Enemy
             isAlive = true;
         }
         public virtual void Death()
+        {
+            _animator?.SetTrigger(Death1);
+            Invoke(nameof(DestroyEnemy),DeathTime);
+        }
+
+        private void DestroyEnemy()
         {
             Destroy(gameObject);
         }
@@ -34,6 +44,7 @@ namespace Enemy
 
         public virtual void ReceiveDamage(float damage)
         {
+            _animator?.SetTrigger(Damage1);
             CurrentHealth -= damage;
             onDamage.Invoke();
             if (CurrentHealth <= 0)

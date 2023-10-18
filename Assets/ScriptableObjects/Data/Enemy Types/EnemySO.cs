@@ -12,4 +12,6 @@ public class EnemySO : ScriptableObject
     public float attackRange;
 
     public float maxHealth;
+    public float deathTime;
+    public float attackDelay = 0.2f;
 }

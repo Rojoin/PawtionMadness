@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using Enemy;
 
@@ -7,6 +8,8 @@ public class SimpleEnemy : BaseEnemy
     private bool canAttack;
     private float timer;
     private Vector3 initRayPosition;
+    private static readonly int AttackTrigger = Animator.StringToHash("Attack");
+    private Coroutine isAttacking;
 
     private void Awake()
     {
@@ -39,20 +42,22 @@ public class SimpleEnemy : BaseEnemy
     public void Movement()
     {
         transform.position += transform.forward * (Time.deltaTime * MoveSpeed);
-        initRayPosition = transform.position + (-transform.forward * transform.localScale.x/2);
+        initRayPosition = transform.position + (-transform.forward * transform.localScale.x / 2);
     }
 
-    private void Attack(IHealthComponent targetDamage)
+    private IEnumerator Attack(IHealthComponent targetDamage)
     {
-        targetDamage.ReceiveDamage(Damage);
         canAttack = false;
         timer -= enemyType.attackSpeed;
-        
+        _animator?.SetTrigger(AttackTrigger);
+        yield return new WaitForSeconds(enemyType.attackDelay);
+        targetDamage.ReceiveDamage(Damage);
+
         if (!targetDamage.IsAlive())
         {
             stopMoving = false;
         }
-
+        yield break;
     }
 
     private void DetectEntity()
@@ -60,14 +65,14 @@ public class SimpleEnemy : BaseEnemy
         int layerMask = 1 << gameObject.layer;
         layerMask = ~layerMask;
         RaycastHit hit;
-        if (Physics.Raycast(initRayPosition, transform.forward, out hit, AttackRange,layerMask))
+        if (Physics.Raycast(initRayPosition, transform.forward, out hit, AttackRange, layerMask))
         {
             if (hit.collider.gameObject.TryGetComponent<IHealthComponent>(out var entity) && canAttack)
             {
                 stopMoving = true;
                 if (canAttack)
                 {
-                    Attack(entity);
+                    isAttacking = StartCoroutine(Attack(entity));
                 }
             }
         }
