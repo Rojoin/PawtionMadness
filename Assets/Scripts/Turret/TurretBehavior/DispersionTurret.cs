@@ -11,6 +11,7 @@ public class DispersionTurret : AttackTurret
     
     public void Update()
     {
+        if (!isAlive) return;
         shootSpeedTimer += Time.deltaTime;
 
         if (shootSpeedTimer > ShootSpeed)

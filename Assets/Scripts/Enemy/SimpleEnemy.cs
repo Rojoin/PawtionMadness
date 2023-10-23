@@ -21,6 +21,8 @@ public class SimpleEnemy : BaseEnemy
     //TODO:Hacer FST
     private void Update()
     {
+        if (!isAlive) return;
+        
         DetectEntity();
 
         if (!canAttack)

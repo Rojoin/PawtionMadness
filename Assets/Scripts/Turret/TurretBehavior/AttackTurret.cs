@@ -30,6 +30,8 @@ namespace Turret
 
         public bool DetectEntity()
         {
+
+
             int layerMask = 1 << gameObject.layer;
             layerMask = ~layerMask;
             RaycastHit hit;

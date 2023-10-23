@@ -8,12 +8,14 @@ namespace Enemy
     {
         [SerializeField] protected EnemySO enemyType;
         [SerializeField] protected UnityEvent onDamage;
+        [SerializeField] public UnityEvent<GameObject> onDeath;
         [SerializeField] protected Animator _animator;
         private float currentHealth;
         protected bool isAlive;
         private static readonly int Death1 = Animator.StringToHash("Death");
         private static readonly int Damage1 = Animator.StringToHash("Damage");
-
+        private BoxCollider boxCollider;
+        
         public float MoveSpeed { get => enemyType.moveSpeed; }
         public float Damage { get => enemyType.damage;  }
         public float AttackSpeed { get => enemyType.attackSpeed;  }
@@ -24,17 +26,19 @@ namespace Enemy
         private void Start()
         {
             CurrentHealth = enemyType.maxHealth;
+            boxCollider = GetComponent<BoxCollider>();
             isAlive = true;
         }
         public virtual void Death()
         {
             _animator?.SetTrigger(Death1);
+            boxCollider.enabled = false;
             Invoke(nameof(DestroyEnemy),DeathTime);
         }
 
         private void DestroyEnemy()
         {
-            Destroy(gameObject);
+            onDeath.Invoke(this.gameObject);
         }
 
         public virtual bool IsAlive()
