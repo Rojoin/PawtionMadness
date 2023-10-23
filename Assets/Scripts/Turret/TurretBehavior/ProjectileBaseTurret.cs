@@ -23,6 +23,7 @@ public class ProjectileBaseTurret : AttackTurret
 
     public void Update()
     {
+        if (!isAlive) return;
         shootSpeedTimer += Time.deltaTime;
 
         if (shootSpeedTimer > ShootSpeed)
