@@ -8,6 +8,7 @@ namespace Enemy
     {
         [SerializeField] protected EnemySO enemyType;
         [SerializeField] protected UnityEvent onDamage;
+        [SerializeField] public UnityEvent<GameObject> onDeath;
         [SerializeField] protected Animator _animator;
         private float currentHealth;
         protected bool isAlive;
@@ -37,7 +38,7 @@ namespace Enemy
 
         private void DestroyEnemy()
         {
-            Destroy(gameObject);
+            onDeath.Invoke(this.gameObject);
         }
 
         public virtual bool IsAlive()
