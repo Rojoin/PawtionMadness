@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JetBrains.Annotations;
+using System;
 using UnityEngine;
 
 public abstract class ChannelSO<T> : ScriptableObject
@@ -120,4 +121,3 @@ public abstract class ChannelSO<T1, T2, T3, T4, T5> : ScriptableObject
         }
     }
 }
-

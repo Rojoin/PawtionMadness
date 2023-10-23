@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("Entities")]
     [SerializeField] private GameObject player;
     [SerializeField] private EnemySpawner enemySpawner;
+    [SerializeField] private EnemyManager enemyManager;
     [SerializeField] private UIManager uiManager;
 
     [Header("Channels")]
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
         enemySpawner.OnNewWaveAdded.AddListener(uiManager.AddWaveIcon);
         enemySpawner.OnGameBarUpdated.AddListener(uiManager.UpdateGameBar);
         enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
-        enemySpawner.activateWinScreenChannel.AddListener(WinGame);
+        enemyManager.activateWinScreenChannel.AddListener(WinGame);
         
         player.SetActive(true);
         enemySpawner.gameObject.SetActive(true);
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
         enemySpawner.OnGameBarUpdated.RemoveListener(uiManager.UpdateGameBar);
         enemySpawner.OnNewWaveAdded.RemoveListener(uiManager.AddWaveIcon);
         enemySpawner.OnIncomingWave.RemoveListener(uiManager.ShowNewWaveAlert);
-        enemySpawner.activateWinScreenChannel.RemoveListener(WinGame);
+        enemyManager.activateWinScreenChannel.RemoveListener(WinGame);
     }
 
     private void Start()
