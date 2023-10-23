@@ -62,6 +62,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _animator: {fileID: 8293892621192471131}
 --- !u!65 &2486498811297812854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -223,6 +224,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8494436676094887264, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d869fb3283432f14d923bb3e762b390f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -244,3 +249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3a53793e4f247128e86a04717843683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &8293892621192471131 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5578987868913825034, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
+  m_PrefabInstance: {fileID: 4500600765638465361}
+  m_PrefabAsset: {fileID: 0}
