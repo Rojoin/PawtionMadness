@@ -36,7 +36,7 @@ public class EnemyManager : MonoBehaviour
 
         simpleEnemyPool = new ObjectPool<GameObject>(() => Instantiate(simpleEnemy.asset, enemyParent),
             enemy => { enemy.gameObject.SetActive(true); }, enemy => { enemy.gameObject.SetActive(false); },
-            enemy => { Destroy(enemy.gameObject); }, false, 5, 40);
+            enemy => { Destroy(enemy.gameObject); }, false, simpleEnemyPoolSize, 100);
     }
 
     private void OnDestroy()

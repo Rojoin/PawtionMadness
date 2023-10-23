@@ -1,3 +1,4 @@
+using Enemy;
 using UnityEngine;
 
 public class EnemyFactory
@@ -6,5 +7,6 @@ public class EnemyFactory
     {
         enemy.transform.rotation = position.rotation;
         enemy.transform.position = position.position;
+        enemy.GetComponent<BaseEnemy>().Init();
     }
 }
