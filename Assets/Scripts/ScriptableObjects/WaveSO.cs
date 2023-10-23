@@ -5,7 +5,7 @@ public class WaveSO : ScriptableObject
 {
     public EnemyTypeProb[] enemyTypes;
 
-    public int newSpawnTime;
+    public float newSpawnTime;
 
     [Header("Before Wave")]
     public int totalEnemyBeforeWave;

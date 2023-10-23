@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         enemySpawner.OnNewWaveAdded.AddListener(uiManager.AddWaveIcon);
         enemySpawner.OnGameBarUpdated.AddListener(uiManager.UpdateGameBar);
         enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
-        enemyManager.activateWinScreenChannel.AddListener(WinGame);
+        //enemyManager.activateWinScreenChannel.AddListener(WinGame);
         
         player.SetActive(true);
         enemySpawner.gameObject.SetActive(true);
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         enemySpawner.OnGameBarUpdated.RemoveListener(uiManager.UpdateGameBar);
         enemySpawner.OnNewWaveAdded.RemoveListener(uiManager.AddWaveIcon);
         enemySpawner.OnIncomingWave.RemoveListener(uiManager.ShowNewWaveAlert);
-        enemyManager.activateWinScreenChannel.RemoveListener(WinGame);
+        //enemyManager.activateWinScreenChannel.RemoveListener(WinGame);
     }
 
     private void Start()

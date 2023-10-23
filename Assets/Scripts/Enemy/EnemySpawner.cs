@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
     public UnityEvent<float> OnGameBarUpdated = new UnityEvent<float>();
     public UnityEvent<float> OnNewWaveAdded = new UnityEvent<float>();
     public UnityEvent OnIncomingWave = new UnityEvent();
-    public EnemyInvokeChannel invokeEnemyChannel = new EnemyInvokeChannel();
+    public EnemyInvokeChannel invokeEnemyChannel;
 
     private void Awake()
     {
@@ -92,6 +92,7 @@ public class EnemySpawner : MonoBehaviour
                 enemyCount++;
 
                 spawnTimer = 0;
+
                 if (activeWave && enemyCount >= waveList[actualWave].totalEnemyWave)
                 {
                     spawnPeriod = waveList[actualWave].delayAfterWave;
