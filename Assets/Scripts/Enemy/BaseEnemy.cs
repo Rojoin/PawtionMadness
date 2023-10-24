@@ -1,6 +1,7 @@
 using UnityEngine;
 using Health;
 using UnityEngine.Events;
+using Unity.IO.LowLevel.Unsafe;
 
 namespace Enemy
 {
@@ -23,10 +24,11 @@ namespace Enemy
         public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
         public float DeathTime { get => enemyType.deathTime; }
 
-        private void Start()
+        public virtual void Init()
         {
             CurrentHealth = enemyType.maxHealth;
             boxCollider = GetComponent<BoxCollider>();
+            boxCollider.enabled = true;
             isAlive = true;
         }
         public virtual void Death()

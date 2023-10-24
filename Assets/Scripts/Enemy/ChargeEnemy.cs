@@ -19,8 +19,9 @@ public class ChargeEnemy : BaseEnemy
         get => (enemyType as EnemyChargeSO).chargeDamage;
     }
 
-    private void Awake()
+    public override void Init()
     {
+        base.Init();
         stopMoving = false;
         canAttack = false;
         isCharging = true;
