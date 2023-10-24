@@ -18,8 +18,9 @@ public class AngryEnemy : ChangingEnemy
         get => (enemyType as AngryEnemySO).angryMoveSpeed;
     }
 
-    private void Awake()
+    public override void Init()
     {
+        base.Init();
         stopMoving = false;
         canAttack = false;
     }

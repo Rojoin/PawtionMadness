@@ -25,6 +25,7 @@ public class EnemySpawner : MonoBehaviour
     public UnityEvent<float> OnNewWaveAdded = new UnityEvent<float>();
     public UnityEvent OnIncomingWave = new UnityEvent();
     public EnemyInvokeChannel invokeEnemyChannel;
+    public BoolChannelSO OnWaveFinishChannel;
 
     private void Awake()
     {
@@ -108,6 +109,11 @@ public class EnemySpawner : MonoBehaviour
                     OnIncomingWave.Invoke();
                 }
             }
+        }
+        else
+        {
+            OnWaveFinishChannel.RaiseEvent(true);
+            this.gameObject.SetActive(false);
         }
     }
 

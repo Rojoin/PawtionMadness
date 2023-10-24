@@ -10,8 +10,9 @@ public class ChangingEnemy : BaseEnemy
         get => (enemyType as ChangingEnemySO).lifeToChangeState;
     }
 
-    private void Awake()
+    public override void Init()
     {
+        base.Init();
         changedState = false;
     }
     public override void ReceiveDamage(float damage)

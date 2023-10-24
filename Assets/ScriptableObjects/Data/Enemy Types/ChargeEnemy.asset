@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909ac4a35ca8b4c4d9643d42162de1d4, type: 3}
   m_Name: ChargeEnemy
   m_EditorClassIdentifier: 
+  enemyType: 3
   asset: {fileID: 5925194773808863782, guid: c1bbdb69d3a1738458881e5a7d979c4e, type: 3}
   moveSpeed: 0.22
   damage: 35
   attackSpeed: 5
   attackRange: 1.5
   maxHealth: 250
+  deathTime: 0
+  attackDelay: 0.2
   chargeSpeed: 2
   chargeDamage: 1000
