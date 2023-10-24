@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VoidChannelSO showRecipesChannelSO;
     [Header("Values")]
     [SerializeField] float timeUntilGameOver = 0.2f;
+    [SerializeField] bool isTutorialScene = false;
 
     [Header("Events")]
     public UnityEvent deActivateRecipe;
@@ -33,9 +34,10 @@ public class GameManager : MonoBehaviour
         enemySpawner.OnGameBarUpdated.AddListener(uiManager.UpdateGameBar);
         enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
         enemyManager.activateWinScreenChannel.AddListener(WinGame);
-        
+
         player.SetActive(true);
-        enemySpawner.gameObject.SetActive(true);
+
+        enemySpawner.gameObject.SetActive(!isTutorialScene);
     }
 
     private void OnDestroy()
@@ -113,6 +115,12 @@ public class GameManager : MonoBehaviour
     public void GoToMenu()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void GoToNextLevel()
+    {
+        int nextScene = SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCountInBuildSettings ? 0 : SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Exit()
