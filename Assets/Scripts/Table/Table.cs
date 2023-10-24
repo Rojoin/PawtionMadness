@@ -1,4 +1,5 @@
-﻿using Interfaces;
+﻿using System;
+using Interfaces;
 using Player;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,6 +8,14 @@ namespace Table
 {
     public class Table : MonoBehaviour, ITableInteractable
     {
+        private BoxCollider boxCollider;
+        protected bool canInteract = true;
+
+        public void OnEnable()
+        {
+            TryGetComponent<BoxCollider>(out boxCollider);
+        }
+
         public UnityEvent OnInteract { get; set; } = new UnityEvent();
         public virtual void OnInteraction(PlayerInventory playerInventory = null, PlayerInteract playerInteract = null)
         {
@@ -14,9 +23,16 @@ namespace Table
             OnInteract.Invoke();
         }
 
-        public bool TryInteract()
+        public void TryInteract(PlayerInventory playerInventory = null, PlayerInteract playerInteract = null)
         {
-            throw new System.NotImplementedException();
+            if (canInteract)
+            {
+                OnInteraction(playerInventory, playerInteract);
+            }
+        }
+        public virtual void InteractionState(bool state = true)
+        {
+            canInteract = state;
         }
     }
 }

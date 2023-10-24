@@ -25,7 +25,6 @@ namespace Table
         [SerializeField] private float timerMax;
         [SerializeField] private float currentTime = 0.0f;
         private CauldronState state;
-
         [SerializeField] private Potion defaultPotion;
         [SerializeField] private Potion potionFromRecipe;
         [SerializeField] private KitchenObjectSO[] ingredientsInCauldron;
@@ -38,6 +37,8 @@ namespace Table
         public UnityEvent<float> OnFillAmountUpdated = new UnityEvent<float>();
         public UnityEvent<Sprite> OnIngredientAdded = new UnityEvent<Sprite>();
         public UnityEvent OnCookingFinished = new UnityEvent();
+
+     
 
         private void Start()
         {
@@ -133,8 +134,7 @@ namespace Table
 
             currentIngredientCounter = 0;
         }
-
-
+        
         private PotionRecipeSO GetRecipePotion()
         {
             PotionRecipeSO nextPotion = null;

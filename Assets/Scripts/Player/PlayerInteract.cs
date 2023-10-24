@@ -44,7 +44,7 @@ namespace Player
             {
                 if (raycastHit.transform.TryGetComponent<ITableInteractable>(out var interactable))
                 {
-                    interactable.OnInteraction(_playerInventory,this);
+                    interactable.TryInteract(_playerInventory,this);
                 }
             }
         }

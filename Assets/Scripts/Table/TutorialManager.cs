@@ -5,19 +5,26 @@ using UnityEngine.Serialization;
 
 public class TutorialManager : MonoBehaviour
 {
+    [SerializeField] private EnemySpawner _enemySpawner;
     [SerializeField] private string[] texts;
     [SerializeField] private Table.Table[] interactions;
+    [SerializeField] private Table.Table[] interactableTable;
     [SerializeField] private GameObject Player;
     [SerializeField] private Vector2ChannelSO playerMovementChannel;
     [SerializeField] private VoidChannelSO interactChannel;
     [SerializeField] private TMPro.TMP_Text tutorialText;
-    private int tutorialScreenCounter = 0;
-    private int interactableCounter = 0;
+    [SerializeField] private int tutorialScreenCounter = 0;
+    [SerializeField] private int interactableCounter = 0;
    
     [SerializeField] private float timeBetweenText = 0.2f;
 
     private void Awake()
     {
+        _enemySpawner.enabled = false;
+        foreach (Table.Table table in interactableTable)
+        {
+            table.InteractionState(false);
+        }
         Player.SetActive(true);
         tutorialText.text = texts[tutorialScreenCounter];
         playerMovementChannel.Subscribe(ChangeToNextScene);
@@ -41,11 +48,12 @@ public class TutorialManager : MonoBehaviour
         timer = 0.0f;
         tutorialScreenCounter++;
         tutorialText.text = texts[tutorialScreenCounter];
-        if (interactableCounter < interactions.Length)
+        if (interactableCounter < interactions.Length-1)
         {
             interactions[interactableCounter].OnInteract.AddListener(ChangeScene);
+            interactions[interactableCounter].InteractionState(true);
         }
-        else if (interactableCounter == interactions.Length)
+        else if (interactableCounter == interactions.Length-1)
         {
             interactChannel.Subscribe(FinalMessage);
         }
@@ -60,9 +68,10 @@ public class TutorialManager : MonoBehaviour
         }
     }
 //TODO: Change so it desactivates the collider of the object if no longer needed.
-    public void ChangeScene()
+    private void ChangeScene()
     {
         interactions[interactableCounter].OnInteract.RemoveListener(ChangeScene);
+        interactions[interactableCounter].InteractionState(false);
         interactableCounter++;
         StartCoroutine(ChangeToNextScene());
     }
@@ -70,6 +79,12 @@ public class TutorialManager : MonoBehaviour
     {
         interactChannel.Unsubscribe(FinalMessage);
         ChangeScene();
+        foreach (Table.Table table in interactableTable)
+        {
+            table.InteractionState(true);
+        }
+
+        _enemySpawner.enabled = true;
     }
     
 }
