@@ -62,6 +62,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
   _animator: {fileID: 4604440358429778098}
   changedState: 0
 --- !u!65 &2486498811297812854
@@ -83,7 +86,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.4959948, z: 1.1235929}
+  m_Size: {x: 1, y: 2.33, z: 1.1235929}
   m_Center: {x: 0, y: 0.24799758, z: 0.06179647}
 --- !u!1001 &6133410379195365250
 PrefabInstance:
