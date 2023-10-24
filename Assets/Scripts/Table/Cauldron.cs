@@ -26,6 +26,7 @@ namespace Table
         [SerializeField] private float currentTime = 0.0f;
         private CauldronState state;
         [SerializeField] private Potion defaultPotion;
+        [SerializeField] private Transform potionTransform;
         [SerializeField] private Potion potionFromRecipe;
         [SerializeField] private KitchenObjectSO[] ingredientsInCauldron;
         [SerializeField] private PotionRecipeSO[] posiblePotions;
@@ -156,10 +157,10 @@ namespace Table
             if (recipe)
             {
                 Debug.Log(recipe.name);
-                potion = Instantiate(recipe.potion, transform.position, Quaternion.identity);
+                potion = Instantiate(recipe.potion, potionTransform.position, Quaternion.identity);
             }
             else
-                potion = Instantiate(defaultPotion, transform.position, Quaternion.identity);
+                potion = Instantiate(defaultPotion, potionTransform.position, Quaternion.identity);
 
             potion.SetIconVisible(true);
             return potion;
