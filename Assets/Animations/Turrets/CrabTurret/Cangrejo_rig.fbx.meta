@@ -3,7 +3,12 @@ guid: 226367ff1b3dc6a48ae42c2b2e45ca09
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_PezYCangrejo
+    second: {fileID: 2100000, guid: 60a66b4addd110f41b9c7a4ad89bb21c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -67,7 +72,7 @@ ModelImporter:
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
