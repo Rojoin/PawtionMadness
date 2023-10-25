@@ -4,14 +4,17 @@ public class ExplosiveTurret : InstantTurret
 {
     private float timer = 0;
     [SerializeField] private ParticleSystem explotionFX;
+    private bool canAttack = true;
+    private static readonly int Shoot = Animator.StringToHash("Shoot");
 
     private void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= castTime)
+        animator?.SetTrigger(Shoot);
+        if (timer >= castTime && canAttack)
         {
             ExplodeTurret();
-            Destroy(gameObject);
+            canAttack = false;
         }
     }
 
@@ -31,5 +34,6 @@ public class ExplosiveTurret : InstantTurret
                 entity.ReceiveDamage(ExplosiveDamage);
             }
         }
+        Death();
     }
 }
