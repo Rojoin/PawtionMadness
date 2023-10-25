@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1551146121632253173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6211174335237488796}
+  - component: {fileID: 1502774833725375155}
+  - component: {fileID: 2486498811297812854}
+  m_Layer: 6
+  m_Name: AngryEnemy
+  m_TagString: enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6211174335237488796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551146121632253173}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4558048186447199183}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1502774833725375155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551146121632253173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d18d60c8c09d2a542a3ea24b4c0a780c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyType: {fileID: 11400000, guid: 624bcce706b12194d92d6c5c55f7c1ad, type: 2}
+  onDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2342777644534331052}
+        m_TargetAssemblyTypeName: Visuals.BlinkOnDamage, Assembly-CSharp
+        m_MethodName: StartBlinking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  _animator: {fileID: 4604440358429778098}
+  changedState: 0
+--- !u!65 &2486498811297812854
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551146121632253173}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.33, z: 1.1235929}
+  m_Center: {x: 0, y: 0.24799758, z: 0.06179647}
+--- !u!1001 &6133410379195365250
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6211174335237488796}
+    m_Modifications:
+    - target: {fileID: 3925934823543552165, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+      propertyPath: m_Name
+      value: AngryEnemyModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664898500604087373, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664898500604087373, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664898500604087373, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664898500604087373, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9455186
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664898500604087373, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664898500604087373, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664898500604087373, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.32556805
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664898500604087373, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664898500604087373, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664898500604087373, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -38
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+--- !u!114 &2342777644534331052 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8475061897259106606, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+  m_PrefabInstance: {fileID: 6133410379195365250}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3a53793e4f247128e86a04717843683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &4558048186447199183 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7664898500604087373, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+  m_PrefabInstance: {fileID: 6133410379195365250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4604440358429778098 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7707913108103092016, guid: bc7c5e85390e6c9409601df16386c892, type: 3}
+  m_PrefabInstance: {fileID: 6133410379195365250}
+  m_PrefabAsset: {fileID: 0}

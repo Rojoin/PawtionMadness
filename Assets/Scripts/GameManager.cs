@@ -6,26 +6,48 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private CanvasGroup LoseScreen;
-    [SerializeField] private CanvasGroup WinScreen;
-    [SerializeField] private CanvasGroup PauseScreen;
-    [SerializeField] private CanvasGroup RecipesScreen;
+    [Header("Entities")]
+    [SerializeField] private GameObject player;
+    [SerializeField] private EnemySpawner enemySpawner;
+    [SerializeField] private EnemyManager enemyManager;
+    [SerializeField] private UIManager uiManager;
+
+    [Header("Channels")]
+    [SerializeField] private VoidChannelSO actionChannelSO;
     [SerializeField] private VoidChannelSO pauseChannelSO;
     [SerializeField] private VoidChannelSO showRecipesChannelSO;
+    [Header("Values")]
+    [SerializeField] float timeUntilGameOver = 0.2f;
+    [SerializeField] bool isTutorialScene = false;
+
+    [Header("Events")]
     public UnityEvent deActivateRecipe;
     private bool isPaused;
     private bool isRecipesOn;
+
 
     private void Awake()
     {
         pauseChannelSO.Subscribe(PauseLevel);
         showRecipesChannelSO.Subscribe(ShowRecipes);
+        enemySpawner.OnNewWaveAdded.AddListener(uiManager.AddWaveIcon);
+        enemySpawner.OnGameBarUpdated.AddListener(uiManager.UpdateGameBar);
+        enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
+        enemyManager.activateWinScreenChannel.AddListener(WinGame);
+
+        player.SetActive(true);
+
+        enemySpawner.gameObject.SetActive(!isTutorialScene);
     }
 
     private void OnDestroy()
     {
         pauseChannelSO.Unsubscribe(PauseLevel);
         showRecipesChannelSO.Unsubscribe(ShowRecipes);
+        enemySpawner.OnGameBarUpdated.RemoveListener(uiManager.UpdateGameBar);
+        enemySpawner.OnNewWaveAdded.RemoveListener(uiManager.AddWaveIcon);
+        enemySpawner.OnIncomingWave.RemoveListener(uiManager.ShowNewWaveAlert);
+        enemyManager.activateWinScreenChannel.RemoveListener(WinGame);
     }
 
     private void Start()
@@ -33,48 +55,35 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         isRecipesOn = false;
         Time.timeScale = 1;
-        LoseScreen.alpha = 0;
-        LoseScreen.interactable = false;
-        LoseScreen.blocksRaycasts = false;
-        WinScreen.alpha = 0;
-        WinScreen.interactable = false;
-        WinScreen.blocksRaycasts = false;
-        PauseScreen.alpha = 0;
-        PauseScreen.interactable = false;
-        PauseScreen.blocksRaycasts = false;
-        RecipesScreen.alpha = 0;
-        RecipesScreen.interactable = false;
-        RecipesScreen.blocksRaycasts = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("enemy"))
         {
-            Invoke(nameof(GameOver),5);
+            Invoke(nameof(GameOver), timeUntilGameOver);
+        }
+    }
+
+    private void TutorialSequence()
+    {
+        if (uiManager.HasTutorialEnded())
+        {
+            actionChannelSO.Unsubscribe(TutorialSequence);
         }
     }
 
     private void GameOver()
     {
-        LoseScreen.alpha = 1;
-        LoseScreen.interactable = true;
-        LoseScreen.blocksRaycasts = true;
+        pauseChannelSO.Unsubscribe(PauseLevel);
         Time.timeScale = 0;
-        PauseScreen.alpha = 0;
-        PauseScreen.interactable = false;
-        PauseScreen.blocksRaycasts = false;
-        RecipesScreen.alpha = 0;
-        RecipesScreen.interactable = false;
-        RecipesScreen.blocksRaycasts = false;
+        uiManager.ActivateGameOverCanvas();
     }
 
     private void ShowRecipes()
     {
         isRecipesOn = !isRecipesOn;
-        RecipesScreen.alpha = isRecipesOn ? 1 : 0;
-        RecipesScreen.interactable = isRecipesOn;
-        RecipesScreen.blocksRaycasts = isRecipesOn;
+        uiManager.ShowRecipesCanvas(isRecipesOn);
     }
 
     public void RestartLevel()
@@ -91,24 +100,27 @@ public class GameManager : MonoBehaviour
         else
         {
             isPaused = !isPaused;
-            PauseScreen.alpha = isPaused ? 1 : 0;
-            PauseScreen.interactable = isPaused;
-            PauseScreen.blocksRaycasts = isPaused;
+            uiManager.TogglePauseMenu(isPaused);
             Time.timeScale = isPaused ? 0 : 1;
         }
     }
 
     public void WinGame()
     {
-        WinScreen.alpha = 1;
-        WinScreen.interactable = true;
-        WinScreen.blocksRaycasts = true;
+        pauseChannelSO.Unsubscribe(PauseLevel);
+        uiManager.ActivateWinScreen();
         Time.timeScale = 0;
     }
 
     public void GoToMenu()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void GoToNextLevel()
+    {
+        int nextScene = SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCountInBuildSettings ? 0 : SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Exit()

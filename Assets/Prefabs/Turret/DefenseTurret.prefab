@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6044633723294102637}
   m_Layer: 7
   m_Name: DefenseTurret
-  m_TagString: Untagged
+  m_TagString: turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.32556805, y: 0, z: 0, w: 0.9455186}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.80262, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4762679944588735632}
@@ -53,7 +53,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.8582392, z: 1}
+  m_Size: {x: 1.5, y: 1.8582392, z: 1}
   m_Center: {x: 0, y: 0.02565384, z: 0}
 --- !u!114 &6044633723294102637
 MonoBehaviour:
@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff880dc944af3ac469d149a2e89adbea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 5365114276211610437}
   turretType: {fileID: 11400000, guid: 673589b900f07624e90b0f78ee1c9c27, type: 2}
   tile: {fileID: 0}
   _onHit:
@@ -99,43 +100,59 @@ PrefabInstance:
       value: DefenseTurretModel
       objectReference: {fileID: 0}
     - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.37
       objectReference: {fileID: 0}
     - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.6724985
       objectReference: {fileID: 0}
     - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.21850806
       objectReference: {fileID: 0}
     - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.6724985
       objectReference: {fileID: 0}
     - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.21850806
       objectReference: {fileID: 0}
     - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -36
       objectReference: {fileID: 0}
     - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -146,6 +163,11 @@ PrefabInstance:
 --- !u!4 &4762679944588735632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6399347799401193958, guid: ea71f2975c7399546a75910b5570773d, type: 3}
+  m_PrefabInstance: {fileID: 1934151755317826934}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5365114276211610437 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5810711987609568819, guid: ea71f2975c7399546a75910b5570773d, type: 3}
   m_PrefabInstance: {fileID: 1934151755317826934}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &9194015698608461476 stripped

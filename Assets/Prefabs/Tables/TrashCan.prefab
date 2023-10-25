@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 6593900154806333190}
   - component: {fileID: 5897051497119036997}
   - component: {fileID: 8166570181094951612}
+  - component: {fileID: 2938994507482363744}
   m_Layer: 0
   m_Name: TrashCan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6593900154806333190
 Transform:
@@ -67,6 +68,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 727ef960e0004441a842a4aebce1129d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2938994507482363744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680741092196867718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144f21f6ff5b6c7418c4d163d39376ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outlineConfig: {fileID: 11400000, guid: e15b8a632493d3b4595d0d34357d7a1f, type: 2}
 --- !u!1001 &7115892063810440801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,6 +136,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9c9e67ddf88368a44a47da12781280ea, type: 3}
       propertyPath: m_Name
       value: Tacho_blocking
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9c9e67ddf88368a44a47da12781280ea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

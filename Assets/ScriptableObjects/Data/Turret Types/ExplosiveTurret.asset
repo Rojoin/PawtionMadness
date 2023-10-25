@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da80cdd1b9fd984409e84446ad432c39, type: 3}
+  m_Name: ExplosiveTurret
+  m_EditorClassIdentifier: 
+  asset: {fileID: 2336076344106375985, guid: 2a118c5d5e6f00b4f86d6230e52c5c49, type: 3}
+  maxHealth: 10000
+  sprite: {fileID: 21300000, guid: 8ee817371ada1774791b5edcc88c2e61, type: 3}
+  deathTime: 2.3
+  explosiveDamage: 300
+  castTime: 0.5
+  range: 6

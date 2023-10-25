@@ -1,33 +1,46 @@
 using UnityEngine;
 using Health;
 using UnityEngine.Events;
+using Unity.IO.LowLevel.Unsafe;
 
 namespace Enemy
 {
     public class BaseEnemy : MonoBehaviour, IHealthComponent
     {
-        public EnemySO type;
-
-        [SerializeField] private UnityEvent onDamage;
+        [SerializeField] protected EnemySO enemyType;
+        [SerializeField] protected UnityEvent onDamage;
+        [SerializeField] public UnityEvent<GameObject> onDeath;
+        [SerializeField] protected Animator _animator;
         private float currentHealth;
-        private bool isAlive;
-
-        public float MoveSpeed { get => type.moveSpeed; }
-        public float Damage { get => type.damage;  }
-        public float AttackSpeed { get => type.attackSpeed;  }
-        public float AttackRange { get => type.attackRange;  }
+        protected bool isAlive;
+        private static readonly int Death1 = Animator.StringToHash("Death");
+        private static readonly int Damage1 = Animator.StringToHash("Damage");
+        private BoxCollider boxCollider;
+        
+        public float MoveSpeed { get => enemyType.moveSpeed; }
+        public float Damage { get => enemyType.damage;  }
+        public float AttackSpeed { get => enemyType.attackSpeed;  }
+        public float AttackRange { get => enemyType.attackRange;  }
         public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
+        public float DeathTime { get => enemyType.deathTime; }
 
-        private void Start()
+        public virtual void Init()
         {
-            CurrentHealth = type.maxHealth;
+            CurrentHealth = enemyType.maxHealth;
+            boxCollider = GetComponent<BoxCollider>();
+            boxCollider.enabled = true;
             isAlive = true;
-
-      
         }
         public virtual void Death()
         {
-            Destroy(gameObject);
+            _animator?.SetTrigger(Death1);
+            boxCollider.enabled = false;
+            Invoke(nameof(DestroyEnemy),DeathTime);
+        }
+
+        private void DestroyEnemy()
+        {
+            onDeath.Invoke(this.gameObject);
         }
 
         public virtual bool IsAlive()
@@ -37,6 +50,7 @@ namespace Enemy
 
         public virtual void ReceiveDamage(float damage)
         {
+            _animator?.SetTrigger(Damage1);
             CurrentHealth -= damage;
             onDamage.Invoke();
             if (CurrentHealth <= 0)

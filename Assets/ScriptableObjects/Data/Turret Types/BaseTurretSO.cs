@@ -7,4 +7,5 @@ public class BaseTurretSO : ScriptableObject
     public BaseTurret asset;
     public float maxHealth;
     public Sprite sprite;
+    public float deathTime = 0.8f;
 }

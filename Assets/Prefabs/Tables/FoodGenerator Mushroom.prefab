@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 4120886778106442964}
   - component: {fileID: 6915543571251192829}
   - component: {fileID: 2862391430484310578}
+  - component: {fileID: 3083744430549100059}
   m_Layer: 0
   m_Name: FoodGenerator Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4120886778106442964
 Transform:
@@ -69,6 +70,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: c937f7fdcf9fa2e49bf7b6b088aac973, type: 2}
+--- !u!114 &3083744430549100059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981735208508654154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144f21f6ff5b6c7418c4d163d39376ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outlineConfig: {fileID: 11400000, guid: e15b8a632493d3b4595d0d34357d7a1f, type: 2}
 --- !u!1 &6627913231004284924
 GameObject:
   m_ObjectHideFlags: 0

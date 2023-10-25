@@ -11,6 +11,7 @@ namespace Table
 
         public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
+            OnInteract.Invoke();
             if (!_pickable && playerInventory.hasPickable())
             {
                 playerInventory.GetPickable().SetNewParent(_itemPos);

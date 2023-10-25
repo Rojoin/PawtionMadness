@@ -6,6 +6,7 @@ using Player;
 using Turret;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -21,17 +22,24 @@ namespace Table
 
     public class Cauldron : Table
     {
-        [SerializeField] private Image image;
         [SerializeField] private float timerMax;
         [SerializeField] private float currentTime = 0.0f;
         private CauldronState state;
-
         [SerializeField] private Potion defaultPotion;
+        [SerializeField] private Transform potionTransform;
+        [SerializeField] private Potion potionFromRecipe;
         [SerializeField] private KitchenObjectSO[] ingredientsInCauldron;
         [SerializeField] private PotionRecipeSO[] posiblePotions;
         [SerializeField] private int maxIngredientInCauldron = 3;
         private int currentIngredientCounter = 0;
-        [SerializeField] private Image[] ingredientsImages;
+
+        private List<IngredientData> cauldronStuff = new List<IngredientData>();
+        [Header("Events")]
+        public UnityEvent<float> OnFillAmountUpdated = new UnityEvent<float>();
+        public UnityEvent<Sprite> OnIngredientAdded = new UnityEvent<Sprite>();
+        public UnityEvent OnCookingFinished = new UnityEvent();
+
+     
 
         private void Start()
         {
@@ -47,6 +55,10 @@ namespace Table
                     if (currentIngredientCounter == maxIngredientInCauldron)
                     {
                         state = CauldronState.Done;
+                        OnCookingFinished.Invoke();
+                        PotionRecipeSO potionToGet = GetRecipePotion();
+                        potionFromRecipe = InstantiatePotion(potionToGet);
+                        cauldronStuff.Clear();
                     }
                 }
                 else
@@ -54,21 +66,23 @@ namespace Table
                     currentTime += Time.deltaTime;
                 }
 
-                image.fillAmount = currentTime / timerMax;
+                float imageFillAmount = currentTime / timerMax;
+                OnFillAmountUpdated.Invoke(imageFillAmount);
             }
         }
 
-        public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
+        public override void OnInteraction(PlayerInventory playerInventory = null, PlayerInteract playerInteract = null)
         {
+            OnInteract.Invoke();
             switch (state)
             {
                 case CauldronState.Done when !playerInventory.hasPickable():
-                    playerInventory.SetPickable(GetRecipePotion());
+                    playerInventory.SetPickable(potionFromRecipe);
                     ResetCauldron();
                     break;
                 case CauldronState.Empty when playerInventory.hasIngredient():
                 case CauldronState.Cooking when playerInventory.hasIngredient():
-                    if (currentIngredientCounter < ingredientsInCauldron.Length)
+                    if (!IsCauldronFull())
                     {
                         AddIngredientToCook(playerInventory.GetPickable() as Ingredient);
                         playerInventory.NullPickable();
@@ -78,21 +92,38 @@ namespace Table
             }
         }
 
+        private bool IsCauldronFull()
+        {
+            return currentIngredientCounter >= ingredientsInCauldron.Length;
+        }
+
         private void AddIngredientToCook(Ingredient ingredient)
         {
-            if (!image.enabled)
-            {
-                image.enabled = true;
-            }
-
             ingredientsInCauldron[currentIngredientCounter] = ingredient.GetSO();
             ingredient.SetNewParent(this.transform);
-            ingredient.gameObject.SetActive(false);
-            ingredientsImages[currentIngredientCounter].sprite = ingredient.GetIngredientImage();
-            ingredientsImages[currentIngredientCounter].enabled = true;
+
+
+            OnIngredientAdded.Invoke(ingredient.GetIngredientImage());
             timerMax += ingredient.IsProcessed() ? ingredient.TimeToCook / 2.0f : ingredient.TimeToCook;
             state = CauldronState.Cooking;
             currentIngredientCounter++;
+
+            KitchenObjectSO so = ingredient.GetSO();
+
+            bool addNewIngredient = true;
+            for (var i = 0; i < cauldronStuff.Count; i++)
+            {
+                var ingredientData = cauldronStuff[i];
+                if (ingredientData.item == so)
+                {
+                    ingredientData.amount++;
+                    addNewIngredient = false;
+                }
+            }
+
+            if (addNewIngredient)
+                cauldronStuff.Add(new IngredientData { item = so, amount = 1 });
+            Destroy(ingredient.gameObject);
         }
 
         private void ResetCauldron()
@@ -100,70 +131,39 @@ namespace Table
             ingredientsInCauldron = new KitchenObjectSO[maxIngredientInCauldron];
             currentTime = 0.0f;
             timerMax = 0.0f;
-            image.fillAmount = 0;
             state = CauldronState.Empty;
-            image.enabled = false;
-            currentIngredientCounter = 0;
-            foreach (var uiImages in ingredientsImages)
-            {
-                uiImages.sprite = null;
-                uiImages.enabled = false;
-            }
-        }
 
-        private Potion GetRecipePotion()
+            currentIngredientCounter = 0;
+        }
+        
+        private PotionRecipeSO GetRecipePotion()
         {
             PotionRecipeSO nextPotion = null;
 
-            foreach (var recipe in posiblePotions)
+            for (var i = 0; i < posiblePotions.Length; i++)
             {
-                var dict = CreateCoockingDictionary();
-                nextPotion = CheckRecipe(dict, recipe);
-                if (nextPotion)
-                {
-                    break;
-                }
+                PotionRecipeSO recipe = posiblePotions[i];
+
+                if (recipe.IsSameRecipe(cauldronStuff))
+                    return recipe;
             }
 
-            var potionToReturn = nextPotion
-                ? Instantiate(nextPotion.potion, transform.position, Quaternion.identity)
-                : Instantiate(defaultPotion, transform.position, Quaternion.identity);
-            potionToReturn.SetIconVisible(true);
-            return potionToReturn;
+            return null;
         }
 
-        private PotionRecipeSO CheckRecipe(Dictionary<ScriptableObject, int> dict, PotionRecipeSO recipe)
+        private Potion InstantiatePotion(PotionRecipeSO recipe)
         {
-            foreach (var item in recipe.itemsNeeded)
+            Potion potion;
+            if (recipe)
             {
-                if (!dict.ContainsKey(item))
-                {
-                    return null;
-                }
-                else
-                {
-                    dict[item]--;
-                    if (dict[item] == 0)
-                    {
-                        dict.Remove(item);
-                    }
-                }
+                Debug.Log(recipe.name);
+                potion = Instantiate(recipe.potion, potionTransform.position, Quaternion.identity);
             }
+            else
+                potion = Instantiate(defaultPotion, potionTransform.position, Quaternion.identity);
 
-            return dict.Count == 0 ? recipe : null;
-        }
-
-        private Dictionary<ScriptableObject, int> CreateCoockingDictionary()
-        {
-            var dict = new Dictionary<ScriptableObject, int>();
-
-            foreach (var item in ingredientsInCauldron)
-            {
-                if (!dict.TryAdd(item, 1))
-                    dict[item]++;
-            }
-
-            return dict;
+            potion.SetIconVisible(true);
+            return potion;
         }
     }
 }
