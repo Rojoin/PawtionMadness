@@ -15,7 +15,7 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>4</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -44,6 +44,11 @@
 						<Sound Name="AMB_Pajaros_cuervos" ID="{B290552E-A9FA-40BE-90F0-ABEE85DD2B0F}" ShortID="730048890">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="7"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
