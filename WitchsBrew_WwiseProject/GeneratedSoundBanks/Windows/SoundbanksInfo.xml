@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>D:\Game Audio\Witchs Brew\WitchsBrew\WitchsBrew_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Game Audio\Witchs Brew\WitchsBrew\WitchsBrew_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Game Audio\Witchs Brew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Game Audio\Witchs Brew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,16 +16,32 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3604647259" Language="SFX" Hash="3243895879">
+		<SoundBank Id="3604647259" Language="SFX" Hash="1983573026">
 			<ObjectPath>\SoundBanks\Default Work Unit\MainMenu</ObjectPath>
 			<ShortName>MainMenu</ShortName>
 			<Path>MainMenu.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1991862712" Name="MainMenuMusic" ObjectPath="\Events\Default Work Unit\MainMenuMusic" DurationType="OneShot" DurationMin="53.032249" DurationMax="53.032249">
+				<Event Id="1991862712" Name="MainMenuMusic" ObjectPath="\Events\Default Work Unit\MainMenuMusic" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="873375524" Language="SFX">
-							<ShortName>witch´s brew_MainMenu_1st demo.wav</ShortName>
-							<Path>SFX\witch´s brew_MainMenu_1st demo_D79FB2B7.wem</Path>
+						<File Id="339980892" Language="SFX">
+							<ShortName>witch´s brew_MainMenu_1st demo_155bpm.wav</ShortName>
+							<Path>SFX\witch´s brew_MainMenu_1st demo_155bpm_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3799629626" Name="Play_ingamemusic" ObjectPath="\Events\Default Work Unit\Play_ingamemusic" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="443992359" Language="SFX">
+							<ShortName>GAMEPLAY_B_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_B_155_D79FB2B7.wem</Path>
+						</File>
+						<File Id="452233697" Language="SFX">
+							<ShortName>GAMEPLAY_C_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_C_155_D79FB2B7.wem</Path>
+						</File>
+						<File Id="795429319" Language="SFX">
+							<ShortName>GAMEPLAY_A_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_A_155_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
