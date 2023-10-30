@@ -119,7 +119,6 @@ public class GameManager : MonoBehaviour
         pauseChannelSO.Unsubscribe(PauseLevel);
         enemyManager.activateWinScreenChannel.RemoveAllListeners();
         uiManager.ActivateWinScreen();
-        Time.timeScale = 1;
     }
     [ContextMenu("Go To Menu")]
     public void GoToMenu()
