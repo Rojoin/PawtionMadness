@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         pauseChannelSO.Unsubscribe(PauseLevel);
+        enemyManager.activateWinScreenChannel.RemoveAllListeners();
         Time.timeScale = 0;
         uiManager.ActivateGameOverCanvas();
     }
@@ -94,6 +95,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
+        Time.timeScale = 1;
         SceneSwitcher.ChangeScene(currentScene);
     }
 
@@ -110,6 +112,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = isPaused ? 0 : 1;
         }
     }
+    
 
     public void WinGame()
     {
@@ -121,11 +124,13 @@ public class GameManager : MonoBehaviour
     [ContextMenu("Go To Menu")]
     public void GoToMenu()
     {
+        Time.timeScale = 1;
         SceneSwitcher.ChangeScene(mainMenu);
     }
 
     public void GoToNextLevel()
     {
+        Time.timeScale = 1;
        SceneSwitcher.ChangeScene(nextScene);
     }
 
