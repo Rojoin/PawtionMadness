@@ -1,5 +1,6 @@
 using UnityEngine;
 using Enemy;
+using Unity.VisualScripting;
 
 public class ChargeEnemy : BaseEnemy
 {
@@ -23,7 +24,7 @@ public class ChargeEnemy : BaseEnemy
     {
         base.Init();
         stopMoving = false;
-        canAttack = false;
+        canAttack = true;
         isCharging = true;
     }
 
@@ -93,14 +94,22 @@ public class ChargeEnemy : BaseEnemy
         RaycastHit hit;
         if (Physics.Raycast(initRayPosition, transform.forward, out hit, AttackRange, layerMask))
         {
+            Debug.Log(hit.collider.name, gameObject);
+
             if (hit.collider.gameObject.TryGetComponent<IHealthComponent>(out var entity) && canAttack)
             {
+                Debug.Log("hit!");
+
                 stopMoving = true;
                 if (canAttack)
                 {
                     Attack(entity);
                 }
             }
+            //else
+            //{
+            //    Debug.Log("no iHealthComponent found!");
+            //}
         }
         else if (stopMoving && canAttack)
         {
