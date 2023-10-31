@@ -7,10 +7,7 @@ public class ChangingLineEnemy : ChangingEnemy
     private float timer;
     private Vector3 initRayPosition;
 
-    public Vector3 NewPosition
-    {
-        get => (enemyType as ChangingLineEnemySO).NewPosition;
-    }
+   
 
     public override void Init()
     {
