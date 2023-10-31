@@ -13,25 +13,25 @@ namespace Menu
         [SerializeField] private Button startGameButton;
         [SerializeField] private Button optionsButton;
         [SerializeField] private Button backOptionsButton;
-        [SerializeField] private Button howToPlayButton;
-        [SerializeField] private Button backHowToPlayButton;
+        [SerializeField] private Button creditsButton;
+        [SerializeField] private Button backCreditsButton;
         [SerializeField] private Button exitButton;
         [SerializeField] private CanvasGroup menuCanvas;
         [SerializeField] private CanvasGroup optionsCanvas;
-        [SerializeField] private CanvasGroup howToPlayCanvas;
+        [SerializeField] private CanvasGroup creditsCanvas;
         private bool isOptionsActive;
         private bool isHowToPlayActive;
+
         private void Awake()
         {
             startGameButton.onClick.AddListener(StartGame);
             optionsButton.onClick.AddListener(OptionsToggle);
             backOptionsButton.onClick.AddListener(OptionsToggle);
-            howToPlayButton.onClick.AddListener(HowToToggle);
-            backHowToPlayButton.onClick.AddListener(HowToToggle);
+            creditsButton.onClick.AddListener(HowToToggle);
+            backCreditsButton.onClick.AddListener(HowToToggle);
             exitButton.onClick.AddListener(ExitGame);
             isOptionsActive = false;
             isHowToPlayActive = false;
-            
         }
 
         private void OnDestroy()
@@ -39,8 +39,8 @@ namespace Menu
             startGameButton.onClick.RemoveListener(StartGame);
             optionsButton.onClick.RemoveListener(OptionsToggle);
             backOptionsButton.onClick.RemoveListener(OptionsToggle);
-            howToPlayButton.onClick.RemoveListener(HowToToggle);
-            backHowToPlayButton.onClick.RemoveListener(HowToToggle);
+            creditsButton.onClick.RemoveListener(HowToToggle);
+            backCreditsButton.onClick.RemoveListener(HowToToggle);
             exitButton.onClick.RemoveListener(ExitGame);
         }
 
@@ -52,14 +52,14 @@ namespace Menu
         private void OptionsToggle()
         {
             isOptionsActive = !isOptionsActive;
-            SetCanvasVisibility(optionsCanvas,isOptionsActive);
+            SetCanvasVisibility(optionsCanvas, isOptionsActive);
             menuCanvas.blocksRaycasts = !isOptionsActive;
         }
 
         private void HowToToggle()
         {
             isHowToPlayActive = !isHowToPlayActive;
-            SetCanvasVisibility(howToPlayCanvas,isHowToPlayActive);
+            SetCanvasVisibility(creditsCanvas, isHowToPlayActive);
             menuCanvas.blocksRaycasts = !isHowToPlayActive;
         }
 
@@ -67,12 +67,12 @@ namespace Menu
         {
             SceneSwitcher.ChangeScene(GoToGame);
         }
+
         private void SetCanvasVisibility(CanvasGroup canvas, bool state)
         {
             canvas.alpha = state ? 1 : 0;
             canvas.interactable = state;
             canvas.blocksRaycasts = state;
         }
-
     }
 }
