@@ -18,7 +18,7 @@ namespace Turret
         public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
 
         public float DeathTime { get => turretType.deathTime; }
-        private void Awake()
+        public virtual void Init()
         {
             CurrentHealth = MaxHealth;
             boxCollider = GetComponent<BoxCollider>();
