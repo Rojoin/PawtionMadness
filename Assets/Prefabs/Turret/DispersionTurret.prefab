@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2877f36b0144fe438a2f3e262fd6d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 2483151838310877829}
   turretType: {fileID: 11400000, guid: a0590aedf314ceb4cbcd2b5be93568d5, type: 2}
   tile: {fileID: 0}
   _onHit:
@@ -349,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7911567190939450591, guid: 08b9d6c2e63c00c4a8dadc54e6a3d995, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7911567190939450591, guid: 08b9d6c2e63c00c4a8dadc54e6a3d995, type: 3}
       propertyPath: m_LocalRotation.x
@@ -357,7 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7911567190939450591, guid: 08b9d6c2e63c00c4a8dadc54e6a3d995, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7911567190939450591, guid: 08b9d6c2e63c00c4a8dadc54e6a3d995, type: 3}
       propertyPath: m_LocalRotation.z
@@ -369,7 +369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7911567190939450591, guid: 08b9d6c2e63c00c4a8dadc54e6a3d995, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7911567190939450591, guid: 08b9d6c2e63c00c4a8dadc54e6a3d995, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -384,6 +384,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08b9d6c2e63c00c4a8dadc54e6a3d995, type: 3}
+--- !u!95 &2483151838310877829 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1041111420599040613, guid: 08b9d6c2e63c00c4a8dadc54e6a3d995, type: 3}
+  m_PrefabInstance: {fileID: 3172548592783634656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4741340788223118399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7911567190939450591, guid: 08b9d6c2e63c00c4a8dadc54e6a3d995, type: 3}
@@ -418,7 +423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5256473701780935605, guid: 5c9194d09361fc8428e57f0b730168ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: 5256473701780935605, guid: 5c9194d09361fc8428e57f0b730168ac, type: 3}
       propertyPath: m_LocalPosition.z
