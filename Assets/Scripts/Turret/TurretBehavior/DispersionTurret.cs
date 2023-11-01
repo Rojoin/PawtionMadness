@@ -7,7 +7,6 @@ using UnityEngine.Events;
 
 public class DispersionTurret : AttackTurret
 {
-    
     public void Update()
     {
         if (!isAlive) return;
