@@ -27,12 +27,14 @@ namespace AK
         static const AkUniqueID PLAY_OLEADA_FINAL = 3691145017U;
         static const AkUniqueID PLAY_POCION_PREPARANDOSE = 4052632251U;
         static const AkUniqueID PLAY_PONER_ITEM_EN_CALDERO = 2748973737U;
+        static const AkUniqueID TUTORIALMUSIC = 2464646960U;
     } // namespace EVENTS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID MAINMENU = 3604647259U;
+        static const AkUniqueID TUTORIAL = 3762955427U;
     } // namespace BANKS
 
     namespace BUSSES

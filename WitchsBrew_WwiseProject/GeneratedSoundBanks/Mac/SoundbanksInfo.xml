@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>/Users/f-lo/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/WitchsBrew/WitchsBrew_WwiseProject/</ProjectRoot>
-		<SourceFilesRoot>/Users/f-lo/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/WitchsBrew/WitchsBrew_WwiseProject/.cache/Mac/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/f-lo/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/WitchsBrew/WitchsBrew_WwiseProject/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ProjectRoot>D:\Game Audio\Witchs Brew\WitchsBrew\WitchsBrew_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Game Audio\Witchs Brew\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Game Audio\Witchs Brew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/f-lo/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/WitchsBrew/WitchsBrew_WwiseProject/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Game Audio\Witchs Brew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3604647259" Language="SFX" Hash="858018105">
+		<SoundBank Id="3604647259" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\MainMenu</ObjectPath>
 			<ShortName>MainMenu</ShortName>
 			<Path>MainMenu.bnk</Path>
@@ -25,7 +25,7 @@
 					<IncludedMemoryFiles>
 						<File Id="339980892" Language="SFX">
 							<ShortName>witch´s brew_MainMenu_1st demo_155bpm.wav</ShortName>
-							<Path>SFX/witch´s brew_MainMenu_1st demo_155bpm_D79FB2B7.wem</Path>
+							<Path>SFX\witch´s brew_MainMenu_1st demo_155bpm_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -33,7 +33,7 @@
 					<IncludedMemoryFiles>
 						<File Id="1024985020" Language="SFX">
 							<ShortName>Cocina\Agarrar_Item_Frasco.wav</ShortName>
-							<Path>SFX/Cocina/Agarrar_Item_Frasco_10C4C929.wem</Path>
+							<Path>SFX\Cocina\Agarrar_Item_Frasco_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -41,7 +41,7 @@
 					<IncludedMemoryFiles>
 						<File Id="460792029" Language="SFX">
 							<ShortName>Cocina\Agarrar_item_Porcion.wav</ShortName>
-							<Path>SFX/Cocina/Agarrar_item_Porcion_10C4C929.wem</Path>
+							<Path>SFX\Cocina\Agarrar_item_Porcion_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -49,7 +49,7 @@
 					<IncludedMemoryFiles>
 						<File Id="380180008" Language="SFX">
 							<ShortName>Ambiente\AMB_Bosque_Noche.wav</ShortName>
-							<Path>SFX/Ambiente/AMB_Bosque_Noche_10C4C929.wem</Path>
+							<Path>SFX\Ambiente\AMB_Bosque_Noche_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -57,7 +57,7 @@
 					<IncludedMemoryFiles>
 						<File Id="337365092" Language="SFX">
 							<ShortName>Ambiente\AMB_Pajaros_cuervos .wav</ShortName>
-							<Path>SFX/Ambiente/AMB_Pajaros_cuervos _10C4C929.wem</Path>
+							<Path>SFX\Ambiente\AMB_Pajaros_cuervos _10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -65,7 +65,7 @@
 					<IncludedMemoryFiles>
 						<File Id="311946003" Language="SFX">
 							<ShortName>Cocina\Caldero.wav</ShortName>
-							<Path>SFX/Cocina/Caldero_10C4C929.wem</Path>
+							<Path>SFX\Cocina\Caldero_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -73,7 +73,7 @@
 					<IncludedMemoryFiles>
 						<File Id="29198288" Language="SFX">
 							<ShortName>Enemigos\Desplazamiento enemigo alas.wav</ShortName>
-							<Path>SFX/Enemigos/Desplazamiento enemigo alas_10C4C929.wem</Path>
+							<Path>SFX\Enemigos\Desplazamiento enemigo alas_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -81,7 +81,7 @@
 					<IncludedMemoryFiles>
 						<File Id="56742151" Language="SFX">
 							<ShortName>Torretas\Disparo.wav</ShortName>
-							<Path>SFX/Torretas/Disparo_10C4C929.wem</Path>
+							<Path>SFX\Torretas\Disparo_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -89,15 +89,15 @@
 					<IncludedMemoryFiles>
 						<File Id="443992359" Language="SFX">
 							<ShortName>GAMEPLAY_B_155.wav</ShortName>
-							<Path>SFX/GAMEPLAY_B_155_D79FB2B7.wem</Path>
+							<Path>SFX\GAMEPLAY_B_155_D79FB2B7.wem</Path>
 						</File>
 						<File Id="452233697" Language="SFX">
 							<ShortName>GAMEPLAY_C_155.wav</ShortName>
-							<Path>SFX/GAMEPLAY_C_155_D79FB2B7.wem</Path>
+							<Path>SFX\GAMEPLAY_C_155_D79FB2B7.wem</Path>
 						</File>
 						<File Id="795429319" Language="SFX">
 							<ShortName>GAMEPLAY_A_155.wav</ShortName>
-							<Path>SFX/GAMEPLAY_A_155_D79FB2B7.wem</Path>
+							<Path>SFX\GAMEPLAY_A_155_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -105,7 +105,7 @@
 					<IncludedMemoryFiles>
 						<File Id="789842628" Language="SFX">
 							<ShortName>Recetario\libro_abrir_3.wav</ShortName>
-							<Path>SFX/Recetario/libro_abrir_3_10C4C929.wem</Path>
+							<Path>SFX\Recetario\libro_abrir_3_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -113,7 +113,7 @@
 					<IncludedMemoryFiles>
 						<File Id="425330887" Language="SFX">
 							<ShortName>Ambiente\Oleada.wav</ShortName>
-							<Path>SFX/Ambiente/Oleada_10C4C929.wem</Path>
+							<Path>SFX\Ambiente\Oleada_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -121,7 +121,7 @@
 					<IncludedMemoryFiles>
 						<File Id="198317943" Language="SFX">
 							<ShortName>Ambiente\Oleada final.wav</ShortName>
-							<Path>SFX/Ambiente/Oleada final_10C4C929.wem</Path>
+							<Path>SFX\Ambiente\Oleada final_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -129,7 +129,7 @@
 					<IncludedMemoryFiles>
 						<File Id="566978199" Language="SFX">
 							<ShortName>Cocina\Pocion preparandose.wav</ShortName>
-							<Path>SFX/Cocina/Pocion preparandose_10C4C929.wem</Path>
+							<Path>SFX\Cocina\Pocion preparandose_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -137,7 +137,46 @@
 					<IncludedMemoryFiles>
 						<File Id="785466920" Language="SFX">
 							<ShortName>Cocina\Poner item en caldero.wav</ShortName>
-							<Path>SFX/Cocina/Poner item en caldero_10C4C929.wem</Path>
+							<Path>SFX\Cocina\Poner item en caldero_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2464646960" Name="TutorialMusic" ObjectPath="\Events\Default Work Unit\TutorialMusic" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="443992359" Language="SFX">
+							<ShortName>GAMEPLAY_B_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_B_155_D79FB2B7.wem</Path>
+						</File>
+						<File Id="452233697" Language="SFX">
+							<ShortName>GAMEPLAY_C_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_C_155_D79FB2B7.wem</Path>
+						</File>
+						<File Id="795429319" Language="SFX">
+							<ShortName>GAMEPLAY_A_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_A_155_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="3762955427" Language="SFX" Hash="3587177231">
+			<ObjectPath>\SoundBanks\Default Work Unit\Tutorial</ObjectPath>
+			<ShortName>Tutorial</ShortName>
+			<Path>Tutorial.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2464646960" Name="TutorialMusic" ObjectPath="\Events\Default Work Unit\TutorialMusic" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="443992359" Language="SFX">
+							<ShortName>GAMEPLAY_B_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_B_155_D79FB2B7.wem</Path>
+						</File>
+						<File Id="452233697" Language="SFX">
+							<ShortName>GAMEPLAY_C_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_C_155_D79FB2B7.wem</Path>
+						</File>
+						<File Id="795429319" Language="SFX">
+							<ShortName>GAMEPLAY_A_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_A_155_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
