@@ -1,3 +1,4 @@
+using System.Collections;
 using Turret;
 using UnityEngine;
 
@@ -41,9 +42,17 @@ public class ProjectileBaseTurret : AttackTurret
         for (int i = 0; i < ProjectileQuantity; i++)
         {
             base.Shoot();
-            Projectile newProjectile = Instantiate(Projectile, transform.position, transform.rotation);
-            newProjectile.ProjectileSpeed = ProjectileSpeed;
-            newProjectile.Damage = AttackDamage;
+            StartCoroutine(AttackEnemies());
         }
+    }
+
+    protected override IEnumerator AttackEnemies()
+    {
+        yield return new WaitForSeconds(AttackAnimDelay);
+        onAttack.Invoke();
+        Projectile newProjectile = Instantiate(Projectile, transform.position, transform.rotation);
+        newProjectile.ProjectileSpeed = ProjectileSpeed;
+        newProjectile.Damage = AttackDamage;
+        yield break;
     }
 }
