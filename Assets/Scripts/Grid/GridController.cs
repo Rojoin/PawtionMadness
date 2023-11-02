@@ -21,6 +21,7 @@ namespace Grid
         [SerializeField] private VoidChannelSO backInputChannel;
         [SerializeField] private VoidChannelSO changeToPlayerChannel;
         [SerializeField] private PlayerStats _playerStats;
+        private bool isGridNotMoving;
         private Coroutine moveGrid;
 
         private void Awake()
@@ -44,6 +45,7 @@ namespace Grid
             {
                 cursorPos = Vector2Int.zero;
             }
+
             SelectCurrentTile();
         }
 
@@ -62,7 +64,14 @@ namespace Grid
             cursorPos.Clamp(new Vector2Int(0, 0), limits);
             SelectCurrentTile();
         }
+//Todo: move grid with continuos imput
+        private IEnumerator MoveGrid(Vector2 input)
+        {
+            yield return new WaitForSecondsRealtime(2);
 
+            OnMove(input);
+            yield break;
+        }
 
         private void CheckPreviousInput(Vector2 input)
         {
@@ -92,8 +101,7 @@ namespace Grid
 
             currentTile = grid.GetTile(cursorPos);
             Vector3 position = currentTile.transform.position;
-            gridIndicator.transform.position = new Vector3(position.x,indicatorYOffset,position.z);
-            
+            gridIndicator.transform.position = new Vector3(position.x, indicatorYOffset, position.z);
         }
 
         /// <summary>

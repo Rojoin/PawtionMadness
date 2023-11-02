@@ -18,12 +18,18 @@ namespace Turret
         public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
 
         public float DeathTime { get => turretType.deathTime; }
-        private void Awake()
+        public virtual void Init()
         {
             CurrentHealth = MaxHealth;
             boxCollider = GetComponent<BoxCollider>();
             isAlive = true;
         }
+
+        private void Awake()
+        {
+            Init();
+        }
+
         public virtual void Death()
         {
             animator?.SetTrigger(Death1);

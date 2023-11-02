@@ -1,4 +1,6 @@
 using System;
+using CustomSceneSwitcher.Switcher;
+using CustomSceneSwitcher.Switcher.Data;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -19,6 +21,10 @@ public class GameManager : MonoBehaviour
     [Header("Values")]
     [SerializeField] float timeUntilGameOver = 0.2f;
     [SerializeField] bool isTutorialScene = false;
+    [Header("SceneChanger")]
+    [SerializeField] private SceneChangeData mainMenu;
+    [SerializeField] private SceneChangeData currentScene;
+    [SerializeField] private SceneChangeData nextScene;
 
     [Header("Events")]
     public UnityEvent deActivateRecipe;
@@ -47,7 +53,7 @@ public class GameManager : MonoBehaviour
         enemySpawner.OnGameBarUpdated.RemoveListener(uiManager.UpdateGameBar);
         enemySpawner.OnNewWaveAdded.RemoveListener(uiManager.AddWaveIcon);
         enemySpawner.OnIncomingWave.RemoveListener(uiManager.ShowNewWaveAlert);
-        enemyManager.activateWinScreenChannel.RemoveListener(WinGame);
+        enemyManager.activateWinScreenChannel.RemoveAllListeners();
     }
 
     private void Start()
@@ -76,6 +82,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         pauseChannelSO.Unsubscribe(PauseLevel);
+        enemyManager.activateWinScreenChannel.RemoveAllListeners();
         Time.timeScale = 0;
         uiManager.ActivateGameOverCanvas();
     }
@@ -88,7 +95,8 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+        SceneSwitcher.ChangeScene(currentScene);
     }
 
     public void PauseLevel()
@@ -104,23 +112,25 @@ public class GameManager : MonoBehaviour
             Time.timeScale = isPaused ? 0 : 1;
         }
     }
+    
 
     public void WinGame()
     {
         pauseChannelSO.Unsubscribe(PauseLevel);
+        enemyManager.activateWinScreenChannel.RemoveAllListeners();
         uiManager.ActivateWinScreen();
-        Time.timeScale = 0;
     }
-
+    [ContextMenu("Go To Menu")]
     public void GoToMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        Time.timeScale = 1;
+        SceneSwitcher.ChangeScene(mainMenu);
     }
 
     public void GoToNextLevel()
     {
-        int nextScene = SceneManager.GetActiveScene().buildIndex + 1 >= SceneManager.sceneCountInBuildSettings ? 0 : SceneManager.GetActiveScene().buildIndex + 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1;
+       SceneSwitcher.ChangeScene(nextScene);
     }
 
     public void Exit()
