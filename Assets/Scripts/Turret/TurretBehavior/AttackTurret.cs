@@ -9,6 +9,7 @@ namespace Turret
         public UnityEvent onAttack;
         private static readonly int ShootTriggerAnim = Animator.StringToHash("Shoot");
         protected float shootSpeedTimer = 0;
+        private float attackRange;
         public float AttackAnimDelay { get => (turretType as AttackTurretSO).attackDelay; }
         public float ShootSpeed
         {
@@ -18,9 +19,13 @@ namespace Turret
         {
             get => (turretType as AttackTurretSO).attackDamage;
         }
-        public int AttackRange
+        public float AttackRangeSO
         {
             get => (turretType as AttackTurretSO).attackRange;
+        }
+        public override void Init()
+        {
+            attackRange = AttackRangeSO;
         }
 
         public virtual void Shoot()
@@ -36,7 +41,7 @@ namespace Turret
             int layerMask = 1 << gameObject.layer;
             layerMask = ~layerMask;
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward , hitInfo: out hit, maxDistance: AttackRange,layerMask))
+            if (Physics.Raycast(transform.position, transform.forward , hitInfo: out hit, maxDistance: attackRange, layerMask))
             {
                 Debug.Log(hit.collider.tag);
                 if (hit.collider.CompareTag("enemy"))
@@ -48,10 +53,15 @@ namespace Turret
             return false;
         }
 
+        public void SetAttackRange(float newAttackRange)
+        {
+            attackRange = newAttackRange;
+        }
+
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
-            //Gizmos.DrawLine(transform.position, transform.position + (transform.forward * AttackRange));
+            Gizmos.DrawLine(transform.position, transform.position + (transform.forward * attackRange));
         }
 
         protected abstract IEnumerator AttackEnemies();

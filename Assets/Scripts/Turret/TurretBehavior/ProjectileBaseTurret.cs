@@ -3,8 +3,7 @@ using Turret;
 using UnityEngine;
 
 public class ProjectileBaseTurret : AttackTurret
-{
-   
+{   
     public Projectile Projectile
     {
         get => (turretType as ProyectileTurretSO).projectile;

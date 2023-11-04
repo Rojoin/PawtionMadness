@@ -34,7 +34,7 @@ public class DispersionTurret : AttackTurret
         yield return new WaitForSeconds(AttackAnimDelay);
         onAttack.Invoke();
         RaycastHit[] hits;
-        hits = Physics.RaycastAll(transform.position, transform.forward * AttackRange, AttackRange);
+        hits = Physics.RaycastAll(transform.position, transform.forward * AttackRangeSO, AttackRangeSO);
         for (int i = 0; i < hits.Length; i++)
         {
             RaycastHit hit = hits[i];
@@ -51,6 +51,6 @@ public class DispersionTurret : AttackTurret
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, transform.forward * AttackRange);
+        Gizmos.DrawRay(transform.position, transform.forward * AttackRangeSO);
     }
 }

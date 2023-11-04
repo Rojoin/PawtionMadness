@@ -3,9 +3,12 @@ using UnityEngine.Pool;
 
 public class TurretManager : MonoBehaviour
 {
+    private TurretFactory turretFactory = new TurretFactory();
+    [SerializeField] private Transform maxDistancePoint;
+    [SerializeField] private Transform parent;
 
-    private void Awake()
+    public void AddNewTurret(BaseTurretSO newTurret, Transform position)
     {
-
+        turretFactory.NewTurretConfigure(newTurret, position, maxDistancePoint, parent);
     }
 }
