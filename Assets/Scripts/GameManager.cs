@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     [Header("Channels")]
     [SerializeField] private VoidChannelSO actionChannelSO;
     [SerializeField] private VoidChannelSO pauseChannelSO;
+    [SerializeField] private VoidChannelSO gridToggleChannelSO;
+    [SerializeField] private VoidChannelSO backInputChannel;
     [SerializeField] private VoidChannelSO showRecipesChannelSO;
     [Header("Values")]
     [SerializeField] float timeUntilGameOver = 0.2f;
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
     [Header("Events")]
     public UnityEvent deActivateRecipe;
     private bool isPaused;
+    private bool isGridActivated;
     private bool isRecipesOn;
 
 
@@ -40,7 +43,7 @@ public class GameManager : MonoBehaviour
         enemySpawner.OnGameBarUpdated.AddListener(uiManager.UpdateGameBar);
         enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
         enemyManager.activateWinScreenChannel.AddListener(WinGame);
-
+        gridToggleChannelSO.Subscribe(GridToggle);
         player.SetActive(true);
 
         enemySpawner.gameObject.SetActive(!isTutorialScene);
@@ -54,6 +57,7 @@ public class GameManager : MonoBehaviour
         enemySpawner.OnNewWaveAdded.RemoveListener(uiManager.AddWaveIcon);
         enemySpawner.OnIncomingWave.RemoveListener(uiManager.ShowNewWaveAlert);
         enemyManager.activateWinScreenChannel.RemoveAllListeners();
+        gridToggleChannelSO.Unsubscribe(GridToggle);
     }
 
     private void Start()
@@ -70,6 +74,12 @@ public class GameManager : MonoBehaviour
             Invoke(nameof(GameOver), timeUntilGameOver);
         }
     }
+
+    private void GridToggle()
+    {
+        isGridActivated = !isGridActivated;
+    }
+
 
     private void TutorialSequence()
     {
@@ -105,6 +115,11 @@ public class GameManager : MonoBehaviour
         {
             deActivateRecipe.Invoke();
         }
+        else if (isGridActivated)
+        {
+            backInputChannel.RaiseEvent();
+            GridToggle();
+        }
         else
         {
             isPaused = !isPaused;
@@ -112,7 +127,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = isPaused ? 0 : 1;
         }
     }
-    
+
 
     public void WinGame()
     {
@@ -120,6 +135,7 @@ public class GameManager : MonoBehaviour
         enemyManager.activateWinScreenChannel.RemoveAllListeners();
         uiManager.ActivateWinScreen();
     }
+
     [ContextMenu("Go To Menu")]
     public void GoToMenu()
     {
@@ -130,7 +146,7 @@ public class GameManager : MonoBehaviour
     public void GoToNextLevel()
     {
         Time.timeScale = 1;
-       SceneSwitcher.ChangeScene(nextScene);
+        SceneSwitcher.ChangeScene(nextScene);
     }
 
     public void Exit()

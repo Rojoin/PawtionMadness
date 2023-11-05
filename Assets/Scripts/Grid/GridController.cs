@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Health;
-using Turret;
+﻿using System.Collections;
 using UnityEngine;
 
 namespace Grid
@@ -23,8 +19,8 @@ namespace Grid
         [Header("Values")]
         [Range(0.1f, 1.0f)]
         [SerializeField] private float timeToHold = 0.5f;
-        private Vector2 _input;
         [SerializeField] private Vector2Int _defaultPos = new Vector2Int(0, 0);
+        private Vector2 _input;
         private Vector2Int _cursorPos = new Vector2Int(0, 0);
         private Vector2Int _previousInput = new Vector2Int(0, 0);
         private GridSystem _grid;
@@ -59,7 +55,11 @@ namespace Grid
 
         private void OnDisable()
         {
-            StopCoroutine(_moveGrid);
+            if (_moveGrid != null)
+            {
+                StopCoroutine(_moveGrid);
+            }
+
             gridIndicator.SetActive(false);
             movementChannel.Unsubscribe(OnMove);
             interactChannel.Unsubscribe(OnInteract);
