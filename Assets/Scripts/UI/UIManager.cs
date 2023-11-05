@@ -34,7 +34,7 @@ public class UIManager : MonoBehaviour
         canvas.blocksRaycasts = state;
     }
 
-    public void SetSettingsOn()
+    public void ToggleSettingsOn()
     {
         SetCanvasVisibility(PauseScreen,false);
         SetCanvasVisibility(SettingsScreen,true);
