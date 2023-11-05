@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Game Audio\Witchs Brew\WitchsBrew\WitchsBrew_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Game Audio\Witchs Brew\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Game Audio\Witchs Brew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Game Audio\Witchs Brew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3604647259" Language="SFX" Hash="1983573026">
+		<SoundBank Id="3604647259" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\MainMenu</ObjectPath>
 			<ShortName>MainMenu</ShortName>
 			<Path>MainMenu.bnk</Path>
@@ -29,7 +29,142 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2559549617" Name="Play_Agarrar_Item_Frasco" ObjectPath="\Events\Default Work Unit\Play_Agarrar_Item_Frasco" DurationType="OneShot" DurationMin="1.291667" DurationMax="1.291667">
+					<IncludedMemoryFiles>
+						<File Id="1024985020" Language="SFX">
+							<ShortName>Cocina\Agarrar_Item_Frasco.wav</ShortName>
+							<Path>SFX\Cocina\Agarrar_Item_Frasco_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2191355065" Name="Play_Agarrar_item_Porcion" ObjectPath="\Events\Default Work Unit\Play_Agarrar_item_Porcion" DurationType="OneShot" DurationMin="0.875" DurationMax="0.875">
+					<IncludedMemoryFiles>
+						<File Id="460792029" Language="SFX">
+							<ShortName>Cocina\Agarrar_item_Porcion.wav</ShortName>
+							<Path>SFX\Cocina\Agarrar_item_Porcion_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1452442514" Name="Play_AMB_Bosque_Noche" ObjectPath="\Events\Default Work Unit\Play_AMB_Bosque_Noche" DurationType="OneShot" DurationMin="46." DurationMax="46.">
+					<IncludedMemoryFiles>
+						<File Id="380180008" Language="SFX">
+							<ShortName>Ambiente\AMB_Bosque_Noche.wav</ShortName>
+							<Path>SFX\Ambiente\AMB_Bosque_Noche_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2278612795" Name="Play_AMB_Pajaros_cuervos" ObjectPath="\Events\Default Work Unit\Play_AMB_Pajaros_cuervos" DurationType="OneShot" DurationMin="96.17067" DurationMax="96.17067">
+					<IncludedMemoryFiles>
+						<File Id="337365092" Language="SFX">
+							<ShortName>Ambiente\AMB_Pajaros_cuervos .wav</ShortName>
+							<Path>SFX\Ambiente\AMB_Pajaros_cuervos _10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4083340090" Name="Play_Caldero" ObjectPath="\Events\Default Work Unit\Play_Caldero" DurationType="OneShot" DurationMin="18.478844" DurationMax="18.478844">
+					<IncludedMemoryFiles>
+						<File Id="311946003" Language="SFX">
+							<ShortName>Cocina\Caldero.wav</ShortName>
+							<Path>SFX\Cocina\Caldero_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2839911833" Name="Play_Desplazamiento_enemigo_alas" ObjectPath="\Events\Default Work Unit\Play_Desplazamiento_enemigo_alas" DurationType="OneShot" DurationMin="16.311001" DurationMax="16.311001">
+					<IncludedMemoryFiles>
+						<File Id="29198288" Language="SFX">
+							<ShortName>Enemigos\Desplazamiento enemigo alas.wav</ShortName>
+							<Path>SFX\Enemigos\Desplazamiento enemigo alas_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="213559042" Name="Play_Disparo" ObjectPath="\Events\Default Work Unit\Play_Disparo" DurationType="OneShot" DurationMin="1.125" DurationMax="1.125">
+					<IncludedMemoryFiles>
+						<File Id="56742151" Language="SFX">
+							<ShortName>Torretas\Disparo.wav</ShortName>
+							<Path>SFX\Torretas\Disparo_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3799629626" Name="Play_ingamemusic" ObjectPath="\Events\Default Work Unit\Play_ingamemusic" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="443992359" Language="SFX">
+							<ShortName>GAMEPLAY_B_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_B_155_D79FB2B7.wem</Path>
+						</File>
+						<File Id="452233697" Language="SFX">
+							<ShortName>GAMEPLAY_C_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_C_155_D79FB2B7.wem</Path>
+						</File>
+						<File Id="795429319" Language="SFX">
+							<ShortName>GAMEPLAY_A_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_A_155_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="707032169" Name="Play_libro_abrir_3" ObjectPath="\Events\Default Work Unit\Play_libro_abrir_3" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+					<IncludedMemoryFiles>
+						<File Id="789842628" Language="SFX">
+							<ShortName>Recetario\libro_abrir_3.wav</ShortName>
+							<Path>SFX\Recetario\libro_abrir_3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="417218340" Name="Play_Oleada" ObjectPath="\Events\Default Work Unit\Play_Oleada" DurationType="OneShot" DurationMin="3.3125" DurationMax="3.3125">
+					<IncludedMemoryFiles>
+						<File Id="425330887" Language="SFX">
+							<ShortName>Ambiente\Oleada.wav</ShortName>
+							<Path>SFX\Ambiente\Oleada_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3691145017" Name="Play_Oleada_final" ObjectPath="\Events\Default Work Unit\Play_Oleada_final" DurationType="OneShot" DurationMin="4.901312" DurationMax="4.901312">
+					<IncludedMemoryFiles>
+						<File Id="198317943" Language="SFX">
+							<ShortName>Ambiente\Oleada final.wav</ShortName>
+							<Path>SFX\Ambiente\Oleada final_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4052632251" Name="Play_Pocion_preparandose" ObjectPath="\Events\Default Work Unit\Play_Pocion_preparandose" DurationType="OneShot" DurationMin="5.833333" DurationMax="5.833333">
+					<IncludedMemoryFiles>
+						<File Id="566978199" Language="SFX">
+							<ShortName>Cocina\Pocion preparandose.wav</ShortName>
+							<Path>SFX\Cocina\Pocion preparandose_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2748973737" Name="Play_Poner_item_en_caldero" ObjectPath="\Events\Default Work Unit\Play_Poner_item_en_caldero" DurationType="OneShot" DurationMin="1.125" DurationMax="1.125">
+					<IncludedMemoryFiles>
+						<File Id="785466920" Language="SFX">
+							<ShortName>Cocina\Poner item en caldero.wav</ShortName>
+							<Path>SFX\Cocina\Poner item en caldero_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2464646960" Name="TutorialMusic" ObjectPath="\Events\Default Work Unit\TutorialMusic" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="443992359" Language="SFX">
+							<ShortName>GAMEPLAY_B_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_B_155_D79FB2B7.wem</Path>
+						</File>
+						<File Id="452233697" Language="SFX">
+							<ShortName>GAMEPLAY_C_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_C_155_D79FB2B7.wem</Path>
+						</File>
+						<File Id="795429319" Language="SFX">
+							<ShortName>GAMEPLAY_A_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_A_155_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="3762955427" Language="SFX" Hash="3587177231">
+			<ObjectPath>\SoundBanks\Default Work Unit\Tutorial</ObjectPath>
+			<ShortName>Tutorial</ShortName>
+			<Path>Tutorial.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2464646960" Name="TutorialMusic" ObjectPath="\Events\Default Work Unit\TutorialMusic" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="443992359" Language="SFX">
 							<ShortName>GAMEPLAY_B_155.wav</ShortName>
