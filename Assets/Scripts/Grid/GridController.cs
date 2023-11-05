@@ -21,9 +21,10 @@ namespace Grid
         [SerializeField] private VoidChannelSO backInputChannel;
         [SerializeField] private VoidChannelSO changeToPlayerChannel;
         [Header("Values")]
-        [Range(0.1f,1.0f)]
-        [SerializeField] private float timeToHold =0.5f;
+        [Range(0.1f, 1.0f)]
+        [SerializeField] private float timeToHold = 0.5f;
         private Vector2 _input;
+        [SerializeField] private Vector2Int _defaultPos = new Vector2Int(0, 0);
         private Vector2Int _cursorPos = new Vector2Int(0, 0);
         private Vector2Int _previousInput = new Vector2Int(0, 0);
         private GridSystem _grid;
@@ -39,7 +40,7 @@ namespace Grid
 
         private void Start()
         {
-            _cursorPos = new Vector2Int(0, 0);
+            _cursorPos = _defaultPos;
             SelectCurrentTile();
         }
 
@@ -50,7 +51,7 @@ namespace Grid
             backInputChannel.Subscribe(OnBackChannel);
             if (_playerStats.shouldGridControllerReset)
             {
-                _cursorPos = Vector2Int.zero;
+                _cursorPos = _defaultPos;
             }
 
             SelectCurrentTile();
@@ -58,6 +59,7 @@ namespace Grid
 
         private void OnDisable()
         {
+            StopCoroutine(_moveGrid);
             gridIndicator.SetActive(false);
             movementChannel.Unsubscribe(OnMove);
             interactChannel.Unsubscribe(OnInteract);
@@ -97,15 +99,15 @@ namespace Grid
         {
             Vector2Int currentInput = new Vector2Int(Mathf.RoundToInt(input.x), Mathf.RoundToInt(input.y));
             Vector2Int toReturn = currentInput;
-             if (currentInput.x == _previousInput.x)
-             {
-                 toReturn.x = 0;
-             }
-            
-             if (currentInput.y == _previousInput.y)
-             {
-                 toReturn.y = 0;
-             }
+            if (currentInput.x == _previousInput.x)
+            {
+                toReturn.x = 0;
+            }
+
+            if (currentInput.y == _previousInput.y)
+            {
+                toReturn.y = 0;
+            }
 
             _previousInput = toReturn;
             _cursorPos += toReturn;
