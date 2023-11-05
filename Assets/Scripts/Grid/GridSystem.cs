@@ -31,7 +31,7 @@ namespace Grid
                 {
                     var newTile = tileList[i * rows + j].GetComponent<Tile>();
                     tileSet[i, j] = newTile;
-                    tileSet[i, j].SetTurret(null);
+                    tileSet[i, j].SetTurret(turret:null);
                 }
             }
         }

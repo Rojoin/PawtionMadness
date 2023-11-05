@@ -44,8 +44,8 @@ public class PlayerInventory : MonoBehaviour
 
     public Item.Pickable GetPickable() => _pickable;
 
-    public BaseTurret GetTurret()
+    public BaseTurretSO GetTurret()
     {
-        return (_pickable as Potion)._baseTurretSo.asset;
+        return ((Potion)_pickable)._baseTurretSo;
     }
 }

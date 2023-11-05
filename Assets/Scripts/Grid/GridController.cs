@@ -12,6 +12,7 @@ namespace Grid
         private GridSystem grid;
         private Tile currentTile;
         [SerializeField] private PlayerInventory playerInventory;
+        [SerializeField] private TurretManager _turretManager;
         [SerializeField] private float indicatorYOffset;
         private Vector2Int cursorPos = new Vector2Int(0, 0);
         private Vector2Int previousInput = new Vector2Int(0, 0);
@@ -64,6 +65,7 @@ namespace Grid
             cursorPos.Clamp(new Vector2Int(0, 0), limits);
             SelectCurrentTile();
         }
+
 //Todo: move grid with continuos imput
         private IEnumerator MoveGrid(Vector2 input)
         {
@@ -111,7 +113,7 @@ namespace Grid
         {
             if (currentTile.IsAvailable() && playerInventory.hasPotion())
             {
-                currentTile.SetTurret(playerInventory.GetTurret());
+                SetTurretOnTile(currentTile, playerInventory.GetTurret());
                 playerInventory.DestroyPickable();
                 OnBackChannel();
             }
@@ -120,6 +122,17 @@ namespace Grid
                 currentTile.DestroyTurret();
                 OnBackChannel();
             }
+        }
+
+        /// <summary>
+        /// Set Turret on Tile
+        /// </summary>
+        /// <param name="currentTile"></param>
+        /// <param name="baseTurretSo"></param>
+        private void SetTurretOnTile(Tile currentTile, BaseTurretSO baseTurretSo)
+        {
+            currentTile.SetTurret(_turretManager.AddNewTurret(baseTurretSo, currentTile.GetTurretPosition(),
+                currentTile.transform));
         }
 
         /// <summary>

@@ -3,23 +3,20 @@ using UnityEngine;
 
 public class TurretFactory
 {
-    public void NewTurretConfigure(BaseTurretSO turret, Transform position, Transform maxRange, Transform parent)
+    public BaseTurret NewTurretConfigure(BaseTurretSO turret, Transform turretPosition, Transform maxRange, Transform parent)
     {
-        GameObject newTurret = GameObject.Instantiate(turret.asset.gameObject, position.position, position.rotation, parent);
+        BaseTurret newTurret = GameObject.Instantiate(turret.asset, turretPosition.position, Quaternion.identity, parent);
+        newTurret.Init();
 
-        newTurret.transform.rotation = position.rotation;
-        newTurret.transform.position = position.position;
-        newTurret.GetComponent<BaseTurret>().Init();
-        
         AttackTurret newAttackTurret = newTurret.GetComponent<AttackTurret>();
 
         float maxTurretRange = Vector3.Distance(newTurret.transform.position, maxRange.position);
 
-        if (newAttackTurret != null && newAttackTurret.AttackRangeSO > maxTurretRange) 
+        if (newAttackTurret != null && newAttackTurret.AttackRangeSO > maxTurretRange)
         {
-           newAttackTurret.SetAttackRange(maxTurretRange);
+            newAttackTurret.SetAttackRange(maxTurretRange);
         }
 
+        return newTurret;
     }
-
 }
