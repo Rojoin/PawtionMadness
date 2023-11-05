@@ -25,6 +25,11 @@ namespace Turret
             isAlive = true;
         }
 
+        private void Awake()
+        {
+            Init();
+        }
+
         public virtual void Death()
         {
             animator?.SetTrigger(Death1);
