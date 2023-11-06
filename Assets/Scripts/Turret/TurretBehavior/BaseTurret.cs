@@ -23,11 +23,7 @@ namespace Turret
             CurrentHealth = MaxHealth;
             boxCollider = GetComponent<BoxCollider>();
             isAlive = true;
-        }
-
-        private void Awake()
-        {
-            Init();
+            Debug.Log("New turret Created!");
         }
 
         public virtual void Death()

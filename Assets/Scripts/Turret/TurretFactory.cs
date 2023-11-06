@@ -6,7 +6,6 @@ public class TurretFactory
     public BaseTurret NewTurretConfigure(BaseTurretSO turret, Transform turretPosition, Transform maxRange, Transform parent)
     {
         BaseTurret newTurret = GameObject.Instantiate(turret.asset, turretPosition.position, Quaternion.identity, parent);
-        newTurret.Init();
 
         AttackTurret newAttackTurret = newTurret.GetComponent<AttackTurret>();
 
@@ -17,6 +16,7 @@ public class TurretFactory
             newAttackTurret.SetAttackRange(maxTurretRange);
         }
 
+        newTurret.Init();
         return newTurret;
     }
 }

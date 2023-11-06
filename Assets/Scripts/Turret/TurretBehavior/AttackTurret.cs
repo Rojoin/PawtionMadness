@@ -26,6 +26,7 @@ namespace Turret
         public override void Init()
         {
             attackRange = AttackRangeSO;
+            base.Init();
         }
 
         public virtual void Shoot()
