@@ -150,16 +150,7 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Sound Name="Agarrar_Item_Frasco" ID="{E9F252D1-C397-48FF-8772-D8A31FD8B5D6}" ShortID="859851021">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="16"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>6</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
+						<Sound Name="Agarrar_Item_Frasco" ID="{E5948B41-A509-4CDC-9050-9EFA5E98C786}" ShortID="975030157">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -169,29 +160,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Agarrar_Item_Frasco" ID="{713B2165-A3B2-4399-B388-F8F0FCAD99A1}">
+								<AudioFileSource Name="Agarrar_Item_Frasco" ID="{AA699E04-04B2-432F-89CB-D546D9B66081}">
 									<Language>SFX</Language>
-									<AudioFile>Cocina\Agarrar_Item_Frasco.wav</AudioFile>
+									<AudioFile>Agarrar_Item_Frasco.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="1024985020"/>
+										<MediaID ID="680839708"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Agarrar_Item_Frasco" ID="{713B2165-A3B2-4399-B388-F8F0FCAD99A1}" Platform="Linked"/>
+								<ActiveSource Name="Agarrar_Item_Frasco" ID="{AA699E04-04B2-432F-89CB-D546D9B66081}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Agarrar_item_Porcion" ID="{295798C4-B9D4-497A-ABE3-A32B29D4B355}" ShortID="354902091">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="16"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>4</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
+						<Sound Name="Agarrar_item_Porcion" ID="{9B3EAAA2-DCF5-4809-8805-1C7D2545B11E}" ShortID="65442044">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -201,34 +183,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Agarrar_item_Porcion" ID="{A2C62837-D589-4789-8918-FDD97BE87698}">
+								<AudioFileSource Name="Agarrar_item_Porcion" ID="{DC242140-506A-4848-8263-DDB131134AE0}">
 									<Language>SFX</Language>
-									<AudioFile>Cocina\Agarrar_item_Porcion.wav</AudioFile>
+									<AudioFile>Agarrar_item_Porcion.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="460792029"/>
+										<MediaID ID="556608565"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Agarrar_item_Porcion" ID="{A2C62837-D589-4789-8918-FDD97BE87698}" Platform="Linked"/>
+								<ActiveSource Name="Agarrar_item_Porcion" ID="{DC242140-506A-4848-8263-DDB131134AE0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Caldero" ID="{7DA5B050-DA76-4E3A-B80D-7FF611068C03}" ShortID="471469558">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="16"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-400</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>4</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
+						<Sound Name="Agitar_Caldero" ID="{A60E781F-1C16-435E-A391-4CD154B1C056}" ShortID="991349889">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -238,24 +206,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Caldero" ID="{6D7884CA-36EA-4D92-BA02-39313DE675E8}">
+								<AudioFileSource Name="Agitar_Caldero" ID="{439F5894-DED9-4EA3-B43D-AC60EA571702}">
 									<Language>SFX</Language>
-									<AudioFile>Cocina\Caldero.wav</AudioFile>
+									<AudioFile>Agitar_Caldero.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="311946003"/>
+										<MediaID ID="509094082"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Caldero" ID="{6D7884CA-36EA-4D92-BA02-39313DE675E8}" Platform="Linked"/>
+								<ActiveSource Name="Agitar_Caldero" ID="{439F5894-DED9-4EA3-B43D-AC60EA571702}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Pocion preparandose" ID="{BC1CDFDF-23E0-4DB9-B38E-79FAD4B300EE}" ShortID="525848172">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="16"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
+						<Sound Name="Caldero" ID="{4D301711-625E-4B60-8D9A-46070C81359A}" ShortID="354872439">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -265,24 +229,20 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Pocion preparandose" ID="{CFCCF725-19D2-487D-8E42-6E611C542E3F}">
+								<AudioFileSource Name="Caldero" ID="{32508338-2AE1-4E54-B987-06AF8374C40C}">
 									<Language>SFX</Language>
-									<AudioFile>Cocina\Pocion preparandose.wav</AudioFile>
+									<AudioFile>Caldero.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="566978199"/>
+										<MediaID ID="240615457"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Pocion preparandose" ID="{CFCCF725-19D2-487D-8E42-6E611C542E3F}" Platform="Linked"/>
+								<ActiveSource Name="Caldero" ID="{32508338-2AE1-4E54-B987-06AF8374C40C}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="Poner item en caldero" ID="{F1EDE366-8C98-405F-BBCF-546D38B0E1C0}" ShortID="934449098">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="16"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-							</PropertyList>
+						<Sound Name="Pocion preparandose" ID="{AAE44C4F-B37A-4CA4-BE7F-18D598C883A2}" ShortID="6061092">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -292,17 +252,86 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Poner item en caldero" ID="{74855EA7-BE27-41EC-A0A0-1C4DDC7DC8BE}">
+								<AudioFileSource Name="Pocion preparandose" ID="{C6BE4F69-02DB-4DCF-808C-521104C217BD}">
 									<Language>SFX</Language>
-									<AudioFile>Cocina\Poner item en caldero.wav</AudioFile>
+									<AudioFile>Pocion preparandose.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="785466920"/>
+										<MediaID ID="398282745"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Poner item en caldero" ID="{74855EA7-BE27-41EC-A0A0-1C4DDC7DC8BE}" Platform="Linked"/>
+								<ActiveSource Name="Pocion preparandose" ID="{C6BE4F69-02DB-4DCF-808C-521104C217BD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Pocion_Lista" ID="{F99AC219-F174-43AD-8232-710947966799}" ShortID="838979451">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Pocion_Lista" ID="{A84FAD4D-3F45-4D58-83F8-E3407F4BFC66}">
+									<Language>SFX</Language>
+									<AudioFile>Pocion_Lista.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="162774051"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Pocion_Lista" ID="{A84FAD4D-3F45-4D58-83F8-E3407F4BFC66}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Poner item en caldero" ID="{5721DED0-60DE-45BF-A0F3-555BEC01E819}" ShortID="644145541">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Poner item en caldero" ID="{04AE244C-E70E-42A4-81A7-8A63A0DE6606}">
+									<Language>SFX</Language>
+									<AudioFile>Poner item en caldero.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="284167558"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Poner item en caldero" ID="{04AE244C-E70E-42A4-81A7-8A63A0DE6606}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Procesar item" ID="{DDEF722F-99A5-473C-8F0A-AF4B9B8F6FCA}" ShortID="247421268">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Procesar item" ID="{A06D477B-F50A-449A-A21C-D9DB5AF7AE99}">
+									<Language>SFX</Language>
+									<AudioFile>Procesar item.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1072120915"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Procesar item" ID="{A06D477B-F50A-449A-A21C-D9DB5AF7AE99}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -313,16 +342,7 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Sound Name="Desplazamiento enemigo alas" ID="{42456AB3-0E8D-4095-882A-05E696B2F03E}" ShortID="759108225">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="10"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>3</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
+						<Sound Name="Simple_Ataca" ID="{7717B66E-D384-4B56-A43C-AACC4F889F2B}" ShortID="1030694487">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -332,17 +352,40 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Desplazamiento enemigo alas" ID="{603CCE8F-0CDA-451D-96C9-CB6654CFB6C8}">
+								<AudioFileSource Name="Simple_Ataca" ID="{2F3BC109-B9D4-42A9-AF3F-FA6A8D48E24C}">
 									<Language>SFX</Language>
-									<AudioFile>Enemigos\Desplazamiento enemigo alas.wav</AudioFile>
+									<AudioFile>Simple_Ataca.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="29198288"/>
+										<MediaID ID="343399430"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Desplazamiento enemigo alas" ID="{603CCE8F-0CDA-451D-96C9-CB6654CFB6C8}" Platform="Linked"/>
+								<ActiveSource Name="Simple_Ataca" ID="{2F3BC109-B9D4-42A9-AF3F-FA6A8D48E24C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Simple_Desplazamiento" ID="{FAFF1DC3-2B8D-407F-9C2F-17D1E30B44C0}" ShortID="1069610471">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Simple_Desplazamiento" ID="{A5FA08A1-0A9E-4C51-B6A6-DEE1B5E129BC}">
+									<Language>SFX</Language>
+									<AudioFile>Simple_Desplazamiento.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="32183289"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Simple_Desplazamiento" ID="{A5FA08A1-0A9E-4C51-B6A6-DEE1B5E129BC}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -353,16 +396,7 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Sound Name="Disparo" ID="{F30EDBE8-84E2-4546-969E-3263A965F17A}" ShortID="570715243">
-							<PropertyList>
-								<Property Name="Color" Type="int16" Value="21"/>
-								<Property Name="OverrideColor" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>5</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
+						<Sound Name="Defense_Muerte" ID="{18293DB7-CF8D-489B-B599-4BC3DDAD38ED}" ShortID="419678072">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -372,17 +406,270 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Disparo" ID="{3E658AA7-72F0-4ECC-9587-8461E96ADD04}">
+								<AudioFileSource Name="Defense_Muerte" ID="{FB48F4F2-3E61-4021-A4AE-EAC793E72D7D}">
 									<Language>SFX</Language>
-									<AudioFile>Torretas\Disparo.wav</AudioFile>
+									<AudioFile>Defense_Muerte.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="56742151"/>
+										<MediaID ID="818686237"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Disparo" ID="{3E658AA7-72F0-4ECC-9587-8461E96ADD04}" Platform="Linked"/>
+								<ActiveSource Name="Defense_Muerte" ID="{FB48F4F2-3E61-4021-A4AE-EAC793E72D7D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Defense_SonidosEspeciales" ID="{7DDE187F-BF79-48CC-A8C4-6884EBFD2433}" ShortID="687311520">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Defense_SonidosEspeciales" ID="{3F48C331-6697-4111-82E0-4DCC749C0857}">
+									<Language>SFX</Language>
+									<AudioFile>Defense_SonidosEspeciales.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="170230533"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Defense_SonidosEspeciales" ID="{3F48C331-6697-4111-82E0-4DCC749C0857}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Explosive_Disparo" ID="{7332E39B-C384-453F-8781-140626D12BCC}" ShortID="320176836">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Explosive_Disparo" ID="{56C4254D-6766-4B4E-9417-02B6C31ACC62}">
+									<Language>SFX</Language>
+									<AudioFile>Explosive_Disparo.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="986460569"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Explosive_Disparo" ID="{56C4254D-6766-4B4E-9417-02B6C31ACC62}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Explosive_Muerte" ID="{67FCF2DF-5AD6-4CC3-B864-0830491B91B5}" ShortID="816868464">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Explosive_Muerte" ID="{39BAE758-495A-4A65-AE0E-9F10660918AF}">
+									<Language>SFX</Language>
+									<AudioFile>Explosive_Muerte.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="605437529"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Explosive_Muerte" ID="{39BAE758-495A-4A65-AE0E-9F10660918AF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Explosive_SonidoEspecial" ID="{3524E316-E6C1-4093-898B-69F7360CACC6}" ShortID="253213799">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Explosive_SonidoEspecial" ID="{C3E1D00A-1736-4BCB-AD3F-4F41AE2E4C46}">
+									<Language>SFX</Language>
+									<AudioFile>Explosive_SonidoEspecial.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="462331697"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Explosive_SonidoEspecial" ID="{C3E1D00A-1736-4BCB-AD3F-4F41AE2E4C46}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Laser_Disparo" ID="{7FAD1A03-3733-4842-9B75-550AB06667B3}" ShortID="668382781">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Laser_Disparo" ID="{ADE6672F-140D-48CC-A760-0019B75E1412}">
+									<Language>SFX</Language>
+									<AudioFile>Laser_Disparo.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="544980633"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Laser_Disparo" ID="{ADE6672F-140D-48CC-A760-0019B75E1412}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Laser_Muerte" ID="{6FE1D0DB-9170-4A5C-BD30-30893ABCCBD6}" ShortID="755988573">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Laser_Muerte" ID="{623D6BE8-8B30-4A04-82CF-698416695045}">
+									<Language>SFX</Language>
+									<AudioFile>Laser_Muerte.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="552499464"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Laser_Muerte" ID="{623D6BE8-8B30-4A04-82CF-698416695045}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Laser_SonidoEspecial" ID="{0A8DB992-2AC0-4B78-B25F-3BBAE41DDDDA}" ShortID="444987833">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Laser_SonidoEspecial" ID="{1D2FF631-E1BA-4B9E-AAFF-34CCFF134CDA}">
+									<Language>SFX</Language>
+									<AudioFile>Laser_SonidoEspecial.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="401627968"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Laser_SonidoEspecial" ID="{1D2FF631-E1BA-4B9E-AAFF-34CCFF134CDA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Proyectil_Disparo" ID="{83155621-1E01-4911-AE1A-AF9BF60EF800}" ShortID="463560933">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Proyectil_Disparo" ID="{8669E71B-81CF-4E78-A0D9-0FAD97CA82A9}">
+									<Language>SFX</Language>
+									<AudioFile>Proyectil_Disparo.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="332434082"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Proyectil_Disparo" ID="{8669E71B-81CF-4E78-A0D9-0FAD97CA82A9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Proyectil_Muerte" ID="{18E6F636-78F1-43A6-9E56-6316040FD806}" ShortID="165667568">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Proyectil_Muerte" ID="{AA2FEEEB-E9E5-4300-91BC-51DBAE10EC57}">
+									<Language>SFX</Language>
+									<AudioFile>Proyectil_Muerte.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="355270130"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Proyectil_Muerte" ID="{AA2FEEEB-E9E5-4300-91BC-51DBAE10EC57}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Useless_Muerte" ID="{9E215FDF-4E82-4FC6-BA79-274684CA78EE}" ShortID="267369237">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Useless_Muerte" ID="{5A274DEE-C5B0-481D-A74C-6500A69A2645}">
+									<Language>SFX</Language>
+									<AudioFile>Useless_Muerte.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="641383798"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Useless_Muerte" ID="{5A274DEE-C5B0-481D-A74C-6500A69A2645}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Useless_SonidoEspecial" ID="{57690F5D-458F-4040-9F7D-AD8B7F5865F7}" ShortID="774541220">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Useless_SonidoEspecial" ID="{54837489-3389-4771-85FD-1C14620F840D}">
+									<Language>SFX</Language>
+									<AudioFile>Useless_SonidoEspecial.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="85412821"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Useless_SonidoEspecial" ID="{54837489-3389-4771-85FD-1C14620F840D}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -423,6 +710,198 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="libro_abrir_3" ID="{8779FFC4-8FB1-43F9-BEDB-BF95943CFCBC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Cocina_01" ID="{2D906699-14BA-4EE3-B8B0-1C22B91933FE}" ShortID="589643985">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="16"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Sound Name="Agarrar_Item_Frasco" ID="{9B7EAC84-7472-45AB-B416-527486AC8A9E}" ShortID="244347607">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Agarrar_Item_Frasco" ID="{E7AE4000-4AF2-47EB-8E3E-B5F31BE7E098}">
+									<Language>SFX</Language>
+									<AudioFile>Agarrar_Item_Frasco.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="680839708"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Agarrar_Item_Frasco" ID="{E7AE4000-4AF2-47EB-8E3E-B5F31BE7E098}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Agarrar_item_Porcion" ID="{34D54CD7-1818-4CED-B538-E4CFB9038657}" ShortID="343262773">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Agarrar_item_Porcion" ID="{93885A55-F9ED-470B-B9BB-85DE95C46A61}">
+									<Language>SFX</Language>
+									<AudioFile>Agarrar_item_Porcion.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="556608565"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Agarrar_item_Porcion" ID="{93885A55-F9ED-470B-B9BB-85DE95C46A61}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Agitar_Caldero" ID="{9CA03A2B-412F-4DC5-BE51-DB4F35CDACE1}" ShortID="1012115549">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Agitar_Caldero" ID="{3678AEC0-1FE8-4A5D-B4AF-E78FB2C67915}">
+									<Language>SFX</Language>
+									<AudioFile>Agitar_Caldero.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="509094082"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Agitar_Caldero" ID="{3678AEC0-1FE8-4A5D-B4AF-E78FB2C67915}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Caldero" ID="{98EA7E2B-3543-4B25-8673-87E9B485C22F}" ShortID="506637954">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Caldero" ID="{F548D854-6D36-4A97-B7FC-8F25048B018B}">
+									<Language>SFX</Language>
+									<AudioFile>Caldero.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="240615457"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Caldero" ID="{F548D854-6D36-4A97-B7FC-8F25048B018B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Pocion preparandose" ID="{0F13FB6A-42EB-4A77-B184-F180B0A78D60}" ShortID="800202040">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Pocion preparandose" ID="{3B377ABB-92FA-4F1D-8CC2-D0D9BD72C60B}">
+									<Language>SFX</Language>
+									<AudioFile>Pocion preparandose.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="398282745"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Pocion preparandose" ID="{3B377ABB-92FA-4F1D-8CC2-D0D9BD72C60B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Pocion_Lista" ID="{72C53883-C681-4796-BE89-3EDD79D7D3B3}" ShortID="551288829">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Pocion_Lista" ID="{B21EF921-62D1-4C59-9EAB-C9A64BBC59D7}">
+									<Language>SFX</Language>
+									<AudioFile>Pocion_Lista.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="162774051"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Pocion_Lista" ID="{B21EF921-62D1-4C59-9EAB-C9A64BBC59D7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Poner item en caldero" ID="{1CE66084-F5C0-49F7-B50C-373480E6355F}" ShortID="192167730">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Poner item en caldero" ID="{F535C725-F4C0-498D-8C95-DF83E6D7D5F2}">
+									<Language>SFX</Language>
+									<AudioFile>Poner item en caldero.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="284167558"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Poner item en caldero" ID="{F535C725-F4C0-498D-8C95-DF83E6D7D5F2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Procesar item" ID="{C0814D61-F9D5-49AC-9057-8A75F9E5113B}" ShortID="212711176">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Procesar item" ID="{85F89EE3-2CC2-4705-9410-5E0B696A36C4}">
+									<Language>SFX</Language>
+									<AudioFile>Procesar item.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1072120915"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Procesar item" ID="{85F89EE3-2CC2-4705-9410-5E0B696A36C4}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
