@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3604647259" Language="SFX" Hash="858018105">
+		<SoundBank Id="3604647259" Language="SFX" Hash="2669938926">
 			<ObjectPath>\SoundBanks\Default Work Unit\MainMenu</ObjectPath>
 			<ShortName>MainMenu</ShortName>
 			<Path>MainMenu.bnk</Path>
@@ -31,17 +31,17 @@
 				</Event>
 				<Event Id="2559549617" Name="Play_Agarrar_Item_Frasco" ObjectPath="\Events\Default Work Unit\Play_Agarrar_Item_Frasco" DurationType="OneShot" DurationMin="1.291667" DurationMax="1.291667">
 					<IncludedMemoryFiles>
-						<File Id="1024985020" Language="SFX">
-							<ShortName>Cocina\Agarrar_Item_Frasco.wav</ShortName>
-							<Path>SFX/Cocina/Agarrar_Item_Frasco_10C4C929.wem</Path>
+						<File Id="680839708" Language="SFX">
+							<ShortName>Agarrar_Item_Frasco.wav</ShortName>
+							<Path>SFX/Agarrar_Item_Frasco_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2191355065" Name="Play_Agarrar_item_Porcion" ObjectPath="\Events\Default Work Unit\Play_Agarrar_item_Porcion" DurationType="OneShot" DurationMin="0.875" DurationMax="0.875">
 					<IncludedMemoryFiles>
-						<File Id="460792029" Language="SFX">
-							<ShortName>Cocina\Agarrar_item_Porcion.wav</ShortName>
-							<Path>SFX/Cocina/Agarrar_item_Porcion_10C4C929.wem</Path>
+						<File Id="556608565" Language="SFX">
+							<ShortName>Agarrar_item_Porcion.wav</ShortName>
+							<Path>SFX/Agarrar_item_Porcion_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -61,27 +61,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4083340090" Name="Play_Caldero" ObjectPath="\Events\Default Work Unit\Play_Caldero" DurationType="OneShot" DurationMin="18.478844" DurationMax="18.478844">
+				<Event Id="4083340090" Name="Play_Caldero" ObjectPath="\Events\Default Work Unit\Play_Caldero" DurationType="OneShot" DurationMin="14.666667" DurationMax="14.666667">
 					<IncludedMemoryFiles>
-						<File Id="311946003" Language="SFX">
-							<ShortName>Cocina\Caldero.wav</ShortName>
-							<Path>SFX/Cocina/Caldero_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="2839911833" Name="Play_Desplazamiento_enemigo_alas" ObjectPath="\Events\Default Work Unit\Play_Desplazamiento_enemigo_alas" DurationType="OneShot" DurationMin="16.311001" DurationMax="16.311001">
-					<IncludedMemoryFiles>
-						<File Id="29198288" Language="SFX">
-							<ShortName>Enemigos\Desplazamiento enemigo alas.wav</ShortName>
-							<Path>SFX/Enemigos/Desplazamiento enemigo alas_10C4C929.wem</Path>
+						<File Id="240615457" Language="SFX">
+							<ShortName>Caldero.wav</ShortName>
+							<Path>SFX/Caldero_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="213559042" Name="Play_Disparo" ObjectPath="\Events\Default Work Unit\Play_Disparo" DurationType="OneShot" DurationMin="1.125" DurationMax="1.125">
 					<IncludedMemoryFiles>
-						<File Id="56742151" Language="SFX">
-							<ShortName>Torretas\Disparo.wav</ShortName>
-							<Path>SFX/Torretas/Disparo_10C4C929.wem</Path>
+						<File Id="332434082" Language="SFX">
+							<ShortName>Proyectil_Disparo.wav</ShortName>
+							<Path>SFX/Proyectil_Disparo_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -127,17 +119,25 @@
 				</Event>
 				<Event Id="4052632251" Name="Play_Pocion_preparandose" ObjectPath="\Events\Default Work Unit\Play_Pocion_preparandose" DurationType="OneShot" DurationMin="5.833333" DurationMax="5.833333">
 					<IncludedMemoryFiles>
-						<File Id="566978199" Language="SFX">
-							<ShortName>Cocina\Pocion preparandose.wav</ShortName>
-							<Path>SFX/Cocina/Pocion preparandose_10C4C929.wem</Path>
+						<File Id="398282745" Language="SFX">
+							<ShortName>Pocion preparandose.wav</ShortName>
+							<Path>SFX/Pocion preparandose_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2748973737" Name="Play_Poner_item_en_caldero" ObjectPath="\Events\Default Work Unit\Play_Poner_item_en_caldero" DurationType="OneShot" DurationMin="1.125" DurationMax="1.125">
 					<IncludedMemoryFiles>
-						<File Id="785466920" Language="SFX">
-							<ShortName>Cocina\Poner item en caldero.wav</ShortName>
-							<Path>SFX/Cocina/Poner item en caldero_10C4C929.wem</Path>
+						<File Id="284167558" Language="SFX">
+							<ShortName>Poner item en caldero.wav</ShortName>
+							<Path>SFX/Poner item en caldero_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3547062141" Name="Play_Simple_Desplazamiento" ObjectPath="\Events\Default Work Unit\Play_Simple_Desplazamiento" DurationType="OneShot" DurationMin="16.311001" DurationMax="16.311001">
+					<IncludedMemoryFiles>
+						<File Id="32183289" Language="SFX">
+							<ShortName>Simple_Desplazamiento.wav</ShortName>
+							<Path>SFX/Simple_Desplazamiento_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

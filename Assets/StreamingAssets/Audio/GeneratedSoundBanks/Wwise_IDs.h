@@ -19,7 +19,6 @@ namespace AK
         static const AkUniqueID PLAY_AMB_BOSQUE_NOCHE = 1452442514U;
         static const AkUniqueID PLAY_AMB_PAJAROS_CUERVOS = 2278612795U;
         static const AkUniqueID PLAY_CALDERO = 4083340090U;
-        static const AkUniqueID PLAY_DESPLAZAMIENTO_ENEMIGO_ALAS = 2839911833U;
         static const AkUniqueID PLAY_DISPARO = 213559042U;
         static const AkUniqueID PLAY_INGAMEMUSIC = 3799629626U;
         static const AkUniqueID PLAY_LIBRO_ABRIR_3 = 707032169U;
@@ -27,6 +26,7 @@ namespace AK
         static const AkUniqueID PLAY_OLEADA_FINAL = 3691145017U;
         static const AkUniqueID PLAY_POCION_PREPARANDOSE = 4052632251U;
         static const AkUniqueID PLAY_PONER_ITEM_EN_CALDERO = 2748973737U;
+        static const AkUniqueID PLAY_SIMPLE_DESPLAZAMIENTO = 3547062141U;
     } // namespace EVENTS
 
     namespace BANKS
