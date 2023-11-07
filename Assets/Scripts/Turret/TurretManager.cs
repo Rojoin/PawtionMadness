@@ -29,19 +29,19 @@ public class TurretManager : MonoBehaviour
         turret => { turret.gameObject.SetActive(true); }, turret => { turret.gameObject.SetActive(false); },
         turret => { Destroy(turret.gameObject); }, false, TurretPoolSize, 100);
 
-        dispersionTurretPool = new ObjectPool<GameObject>(() => Instantiate(ProyectileTurret.asset.gameObject, transform),
+        dispersionTurretPool = new ObjectPool<GameObject>(() => Instantiate(DispersionTurret.asset.gameObject, transform),
         turret => { turret.gameObject.SetActive(true); }, turret => { turret.gameObject.SetActive(false); },
         turret => { Destroy(turret.gameObject); }, false, TurretPoolSize, 100);
 
-        explosiveTurretPool = new ObjectPool<GameObject>(() => Instantiate(ProyectileTurret.asset.gameObject, transform),
+        explosiveTurretPool = new ObjectPool<GameObject>(() => Instantiate(ExplosiveTurret.asset.gameObject, transform),
         turret => { turret.gameObject.SetActive(true); }, turret => { turret.gameObject.SetActive(false); },
         turret => { Destroy(turret.gameObject); }, false, TurretPoolSize, 100);
 
-        defenseTurretPool = new ObjectPool<GameObject>(() => Instantiate(ProyectileTurret.asset.gameObject, transform),
+        defenseTurretPool = new ObjectPool<GameObject>(() => Instantiate(DefenseTurret.asset.gameObject, transform),
         turret => { turret.gameObject.SetActive(true); }, turret => { turret.gameObject.SetActive(false); },
         turret => { Destroy(turret.gameObject); }, false, TurretPoolSize, 100);
 
-        badDefenseTurretPool = new ObjectPool<GameObject>(() => Instantiate(ProyectileTurret.asset.gameObject, transform),
+        badDefenseTurretPool = new ObjectPool<GameObject>(() => Instantiate(badDefenseTurret.asset.gameObject, transform),
         turret => { turret.gameObject.SetActive(true); }, turret => { turret.gameObject.SetActive(false); },
         turret => { Destroy(turret.gameObject); }, false, TurretPoolSize, 100);
     }
@@ -50,6 +50,8 @@ public class TurretManager : MonoBehaviour
     public BaseTurret AddNewTurret(BaseTurretSO newTurretSO, Transform position, Transform parent)
     {
         GameObject newTurret = null;
+
+        Debug.Log(newTurretSO.turretType);
 
         switch (newTurretSO.turretType)
         {
