@@ -1,11 +1,12 @@
 using Turret;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class TurretFactory
 {
-    public BaseTurret NewTurretConfigure(BaseTurretSO turret, Transform turretPosition, Transform maxRange, Transform parent)
+    public void NewTurretConfigure(GameObject newTurret, Transform turretPosition, Transform maxRange)
     {
-        BaseTurret newTurret = GameObject.Instantiate(turret.asset, turretPosition.position, Quaternion.identity, parent);
+        newTurret.transform.position = turretPosition.position;
 
         AttackTurret newAttackTurret = newTurret.GetComponent<AttackTurret>();
 
@@ -16,7 +17,6 @@ public class TurretFactory
             newAttackTurret.SetAttackRange(maxTurretRange);
         }
 
-        newTurret.Init();
-        return newTurret;
+        newTurret.GetComponent<BaseTurret>().Init();
     }
 }

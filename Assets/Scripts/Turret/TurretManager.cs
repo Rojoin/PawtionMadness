@@ -11,7 +11,7 @@ public class TurretManager : MonoBehaviour
     private ObjectPool<GameObject> dispersionTurretPool;
     private ObjectPool<GameObject> explosiveTurretPool;
     private ObjectPool<GameObject> defenseTurretPool;
-    private ObjectPool<GameObject> dadDefenseTurretPool;
+    private ObjectPool<GameObject> badDefenseTurretPool;
 
     [SerializeField] private ProyectileTurretSO ProyectileTurret;
     [SerializeField] private AttackTurretSO DispersionTurret;
@@ -41,15 +41,80 @@ public class TurretManager : MonoBehaviour
         turret => { turret.gameObject.SetActive(true); }, turret => { turret.gameObject.SetActive(false); },
         turret => { Destroy(turret.gameObject); }, false, TurretPoolSize, 100);
 
-        dadDefenseTurretPool = new ObjectPool<GameObject>(() => Instantiate(ProyectileTurret.asset.gameObject, transform),
+        badDefenseTurretPool = new ObjectPool<GameObject>(() => Instantiate(ProyectileTurret.asset.gameObject, transform),
         turret => { turret.gameObject.SetActive(true); }, turret => { turret.gameObject.SetActive(false); },
         turret => { Destroy(turret.gameObject); }, false, TurretPoolSize, 100);
     }
 
 
-    public BaseTurret AddNewTurret(BaseTurretSO newTurret, Transform position, Transform parent)
+    public BaseTurret AddNewTurret(BaseTurretSO newTurretSO, Transform position, Transform parent)
     {
-        return turretFactory.NewTurretConfigure(newTurret, position, maxDistancePoint, parent);
+        GameObject newTurret = null;
+
+        switch (newTurretSO.turretType)
+        {
+            case BaseTurretSO.TurretTypes.Proyectile:
+                proyectileTurretPool.Get(out newTurret);
+                newTurret.GetComponent<BaseTurret>().onTurretDeath.AddListener(OnKillProyectileTurret);
+                break;
+
+            case BaseTurretSO.TurretTypes.Dispersion:
+                dispersionTurretPool.Get(out newTurret);
+                newTurret.GetComponent<BaseTurret>().onTurretDeath.AddListener(OnKillDispersionTurret);
+                break;
+
+            case BaseTurretSO.TurretTypes.Explosive:
+                explosiveTurretPool.Get(out newTurret);
+                newTurret.GetComponent<BaseTurret>().onTurretDeath.AddListener(OnKillExplosiveTurret);
+                break;
+
+            case BaseTurretSO.TurretTypes.Defense:
+                defenseTurretPool.Get(out newTurret);
+                newTurret.GetComponent<BaseTurret>().onTurretDeath.AddListener(OnKillDefenseTurret);
+                break;
+
+            case BaseTurretSO.TurretTypes.BadDefense:
+                badDefenseTurretPool.Get(out newTurret);
+                newTurret.GetComponent<BaseTurret>().onTurretDeath.AddListener(OnKillBadDefenseTurret);
+                break;
+
+            default:
+                break;
+        }
+
+        turretFactory.NewTurretConfigure(newTurret, position, maxDistancePoint);
+        newTurret.transform.SetParent(parent);
+        return newTurret.GetComponent<BaseTurret>();
+
     }
 
+    private void OnKillProyectileTurret(GameObject proyectileTurret)
+    {
+        proyectileTurret.GetComponent<BaseEnemy>().onDeath.RemoveListener(OnKillProyectileTurret);
+        proyectileTurretPool.Release(proyectileTurret);
+    }
+
+    private void OnKillDispersionTurret(GameObject dispersionTurret)
+    {
+        dispersionTurret.GetComponent<BaseEnemy>().onDeath.RemoveListener(OnKillDispersionTurret);
+        dispersionTurretPool.Release(dispersionTurret);
+    }
+
+    private void OnKillExplosiveTurret(GameObject explosiveTurret)
+    {
+        explosiveTurret.GetComponent<BaseEnemy>().onDeath.RemoveListener(OnKillExplosiveTurret);
+        explosiveTurretPool.Release(explosiveTurret);
+    }
+
+    private void OnKillDefenseTurret(GameObject defenseTurret)
+    {
+        defenseTurret.GetComponent<BaseEnemy>().onDeath.RemoveListener(OnKillDefenseTurret);
+        defenseTurretPool.Release(defenseTurret);
+    }
+
+    private void OnKillBadDefenseTurret(GameObject badDefenseTurret)
+    {
+        badDefenseTurret.GetComponent<BaseEnemy>().onDeath.RemoveListener(OnKillBadDefenseTurret);
+        badDefenseTurretPool.Release(badDefenseTurret);
+    }
 }
