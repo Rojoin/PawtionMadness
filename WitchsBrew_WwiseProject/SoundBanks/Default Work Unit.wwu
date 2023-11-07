@@ -25,6 +25,17 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="InGame" ID="{8EA67FDA-5FAD-4971-B497-0B88EB6B420D}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="5"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ObjectInclusionList>
+						<ObjectRef Name="InGame" ID="{57ADC7E8-28F0-4B17-A6DB-FB95905729F6}" WorkUnitID="{57ADC7E8-28F0-4B17-A6DB-FB95905729F6}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

@@ -18,6 +18,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="UI_Menu_Madera" ID="{4FF90D5A-9F8C-4A96-917D-C48FFF04F513}">
+					<ChildrenList>
+						<Action Name="" ID="{80ABC3BD-0C01-4161-A4A8-E0B4B63F3594}" ShortID="655316528">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Menu_Madera" ID="{7E0861FC-BBF1-4CB0-A1F3-998479601534}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
