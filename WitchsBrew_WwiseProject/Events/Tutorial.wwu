@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D4150209-507F-4C8A-8E10-1BBD3392B83A}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Tutorial" ID="{D4150209-507F-4C8A-8E10-1BBD3392B83A}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="14"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Event Name="Play_AMB_Bosque_Noche" ID="{C010C2A1-F8C7-4914-BA28-992F9C5ECE69}">
+					<ChildrenList>
+						<Action Name="" ID="{6CBBE810-132B-40F3-BC06-630DBF61A31B}" ShortID="449210821">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Bosque_Noche" ID="{D879BBB0-1133-40D8-9A0D-E7990DEF21BC}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Oleada" ID="{7CA31EA5-399D-48A4-8234-90FCE01AD297}">
+					<ChildrenList>
+						<Action Name="" ID="{D4AE548F-5981-4A51-B632-E70D2CA272C7}" ShortID="731723267">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Oleada" ID="{31F7BC8F-ED99-42FC-849C-5CAE137595FD}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Oleada_final" ID="{025C90FE-29FB-4A26-953E-AFE08A42EDAA}">
+					<ChildrenList>
+						<Action Name="" ID="{2BC7393A-7109-4FA7-A95E-35925BCCEA6F}" ShortID="1011069118">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Oleada final" ID="{FC823D43-C1D0-4792-BDE2-6B6ACE0E0C77}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Agarrar_Item_Frasco" ID="{C570A810-0279-4E25-BC5E-6558907BD42C}">
+					<ChildrenList>
+						<Action Name="" ID="{5B541E46-596E-4351-8427-B76EB7103BE6}" ShortID="985208465">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Agarrar_Item_Frasco" ID="{E9F252D1-C397-48FF-8772-D8A31FD8B5D6}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Agarrar_item_Porcion" ID="{71F4ABA7-460B-4C7A-A104-97656F8EB7F7}">
+					<ChildrenList>
+						<Action Name="" ID="{93C0EE71-AADF-4CD7-81E9-CCC0AC413431}" ShortID="622993470">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Agarrar_item_Porcion" ID="{295798C4-B9D4-497A-ABE3-A32B29D4B355}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Caldero" ID="{FB6379C0-DEFE-4904-BA85-E4AB9C35BFC3}">
+					<ChildrenList>
+						<Action Name="" ID="{D83A09FC-05EB-4AAE-A3C5-AD690D55F812}" ShortID="602920956">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SonidoRandom_Caldero" ID="{7DA5B050-DA76-4E3A-B80D-7FF611068C03}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Pocion_preparandose" ID="{1F5BAB17-90B9-4BCF-B66D-73E6A03AB3DC}">
+					<ChildrenList>
+						<Action Name="" ID="{12CBC2B0-BD8A-486D-AC79-6544384ACFC4}" ShortID="774557767">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pocion_Preparandose" ID="{BC1CDFDF-23E0-4DB9-B38E-79FAD4B300EE}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Poner_item_en_caldero" ID="{428D8039-50D0-445B-8D6C-0B7F1019032B}">
+					<ChildrenList>
+						<Action Name="" ID="{D0E7F795-8D26-4339-B78C-F07180373F86}" ShortID="602377873">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Poner_Item_Caldero" ID="{F1EDE366-8C98-405F-BBCF-546D38B0E1C0}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_libro_abrir_3" ID="{EC4215EC-8949-4306-BC20-8A0B55E77645}">
+					<ChildrenList>
+						<Action Name="" ID="{B67F7038-2ACF-40C8-92A0-38B1D7D624E9}" ShortID="144555996">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="libro_abrir_3" ID="{83318A96-A1E2-48AE-A2F8-E89E77AAC563}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="TutorialMusic" ID="{10A2A97B-8967-412B-8E82-CA6A0F452547}">
+					<ChildrenList>
+						<Action Name="" ID="{57742D16-DDFD-4FCF-8105-342A6C26F2E6}" ShortID="364130799">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="main menu music" ID="{D80337C4-0625-4E77-B77A-BC650C554D04}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4BE7606C-F3AE-4EE8-BBB3-F58E25E410E4}" ShortID="345402887">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ingamemusic" ID="{524ECB04-B8A7-4883-BDCD-E6A08AA46681}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ingamemusic" ID="{C44B7B60-3FC1-4DC2-BD79-5A4D1F7B7B7E}">
+					<ChildrenList>
+						<Action Name="" ID="{9897ADA0-136C-41B8-B7D1-5336E197EB1F}" ShortID="142519363">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ingamemusic" ID="{524ECB04-B8A7-4883-BDCD-E6A08AA46681}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
