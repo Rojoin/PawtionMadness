@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 196cb691de8f584c827edddbacf02d6b
     GuidInternal: 
-    m_lastTime: -8585033521319530765
+    m_lastTime: -8585031893223110206
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: aa66b2e34fd8ed42a53d5a4e3b0d167d
     GuidInternal: 
-    m_lastTime: -8585033521320313765
+    m_lastTime: -8585031893223260221
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e7a312c7f9c3cb4d8311f6565e852255
     GuidInternal: 
-    m_lastTime: -8585026517440994776
+    m_lastTime: -8585021305051499751
     List:
+    - name: InGame
+      guid: da7fa68ead5f7149b4970b88eb6b420d
+      id: 984691642
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e7a312c7f9c3cb4d8311f6565e852255
+      - ElementName: InGame
+        ObjectType: 7
+        guid: da7fa68ead5f7149b4970b88eb6b420d
+      Path: SoundBanks\Default Work Unit\InGame
     - name: MainMenu
       guid: 2726cea7d8a91f4bb4f8b3080a0e1fc8
       id: 3604647259
@@ -82,6 +96,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: 2726cea7d8a91f4bb4f8b3080a0e1fc8
       Path: SoundBanks\Default Work Unit\MainMenu
+    - name: Tutorial
+      guid: d3c8388e17ccd84d83c13502d57eba9f
+      id: 3762955427
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e7a312c7f9c3cb4d8311f6565e852255
+      - ElementName: Tutorial
+        ObjectType: 7
+        guid: d3c8388e17ccd84d83c13502d57eba9f
+      Path: SoundBanks\Default Work Unit\Tutorial
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -94,7 +122,33 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2621f2e587216f4092b302108c4d8946
     GuidInternal: 
-    m_lastTime: -8585026520647278836
+    m_lastTime: -8585021305061522685
+    List: []
+  - PhysicalPath: Events\InGame.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: InGame
+      ObjectType: 12
+      guid: e8c7ad57f028174ba6dbfb95905729f6
+    ParentPath: Events\InGame
+    guid: e8c7ad57f028174ba6dbfb95905729f6
+    GuidInternal: 
+    m_lastTime: -8585021305061522685
+    List: []
+  - PhysicalPath: Events\MainMenu.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MainMenu
+      ObjectType: 12
+      guid: 90e94a09cbc25e498ac985591e320b8e
+    ParentPath: Events\MainMenu
+    guid: 90e94a09cbc25e498ac985591e320b8e
+    GuidInternal: 
+    m_lastTime: -8585021305061522685
     List:
     - name: MainMenuMusic
       guid: 20d3f76c0f8fcb4cbd425a5bd70e4e98
@@ -103,16 +157,233 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
+      - ElementName: MainMenu
         ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
+        guid: 90e94a09cbc25e498ac985591e320b8e
       - ElementName: MainMenuMusic
         ObjectType: 3
         guid: 20d3f76c0f8fcb4cbd425a5bd70e4e98
-      Path: Events\Default Work Unit\MainMenuMusic
+      Path: Events\MainMenu\MainMenuMusic
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: UI_Menu_Madera
+      guid: 5a0df94f8c9f964a917dc48fff04f513
+      id: 2247504814
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 90e94a09cbc25e498ac985591e320b8e
+      - ElementName: UI_Menu_Madera
+        ObjectType: 3
+        guid: 5a0df94f8c9f964a917dc48fff04f513
+      Path: Events\MainMenu\UI_Menu_Madera
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\Tutorial.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Tutorial
+      ObjectType: 12
+      guid: 090215d47f508a4c8e101bbd3392b83a
+    ParentPath: Events\Tutorial
+    guid: 090215d47f508a4c8e101bbd3392b83a
+    GuidInternal: 
+    m_lastTime: -8585021305061512687
+    List:
+    - name: Defense_Muerte
+      guid: 9cb36b429d81bc41a26822404b3a77a9
+      id: 1363661528
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Defense_Muerte
+        ObjectType: 3
+        guid: 9cb36b429d81bc41a26822404b3a77a9
+      Path: Events\Tutorial\Defense_Muerte
+      maxAttenuation: 0
+      maxDuration: 1.083333
+      minDuration: 1.083333
+    - name: Defense_SonidosEspeciales
+      guid: e0ac827259f7ae468dfc75d88e6e00b8
+      id: 3373196541
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Defense_SonidosEspeciales
+        ObjectType: 3
+        guid: e0ac827259f7ae468dfc75d88e6e00b8
+      Path: Events\Tutorial\Defense_SonidosEspeciales
+      maxAttenuation: 0
+      maxDuration: 3
+      minDuration: 3
+    - name: Eliminar_Cristal
+      guid: daf15df3ec5d504e8de6ccd8be89399f
+      id: 2258568403
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Eliminar_Cristal
+        ObjectType: 3
+        guid: daf15df3ec5d504e8de6ccd8be89399f
+      Path: Events\Tutorial\Eliminar_Cristal
+      maxAttenuation: 0
+      maxDuration: 1.114063
+      minDuration: 1.114063
+    - name: Error_no_se_puede_poner_cristal
+      guid: a144e224fe0e264db420c76a442ef666
+      id: 1555542894
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Error_no_se_puede_poner_cristal
+        ObjectType: 3
+        guid: a144e224fe0e264db420c76a442ef666
+      Path: Events\Tutorial\Error_no_se_puede_poner_cristal
+      maxAttenuation: 0
+      maxDuration: 2.035417
+      minDuration: 2.035417
+    - name: Error_no_se_puede_poner_mas_items_en_la_mesa
+      guid: b873674e88e6544ab1b40a95246881f8
+      id: 1478342869
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Error_no_se_puede_poner_mas_items_en_la_mesa
+        ObjectType: 3
+        guid: b873674e88e6544ab1b40a95246881f8
+      Path: Events\Tutorial\Error_no_se_puede_poner_mas_items_en_la_mesa
+      maxAttenuation: 0
+      maxDuration: 1.035417
+      minDuration: 1.035417
+    - name: Explosive_Disparo
+      guid: 8411edbb7c92044ba27be1a089f1c118
+      id: 2814344719
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Explosive_Disparo
+        ObjectType: 3
+        guid: 8411edbb7c92044ba27be1a089f1c118
+      Path: Events\Tutorial\Explosive_Disparo
+      maxAttenuation: 0
+      maxDuration: 4
+      minDuration: 4
+    - name: Explosive_Muerte
+      guid: e4f999d5e029854cb381afc46c5697a7
+      id: 3296522035
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Explosive_Muerte
+        ObjectType: 3
+        guid: e4f999d5e029854cb381afc46c5697a7
+      Path: Events\Tutorial\Explosive_Muerte
+      maxAttenuation: 0
+      maxDuration: 0.927083
+      minDuration: 0.927083
+    - name: Explosive_SonidoEspecial
+      guid: fde4a7f4abb26f44a2028b5feae6c705
+      id: 2541590549
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Explosive_SonidoEspecial
+        ObjectType: 3
+        guid: fde4a7f4abb26f44a2028b5feae6c705
+      Path: Events\Tutorial\Explosive_SonidoEspecial
+      maxAttenuation: 0
+      maxDuration: 1.8125
+      minDuration: 1.8125
+    - name: Laser_Disparo
+      guid: 9f816537e6b6e54d8eb2818de946f797
+      id: 3298473939
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Laser_Disparo
+        ObjectType: 3
+        guid: 9f816537e6b6e54d8eb2818de946f797
+      Path: Events\Tutorial\Laser_Disparo
+      maxAttenuation: 0
+      maxDuration: 3.875
+      minDuration: 3.875
+    - name: Laser_Muerte
+      guid: 415f00341a0aa64b8a9c892d2c62b715
+      id: 3116544519
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Laser_Muerte
+        ObjectType: 3
+        guid: 415f00341a0aa64b8a9c892d2c62b715
+      Path: Events\Tutorial\Laser_Muerte
+      maxAttenuation: 0
+      maxDuration: 1.5625
+      minDuration: 1.5625
+    - name: Laser_SonidoEspecial
+      guid: af97792261fd8d498348d7b0a5ace0af
+      id: 2203504569
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Laser_SonidoEspecial
+        ObjectType: 3
+        guid: af97792261fd8d498348d7b0a5ace0af
+      Path: Events\Tutorial\Laser_SonidoEspecial
+      maxAttenuation: 0
+      maxDuration: 5.875
+      minDuration: 5.875
     - name: Play_Agarrar_Item_Frasco
       guid: 10a870c57902254ebc5e6558907bd42c
       id: 2559549617
@@ -120,16 +391,16 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
+      - ElementName: Tutorial
         ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
+        guid: 090215d47f508a4c8e101bbd3392b83a
       - ElementName: Play_Agarrar_Item_Frasco
         ObjectType: 3
         guid: 10a870c57902254ebc5e6558907bd42c
-      Path: Events\Default Work Unit\Play_Agarrar_Item_Frasco
+      Path: Events\Tutorial\Play_Agarrar_Item_Frasco
       maxAttenuation: 0
-      maxDuration: 1.291667
-      minDuration: 1.291667
+      maxDuration: 2.625
+      minDuration: 2.625
     - name: Play_Agarrar_item_Porcion
       guid: a7abf4710b467a4ca10497656f8eb7f7
       id: 2191355065
@@ -137,13 +408,13 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
+      - ElementName: Tutorial
         ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
+        guid: 090215d47f508a4c8e101bbd3392b83a
       - ElementName: Play_Agarrar_item_Porcion
         ObjectType: 3
         guid: a7abf4710b467a4ca10497656f8eb7f7
-      Path: Events\Default Work Unit\Play_Agarrar_item_Porcion
+      Path: Events\Tutorial\Play_Agarrar_item_Porcion
       maxAttenuation: 0
       maxDuration: 0.875
       minDuration: 0.875
@@ -154,33 +425,16 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
+      - ElementName: Tutorial
         ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
+        guid: 090215d47f508a4c8e101bbd3392b83a
       - ElementName: Play_AMB_Bosque_Noche
         ObjectType: 3
         guid: a1c210c0c7f81449ba28992f9c5ece69
-      Path: Events\Default Work Unit\Play_AMB_Bosque_Noche
+      Path: Events\Tutorial\Play_AMB_Bosque_Noche
       maxAttenuation: 0
       maxDuration: 46
       minDuration: 46
-    - name: Play_AMB_Pajaros_cuervos
-      guid: fc924d098d79e441a4cf982c859bf89f
-      id: 2278612795
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
-      - ElementName: Play_AMB_Pajaros_cuervos
-        ObjectType: 3
-        guid: fc924d098d79e441a4cf982c859bf89f
-      Path: Events\Default Work Unit\Play_AMB_Pajaros_cuervos
-      maxAttenuation: 0
-      maxDuration: 96.17067
-      minDuration: 96.17067
     - name: Play_Caldero
       guid: c07963fbfede0449ba85e4ab9c35bfc3
       id: 4083340090
@@ -188,50 +442,16 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
+      - ElementName: Tutorial
         ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
+        guid: 090215d47f508a4c8e101bbd3392b83a
       - ElementName: Play_Caldero
         ObjectType: 3
         guid: c07963fbfede0449ba85e4ab9c35bfc3
-      Path: Events\Default Work Unit\Play_Caldero
+      Path: Events\Tutorial\Play_Caldero
       maxAttenuation: 0
       maxDuration: 18.478844
       minDuration: 18.478844
-    - name: Play_Desplazamiento_enemigo_alas
-      guid: 19a3b956f15272448365ab52ae683eda
-      id: 2839911833
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
-      - ElementName: Play_Desplazamiento_enemigo_alas
-        ObjectType: 3
-        guid: 19a3b956f15272448365ab52ae683eda
-      Path: Events\Default Work Unit\Play_Desplazamiento_enemigo_alas
-      maxAttenuation: 0
-      maxDuration: 16.311
-      minDuration: 16.311
-    - name: Play_Disparo
-      guid: 960f91ff4ce358458e64523806606a5b
-      id: 213559042
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
-      - ElementName: Play_Disparo
-        ObjectType: 3
-        guid: 960f91ff4ce358458e64523806606a5b
-      Path: Events\Default Work Unit\Play_Disparo
-      maxAttenuation: 0
-      maxDuration: 1.125
-      minDuration: 1.125
     - name: Play_ingamemusic
       guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
       id: 3799629626
@@ -239,13 +459,13 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
+      - ElementName: Tutorial
         ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
+        guid: 090215d47f508a4c8e101bbd3392b83a
       - ElementName: Play_ingamemusic
         ObjectType: 3
         guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
-      Path: Events\Default Work Unit\Play_ingamemusic
+      Path: Events\Tutorial\Play_ingamemusic
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -256,13 +476,13 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
+      - ElementName: Tutorial
         ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
+        guid: 090215d47f508a4c8e101bbd3392b83a
       - ElementName: Play_libro_abrir_3
         ObjectType: 3
         guid: ec1542ec49890643bc208a0b55e77645
-      Path: Events\Default Work Unit\Play_libro_abrir_3
+      Path: Events\Tutorial\Play_libro_abrir_3
       maxAttenuation: 0
       maxDuration: 1
       minDuration: 1
@@ -273,13 +493,13 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
+      - ElementName: Tutorial
         ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
+        guid: 090215d47f508a4c8e101bbd3392b83a
       - ElementName: Play_Oleada
         ObjectType: 3
         guid: a51ea37c9d39a448823490fce01ad297
-      Path: Events\Default Work Unit\Play_Oleada
+      Path: Events\Tutorial\Play_Oleada
       maxAttenuation: 0
       maxDuration: 3.3125
       minDuration: 3.3125
@@ -290,50 +510,288 @@ MonoBehaviour:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
+      - ElementName: Tutorial
         ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
+        guid: 090215d47f508a4c8e101bbd3392b83a
       - ElementName: Play_Oleada_final
         ObjectType: 3
         guid: fe905c02fb29264a953eafe08a42edaa
-      Path: Events\Default Work Unit\Play_Oleada_final
+      Path: Events\Tutorial\Play_Oleada_final
       maxAttenuation: 0
       maxDuration: 4.901312
       minDuration: 4.901312
-    - name: Play_Pocion_preparandose
+    - name: Play_Pocion_Lista
+      guid: a32c4b5464d5e34f95196ca03ead2ebc
+      id: 4143622118
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Play_Pocion_Lista
+        ObjectType: 3
+        guid: a32c4b5464d5e34f95196ca03ead2ebc
+      Path: Events\Tutorial\Play_Pocion_Lista
+      maxAttenuation: 0
+      maxDuration: 1.989583
+      minDuration: 1.989583
+    - name: Play_Pocion_Preparandose
       guid: 17ab5b1fb990cf4bb66d73e6a03ab3dc
       id: 4052632251
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
+      - ElementName: Tutorial
         ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
-      - ElementName: Play_Pocion_preparandose
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Play_Pocion_Preparandose
         ObjectType: 3
         guid: 17ab5b1fb990cf4bb66d73e6a03ab3dc
-      Path: Events\Default Work Unit\Play_Pocion_preparandose
+      Path: Events\Tutorial\Play_Pocion_Preparandose
       maxAttenuation: 0
       maxDuration: 5.833333
       minDuration: 5.833333
-    - name: Play_Poner_item_en_caldero
+    - name: Play_Poner_Item_caldero
       guid: 39808d42d0505b448d6c0b7f1019032b
-      id: 2748973737
+      id: 1672850383
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
         guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
+      - ElementName: Tutorial
         ObjectType: 12
-        guid: 2621f2e587216f4092b302108c4d8946
-      - ElementName: Play_Poner_item_en_caldero
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Play_Poner_Item_caldero
         ObjectType: 3
         guid: 39808d42d0505b448d6c0b7f1019032b
-      Path: Events\Default Work Unit\Play_Poner_item_en_caldero
+      Path: Events\Tutorial\Play_Poner_Item_caldero
       maxAttenuation: 0
       maxDuration: 1.125
       minDuration: 1.125
+    - name: Player_Agarrar
+      guid: df656973caee784b949f534949c2c3ee
+      id: 314498979
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Player_Agarrar
+        ObjectType: 3
+        guid: df656973caee784b949f534949c2c3ee
+      Path: Events\Tutorial\Player_Agarrar
+      maxAttenuation: 0
+      maxDuration: 0.375521
+      minDuration: 0.375521
+    - name: Player_Desplazamiento
+      guid: 3859c44d27fccc449d35427fc694228b
+      id: 557674403
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Player_Desplazamiento
+        ObjectType: 3
+        guid: 3859c44d27fccc449d35427fc694228b
+      Path: Events\Tutorial\Player_Desplazamiento
+      maxAttenuation: 0
+      maxDuration: 0.703456
+      minDuration: 0.221456
+    - name: Player_Soltar
+      guid: e039c9cbdb4fa8449f79b1c7217abb25
+      id: 3883559502
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Player_Soltar
+        ObjectType: 3
+        guid: e039c9cbdb4fa8449f79b1c7217abb25
+      Path: Events\Tutorial\Player_Soltar
+      maxAttenuation: 0
+      maxDuration: 0.375521
+      minDuration: 0.375521
+    - name: Player_SonidoRandom
+      guid: b990515cfe67214a9b10c2b53452b293
+      id: 3887090402
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Player_SonidoRandom
+        ObjectType: 3
+        guid: b990515cfe67214a9b10c2b53452b293
+      Path: Events\Tutorial\Player_SonidoRandom
+      maxAttenuation: 0
+      maxDuration: 1.75
+      minDuration: 1.75
+    - name: Procesar_Item
+      guid: 69e78ca6a103f046bc5f306ffa81b59e
+      id: 1061034442
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Procesar_Item
+        ObjectType: 3
+        guid: 69e78ca6a103f046bc5f306ffa81b59e
+      Path: Events\Tutorial\Procesar_Item
+      maxAttenuation: 0
+      maxDuration: 2.625
+      minDuration: 2.625
+    - name: Proyectil_Disparo
+      guid: d2a2044c2e5da34c97f4dd6ead0de963
+      id: 4000783731
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Proyectil_Disparo
+        ObjectType: 3
+        guid: d2a2044c2e5da34c97f4dd6ead0de963
+      Path: Events\Tutorial\Proyectil_Disparo
+      maxAttenuation: 0
+      maxDuration: 1.125
+      minDuration: 1.125
+    - name: Proyectil_Muerte
+      guid: 97c1c36e30ac1444a33c0528006a2693
+      id: 1918569767
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Proyectil_Muerte
+        ObjectType: 3
+        guid: 97c1c36e30ac1444a33c0528006a2693
+      Path: Events\Tutorial\Proyectil_Muerte
+      maxAttenuation: 0
+      maxDuration: 0.53125
+      minDuration: 0.53125
+    - name: Simple_Ataca
+      guid: 6d3fcbb01af3cd45bb48d3cce1b1a18b
+      id: 32974598
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Simple_Ataca
+        ObjectType: 3
+        guid: 6d3fcbb01af3cd45bb48d3cce1b1a18b
+      Path: Events\Tutorial\Simple_Ataca
+      maxAttenuation: 0
+      maxDuration: 1.615104
+      minDuration: 1.615104
+    - name: Simple_Desplazamiento
+      guid: 045e5bd32a318849a29a9da25c8c2cfc
+      id: 2558775992
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Simple_Desplazamiento
+        ObjectType: 3
+        guid: 045e5bd32a318849a29a9da25c8c2cfc
+      Path: Events\Tutorial\Simple_Desplazamiento
+      maxAttenuation: 0
+      maxDuration: 16.311
+      minDuration: 16.311
+    - name: SonidoRandom_Caldero
+      guid: f13376a43d052249aa02a576dc0d654c
+      id: 4145908619
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: SonidoRandom_Caldero
+        ObjectType: 3
+        guid: f13376a43d052249aa02a576dc0d654c
+      Path: Events\Tutorial\SonidoRandom_Caldero
+      maxAttenuation: 0
+      maxDuration: 18.478844
+      minDuration: 18.478844
+    - name: TutorialMusic
+      guid: 7ba9a21067892b418e82ca6a0f452547
+      id: 2464646960
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: TutorialMusic
+        ObjectType: 3
+        guid: 7ba9a21067892b418e82ca6a0f452547
+      Path: Events\Tutorial\TutorialMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Useless_Muerte
+      guid: 0085786693475e4ca8fb82f4065ea625
+      id: 3059053578
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Useless_Muerte
+        ObjectType: 3
+        guid: 0085786693475e4ca8fb82f4065ea625
+      Path: Events\Tutorial\Useless_Muerte
+      maxAttenuation: 0
+      maxDuration: 0.583333
+      minDuration: 0.583333
+    - name: Useless_SonidoEspecial
+      guid: e70c9c449ac3b049b8688bc5c6fd341e
+      id: 3256636576
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Useless_SonidoEspecial
+        ObjectType: 3
+        guid: e70c9c449ac3b049b8688bc5c6fd341e
+      Path: Events\Tutorial\Useless_SonidoEspecial
+      maxAttenuation: 0
+      maxDuration: 1.083333
+      minDuration: 1.083333
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -346,7 +804,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: eda32d6682632e48b8937bccdfa5c6be
     GuidInternal: 
-    m_lastTime: -8585033521320024504
+    m_lastTime: -8585031893223290225
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -360,7 +818,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 453e836da4731d43aaf2ace66950652e
     GuidInternal: 
-    m_lastTime: -8585033521320403488
+    m_lastTime: -8585031893223120197
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -374,7 +832,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d95443d702661b448cd3207c91b5b886
     GuidInternal: 
-    m_lastTime: -8585033521319874932
+    m_lastTime: -8585031893223110206
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -388,10 +846,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: befacd619a68c341acea8777258db81d
     GuidInternal: 
-    m_lastTime: -8585033521320064437
+    m_lastTime: -8585031893223110206
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0600000007000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

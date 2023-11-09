@@ -18,7 +18,7 @@
 					<ChildrenList>
 						<MusicSegment Name="witch´s brew_MainMenu_1st demo" ID="{B5112B31-DBF7-488A-AC04-2A64917F6D37}" ShortID="994604578">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="53032.25"/>
+								<Property Name="EndPosition" Type="Real64" Value="85435.6322497287"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -29,23 +29,23 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="witch´s brew_MainMenu_1st demo_155bpm" ID="{7F71DEAE-BFEB-42DF-BC59-502199947CF6}" ShortID="295678888">
+								<MusicTrack Name="Witch´s Brew_main menu_155bpm" ID="{6B4FEDCC-CF8C-43EC-BE94-69B244A25802}" ShortID="666211911">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="witch´s brew_MainMenu_1st demo_155bpm" ID="{3BFA1696-6AB9-49C1-85C0-FFC64208D623}">
+										<AudioFileSource Name="Witch´s Brew_main menu_155bpm" ID="{FD3B2D50-017F-4190-8034-A7B8AEDA6875}">
 											<Language>SFX</Language>
-											<AudioFile>witch´s brew_MainMenu_1st demo_155bpm.wav</AudioFile>
+											<AudioFile>Witch´s Brew_main menu_155bpm.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="339980892"/>
+												<MediaID ID="783072181"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
-										<MusicTransition Name="Root" ID="{FCC343BB-68B1-4A6B-AB40-20420854EF36}">
+										<MusicTransition Name="Root" ID="{3DC70FE0-76CB-4B3C-9797-80CA0FDFD10E}">
 											<PropertyList>
 												<Property Name="IsFolder" Type="bool" Value="True"/>
 											</PropertyList>
@@ -56,18 +56,18 @@
 										<ObjectList Name="Sequences">
 											<Reference>
 												<Local>
-													<MusicTrackSequence Name="" ID="{7DC4CB36-797C-4054-8810-64D13DB8C1C9}">
+													<MusicTrackSequence Name="" ID="{3018DCD0-8FDE-4B76-AC23-0D8CE48AC5E5}">
 														<ObjectLists>
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClip Name="witch´s brew_MainMenu_1st demo_155bpm" ID="{15E87421-99FF-4A58-A276-B7EDB43065D6}">
+																		<MusicClip Name="Witch´s Brew_main menu_155bpm" ID="{5987D106-06C7-4ABB-96F2-6A142C218103}">
 																			<PropertyList>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="37161.2916666667"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="76645.1666666667"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
-																			<AudioSourceRef Name="witch´s brew_MainMenu_1st demo_155bpm" ID="{3BFA1696-6AB9-49C1-85C0-FFC64208D623}"/>
+																			<AudioSourceRef Name="Witch´s Brew_main menu_155bpm" ID="{FD3B2D50-017F-4190-8034-A7B8AEDA6875}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
@@ -92,7 +92,7 @@
 											<MusicCue Name="Exit Cue" ID="{6DCDC7EA-E7F2-4182-A72F-276D9649A062}">
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
-													<Property Name="TimeMs" Type="Real64" Value="37161.2916666667"/>
+													<Property Name="TimeMs" Type="Real64" Value="74322.5833333333"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>
