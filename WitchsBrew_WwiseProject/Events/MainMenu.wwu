@@ -29,6 +29,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="StopMainMenuMusic" ID="{6F589988-FD01-4930-BCBE-7A0900DF1AA9}">
+					<ChildrenList>
+						<Action Name="" ID="{3CF95CC8-033A-4716-962D-92DFC1106870}" ShortID="218123694">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="main menu music" ID="{D80337C4-0625-4E77-B77A-BC650C554D04}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
