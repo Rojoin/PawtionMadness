@@ -1,5 +1,7 @@
+using Enemy;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -78,10 +80,10 @@ public class CameraLerp : MonoBehaviour
             {
                 GameObject newEnemy = Instantiate(enemiesToShow[i].Type.asset,
                     new Vector3(
-                    Random.Range(SpawnPosition.transform.position.x, SpawnPosition.transform.position.x - SpawnHeigh), 
+                    Random.Range(SpawnPosition.position.x, SpawnPosition.position.x - SpawnHeigh), 
                     SpawnPosition.transform.position.y, 
-                    Random.Range(SpawnPosition.transform.position.z, SpawnPosition.transform.position.z + SpawnWidth)),
-                    transform.rotation);
+                    Random.Range(SpawnPosition.position.z, SpawnPosition.position.z + SpawnWidth)),
+                    SpawnPosition.rotation);
 
                 enemiesShowedList.Add(newEnemy);
             }
