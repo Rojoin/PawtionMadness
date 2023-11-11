@@ -1,25 +1,21 @@
 using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    [Header("Camera")]
-    [SerializeField] private Transform cameraPosition;
+    [Header("Setup")]
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
-
-    [Header("Camera Positions")]
-    [SerializeField] private Transform cameraPositionField;
-    [SerializeField] private Transform cameraPositionKitchen;
+    [SerializeField] private CameraLerp cameraLerp;
 
     private void Awake()
     {
-        
+        cameraLerp.endCameraLerp.AddListener(OnEndCameraLerp);
+        virtualCamera.Follow = cameraLerp.cameraPosition;
     }
 
-    private void Update()
+    private void OnEndCameraLerp()
     {
-        
+        cameraLerp.enabled = false;
+        Debug.Log("end lerp");
     }
 }
