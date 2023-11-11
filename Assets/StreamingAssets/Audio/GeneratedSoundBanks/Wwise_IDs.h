@@ -47,7 +47,6 @@ namespace AK
         static const AkUniqueID SIMPLE_DESPLAZAMIENTO = 2558775992U;
         static const AkUniqueID SONIDORANDOM_CALDERO = 4145908619U;
         static const AkUniqueID STOPMAINMENUMUSIC = 1420342416U;
-        static const AkUniqueID TUTORIALMUSIC = 2464646960U;
         static const AkUniqueID USELESS_MUERTE = 3059053578U;
         static const AkUniqueID USELESS_SONIDOESPECIAL = 3256636576U;
     } // namespace EVENTS

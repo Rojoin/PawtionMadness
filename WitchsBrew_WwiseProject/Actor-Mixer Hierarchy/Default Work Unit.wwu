@@ -148,6 +148,29 @@
 										<ActiveSource Name="Oleada" ID="{39D19C39-612E-47DA-8BF5-487AD10F8996}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="Comienzo_de_juego" ID="{10934AAB-9C54-4DCD-ACA2-A4A6AEF2FABD}" ShortID="726664407">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Comienzo_de_juego" ID="{622C3E3A-1479-469C-86D4-844503019E02}">
+											<Language>SFX</Language>
+											<AudioFile>Comienzo_de_juego.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="822985538"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Comienzo_de_juego" ID="{622C3E3A-1479-469C-86D4-844503019E02}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Cocina" ID="{D884BE52-E713-41EE-9DA3-A5ACF583AA6E}" ShortID="769970577">
