@@ -1451,7 +1451,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 764afab6490c0924895a9f7c25ab3374, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: fa690350a45ca884586992bccf14329b, type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -1648,7 +1648,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1172150822}
-  - component: {fileID: 1172150821}
   - component: {fileID: 1172150823}
   m_Layer: 0
   m_Name: WwiseGlobal
@@ -1657,31 +1656,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1172150821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172150820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38a8df57f9ea66547923586bf3981c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: 4e82a9074af911644b69d6512d1ea43b, type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  engineLogging: 0
 --- !u!4 &1172150822
 Transform:
   m_ObjectHideFlags: 0
@@ -2869,7 +2843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223280389243143638, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000019073486
+      value: -0.00002861023
       objectReference: {fileID: 0}
     - target: {fileID: 1234946973280734815, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3374,11 +3348,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2175325850640389915, guid: f829f23532c73da4f8593536bacde88f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.452547
+      value: 26.452692
       objectReference: {fileID: 0}
     - target: {fileID: 2175325850640389915, guid: f829f23532c73da4f8593536bacde88f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.720621
+      value: -26.720776
       objectReference: {fileID: 0}
     - target: {fileID: 2175325850640389915, guid: f829f23532c73da4f8593536bacde88f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3565,11 +3539,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9165205167079950305, guid: e6c8b42b93c1930478fcefa7ab0cda9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.452547
+      value: 26.452692
       objectReference: {fileID: 0}
     - target: {fileID: 9165205167079950305, guid: e6c8b42b93c1930478fcefa7ab0cda9e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.720621
+      value: -26.720776
       objectReference: {fileID: 0}
     - target: {fileID: 9165205167079950305, guid: e6c8b42b93c1930478fcefa7ab0cda9e, type: 3}
       propertyPath: m_LocalRotation.w

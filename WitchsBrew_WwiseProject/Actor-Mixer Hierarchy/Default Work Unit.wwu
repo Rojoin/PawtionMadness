@@ -155,36 +155,6 @@
 										<ActiveSource Name="AMB_Pajaros_cuervos_start" ID="{BE141DFC-9E00-4A13-A797-9E64B960BECA}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Comienzo_de_juego" ID="{10934AAB-9C54-4DCD-ACA2-A4A6AEF2FABD}" ShortID="726664407">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Comienzo_de_juego" ID="{622C3E3A-1479-469C-86D4-844503019E02}">
-											<Language>SFX</Language>
-											<AudioFile>Comienzo_de_juego.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="822985538"/>
-											</MediaIDList>
-										</AudioFileSource>
-										<AudioFileSource Name="AMB_Pajaros_cuervos_start" ID="{035C0300-4C02-434D-8827-7DE0C52011E8}">
-											<Language>SFX</Language>
-											<AudioFile>AMB_Pajaros_cuervos_start.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="172626798"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="AMB_Pajaros_cuervos_start" ID="{035C0300-4C02-434D-8827-7DE0C52011E8}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="AMB_Pajaros_cuervos_start" ID="{9DCF5F7A-8E1C-470D-9800-760FBBB05126}" ShortID="790188108">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -206,6 +176,36 @@
 									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="AMB_Pajaros_cuervos_start" ID="{8EC171D9-3226-4C93-B853-31A0A54947A8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Comienzo_de_juego" ID="{227A69B9-4214-4EC8-8F2A-221B65550797}" ShortID="413456364">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Comienzo_de_juego" ID="{B17AC821-74A3-4207-82C8-0404F6017DC4}">
+											<Language>SFX</Language>
+											<AudioFile>Comienzo_de_juego.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="471260018"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Comienzo_de_juego" ID="{B17AC821-74A3-4207-82C8-0404F6017DC4}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
