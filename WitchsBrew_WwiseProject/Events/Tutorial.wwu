@@ -119,6 +119,9 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{89CA77ED-4824-4764-9FE1-D6BC48DF3A5E}" ShortID="414704942">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.3"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Comienzo_de_juego" ID="{227A69B9-4214-4EC8-8F2A-221B65550797}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
@@ -128,6 +131,7 @@
 						<Action Name="" ID="{9897ADA0-136C-41B8-B7D1-5336E197EB1F}" ShortID="142519363">
 							<PropertyList>
 								<Property Name="Delay" Type="Real64" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -396,6 +400,30 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Useless_SonidoEspecial" ID="{7CB42C01-E41F-4688-A0F5-8DC98BB756CF}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AMB_Tutorial" ID="{A4556F9C-F4A8-45A4-9694-3C0B9EAC97A9}">
+					<ChildrenList>
+						<Action Name="" ID="{AF38B6C3-CDA4-4ACA-9CC5-E1BAF27BC786}" ShortID="1510193">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Pajaros_cuervos_start" ID="{9DCF5F7A-8E1C-470D-9800-760FBBB05126}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A899BEC9-E76D-4DD2-9C76-4E8F7EF3011E}" ShortID="514017312">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Bosque_Noche" ID="{D879BBB0-1133-40D8-9A0D-E7990DEF21BC}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -37,7 +37,7 @@
 				<Event Id="1420342416" Name="StopMainMenuMusic" ObjectPath="\Events\MainMenu\StopMainMenuMusic" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3762955427" Language="SFX" Hash="1227619891">
+		<SoundBank Id="3762955427" Language="SFX" Hash="2560337304">
 			<ObjectPath>\SoundBanks\Default Work Unit\Tutorial</ObjectPath>
 			<ShortName>Tutorial</ShortName>
 			<Path>Tutorial.bnk</Path>
@@ -146,11 +146,23 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1452442514" Name="Play_AMB_Bosque_Noche" ObjectPath="\Events\Tutorial\Play_AMB_Bosque_Noche" DurationType="OneShot" DurationMin="46." DurationMax="46.">
+				<Event Id="1452442514" Name="Play_AMB_Bosque_Noche" ObjectPath="\Events\Tutorial\Play_AMB_Bosque_Noche" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="380180008" Language="SFX">
 							<ShortName>Ambiente\AMB_Bosque_Noche.wav</ShortName>
-							<Path>SFX\Ambiente\AMB_Bosque_Noche_10C4C929.wem</Path>
+							<Path>SFX\Ambiente\AMB_Bosque_Noche_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4120818535" Name="Play_AMB_Tutorial" ObjectPath="\Events\Tutorial\Play_AMB_Tutorial" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="380180008" Language="SFX">
+							<ShortName>Ambiente\AMB_Bosque_Noche.wav</ShortName>
+							<Path>SFX\Ambiente\AMB_Bosque_Noche_D79FB2B7.wem</Path>
+						</File>
+						<File Id="475716205" Language="SFX">
+							<ShortName>AMB_Pajaros_cuervos_start.wav</ShortName>
+							<Path>SFX\AMB_Pajaros_cuervos_start_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

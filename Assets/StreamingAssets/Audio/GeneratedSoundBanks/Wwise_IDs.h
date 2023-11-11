@@ -28,6 +28,7 @@ namespace AK
         static const AkUniqueID PLAY_AGARRAR_ITEM_FRASCO = 2559549617U;
         static const AkUniqueID PLAY_AGARRAR_ITEM_PORCION = 2191355065U;
         static const AkUniqueID PLAY_AMB_BOSQUE_NOCHE = 1452442514U;
+        static const AkUniqueID PLAY_AMB_TUTORIAL = 4120818535U;
         static const AkUniqueID PLAY_CALDERO = 4083340090U;
         static const AkUniqueID PLAY_INGAMEMUSIC = 3799629626U;
         static const AkUniqueID PLAY_LIBRO_ABRIR_3 = 707032169U;

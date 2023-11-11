@@ -18,10 +18,11 @@
 								<Sound Name="AMB_Bosque_Noche" ID="{D879BBB0-1133-40D8-9A0D-E7990DEF21BC}" ShortID="959762945">
 									<PropertyList>
 										<Property Name="Color" Type="int16" Value="7"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-4</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -45,43 +46,6 @@
 									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="AMB_Bosque_Noche" ID="{6D8AAA9F-F331-4756-A73F-6DC2FCE411E4}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="AMB_Pajaros_cuervos" ID="{B290552E-A9FA-40BE-90F0-ABEE85DD2B0F}" ShortID="730048890">
-									<PropertyList>
-										<Property Name="Color" Type="int16" Value="7"/>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>40</Value>
-											</ValueList>
-										</Property>
-										<Property Name="OverrideColor" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>24</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="AMB_Pajaros_cuervos" ID="{89C7A269-9B16-4801-9EC1-7133C62D3AFF}">
-											<Language>SFX</Language>
-											<AudioFile>Ambiente\AMB_Pajaros_cuervos .wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="337365092"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="AMB_Pajaros_cuervos" ID="{89C7A269-9B16-4801-9EC1-7133C62D3AFF}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Oleada final" ID="{FC823D43-C1D0-4792-BDE2-6B6ACE0E0C77}" ShortID="289642863">
@@ -156,6 +120,14 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="AMB_Pajaros_cuervos_start" ID="{9DCF5F7A-8E1C-470D-9800-760FBBB05126}" ShortID="790188108">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -169,7 +141,7 @@
 											<Language>SFX</Language>
 											<AudioFile>AMB_Pajaros_cuervos_start.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="172626798"/>
+												<MediaID ID="475716205"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -182,7 +154,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>6</Value>
+												<Value>7</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
