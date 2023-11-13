@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E5F22126-2187-406F-92B3-02108C4D8946}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{E5F22126-2187-406F-92B3-02108C4D8946}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E5F22126-2187-406F-92B3-02108C4D8946}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Simple_RecibeDano" ID="{A4337C44-C68E-4E81-899A-04556FD155B7}">
+					<ChildrenList>
+						<Action Name="" ID="{07A9ED4E-C78B-44AA-8A36-515FA754CE65}" ShortID="698252067">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Simple_RecibeDaño" ID="{87CA4D3A-A5B8-4805-8737-4353E90ADFFE}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Simple_SonidoRandom" ID="{594F62C4-D0FB-4CDE-B301-A57B665A9E31}">
+					<ChildrenList>
+						<Action Name="" ID="{DA00D3B5-E8DA-4203-8CA6-21B447D992A4}" ShortID="155779575">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Simple_SonidoRandom" ID="{9CBB25D6-B176-4D3F-89B6-F131C266C72D}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Perder_Juego" ID="{F888067F-A3EC-4DD1-A04E-B57ACE82398C}">
+					<ChildrenList>
+						<Action Name="" ID="{D845119C-6EDD-475D-9881-C85045B34D37}" ShortID="842216727">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Perder_Juego" ID="{8A961DCE-E7E8-44E7-866A-63BF24BEC5AD}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
