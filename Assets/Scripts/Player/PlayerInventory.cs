@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using Item;
 using Turret;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private Transform pickableSpot;
     [SerializeField] private Pickable _pickable;
     [SerializeField] private KitchenObjectSO kitchenObject;
+    public UnityEvent<bool> OnItemPickUp;
 
 
     public bool hasPickable()
@@ -20,6 +22,7 @@ public class PlayerInventory : MonoBehaviour
     {
         item.SetNewParent(this.pickableSpot);
         _pickable = item;
+        OnItemPickUp.Invoke(true);
     }
     
 
@@ -27,11 +30,13 @@ public class PlayerInventory : MonoBehaviour
     {
         Destroy(_pickable.gameObject);
         _pickable = null;
+        OnItemPickUp.Invoke(false);
     }
 
     public void NullPickable()
     {
         _pickable = null;
+        OnItemPickUp.Invoke(false);
     }
 
     public bool hasPotion() => _pickable is Potion;
@@ -39,8 +44,8 @@ public class PlayerInventory : MonoBehaviour
 
     public Item.Pickable GetPickable() => _pickable;
 
-    public BaseTurret GetTurret()
+    public BaseTurretSO GetTurret()
     {
-        return (_pickable as Potion)._baseTurretSo.asset;
+        return ((Potion)_pickable)._baseTurretSo;
     }
 }

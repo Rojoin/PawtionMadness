@@ -15,9 +15,8 @@ namespace Grid
         [SerializeField] private int deltaX = 2;
         [SerializeField] private int deltaY = 4;
         [SerializeField] private Color[] tileColors;
-        [SerializeField] private UnityEngine.Grid grid;
-        [FormerlySerializedAs("cube")] [SerializeField]
-        private Tile tile;
+        [SerializeField] private UnityEngine.Grid grid; 
+        [SerializeField] private Tile tile;
         [SerializeField] private List<GameObject> tileList;
        private Tile[,] tileSet;
 
@@ -31,7 +30,7 @@ namespace Grid
                 {
                     var newTile = tileList[i * rows + j].GetComponent<Tile>();
                     tileSet[i, j] = newTile;
-                    tileSet[i, j].SetTurret(null);
+                    tileSet[i, j].SetTurret(turret:null);
                 }
             }
         }

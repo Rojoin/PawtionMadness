@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace Player
@@ -8,6 +9,7 @@ namespace Player
     public class PlayerMovement : MonoBehaviour
     {
         [SerializeField] private Vector2ChannelSO OnMoveChannel;
+        [SerializeField] public UnityEvent<Vector2> OnMovement;
         [SerializeField] private float speed;
         [SerializeField] private float radius = 0.7f;
         [SerializeField] private float height;
@@ -28,6 +30,7 @@ namespace Player
 
         private void Move(Vector2 dir)
         {
+            OnMovement.Invoke(dir);
             if (movement != null)
             {
                 StopCoroutine(movement);

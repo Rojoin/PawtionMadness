@@ -35,11 +35,11 @@ namespace Grid
         {
             if (turret)
             {
-                _turret = Instantiate(turret, _turretPosition.position, Quaternion.identity, transform);
+                _turret = turret;
                 _turret.transform.Rotate(0,90,0);
             }
         }
-        
+        public Transform GetTurretPosition() => _turretPosition;
         public void DestroyTurret()
         {
             if(_turret)

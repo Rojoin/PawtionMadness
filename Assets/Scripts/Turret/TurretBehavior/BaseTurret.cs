@@ -10,6 +10,7 @@ namespace Turret
         [SerializeField] protected BaseTurretSO turretType;
         [SerializeField] private Tile tile;
         [SerializeField] private UnityEvent _onHit;
+        [SerializeField] public UnityEvent<GameObject> onTurretDeath;
         private float currentHealth;
         protected bool isAlive;
         private static readonly int Death1 = Animator.StringToHash("Death");
@@ -18,12 +19,14 @@ namespace Turret
         public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
 
         public float DeathTime { get => turretType.deathTime; }
-        private void Awake()
+        public virtual void Init()
         {
             CurrentHealth = MaxHealth;
             boxCollider = GetComponent<BoxCollider>();
             isAlive = true;
+            Debug.Log("New turret Created!");
         }
+
         public virtual void Death()
         {
             animator?.SetTrigger(Death1);
