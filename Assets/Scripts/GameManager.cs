@@ -10,33 +10,43 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Entities")] [SerializeField] private GameObject player;
+    [Header("Entities")] 
+    
+    [SerializeField] private GameObject player;
     [SerializeField] private EnemySpawner enemySpawner;
     [SerializeField] private CameraManager _cameraManager;
     [SerializeField] private EnemyManager enemyManager;
     [SerializeField] private UIManager uiManager;
 
-    [Header("Channels")] [SerializeField] private VoidChannelSO actionChannelSO;
+    [Header("Channels")] 
+    
+    [SerializeField] private VoidChannelSO actionChannelSO;
     [SerializeField] private VoidChannelSO pauseChannelSO;
     [SerializeField] private VoidChannelSO gridToggleChannelSO;
     [SerializeField] private VoidChannelSO backInputChannel;
     [SerializeField] private VoidChannelSO showRecipesChannelSO;
     [SerializeField] private VoidChannelSO initialCounterChannelSO;
-    [Header("Values")] [SerializeField] float timeUntilGameOver = 0.2f;
+    [Header("Values")] 
+    
+    [SerializeField] float timeUntilGameOver = 0.2f;
+    [SerializeField] float timeUntilActivateEvents = 10f;
     [SerializeField] bool isTutorialScene = false;
 
-    [Header("SceneChanger")] [SerializeField]
-    private SceneChangeData mainMenu;
+    [Header("SceneChanger")] 
+    
+    [SerializeField] private SceneChangeData mainMenu;
 
     [SerializeField] private SceneChangeData currentScene;
     [SerializeField] private SceneChangeData nextScene;
 
-    [Header("Events")] public UnityEvent deActivateRecipe;
+    [Header("Events")] 
+    
+    public UnityEvent deActivateRecipe;
+    
     private bool isPaused;
     private bool isGridActivated;
     private bool isRecipesOn;
 
-    [SerializeField] float timeUntilActivateEvents = 10f;
 
 
     private void Awake()
