@@ -13,6 +13,7 @@ namespace UI
         [SerializeField] [Range(1.0f, 2.5f)] private float sizeExpand = 1.5f;
         [SerializeField] private bool shouldWaitForOneMore;
         private TMPro.TextMeshProUGUI _textMeshProUGUI;
+        [SerializeField] private AnimationCurve _animationCurve;
         private UIAnimation _uiAnimation = new UIAnimation();
         private RectTransform rectTransform;
 
@@ -45,7 +46,7 @@ namespace UI
             while (currentText < text.Length)
             {
                 _textMeshProUGUI.text = text[currentText];
-                StartCoroutine(_uiAnimation.PlayAnimation(rectTransform, sizeExpand, timeBetweenNumbers,
+                StartCoroutine(_uiAnimation.PlayAnimation(rectTransform, sizeExpand, timeBetweenNumbers,_animationCurve,
                     _textMeshProUGUI));
                 yield return new WaitForSeconds(timeBetweenNumbers);
                 currentText++;
