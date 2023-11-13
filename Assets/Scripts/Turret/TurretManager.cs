@@ -10,16 +10,16 @@ public class TurretManager : MonoBehaviour
     [SerializeField] private Transform maxDistancePoint;
     [SerializeField] private int TurretPoolSize;
 
-    [SerializeField] private List<BaseTurretSO> turretByIds = new List<BaseTurretSO>();
-    private Dictionary<string, ObjectPool<GameObject>> pools = new();
+    [SerializeField] private List<BaseTurretSO> TurretsSO = new();
+    private Dictionary<string, ObjectPool<GameObject>> turretPoolById = new();
 
     private TurretFactory turretFactory = new TurretFactory();
 
     private void Awake()
     {
-        foreach (var t in turretByIds)
+        foreach (var t in TurretsSO)
         {
-            pools.Add(t.id, new ObjectPool<GameObject>(() => Instantiate(t.asset.gameObject, transform),
+            turretPoolById.Add(t.id, new ObjectPool<GameObject>(() => Instantiate(t.asset.gameObject, transform),
             turret => { turret.gameObject.SetActive(true); }, turret => { turret.gameObject.SetActive(false); },
             turret => { Destroy(turret.gameObject); }, false, TurretPoolSize, 100));
         }
@@ -28,7 +28,7 @@ public class TurretManager : MonoBehaviour
 
     public BaseTurret AddNewTurret(BaseTurretSO newTurretSO, Transform position, Transform parent)
     {
-        var pool = pools[newTurretSO.id];
+        var pool = turretPoolById[newTurretSO.id];
         if(pool == null)
         {
             Debug.LogError("Pool not found");
@@ -48,7 +48,7 @@ public class TurretManager : MonoBehaviour
     {
         BaseTurret baseTurret = Turret.GetComponent<BaseTurret>();
         baseTurret.onDeath.RemoveListener(OnKillTurret);
-        ObjectPool<GameObject> pool = pools[baseTurret.TurretType.id];
+        ObjectPool<GameObject> pool = turretPoolById[baseTurret.TurretType.id];
         pool.Release(Turret);
     }
 }
