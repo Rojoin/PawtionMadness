@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f2fb37ba5c4b8eb2ee190c235b7cb9, type: 3}
   m_Name: ProyectileTurretSO
   m_EditorClassIdentifier: Assembly-CSharp::ProyectileTurretSO
+  id: Turtlet
   asset: {fileID: 7632185328495556519, guid: 694c0c1e813ca9442aed801551de1c61, type: 3}
   maxHealth: 200
   sprite: {fileID: 21300000, guid: 406181b5f9a082f47a5dfba77fc1786b, type: 3}
+  deathTime: 0.8
   shootSpeed: 2.75
   attackDamage: 15
   attackRange: 15
+  attackDelay: 0.2
   projectile: {fileID: 6930803183062165713, guid: df5872770e60cd14b81bad29e053b7be, type: 3}
   initialShootPosition: {fileID: 0}
   projectileSpeed: 10
