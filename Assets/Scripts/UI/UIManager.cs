@@ -19,7 +19,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private float textSize = 2.0f;
     private UIAnimation _uiManager = new UIAnimation();
 
-    public void Start()
+
+    public void Init()
     {
         SetCanvasVisibility(LoseScreen, false);
         SetCanvasVisibility(WinScreen, false);

@@ -7,10 +7,10 @@ namespace UI
 {
     public class UICountdown : MonoBehaviour
     {
-        [SerializeField] private  string [] text;
+        [SerializeField] private string[] text;
         [SerializeField] private VoidChannelSO activateScript;
-        [SerializeField][Range(1.0f, 2.5f)] private float timeBetweenNumbers = 1.3f;
-        [SerializeField][Range(1.0f, 2.5f)] private float sizeExpand = 1.5f;
+        [SerializeField] [Range(1.0f, 2.5f)] private float timeBetweenNumbers = 1.3f;
+        [SerializeField] [Range(1.0f, 2.5f)] private float sizeExpand = 1.5f;
         [SerializeField] private bool shouldWaitForOneMore;
         private TMPro.TextMeshProUGUI _textMeshProUGUI;
         private UIAnimation _uiAnimation = new UIAnimation();
@@ -20,10 +20,20 @@ namespace UI
         {
             _textMeshProUGUI = GetComponent<TextMeshProUGUI>();
             rectTransform = GetComponent<RectTransform>();
-       
+            activateScript.Subscribe(PlayAnimation);
         }
 
-        public IEnumerator Start()
+        private void OnDestroy()
+        {
+            activateScript.Unsubscribe(PlayAnimation);
+        }
+
+        private void PlayAnimation()
+        {
+            StartCoroutine(AnimationCorroutine());
+        }
+
+        public IEnumerator AnimationCorroutine()
         {
             int currentText = 0;
 
@@ -31,17 +41,19 @@ namespace UI
             {
                 yield return new WaitForSeconds(timeBetweenNumbers);
             }
-            while (currentText<text.Length )
+
+            while (currentText < text.Length)
             {
                 _textMeshProUGUI.text = text[currentText];
-                StartCoroutine(_uiAnimation.PlayAnimation(rectTransform, sizeExpand, timeBetweenNumbers, _textMeshProUGUI));
+                StartCoroutine(_uiAnimation.PlayAnimation(rectTransform, sizeExpand, timeBetweenNumbers,
+                    _textMeshProUGUI));
                 yield return new WaitForSeconds(timeBetweenNumbers);
                 currentText++;
                 yield return null;
             }
+
             gameObject.SetActive(false);
             yield break;
         }
-        
     }
 }
