@@ -2955,6 +2955,71 @@ Transform:
   - {fileID: 1900356233}
   m_Father: {fileID: 6129298776008384120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1009055565
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8689157685375696640, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 489287923}
+    - target: {fileID: 8977972586202216164, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+      propertyPath: m_Name
+      value: Virtual Camera with Transposer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977972586202216164, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165205167079950305, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.6659288
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165205167079950305, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 26.451807
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165205167079950305, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.719845
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165205167079950305, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.88878536
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165205167079950305, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4583238
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165205167079950305, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165205167079950305, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165205167079950305, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 54.558
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165205167079950305, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165205167079950305, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
 --- !u!225 &1012388711 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 1296710488481577502, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
@@ -5213,6 +5278,17 @@ Transform:
   - {fileID: 969989256}
   m_Father: {fileID: 6129298776008384120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1927572022 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8689157685375696640, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
+  m_PrefabInstance: {fileID: 1009055565}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1946814710
 GameObject:
   m_ObjectHideFlags: 0
@@ -6824,6 +6900,14 @@ PrefabInstance:
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 598601673}
+    - target: {fileID: 5512521094392669774, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: cameraWithTracking
+      value: 
+      objectReference: {fileID: 598601673}
+    - target: {fileID: 5512521094392669774, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: cameraWithTransposer
+      value: 
+      objectReference: {fileID: 1927572022}
     - target: {fileID: 5646896430725891702, guid: abc95546846c58d4db902d676c070e73, type: 3}
       propertyPath: player
       value: 
@@ -7570,6 +7654,7 @@ SceneRoots:
   - {fileID: 302610582}
   - {fileID: 2117339949090522814}
   - {fileID: 1488956036}
+  - {fileID: 1009055565}
   - {fileID: 1612643301}
   - {fileID: 6727167848939879312}
   - {fileID: 407094608}
