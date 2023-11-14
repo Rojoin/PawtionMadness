@@ -10,6 +10,7 @@ public class CustomSlider : MonoBehaviour
     [SerializeField] private RectTransform barEndPos;
     [SerializeField] private RectTransform icon;
     private Vector2 handleInitialPos = Vector2.zero;
+    [SerializeField]  private Vector2 handleEndPos = new Vector2(-600,0);
     private float fillAmount;
     private int waveCounter = 0;
 
@@ -48,11 +49,8 @@ public class CustomSlider : MonoBehaviour
         {
             handleInitialPos = new Vector2(icon.anchoredPosition.x,icon.anchoredPosition.y);
         }
-        float rectX = handleInitialPos.x * bar.fillAmount;
-
+        float rectX = handleEndPos.x * bar.fillAmount;
         Vector2 newPos = new Vector2(rectX, handleInitialPos.y);
-
         icon.anchoredPosition = newPos;
-        icon.sizeDelta = barEndPos.rect.size;
     }
 }
