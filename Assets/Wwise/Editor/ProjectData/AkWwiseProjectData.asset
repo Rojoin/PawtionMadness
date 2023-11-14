@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: aa66b2e34fd8ed42a53d5a4e3b0d167d
     GuidInternal: 
-    m_lastTime: -8585016845736624290
+    m_lastTime: -8585016052611291826
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e7a312c7f9c3cb4d8311f6565e852255
     GuidInternal: 
-    m_lastTime: -8585021157040254180
+    m_lastTime: -8585016838871442939
     List:
     - name: InGame
       guid: da7fa68ead5f7149b4970b88eb6b420d
@@ -156,7 +156,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2621f2e587216f4092b302108c4d8946
     GuidInternal: 
-    m_lastTime: -8585016898243656617
+    m_lastTime: -8585016838884830208
     List:
     - name: Play_Perder_Juego
       guid: 7f0688f8eca3d14da04eb57ace82398c
@@ -220,7 +220,7 @@ MonoBehaviour:
     ParentPath: Events\InGame
     guid: e8c7ad57f028174ba6dbfb95905729f6
     GuidInternal: 
-    m_lastTime: -8585021305061522685
+    m_lastTime: -8585016838884078629
     List: []
   - PhysicalPath: Events\MainMenu.wwu
     PathAndIcons:
@@ -233,7 +233,7 @@ MonoBehaviour:
     ParentPath: Events\MainMenu
     guid: 90e94a09cbc25e498ac985591e320b8e
     GuidInternal: 
-    m_lastTime: -8585021157040384193
+    m_lastTime: -8585016838884078629
     List:
     - name: MainMenuMusic
       guid: 20d3f76c0f8fcb4cbd425a5bd70e4e98
@@ -297,7 +297,7 @@ MonoBehaviour:
     ParentPath: Events\Tutorial
     guid: 090215d47f508a4c8e101bbd3392b83a
     GuidInternal: 
-    m_lastTime: -8585017317616913335
+    m_lastTime: -8585016838884068628
     List:
     - name: Defense_Muerte
       guid: 9cb36b429d81bc41a26822404b3a77a9
@@ -906,11 +906,11 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: eda32d6682632e48b8937bccdfa5c6be
     GuidInternal: 
-    m_lastTime: -8585016857009311950
+    m_lastTime: -8585016052611211808
     List:
-    - name: volumenes
+    - name: Master
       guid: 8a36ad170602d64e96318d211728477e
-      id: 115991683
+      id: 4056684167
       PathAndIcons:
       - ElementName: Game Parameters
         ObjectType: 5
@@ -918,10 +918,38 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: eda32d6682632e48b8937bccdfa5c6be
-      - ElementName: volumenes
+      - ElementName: Master
         ObjectType: 13
         guid: 8a36ad170602d64e96318d211728477e
-      Path: Game Parameters\Default Work Unit\volumenes
+      Path: Game Parameters\Default Work Unit\Master
+    - name: Music
+      guid: a8950a50c078df46840619f2d6b1d1b6
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eda32d6682632e48b8937bccdfa5c6be
+      - ElementName: Music
+        ObjectType: 13
+        guid: a8950a50c078df46840619f2d6b1d1b6
+      Path: Game Parameters\Default Work Unit\Music
+    - name: SFX
+      guid: e81e54f9e2384d47986f52be4833abd0
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eda32d6682632e48b8937bccdfa5c6be
+      - ElementName: SFX
+        ObjectType: 13
+        guid: e81e54f9e2384d47986f52be4833abd0
+      Path: Game Parameters\Default Work Unit\SFX
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -965,7 +993,7 @@ MonoBehaviour:
     m_lastTime: -8585031893223110206
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 3f0000004000000041000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

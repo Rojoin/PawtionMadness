@@ -1,21 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class AudioSlider : MonoBehaviour
 {
-    public AK.Wwise.RTPC RTPC;
-    public Slider slider;
-
-    private void Start()
+    public AK.Wwise.RTPC SetRTPC;
+    public void SetNewSliderValue(float sliderValue)
     {
-        AkSoundEngine.SetRTPCValue(RTPC.Name, slider.value);
-    }
-    public void SetNewSliderValue()
-    {
-        AkSoundEngine.SetRTPCValue(RTPC.Name, slider.value);
-        Debug.Log(slider.value);
-
+        AkSoundEngine.SetRTPCValue(SetRTPC.Name, sliderValue);
     }
 }
