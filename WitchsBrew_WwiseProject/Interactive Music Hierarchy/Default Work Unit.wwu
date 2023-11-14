@@ -5,7 +5,14 @@
 			<ChildrenList>
 				<MusicPlaylistContainer Name="main menu music" ID="{D80337C4-0625-4E77-B77A-BC650C554D04}" ShortID="378283252">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="11"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="Tempo" Type="Real64" Value="155"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -133,12 +140,9 @@
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="ingamemusic" ID="{524ECB04-B8A7-4883-BDCD-E6A08AA46681}" ShortID="836701722">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="13"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="Tempo" Type="Real64" Value="155"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-2</Value>
-							</ValueList>
-						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
