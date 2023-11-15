@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\silvi\Desktop\Covid 19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\silvi\Desktop\Covid 19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\silvi\Desktop\Covid 19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\silvi\Desktop\Covid 19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="984691642" Language="SFX" Hash="2591855525">
+		<SoundBank Id="984691642" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\InGame</ObjectPath>
 			<ShortName>InGame</ShortName>
 			<Path>InGame.bnk</Path>
@@ -26,7 +26,7 @@
 				<GameParameter Id="4056684167" Name="Master" ObjectPath="\Game Parameters\Default Work Unit\Master"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3604647259" Language="SFX" Hash="1255574089">
+		<SoundBank Id="3604647259" Language="SFX" Hash="3324737798">
 			<ObjectPath>\SoundBanks\Default Work Unit\MainMenu</ObjectPath>
 			<ShortName>MainMenu</ShortName>
 			<Path>MainMenu.bnk</Path>
@@ -42,7 +42,7 @@
 				<Event Id="1420342416" Name="StopMainMenuMusic" ObjectPath="\Events\MainMenu\StopMainMenuMusic" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3762955427" Language="SFX" Hash="1450094811">
+		<SoundBank Id="3762955427" Language="SFX" Hash="3015641925">
 			<ObjectPath>\SoundBanks\Default Work Unit\Tutorial</ObjectPath>
 			<ShortName>Tutorial</ShortName>
 			<Path>Tutorial.bnk</Path>
@@ -179,7 +179,49 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3799629626" Name="Play_ingamemusic" ObjectPath="\Events\Tutorial\Play_ingamemusic" DurationType="Infinite">
+				<Event Id="1421871233" Name="Play_ingamemusic_level" ObjectPath="\Events\Tutorial\Play_ingamemusic_level" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="113840108" Language="SFX">
+							<ShortName>GAMEPLAY_Level1_2nd wave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Level1_2nd wave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="379388087" Language="SFX">
+							<ShortName>GAMEPLAY_Levle1_1st wave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Levle1_1st wave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="471260018" Language="SFX">
+							<ShortName>Comienzo_de_juego.wav</ShortName>
+							<Path>SFX\Comienzo_de_juego_10C4C929.wem</Path>
+						</File>
+						<File Id="596694758" Language="SFX">
+							<ShortName>GAMEPLAY_Level1_3stwave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Level1_3stwave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{03ED9C28-5FCC-466C-A5D3-B5D3BFA03977}">
+							<Media>
+								<File Id="379388087"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{ED723FBA-EE10-4712-973D-5EEE926EC1F4}">
+							<Media>
+								<File Id="113840108"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{9E050B27-95DF-445D-B3E8-E9B97C385A17}">
+							<Media>
+								<File Id="596694758"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{2ADBBC29-C322-4579-9EEC-19E2B879A83C}">
+							<Media>
+								<File Id="379388087"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2248956983" Name="Play_ingamemusic_tutorial" ObjectPath="\Events\Tutorial\Play_ingamemusic_tutorial" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="443992359" Language="SFX">
 							<ShortName>GAMEPLAY_B_155.wav</ShortName>
@@ -360,6 +402,15 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="563444820" Name="ingamemusic_level" ObjectPath="\Switches\Default Work Unit\ingamemusic_level" GUID="{2ADBBC29-C322-4579-9EEC-19E2B879A83C}">
+					<Switches>
+						<Switch Id="1453692858" Name="wave_1" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\wave_1" GUID="{03ED9C28-5FCC-466C-A5D3-B5D3BFA03977}"/>
+						<Switch Id="1453692856" Name="wave_3" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\wave_3" GUID="{9E050B27-95DF-445D-B3E8-E9B97C385A17}"/>
+						<Switch Id="1453692857" Name="wave_2" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\wave_2" GUID="{ED723FBA-EE10-4712-973D-5EEE926EC1F4}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

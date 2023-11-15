@@ -106,7 +106,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_ingamemusic" ID="{C44B7B60-3FC1-4DC2-BD79-5A4D1F7B7B7E}">
+				<Event Name="Play_ingamemusic_tutorial" ID="{C44B7B60-3FC1-4DC2-BD79-5A4D1F7B7B7E}">
 					<ChildrenList>
 						<Action Name="" ID="{ED18E9CB-B698-4F6F-93E4-F210D09E33FA}" ShortID="906799162">
 							<PropertyList>
@@ -135,7 +135,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="ingamemusic" ID="{524ECB04-B8A7-4883-BDCD-E6A08AA46681}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+									<ObjectRef Name="ingamemusic_tutorial" ID="{524ECB04-B8A7-4883-BDCD-E6A08AA46681}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -424,6 +424,37 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="AMB_Bosque_Noche" ID="{D879BBB0-1133-40D8-9A0D-E7990DEF21BC}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ingamemusic_level" ID="{503A21C3-FC34-4E9D-9778-A26449B5ED57}">
+					<ChildrenList>
+						<Action Name="" ID="{03C08966-F881-4FDF-AF28-82DD106FE1BA}" ShortID="596962211">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ingamemusic_tutorial" ID="{524ECB04-B8A7-4883-BDCD-E6A08AA46681}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{51F397FD-15FC-4432-8C3A-17E0D768C7E6}" ShortID="374945534">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Comienzo_de_juego" ID="{227A69B9-4214-4EC8-8F2A-221B65550797}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{79C03148-D01C-4B90-B672-060ED936BB57}" ShortID="68738551">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ingamemusic_level" ID="{4BDA89BE-723E-475D-A91D-AF7C32387AB6}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
