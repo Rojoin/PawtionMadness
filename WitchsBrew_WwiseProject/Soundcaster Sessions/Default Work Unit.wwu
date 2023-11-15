@@ -6,12 +6,22 @@
 				<SoundcasterSession Name="mixer" ID="{64CF34B2-6CD5-4F20-9EFC-84B907187DBB}">
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="wave" ID="{92810461-F908-45A2-9E3D-8CD32A5BFC44}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Music" ID="{500A95A8-78C0-46DF-8406-19F2D6B1D1B6}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="Master" ID="{17AD368A-0206-4ED6-9631-8D211728477E}"/>
 							<Value>100</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="wave_3" ID="{9E050B27-95DF-445D-B3E8-E9B97C385A17}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
