@@ -2,6 +2,7 @@
 using CustomSceneSwitcher.Switcher;
 using CustomSceneSwitcher.Switcher.Data;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -24,6 +25,7 @@ namespace Menu
 
         private void Awake()
         {
+            EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(startGameButton.gameObject);
             startGameButton.onClick.AddListener(StartGame);
             optionsButton.onClick.AddListener(OptionsToggle);
             backOptionsButton.onClick.AddListener(OptionsToggle);
@@ -54,6 +56,10 @@ namespace Menu
             isOptionsActive = !isOptionsActive;
             SetCanvasVisibility(optionsCanvas, isOptionsActive);
             menuCanvas.blocksRaycasts = !isOptionsActive;
+            if (!isOptionsActive)
+            {
+                EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(startGameButton.gameObject);
+            }
         }
 
         private void HowToToggle()
@@ -61,6 +67,10 @@ namespace Menu
             isHowToPlayActive = !isHowToPlayActive;
             SetCanvasVisibility(creditsCanvas, isHowToPlayActive);
             menuCanvas.blocksRaycasts = !isHowToPlayActive;
+            if (!isHowToPlayActive)
+            {
+                EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(startGameButton.gameObject);
+            }
         }
 
         private void StartGame()
@@ -73,6 +83,14 @@ namespace Menu
             canvas.alpha = state ? 1 : 0;
             canvas.interactable = state;
             canvas.blocksRaycasts = state;
+            if (state)
+            {
+                Button currentbutton = canvas.GetComponentInChildren<Button>();
+                if (currentbutton)
+                {
+                    EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(currentbutton.gameObject);
+                }
+            }
         }
     }
 }
