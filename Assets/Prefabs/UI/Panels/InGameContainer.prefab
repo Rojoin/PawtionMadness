@@ -199,7 +199,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1290281017270470547, guid: f21935161be415b479410196ac7127a6, type: 3}
       propertyPath: m_Size
-      value: 0.81333333
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290281017270470547, guid: f21935161be415b479410196ac7127a6, type: 3}
+      propertyPath: m_Value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1663287320486603517, guid: f21935161be415b479410196ac7127a6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -275,6 +279,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4685170655399502852, guid: f21935161be415b479410196ac7127a6, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685170655399502852, guid: f21935161be415b479410196ac7127a6, type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5597440441821549467, guid: f21935161be415b479410196ac7127a6, type: 3}
@@ -496,10 +504,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5442210268931762513}
-    - target: {fileID: 4534277697734806405, guid: 6890f072e7b1f4f4fb6ea4c7b5fa12bd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleSettingsOn
-      objectReference: {fileID: 0}
     - target: {fileID: 8955902181164796972, guid: 6890f072e7b1f4f4fb6ea4c7b5fa12bd, type: 3}
       propertyPath: m_Name
       value: pauseScreen
@@ -820,18 +824,6 @@ PrefabInstance:
     - target: {fileID: 5073602327997326361, guid: 853a2662e47d9b841acfe5bf4b1a9730, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562186608970020452, guid: 853a2662e47d9b841acfe5bf4b1a9730, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562186608970020452, guid: 853a2662e47d9b841acfe5bf4b1a9730, type: 3}
-      propertyPath: m_Interactable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7827700877761834373, guid: 853a2662e47d9b841acfe5bf4b1a9730, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
