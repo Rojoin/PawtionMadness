@@ -536,105 +536,190 @@
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
-								<Sound Name="Simple_Ataca" ID="{79F61D8E-505A-41E5-A3BC-36253624BF35}" ShortID="289294521">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="sfx" ID="{5AD7DFDB-7220-498E-898A-6F0B137AD976}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Simple_Ataca" ID="{74EBA0FB-3FDF-4C4E-8DAD-828221AEA573}">
-											<Language>SFX</Language>
-											<AudioFile>Simple_Ataca.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="234819874"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Simple_Ataca" ID="{74EBA0FB-3FDF-4C4E-8DAD-828221AEA573}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Simple_Desplazamiento" ID="{02565F30-8034-4681-8446-82AD604F3258}" ShortID="200090340">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="sfx" ID="{5AD7DFDB-7220-498E-898A-6F0B137AD976}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Simple_Desplazamiento" ID="{A228E5A7-F664-427E-B0E1-967DCED2EFAE}">
-											<Language>SFX</Language>
-											<AudioFile>Simple_Desplazamiento.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1063825271"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Simple_Desplazamiento" ID="{A228E5A7-F664-427E-B0E1-967DCED2EFAE}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Simple_RecibeDaño" ID="{87CA4D3A-A5B8-4805-8737-4353E90ADFFE}" ShortID="662099879">
+								<RandomSequenceContainer Name="Simple" ID="{464E74E7-7D64-4F52-900B-4F6A5A1F0691}" ShortID="525131929">
 									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>7</Value>
-											</ValueList>
-										</Property>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="sfx" ID="{5AD7DFDB-7220-498E-898A-6F0B137AD976}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Simple_RecibeDaño" ID="{8FF230F7-B2BD-4002-81A9-DCFE3D9DDC08}">
-											<Language>SFX</Language>
-											<AudioFile>Simple_RecibeDaño.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="364164535"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="Simple_Ataca" ID="{79F61D8E-505A-41E5-A3BC-36253624BF35}" ShortID="289294521">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{5AD7DFDB-7220-498E-898A-6F0B137AD976}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Simple_Ataca" ID="{74EBA0FB-3FDF-4C4E-8DAD-828221AEA573}">
+													<Language>SFX</Language>
+													<AudioFile>Simple_Ataca.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="234819874"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Simple_Ataca" ID="{74EBA0FB-3FDF-4C4E-8DAD-828221AEA573}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Simple_Desplazamiento" ID="{02565F30-8034-4681-8446-82AD604F3258}" ShortID="200090340">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{5AD7DFDB-7220-498E-898A-6F0B137AD976}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Simple_Desplazamiento" ID="{A228E5A7-F664-427E-B0E1-967DCED2EFAE}">
+													<Language>SFX</Language>
+													<AudioFile>Simple_Desplazamiento.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1063825271"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Simple_Desplazamiento" ID="{A228E5A7-F664-427E-B0E1-967DCED2EFAE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Simple_Muerte" ID="{31AF6DCB-47EF-44B4-8857-B0B29A396956}" ShortID="944481230">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Simple_Muerte" ID="{01F4DE27-0281-44E4-B4E6-35985042260D}">
+													<Language>SFX</Language>
+													<AudioFile>Simple_Muerte.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="811572311"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Simple_Muerte" ID="{01F4DE27-0281-44E4-B4E6-35985042260D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Simple_RecibeDaño" ID="{87CA4D3A-A5B8-4805-8737-4353E90ADFFE}" ShortID="662099879">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>15</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{5AD7DFDB-7220-498E-898A-6F0B137AD976}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Simple_RecibeDaño" ID="{8FF230F7-B2BD-4002-81A9-DCFE3D9DDC08}">
+													<Language>SFX</Language>
+													<AudioFile>Simple_RecibeDaño.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="364164535"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Simple_RecibeDaño" ID="{8FF230F7-B2BD-4002-81A9-DCFE3D9DDC08}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Simple_SonidoRandom" ID="{9CBB25D6-B176-4D3F-89B6-F131C266C72D}" ShortID="936831017">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="sfx" ID="{5AD7DFDB-7220-498E-898A-6F0B137AD976}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Simple_SonidoRandom" ID="{D6B7F658-BB8B-4646-985D-7379BF9356B2}">
+													<Language>SFX</Language>
+													<AudioFile>Simple_SonidoRandom.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="192562094"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Simple_SonidoRandom" ID="{D6B7F658-BB8B-4646-985D-7379BF9356B2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Simple_RecibeDaño" ID="{8FF230F7-B2BD-4002-81A9-DCFE3D9DDC08}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Simple_SonidoRandom" ID="{9CBB25D6-B176-4D3F-89B6-F131C266C72D}" ShortID="936831017">
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Rango" ID="{5AD14E63-EFB6-4DBE-B6EC-8D5149DA4F63}" ShortID="980863349">
+									<PropertyList>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="sfx" ID="{5AD7DFDB-7220-498E-898A-6F0B137AD976}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Simple_SonidoRandom" ID="{D6B7F658-BB8B-4646-985D-7379BF9356B2}">
-											<Language>SFX</Language>
-											<AudioFile>Simple_SonidoRandom.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="192562094"/>
-											</MediaIDList>
-										</AudioFileSource>
+										<Sound Name="Rango_Desplazamiento" ID="{6F7B394F-EF04-4D49-BC4D-9032E1B9CC1F}" ShortID="769009333">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Rango_Desplazamiento" ID="{4E698061-9882-4713-BA67-B66BCF172161}">
+													<Language>SFX</Language>
+													<AudioFile>Rango_Desplazamiento.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="816894155"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Rango_Desplazamiento" ID="{4E698061-9882-4713-BA67-B66BCF172161}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="Simple_SonidoRandom" ID="{D6B7F658-BB8B-4646-985D-7379BF9356B2}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Torretas" ID="{3F6CE71B-3719-4DA5-8F3D-F55F65769541}" ShortID="401825358">
