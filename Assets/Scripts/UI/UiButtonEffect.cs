@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, ISelectHandler, IDeselectHandler
 {
     public Action onButtonEnter;
     public Action onButtonExit;
-
+    
     [Header("RayCast Collision:")]
     [Tooltip("Chequea Alphas en el raycast. Modificar el Read/Write Enabled en la imagen si éste es true.")]
     [SerializeField] private bool modifyHitBox;
@@ -43,7 +43,7 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     [SerializeField] private Transform objectToRotate;
     [SerializeField] private float rotateSpeed;
 
-    private void Awake ()
+    private void Awake()
     {
         increment = false;
         initialScale = transform.localScale;
@@ -75,19 +75,19 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         }
     }
 
-    private void OnEnable ()
+    private void OnEnable()
     {
         transform.localScale = initialScale;
         increment = false;
     }
 
-    private void Update ()
+    private void Update()
     {
         ChangeScale();
         RotateObjectToRotate();
     }
 
-    private void OnDisable ()
+    private void OnDisable()
     {
         if (modifyImage)
             currentImage.sprite = imageDefault;
@@ -99,7 +99,7 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             objectToEnable.SetActive(false);
     }
 
-    public void OnMouseEnterButton ()
+    public void OnMouseEnterButton()
     {
         onButtonEnter?.Invoke();
         increment = true;
@@ -114,7 +114,7 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             textToHighlight.color = colorHighlight;
     }
 
-    public void OnMouseExitButton ()
+    public void OnMouseExitButton()
     {
         onButtonExit?.Invoke();
         increment = false;
@@ -129,7 +129,7 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             textToHighlight.color = colorNormal;
     }
 
-    private void ChangeScale ()
+    private void ChangeScale()
     {
         float timeStep = scaleSpeed * Time.unscaledDeltaTime;
         scale = transform.localScale;
@@ -159,25 +159,35 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         }
     }
 
-    public void RotateObjectToRotate ()
+    public void RotateObjectToRotate()
     {
         if (objectToRotate)
             objectToRotate.Rotate(Vector3.forward, rotateSpeed * Time.deltaTime);
     }
 
-    public void OnPointerEnter (PointerEventData eventData)
+    public void OnPointerEnter(PointerEventData eventData)
     {
         OnMouseEnterButton();
     }
 
-    public void OnPointerExit (PointerEventData eventData)
+    public void OnPointerExit(PointerEventData eventData)
     {
         OnMouseExitButton();
     }
 
-    public void OnPointerClick (PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
         if (objectToRotate)
             objectToRotate.rotation = Quaternion.identity;
+    }
+
+    public void OnSelect(BaseEventData eventData)
+    {
+        OnMouseEnterButton();
+    }
+
+    public void OnDeselect(BaseEventData eventData)
+    {
+        OnMouseExitButton();
     }
 }
