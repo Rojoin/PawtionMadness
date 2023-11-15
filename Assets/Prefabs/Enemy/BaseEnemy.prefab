@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8232723196618809625}
   - component: {fileID: 2486498811297812854}
   m_Layer: 6
-  m_Name: SimpleEnemy
+  m_Name: BaseEnemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _animator: {fileID: 8293892621192471131}
+  _animator: {fileID: 8635167995774501889}
 --- !u!65 &2486498811297812854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7601820083345458681, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
       propertyPath: m_Name
-      value: simpleEnemy
+      value: BaseEnemyModel
       objectReference: {fileID: 0}
     - target: {fileID: 7722134507191528772, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
       propertyPath: m_Layer
@@ -244,8 +244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3a53793e4f247128e86a04717843683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &8293892621192471131 stripped
+--- !u!95 &8635167995774501889 stripped
 Animator:
-  m_CorrespondingSourceObject: {fileID: 5578987868913825034, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5306118903385903952, guid: 143bd15b8bac8a347880fe536bb55d67, type: 3}
   m_PrefabInstance: {fileID: 4500600765638465361}
   m_PrefabAsset: {fileID: 0}
