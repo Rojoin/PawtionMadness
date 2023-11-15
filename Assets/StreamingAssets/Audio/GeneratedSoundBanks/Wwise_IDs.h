@@ -30,7 +30,8 @@ namespace AK
         static const AkUniqueID PLAY_AMB_BOSQUE_NOCHE = 1452442514U;
         static const AkUniqueID PLAY_AMB_TUTORIAL = 4120818535U;
         static const AkUniqueID PLAY_CALDERO = 4083340090U;
-        static const AkUniqueID PLAY_INGAMEMUSIC = 3799629626U;
+        static const AkUniqueID PLAY_INGAMEMUSIC_LEVEL = 1421871233U;
+        static const AkUniqueID PLAY_INGAMEMUSIC_TUTORIAL = 2248956983U;
         static const AkUniqueID PLAY_LIBRO_ABRIR_3 = 707032169U;
         static const AkUniqueID PLAY_OLEADA = 417218340U;
         static const AkUniqueID PLAY_OLEADA_FINAL = 3691145017U;
@@ -52,6 +53,29 @@ namespace AK
         static const AkUniqueID USELESS_SONIDOESPECIAL = 3256636576U;
     } // namespace EVENTS
 
+    namespace SWITCHES
+    {
+        namespace INGAMEMUSIC_LEVEL
+        {
+            static const AkUniqueID GROUP = 563444820U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID WAVE_1 = 1453692858U;
+                static const AkUniqueID WAVE_2 = 1453692857U;
+                static const AkUniqueID WAVE_3 = 1453692856U;
+            } // namespace SWITCH
+        } // namespace INGAMEMUSIC_LEVEL
+
+    } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID MASTER = 4056684167U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
@@ -63,6 +87,8 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

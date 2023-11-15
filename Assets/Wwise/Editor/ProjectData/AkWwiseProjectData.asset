@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e7a312c7f9c3cb4d8311f6565e852255
     GuidInternal: 
-    m_lastTime: -8585016836520406141
+    m_lastTime: -8585015459405228988
     List:
     - name: InGame
       guid: da7fa68ead5f7149b4970b88eb6b420d
@@ -156,7 +156,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2621f2e587216f4092b302108c4d8946
     GuidInternal: 
-    m_lastTime: -8585016836573313072
+    m_lastTime: -8585015459405118980
     List:
     - name: Play_Perder_Juego
       guid: 7f0688f8eca3d14da04eb57ace82398c
@@ -297,7 +297,7 @@ MonoBehaviour:
     ParentPath: Events\Tutorial
     guid: 090215d47f508a4c8e101bbd3392b83a
     GuidInternal: 
-    m_lastTime: -8585015910014891482
+    m_lastTime: -8585015449230122636
     List:
     - name: Defense_Muerte
       guid: 9cb36b429d81bc41a26822404b3a77a9
@@ -571,9 +571,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 18.478844
       minDuration: 18.478844
-    - name: Play_ingamemusic
-      guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
-      id: 3799629626
+    - name: Play_ingamemusic_level
+      guid: c3213a5034fc9d4e9778a26449b5ed57
+      id: 1421871233
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -581,10 +581,27 @@ MonoBehaviour:
       - ElementName: Tutorial
         ObjectType: 12
         guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Play_ingamemusic
+      - ElementName: Play_ingamemusic_level
+        ObjectType: 3
+        guid: c3213a5034fc9d4e9778a26449b5ed57
+      Path: Events\Tutorial\Play_ingamemusic_level
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ingamemusic_tutorial
+      guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
+      id: 2248956983
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Play_ingamemusic_tutorial
         ObjectType: 3
         guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
-      Path: Events\Tutorial\Play_ingamemusic
+      Path: Events\Tutorial\Play_ingamemusic_tutorial
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -906,7 +923,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: eda32d6682632e48b8937bccdfa5c6be
     GuidInternal: 
-    m_lastTime: -8585015935293686581
+    m_lastTime: -8585015459404878966
     List:
     - name: Master
       guid: 8a36ad170602d64e96318d211728477e
@@ -976,8 +993,74 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d95443d702661b448cd3207c91b5b886
     GuidInternal: 
-    m_lastTime: -8585017154520906691
-    List: []
+    m_lastTime: -8585015459405338993
+    List:
+    - name: ingamemusic_level
+      guid: 29bcdb2a22c379459eec19e2b879a83c
+      id: 563444820
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d95443d702661b448cd3207c91b5b886
+      - ElementName: ingamemusic_level
+        ObjectType: 11
+        guid: 29bcdb2a22c379459eec19e2b879a83c
+      Path: Switches\Default Work Unit\ingamemusic_level
+      values:
+      - name: wave_1
+        guid: 289ced03cc5f6c46a5d3b5d3bfa03977
+        id: 1453692858
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: wave_1
+          ObjectType: 10
+          guid: 289ced03cc5f6c46a5d3b5d3bfa03977
+      - name: wave_2
+        guid: ba3f72ed10ee1247973d5eee926ec1f4
+        id: 1453692857
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: wave_2
+          ObjectType: 10
+          guid: ba3f72ed10ee1247973d5eee926ec1f4
+      - name: wave_3
+        guid: 270b059edf955d44b3e8e9b97c385a17
+        id: 1453692856
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: wave_3
+          ObjectType: 10
+          guid: 270b059edf955d44b3e8e9b97c385a17
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -993,7 +1076,7 @@ MonoBehaviour:
     m_lastTime: -8585031893223110206
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 06000000100000003700000038000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
