@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using CustomSceneSwitcher.Switcher;
 using CustomSceneSwitcher.Switcher.Data;
+using Player;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        player.SetActive(true);
         pauseChannelSO.Subscribe(PauseLevel);
         if (isTutorialScene)
         {
@@ -58,8 +60,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            player.GetComponent<PlayerMovement>().enabled = false;
             _cameraManager.gameObject.SetActive(true);
             Invoke(nameof(InitGame), timeUntilActivateEvents);
+            
         }
     }
 
@@ -72,9 +76,14 @@ public class GameManager : MonoBehaviour
         enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
         enemyManager.activateWinScreenChannel.AddListener(WinGame);
         gridToggleChannelSO.Subscribe(GridToggle);
-        player.SetActive(true);
         initialCounterChannelSO.RaiseEvent();
         enemySpawner.gameObject.SetActive(!isTutorialScene);
+        Invoke(nameof(InitPlayer),timeUntilActivateEvents);
+    }
+
+    private void InitPlayer()
+    {
+        player.GetComponent<PlayerMovement>().enabled = true;
     }
 
     private void OnDestroy()
