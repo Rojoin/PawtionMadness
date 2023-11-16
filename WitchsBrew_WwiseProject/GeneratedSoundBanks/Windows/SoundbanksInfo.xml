@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>/Users/f-lo/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/WitchsBrew/WitchsBrew_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/f-lo/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/WitchsBrew/WitchsBrew_WwiseProject/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/f-lo/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/WitchsBrew/WitchsBrew_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/f-lo/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/WitchsBrew/WitchsBrew_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="984691642" Language="SFX">
+		<SoundBank Id="984691642" Language="SFX" Hash="2591855525">
 			<ObjectPath>\SoundBanks\Default Work Unit\InGame</ObjectPath>
 			<ShortName>InGame</ShortName>
 			<Path>InGame.bnk</Path>
@@ -26,7 +26,7 @@
 				<GameParameter Id="4056684167" Name="Master" ObjectPath="\Game Parameters\Default Work Unit\Master"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3604647259" Language="SFX" Hash="3324737798">
+		<SoundBank Id="3604647259" Language="SFX" Hash="133638210">
 			<ObjectPath>\SoundBanks\Default Work Unit\MainMenu</ObjectPath>
 			<ShortName>MainMenu</ShortName>
 			<Path>MainMenu.bnk</Path>
@@ -35,31 +35,31 @@
 					<IncludedMemoryFiles>
 						<File Id="783072181" Language="SFX">
 							<ShortName>Witch´s Brew_main menu_155bpm.wav</ShortName>
-							<Path>SFX\Witch´s Brew_main menu_155bpm_D79FB2B7.wem</Path>
+							<Path>SFX/Witch´s Brew_main menu_155bpm_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="1420342416" Name="StopMainMenuMusic" ObjectPath="\Events\MainMenu\StopMainMenuMusic" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3762955427" Language="SFX" Hash="3015641925">
+		<SoundBank Id="3762955427" Language="SFX" Hash="365797830">
 			<ObjectPath>\SoundBanks\Default Work Unit\Tutorial</ObjectPath>
 			<ShortName>Tutorial</ShortName>
 			<Path>Tutorial.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1363661528" Name="Defense_Muerte" ObjectPath="\Events\Tutorial\Defense_Muerte" DurationType="OneShot" DurationMin="1.083333" DurationMax="1.083333">
+				<Event Id="1363661528" Name="Defense_Muerte" ObjectPath="\Events\Tutorial\Defense_Muerte" DurationType="OneShot" DurationMin="0.96514" DurationMax="1.216001">
 					<IncludedMemoryFiles>
 						<File Id="521464031" Language="SFX">
 							<ShortName>Torretas\Defense_Muerte.wav</ShortName>
-							<Path>SFX\Torretas\Defense_Muerte_10C4C929.wem</Path>
+							<Path>SFX/Torretas/Defense_Muerte_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3373196541" Name="Defense_SonidosEspeciales" ObjectPath="\Events\Tutorial\Defense_SonidosEspeciales" DurationType="OneShot" DurationMin="3." DurationMax="3.">
+				<Event Id="3373196541" Name="Defense_SonidosEspeciales" ObjectPath="\Events\Tutorial\Defense_SonidosEspeciales" DurationType="OneShot" DurationMin="2.450873" DurationMax="3.">
 					<IncludedMemoryFiles>
 						<File Id="828394097" Language="SFX">
 							<ShortName>Torretas\Defense_SonidosEspeciales.wav</ShortName>
-							<Path>SFX\Torretas\Defense_SonidosEspeciales_10C4C929.wem</Path>
+							<Path>SFX/Torretas/Defense_SonidosEspeciales_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -67,7 +67,7 @@
 					<IncludedMemoryFiles>
 						<File Id="368238731" Language="SFX">
 							<ShortName>Eliminar_Cristal.wav</ShortName>
-							<Path>SFX\Eliminar_Cristal_10C4C929.wem</Path>
+							<Path>SFX/Eliminar_Cristal_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -75,7 +75,7 @@
 					<IncludedMemoryFiles>
 						<File Id="399805308" Language="SFX">
 							<ShortName>Error no se puede poner cristal.wav</ShortName>
-							<Path>SFX\Error no se puede poner cristal_10C4C929.wem</Path>
+							<Path>SFX/Error no se puede poner cristal_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -83,7 +83,7 @@
 					<IncludedMemoryFiles>
 						<File Id="273189631" Language="SFX">
 							<ShortName>Error no se puede poner mas items en la mesa.wav</ShortName>
-							<Path>SFX\Error no se puede poner mas items en la mesa_10C4C929.wem</Path>
+							<Path>SFX/Error no se puede poner mas items en la mesa_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -91,55 +91,55 @@
 					<IncludedMemoryFiles>
 						<File Id="422007141" Language="SFX">
 							<ShortName>Torretas\Explosive_Disparo.wav</ShortName>
-							<Path>SFX\Torretas\Explosive_Disparo_10C4C929.wem</Path>
+							<Path>SFX/Torretas/Explosive_Disparo_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3296522035" Name="Explosive_Muerte" ObjectPath="\Events\Tutorial\Explosive_Muerte" DurationType="OneShot" DurationMin="0.927083" DurationMax="0.927083">
+				<Event Id="3296522035" Name="Explosive_Muerte" ObjectPath="\Events\Tutorial\Explosive_Muerte" DurationType="OneShot" DurationMin="0.779581" DurationMax="0.982211">
 					<IncludedMemoryFiles>
 						<File Id="66053801" Language="SFX">
 							<ShortName>Torretas\Explosive_Muerte.wav</ShortName>
-							<Path>SFX\Torretas\Explosive_Muerte_10C4C929.wem</Path>
+							<Path>SFX/Torretas/Explosive_Muerte_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2541590549" Name="Explosive_SonidoEspecial" ObjectPath="\Events\Tutorial\Explosive_SonidoEspecial" DurationType="OneShot" DurationMin="1.8125" DurationMax="1.8125">
+				<Event Id="2541590549" Name="Explosive_SonidoEspecial" ObjectPath="\Events\Tutorial\Explosive_SonidoEspecial" DurationType="OneShot" DurationMin="1.438582" DurationMax="2.155438">
 					<IncludedMemoryFiles>
 						<File Id="144211292" Language="SFX">
 							<ShortName>Torretas\Explosive_SonidoEspecial.wav</ShortName>
-							<Path>SFX\Torretas\Explosive_SonidoEspecial_10C4C929.wem</Path>
+							<Path>SFX/Torretas/Explosive_SonidoEspecial_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3298473939" Name="Laser_Disparo" ObjectPath="\Events\Tutorial\Laser_Disparo" DurationType="OneShot" DurationMin="3.875" DurationMax="3.875">
+				<Event Id="3298473939" Name="Laser_Disparo" ObjectPath="\Events\Tutorial\Laser_Disparo" DurationType="OneShot" DurationMin="3.657513" DurationMax="4.10542">
 					<IncludedMemoryFiles>
 						<File Id="596125856" Language="SFX">
 							<ShortName>Torretas\Laser_Disparo.wav</ShortName>
-							<Path>SFX\Torretas\Laser_Disparo_10C4C929.wem</Path>
+							<Path>SFX/Torretas/Laser_Disparo_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3116544519" Name="Laser_Muerte" ObjectPath="\Events\Tutorial\Laser_Muerte" DurationType="OneShot" DurationMin="1.5625" DurationMax="1.5625">
+				<Event Id="3116544519" Name="Laser_Muerte" ObjectPath="\Events\Tutorial\Laser_Muerte" DurationType="OneShot" DurationMin="1.313901" DurationMax="1.5625">
 					<IncludedMemoryFiles>
 						<File Id="343120297" Language="SFX">
 							<ShortName>Torretas\Laser_Muerte.wav</ShortName>
-							<Path>SFX\Torretas\Laser_Muerte_10C4C929.wem</Path>
+							<Path>SFX/Torretas/Laser_Muerte_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2203504569" Name="Laser_SonidoEspecial" ObjectPath="\Events\Tutorial\Laser_SonidoEspecial" DurationType="OneShot" DurationMin="5.875" DurationMax="5.875">
+				<Event Id="2203504569" Name="Laser_SonidoEspecial" ObjectPath="\Events\Tutorial\Laser_SonidoEspecial" DurationType="OneShot" DurationMin="5.545261" DurationMax="6.224346">
 					<IncludedMemoryFiles>
 						<File Id="329345983" Language="SFX">
 							<ShortName>Torretas\Laser_SonidoEspecial.wav</ShortName>
-							<Path>SFX\Torretas\Laser_SonidoEspecial_10C4C929.wem</Path>
+							<Path>SFX/Torretas/Laser_SonidoEspecial_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2559549617" Name="Play_Agarrar_Item_Frasco" ObjectPath="\Events\Tutorial\Play_Agarrar_Item_Frasco" DurationType="OneShot" DurationMin="2.625" DurationMax="2.625">
+				<Event Id="2559549617" Name="Play_Agarrar_Item_Frasco" ObjectPath="\Events\Tutorial\Play_Agarrar_Item_Frasco" DurationType="OneShot" DurationMin="1.291667" DurationMax="1.291667">
 					<IncludedMemoryFiles>
-						<File Id="26688086" Language="SFX">
-							<ShortName>Procesar item.wav</ShortName>
-							<Path>SFX\Procesar item_10C4C929.wem</Path>
+						<File Id="506128643" Language="SFX">
+							<ShortName>Agarrar_Item_Frasco.wav</ShortName>
+							<Path>SFX/Agarrar_Item_Frasco_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -147,7 +147,7 @@
 					<IncludedMemoryFiles>
 						<File Id="460792029" Language="SFX">
 							<ShortName>Cocina\Agarrar_item_Porcion.wav</ShortName>
-							<Path>SFX\Cocina\Agarrar_item_Porcion_10C4C929.wem</Path>
+							<Path>SFX/Cocina/Agarrar_item_Porcion_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -155,7 +155,7 @@
 					<IncludedMemoryFiles>
 						<File Id="380180008" Language="SFX">
 							<ShortName>Ambiente\AMB_Bosque_Noche.wav</ShortName>
-							<Path>SFX\Ambiente\AMB_Bosque_Noche_D79FB2B7.wem</Path>
+							<Path>SFX/Ambiente/AMB_Bosque_Noche_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -163,11 +163,11 @@
 					<IncludedMemoryFiles>
 						<File Id="380180008" Language="SFX">
 							<ShortName>Ambiente\AMB_Bosque_Noche.wav</ShortName>
-							<Path>SFX\Ambiente\AMB_Bosque_Noche_D79FB2B7.wem</Path>
+							<Path>SFX/Ambiente/AMB_Bosque_Noche_D79FB2B7.wem</Path>
 						</File>
 						<File Id="475716205" Language="SFX">
 							<ShortName>AMB_Pajaros_cuervos_start.wav</ShortName>
-							<Path>SFX\AMB_Pajaros_cuervos_start_D79FB2B7.wem</Path>
+							<Path>SFX/AMB_Pajaros_cuervos_start_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -175,7 +175,7 @@
 					<IncludedMemoryFiles>
 						<File Id="311946003" Language="SFX">
 							<ShortName>Cocina\Caldero.wav</ShortName>
-							<Path>SFX\Cocina\Caldero_10C4C929.wem</Path>
+							<Path>SFX/Cocina/Caldero_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -183,19 +183,27 @@
 					<IncludedMemoryFiles>
 						<File Id="113840108" Language="SFX">
 							<ShortName>GAMEPLAY_Level1_2nd wave_tale reverb.wav</ShortName>
-							<Path>SFX\GAMEPLAY_Level1_2nd wave_tale reverb_D79FB2B7.wem</Path>
+							<Path>SFX/GAMEPLAY_Level1_2nd wave_tale reverb_D79FB2B7.wem</Path>
 						</File>
 						<File Id="379388087" Language="SFX">
 							<ShortName>GAMEPLAY_Levle1_1st wave_tale reverb.wav</ShortName>
-							<Path>SFX\GAMEPLAY_Levle1_1st wave_tale reverb_D79FB2B7.wem</Path>
+							<Path>SFX/GAMEPLAY_Levle1_1st wave_tale reverb_D79FB2B7.wem</Path>
 						</File>
 						<File Id="471260018" Language="SFX">
 							<ShortName>Comienzo_de_juego.wav</ShortName>
-							<Path>SFX\Comienzo_de_juego_10C4C929.wem</Path>
+							<Path>SFX/Comienzo_de_juego_10C4C929.wem</Path>
 						</File>
 						<File Id="596694758" Language="SFX">
 							<ShortName>GAMEPLAY_Level1_3stwave_tale reverb.wav</ShortName>
-							<Path>SFX\GAMEPLAY_Level1_3stwave_tale reverb_D79FB2B7.wem</Path>
+							<Path>SFX/GAMEPLAY_Level1_3stwave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="818862688" Language="SFX">
+							<ShortName>GAMEPLAY_Loose_talereverb.wav</ShortName>
+							<Path>SFX/GAMEPLAY_Loose_talereverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1060214257" Language="SFX">
+							<ShortName>GAMEPLAY_Winmusic_talereverb.wav</ShortName>
+							<Path>SFX/GAMEPLAY_Winmusic_talereverb_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -219,25 +227,35 @@
 								<File Id="379388087"/>
 							</Media>
 						</SwitchContainer>
+						<SwitchContainer SwitchValue="{3930D937-FEAE-4340-9FAA-F226DBA1E665}">
+							<Media>
+								<File Id="818862688"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{38AE8664-B5B4-4A8C-A3E7-A54B772C1F05}">
+							<Media>
+								<File Id="1060214257"/>
+							</Media>
+						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 				<Event Id="2248956983" Name="Play_ingamemusic_tutorial" ObjectPath="\Events\Tutorial\Play_ingamemusic_tutorial" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="443992359" Language="SFX">
 							<ShortName>GAMEPLAY_B_155.wav</ShortName>
-							<Path>SFX\GAMEPLAY_B_155_D79FB2B7.wem</Path>
+							<Path>SFX/GAMEPLAY_B_155_D79FB2B7.wem</Path>
 						</File>
 						<File Id="452233697" Language="SFX">
 							<ShortName>GAMEPLAY_C_155.wav</ShortName>
-							<Path>SFX\GAMEPLAY_C_155_D79FB2B7.wem</Path>
+							<Path>SFX/GAMEPLAY_C_155_D79FB2B7.wem</Path>
 						</File>
 						<File Id="471260018" Language="SFX">
 							<ShortName>Comienzo_de_juego.wav</ShortName>
-							<Path>SFX\Comienzo_de_juego_10C4C929.wem</Path>
+							<Path>SFX/Comienzo_de_juego_10C4C929.wem</Path>
 						</File>
 						<File Id="795429319" Language="SFX">
 							<ShortName>GAMEPLAY_A_155.wav</ShortName>
-							<Path>SFX\GAMEPLAY_A_155_D79FB2B7.wem</Path>
+							<Path>SFX/GAMEPLAY_A_155_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -245,15 +263,15 @@
 					<IncludedMemoryFiles>
 						<File Id="789842628" Language="SFX">
 							<ShortName>Recetario\libro_abrir_3.wav</ShortName>
-							<Path>SFX\Recetario\libro_abrir_3_10C4C929.wem</Path>
+							<Path>SFX/Recetario/libro_abrir_3_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="417218340" Name="Play_Oleada" ObjectPath="\Events\Tutorial\Play_Oleada" DurationType="OneShot" DurationMin="85.333336" DurationMax="85.333336">
+				<Event Id="417218340" Name="Play_Oleada" ObjectPath="\Events\Tutorial\Play_Oleada" DurationType="OneShot" DurationMin="3.3125" DurationMax="3.3125">
 					<IncludedMemoryFiles>
-						<File Id="172626798" Language="SFX">
-							<ShortName>AMB_Pajaros_cuervos_start.wav</ShortName>
-							<Path>SFX\AMB_Pajaros_cuervos_start_10C4C929.wem</Path>
+						<File Id="1064777720" Language="SFX">
+							<ShortName>Oleada.wav</ShortName>
+							<Path>SFX/Oleada_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -261,7 +279,15 @@
 					<IncludedMemoryFiles>
 						<File Id="198317943" Language="SFX">
 							<ShortName>Ambiente\Oleada final.wav</ShortName>
-							<Path>SFX\Ambiente\Oleada final_10C4C929.wem</Path>
+							<Path>SFX/Ambiente/Oleada final_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4180257511" Name="Play_Perder_Juego" ObjectPath="\Events\Tutorial\Play_Perder_Juego" DurationType="OneShot" DurationMin="3.75" DurationMax="3.75">
+					<IncludedMemoryFiles>
+						<File Id="148464406" Language="SFX">
+							<ShortName>Perder_Juego.wav</ShortName>
+							<Path>SFX/Perder_Juego_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -269,7 +295,7 @@
 					<IncludedMemoryFiles>
 						<File Id="375136911" Language="SFX">
 							<ShortName>Pocion_Lista.wav</ShortName>
-							<Path>SFX\Pocion_Lista_10C4C929.wem</Path>
+							<Path>SFX/Pocion_Lista_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -277,7 +303,7 @@
 					<IncludedMemoryFiles>
 						<File Id="566978199" Language="SFX">
 							<ShortName>Cocina\Pocion preparandose.wav</ShortName>
-							<Path>SFX\Cocina\Pocion preparandose_10C4C929.wem</Path>
+							<Path>SFX/Cocina/Pocion preparandose_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -285,7 +311,7 @@
 					<IncludedMemoryFiles>
 						<File Id="785466920" Language="SFX">
 							<ShortName>Cocina\Poner item en caldero.wav</ShortName>
-							<Path>SFX\Cocina\Poner item en caldero_10C4C929.wem</Path>
+							<Path>SFX/Cocina/Poner item en caldero_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -293,7 +319,7 @@
 					<IncludedMemoryFiles>
 						<File Id="730390426" Language="SFX">
 							<ShortName>Player\Player_Agarrar.wav</ShortName>
-							<Path>SFX\Player\Player_Agarrar_10C4C929.wem</Path>
+							<Path>SFX/Player/Player_Agarrar_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -301,23 +327,23 @@
 					<IncludedMemoryFiles>
 						<File Id="10081477" Language="SFX">
 							<ShortName>Player\Player_Desplazamiento4.wav</ShortName>
-							<Path>SFX\Player\Player_Desplazamiento4_10C4C929.wem</Path>
+							<Path>SFX/Player/Player_Desplazamiento4_10C4C929.wem</Path>
 						</File>
 						<File Id="322106114" Language="SFX">
 							<ShortName>Player\Player_Desplazamiento1.wav</ShortName>
-							<Path>SFX\Player\Player_Desplazamiento1_10C4C929.wem</Path>
+							<Path>SFX/Player/Player_Desplazamiento1_10C4C929.wem</Path>
 						</File>
 						<File Id="457334395" Language="SFX">
 							<ShortName>Player\Player_Desplazamiento3.wav</ShortName>
-							<Path>SFX\Player\Player_Desplazamiento3_10C4C929.wem</Path>
+							<Path>SFX/Player/Player_Desplazamiento3_10C4C929.wem</Path>
 						</File>
 						<File Id="521151047" Language="SFX">
 							<ShortName>Player\Player_Desplazamiento2.wav</ShortName>
-							<Path>SFX\Player\Player_Desplazamiento2_10C4C929.wem</Path>
+							<Path>SFX/Player/Player_Desplazamiento2_10C4C929.wem</Path>
 						</File>
 						<File Id="569065176" Language="SFX">
 							<ShortName>Player\Player_Desplazamiento5.wav</ShortName>
-							<Path>SFX\Player\Player_Desplazamiento5_10C4C929.wem</Path>
+							<Path>SFX/Player/Player_Desplazamiento5_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -325,7 +351,7 @@
 					<IncludedMemoryFiles>
 						<File Id="904775504" Language="SFX">
 							<ShortName>Player\Player_Soltar.wav</ShortName>
-							<Path>SFX\Player\Player_Soltar_10C4C929.wem</Path>
+							<Path>SFX/Player/Player_Soltar_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -333,7 +359,7 @@
 					<IncludedMemoryFiles>
 						<File Id="405035460" Language="SFX">
 							<ShortName>Player\Player_SonidoRandom.wav</ShortName>
-							<Path>SFX\Player\Player_SonidoRandom_10C4C929.wem</Path>
+							<Path>SFX/Player/Player_SonidoRandom_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -341,39 +367,67 @@
 					<IncludedMemoryFiles>
 						<File Id="26688086" Language="SFX">
 							<ShortName>Procesar item.wav</ShortName>
-							<Path>SFX\Procesar item_10C4C929.wem</Path>
+							<Path>SFX/Procesar item_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4000783731" Name="Proyectil_Disparo" ObjectPath="\Events\Tutorial\Proyectil_Disparo" DurationType="OneShot" DurationMin="1.125" DurationMax="1.125">
+				<Event Id="4000783731" Name="Proyectil_Disparo" ObjectPath="\Events\Tutorial\Proyectil_Disparo" DurationType="OneShot" DurationMin="1.002261" DurationMax="1.26277">
 					<IncludedMemoryFiles>
 						<File Id="220912553" Language="SFX">
 							<ShortName>Torretas\Proyectil_Disparo.wav</ShortName>
-							<Path>SFX\Torretas\Proyectil_Disparo_10C4C929.wem</Path>
+							<Path>SFX/Torretas/Proyectil_Disparo_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1918569767" Name="Proyectil_Muerte" ObjectPath="\Events\Tutorial\Proyectil_Muerte" DurationType="OneShot" DurationMin="0.53125" DurationMax="0.53125">
+				<Event Id="1918569767" Name="Proyectil_Muerte" ObjectPath="\Events\Tutorial\Proyectil_Muerte" DurationType="OneShot" DurationMin="0.501433" DurationMax="0.56284">
 					<IncludedMemoryFiles>
 						<File Id="862371418" Language="SFX">
 							<ShortName>Torretas\Proyectil_Muerte.wav</ShortName>
-							<Path>SFX\Torretas\Proyectil_Muerte_10C4C929.wem</Path>
+							<Path>SFX/Torretas/Proyectil_Muerte_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="32974598" Name="Simple_Ataca" ObjectPath="\Events\Tutorial\Simple_Ataca" DurationType="OneShot" DurationMin="1.615104" DurationMax="1.615104">
+				<Event Id="32974598" Name="Simple_Ataca" ObjectPath="\Events\Tutorial\Simple_Ataca" DurationType="OneShot" DurationMin="1.503392" DurationMax="1.894155">
 					<IncludedMemoryFiles>
 						<File Id="234819874" Language="SFX">
 							<ShortName>Simple_Ataca.wav</ShortName>
-							<Path>SFX\Simple_Ataca_10C4C929.wem</Path>
+							<Path>SFX/Simple_Ataca_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2558775992" Name="Simple_Desplazamiento" ObjectPath="\Events\Tutorial\Simple_Desplazamiento" DurationType="OneShot" DurationMin="16.311001" DurationMax="16.311001">
+				<Event Id="2558775992" Name="Simple_Desplazamiento" ObjectPath="\Events\Tutorial\Simple_Desplazamiento" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="1063825271" Language="SFX">
 							<ShortName>Simple_Desplazamiento.wav</ShortName>
-							<Path>SFX\Simple_Desplazamiento_10C4C929.wem</Path>
+							<Path>SFX/Simple_Desplazamiento_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1574582848" Name="Simple_Muerte" ObjectPath="\Events\Tutorial\Simple_Muerte" DurationType="OneShot" DurationMin="0.833066" DurationMax="0.990687">
+					<IncludedMemoryFiles>
+						<File Id="227384290" Language="SFX">
+							<ShortName>Simple_Muerte2.wav</ShortName>
+							<Path>SFX/Simple_Muerte2_10C4C929.wem</Path>
+						</File>
+						<File Id="811572311" Language="SFX">
+							<ShortName>Simple_Muerte.wav</ShortName>
+							<Path>SFX/Simple_Muerte_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1545430338" Name="Simple_RecibeDano" ObjectPath="\Events\Tutorial\Simple_RecibeDano" DurationType="OneShot" DurationMin="0.6875" DurationMax="0.6875">
+					<IncludedMemoryFiles>
+						<File Id="364164535" Language="SFX">
+							<ShortName>Simple_RecibeDaño.wav</ShortName>
+							<Path>SFX/Simple_RecibeDaño_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4237093597" Name="Simple_SonidoRandom" ObjectPath="\Events\Tutorial\Simple_SonidoRandom" DurationType="OneShot" DurationMin="1.388976" DurationMax="1.964309">
+					<IncludedMemoryFiles>
+						<File Id="192562094" Language="SFX">
+							<ShortName>Simple_SonidoRandom.wav</ShortName>
+							<Path>SFX/Simple_SonidoRandom_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -381,23 +435,23 @@
 					<IncludedMemoryFiles>
 						<File Id="311946003" Language="SFX">
 							<ShortName>Cocina\Caldero.wav</ShortName>
-							<Path>SFX\Cocina\Caldero_10C4C929.wem</Path>
+							<Path>SFX/Cocina/Caldero_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3059053578" Name="Useless_Muerte" ObjectPath="\Events\Tutorial\Useless_Muerte" DurationType="OneShot" DurationMin="0.583333" DurationMax="0.583333">
+				<Event Id="3059053578" Name="Useless_Muerte" ObjectPath="\Events\Tutorial\Useless_Muerte" DurationType="OneShot" DurationMin="0.583333" DurationMax="0.693704">
 					<IncludedMemoryFiles>
 						<File Id="438486586" Language="SFX">
 							<ShortName>Torretas\Useless_Muerte.wav</ShortName>
-							<Path>SFX\Torretas\Useless_Muerte_10C4C929.wem</Path>
+							<Path>SFX/Torretas/Useless_Muerte_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3256636576" Name="Useless_SonidoEspecial" ObjectPath="\Events\Tutorial\Useless_SonidoEspecial" DurationType="OneShot" DurationMin="1.083333" DurationMax="1.083333">
+				<Event Id="3256636576" Name="Useless_SonidoEspecial" ObjectPath="\Events\Tutorial\Useless_SonidoEspecial" DurationType="OneShot" DurationMin="0.910971" DurationMax="1.083333">
 					<IncludedMemoryFiles>
 						<File Id="270813895" Language="SFX">
 							<ShortName>Torretas\Useless_SonidoEspecial.wav</ShortName>
-							<Path>SFX\Torretas\Useless_SonidoEspecial_10C4C929.wem</Path>
+							<Path>SFX/Torretas/Useless_SonidoEspecial_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -408,6 +462,8 @@
 						<Switch Id="1453692858" Name="wave_1" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\wave_1" GUID="{03ED9C28-5FCC-466C-A5D3-B5D3BFA03977}"/>
 						<Switch Id="1453692856" Name="wave_3" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\wave_3" GUID="{9E050B27-95DF-445D-B3E8-E9B97C385A17}"/>
 						<Switch Id="1453692857" Name="wave_2" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\wave_2" GUID="{ED723FBA-EE10-4712-973D-5EEE926EC1F4}"/>
+						<Switch Id="174960569" Name="LOOSE" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\LOOSE" GUID="{3930D937-FEAE-4340-9FAA-F226DBA1E665}"/>
+						<Switch Id="979765101" Name="WIN" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\WIN" GUID="{38AE8664-B5B4-4A8C-A3E7-A54B772C1F05}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>

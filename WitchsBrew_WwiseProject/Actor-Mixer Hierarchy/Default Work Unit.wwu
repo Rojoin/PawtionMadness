@@ -80,45 +80,6 @@
 										<ActiveSource Name="Oleada final" ID="{01BFB137-D110-4BE0-8A1C-3205ECD41C4E}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Oleada" ID="{31F7BC8F-ED99-42FC-849C-5CAE137595FD}" ShortID="679243925">
-									<PropertyList>
-										<Property Name="Color" Type="int16" Value="7"/>
-										<Property Name="OverrideColor" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>1</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="sfx" ID="{5AD7DFDB-7220-498E-898A-6F0B137AD976}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Oleada" ID="{39D19C39-612E-47DA-8BF5-487AD10F8996}">
-											<Language>SFX</Language>
-											<AudioFile>Ambiente\Oleada.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="425330887"/>
-											</MediaIDList>
-										</AudioFileSource>
-										<AudioFileSource Name="AMB_Pajaros_cuervos_start" ID="{BE141DFC-9E00-4A13-A797-9E64B960BECA}">
-											<Language>SFX</Language>
-											<AudioFile>AMB_Pajaros_cuervos_start.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="172626798"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="AMB_Pajaros_cuervos_start" ID="{BE141DFC-9E00-4A13-A797-9E64B960BECA}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="AMB_Pajaros_cuervos_start" ID="{9DCF5F7A-8E1C-470D-9800-760FBBB05126}" ShortID="790188108">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -201,6 +162,29 @@
 									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="Perder_Juego" ID="{7CDC2DDE-B96E-4AB3-86FC-B98608D4C649}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Oleada" ID="{787BD6DB-8BB2-46CF-8056-172ECA160D2D}" ShortID="568568283">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Oleada" ID="{8B8D5690-5D4F-4777-A2AB-D8652BD6EFD0}">
+											<Language>SFX</Language>
+											<AudioFile>Oleada.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1064777720"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Oleada" ID="{8B8D5690-5D4F-4777-A2AB-D8652BD6EFD0}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -293,6 +277,11 @@
 											<PropertyList>
 												<Property Name="Color" Type="int16" Value="11"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -347,6 +336,11 @@
 											<PropertyList>
 												<Property Name="Color" Type="int16" Value="11"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -443,6 +437,13 @@
 									</PropertyList>
 									<ChildrenList>
 										<Sound Name="Procesar_Item" ID="{277F3B98-00B9-479F-8829-8F76CF302452}" ShortID="424258296">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -520,10 +521,17 @@
 														<MediaID ID="26688086"/>
 													</MediaIDList>
 												</AudioFileSource>
+												<AudioFileSource Name="Agarrar_Item_Frasco_01" ID="{1A11E3D1-DEC1-4590-B4B4-BD949325192F}">
+													<Language>SFX</Language>
+													<AudioFile>Agarrar_Item_Frasco.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="506128643"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
 											<ObjectLists/>
 											<ActiveSourceList>
-												<ActiveSource Name="Procesar item" ID="{CBE38563-E9E5-434B-B98B-A7E23D2A6C30}" Platform="Linked"/>
+												<ActiveSource Name="Agarrar_Item_Frasco_01" ID="{1A11E3D1-DEC1-4590-B4B4-BD949325192F}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -551,6 +559,19 @@
 									<ChildrenList>
 										<Sound Name="Simple_Ataca" ID="{79F61D8E-505A-41E5-A3BC-36253624BF35}" ShortID="289294521">
 											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{7DB09B11-3012-4477-B27B-A9E5F502C73F}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>5</Value>
@@ -580,6 +601,9 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Simple_Desplazamiento" ID="{02565F30-8034-4681-8446-82AD604F3258}" ShortID="200090340">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -600,29 +624,6 @@
 											<ObjectLists/>
 											<ActiveSourceList>
 												<ActiveSource Name="Simple_Desplazamiento" ID="{A228E5A7-F664-427E-B0E1-967DCED2EFAE}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Simple_Muerte" ID="{31AF6DCB-47EF-44B4-8857-B0B29A396956}" ShortID="944481230">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Simple_Muerte" ID="{01F4DE27-0281-44E4-B4E6-35985042260D}">
-													<Language>SFX</Language>
-													<AudioFile>Simple_Muerte.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="811572311"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists/>
-											<ActiveSourceList>
-												<ActiveSource Name="Simple_Muerte" ID="{01F4DE27-0281-44E4-B4E6-35985042260D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Simple_RecibeDaño" ID="{87CA4D3A-A5B8-4805-8737-4353E90ADFFE}" ShortID="662099879">
@@ -656,6 +657,21 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Simple_SonidoRandom" ID="{9CBB25D6-B176-4D3F-89B6-F131C266C72D}" ShortID="936831017">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{42E9C480-8C5B-432D-99D1-61D23B1EA9E9}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="400"/>
+																	<Property Name="Min" Type="Real64" Value="-200"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -678,6 +694,107 @@
 												<ActiveSource Name="Simple_SonidoRandom" ID="{D6B7F658-BB8B-4646-985D-7379BF9356B2}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<RandomSequenceContainer Name="Simple_Muerte" ID="{1918293B-78D5-447F-9374-D613E211681A}" ShortID="139502244">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Simple_Muerte" ID="{31AF6DCB-47EF-44B4-8857-B0B29A396956}" ShortID="944481230">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Simple_Muerte" ID="{01F4DE27-0281-44E4-B4E6-35985042260D}">
+															<Language>SFX</Language>
+															<AudioFile>Simple_Muerte.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="811572311"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Simple_Muerte" ID="{01F4DE27-0281-44E4-B4E6-35985042260D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Simple_Muerte2" ID="{2E06985A-D5B8-4560-A643-F1CE9D25E37F}" ShortID="645225046">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>12</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Simple_Muerte2" ID="{3705DA97-879C-410C-8BAD-9867BCD0EA4C}">
+															<Language>SFX</Language>
+															<AudioFile>Simple_Muerte2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="227384290"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Simple_Muerte2" ID="{3705DA97-879C-410C-8BAD-9867BCD0EA4C}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Simple_Muerte3" ID="{2222D57F-3DEF-4B2C-B1F7-BDAD92BDB816}" ShortID="94862194">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>300</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>12</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Simple_Muerte2" ID="{D3C399FA-D9CA-4B0F-8FC4-27B4BC64BED1}">
+															<Language>SFX</Language>
+															<AudioFile>Simple_Muerte2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="227384290"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Simple_Muerte2" ID="{D3C399FA-D9CA-4B0F-8FC4-27B4BC64BED1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
 									</ChildrenList>
 									<ObjectLists/>
 								</RandomSequenceContainer>
@@ -695,6 +812,14 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Rango_Desplazamiento" ID="{6F7B394F-EF04-4D49-BC4D-9032E1B9CC1F}" ShortID="769009333">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>12</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -717,6 +842,569 @@
 												<ActiveSource Name="Rango_Desplazamiento" ID="{4E698061-9882-4713-BA67-B66BCF172161}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<BlendContainer Name="Rango_Esfuerzo_Ataque" ID="{C9295E6A-0F2C-43FA-820E-9975A85124E3}" ShortID="602971227">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="Ataque" ID="{2EC4F0B0-62A4-4957-8800-077010580161}" ShortID="980237217">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Rango_Ataque1" ID="{77132CC7-6643-4375-A046-F63AA1E79530}" ShortID="755383122">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Rango_Ataque1" ID="{5C569745-E60A-41A7-83BF-90788D93F507}">
+																	<Language>SFX</Language>
+																	<AudioFile>Rango_Ataque1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="562732224"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Rango_Ataque1" ID="{5C569745-E60A-41A7-83BF-90788D93F507}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Rango_Ataque2" ID="{E62CD7C7-9203-4684-A3EB-9036771B8DA2}" ShortID="575672471">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>300</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Rango_Ataque1" ID="{A2085EB7-21C9-4E8F-843B-0B80875658C4}">
+																	<Language>SFX</Language>
+																	<AudioFile>Rango_Ataque1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="562732224"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Rango_Ataque1" ID="{A2085EB7-21C9-4E8F-843B-0B80875658C4}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Rango_Ataque3" ID="{C006FC07-721A-493B-9990-EB89B14A0890}" ShortID="269113068">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>-300</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Rango_Ataque1" ID="{6B276194-EEC1-4499-A26C-78DA3B811552}">
+																	<Language>SFX</Language>
+																	<AudioFile>Rango_Ataque1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="562732224"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Rango_Ataque1" ID="{6B276194-EEC1-4499-A26C-78DA3B811552}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<ObjectLists/>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Esfuerzo" ID="{557A9F20-F071-4AC4-8E15-24713A2ADB2F}" ShortID="680597358">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{1D137381-0DB3-4CD0-8390-27AA19872C62}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Rango_Esfuerzo1" ID="{AFA51A29-845D-429F-8B1D-23011F1973F0}" ShortID="401456051">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Rango_Esfuerzo1 " ID="{532DB756-CC18-48C4-B710-D86FA56DFC66}">
+																	<Language>SFX</Language>
+																	<AudioFile>Rango_Esfuerzo1 .wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="398892533"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Rango_Esfuerzo1 " ID="{532DB756-CC18-48C4-B710-D86FA56DFC66}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Rango_Esfuerzo2" ID="{9EDA7F71-0468-439E-9AF2-A699F66AB703}" ShortID="953306304">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Rango_Esfuerzo2" ID="{12C76A43-C6F0-4560-B089-697EF7458740}">
+																	<Language>SFX</Language>
+																	<AudioFile>Rango_Esfuerzo2.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="629652365"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Rango_Esfuerzo2" ID="{12C76A43-C6F0-4560-B089-697EF7458740}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Rango_Esfuerzo3" ID="{4ACD9DA0-FA64-4926-AEC9-89E8081D8CE7}" ShortID="816590777">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Rango_Esfuerzo3" ID="{B78A0663-59FF-43C3-A15C-4C02D30BCB4B}">
+																	<Language>SFX</Language>
+																	<AudioFile>Rango_Esfuerzo3.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="578004247"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Rango_Esfuerzo3" ID="{B78A0663-59FF-43C3-A15C-4C02D30BCB4B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<ObjectLists/>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<ObjectLists/>
+										</BlendContainer>
+										<RandomSequenceContainer Name="Rango_SonidoRandom" ID="{B7F8FD8B-7A33-4198-A324-FCAA7A591336}" ShortID="296418766">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Rango_SonidoRandom1" ID="{95ED58F8-18D2-4401-9918-3BF5AD21F98B}" ShortID="50202248">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Rango_SonidoRandom1" ID="{44298EE3-5495-4955-BB5B-8A61606AFDF0}">
+															<Language>SFX</Language>
+															<AudioFile>Rango_SonidoRandom1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="5654933"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Rango_SonidoRandom1" ID="{44298EE3-5495-4955-BB5B-8A61606AFDF0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Rango_SonidoRandom2" ID="{58BE45E2-6FD3-494F-B42C-40DA0A4C9239}" ShortID="788628057">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Rango_SonidoRandom2" ID="{D64A6EA4-664C-45BE-B94B-4FE4334E109D}">
+															<Language>SFX</Language>
+															<AudioFile>Rango_SonidoRandom2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="36059316"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Rango_SonidoRandom2" ID="{D64A6EA4-664C-45BE-B94B-4FE4334E109D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Rango_SonidoRandom3" ID="{10896267-AEB5-456B-822C-6D35780CB0FE}" ShortID="227004337">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Rango_SonidoRandom3" ID="{1FFC5AA6-6CA0-4251-A549-FD0F79429436}">
+															<Language>SFX</Language>
+															<AudioFile>Rango_SonidoRandom3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="210168708"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Rango_SonidoRandom3" ID="{1FFC5AA6-6CA0-4251-A549-FD0F79429436}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Rango_SonidoRandom4" ID="{9DE198DD-782D-4A02-961E-839B492DF220}" ShortID="517711959">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Rango_SonidoRandom4" ID="{55F958B3-6261-4F36-943B-26DD424BA06A}">
+															<Language>SFX</Language>
+															<AudioFile>Rango_SonidoRandom4.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="5376380"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Rango_SonidoRandom4" ID="{55F958B3-6261-4F36-943B-26DD424BA06A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Rango_RecibeDaño" ID="{0D2C51E9-87C4-4829-B5E3-038AA92CDA4E}" ShortID="248605360">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Rango_RecibeDaño1" ID="{2CF03DBA-D179-4116-B096-900090CA9FC6}" ShortID="630781568">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Rango_RecibeDaño1" ID="{A0FE7EAB-2E69-4A1D-BFE4-3F1A3BA3338B}">
+															<Language>SFX</Language>
+															<AudioFile>Rango_RecibeDaño1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="267401591"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Rango_RecibeDaño1" ID="{A0FE7EAB-2E69-4A1D-BFE4-3F1A3BA3338B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Rango_RecibeDaño2" ID="{47F01E27-EAE0-428E-882A-BB8D1C5CD9BB}" ShortID="338849660">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Rango_RecibeDaño2" ID="{FC54B6D5-2A97-4518-BA29-1301FE23FD2A}">
+															<Language>SFX</Language>
+															<AudioFile>Rango_RecibeDaño2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="877118790"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Rango_RecibeDaño2" ID="{FC54B6D5-2A97-4518-BA29-1301FE23FD2A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Rango_RecibeDaño3" ID="{5E08A9D0-6950-4414-84A5-BDBF214B2242}" ShortID="1059886748">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Rango_RecibeDaño3" ID="{A60D4703-A686-4C73-BBFF-D50F918A2A37}">
+															<Language>SFX</Language>
+															<AudioFile>Rango_RecibeDaño3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="126444222"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Rango_RecibeDaño3" ID="{A60D4703-A686-4C73-BBFF-D50F918A2A37}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Rango_RecibeDaño4" ID="{A7CAA426-BD35-4D94-97A8-272386CC7DE2}" ShortID="165509365">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Rango_RecibeDaño4" ID="{4B1DB09F-F021-40C6-AA6A-E6483BD16D1A}">
+															<Language>SFX</Language>
+															<AudioFile>Rango_RecibeDaño4.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="663546188"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Rango_RecibeDaño4" ID="{4B1DB09F-F021-40C6-AA6A-E6483BD16D1A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Rango_Muerte" ID="{43E185DB-C1D5-4E84-A3A4-96D052D90B76}" ShortID="713548976">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Rango_Muerte1" ID="{CAD61D9D-4E3B-4EBC-BABB-F4B1C6F345C3}" ShortID="175031050">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>1200</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Rango_Muerte1" ID="{E4F18CDD-2A2D-4DE9-830D-3725311C53F4}">
+															<Language>SFX</Language>
+															<AudioFile>Rango_Muerte1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="303722948"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Rango_Muerte1" ID="{E4F18CDD-2A2D-4DE9-830D-3725311C53F4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Rango_Muerte2" ID="{E24AFE58-9A93-43FD-B3A4-B5E7550DB05D}" ShortID="962317641">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>800</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Rango_Muerte2" ID="{F1FE7DD2-90D9-41E9-83C5-A9EC5AD296BC}">
+															<Language>SFX</Language>
+															<AudioFile>Rango_Muerte2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="345241130"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Rango_Muerte2" ID="{F1FE7DD2-90D9-41E9-83C5-A9EC5AD296BC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Rango_Muerte3" ID="{8C573D8D-CCCC-4610-9E91-481F45DE0F27}" ShortID="84372605">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>600</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Rango_Muerte3" ID="{224C56D9-94EB-4CCC-890C-EB16CECD5A97}">
+															<Language>SFX</Language>
+															<AudioFile>Rango_Muerte3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="121789417"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Rango_Muerte3" ID="{224C56D9-94EB-4CCC-890C-EB16CECD5A97}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Rango_Muerte4" ID="{F1EA6613-7F6C-41C2-B6A2-0C978EB08726}" ShortID="21112165">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>600</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Rango_Muerte4" ID="{BE3C515B-6FA7-496B-AA44-A3723C23EEE7}">
+															<Language>SFX</Language>
+															<AudioFile>Rango_Muerte4.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="305948462"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Rango_Muerte4" ID="{BE3C515B-6FA7-496B-AA44-A3723C23EEE7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
 									</ChildrenList>
 									<ObjectLists/>
 								</RandomSequenceContainer>
@@ -1486,6 +2174,21 @@
 							</PropertyList>
 							<ChildrenList>
 								<Sound Name="Defense_Muerte" ID="{E6093A1D-331B-44C6-A1E9-8F9731EE6163}" ShortID="211132955">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{ED7DF738-1D4A-4043-AD04-66BB8FF3E2E5}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="200"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1509,6 +2212,20 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Defense_SonidosEspeciales" ID="{BDFEBA6A-43CC-4752-9274-B8FB226E644A}" ShortID="567878991">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{58316106-3BC5-48FB-B807-758A1D830ED8}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="350"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1532,6 +2249,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Explosive_Disparo" ID="{11A71964-477B-47ED-B70D-5A788E55127C}" ShortID="855024460">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1555,6 +2279,26 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Explosive_Muerte" ID="{888DFD11-55C7-439C-8850-DB415780FF11}" ShortID="203185002">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{749E336F-CF21-4498-8605-BB33B02C8A41}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1578,6 +2322,26 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Explosive_SonidoEspecial" ID="{9CE55A07-9155-4D0C-94A2-65AEF0420669}" ShortID="550811780">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{8209AD89-EA85-4D85-99D0-FC0266F7CC99}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="400"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1601,6 +2365,33 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Laser_Disparo" ID="{DE421D2E-3BFD-48CC-BF5A-11A63C5DFEA9}" ShortID="648034630">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{1D9C1AF3-F84C-4FBC-8EAA-EA2C0A80F503}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2C3CCD20-5F5A-46A5-B730-592361538F25}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1624,6 +2415,25 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Laser_Muerte" ID="{E983EF4F-D3DD-4D23-9BBD-949396F8B65D}" ShortID="1029269447">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{4FDD08BE-BFE3-464F-8E3B-BD372C5DEB6B}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1647,6 +2457,26 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Laser_SonidoEspecial" ID="{5CBF21F7-95AC-4BE1-8F01-444AE0C4DB59}" ShortID="510263412">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3C1CE2C0-AE13-435E-A30B-F344A380A52D}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1670,6 +2500,26 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Proyectil_Disparo" ID="{9231E93F-93EF-4FB3-8ABD-A91E4343924A}" ShortID="233291078">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{94F6F972-ECE7-48E9-8B79-44BFCE538159}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="200"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1693,6 +2543,26 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Proyectil_Muerte" ID="{6EC1AFF5-F2C6-4767-BFA0-F4D2DBBAEAD8}" ShortID="993241811">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{0190B8F2-3FD5-4C2C-8C32-351E340BFBF7}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1716,6 +2586,25 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Useless_Muerte" ID="{A94EACCE-1C63-450F-A2D8-D24931AA08EB}" ShortID="877083287">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{98187AD0-26D9-46DC-A9D0-DDF3636F8D81}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1739,6 +2628,25 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Useless_SonidoEspecial" ID="{7CB42C01-E41F-4688-A0F5-8DC98BB756CF}" ShortID="537398096">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{64AB9B78-8AA7-4721-948E-4DC5A372F3DB}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1990,6 +2898,13 @@
 							</PropertyList>
 							<ChildrenList>
 								<Sound Name="Eliminar_Cristal" ID="{D3D6ADDD-2E4D-4447-B575-C8313FDE5DF1}" ShortID="886645512">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>11</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -2067,6 +2982,13 @@
 							</PropertyList>
 							<ChildrenList>
 								<Sound Name="UI_Menu_Madera" ID="{7E0861FC-BBF1-4CB0-A1F3-998479601534}" ShortID="954396856">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>

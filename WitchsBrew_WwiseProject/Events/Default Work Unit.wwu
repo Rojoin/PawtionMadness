@@ -3,34 +3,56 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{E5F22126-2187-406F-92B3-02108C4D8946}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_Simple_RecibeDano" ID="{A4337C44-C68E-4E81-899A-04556FD155B7}">
+				<Event Name="Rango_Muerte" ID="{5F3758F8-A5AB-4122-A32F-5C4CEE7AB39E}">
 					<ChildrenList>
-						<Action Name="" ID="{07A9ED4E-C78B-44AA-8A36-515FA754CE65}" ShortID="698252067">
+						<Action Name="" ID="{97246F79-41FB-4E6D-9400-9170848CFBC9}" ShortID="836919881">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Simple_RecibeDaño" ID="{87CA4D3A-A5B8-4805-8737-4353E90ADFFE}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+									<ObjectRef Name="Rango_Muerte" ID="{43E185DB-C1D5-4E84-A3A4-96D052D90B76}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Simple_SonidoRandom" ID="{594F62C4-D0FB-4CDE-B301-A57B665A9E31}">
+				<Event Name="Rango_RecibeDa_o" ID="{8F7AC2C3-4504-45B0-8E74-D96C1FDEA425}">
 					<ChildrenList>
-						<Action Name="" ID="{DA00D3B5-E8DA-4203-8CA6-21B447D992A4}" ShortID="155779575">
+						<Action Name="" ID="{0CA9361B-1E11-4BF4-859F-49100A04E258}" ShortID="452223954">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Simple_SonidoRandom" ID="{9CBB25D6-B176-4D3F-89B6-F131C266C72D}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+									<ObjectRef Name="Rango_RecibeDaño" ID="{0D2C51E9-87C4-4829-B5E3-038AA92CDA4E}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_Perder_Juego" ID="{F888067F-A3EC-4DD1-A04E-B57ACE82398C}">
+				<Event Name="Rango_SonidoRandom" ID="{B87B214C-8CB5-4687-8111-C1A3560A06BD}">
 					<ChildrenList>
-						<Action Name="" ID="{D845119C-6EDD-475D-9881-C85045B34D37}" ShortID="842216727">
+						<Action Name="" ID="{E46DB518-D712-4F29-AB5A-018471B9AA35}" ShortID="472901972">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Perder_Juego" ID="{8A961DCE-E7E8-44E7-866A-63BF24BEC5AD}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+									<ObjectRef Name="Rango_SonidoRandom" ID="{B7F8FD8B-7A33-4198-A324-FCAA7A591336}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Rango_Esfuerzo_Ataque" ID="{B4E792E3-4619-4588-B373-A15B15E000F1}">
+					<ChildrenList>
+						<Action Name="" ID="{5771BA36-250B-4D0B-B879-05D8A7D071A9}" ShortID="970585248">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Rango_Esfuerzo_Ataque" ID="{C9295E6A-0F2C-43FA-820E-9975A85124E3}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Rango_Desplazamiento" ID="{EE76A952-16C3-4E69-9A00-CC6D61A8DD1C}">
+					<ChildrenList>
+						<Action Name="" ID="{A18B5F6F-CD68-4195-84B9-231A096398CB}" ShortID="704634845">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Rango_Desplazamiento" ID="{6F7B394F-EF04-4D49-BC4D-9032E1B9CC1F}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

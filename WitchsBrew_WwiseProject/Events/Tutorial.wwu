@@ -23,7 +23,7 @@
 						<Action Name="" ID="{D4AE548F-5981-4A51-B632-E70D2CA272C7}" ShortID="731723267">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Oleada" ID="{31F7BC8F-ED99-42FC-849C-5CAE137595FD}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+									<ObjectRef Name="Oleada" ID="{787BD6DB-8BB2-46CF-8056-172ECA160D2D}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -455,6 +455,50 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="ingamemusic_level" ID="{4BDA89BE-723E-475D-A91D-AF7C32387AB6}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Simple_RecibeDano" ID="{A4337C44-C68E-4E81-899A-04556FD155B7}">
+					<ChildrenList>
+						<Action Name="" ID="{07A9ED4E-C78B-44AA-8A36-515FA754CE65}" ShortID="698252067">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Simple_RecibeDaño" ID="{87CA4D3A-A5B8-4805-8737-4353E90ADFFE}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Simple_SonidoRandom" ID="{594F62C4-D0FB-4CDE-B301-A57B665A9E31}">
+					<ChildrenList>
+						<Action Name="" ID="{DA00D3B5-E8DA-4203-8CA6-21B447D992A4}" ShortID="155779575">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Simple_SonidoRandom" ID="{9CBB25D6-B176-4D3F-89B6-F131C266C72D}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Simple_Muerte" ID="{05C67E28-CCA0-41C6-9BA5-620DF1B04FB8}">
+					<ChildrenList>
+						<Action Name="" ID="{1E8776EF-41B0-4EB0-B29A-0F30FFBEBB03}" ShortID="332949246">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Simple_Muerte" ID="{1918293B-78D5-447F-9374-D613E211681A}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Perder_Juego" ID="{F888067F-A3EC-4DD1-A04E-B57ACE82398C}">
+					<ChildrenList>
+						<Action Name="" ID="{D845119C-6EDD-475D-9881-C85045B34D37}" ShortID="842216727">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Perder_Juego" ID="{8A961DCE-E7E8-44E7-866A-63BF24BEC5AD}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

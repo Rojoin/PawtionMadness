@@ -35,6 +35,7 @@ namespace AK
         static const AkUniqueID PLAY_LIBRO_ABRIR_3 = 707032169U;
         static const AkUniqueID PLAY_OLEADA = 417218340U;
         static const AkUniqueID PLAY_OLEADA_FINAL = 3691145017U;
+        static const AkUniqueID PLAY_PERDER_JUEGO = 4180257511U;
         static const AkUniqueID PLAY_POCION_LISTA = 4143622118U;
         static const AkUniqueID PLAY_POCION_PREPARANDOSE = 4052632251U;
         static const AkUniqueID PLAY_PONER_ITEM_CALDERO = 1672850383U;
@@ -47,6 +48,9 @@ namespace AK
         static const AkUniqueID PROYECTIL_MUERTE = 1918569767U;
         static const AkUniqueID SIMPLE_ATACA = 32974598U;
         static const AkUniqueID SIMPLE_DESPLAZAMIENTO = 2558775992U;
+        static const AkUniqueID SIMPLE_MUERTE = 1574582848U;
+        static const AkUniqueID SIMPLE_RECIBEDANO = 1545430338U;
+        static const AkUniqueID SIMPLE_SONIDORANDOM = 4237093597U;
         static const AkUniqueID SONIDORANDOM_CALDERO = 4145908619U;
         static const AkUniqueID STOPMAINMENUMUSIC = 1420342416U;
         static const AkUniqueID USELESS_MUERTE = 3059053578U;
@@ -61,9 +65,11 @@ namespace AK
 
             namespace SWITCH
             {
+                static const AkUniqueID LOOSE = 174960569U;
                 static const AkUniqueID WAVE_1 = 1453692858U;
                 static const AkUniqueID WAVE_2 = 1453692857U;
                 static const AkUniqueID WAVE_3 = 1453692856U;
+                static const AkUniqueID WIN = 979765101U;
             } // namespace SWITCH
         } // namespace INGAMEMUSIC_LEVEL
 
