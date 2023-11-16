@@ -504,6 +504,61 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Player_Muerte" ID="{224324A6-845B-44D2-AA08-488EB7D8C962}">
+					<ChildrenList>
+						<Action Name="" ID="{9F4656DE-3F1F-4E72-B75A-9962A62AE52D}" ShortID="579912193">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Player Muerte" ID="{979D7E64-B03F-4194-A3F6-96D324ECA925}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Reforzado_Ataca" ID="{FD77BF0C-053F-4470-82FC-F884FBA01DC4}">
+					<ChildrenList>
+						<Action Name="" ID="{71304E42-855F-4BE8-9548-1F30CFC9A065}" ShortID="1006760569">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Reforzado Ataca" ID="{930A9652-E52E-4CAC-8F4B-41B326CA9AB0}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Reforzado_Desplazamiento" ID="{D6850CED-EE7F-4DD1-B6D2-808B4C398FDF}">
+					<ChildrenList>
+						<Action Name="" ID="{7E12B054-6E54-46F6-BB87-BA8103A298A2}" ShortID="67124472">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Reforzado Desplazamiento" ID="{2AB286D0-D55E-40CF-9A19-EB5FB3BFD2F9}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Reforzado_Muerte" ID="{A80BB25F-3C6E-451A-B6E4-4A9DB1823188}">
+					<ChildrenList>
+						<Action Name="" ID="{5DB6B916-ECFB-4E8B-8BAF-99069DD0BF42}" ShortID="934625088">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Reforzado Muerte" ID="{CA137C4D-D209-44BB-87E9-CCAC178D3DF4}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Reforzado_Danio" ID="{5801EC7C-3BB4-4B8E-B71A-B724F2374936}">
+					<ChildrenList>
+						<Action Name="" ID="{FF08CEC2-6CE8-4955-9386-12717FA3E86A}" ShortID="843308867">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Reforzado Recibe Daño" ID="{3923FE71-7835-4FFE-AF8F-021D08DE9E19}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

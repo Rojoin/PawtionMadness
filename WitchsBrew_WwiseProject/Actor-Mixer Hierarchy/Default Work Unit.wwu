@@ -438,6 +438,11 @@
 									<ChildrenList>
 										<Sound Name="Procesar_Item" ID="{277F3B98-00B9-479F-8829-8F76CF302452}" ShortID="424258296">
 											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>8</Value>
@@ -541,6 +546,11 @@
 						<Folder Name="Enemigos" ID="{B8F21E28-A0D4-4CB7-9A5C-B0AB9183D46E}" ShortID="962980226">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
 							<ChildrenList>
@@ -2165,6 +2175,125 @@
 										</BlendContainer>
 									</ChildrenList>
 								</Folder>
+								<Folder Name="Reforzado" ID="{A5CA9DB4-E6F2-41E0-8BB4-B2E22BDBB958}" ShortID="689166321">
+									<ChildrenList>
+										<Sound Name="Reforzado Ataca" ID="{930A9652-E52E-4CAC-8F4B-41B326CA9AB0}" ShortID="426383140">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Reforzado Ataca" ID="{D304A023-F152-4C86-AE0D-E28CCB5F692B}">
+													<Language>SFX</Language>
+													<AudioFile>Enemigos\Reforzado Ataca.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="109182392"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Reforzado Ataca" ID="{D304A023-F152-4C86-AE0D-E28CCB5F692B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Reforzado Desplazamiento" ID="{2AB286D0-D55E-40CF-9A19-EB5FB3BFD2F9}" ShortID="396727038">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Reforzado Desplazamiento" ID="{3645D31D-86E3-44EE-AD31-1DC2352A751B}">
+													<Language>SFX</Language>
+													<AudioFile>Enemigos\Reforzado Desplazamiento.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="756738524"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Reforzado Desplazamiento" ID="{3645D31D-86E3-44EE-AD31-1DC2352A751B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Reforzado Muerte" ID="{CA137C4D-D209-44BB-87E9-CCAC178D3DF4}" ShortID="228553620">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Reforzado Muerte" ID="{2AADE6AA-1B85-47FC-9694-9E9102764D85}">
+													<Language>SFX</Language>
+													<AudioFile>Enemigos\Reforzado Muerte.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="434159900"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Reforzado Muerte" ID="{2AADE6AA-1B85-47FC-9694-9E9102764D85}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Reforzado Recibe Daño" ID="{3923FE71-7835-4FFE-AF8F-021D08DE9E19}" ShortID="311578255">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Reforzado Recibe Daño" ID="{CE0C619F-A5B8-4A23-AFFB-5ACE2574BC0A}">
+													<Language>SFX</Language>
+													<AudioFile>Enemigos\Reforzado Recibe Daño.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="640200867"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Reforzado Recibe Daño" ID="{CE0C619F-A5B8-4A23-AFFB-5ACE2574BC0A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Reforzado Sonido Random" ID="{EF92C961-55A0-4233-9F90-BFF5DA8CE2B3}" ShortID="768716142">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Reforzado Sonido Random" ID="{730C8867-A48F-4438-BAA4-0880E2E2AB21}">
+													<Language>SFX</Language>
+													<AudioFile>Enemigos\Reforzado Sonido Random.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="670351595"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Reforzado Sonido Random" ID="{730C8867-A48F-4438-BAA4-0880E2E2AB21}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Torretas" ID="{3F6CE71B-3719-4DA5-8F3D-F55F65769541}" ShortID="401825358">
@@ -2889,6 +3018,36 @@
 									</ChildrenList>
 									<ObjectLists/>
 								</RandomSequenceContainer>
+								<Sound Name="Player Muerte" ID="{979D7E64-B03F-4194-A3F6-96D324ECA925}" ShortID="791630146">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Player Muerte" ID="{9DCF56E1-053E-4635-A8A8-4275FC36A611}">
+											<Language>SFX</Language>
+											<AudioFile>Player\Player Muerte.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="125234085"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Player Muerte" ID="{9DCF56E1-053E-4635-A8A8-4275FC36A611}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Interaccion" ID="{D6DEDB70-AB43-454F-B98B-675BF4405592}" ShortID="750680980">
