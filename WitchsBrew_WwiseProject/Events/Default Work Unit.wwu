@@ -69,6 +69,39 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Interfaz_AceptarContinuar" ID="{AFB208F1-F9DB-4ED9-8A12-9DFCEBD70B4E}">
+					<ChildrenList>
+						<Action Name="" ID="{E5E357BE-6DB3-4ECF-9BCB-97B81FC08AE7}" ShortID="277884158">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="aceptar continuar" ID="{FA278F93-FFF0-49E6-ACEC-89448770A827}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Procesar_Agarrar" ID="{D8811086-6A1C-4B07-AE33-5289DAC2A7EB}">
+					<ChildrenList>
+						<Action Name="" ID="{6DD61DB8-721A-43DA-82AA-CA77EA8D343A}" ShortID="159663288">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Procesar Agarrar Item" ID="{10BA368B-8C0A-4DB1-B949-0302285E13D5}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Recetario_Cerrar" ID="{2D1ECF0C-F0DC-4CEF-BF34-BDDE0CE087B6}">
+					<ChildrenList>
+						<Action Name="" ID="{8F59BF0C-5DFE-4834-9DDD-59E03A9F71AC}" ShortID="281795928">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="libro receta cerrar" ID="{91E746B7-48BE-4E5B-9325-65DFD0269A2F}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
