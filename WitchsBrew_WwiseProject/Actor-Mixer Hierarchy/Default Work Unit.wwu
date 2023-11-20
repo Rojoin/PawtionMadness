@@ -2365,6 +2365,696 @@
 										</Sound>
 									</ChildrenList>
 								</Folder>
+								<RandomSequenceContainer Name="Charger" ID="{DD4E642B-9B64-40D4-9945-BE9580F417FC}" ShortID="568711441">
+									<PropertyList>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Charger_Desplazamiento" ID="{92F0DC0A-A1EB-4093-A8D0-711E8DC2BD48}" ShortID="701545354">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-400</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Charger_Desplazamiento" ID="{F1F2E8C3-66E4-4773-8F8D-F06569846E6C}">
+													<Language>SFX</Language>
+													<AudioFile>Charger_Desplazamiento.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="358174516"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="Charger_Desplazamiento" ID="{F1F2E8C3-66E4-4773-8F8D-F06569846E6C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<BlendContainer Name="Charger_Esfuerzo_Ataque" ID="{03D56BF3-2EE1-4868-9581-67A4902CCEFA}" ShortID="59078005">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="Charger_Ataca" ID="{E52BD73C-3D62-46B6-8C45-B13C96F3E14A}" ShortID="786288683">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Charger_Ataca1" ID="{3BC5F31D-8F8C-4F1F-B443-0D9224B27DDA}" ShortID="268938786">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Charger_Ataca1" ID="{EA4C6DBE-E125-4589-A6E9-87FAEDAB5E93}">
+																	<Language>SFX</Language>
+																	<AudioFile>Charger_Ataca1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="278312360"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Charger_Ataca1" ID="{EA4C6DBE-E125-4589-A6E9-87FAEDAB5E93}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Charger_Ataca2" ID="{2F2CDB1A-9394-4345-A442-23268CDA62C7}" ShortID="482385968">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Charger_Ataca2" ID="{C155D8E6-CD96-4B6F-9CEA-752D46B4EA06}">
+																	<Language>SFX</Language>
+																	<AudioFile>Charger_Ataca2.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="701479000"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Charger_Ataca2" ID="{C155D8E6-CD96-4B6F-9CEA-752D46B4EA06}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Charger_Ataca3" ID="{A43F7A3C-70EC-42C0-B84A-E1598806B311}" ShortID="982749812">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Charger_Ataca3" ID="{56188EBD-5FEA-4B9F-A99E-16DCEDE4DF32}">
+																	<Language>SFX</Language>
+																	<AudioFile>Charger_Ataca3.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="296355418"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Charger_Ataca3" ID="{56188EBD-5FEA-4B9F-A99E-16DCEDE4DF32}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<ObjectLists/>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Charger_Esfuerzo" ID="{0B64664B-EA09-4ED8-B264-EC4640FDBC2D}" ShortID="892074931">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Charger_Esfuerzo1" ID="{69B555F9-8293-4CDC-9566-124329596272}" ShortID="254281117">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Charger_Esfuerzo1" ID="{6CB4A9E3-25D6-4409-AA91-85B1FED994D0}">
+																	<Language>SFX</Language>
+																	<AudioFile>Charger_Esfuerzo1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="868196858"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Charger_Esfuerzo1" ID="{6CB4A9E3-25D6-4409-AA91-85B1FED994D0}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Charger_Esfuerzo2" ID="{6B2300DC-0EEC-4388-AD19-2B7509C34E7E}" ShortID="842043577">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Charger_Esfuerzo2" ID="{F3A27B80-B4FE-4404-B91C-FC2ED48DF576}">
+																	<Language>SFX</Language>
+																	<AudioFile>Charger_Esfuerzo2.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="694474887"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Charger_Esfuerzo2" ID="{F3A27B80-B4FE-4404-B91C-FC2ED48DF576}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Charger_Esfuerzo3" ID="{02E19DCB-0928-4FA9-B1C0-4D365398A953}" ShortID="474693301">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Charger_Esfuerzo3" ID="{6EE4609D-9A33-4B6A-B47E-3EE020B647CC}">
+																	<Language>SFX</Language>
+																	<AudioFile>Charger_Esfuerzo3.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="172895656"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Charger_Esfuerzo3" ID="{6EE4609D-9A33-4B6A-B47E-3EE020B647CC}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Charger_Esfuerzo4" ID="{0D3612D2-1D7F-48E8-A239-B4ACCDB84929}" ShortID="545388064">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Charger_Esfuerzo4" ID="{2031397F-9A2B-47C5-A82E-A5FA7A49437E}">
+																	<Language>SFX</Language>
+																	<AudioFile>Charger_Esfuerzo4.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="133583972"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ObjectLists/>
+															<ActiveSourceList>
+																<ActiveSource Name="Charger_Esfuerzo4" ID="{2031397F-9A2B-47C5-A82E-A5FA7A49437E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<ObjectLists/>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<ObjectLists/>
+										</BlendContainer>
+										<RandomSequenceContainer Name="Charger_Muerte" ID="{B097B076-2837-40E6-A3EA-6CAA8B68AF1B}" ShortID="588469934">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-200</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Charger_Muerte1" ID="{A05ECEEF-81C0-4931-B5B7-B8CB44B4F311}" ShortID="994048627">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_Muerte1" ID="{BD764275-20DB-47AC-BC82-E75076A71274}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_Muerte1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="695110819"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_Muerte1" ID="{BD764275-20DB-47AC-BC82-E75076A71274}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Charger_Muerte2" ID="{6BDF8EC7-002E-4ABB-B593-D35F816822AA}" ShortID="607239281">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_Muerte2" ID="{313707DA-72C5-48AB-8998-4ACCCE9773B3}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_Muerte2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="437482894"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_Muerte2" ID="{313707DA-72C5-48AB-8998-4ACCCE9773B3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Charger_Muerte3" ID="{D3ECDC63-9224-4B24-BD63-CA5B31142E92}" ShortID="962903796">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_Muerte3" ID="{841C248A-98AA-4240-BB3B-F184E270400A}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_Muerte3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="221519041"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_Muerte3" ID="{841C248A-98AA-4240-BB3B-F184E270400A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Charger_Muerte4" ID="{8693036F-ADE9-435B-8A07-CBCAC7BDF66E}" ShortID="610181043">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_Muerte4" ID="{8F775B65-21A8-463B-8F80-6E3B2AB526B5}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_Muerte4.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="318871400"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_Muerte4" ID="{8F775B65-21A8-463B-8F80-6E3B2AB526B5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Charger_RecibeDaño" ID="{F3557C36-3729-4263-84E6-BA251CBAB2B7}" ShortID="213124427">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Charger_RecibeDaño1" ID="{665D0287-2F33-4C9C-A642-3244514B8C60}" ShortID="235381763">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_RecibeDaño1" ID="{770C1361-757A-4250-AD8F-836C01BE1EAA}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_RecibeDaño1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="638041759"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_RecibeDaño1" ID="{770C1361-757A-4250-AD8F-836C01BE1EAA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Charger_RecibeDaño2" ID="{C168B63E-040A-456F-ACD7-9065AA092505}" ShortID="76444905">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_RecibeDaño2" ID="{5792DB36-B764-477A-A565-1DEBB18DD0B1}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_RecibeDaño2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="805146545"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_RecibeDaño2" ID="{5792DB36-B764-477A-A565-1DEBB18DD0B1}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Charger_RecibeDaño3" ID="{75B3E3ED-685B-4D95-873F-1F0939EC8215}" ShortID="473053498">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_RecibeDaño3" ID="{F0E75FA7-15E8-4343-9A00-F5485E36BAC9}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_RecibeDaño3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="632861586"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_RecibeDaño3" ID="{F0E75FA7-15E8-4343-9A00-F5485E36BAC9}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Charger_RecibeDaño4" ID="{AB0BE690-E570-4C34-94A3-3148B8DF161F}" ShortID="579200018">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_RecibeDaño4" ID="{1CBE8322-8ED3-4AF4-9835-066816BA669D}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_RecibeDaño4.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="797375037"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_RecibeDaño4" ID="{1CBE8322-8ED3-4AF4-9835-066816BA669D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Charger_SonidoAdicional" ID="{75E884CA-1B78-403D-A57C-9934E6EB5981}" ShortID="784270354">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-200</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Charger_SonidoAdicional1" ID="{98928074-A57C-4013-8674-D85A7B8256C2}" ShortID="676262962">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_SonidoAdicional1" ID="{33286B01-A707-4C62-9970-7C93AB265019}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_SonidoAdicional1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="793741605"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_SonidoAdicional1" ID="{33286B01-A707-4C62-9970-7C93AB265019}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Charger_SonidoAdicional2" ID="{E4F6C95D-9055-4C2D-AD0E-902E00A165D5}" ShortID="64384578">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_SonidoAdicional2" ID="{7C4532E1-04D4-4D35-BB06-D923CF21DD72}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_SonidoAdicional2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="793188003"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_SonidoAdicional2" ID="{7C4532E1-04D4-4D35-BB06-D923CF21DD72}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Charger_SonidoAdicional3" ID="{D42F8297-C42F-48C9-99BF-3D0B06E6842B}" ShortID="142945275">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_SonidoAdicional3" ID="{3E7CACBE-71B0-4697-A0F4-324CF0B7EC7B}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_SonidoAdicional3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="366194911"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_SonidoAdicional3" ID="{3E7CACBE-71B0-4697-A0F4-324CF0B7EC7B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Charger_SonidoAdicional4" ID="{66BFEF52-C622-4DF6-B02D-E8A0353DF540}" ShortID="699093888">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_SonidoAdicional4" ID="{5820AA5E-12F3-4AC6-9369-5E62607C5BBC}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_SonidoAdicional4.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="958496512"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_SonidoAdicional4" ID="{5820AA5E-12F3-4AC6-9369-5E62607C5BBC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Charger_SonidoRandom" ID="{461A82AA-57B0-453C-A4E2-C81887E96741}" ShortID="710298819">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Charger_SonidoRandom1" ID="{82B0CD18-898D-4F8C-A19A-0E2214C4C4B0}" ShortID="20760807">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_SonidoRandom1" ID="{4BDB92F8-735B-484A-8C3B-19058F753AE2}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_SonidoRandom1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="887695824"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_SonidoRandom1" ID="{4BDB92F8-735B-484A-8C3B-19058F753AE2}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Charger_SonidoRandom2" ID="{E16FF83A-A8C0-4B3E-BD17-D622168DCA8D}" ShortID="129556988">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_SonidoRandom2" ID="{567479BA-91DA-46D9-855E-CEFF906330EB}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_SonidoRandom2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="855955729"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_SonidoRandom2" ID="{567479BA-91DA-46D9-855E-CEFF906330EB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Charger_SonidoRandom3" ID="{A4DE9A70-78C0-4D3E-92FC-853BD52419B1}" ShortID="95116200">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_SonidoRandom3" ID="{4117E5D4-3037-4C03-9A5F-1629312ED5DB}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_SonidoRandom3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="681582290"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_SonidoRandom3" ID="{4117E5D4-3037-4C03-9A5F-1629312ED5DB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Charger_SonidoRandom4" ID="{430D5365-6E15-4ADF-900B-04574A997632}" ShortID="614980174">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Charger_SonidoRandom4" ID="{0AC9A35C-15EF-4949-ACC1-9559D98ADA8E}">
+															<Language>SFX</Language>
+															<AudioFile>Charger_SonidoRandom4.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="564336624"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Charger_SonidoRandom4" ID="{0AC9A35C-15EF-4949-ACC1-9559D98ADA8E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Torretas" ID="{3F6CE71B-3719-4DA5-8F3D-F55F65769541}" ShortID="401825358">

@@ -42,7 +42,7 @@
 				<Event Id="1420342416" Name="StopMainMenuMusic" ObjectPath="\Events\MainMenu\StopMainMenuMusic" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3762955427" Language="SFX" Hash="365797830">
+		<SoundBank Id="3762955427" Language="SFX" Hash="2143122111">
 			<ObjectPath>\SoundBanks\Default Work Unit\Tutorial</ObjectPath>
 			<ShortName>Tutorial</ShortName>
 			<Path>Tutorial.bnk</Path>
@@ -347,6 +347,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2906595307" Name="Player_Muerte" ObjectPath="\Events\Tutorial\Player_Muerte" DurationType="OneShot" DurationMin="1.64424" DurationMax="1.64424">
+					<IncludedMemoryFiles>
+						<File Id="125234085" Language="SFX">
+							<ShortName>Player\Player Muerte.wav</ShortName>
+							<Path>SFX/Player/Player Muerte_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3883559502" Name="Player_Soltar" ObjectPath="\Events\Tutorial\Player_Soltar" DurationType="OneShot" DurationMin="0.375521" DurationMax="0.375521">
 					<IncludedMemoryFiles>
 						<File Id="904775504" Language="SFX">
@@ -384,6 +392,38 @@
 						<File Id="862371418" Language="SFX">
 							<ShortName>Torretas\Proyectil_Muerte.wav</ShortName>
 							<Path>SFX/Torretas/Proyectil_Muerte_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="143546502" Name="Reforzado_Ataca" ObjectPath="\Events\Tutorial\Reforzado_Ataca" DurationType="OneShot" DurationMin="1.620181" DurationMax="1.620181">
+					<IncludedMemoryFiles>
+						<File Id="109182392" Language="SFX">
+							<ShortName>Enemigos\Reforzado Ataca.wav</ShortName>
+							<Path>SFX/Enemigos/Reforzado Ataca_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="169283807" Name="Reforzado_Danio" ObjectPath="\Events\Tutorial\Reforzado_Danio" DurationType="OneShot" DurationMin="1.139433" DurationMax="1.139433">
+					<IncludedMemoryFiles>
+						<File Id="640200867" Language="SFX">
+							<ShortName>Enemigos\Reforzado Recibe Daño.wav</ShortName>
+							<Path>SFX/Enemigos/Reforzado Recibe Daño_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2871512888" Name="Reforzado_Desplazamiento" ObjectPath="\Events\Tutorial\Reforzado_Desplazamiento" DurationType="OneShot" DurationMin="16.538458" DurationMax="16.538458">
+					<IncludedMemoryFiles>
+						<File Id="756738524" Language="SFX">
+							<ShortName>Enemigos\Reforzado Desplazamiento.wav</ShortName>
+							<Path>SFX/Enemigos/Reforzado Desplazamiento_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1037903552" Name="Reforzado_Muerte" ObjectPath="\Events\Tutorial\Reforzado_Muerte" DurationType="OneShot" DurationMin="0.875011" DurationMax="0.875011">
+					<IncludedMemoryFiles>
+						<File Id="434159900" Language="SFX">
+							<ShortName>Enemigos\Reforzado Muerte.wav</ShortName>
+							<Path>SFX/Enemigos/Reforzado Muerte_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

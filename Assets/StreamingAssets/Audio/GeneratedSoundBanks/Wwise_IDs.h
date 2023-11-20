@@ -41,11 +41,16 @@ namespace AK
         static const AkUniqueID PLAY_PONER_ITEM_CALDERO = 1672850383U;
         static const AkUniqueID PLAYER_AGARRAR = 314498979U;
         static const AkUniqueID PLAYER_DESPLAZAMIENTO = 557674403U;
+        static const AkUniqueID PLAYER_MUERTE = 2906595307U;
         static const AkUniqueID PLAYER_SOLTAR = 3883559502U;
         static const AkUniqueID PLAYER_SONIDORANDOM = 3887090402U;
         static const AkUniqueID PROCESAR_ITEM = 1061034442U;
         static const AkUniqueID PROYECTIL_DISPARO = 4000783731U;
         static const AkUniqueID PROYECTIL_MUERTE = 1918569767U;
+        static const AkUniqueID REFORZADO_ATACA = 143546502U;
+        static const AkUniqueID REFORZADO_DANIO = 169283807U;
+        static const AkUniqueID REFORZADO_DESPLAZAMIENTO = 2871512888U;
+        static const AkUniqueID REFORZADO_MUERTE = 1037903552U;
         static const AkUniqueID SIMPLE_ATACA = 32974598U;
         static const AkUniqueID SIMPLE_DESPLAZAMIENTO = 2558775992U;
         static const AkUniqueID SIMPLE_MUERTE = 1574582848U;

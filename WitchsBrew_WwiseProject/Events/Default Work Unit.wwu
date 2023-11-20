@@ -102,6 +102,72 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Charger_SonidoAdicional" ID="{04BE41FA-48BF-409C-8716-7F55FFCD2D8C}">
+					<ChildrenList>
+						<Action Name="" ID="{3E2AB22E-368E-4BD4-BA1D-EA5F95529424}" ShortID="529430282">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Charger_SonidoAdicional" ID="{75E884CA-1B78-403D-A57C-9934E6EB5981}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Charger_Muerte" ID="{5EA497CF-F6F3-4461-8F0D-BBFD29D36DCE}">
+					<ChildrenList>
+						<Action Name="" ID="{2734F8BB-D568-4782-9D17-1314A98229E4}" ShortID="820036952">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Charger_Muerte" ID="{B097B076-2837-40E6-A3EA-6CAA8B68AF1B}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Charger_RecibeDa_o" ID="{8AEF77A4-5529-4EF5-BA00-357D1C350EDB}">
+					<ChildrenList>
+						<Action Name="" ID="{22946B8D-D61F-44DB-824B-798446EBE5CB}" ShortID="422361160">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Charger_RecibeDaño" ID="{F3557C36-3729-4263-84E6-BA251CBAB2B7}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Charger_SonidoRandom" ID="{3F450692-76C3-4AD9-A8B2-2CE0C20BA91C}">
+					<ChildrenList>
+						<Action Name="" ID="{2106A74B-49B3-4ACD-8C77-40AFBDAA2D31}" ShortID="878773024">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Charger_SonidoRandom" ID="{461A82AA-57B0-453C-A4E2-C81887E96741}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Charger_Esfuerzo_Ataque" ID="{62C9FB7D-957A-45E3-8E49-373137765FF7}">
+					<ChildrenList>
+						<Action Name="" ID="{9B7C629D-2693-445A-8B24-342A3001E657}" ShortID="142317297">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Charger_Esfuerzo_Ataque" ID="{03D56BF3-2EE1-4868-9581-67A4902CCEFA}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Charger_Desplazamiento" ID="{8DA74887-0BE8-41EE-AD8B-716C4198178F}">
+					<ChildrenList>
+						<Action Name="" ID="{991CC3EF-AF98-4A6B-998A-E63DBA556888}" ShortID="558609998">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Charger_Desplazamiento" ID="{92F0DC0A-A1EB-4093-A8D0-711E8DC2BD48}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

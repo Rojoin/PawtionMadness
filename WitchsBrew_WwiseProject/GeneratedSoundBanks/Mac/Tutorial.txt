@@ -1,9 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
 	32974598	Simple_Ataca			\Tutorial\Simple_Ataca	
+	143546502	Reforzado_Ataca			\Tutorial\Reforzado_Ataca	
+	169283807	Reforzado_Danio			\Tutorial\Reforzado_Danio	
 	314498979	Player_Agarrar			\Tutorial\Player_Agarrar	
 	417218340	Play_Oleada			\Tutorial\Play_Oleada	
 	557674403	Player_Desplazamiento			\Tutorial\Player_Desplazamiento	
 	707032169	Play_libro_abrir_3			\Tutorial\Play_libro_abrir_3	
+	1037903552	Reforzado_Muerte			\Tutorial\Reforzado_Muerte	
 	1061034442	Procesar_Item			\Tutorial\Procesar_Item	
 	1363661528	Defense_Muerte			\Tutorial\Defense_Muerte	
 	1421871233	Play_ingamemusic_level			\Tutorial\Play_ingamemusic_level	
@@ -22,6 +25,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	2558775992	Simple_Desplazamiento			\Tutorial\Simple_Desplazamiento	
 	2559549617	Play_Agarrar_Item_Frasco			\Tutorial\Play_Agarrar_Item_Frasco	
 	2814344719	Explosive_Disparo			\Tutorial\Explosive_Disparo	
+	2871512888	Reforzado_Desplazamiento			\Tutorial\Reforzado_Desplazamiento	
+	2906595307	Player_Muerte			\Tutorial\Player_Muerte	
 	3059053578	Useless_Muerte			\Tutorial\Useless_Muerte	
 	3116544519	Laser_Muerte			\Tutorial\Laser_Muerte	
 	3256636576	Useless_SonidoEspecial			\Tutorial\Useless_SonidoEspecial	
@@ -54,7 +59,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	10081477	Player_Desplazamiento4	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Player\Player_Desplazamiento4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Desplazamiento\Player_Desplazamiento4		54244
 	26688086	Procesar_Item	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Procesar item_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Mesa de Procesado\Procesar_Item		504144
 	66053801	Explosive_Muerte	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Torretas\Explosive_Muerte_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Torretas\Explosive_Muerte		178144
+	109182392	Reforzado Ataca	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enemigos\Reforzado Ataca_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Reforzado\Reforzado Ataca		285928
 	113840108	GAMEPLAY_Level1_2nd wave_tale reverb	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_Level1_2nd wave_tale reverb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_level\wave2\GAMEPLAY_Level1_2nd wave_tale reverb\GAMEPLAY_Level1_2nd wave_tale reverb		2675676
+	125234085	Player Muerte	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Player\Player Muerte_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Player Muerte		290172
 	144211292	Explosive_SonidoEspecial	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Torretas\Explosive_SonidoEspecial_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Torretas\Explosive_SonidoEspecial		348144
 	148464406	Perder_Juego	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Perder_Juego_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiente\Perder_Juego		720144
 	192562094	Simple_SonidoRandom	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Simple_SonidoRandom_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Simple\Simple_SonidoRandom		336144
@@ -76,6 +83,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	399805308	Error no se puede poner cristal	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Error no se puede poner cristal_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Interaccion\Error no se puede poner cristal		390944
 	405035460	Player_SonidoRandom	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Player\Player_SonidoRandom_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Player_SonidoRandom		336144
 	422007141	Explosive_Disparo	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Torretas\Explosive_Disparo_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Torretas\Explosive_Disparo		768144
+	434159900	Reforzado Muerte	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enemigos\Reforzado Muerte_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Reforzado\Reforzado Muerte		154480
 	438486586	Useless_Muerte	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Torretas\Useless_Muerte_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Torretas\Useless_Muerte		112144
 	443992359	GAMEPLAY_B_155	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_B_155_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_tutorial\GAMEPLAY_B_155\GAMEPLAY_B_155		2378388
 	452233697	GAMEPLAY_C_155	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_C_155_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_tutorial\GAMEPLAY_C_155\GAMEPLAY_C_155		2378388
@@ -90,7 +98,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	569065176	Player_Desplazamiento5	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Player\Player_Desplazamiento5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Desplazamiento\Player_Desplazamiento5		82044
 	596125856	Laser_Disparo	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Torretas\Laser_Disparo_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Torretas\Laser_Disparo		744144
 	596694758	GAMEPLAY_Level1_3stwave_tale reverb	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_Level1_3stwave_tale reverb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_level\wave3\GAMEPLAY_Level1_3stwave_tale reverb\GAMEPLAY_Level1_3stwave_tale reverb		2675676
+	640200867	Reforzado Recibe Daño	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enemigos\Reforzado Recibe Daño_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Reforzado\Reforzado Recibe Daño		201124
 	730390426	Player_Agarrar	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Player\Player_Agarrar_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Player_Agarrar		72244
+	756738524	Reforzado Desplazamiento	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enemigos\Reforzado Desplazamiento_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Reforzado\Reforzado Desplazamiento		2917512
 	785466920	Poner_Item_Caldero	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Cocina\Poner item en caldero_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Caldero\Poner_Item_Caldero		216144
 	789842628	libro_abrir_3	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\Recetario\libro_abrir_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Libro de recetas\libro_abrir_3		176528
 	795429319	GAMEPLAY_A_155	Y:\Documents\GitHub\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_A_155_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_tutorial\GAMEPLAY_A_155\GAMEPLAY_A_155		3567548
