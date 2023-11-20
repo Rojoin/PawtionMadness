@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using CustomSceneSwitcher.Switcher;
 using CustomSceneSwitcher.Switcher.Data;
 using UnityEngine;
@@ -25,7 +26,7 @@ namespace Menu
 
         private void Awake()
         {
-            EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(startGameButton.gameObject);
+            
             startGameButton.onClick.AddListener(StartGame);
             optionsButton.onClick.AddListener(OptionsToggle);
             backOptionsButton.onClick.AddListener(OptionsToggle);
@@ -34,6 +35,15 @@ namespace Menu
             exitButton.onClick.AddListener(ExitGame);
             isOptionsActive = false;
             isHowToPlayActive = false;
+        }
+
+        private IEnumerator Start()
+        {
+            yield return null;
+            yield return null;
+            EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(startGameButton.gameObject);
+            startGameButton.Select();
+            yield break;
         }
 
         private void OnDestroy()
