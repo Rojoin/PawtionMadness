@@ -31,7 +31,7 @@ public class TurretManager : MonoBehaviour
         var pool = turretPoolById[newTurretSO.id];
         if(pool == null)
         {
-            Debug.LogError("Pool not found");
+            Debug.LogError("Turret Pool not found");
             return null;
         }
         GameObject newTurret = null;
