@@ -3,6 +3,8 @@ using TMPro;
 using UI;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -19,7 +21,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private float textSize = 2.0f;
     private UIAnimation _uiManager = new UIAnimation();
 
-    public void Start()
+
+    public void Init()
     {
         SetCanvasVisibility(LoseScreen, false);
         SetCanvasVisibility(WinScreen, false);
@@ -34,6 +37,14 @@ public class UIManager : MonoBehaviour
         canvas.alpha = state ? 1 : 0;
         canvas.interactable = state;
         canvas.blocksRaycasts = state;
+        if (state)
+        {
+            Button currentbutton = canvas.GetComponentInChildren<Button>();
+            if (currentbutton)
+            {
+                EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(currentbutton.gameObject);
+            }
+        }
     }
 
     public void ToggleSettingsOn()

@@ -16,6 +16,7 @@ namespace Enemy
         private static readonly int Death1 = Animator.StringToHash("Death");
         private static readonly int Damage1 = Animator.StringToHash("Damage");
         private BoxCollider boxCollider;
+        public EnemySO EnemyType => enemyType;
         
         public float MoveSpeed { get => enemyType.moveSpeed; }
         public float Damage { get => enemyType.damage;  }

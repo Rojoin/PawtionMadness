@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 752694541629538311}
   - component: {fileID: 5523032914559291523}
   - component: {fileID: 8155449214015482755}
-  - component: {fileID: 1115067940869957478}
-  - component: {fileID: 5277889031725473526}
+  - component: {fileID: 5811539098500002985}
+  - component: {fileID: 7304443047087074592}
   m_Layer: 0
   m_Name: GridCamera
   m_TagString: MainCamera
@@ -68,7 +68,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 100
-  field of view: 35.986652
+  field of view: 36.12
   orthographic: 0
   orthographic size: 10.4
   m_Depth: 1
@@ -130,7 +130,7 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &1115067940869957478
+--- !u!114 &5811539098500002985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,7 +152,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &5277889031725473526
+--- !u!114 &7304443047087074592
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,9 +176,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2175325850640389915}
   - component: {fileID: 1674679073950934273}
-  - component: {fileID: 3456124343496858093}
   - component: {fileID: 815011010778051703}
   - component: {fileID: 2981508109956858551}
+  - component: {fileID: 1139635700226523028}
+  - component: {fileID: 8202757475460334469}
+  - component: {fileID: 3949733544046428901}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -253,14 +255,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3456124343496858093
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7404172006808531425}
-  m_Enabled: 1
 --- !u!114 &815011010778051703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,7 +273,7 @@ MonoBehaviour:
   m_CameraType: 0
   m_Cameras:
   - {fileID: 5523032914559291523}
-  m_RendererIndex: 0
+  m_RendererIndex: 1
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -340,3 +334,56 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1139635700226523028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7404172006808531425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: c4c16aa3e2a76034693ead85ef389304, type: 2}
+--- !u!114 &8202757475460334469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7404172006808531425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d69a9b7b87fbad41a7feee963a8c6e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &3949733544046428901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7404172006808531425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f234eabdd438b4590d8be2f7a005d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0

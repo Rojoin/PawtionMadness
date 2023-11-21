@@ -1,25 +1,32 @@
+using System;
 using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CameraManager : MonoBehaviour
 {
-    [Header("Camera")]
-    [SerializeField] private Transform cameraPosition;
-    [SerializeField] private CinemachineVirtualCamera virtualCamera;
-
-    [Header("Camera Positions")]
-    [SerializeField] private Transform cameraPositionField;
-    [SerializeField] private Transform cameraPositionKitchen;
+    [FormerlySerializedAs("virtualCamera")]
+    [Header("Setup")]
+    [SerializeField] private CinemachineVirtualCamera cameraWithTracking;
+    [SerializeField] private CinemachineVirtualCamera cameraWithTransposer;
+    [SerializeField] private CameraLerp cameraLerp;
 
     private void Awake()
     {
-        
+        cameraLerp.endCameraLerp.AddListener(OnEndCameraLerp);
+        cameraWithTracking.Follow = cameraLerp.cameraPosition;
     }
 
-    private void Update()
+    private void OnDestroy()
     {
-        
+        cameraLerp.endCameraLerp.RemoveAllListeners();
+    }
+
+    private void OnEndCameraLerp()
+    {
+        cameraLerp.enabled = false;
+        cameraWithTracking.gameObject.SetActive(false);
+        cameraWithTransposer.gameObject.SetActive(true);
+        Debug.Log("end lerp");
     }
 }

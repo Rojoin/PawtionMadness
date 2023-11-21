@@ -1,6 +1,9 @@
 using System;
+using System.Collections;
 using CustomSceneSwitcher.Switcher;
 using CustomSceneSwitcher.Switcher.Data;
+using Player;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -8,45 +11,79 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Entities")]
+    [Header("Entities")] 
+    
     [SerializeField] private GameObject player;
     [SerializeField] private EnemySpawner enemySpawner;
+    [SerializeField] private CameraManager _cameraManager;
     [SerializeField] private EnemyManager enemyManager;
     [SerializeField] private UIManager uiManager;
 
-    [Header("Channels")]
+    [Header("Channels")] 
+    
     [SerializeField] private VoidChannelSO actionChannelSO;
     [SerializeField] private VoidChannelSO pauseChannelSO;
     [SerializeField] private VoidChannelSO gridToggleChannelSO;
     [SerializeField] private VoidChannelSO backInputChannel;
     [SerializeField] private VoidChannelSO showRecipesChannelSO;
-    [Header("Values")]
+    [SerializeField] private VoidChannelSO initialCounterChannelSO;
+    [Header("Values")] 
+    
     [SerializeField] float timeUntilGameOver = 0.2f;
+    [SerializeField] float timeUntilActivateEvents = 10f;
     [SerializeField] bool isTutorialScene = false;
-    [Header("SceneChanger")]
+
+    [Header("SceneChanger")] 
+    
     [SerializeField] private SceneChangeData mainMenu;
+
     [SerializeField] private SceneChangeData currentScene;
     [SerializeField] private SceneChangeData nextScene;
 
-    [Header("Events")]
+    [Header("Events")] 
+    
     public UnityEvent deActivateRecipe;
+    
     private bool isPaused;
     private bool isGridActivated;
     private bool isRecipesOn;
 
 
+
     private void Awake()
     {
+        player.SetActive(true);
         pauseChannelSO.Subscribe(PauseLevel);
+        if (isTutorialScene)
+        {
+            InitGame();
+        }
+        else
+        {
+            player.GetComponent<PlayerMovement>().enabled = false;
+            _cameraManager.gameObject.SetActive(true);
+            Invoke(nameof(InitGame), timeUntilActivateEvents);
+            
+        }
+    }
+
+    private void InitGame()
+    {
+        uiManager.Init();
         showRecipesChannelSO.Subscribe(ShowRecipes);
         enemySpawner.OnNewWaveAdded.AddListener(uiManager.AddWaveIcon);
         enemySpawner.OnGameBarUpdated.AddListener(uiManager.UpdateGameBar);
         enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
         enemyManager.activateWinScreenChannel.AddListener(WinGame);
         gridToggleChannelSO.Subscribe(GridToggle);
-        player.SetActive(true);
-
+        initialCounterChannelSO.RaiseEvent();
         enemySpawner.gameObject.SetActive(!isTutorialScene);
+        Invoke(nameof(InitPlayer),timeUntilActivateEvents);
+    }
+
+    private void InitPlayer()
+    {
+        player.GetComponent<PlayerMovement>().enabled = true;
     }
 
     private void OnDestroy()
