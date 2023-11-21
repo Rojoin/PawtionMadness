@@ -41,7 +41,7 @@ namespace UI
             Vector2 sizeDelta = rectTransform.sizeDelta;
             Vector2 initialSize = new Vector2(sizeDelta.x, sizeDelta.y);
             Vector2 maxSize = initialSize * size;
-            Color baseColor = text.faceColor;
+            Color baseColor = text.color;
             Color initialColor = new Color32(255, 255, 255, 0);
             text.color = initialColor;
             float timer = 0.0f;
@@ -60,7 +60,7 @@ namespace UI
             }
 
             text.enabled = false;
-            text.faceColor = initialColor;
+            text.color = baseColor;
             rectTransform.sizeDelta = initialSize;
             yield break;
         }
