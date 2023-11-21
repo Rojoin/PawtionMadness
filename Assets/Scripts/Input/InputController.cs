@@ -13,6 +13,7 @@ namespace GameInputs
         [SerializeField] private VoidChannelSO OnPauseChannel;
         [SerializeField] private VoidChannelSO OnInteractChannel;
         [SerializeField] private VoidChannelSO OnBackInteractChannel;
+        [SerializeField] float offsetController = 0.70f;
         private Vector2 previousGridInput = Vector2.zero;
 
         public void OnMove(InputAction.CallbackContext ctx)
@@ -25,6 +26,7 @@ namespace GameInputs
             if (ctx.performed)
             {
                 Vector2 ctxInput = ctx.ReadValue<Vector2>();
+                
                 OnGridMoveChannel.RaiseEvent(ctxInput);
             }
 
@@ -33,14 +35,51 @@ namespace GameInputs
                 OnGridMoveChannel.RaiseEvent(Vector2.zero);
             }
         }
+        public void OnStickGridMove(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                Vector2 ctxInput = ctx.ReadValue<Vector2>();
 
-        // public void OnRollInput(InputAction.CallbackContext ctx)
-        // {
-        //     if (ctx.performed)
-        //     {
-        //         OnRollChannel.RaiseEvent();
-        //     }
-        // }
+                if(ctxInput.x >offsetController)
+                {
+                    ctxInput.x = 1;
+                }
+                else if (ctxInput.x <-offsetController)
+                {
+                    ctxInput.x = -1;
+                }
+                else
+                {
+                    ctxInput.x = 0;
+                }
+                if(ctxInput.y >offsetController)
+                {
+                    ctxInput.y = 1;
+                }
+                else if (ctxInput.y <-offsetController)
+                {
+                    ctxInput.y = -1;
+                }
+                else
+                {
+                    ctxInput.y = 0;
+                }
+
+                var newValue = ctxInput;
+
+                if (newValue != previousGridInput)
+                {
+                    OnGridMoveChannel.RaiseEvent(newValue);
+                    previousGridInput = newValue;
+                }
+            }
+
+            if (ctx.canceled)
+            {
+                OnGridMoveChannel.RaiseEvent(Vector2.zero);
+            }
+        }
 
         public void OnInteract(InputAction.CallbackContext ctx)
         {
@@ -48,7 +87,8 @@ namespace GameInputs
             {
                 OnInteractChannel.RaiseEvent();
             }
-        } 
+        }
+
         public void OnBackInteract(InputAction.CallbackContext ctx)
         {
             if (ctx.performed)

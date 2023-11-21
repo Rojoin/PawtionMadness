@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
         SetCanvasVisibility(PauseScreen, false);
         SetCanvasVisibility(RecipesScreen, false);
         SetCanvasVisibility(SettingsScreen, false);
-        //    SetCanvasVisibility(TutorialScreen, true);
+
     }
 
     private void SetCanvasVisibility(CanvasGroup canvas, bool state)
