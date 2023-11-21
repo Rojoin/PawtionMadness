@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
         SetCanvasVisibility(PauseScreen, false);
         SetCanvasVisibility(RecipesScreen, false);
         SetCanvasVisibility(SettingsScreen, false);
-
+        Cursor.visible = false;
     }
 
     private void SetCanvasVisibility(CanvasGroup canvas, bool state)
@@ -99,6 +99,7 @@ public class UIManager : MonoBehaviour
 
     public void TogglePauseMenu(bool isPaused)
     {
+        Cursor.visible = isPaused;
         SetCanvasVisibility(PauseScreen, isPaused);
         SetCanvasVisibility(SettingsScreen, false);
     }
