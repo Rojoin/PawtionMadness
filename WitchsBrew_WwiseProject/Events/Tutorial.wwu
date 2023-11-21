@@ -7,778 +7,810 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<Event Name="Play_AMB_Bosque_Noche" ID="{C010C2A1-F8C7-4914-BA28-992F9C5ECE69}">
-					<ChildrenList>
-						<Action Name="" ID="{6CBBE810-132B-40F3-BC06-630DBF61A31B}" ShortID="449210821">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="AMB_Bosque_Noche" ID="{D879BBB0-1133-40D8-9A0D-E7990DEF21BC}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Oleada" ID="{7CA31EA5-399D-48A4-8234-90FCE01AD297}">
-					<ChildrenList>
-						<Action Name="" ID="{D4AE548F-5981-4A51-B632-E70D2CA272C7}" ShortID="731723267">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Oleada" ID="{787BD6DB-8BB2-46CF-8056-172ECA160D2D}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Oleada_final" ID="{025C90FE-29FB-4A26-953E-AFE08A42EDAA}">
-					<ChildrenList>
-						<Action Name="" ID="{2BC7393A-7109-4FA7-A95E-35925BCCEA6F}" ShortID="1011069118">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Oleada final" ID="{FC823D43-C1D0-4792-BDE2-6B6ACE0E0C77}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Agarrar_Item_Frasco" ID="{C570A810-0279-4E25-BC5E-6558907BD42C}">
-					<ChildrenList>
-						<Action Name="" ID="{5B541E46-596E-4351-8427-B76EB7103BE6}" ShortID="985208465">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Agarrar_Item_Frasco" ID="{E9F252D1-C397-48FF-8772-D8A31FD8B5D6}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Agarrar_item_Porcion" ID="{71F4ABA7-460B-4C7A-A104-97656F8EB7F7}">
-					<ChildrenList>
-						<Action Name="" ID="{93C0EE71-AADF-4CD7-81E9-CCC0AC413431}" ShortID="622993470">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Agarrar_item_Porcion" ID="{295798C4-B9D4-497A-ABE3-A32B29D4B355}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Caldero" ID="{FB6379C0-DEFE-4904-BA85-E4AB9C35BFC3}">
-					<ChildrenList>
-						<Action Name="" ID="{D83A09FC-05EB-4AAE-A3C5-AD690D55F812}" ShortID="602920956">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="SonidoRandom_Caldero" ID="{7DA5B050-DA76-4E3A-B80D-7FF611068C03}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Pocion_Preparandose" ID="{1F5BAB17-90B9-4BCF-B66D-73E6A03AB3DC}">
-					<ChildrenList>
-						<Action Name="" ID="{12CBC2B0-BD8A-486D-AC79-6544384ACFC4}" ShortID="774557767">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Pocion_Preparandose" ID="{BC1CDFDF-23E0-4DB9-B38E-79FAD4B300EE}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Poner_Item_caldero" ID="{428D8039-50D0-445B-8D6C-0B7F1019032B}">
-					<ChildrenList>
-						<Action Name="" ID="{D0E7F795-8D26-4339-B78C-F07180373F86}" ShortID="602377873">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Poner_Item_Caldero" ID="{F1EDE366-8C98-405F-BBCF-546D38B0E1C0}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_libro_abrir_3" ID="{EC4215EC-8949-4306-BC20-8A0B55E77645}">
-					<ChildrenList>
-						<Action Name="" ID="{B67F7038-2ACF-40C8-92A0-38B1D7D624E9}" ShortID="144555996">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="libro_abrir_3" ID="{83318A96-A1E2-48AE-A2F8-E89E77AAC563}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_ingamemusic_tutorial" ID="{C44B7B60-3FC1-4DC2-BD79-5A4D1F7B7B7E}">
-					<ChildrenList>
-						<Action Name="" ID="{ED18E9CB-B698-4F6F-93E4-F210D09E33FA}" ShortID="906799162">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="main menu music" ID="{D80337C4-0625-4E77-B77A-BC650C554D04}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{89CA77ED-4824-4764-9FE1-D6BC48DF3A5E}" ShortID="414704942">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.3"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Comienzo_de_juego" ID="{227A69B9-4214-4EC8-8F2A-221B65550797}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{9897ADA0-136C-41B8-B7D1-5336E197EB1F}" ShortID="142519363">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="1"/>
-								<Property Name="FadeTime" Type="Real64" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ingamemusic_tutorial" ID="{524ECB04-B8A7-4883-BDCD-E6A08AA46681}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Pocion_Lista" ID="{544B2CA3-D564-4FE3-9519-6CA03EAD2EBC}">
-					<ChildrenList>
-						<Action Name="" ID="{8FAEE742-45B6-4D25-AC0B-95FA866307BE}" ShortID="526597239">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Pocion_Lista" ID="{EDBDDBB4-C9A5-4D8B-8E59-5C7EE2E3235A}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="SonidoRandom_Caldero" ID="{A47633F1-053D-4922-AA02-A576DC0D654C}">
-					<ChildrenList>
-						<Action Name="" ID="{97D4234F-43EE-4E26-84B6-06C7A86D60C0}" ShortID="454246831">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="SonidoRandom_Caldero" ID="{7DA5B050-DA76-4E3A-B80D-7FF611068C03}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Simple_Ataca" ID="{B0CB3F6D-F31A-45CD-BB48-D3CCE1B1A18B}">
-					<ChildrenList>
-						<Action Name="" ID="{96A23CE6-6947-4A47-9D41-D1C8DEE768EA}" ShortID="368786817">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Simple_Ataca" ID="{79F61D8E-505A-41E5-A3BC-36253624BF35}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Procesar_Item" ID="{A68CE769-03A1-46F0-BC5F-306FFA81B59E}">
-					<ChildrenList>
-						<Action Name="" ID="{BD2A77EB-F81C-497E-90C1-237EA203C52A}" ShortID="798696717">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Procesar_Item" ID="{277F3B98-00B9-479F-8829-8F76CF302452}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Error_no_se_puede_poner_cristal" ID="{24E244A1-0EFE-4D26-B420-C76A442EF666}">
-					<ChildrenList>
-						<Action Name="" ID="{77A78070-188B-410A-8B20-53EEF187B4A7}" ShortID="474283461">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Error no se puede poner cristal" ID="{6CC743D5-CB2D-462F-A873-4199B835EA42}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Error_no_se_puede_poner_mas_items_en_la_mesa" ID="{4E6773B8-E688-4A54-B1B4-0A95246881F8}">
-					<ChildrenList>
-						<Action Name="" ID="{0C8AB193-915E-45AC-A8E6-1AA323E8CBCB}" ShortID="845474186">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Error no se puede poner mas items en la mesa" ID="{155B2490-653A-400F-8123-01F22424B7DC}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Eliminar_Cristal" ID="{F35DF1DA-5DEC-4E50-8DE6-CCD8BE89399F}">
-					<ChildrenList>
-						<Action Name="" ID="{D24CA5E4-8264-4696-A9B7-E7983AF6811E}" ShortID="731289845">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Eliminar_Cristal" ID="{D3D6ADDD-2E4D-4447-B575-C8313FDE5DF1}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Simple_Desplazamiento" ID="{D35B5E04-312A-4988-A29A-9DA25C8C2CFC}">
-					<ChildrenList>
-						<Action Name="" ID="{18B4B28A-EC48-49E0-A7A6-96EEB2F028A7}" ShortID="140286699">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Simple_Desplazamiento" ID="{02565F30-8034-4681-8446-82AD604F3258}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Player_Agarrar" ID="{736965DF-EECA-4B78-949F-534949C2C3EE}">
-					<ChildrenList>
-						<Action Name="" ID="{2884518B-F4F8-4209-8AA9-DD56CB846BCF}" ShortID="345227703">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Player_Agarrar" ID="{3AF7C9C3-9CF1-40A8-9301-A52563081D0F}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Player_Soltar" ID="{CBC939E0-4FDB-44A8-9F79-B1C7217ABB25}">
-					<ChildrenList>
-						<Action Name="" ID="{0BFBF20A-FAD6-4F09-9EDB-4F2EA59BD2DE}" ShortID="571453248">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Player_Soltar" ID="{DB24761A-2201-49C4-AB4E-8614919A82AD}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Player_Desplazamiento" ID="{4DC45938-FC27-44CC-9D35-427FC694228B}">
-					<ChildrenList>
-						<Action Name="" ID="{9635C4E9-14B9-415E-AE70-542FE5FB38DB}" ShortID="624430475">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Desplazamiento" ID="{191D1725-D145-4C84-96EA-3F853E05D6F6}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Player_SonidoRandom" ID="{5C5190B9-67FE-4A21-9B10-C2B53452B293}">
-					<ChildrenList>
-						<Action Name="" ID="{B8EBF467-41CA-4BA3-BB19-39BCBCE1B175}" ShortID="788253905">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Player_SonidoRandom" ID="{686C4958-0A8E-4CD6-9531-274B617124C1}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Defense_Muerte" ID="{426BB39C-819D-41BC-A268-22404B3A77A9}">
-					<ChildrenList>
-						<Action Name="" ID="{B32CBCAF-BE7A-4D77-AA6D-B421951976A4}" ShortID="754605577">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Defense_Muerte" ID="{E6093A1D-331B-44C6-A1E9-8F9731EE6163}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Explosive_SonidoEspecial" ID="{F4A7E4FD-B2AB-446F-A202-8B5FEAE6C705}">
-					<ChildrenList>
-						<Action Name="" ID="{D0EBBBE5-4228-44E5-8767-017BD0C01FA0}" ShortID="294397171">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Explosive_SonidoEspecial" ID="{9CE55A07-9155-4D0C-94A2-65AEF0420669}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Explosive_Disparo" ID="{BBED1184-927C-4B04-A27B-E1A089F1C118}">
-					<ChildrenList>
-						<Action Name="" ID="{AC67A101-6CED-4286-AADB-E65CF5BB83C5}" ShortID="70374299">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Explosive_Disparo" ID="{11A71964-477B-47ED-B70D-5A788E55127C}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Defense_SonidosEspeciales" ID="{7282ACE0-F759-46AE-8DFC-75D88E6E00B8}">
-					<ChildrenList>
-						<Action Name="" ID="{657CF51B-430C-4A5B-BC64-3072E59350F4}" ShortID="817104575">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Defense_SonidosEspeciales" ID="{BDFEBA6A-43CC-4752-9274-B8FB226E644A}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Explosive_Muerte" ID="{D599F9E4-29E0-4C85-B381-AFC46C5697A7}">
-					<ChildrenList>
-						<Action Name="" ID="{A901B8F8-BDCD-4544-8DBE-F773D19C1F02}" ShortID="159545140">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Explosive_Muerte" ID="{888DFD11-55C7-439C-8850-DB415780FF11}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Laser_Disparo" ID="{3765819F-B6E6-4DE5-8EB2-818DE946F797}">
-					<ChildrenList>
-						<Action Name="" ID="{136A1891-5ABD-413D-8A29-CFEC0BEC4C6F}" ShortID="529394443">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Laser_Disparo" ID="{DE421D2E-3BFD-48CC-BF5A-11A63C5DFEA9}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Laser_Muerte" ID="{34005F41-0A1A-4BA6-8A9C-892D2C62B715}">
-					<ChildrenList>
-						<Action Name="" ID="{A63ADC6A-D572-47FC-975F-13BD2DBB876A}" ShortID="521282598">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Laser_Muerte" ID="{E983EF4F-D3DD-4D23-9BBD-949396F8B65D}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Laser_SonidoEspecial" ID="{227997AF-FD61-498D-8348-D7B0A5ACE0AF}">
-					<ChildrenList>
-						<Action Name="" ID="{81A57EDF-9375-426E-BEB1-C1400C570923}" ShortID="969780219">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Laser_SonidoEspecial" ID="{5CBF21F7-95AC-4BE1-8F01-444AE0C4DB59}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Proyectil_Disparo" ID="{4C04A2D2-5D2E-4CA3-97F4-DD6EAD0DE963}">
-					<ChildrenList>
-						<Action Name="" ID="{D70EF64D-6BEF-4A8B-A60A-33E4C22F3854}" ShortID="191272977">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Proyectil_Disparo" ID="{9231E93F-93EF-4FB3-8ABD-A91E4343924A}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Proyectil_Muerte" ID="{6EC3C197-AC30-4414-A33C-0528006A2693}">
-					<ChildrenList>
-						<Action Name="" ID="{C9D9F4DA-F5E4-49F1-832A-AF89D32E5C30}" ShortID="831659617">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Proyectil_Muerte" ID="{6EC1AFF5-F2C6-4767-BFA0-F4D2DBBAEAD8}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Useless_Muerte" ID="{66788500-4793-4C5E-A8FB-82F4065EA625}">
-					<ChildrenList>
-						<Action Name="" ID="{687B577B-A3AD-4E7B-86DA-AEF2047CBC4D}" ShortID="911373077">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Useless_Muerte" ID="{A94EACCE-1C63-450F-A2D8-D24931AA08EB}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Useless_SonidoEspecial" ID="{449C0CE7-C39A-49B0-B868-8BC5C6FD341E}">
-					<ChildrenList>
-						<Action Name="" ID="{FA69F442-8DF0-4386-BAAA-383AF7C910E6}" ShortID="591502013">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Useless_SonidoEspecial" ID="{7CB42C01-E41F-4688-A0F5-8DC98BB756CF}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_AMB_Tutorial" ID="{A4556F9C-F4A8-45A4-9694-3C0B9EAC97A9}">
-					<ChildrenList>
-						<Action Name="" ID="{AF38B6C3-CDA4-4ACA-9CC5-E1BAF27BC786}" ShortID="1510193">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="AMB_Pajaros_cuervos_start" ID="{9DCF5F7A-8E1C-470D-9800-760FBBB05126}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{A899BEC9-E76D-4DD2-9C76-4E8F7EF3011E}" ShortID="514017312">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.5"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="AMB_Bosque_Noche" ID="{D879BBB0-1133-40D8-9A0D-E7990DEF21BC}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_ingamemusic_level" ID="{503A21C3-FC34-4E9D-9778-A26449B5ED57}">
-					<ChildrenList>
-						<Action Name="" ID="{03C08966-F881-4FDF-AF28-82DD106FE1BA}" ShortID="596962211">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ingamemusic_tutorial" ID="{524ECB04-B8A7-4883-BDCD-E6A08AA46681}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{51F397FD-15FC-4432-8C3A-17E0D768C7E6}" ShortID="374945534">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Comienzo_de_juego" ID="{227A69B9-4214-4EC8-8F2A-221B65550797}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{79C03148-D01C-4B90-B672-060ED936BB57}" ShortID="68738551">
-							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="ingamemusic_level" ID="{4BDA89BE-723E-475D-A91D-AF7C32387AB6}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Simple_RecibeDano" ID="{A4337C44-C68E-4E81-899A-04556FD155B7}">
-					<ChildrenList>
-						<Action Name="" ID="{07A9ED4E-C78B-44AA-8A36-515FA754CE65}" ShortID="698252067">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Simple_RecibeDaño" ID="{87CA4D3A-A5B8-4805-8737-4353E90ADFFE}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Simple_SonidoRandom" ID="{594F62C4-D0FB-4CDE-B301-A57B665A9E31}">
-					<ChildrenList>
-						<Action Name="" ID="{DA00D3B5-E8DA-4203-8CA6-21B447D992A4}" ShortID="155779575">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Simple_SonidoRandom" ID="{9CBB25D6-B176-4D3F-89B6-F131C266C72D}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Simple_Muerte" ID="{05C67E28-CCA0-41C6-9BA5-620DF1B04FB8}">
-					<ChildrenList>
-						<Action Name="" ID="{1E8776EF-41B0-4EB0-B29A-0F30FFBEBB03}" ShortID="332949246">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Simple_Muerte" ID="{1918293B-78D5-447F-9374-D613E211681A}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Perder_Juego" ID="{F888067F-A3EC-4DD1-A04E-B57ACE82398C}">
-					<ChildrenList>
-						<Action Name="" ID="{D845119C-6EDD-475D-9881-C85045B34D37}" ShortID="842216727">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Perder_Juego" ID="{8A961DCE-E7E8-44E7-866A-63BF24BEC5AD}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Player_Muerte" ID="{224324A6-845B-44D2-AA08-488EB7D8C962}">
-					<ChildrenList>
-						<Action Name="" ID="{9F4656DE-3F1F-4E72-B75A-9962A62AE52D}" ShortID="579912193">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Player Muerte" ID="{979D7E64-B03F-4194-A3F6-96D324ECA925}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Reforzado_Ataca" ID="{FD77BF0C-053F-4470-82FC-F884FBA01DC4}">
-					<ChildrenList>
-						<Action Name="" ID="{71304E42-855F-4BE8-9548-1F30CFC9A065}" ShortID="1006760569">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Reforzado Ataca" ID="{930A9652-E52E-4CAC-8F4B-41B326CA9AB0}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Reforzado_Desplazamiento" ID="{D6850CED-EE7F-4DD1-B6D2-808B4C398FDF}">
-					<ChildrenList>
-						<Action Name="" ID="{7E12B054-6E54-46F6-BB87-BA8103A298A2}" ShortID="67124472">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Reforzado Desplazamiento" ID="{2AB286D0-D55E-40CF-9A19-EB5FB3BFD2F9}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Reforzado_Muerte" ID="{A80BB25F-3C6E-451A-B6E4-4A9DB1823188}">
-					<ChildrenList>
-						<Action Name="" ID="{5DB6B916-ECFB-4E8B-8BAF-99069DD0BF42}" ShortID="934625088">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Reforzado Muerte" ID="{CA137C4D-D209-44BB-87E9-CCAC178D3DF4}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Reforzado_Danio" ID="{5801EC7C-3BB4-4B8E-B71A-B724F2374936}">
-					<ChildrenList>
-						<Action Name="" ID="{FF08CEC2-6CE8-4955-9386-12717FA3E86A}" ShortID="843308867">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Reforzado Recibe Daño" ID="{3923FE71-7835-4FFE-AF8F-021D08DE9E19}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Charger_SonidoRandom" ID="{3F450692-76C3-4AD9-A8B2-2CE0C20BA91C}">
-					<ChildrenList>
-						<Action Name="" ID="{2106A74B-49B3-4ACD-8C77-40AFBDAA2D31}" ShortID="878773024">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Charger_SonidoRandom" ID="{461A82AA-57B0-453C-A4E2-C81887E96741}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Charger_Desplazamiento" ID="{8DA74887-0BE8-41EE-AD8B-716C4198178F}">
-					<ChildrenList>
-						<Action Name="" ID="{991CC3EF-AF98-4A6B-998A-E63DBA556888}" ShortID="558609998">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Charger_Desplazamiento" ID="{92F0DC0A-A1EB-4093-A8D0-711E8DC2BD48}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Charger_Esfuerzo_Ataque" ID="{62C9FB7D-957A-45E3-8E49-373137765FF7}">
-					<ChildrenList>
-						<Action Name="" ID="{9B7C629D-2693-445A-8B24-342A3001E657}" ShortID="142317297">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Charger_Esfuerzo_Ataque" ID="{03D56BF3-2EE1-4868-9581-67A4902CCEFA}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Charger_RecibeDa_o" ID="{8AEF77A4-5529-4EF5-BA00-357D1C350EDB}">
-					<ChildrenList>
-						<Action Name="" ID="{22946B8D-D61F-44DB-824B-798446EBE5CB}" ShortID="422361160">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Charger_RecibeDaño" ID="{F3557C36-3729-4263-84E6-BA251CBAB2B7}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Charger_SonidoAdicional" ID="{04BE41FA-48BF-409C-8716-7F55FFCD2D8C}">
-					<ChildrenList>
-						<Action Name="" ID="{3E2AB22E-368E-4BD4-BA1D-EA5F95529424}" ShortID="529430282">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Charger_SonidoAdicional" ID="{75E884CA-1B78-403D-A57C-9934E6EB5981}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Charger_Muerte" ID="{5EA497CF-F6F3-4461-8F0D-BBFD29D36DCE}">
-					<ChildrenList>
-						<Action Name="" ID="{2734F8BB-D568-4782-9D17-1314A98229E4}" ShortID="820036952">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Charger_Muerte" ID="{B097B076-2837-40E6-A3EA-6CAA8B68AF1B}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Procesar_Agarrar" ID="{D8811086-6A1C-4B07-AE33-5289DAC2A7EB}">
-					<ChildrenList>
-						<Action Name="" ID="{6DD61DB8-721A-43DA-82AA-CA77EA8D343A}" ShortID="159663288">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Procesar Agarrar Item" ID="{10BA368B-8C0A-4DB1-B949-0302285E13D5}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Rango_SonidoRandom" ID="{B87B214C-8CB5-4687-8111-C1A3560A06BD}">
-					<ChildrenList>
-						<Action Name="" ID="{E46DB518-D712-4F29-AB5A-018471B9AA35}" ShortID="472901972">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rango_SonidoRandom" ID="{B7F8FD8B-7A33-4198-A324-FCAA7A591336}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Rango_RecibeDa_o" ID="{8F7AC2C3-4504-45B0-8E74-D96C1FDEA425}">
-					<ChildrenList>
-						<Action Name="" ID="{0CA9361B-1E11-4BF4-859F-49100A04E258}" ShortID="452223954">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rango_RecibeDaño" ID="{0D2C51E9-87C4-4829-B5E3-038AA92CDA4E}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Rango_Muerte" ID="{5F3758F8-A5AB-4122-A32F-5C4CEE7AB39E}">
-					<ChildrenList>
-						<Action Name="" ID="{97246F79-41FB-4E6D-9400-9170848CFBC9}" ShortID="836919881">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rango_Muerte" ID="{43E185DB-C1D5-4E84-A3A4-96D052D90B76}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Rango_Esfuerzo_Ataque" ID="{B4E792E3-4619-4588-B373-A15B15E000F1}">
-					<ChildrenList>
-						<Action Name="" ID="{5771BA36-250B-4D0B-B879-05D8A7D071A9}" ShortID="970585248">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rango_Esfuerzo_Ataque" ID="{C9295E6A-0F2C-43FA-820E-9975A85124E3}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Reforzado_Random" ID="{10A1E5CB-B83D-43AB-9E09-D41D1A8CE4E7}">
-					<ChildrenList>
-						<Action Name="" ID="{85DC1D9A-A829-4A77-8540-A3BBDE991DE2}" ShortID="134509042">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Reforzado Sonido Random" ID="{EF92C961-55A0-4233-9F90-BFF5DA8CE2B3}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Recetario_Cerrar" ID="{2D1ECF0C-F0DC-4CEF-BF34-BDDE0CE087B6}">
-					<ChildrenList>
-						<Action Name="" ID="{8F59BF0C-5DFE-4834-9DDD-59E03A9F71AC}" ShortID="281795928">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Cerrar Libro" ID="{FCFC7DCB-8E66-4C2C-87C4-3C2414A26DB9}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Interfaz_AceptarContinuar" ID="{AFB208F1-F9DB-4ED9-8A12-9DFCEBD70B4E}">
-					<ChildrenList>
-						<Action Name="" ID="{E5E357BE-6DB3-4ECF-9BCB-97B81FC08AE7}" ShortID="277884158">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="aceptar continuar" ID="{FA278F93-FFF0-49E6-ACEC-89448770A827}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Rango_Desplazamiento" ID="{EE76A952-16C3-4E69-9A00-CC6D61A8DD1C}">
-					<ChildrenList>
-						<Action Name="" ID="{A18B5F6F-CD68-4195-84B9-231A096398CB}" ShortID="704634845">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Rango_Desplazamiento" ID="{6F7B394F-EF04-4D49-BC4D-9032E1B9CC1F}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Enojado_recibe_da_o" ID="{5BC8B10B-564F-4EB1-836E-068CBA60D5DB}">
-					<ChildrenList>
-						<Action Name="" ID="{5227AE93-BEC2-4EB9-8F33-73963DAEE1D7}" ShortID="887271225">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Enojado_recibe daño" ID="{D120BC10-2D40-4C35-9DDC-FD616534A093}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Enojado__muerte" ID="{8A8224BB-23A2-4056-83CD-35540BD86C70}">
-					<ChildrenList>
-						<Action Name="" ID="{0A8563BA-7A0A-4A03-BFD3-F0FF13CF83AB}" ShortID="761663207">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Enojado_,muerte" ID="{603FEDE8-4F2E-4027-A5EF-2172856D508E}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Enojado_random" ID="{A594EA62-7734-481B-942F-CD363551CBBD}">
-					<ChildrenList>
-						<Action Name="" ID="{5C5EB426-0DAB-4A87-8C9D-4C78F0F01DFA}" ShortID="514347678">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Enojado_random" ID="{F4005042-3A03-40D0-875D-C0CE68CD12E0}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Enojado_esfuerzo_y_ataque" ID="{4755E0CE-7244-4B53-819C-641DE5F88671}">
-					<ChildrenList>
-						<Action Name="" ID="{7C65921F-AF53-4CFE-9D6A-82A55BD36989}" ShortID="846748826">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Enojado_esfuerzo y ataque" ID="{BC523A44-FEB3-4E08-BA7D-3670FB20A5D1}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Enoajdo_adicional" ID="{7ADC5705-21EA-484C-96DB-5CAAE58F8502}">
-					<ChildrenList>
-						<Action Name="" ID="{0FBA3AE8-534C-4DBF-8E3C-27A04034FDDA}" ShortID="112909753">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Enoajdo_adicional" ID="{DE0C303D-98D0-42A0-A97A-5B05D84CAC9D}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				<Folder Name="Enemies" ID="{ED7251EF-1E5C-41F9-8541-C4E8B95641AB}" ShortID="268441705">
+					<ChildrenList>
+						<Event Name="Play_Enojado__muerte" ID="{8A8224BB-23A2-4056-83CD-35540BD86C70}">
+							<ChildrenList>
+								<Action Name="" ID="{0A8563BA-7A0A-4A03-BFD3-F0FF13CF83AB}" ShortID="761663207">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enojado_,muerte" ID="{603FEDE8-4F2E-4027-A5EF-2172856D508E}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Enojado_esfuerzo_y_ataque" ID="{4755E0CE-7244-4B53-819C-641DE5F88671}">
+							<ChildrenList>
+								<Action Name="" ID="{7C65921F-AF53-4CFE-9D6A-82A55BD36989}" ShortID="846748826">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enojado_esfuerzo y ataque" ID="{BC523A44-FEB3-4E08-BA7D-3670FB20A5D1}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Charger_SonidoAdicional" ID="{04BE41FA-48BF-409C-8716-7F55FFCD2D8C}">
+							<ChildrenList>
+								<Action Name="" ID="{3E2AB22E-368E-4BD4-BA1D-EA5F95529424}" ShortID="529430282">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Charger_SonidoAdicional" ID="{75E884CA-1B78-403D-A57C-9934E6EB5981}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Rango_RecibeDa_o" ID="{8F7AC2C3-4504-45B0-8E74-D96C1FDEA425}">
+							<ChildrenList>
+								<Action Name="" ID="{0CA9361B-1E11-4BF4-859F-49100A04E258}" ShortID="452223954">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rango_RecibeDaño" ID="{0D2C51E9-87C4-4829-B5E3-038AA92CDA4E}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Reforzado_Random" ID="{10A1E5CB-B83D-43AB-9E09-D41D1A8CE4E7}">
+							<ChildrenList>
+								<Action Name="" ID="{85DC1D9A-A829-4A77-8540-A3BBDE991DE2}" ShortID="134509042">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Reforzado Sonido Random" ID="{EF92C961-55A0-4233-9F90-BFF5DA8CE2B3}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Enojado_recibe_da_o" ID="{5BC8B10B-564F-4EB1-836E-068CBA60D5DB}">
+							<ChildrenList>
+								<Action Name="" ID="{5227AE93-BEC2-4EB9-8F33-73963DAEE1D7}" ShortID="887271225">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enojado_recibe daño" ID="{D120BC10-2D40-4C35-9DDC-FD616534A093}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Enojado_random" ID="{A594EA62-7734-481B-942F-CD363551CBBD}">
+							<ChildrenList>
+								<Action Name="" ID="{5C5EB426-0DAB-4A87-8C9D-4C78F0F01DFA}" ShortID="514347678">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enojado_random" ID="{F4005042-3A03-40D0-875D-C0CE68CD12E0}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Charger_Muerte" ID="{5EA497CF-F6F3-4461-8F0D-BBFD29D36DCE}">
+							<ChildrenList>
+								<Action Name="" ID="{2734F8BB-D568-4782-9D17-1314A98229E4}" ShortID="820036952">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Charger_Muerte" ID="{B097B076-2837-40E6-A3EA-6CAA8B68AF1B}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Enoajdo_adicional" ID="{7ADC5705-21EA-484C-96DB-5CAAE58F8502}">
+							<ChildrenList>
+								<Action Name="" ID="{0FBA3AE8-534C-4DBF-8E3C-27A04034FDDA}" ShortID="112909753">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enoajdo_adicional" ID="{DE0C303D-98D0-42A0-A97A-5B05D84CAC9D}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Charger_Desplazamiento" ID="{8DA74887-0BE8-41EE-AD8B-716C4198178F}">
+							<ChildrenList>
+								<Action Name="" ID="{991CC3EF-AF98-4A6B-998A-E63DBA556888}" ShortID="558609998">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Charger_Desplazamiento" ID="{92F0DC0A-A1EB-4093-A8D0-711E8DC2BD48}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Rango_Esfuerzo_Ataque" ID="{B4E792E3-4619-4588-B373-A15B15E000F1}">
+							<ChildrenList>
+								<Action Name="" ID="{5771BA36-250B-4D0B-B879-05D8A7D071A9}" ShortID="970585248">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rango_Esfuerzo_Ataque" ID="{C9295E6A-0F2C-43FA-820E-9975A85124E3}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Charger_Esfuerzo_Ataque" ID="{62C9FB7D-957A-45E3-8E49-373137765FF7}">
+							<ChildrenList>
+								<Action Name="" ID="{9B7C629D-2693-445A-8B24-342A3001E657}" ShortID="142317297">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Charger_Esfuerzo_Ataque" ID="{03D56BF3-2EE1-4868-9581-67A4902CCEFA}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Rango_Desplazamiento" ID="{EE76A952-16C3-4E69-9A00-CC6D61A8DD1C}">
+							<ChildrenList>
+								<Action Name="" ID="{A18B5F6F-CD68-4195-84B9-231A096398CB}" ShortID="704634845">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rango_Desplazamiento" ID="{6F7B394F-EF04-4D49-BC4D-9032E1B9CC1F}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Charger_SonidoRandom" ID="{3F450692-76C3-4AD9-A8B2-2CE0C20BA91C}">
+							<ChildrenList>
+								<Action Name="" ID="{2106A74B-49B3-4ACD-8C77-40AFBDAA2D31}" ShortID="878773024">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Charger_SonidoRandom" ID="{461A82AA-57B0-453C-A4E2-C81887E96741}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Charger_RecibeDa_o" ID="{8AEF77A4-5529-4EF5-BA00-357D1C350EDB}">
+							<ChildrenList>
+								<Action Name="" ID="{22946B8D-D61F-44DB-824B-798446EBE5CB}" ShortID="422361160">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Charger_RecibeDaño" ID="{F3557C36-3729-4263-84E6-BA251CBAB2B7}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Reforzado_Danio" ID="{5801EC7C-3BB4-4B8E-B71A-B724F2374936}">
+							<ChildrenList>
+								<Action Name="" ID="{FF08CEC2-6CE8-4955-9386-12717FA3E86A}" ShortID="843308867">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Reforzado Recibe Daño" ID="{3923FE71-7835-4FFE-AF8F-021D08DE9E19}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Rango_Muerte" ID="{5F3758F8-A5AB-4122-A32F-5C4CEE7AB39E}">
+							<ChildrenList>
+								<Action Name="" ID="{97246F79-41FB-4E6D-9400-9170848CFBC9}" ShortID="836919881">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rango_Muerte" ID="{43E185DB-C1D5-4E84-A3A4-96D052D90B76}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Simple_RecibeDano" ID="{A4337C44-C68E-4E81-899A-04556FD155B7}">
+							<ChildrenList>
+								<Action Name="" ID="{07A9ED4E-C78B-44AA-8A36-515FA754CE65}" ShortID="698252067">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Simple_RecibeDaño" ID="{87CA4D3A-A5B8-4805-8737-4353E90ADFFE}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Simple_Muerte" ID="{05C67E28-CCA0-41C6-9BA5-620DF1B04FB8}">
+							<ChildrenList>
+								<Action Name="" ID="{1E8776EF-41B0-4EB0-B29A-0F30FFBEBB03}" ShortID="332949246">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Simple_Muerte" ID="{1918293B-78D5-447F-9374-D613E211681A}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Reforzado_Ataca" ID="{FD77BF0C-053F-4470-82FC-F884FBA01DC4}">
+							<ChildrenList>
+								<Action Name="" ID="{71304E42-855F-4BE8-9548-1F30CFC9A065}" ShortID="1006760569">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Reforzado Ataca" ID="{930A9652-E52E-4CAC-8F4B-41B326CA9AB0}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Reforzado_Desplazamiento" ID="{D6850CED-EE7F-4DD1-B6D2-808B4C398FDF}">
+							<ChildrenList>
+								<Action Name="" ID="{7E12B054-6E54-46F6-BB87-BA8103A298A2}" ShortID="67124472">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Reforzado Desplazamiento" ID="{2AB286D0-D55E-40CF-9A19-EB5FB3BFD2F9}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Reforzado_Muerte" ID="{A80BB25F-3C6E-451A-B6E4-4A9DB1823188}">
+							<ChildrenList>
+								<Action Name="" ID="{5DB6B916-ECFB-4E8B-8BAF-99069DD0BF42}" ShortID="934625088">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Reforzado Muerte" ID="{CA137C4D-D209-44BB-87E9-CCAC178D3DF4}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Simple_Desplazamiento" ID="{D35B5E04-312A-4988-A29A-9DA25C8C2CFC}">
+							<ChildrenList>
+								<Action Name="" ID="{18B4B28A-EC48-49E0-A7A6-96EEB2F028A7}" ShortID="140286699">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Simple_Desplazamiento" ID="{02565F30-8034-4681-8446-82AD604F3258}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Simple_Ataca" ID="{B0CB3F6D-F31A-45CD-BB48-D3CCE1B1A18B}">
+							<ChildrenList>
+								<Action Name="" ID="{96A23CE6-6947-4A47-9D41-D1C8DEE768EA}" ShortID="368786817">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Simple_Ataca" ID="{79F61D8E-505A-41E5-A3BC-36253624BF35}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Rango_SonidoRandom" ID="{B87B214C-8CB5-4687-8111-C1A3560A06BD}">
+							<ChildrenList>
+								<Action Name="" ID="{E46DB518-D712-4F29-AB5A-018471B9AA35}" ShortID="472901972">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rango_SonidoRandom" ID="{B7F8FD8B-7A33-4198-A324-FCAA7A591336}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Simple_SonidoRandom" ID="{594F62C4-D0FB-4CDE-B301-A57B665A9E31}">
+							<ChildrenList>
+								<Action Name="" ID="{DA00D3B5-E8DA-4203-8CA6-21B447D992A4}" ShortID="155779575">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Simple_SonidoRandom" ID="{9CBB25D6-B176-4D3F-89B6-F131C266C72D}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Player" ID="{AEDCC1F2-24F3-4543-967E-12CF093CDC8A}" ShortID="796243698">
+					<ChildrenList>
+						<Event Name="Player_Muerte" ID="{224324A6-845B-44D2-AA08-488EB7D8C962}">
+							<ChildrenList>
+								<Action Name="" ID="{9F4656DE-3F1F-4E72-B75A-9962A62AE52D}" ShortID="579912193">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player Muerte" ID="{979D7E64-B03F-4194-A3F6-96D324ECA925}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Soltar" ID="{CBC939E0-4FDB-44A8-9F79-B1C7217ABB25}">
+							<ChildrenList>
+								<Action Name="" ID="{0BFBF20A-FAD6-4F09-9EDB-4F2EA59BD2DE}" ShortID="571453248">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Soltar" ID="{DB24761A-2201-49C4-AB4E-8614919A82AD}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Desplazamiento" ID="{4DC45938-FC27-44CC-9D35-427FC694228B}">
+							<ChildrenList>
+								<Action Name="" ID="{9635C4E9-14B9-415E-AE70-542FE5FB38DB}" ShortID="624430475">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Desplazamiento" ID="{191D1725-D145-4C84-96EA-3F853E05D6F6}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Agarrar" ID="{736965DF-EECA-4B78-949F-534949C2C3EE}">
+							<ChildrenList>
+								<Action Name="" ID="{2884518B-F4F8-4209-8AA9-DD56CB846BCF}" ShortID="345227703">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Agarrar" ID="{3AF7C9C3-9CF1-40A8-9301-A52563081D0F}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_SonidoRandom" ID="{5C5190B9-67FE-4A21-9B10-C2B53452B293}">
+							<ChildrenList>
+								<Action Name="" ID="{B8EBF467-41CA-4BA3-BB19-39BCBCE1B175}" ShortID="788253905">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_SonidoRandom" ID="{686C4958-0A8E-4CD6-9531-274B617124C1}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Couldron" ID="{DF639FBB-F34A-459C-8C39-3F15E322DBF1}" ShortID="760471314">
+					<ChildrenList>
+						<Event Name="Play_Agarrar_item_Porcion" ID="{71F4ABA7-460B-4C7A-A104-97656F8EB7F7}">
+							<ChildrenList>
+								<Action Name="" ID="{93C0EE71-AADF-4CD7-81E9-CCC0AC413431}" ShortID="622993470">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Agarrar_item_Porcion" ID="{295798C4-B9D4-497A-ABE3-A32B29D4B355}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Pocion_Preparandose" ID="{1F5BAB17-90B9-4BCF-B66D-73E6A03AB3DC}">
+							<ChildrenList>
+								<Action Name="" ID="{12CBC2B0-BD8A-486D-AC79-6544384ACFC4}" ShortID="774557767">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Pocion_Preparandose" ID="{BC1CDFDF-23E0-4DB9-B38E-79FAD4B300EE}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Poner_Item_caldero" ID="{428D8039-50D0-445B-8D6C-0B7F1019032B}">
+							<ChildrenList>
+								<Action Name="" ID="{D0E7F795-8D26-4339-B78C-F07180373F86}" ShortID="602377873">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Poner_Item_Caldero" ID="{F1EDE366-8C98-405F-BBCF-546D38B0E1C0}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Pocion_Lista" ID="{544B2CA3-D564-4FE3-9519-6CA03EAD2EBC}">
+							<ChildrenList>
+								<Action Name="" ID="{8FAEE742-45B6-4D25-AC0B-95FA866307BE}" ShortID="526597239">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Pocion_Lista" ID="{EDBDDBB4-C9A5-4D8B-8E59-5C7EE2E3235A}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Caldero" ID="{FB6379C0-DEFE-4904-BA85-E4AB9C35BFC3}">
+							<ChildrenList>
+								<Action Name="" ID="{D83A09FC-05EB-4AAE-A3C5-AD690D55F812}" ShortID="602920956">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SonidoRandom_Caldero" ID="{7DA5B050-DA76-4E3A-B80D-7FF611068C03}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="SonidoRandom_Caldero" ID="{A47633F1-053D-4922-AA02-A576DC0D654C}">
+							<ChildrenList>
+								<Action Name="" ID="{97D4234F-43EE-4E26-84B6-06C7A86D60C0}" ShortID="454246831">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SonidoRandom_Caldero" ID="{7DA5B050-DA76-4E3A-B80D-7FF611068C03}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Table" ID="{B4C6F814-1995-4940-A1B8-AF72CF8886A1}" ShortID="712403591">
+					<ChildrenList>
+						<Event Name="Error_no_se_puede_poner_cristal" ID="{24E244A1-0EFE-4D26-B420-C76A442EF666}">
+							<ChildrenList>
+								<Action Name="" ID="{77A78070-188B-410A-8B20-53EEF187B4A7}" ShortID="474283461">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Error no se puede poner cristal" ID="{6CC743D5-CB2D-462F-A873-4199B835EA42}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Error_no_se_puede_poner_mas_items_en_la_mesa" ID="{4E6773B8-E688-4A54-B1B4-0A95246881F8}">
+							<ChildrenList>
+								<Action Name="" ID="{0C8AB193-915E-45AC-A8E6-1AA323E8CBCB}" ShortID="845474186">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Error no se puede poner mas items en la mesa" ID="{155B2490-653A-400F-8123-01F22424B7DC}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Eliminar_Cristal" ID="{F35DF1DA-5DEC-4E50-8DE6-CCD8BE89399F}">
+							<ChildrenList>
+								<Action Name="" ID="{D24CA5E4-8264-4696-A9B7-E7983AF6811E}" ShortID="731289845">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Eliminar_Cristal" ID="{D3D6ADDD-2E4D-4447-B575-C8313FDE5DF1}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Agarrar_Item_Frasco" ID="{C570A810-0279-4E25-BC5E-6558907BD42C}">
+							<ChildrenList>
+								<Action Name="" ID="{5B541E46-596E-4351-8427-B76EB7103BE6}" ShortID="985208465">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Agarrar_Item_Frasco" ID="{E9F252D1-C397-48FF-8772-D8A31FD8B5D6}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Procesar_Agarrar" ID="{D8811086-6A1C-4B07-AE33-5289DAC2A7EB}">
+							<ChildrenList>
+								<Action Name="" ID="{6DD61DB8-721A-43DA-82AA-CA77EA8D343A}" ShortID="159663288">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Procesar Agarrar Item" ID="{10BA368B-8C0A-4DB1-B949-0302285E13D5}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Procesar_Item" ID="{A68CE769-03A1-46F0-BC5F-306FFA81B59E}">
+							<ChildrenList>
+								<Action Name="" ID="{BD2A77EB-F81C-497E-90C1-237EA203C52A}" ShortID="798696717">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Procesar_Item" ID="{277F3B98-00B9-479F-8829-8F76CF302452}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Turrets" ID="{4E60238F-2643-401B-9A33-B1911F950776}" ShortID="694265754">
+					<ChildrenList>
+						<Event Name="Laser_Disparo" ID="{3765819F-B6E6-4DE5-8EB2-818DE946F797}">
+							<ChildrenList>
+								<Action Name="" ID="{136A1891-5ABD-413D-8A29-CFEC0BEC4C6F}" ShortID="529394443">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Laser_Disparo" ID="{DE421D2E-3BFD-48CC-BF5A-11A63C5DFEA9}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Explosive_SonidoEspecial" ID="{F4A7E4FD-B2AB-446F-A202-8B5FEAE6C705}">
+							<ChildrenList>
+								<Action Name="" ID="{D0EBBBE5-4228-44E5-8767-017BD0C01FA0}" ShortID="294397171">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Explosive_SonidoEspecial" ID="{9CE55A07-9155-4D0C-94A2-65AEF0420669}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Defense_SonidosEspeciales" ID="{7282ACE0-F759-46AE-8DFC-75D88E6E00B8}">
+							<ChildrenList>
+								<Action Name="" ID="{657CF51B-430C-4A5B-BC64-3072E59350F4}" ShortID="817104575">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Defense_SonidosEspeciales" ID="{BDFEBA6A-43CC-4752-9274-B8FB226E644A}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Explosive_Muerte" ID="{D599F9E4-29E0-4C85-B381-AFC46C5697A7}">
+							<ChildrenList>
+								<Action Name="" ID="{A901B8F8-BDCD-4544-8DBE-F773D19C1F02}" ShortID="159545140">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Explosive_Muerte" ID="{888DFD11-55C7-439C-8850-DB415780FF11}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Explosive_Disparo" ID="{BBED1184-927C-4B04-A27B-E1A089F1C118}">
+							<ChildrenList>
+								<Action Name="" ID="{AC67A101-6CED-4286-AADB-E65CF5BB83C5}" ShortID="70374299">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Explosive_Disparo" ID="{11A71964-477B-47ED-B70D-5A788E55127C}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Defense_Muerte" ID="{426BB39C-819D-41BC-A268-22404B3A77A9}">
+							<ChildrenList>
+								<Action Name="" ID="{B32CBCAF-BE7A-4D77-AA6D-B421951976A4}" ShortID="754605577">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Defense_Muerte" ID="{E6093A1D-331B-44C6-A1E9-8F9731EE6163}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Laser_SonidoEspecial" ID="{227997AF-FD61-498D-8348-D7B0A5ACE0AF}">
+							<ChildrenList>
+								<Action Name="" ID="{81A57EDF-9375-426E-BEB1-C1400C570923}" ShortID="969780219">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Laser_SonidoEspecial" ID="{5CBF21F7-95AC-4BE1-8F01-444AE0C4DB59}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Laser_Muerte" ID="{34005F41-0A1A-4BA6-8A9C-892D2C62B715}">
+							<ChildrenList>
+								<Action Name="" ID="{A63ADC6A-D572-47FC-975F-13BD2DBB876A}" ShortID="521282598">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Laser_Muerte" ID="{E983EF4F-D3DD-4D23-9BBD-949396F8B65D}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Proyectil_Muerte" ID="{6EC3C197-AC30-4414-A33C-0528006A2693}">
+							<ChildrenList>
+								<Action Name="" ID="{C9D9F4DA-F5E4-49F1-832A-AF89D32E5C30}" ShortID="831659617">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Proyectil_Muerte" ID="{6EC1AFF5-F2C6-4767-BFA0-F4D2DBBAEAD8}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Proyectil_Disparo" ID="{4C04A2D2-5D2E-4CA3-97F4-DD6EAD0DE963}">
+							<ChildrenList>
+								<Action Name="" ID="{D70EF64D-6BEF-4A8B-A60A-33E4C22F3854}" ShortID="191272977">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Proyectil_Disparo" ID="{9231E93F-93EF-4FB3-8ABD-A91E4343924A}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Useless_Muerte" ID="{66788500-4793-4C5E-A8FB-82F4065EA625}">
+							<ChildrenList>
+								<Action Name="" ID="{687B577B-A3AD-4E7B-86DA-AEF2047CBC4D}" ShortID="911373077">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Useless_Muerte" ID="{A94EACCE-1C63-450F-A2D8-D24931AA08EB}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Useless_SonidoEspecial" ID="{449C0CE7-C39A-49B0-B868-8BC5C6FD341E}">
+							<ChildrenList>
+								<Action Name="" ID="{FA69F442-8DF0-4386-BAAA-383AF7C910E6}" ShortID="591502013">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Useless_SonidoEspecial" ID="{7CB42C01-E41F-4688-A0F5-8DC98BB756CF}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambient" ID="{74E3926C-55D4-4FED-9AD5-A1931BBF86D2}" ShortID="430791843">
+					<ChildrenList>
+						<Event Name="Play_AMB_Tutorial" ID="{A4556F9C-F4A8-45A4-9694-3C0B9EAC97A9}">
+							<ChildrenList>
+								<Action Name="" ID="{AF38B6C3-CDA4-4ACA-9CC5-E1BAF27BC786}" ShortID="1510193">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AMB_Pajaros_cuervos_start" ID="{9DCF5F7A-8E1C-470D-9800-760FBBB05126}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A899BEC9-E76D-4DD2-9C76-4E8F7EF3011E}" ShortID="514017312">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AMB_Bosque_Noche" ID="{D879BBB0-1133-40D8-9A0D-E7990DEF21BC}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_AMB_Bosque_Noche" ID="{C010C2A1-F8C7-4914-BA28-992F9C5ECE69}">
+							<ChildrenList>
+								<Action Name="" ID="{6CBBE810-132B-40F3-BC06-630DBF61A31B}" ShortID="449210821">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AMB_Bosque_Noche" ID="{D879BBB0-1133-40D8-9A0D-E7990DEF21BC}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{8762A721-8821-4594-9EB3-6F22CC7E5676}" ShortID="181509749">
+					<ChildrenList>
+						<Event Name="Interfaz_AceptarContinuar" ID="{AFB208F1-F9DB-4ED9-8A12-9DFCEBD70B4E}">
+							<ChildrenList>
+								<Action Name="" ID="{E5E357BE-6DB3-4ECF-9BCB-97B81FC08AE7}" ShortID="277884158">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="aceptar continuar" ID="{FA278F93-FFF0-49E6-ACEC-89448770A827}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_libro_abrir_3" ID="{EC4215EC-8949-4306-BC20-8A0B55E77645}">
+							<ChildrenList>
+								<Action Name="" ID="{B67F7038-2ACF-40C8-92A0-38B1D7D624E9}" ShortID="144555996">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="libro_abrir_3" ID="{83318A96-A1E2-48AE-A2F8-E89E77AAC563}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Recetario_Cerrar" ID="{2D1ECF0C-F0DC-4CEF-BF34-BDDE0CE087B6}">
+							<ChildrenList>
+								<Action Name="" ID="{8F59BF0C-5DFE-4834-9DDD-59E03A9F71AC}" ShortID="281795928">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cerrar Libro" ID="{FCFC7DCB-8E66-4C2C-87C4-3C2414A26DB9}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{D0B9B598-6EDD-422F-98A8-B076EE2835F7}" ShortID="380775374">
+					<ChildrenList>
+						<Event Name="Play_ingamemusic_level" ID="{503A21C3-FC34-4E9D-9778-A26449B5ED57}">
+							<ChildrenList>
+								<Action Name="" ID="{03C08966-F881-4FDF-AF28-82DD106FE1BA}" ShortID="596962211">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ingamemusic_tutorial" ID="{524ECB04-B8A7-4883-BDCD-E6A08AA46681}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{51F397FD-15FC-4432-8C3A-17E0D768C7E6}" ShortID="374945534">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Comienzo_de_juego" ID="{227A69B9-4214-4EC8-8F2A-221B65550797}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{79C03148-D01C-4B90-B672-060ED936BB57}" ShortID="68738551">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ingamemusic_level" ID="{4BDA89BE-723E-475D-A91D-AF7C32387AB6}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ingamemusic_tutorial" ID="{C44B7B60-3FC1-4DC2-BD79-5A4D1F7B7B7E}">
+							<ChildrenList>
+								<Action Name="" ID="{ED18E9CB-B698-4F6F-93E4-F210D09E33FA}" ShortID="906799162">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="main menu music" ID="{D80337C4-0625-4E77-B77A-BC650C554D04}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{89CA77ED-4824-4764-9FE1-D6BC48DF3A5E}" ShortID="414704942">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Comienzo_de_juego" ID="{227A69B9-4214-4EC8-8F2A-221B65550797}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9897ADA0-136C-41B8-B7D1-5336E197EB1F}" ShortID="142519363">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ingamemusic_tutorial" ID="{524ECB04-B8A7-4883-BDCD-E6A08AA46681}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Perder_Juego" ID="{F888067F-A3EC-4DD1-A04E-B57ACE82398C}">
+							<ChildrenList>
+								<Action Name="" ID="{D845119C-6EDD-475D-9881-C85045B34D37}" ShortID="842216727">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Perder_Juego" ID="{8A961DCE-E7E8-44E7-866A-63BF24BEC5AD}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Oleada" ID="{7CA31EA5-399D-48A4-8234-90FCE01AD297}">
+							<ChildrenList>
+								<Action Name="" ID="{D4AE548F-5981-4A51-B632-E70D2CA272C7}" ShortID="731723267">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Oleada" ID="{787BD6DB-8BB2-46CF-8056-172ECA160D2D}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Oleada_final" ID="{025C90FE-29FB-4A26-953E-AFE08A42EDAA}">
+							<ChildrenList>
+								<Action Name="" ID="{2BC7393A-7109-4FA7-A95E-35925BCCEA6F}" ShortID="1011069118">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Oleada final" ID="{FC823D43-C1D0-4792-BDE2-6B6ACE0E0C77}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
