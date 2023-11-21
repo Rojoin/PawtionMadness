@@ -9,7 +9,7 @@ namespace Table
         [SerializeField] private VoidChannelSO activateRecipesCanvasChannel;
         private bool isCanvasActive = false;
         private Coroutine isPlayerOnObject;
-
+ 
         public override void OnInteraction(PlayerInventory playerInventory = null, PlayerInteract playerInteract = null)
         {
             isCanvasActive = !isCanvasActive;

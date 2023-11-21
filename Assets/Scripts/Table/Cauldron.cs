@@ -38,7 +38,9 @@ namespace Table
         public UnityEvent<float> OnFillAmountUpdated = new UnityEvent<float>();
         public UnityEvent<Sprite> OnIngredientAdded = new UnityEvent<Sprite>();
         public UnityEvent OnCookingFinished = new UnityEvent();
-
+        public UnityEvent OnItemPlaced = new();
+        public UnityEvent OnItemPicked = new();
+        public UnityEvent OnIncorrectInteraction = new();
      
 
         private void Start()
@@ -79,6 +81,7 @@ namespace Table
                 case CauldronState.Done when !playerInventory.hasPickable():
                     playerInventory.SetPickable(potionFromRecipe);
                     ResetCauldron();
+                        OnItemPicked.Invoke();
                     break;
                 case CauldronState.Empty when playerInventory.hasIngredient():
                 case CauldronState.Cooking when playerInventory.hasIngredient():
@@ -86,8 +89,11 @@ namespace Table
                     {
                         AddIngredientToCook(playerInventory.GetPickable() as Ingredient);
                         playerInventory.NullPickable();
+                        OnItemPlaced.Invoke();
                     }
-
+                    break;
+                default:
+                    OnIncorrectInteraction.Invoke();
                     break;
             }
         }

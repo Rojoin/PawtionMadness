@@ -2,6 +2,7 @@
 using Item;
 using Player;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Table
@@ -12,14 +13,16 @@ namespace Table
         [SerializeField] private Image progressBar;
         [SerializeField] private Ingredient ingredient;
         [SerializeField] private Transform _itemPos;
-         private float cutCounter;
+        private float cutCounter;
+        public UnityEvent OnCut = new();
+        public UnityEvent OnFailedInteraction = new();
 
-         public void Awake()
-         {
-             ResetCount();
-         }
+        public void Awake()
+        {
+            ResetCount();
+        }
 
-         public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
+        public override void OnInteraction(PlayerInventory playerInventory = null, PlayerInteract playerInteract = null)
         {
             OnInteract.Invoke();
             if (!playerInventory.hasPickable() && ingredient)
@@ -27,17 +30,19 @@ namespace Table
                 if (cutCounter < ingredient.InteractionToProcesses)
                 {
                     CutIngredient();
+                    OnCut.Invoke();
                 }
                 else
                 {
-                    
                     ingredient.SetIconVisible(true);
                     playerInventory.SetPickable(ingredient);
                     ingredient = null;
                     ResetCount();
+                    OnItemPickUp.Invoke();
                 }
-            } 
-            else if (playerInventory.hasIngredient() && !(playerInventory.GetPickable() as Ingredient).IsProcessed() && !ingredient)
+            }
+            else if (playerInventory.hasIngredient() && !(playerInventory.GetPickable() as Ingredient).IsProcessed() &&
+                     !ingredient)
             {
                 playerInventory.GetPickable().SetNewParent(_itemPos);
                 ingredient = playerInventory.GetPickable() as Ingredient;
@@ -45,8 +50,12 @@ namespace Table
                 progressBar.enabled = true;
                 ingredient.SetIconVisible(true);
                 progressBar.fillAmount = 0;
+                OnItemDrop.Invoke();
             }
-          
+            else
+            {
+                OnFailedInteraction.Invoke();
+            }
         }
 
         private void ResetCount()
@@ -55,13 +64,14 @@ namespace Table
             progressBar.enabled = false;
         }
 
-        
+
         private void CutIngredient()
         {
             if (!progressBar.enabled)
             {
                 progressBar.enabled = true;
             }
+
             cutCounter++;
             float progressBarFillAmount = (cutCounter / ingredient.InteractionToProcesses);
             progressBar.fillAmount = progressBarFillAmount;

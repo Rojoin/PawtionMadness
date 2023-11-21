@@ -1,6 +1,7 @@
 ﻿using Item;
 using Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Table
 {
@@ -8,7 +9,9 @@ namespace Table
     {
         private Pickable _pickable;
         [SerializeField] private Transform _itemPos;
-
+        public UnityEvent OnItemPickUp = new();
+        public UnityEvent OnItemDrop = new();
+        public UnityEvent OnFailInteraction = new();
         public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
             OnInteract.Invoke();
@@ -17,11 +20,17 @@ namespace Table
                 playerInventory.GetPickable().SetNewParent(_itemPos);
                 _pickable = playerInventory.GetPickable();
                 playerInventory.NullPickable();
+                OnItemDrop.Invoke();
             }
             else if (_pickable && !playerInventory.hasPickable())
             {
                 playerInventory.SetPickable(_pickable);
                 _pickable = null;
+                OnItemPickUp.Invoke();
+            }
+            else
+            {
+                OnFailInteraction.Invoke(); 
             }
         }
     }
