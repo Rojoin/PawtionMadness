@@ -26,7 +26,7 @@ namespace Menu
 
         private void Awake()
         {
-            
+            Cursor.visible = true;
             startGameButton.onClick.AddListener(StartGame);
             optionsButton.onClick.AddListener(OptionsToggle);
             backOptionsButton.onClick.AddListener(OptionsToggle);
