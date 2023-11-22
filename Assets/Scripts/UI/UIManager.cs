@@ -84,6 +84,7 @@ public class UIManager : MonoBehaviour
 
     public void ActivateWinScreen()
     {
+        Cursor.visible = true;
         SetCanvasVisibility(WinScreen, true);
     }
 
