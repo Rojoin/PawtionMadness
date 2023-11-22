@@ -11,8 +11,7 @@ namespace Table
     {
         [SerializeField] private KitchenObjectSO item;
 
-        public UnityEvent OnItemPickUp = new();
-        public UnityEvent OnFailedInteraction = new();
+   
         public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
             OnInteract.Invoke();

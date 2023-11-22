@@ -15,7 +15,7 @@ namespace Table
         [SerializeField] private Transform _itemPos;
         private float cutCounter;
         public UnityEvent OnCut = new();
-        public UnityEvent OnFailedInteraction = new();
+
 
         public void Awake()
         {
