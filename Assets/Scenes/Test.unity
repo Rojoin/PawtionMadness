@@ -2600,6 +2600,11 @@ Transform:
   - {fileID: 1981383451}
   m_Father: {fileID: 6129298776008384120}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &833250308 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 9010425507947188558, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+  m_PrefabInstance: {fileID: 7377620539579056765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &878055053
 GameObject:
   m_ObjectHideFlags: 0
@@ -7339,7 +7344,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040634163976534243, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCut.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 833250308}
+    m_RemovedComponents:
+    - {fileID: 9010425507972152782, guid: 03582489449adaf4294f64acb57ca435, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
