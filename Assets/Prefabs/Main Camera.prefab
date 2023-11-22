@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8155449214015482755}
   - component: {fileID: 5811539098500002985}
   - component: {fileID: 7304443047087074592}
+  - component: {fileID: 1658255306564913410}
   m_Layer: 0
   m_Name: GridCamera
   m_TagString: MainCamera
@@ -106,7 +107,7 @@ MonoBehaviour:
   m_RendererIndex: 1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
@@ -166,6 +167,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDefaultListener: 1
   listenerId: 0
+--- !u!114 &1658255306564913410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2481084516736391721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: c4c16aa3e2a76034693ead85ef389304, type: 2}
 --- !u!1 &7404172006808531425
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,10 +291,10 @@ MonoBehaviour:
   m_CameraType: 0
   m_Cameras:
   - {fileID: 5523032914559291523}
-  m_RendererIndex: 1
+  m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
