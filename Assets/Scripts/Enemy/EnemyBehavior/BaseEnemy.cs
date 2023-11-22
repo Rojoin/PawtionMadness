@@ -11,6 +11,7 @@ namespace Enemy
         [SerializeField] protected UnityEvent onDamage;
         [SerializeField] public UnityEvent<GameObject> onDeath;
         [SerializeField] protected Animator _animator;
+        [SerializeField] protected ParticleSystem _onDeathParticle;
         private float currentHealth;
         protected bool isAlive;
         private static readonly int Death1 = Animator.StringToHash("Death");
@@ -27,6 +28,7 @@ namespace Enemy
 
         public virtual void Init()
         {
+            this.StopAllCoroutines();
             CurrentHealth = enemyType.maxHealth;
             boxCollider = GetComponent<BoxCollider>();
             boxCollider.enabled = true;
@@ -36,6 +38,7 @@ namespace Enemy
         {
             _animator?.SetTrigger(Death1);
             boxCollider.enabled = false;
+            _onDeathParticle.Play();
             Invoke(nameof(DestroyEnemy),DeathTime);
         }
 
