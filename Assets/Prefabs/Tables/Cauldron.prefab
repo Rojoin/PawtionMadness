@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 386300262910276843}
   - component: {fileID: 8862372111927571113}
+  - component: {fileID: -3920496371074705349}
   - component: {fileID: 2276193884977072322}
   - component: {fileID: 2513937107139916660}
+  - component: {fileID: -3941782500910883357}
   m_Layer: 0
   m_Name: Cauldron
   m_TagString: Untagged
@@ -52,13 +54,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnItemPickUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -3920496371074705349}
+        m_TargetAssemblyTypeName: CouldronSFX, Assembly-CSharp
+        m_MethodName: PlayPickItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnItemDrop:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -3920496371074705349}
+        m_TargetAssemblyTypeName: CouldronSFX, Assembly-CSharp
+        m_MethodName: PlayPlaceItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnFailedInteraction:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -3920496371074705349}
+        m_TargetAssemblyTypeName: CouldronSFX, Assembly-CSharp
+        m_MethodName: PlayOnIteamError
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   timerMax: 0
   currentTime: 0
   defaultPotion: {fileID: -3134171079223218267, guid: bb0286b7130336f4997d4b7458bb0a00, type: 3}
@@ -79,7 +117,31 @@ MonoBehaviour:
       m_Calls: []
   OnCookingFinished:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -3920496371074705349}
+        m_TargetAssemblyTypeName: CouldronSFX, Assembly-CSharp
+        m_MethodName: PlayReadyPotion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-3920496371074705349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3164575471598420053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad4bd8c27804475abd39844a0e50218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2276193884977072322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +182,28 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.1033934
   m_Center: {x: 0, y: 0.15339339, z: 0.12}
+--- !u!114 &-3941782500910883357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3164575471598420053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d69a9b7b87fbad41a7feee963a8c6e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &5435824086131795171
 GameObject:
   m_ObjectHideFlags: 0

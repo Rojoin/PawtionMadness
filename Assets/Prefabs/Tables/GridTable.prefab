@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8345919595791583778}
   - component: {fileID: 4661884152162982365}
   - component: {fileID: 1650792989762646812}
+  - component: {fileID: 5769890871330944730}
+  - component: {fileID: 373116655627897039}
   m_Layer: 0
   m_Name: GridTable
   m_TagString: Untagged
@@ -67,7 +69,98 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1991587d109cc054797e77bef4a36ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnItemPickUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5769890871330944730}
+        m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
+        m_MethodName: PlayPickItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnItemDrop:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5769890871330944730}
+        m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
+        m_MethodName: PlayPlaceItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFailedInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5769890871330944730}
+        m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
+        m_MethodName: PlayCantPlaceItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   ChangeToGridChannel: {fileID: 11400000, guid: 6da3fdb0ff273a044939e59fbefada8a, type: 2}
+--- !u!114 &5769890871330944730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411726493054401121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2665dd750fa7da1449b66d1c57b7d3a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickItem:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 40ecffeab08572349a27833fa6e2d1ce, type: 2}
+  placeItem:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 21abf068007747942b8304c5634c4885, type: 2}
+  interactItem:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0f7fefe58f5c363488ce98b8135093d8, type: 2}
+--- !u!114 &373116655627897039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411726493054401121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d69a9b7b87fbad41a7feee963a8c6e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &1748091514805398653
 PrefabInstance:
   m_ObjectHideFlags: 0

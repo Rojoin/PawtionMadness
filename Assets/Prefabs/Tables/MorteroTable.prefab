@@ -42,6 +42,8 @@ GameObject:
   - component: {fileID: 4227396768193256647}
   - component: {fileID: 2470173954934714335}
   - component: {fileID: 3628849661595180066}
+  - component: {fileID: -103978619902434043}
+  - component: {fileID: -1779869323982843443}
   m_Layer: 0
   m_Name: MorteroTable
   m_TagString: Untagged
@@ -101,10 +103,104 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29716d12840a483aa3fd56739df670a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnItemPickUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -103978619902434043}
+        m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
+        m_MethodName: PlayPickItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnItemDrop:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -103978619902434043}
+        m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
+        m_MethodName: PlayPlaceItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFailedInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -103978619902434043}
+        m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
+        m_MethodName: PlayCantPlaceItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _cuttingRecipeArray: []
   progressBar: {fileID: 340091754925653146}
   ingredient: {fileID: 0}
   _itemPos: {fileID: 6961756686024655955}
+  OnCut:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-103978619902434043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6687665907051411335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2665dd750fa7da1449b66d1c57b7d3a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickItem:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 40ecffeab08572349a27833fa6e2d1ce, type: 2}
+  placeItem:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 21abf068007747942b8304c5634c4885, type: 2}
+  interactItem:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 068c086dea5e8904b849593a90d6a2bb, type: 2}
+--- !u!114 &-1779869323982843443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6687665907051411335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d69a9b7b87fbad41a7feee963a8c6e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &7249193822374191417
 PrefabInstance:
   m_ObjectHideFlags: 0
