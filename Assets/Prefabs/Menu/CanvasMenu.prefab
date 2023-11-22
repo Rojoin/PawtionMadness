@@ -119,8 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GoToGame:
     sceneReference:
-      sceneAsset: {fileID: 102900000, guid: 19e0392dac0af6a43a1e458ef429b3bd, type: 3}
-      scenePath: Assets/Scenes/TutorialScene.unity
+      sceneAsset: {fileID: 102900000, guid: 45fe32f6c0c647447ad70b3eaf0398e7, type: 3}
+      scenePath: Assets/Scenes/AskForTutorial.unity
     transitionControlPrefab: {fileID: 5566928794715677815, guid: f3ff1d07a71d772458ad32f3f713998d, type: 3}
     transitionSpeed: 0.5
     minTransitionTime: 0.2
@@ -143,6 +143,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4550576486924210793}
     m_Modifications:
+    - target: {fileID: 2639017908470940886, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2639017908470940886, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2639017908470940886, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.89411765
+      objectReference: {fileID: 0}
     - target: {fileID: 5844859796999310472, guid: a663626b4793a2949845d609f88435f1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -227,6 +239,54 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 7791852222341683432, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791852222341683432, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7791852222341683432, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.89411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 8093730621808212262, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8093730621808212262, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8093730621808212262, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.89411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475318522927173749, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475318522927173749, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 8165635919855675845}
+    - target: {fileID: 8475318522927173749, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475318522927173749, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475318522927173749, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.89411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475318522927173749, guid: a663626b4793a2949845d609f88435f1, type: 3}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 2710941898233648181}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -794,7 +854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1290281017270470547, guid: f21935161be415b479410196ac7127a6, type: 3}
       propertyPath: m_Size
-      value: 0.81333333
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1663287320486603517, guid: f21935161be415b479410196ac7127a6, type: 3}
       propertyPath: m_AnchorMax.x
