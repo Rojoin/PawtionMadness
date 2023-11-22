@@ -310,34 +310,12 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Player_Soltar" ID="{CBC939E0-4FDB-44A8-9F79-B1C7217ABB25}">
-							<ChildrenList>
-								<Action Name="" ID="{0BFBF20A-FAD6-4F09-9EDB-4F2EA59BD2DE}" ShortID="571453248">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Player_Soltar" ID="{DB24761A-2201-49C4-AB4E-8614919A82AD}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Player_Desplazamiento" ID="{4DC45938-FC27-44CC-9D35-427FC694228B}">
 							<ChildrenList>
 								<Action Name="" ID="{9635C4E9-14B9-415E-AE70-542FE5FB38DB}" ShortID="624430475">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Desplazamiento" ID="{191D1725-D145-4C84-96EA-3F853E05D6F6}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Player_Agarrar" ID="{736965DF-EECA-4B78-949F-534949C2C3EE}">
-							<ChildrenList>
-								<Action Name="" ID="{2884518B-F4F8-4209-8AA9-DD56CB846BCF}" ShortID="345227703">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Player_Agarrar" ID="{3AF7C9C3-9CF1-40A8-9301-A52563081D0F}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -488,6 +466,50 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Procesar_Item" ID="{277F3B98-00B9-479F-8829-8F76CF302452}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Soltar" ID="{CBC939E0-4FDB-44A8-9F79-B1C7217ABB25}">
+							<ChildrenList>
+								<Action Name="" ID="{0BFBF20A-FAD6-4F09-9EDB-4F2EA59BD2DE}" ShortID="571453248">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Soltar" ID="{DB24761A-2201-49C4-AB4E-8614919A82AD}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Agarrar" ID="{736965DF-EECA-4B78-949F-534949C2C3EE}">
+							<ChildrenList>
+								<Action Name="" ID="{2884518B-F4F8-4209-8AA9-DD56CB846BCF}" ShortID="345227703">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Agarrar" ID="{3AF7C9C3-9CF1-40A8-9301-A52563081D0F}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Recetario_Cerrar" ID="{2D1ECF0C-F0DC-4CEF-BF34-BDDE0CE087B6}">
+							<ChildrenList>
+								<Action Name="" ID="{8F59BF0C-5DFE-4834-9DDD-59E03A9F71AC}" ShortID="281795928">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cerrar Libro" ID="{FCFC7DCB-8E66-4C2C-87C4-3C2414A26DB9}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_libro_abrir_3" ID="{EC4215EC-8949-4306-BC20-8A0B55E77645}">
+							<ChildrenList>
+								<Action Name="" ID="{B67F7038-2ACF-40C8-92A0-38B1D7D624E9}" ShortID="144555996">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="libro_abrir_3" ID="{83318A96-A1E2-48AE-A2F8-E89E77AAC563}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -678,28 +700,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="aceptar continuar" ID="{FA278F93-FFF0-49E6-ACEC-89448770A827}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_libro_abrir_3" ID="{EC4215EC-8949-4306-BC20-8A0B55E77645}">
-							<ChildrenList>
-								<Action Name="" ID="{B67F7038-2ACF-40C8-92A0-38B1D7D624E9}" ShortID="144555996">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="libro_abrir_3" ID="{83318A96-A1E2-48AE-A2F8-E89E77AAC563}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Recetario_Cerrar" ID="{2D1ECF0C-F0DC-4CEF-BF34-BDDE0CE087B6}">
-							<ChildrenList>
-								<Action Name="" ID="{8F59BF0C-5DFE-4834-9DDD-59E03A9F71AC}" ShortID="281795928">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Cerrar Libro" ID="{FCFC7DCB-8E66-4C2C-87C4-3C2414A26DB9}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
