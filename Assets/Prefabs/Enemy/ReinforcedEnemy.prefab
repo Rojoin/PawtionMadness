@@ -65,7 +65,7 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _animator: {fileID: 4236883675980384620}
+  _animator: {fileID: 1368999717882419880}
 --- !u!65 &2486498811297812854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -150,6 +150,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 786669744481597339, guid: 4f5c198a4a716144a85f2a905031ff26, type: 3}
   m_PrefabInstance: {fileID: 127235578202739163}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1368999717882419880 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1385879332050504563, guid: 4f5c198a4a716144a85f2a905031ff26, type: 3}
+  m_PrefabInstance: {fileID: 127235578202739163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1507721350665612067 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1524618561885240056, guid: 4f5c198a4a716144a85f2a905031ff26, type: 3}
@@ -161,8 +166,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3a53793e4f247128e86a04717843683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &4236883675980384620 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4253763461964011703, guid: 4f5c198a4a716144a85f2a905031ff26, type: 3}
-  m_PrefabInstance: {fileID: 127235578202739163}
-  m_PrefabAsset: {fileID: 0}
