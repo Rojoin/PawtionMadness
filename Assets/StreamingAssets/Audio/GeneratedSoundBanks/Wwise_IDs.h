@@ -30,7 +30,6 @@ namespace AK
         static const AkUniqueID PLAY_AGARRAR_ITEM_PORCION = 2191355065U;
         static const AkUniqueID PLAY_AMB_BOSQUE_NOCHE = 1452442514U;
         static const AkUniqueID PLAY_AMB_TUTORIAL = 4120818535U;
-        static const AkUniqueID PLAY_CALDERO = 4083340090U;
         static const AkUniqueID PLAY_CHARGER_DESPLAZAMIENTO = 2703840397U;
         static const AkUniqueID PLAY_CHARGER_ESFUERZO_ATAQUE = 2386456392U;
         static const AkUniqueID PLAY_CHARGER_MUERTE = 1925760625U;
@@ -52,6 +51,7 @@ namespace AK
         static const AkUniqueID PLAY_POCION_PREPARANDOSE = 4052632251U;
         static const AkUniqueID PLAY_PONER_ITEM_CALDERO = 1672850383U;
         static const AkUniqueID PLAY_PROCESAR_AGARRAR = 3638962258U;
+        static const AkUniqueID PLAY_SONIDORANDOM_CALDERO = 3760360352U;
         static const AkUniqueID PLAYER_AGARRAR = 314498979U;
         static const AkUniqueID PLAYER_DESPLAZAMIENTO = 557674403U;
         static const AkUniqueID PLAYER_MUERTE = 2906595307U;
@@ -76,7 +76,6 @@ namespace AK
         static const AkUniqueID SIMPLE_MUERTE = 1574582848U;
         static const AkUniqueID SIMPLE_RECIBEDANO = 1545430338U;
         static const AkUniqueID SIMPLE_SONIDORANDOM = 4237093597U;
-        static const AkUniqueID SONIDORANDOM_CALDERO = 4145908619U;
         static const AkUniqueID STOPMAINMENUMUSIC = 1420342416U;
         static const AkUniqueID USELESS_MUERTE = 3059053578U;
         static const AkUniqueID USELESS_SONIDOESPECIAL = 3256636576U;

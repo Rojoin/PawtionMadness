@@ -205,6 +205,19 @@
 											<PropertyList>
 												<Property Name="Color" Type="int16" Value="24"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{BD3BD85F-2FE7-47AB-8780-48AAEBC3CD48}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="25"/>
+																	<Property Name="Min" Type="Real64" Value="-51"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>8</Value>
@@ -268,6 +281,13 @@
 											<PropertyList>
 												<Property Name="Color" Type="int16" Value="11"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{8AC28864-E2D6-4228-9D3B-2CD87A907764}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>4</Value>
@@ -284,6 +304,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Agarrar_item_Porcion" ID="{A2C62837-D589-4789-8918-FDD97BE87698}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.0376074498567335"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0376074498567335"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Cocina\Agarrar_item_Porcion.wav</AudioFile>
 													<MediaIDList>
@@ -300,6 +325,13 @@
 											<PropertyList>
 												<Property Name="Color" Type="int16" Value="11"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{589311CD-59BE-4844-9527-EE2BBB745427}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>2</Value>
@@ -332,6 +364,13 @@
 											<PropertyList>
 												<Property Name="Color" Type="int16" Value="11"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{24E0D851-FB90-4231-848D-F2DC01670F2F}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -360,6 +399,22 @@
 												<Property Name="Color" Type="int16" Value="11"/>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>30</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{7F080B3E-F15A-4830-ABED-49AA6C9B35CE}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="51"/>
+																	<Property Name="Min" Type="Real64" Value="-51"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-1</Value>
@@ -376,6 +431,12 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Pocion preparandose" ID="{CFCCF725-19D2-487D-8E42-6E611C542E3F}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="598.684"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0.707075425023878"/>
+														<Property Name="LoopEnd" Type="Real64" Value="4.45125"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Cocina\Pocion preparandose.wav</AudioFile>
 													<MediaIDList>
@@ -392,6 +453,13 @@
 											<PropertyList>
 												<Property Name="Color" Type="int16" Value="11"/>
 												<Property Name="OverrideColor" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E75CD1C9-C867-47AF-A2B4-E72D34C72E9F}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -403,6 +471,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Poner item en caldero" ID="{74855EA7-BE27-41EC-A0A0-1C4DDC7DC8BE}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.175680515759312"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.175680515759312"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Cocina\Poner item en caldero.wav</AudioFile>
 													<MediaIDList>
@@ -423,6 +496,11 @@
 													<ValueList>
 														<Value>-400</Value>
 													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{FCF5D4BA-B042-4939-9705-B443AB5DF4A1}"/>
+														</ModifierInfo>
+													</ModifierList>
 												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
@@ -460,36 +538,6 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 									<ChildrenList>
-										<Sound Name="Procesar_Item" ID="{277F3B98-00B9-479F-8829-8F76CF302452}" ShortID="424258296">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>3</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="sfx" ID="{5AD7DFDB-7220-498E-898A-6F0B137AD976}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Procesar item" ID="{697DB7FD-48EF-4994-AFA4-312D66845212}">
-													<Language>SFX</Language>
-													<AudioFile>Procesar item.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="26688086"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists/>
-											<ActiveSourceList>
-												<ActiveSource Name="Procesar item" ID="{697DB7FD-48EF-4994-AFA4-312D66845212}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
 										<Sound Name="Procesar Agarrar Item" ID="{10BA368B-8C0A-4DB1-B949-0302285E13D5}" ShortID="373116173">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
@@ -508,6 +556,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Procesar Agarrar Item" ID="{19A9117A-DC27-45CD-A2BA-B2281BD1AF3B}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.186881663840321"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.708183147184375"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Procesar Agarrar Item.wav</AudioFile>
 													<MediaIDList>
@@ -520,6 +573,314 @@
 												<ActiveSource Name="Procesar Agarrar Item" ID="{19A9117A-DC27-45CD-A2BA-B2281BD1AF3B}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<RandomSequenceContainer Name="procesar_item" ID="{8D0C35E2-76C5-4EF4-9488-29B0FE1C4B94}" ShortID="941713923">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{A9A8E506-B0C6-4B10-B3F0-2BC4A556BBBB}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="100"/>
+																	<Property Name="Min" Type="Real64" Value="-50"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Procesar_Item" ID="{277F3B98-00B9-479F-8829-8F76CF302452}" ShortID="424258296">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="sfx" ID="{5AD7DFDB-7220-498E-898A-6F0B137AD976}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Procesar item" ID="{697DB7FD-48EF-4994-AFA4-312D66845212}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0827363896848137"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.221883954154727"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Procesar item.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="610065741"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Procesar item" ID="{697DB7FD-48EF-4994-AFA4-312D66845212}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Procesar_Item_01" ID="{93C2244B-43B3-468A-9715-A39EAB9A392A}" ShortID="276064150">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Procesar item" ID="{77A9439C-8C47-469C-BE39-96693D9B9B21}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.255730659025788"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.406160458452721"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Procesar item.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="958109958"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Procesar item" ID="{77A9439C-8C47-469C-BE39-96693D9B9B21}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Procesar_Item_02" ID="{B3AC0794-8D64-4377-9F86-4E6524E048A0}" ShortID="877656175">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Procesar item" ID="{C94DDF43-87DE-49FC-AC00-7D2CE41BA83A}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.424964183381089"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.582915472779369"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Procesar item.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="856019913"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Procesar item" ID="{C94DDF43-87DE-49FC-AC00-7D2CE41BA83A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Procesar_Item_03" ID="{3D814BD8-4D86-49EA-B21D-B5EF25666DB2}" ShortID="915061673">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Procesar item" ID="{652C1EB6-34E6-4368-AEB2-95CA244FB102}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.575393982808023"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.737106017191977"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Procesar item.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="381775547"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Procesar item" ID="{652C1EB6-34E6-4368-AEB2-95CA244FB102}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Procesar_Item_04" ID="{52657869-52D2-43AA-816D-BEE800C2E12C}" ShortID="772134589">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Procesar item" ID="{C22A9755-54C8-4DDD-AD06-95D5CBFE8682}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.75214899713467"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.913861031518625"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Procesar item.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="74052067"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Procesar item" ID="{C22A9755-54C8-4DDD-AD06-95D5CBFE8682}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Procesar_Item_05" ID="{2C54803B-BB19-4008-A743-0D3F3014E983}" ShortID="536156437">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Procesar item" ID="{AB0F2EFD-F842-47AC-94EE-DB912C106799}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.921382521489972"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.05676934097421"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Procesar item.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="656045732"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Procesar item" ID="{AB0F2EFD-F842-47AC-94EE-DB912C106799}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Procesar_Item_06" ID="{E4792462-289B-4326-97F7-AA4AEDD52385}" ShortID="316769629">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Procesar item" ID="{BAFA517A-86C2-42EB-B00E-3A7035986E07}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="1.06053008595989"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.20719914040115"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Procesar item.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="714228155"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Procesar item" ID="{BAFA517A-86C2-42EB-B00E-3A7035986E07}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Procesar_Item_07" ID="{438E6787-7205-44AE-A69D-43FE6A419A17}" ShortID="84456890">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Procesar item" ID="{7847AAF2-B23D-4BBF-B78A-39C604705B49}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="1.21472063037249"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.3689111747851"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Procesar item.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="91886125"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists/>
+													<ActiveSourceList>
+														<ActiveSource Name="Procesar item" ID="{7847AAF2-B23D-4BBF-B78A-39C604705B49}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists/>
+										</RandomSequenceContainer>
 									</ChildrenList>
 								</Folder>
 								<Folder Name="Frasco" ID="{595F6B23-28F7-4D79-A77F-EC0BAF1A624E}" ShortID="430397255">
@@ -642,6 +1003,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Simple_Ataca" ID="{74EBA0FB-3FDF-4C4E-8DAD-828221AEA573}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.186156876790831"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.186156876790831"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Simple_Ataca.wav</AudioFile>
 													<MediaIDList>
@@ -736,6 +1102,11 @@
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="Simple_SonidoRandom" ID="{D6B7F658-BB8B-4646-985D-7379BF9356B2}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.125358166189112"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.950214899713467"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Simple_SonidoRandom.wav</AudioFile>
 													<MediaIDList>
@@ -769,6 +1140,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Simple_Muerte" ID="{01F4DE27-0281-44E4-B4E6-35985042260D}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.068909682425979"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.32663189469914"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Simple_Muerte.wav</AudioFile>
 															<MediaIDList>
@@ -870,7 +1246,7 @@
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>12</Value>
+														<Value>2</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -900,7 +1276,7 @@
 											<PropertyList>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-3</Value>
+														<Value>-8</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -934,10 +1310,15 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Rango_Ataque1" ID="{5C569745-E60A-41A7-83BF-90788D93F507}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0372492836676218"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.814828080229227"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Rango_Ataque1.wav</AudioFile>
 																	<MediaIDList>
-																		<MediaID ID="562732224"/>
+																		<MediaID ID="358979740"/>
 																	</MediaIDList>
 																</AudioFileSource>
 															</ChildrenList>
@@ -964,10 +1345,15 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Rango_Ataque1" ID="{A2085EB7-21C9-4E8F-843B-0B80875658C4}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0349212034383954"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.803187679083094"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Rango_Ataque1.wav</AudioFile>
 																	<MediaIDList>
-																		<MediaID ID="562732224"/>
+																		<MediaID ID="594654920"/>
 																	</MediaIDList>
 																</AudioFileSource>
 															</ChildrenList>
@@ -994,6 +1380,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Rango_Ataque1" ID="{6B276194-EEC1-4499-A26C-78DA3B811552}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0325931232091691"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.728689111747852"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Rango_Ataque1.wav</AudioFile>
 																	<MediaIDList>
@@ -1044,7 +1435,12 @@
 																</Reference>
 															</ReferenceList>
 															<ChildrenList>
-																<AudioFileSource Name="Rango_Esfuerzo1 " ID="{532DB756-CC18-48C4-B710-D86FA56DFC66}">
+																<AudioFileSource Name="Rango_Esfuerzo1" ID="{532DB756-CC18-48C4-B710-D86FA56DFC66}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0580229226361031"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.777936962750717"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Rango_Esfuerzo1 .wav</AudioFile>
 																	<MediaIDList>
@@ -1054,7 +1450,7 @@
 															</ChildrenList>
 															<ObjectLists/>
 															<ActiveSourceList>
-																<ActiveSource Name="Rango_Esfuerzo1 " ID="{532DB756-CC18-48C4-B710-D86FA56DFC66}" Platform="Linked"/>
+																<ActiveSource Name="Rango_Esfuerzo1" ID="{532DB756-CC18-48C4-B710-D86FA56DFC66}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
 														<Sound Name="Rango_Esfuerzo2" ID="{9EDA7F71-0468-439E-9AF2-A699F66AB703}" ShortID="953306304">
@@ -1068,6 +1464,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Rango_Esfuerzo2" ID="{12C76A43-C6F0-4560-B089-697EF7458740}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.10243553008596"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.709169054441261"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Rango_Esfuerzo2.wav</AudioFile>
 																	<MediaIDList>
@@ -1091,6 +1492,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Rango_Esfuerzo3" ID="{B78A0663-59FF-43C3-A15C-4C02D30BCB4B}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.125716332378223"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.693051575931232"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Rango_Esfuerzo3.wav</AudioFile>
 																	<MediaIDList>
@@ -1110,6 +1516,13 @@
 											<ObjectLists/>
 										</BlendContainer>
 										<RandomSequenceContainer Name="Rango_SonidoRandom" ID="{B7F8FD8B-7A33-4198-A324-FCAA7A591336}" ShortID="296418766">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1130,6 +1543,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Rango_SonidoRandom1" ID="{44298EE3-5495-4955-BB5B-8A61606AFDF0}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.132700573065903"/>
+																<Property Name="TrimEnd" Type="Real64" Value="3.59688395415473"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Rango_SonidoRandom1.wav</AudioFile>
 															<MediaIDList>
@@ -1153,6 +1571,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Rango_SonidoRandom2" ID="{D64A6EA4-664C-45BE-B94B-4FE4334E109D}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0823185291308501"/>
+																<Property Name="TrimEnd" Type="Real64" Value="2.26375955109838"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Rango_SonidoRandom2.wav</AudioFile>
 															<MediaIDList>
@@ -1176,6 +1599,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Rango_SonidoRandom3" ID="{1FFC5AA6-6CA0-4251-A549-FD0F79429436}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.153593600764088"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.73412129894938"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Rango_SonidoRandom3.wav</AudioFile>
 															<MediaIDList>
@@ -1199,6 +1627,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Rango_SonidoRandom4" ID="{55F958B3-6261-4F36-943B-26DD424BA06A}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.104047277936963"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.77375835721108"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Rango_SonidoRandom4.wav</AudioFile>
 															<MediaIDList>
@@ -1235,6 +1668,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Rango_RecibeDaño1" ID="{A0FE7EAB-2E69-4A1D-BFE4-3F1A3BA3338B}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0629178605539637"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.499283667621777"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Rango_RecibeDaño1.wav</AudioFile>
 															<MediaIDList>
@@ -1258,6 +1696,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Rango_RecibeDaño2" ID="{FC54B6D5-2A97-4518-BA29-1301FE23FD2A}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0405921680993314"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.596704871060172"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Rango_RecibeDaño2.wav</AudioFile>
 															<MediaIDList>
@@ -1281,6 +1724,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Rango_RecibeDaño3" ID="{A60D4703-A686-4C73-BBFF-D50F918A2A37}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0202960840496657"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.550023877745941"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Rango_RecibeDaño3.wav</AudioFile>
 															<MediaIDList>
@@ -1304,6 +1752,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Rango_RecibeDaño4" ID="{4B1DB09F-F021-40C6-AA6A-E6483BD16D1A}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0385625596943649"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.560171919770774"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Rango_RecibeDaño4.wav</AudioFile>
 															<MediaIDList>
@@ -1354,6 +1807,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Rango_Muerte1" ID="{E4F18CDD-2A2D-4DE9-830D-3725311C53F4}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="0.061067335243553"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.061067335243553"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Rango_Muerte1.wav</AudioFile>
 															<MediaIDList>
@@ -1384,6 +1842,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Rango_Muerte2" ID="{F1FE7DD2-90D9-41E9-83C5-A9EC5AD296BC}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="0.108345272206304"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.108345272206304"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Rango_Muerte2.wav</AudioFile>
 															<MediaIDList>
@@ -1414,6 +1877,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Rango_Muerte3" ID="{224C56D9-94EB-4CCC-890C-EB16CECD5A97}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="0.126074498567335"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.126074498567335"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Rango_Muerte3.wav</AudioFile>
 															<MediaIDList>
@@ -1444,6 +1912,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Rango_Muerte4" ID="{BE3C515B-6FA7-496B-AA44-A3723C23EEE7}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="0.327005730659025"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.327005730659025"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Rango_Muerte4.wav</AudioFile>
 															<MediaIDList>
@@ -2425,6 +2898,18 @@
 											</ReferenceList>
 											<ChildrenList>
 												<RandomSequenceContainer Name="Charger_Ataca" ID="{E52BD73C-3D62-46B6-8C45-B13C96F3E14A}" ShortID="786288683">
+													<PropertyList>
+														<Property Name="InitialDelay" Type="Real64">
+															<ValueList>
+																<Value>0.2</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -2445,6 +2930,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Charger_Ataca1" ID="{EA4C6DBE-E125-4589-A6E9-87FAEDAB5E93}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.16713004417383"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.967857569245463"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Charger_Ataca1.wav</AudioFile>
 																	<MediaIDList>
@@ -2468,6 +2958,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Charger_Ataca2" ID="{C155D8E6-CD96-4B6F-9CEA-752D46B4EA06}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.204547218242598"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.893023221107927"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Charger_Ataca2.wav</AudioFile>
 																	<MediaIDList>
@@ -2491,6 +2986,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Charger_Ataca3" ID="{56188EBD-5FEA-4B9F-A99E-16DCEDE4DF32}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.18708587034384"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="1.07013117836676"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Charger_Ataca3.wav</AudioFile>
 																	<MediaIDList>
@@ -2507,6 +3007,21 @@
 													<ObjectLists/>
 												</RandomSequenceContainer>
 												<RandomSequenceContainer Name="Charger_Esfuerzo" ID="{0B64664B-EA09-4ED8-B264-EC4640FDBC2D}" ShortID="892074931">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{D92D06D3-6CBA-402F-9D2D-88AB6925B8DA}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -2527,6 +3042,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Charger_Esfuerzo1" ID="{6CB4A9E3-25D6-4409-AA91-85B1FED994D0}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.1082258834766"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.304799426934097"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Charger_Esfuerzo1.wav</AudioFile>
 																	<MediaIDList>
@@ -2550,6 +3070,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Charger_Esfuerzo2" ID="{F3A27B80-B4FE-4404-B91C-FC2ED48DF576}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0463825214899714"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.295964660936008"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Charger_Esfuerzo2.wav</AudioFile>
 																	<MediaIDList>
@@ -2573,6 +3098,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Charger_Esfuerzo3" ID="{6EE4609D-9A33-4B6A-B47E-3EE020B647CC}">
+																	<PropertyList>
+																		<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.337929799426935"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Charger_Esfuerzo3.wav</AudioFile>
 																	<MediaIDList>
@@ -2596,6 +3126,11 @@
 															</ReferenceList>
 															<ChildrenList>
 																<AudioFileSource Name="Charger_Esfuerzo4" ID="{2031397F-9A2B-47C5-A82E-A5FA7A49437E}">
+																	<PropertyList>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0235650967048711"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.244220093123209"/>
+																	</PropertyList>
 																	<Language>SFX</Language>
 																	<AudioFile>Charger_Esfuerzo4.wav</AudioFile>
 																	<MediaIDList>
@@ -2642,6 +3177,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_Muerte1" ID="{BD764275-20DB-47AC-BC82-E75076A71274}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0576647564469914"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.926755014326647"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_Muerte1.wav</AudioFile>
 															<MediaIDList>
@@ -2688,6 +3228,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_Muerte3" ID="{841C248A-98AA-4240-BB3B-F184E270400A}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="0.194876731136581"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.194876731136581"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_Muerte3.wav</AudioFile>
 															<MediaIDList>
@@ -2711,6 +3256,10 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_Muerte4" ID="{8F775B65-21A8-463B-8F80-6E3B2AB526B5}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.259118314231137"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_Muerte4.wav</AudioFile>
 															<MediaIDList>
@@ -2747,6 +3296,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_RecibeDaño1" ID="{770C1361-757A-4250-AD8F-836C01BE1EAA}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0349212034383954"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.742657593123209"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_RecibeDaño1.wav</AudioFile>
 															<MediaIDList>
@@ -2770,6 +3324,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_RecibeDaño2" ID="{5792DB36-B764-477A-A565-1DEBB18DD0B1}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0395773638968481"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.810171919770775"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_RecibeDaño2.wav</AudioFile>
 															<MediaIDList>
@@ -2793,6 +3352,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_RecibeDaño3" ID="{F0E75FA7-15E8-4343-9A00-F5485E36BAC9}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0162786532951289"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.283519878223496"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_RecibeDaño3.wav</AudioFile>
 															<MediaIDList>
@@ -2816,6 +3380,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_RecibeDaño4" ID="{1CBE8322-8ED3-4AF4-9835-066816BA669D}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0239672874880611"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.418229166666666"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_RecibeDaño4.wav</AudioFile>
 															<MediaIDList>
@@ -2864,6 +3433,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_SonidoAdicional1" ID="{33286B01-A707-4C62-9970-7C93AB265019}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0535458452722063"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.575035816618911"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_SonidoAdicional1.wav</AudioFile>
 															<MediaIDList>
@@ -2887,6 +3461,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_SonidoAdicional2" ID="{7C4532E1-04D4-4D35-BB06-D923CF21DD72}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0302650429799427"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.575035816618912"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_SonidoAdicional2.wav</AudioFile>
 															<MediaIDList>
@@ -2910,6 +3489,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_SonidoAdicional3" ID="{3E7CACBE-71B0-4697-A0F4-324CF0B7EC7B}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0558739255014327"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.724032951289399"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_SonidoAdicional3.wav</AudioFile>
 															<MediaIDList>
@@ -2933,6 +3517,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_SonidoAdicional4" ID="{5820AA5E-12F3-4AC6-9369-5E62607C5BBC}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0395773638968481"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.854405444126075"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_SonidoAdicional4.wav</AudioFile>
 															<MediaIDList>
@@ -2969,6 +3558,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_SonidoRandom1" ID="{4BDB92F8-735B-484A-8C3B-19058F753AE2}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0606494746895893"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.55793338108883"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_SonidoRandom1.wav</AudioFile>
 															<MediaIDList>
@@ -2992,6 +3586,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_SonidoRandom2" ID="{567479BA-91DA-46D9-855E-CEFF906330EB}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0758118433619866"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.1485494269341"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_SonidoRandom2.wav</AudioFile>
 															<MediaIDList>
@@ -3015,6 +3614,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_SonidoRandom3" ID="{4117E5D4-3037-4C03-9A5F-1629312ED5DB}">
+															<PropertyList>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.116541308500478"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.09881805157593"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_SonidoRandom3.wav</AudioFile>
 															<MediaIDList>
@@ -3038,6 +3642,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="Charger_SonidoRandom4" ID="{0AC9A35C-15EF-4949-ACC1-9559D98ADA8E}">
+															<PropertyList>
+																<Property Name="LoopBegin" Type="Real64" Value="0"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimEnd" Type="Real64" Value="1.14460213705826"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Charger_SonidoRandom4.wav</AudioFile>
 															<MediaIDList>
@@ -3157,6 +3766,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Explosive_Disparo" ID="{BB758617-D737-408D-A9AA-ECF6A958972B}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.154727793696275"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.154727793696275"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Torretas\Explosive_Disparo.wav</AudioFile>
 											<MediaIDList>
@@ -3200,6 +3814,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Explosive_Muerte" ID="{DCA756FA-926D-458E-8196-EFFF0B80FF5F}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.235091332378223"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.235091332378223"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Torretas\Explosive_Muerte.wav</AudioFile>
 											<MediaIDList>
@@ -3243,6 +3862,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Explosive_SonidoEspecial" ID="{7D977E38-91DA-4A04-9316-1B6B5A096077}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.254477077363897"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.254477077363897"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Torretas\Explosive_SonidoEspecial.wav</AudioFile>
 											<MediaIDList>
@@ -3335,6 +3959,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Laser_Muerte" ID="{9F6AF537-32CD-4C95-A69B-30BE5EFB4BC1}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0492478510028653"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0492478510028653"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Torretas\Laser_Muerte.wav</AudioFile>
 											<MediaIDList>
@@ -3361,11 +3990,6 @@
 													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>7</Value>
-											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -3421,6 +4045,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Proyectil_Disparo" ID="{507E9914-BE94-4412-9D35-D55A034B7EFF}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0676934097421203"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0676934097421203"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Torretas\Proyectil_Disparo.wav</AudioFile>
 											<MediaIDList>
@@ -3464,6 +4093,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Proyectil_Muerte" ID="{656FF6B6-2446-4347-8FC0-889BFC59C04C}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.101226719197708"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.101226719197708"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Torretas\Proyectil_Muerte.wav</AudioFile>
 											<MediaIDList>
@@ -3548,6 +4182,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="Useless_SonidoEspecial" ID="{79FFAB75-EDE5-4874-BD58-E62E28430511}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0822588347659981"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0822588347659981"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Torretas\Useless_SonidoEspecial.wav</AudioFile>
 											<MediaIDList>
