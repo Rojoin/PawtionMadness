@@ -132,6 +132,7 @@ public class GameManager : MonoBehaviour
         enemyManager.activateWinScreenChannel.RemoveAllListeners();
         Time.timeScale = 0;
         uiManager.ActivateGameOverCanvas();
+        Cursor.visible = true;
     }
 
     private void ShowRecipes()
@@ -168,6 +169,7 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
+        Cursor.visible = true;
         pauseChannelSO.Unsubscribe(PauseLevel);
         enemyManager.activateWinScreenChannel.RemoveAllListeners();
         uiManager.ActivateWinScreen();

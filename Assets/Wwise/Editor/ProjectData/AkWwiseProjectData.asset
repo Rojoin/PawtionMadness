@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 196cb691de8f584c827edddbacf02d6b
     GuidInternal: 
-    m_lastTime: -8585033285767157794
+    m_lastTime: -8585031739567151095
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -156,7 +156,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2621f2e587216f4092b302108c4d8946
     GuidInternal: 
-    m_lastTime: -8585009987183924206
+    m_lastTime: -8585009950224789807
     List: []
   - PhysicalPath: Events\InGame.wwu
     PathAndIcons:
@@ -246,7 +246,7 @@ MonoBehaviour:
     ParentPath: Events\Tutorial
     guid: 090215d47f508a4c8e101bbd3392b83a
     GuidInternal: 
-    m_lastTime: -8585009987184184426
+    m_lastTime: -8585009950224779464
     List:
     - name: Ambient
       guid: 6c92e374d455ed4f9ad5a1931bbf86d2
@@ -906,13 +906,13 @@ MonoBehaviour:
       - ElementName: Tutorial
         ObjectType: 12
         guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: UI
+      - ElementName: Table
         ObjectType: 4
-        guid: 21a76287218894459eb36f22cc7e5676
+        guid: 14f8c6b495194049a1b8af72cf8886a1
       - ElementName: Play_libro_abrir_3
         ObjectType: 3
         guid: ec1542ec49890643bc208a0b55e77645
-      Path: Events\Tutorial\UI\Play_libro_abrir_3
+      Path: Events\Tutorial\Table\Play_libro_abrir_3
       maxAttenuation: 0
       maxDuration: 1
       minDuration: 1
@@ -1014,8 +1014,8 @@ MonoBehaviour:
         guid: 17ab5b1fb990cf4bb66d73e6a03ab3dc
       Path: Events\Tutorial\Couldron\Play_Pocion_Preparandose
       maxAttenuation: 0
-      maxDuration: 5.833333
-      minDuration: 5.833333
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Poner_Item_caldero
       guid: 39808d42d0505b448d6c0b7f1019032b
       id: 1672850383
@@ -1103,13 +1103,13 @@ MonoBehaviour:
       - ElementName: Tutorial
         ObjectType: 12
         guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Player
+      - ElementName: Table
         ObjectType: 4
-        guid: f2c1dcaef3244345967e12cf093cdc8a
+        guid: 14f8c6b495194049a1b8af72cf8886a1
       - ElementName: Player_Agarrar
         ObjectType: 3
         guid: df656973caee784b949f534949c2c3ee
-      Path: Events\Tutorial\Player\Player_Agarrar
+      Path: Events\Tutorial\Table\Player_Agarrar
       maxAttenuation: 0
       maxDuration: 0.375521
       minDuration: 0.375521
@@ -1163,13 +1163,13 @@ MonoBehaviour:
       - ElementName: Tutorial
         ObjectType: 12
         guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Player
+      - ElementName: Table
         ObjectType: 4
-        guid: f2c1dcaef3244345967e12cf093cdc8a
+        guid: 14f8c6b495194049a1b8af72cf8886a1
       - ElementName: Player_Soltar
         ObjectType: 3
         guid: e039c9cbdb4fa8449f79b1c7217abb25
-      Path: Events\Tutorial\Player\Player_Soltar
+      Path: Events\Tutorial\Table\Player_Soltar
       maxAttenuation: 0
       maxDuration: 0.375521
       minDuration: 0.375521
@@ -1363,13 +1363,13 @@ MonoBehaviour:
       - ElementName: Tutorial
         ObjectType: 12
         guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: UI
+      - ElementName: Table
         ObjectType: 4
-        guid: 21a76287218894459eb36f22cc7e5676
+        guid: 14f8c6b495194049a1b8af72cf8886a1
       - ElementName: Recetario_Cerrar
         ObjectType: 3
         guid: 0ccf1e2ddcf0ef4cbf34bdde0ce087b6
-      Path: Events\Tutorial\UI\Recetario_Cerrar
+      Path: Events\Tutorial\Table\Recetario_Cerrar
       maxAttenuation: 0
       maxDuration: 0.69712
       minDuration: 0.69712
@@ -1732,7 +1732,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 453e836da4731d43aaf2ace66950652e
     GuidInternal: 
-    m_lastTime: -8585033285767177793
+    m_lastTime: -8585031739567171995
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -1746,7 +1746,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d95443d702661b448cd3207c91b5b886
     GuidInternal: 
-    m_lastTime: -8585010041473697073
+    m_lastTime: -8585009950206928591
     List:
     - name: ingamemusic_level
       guid: 29bcdb2a22c379459eec19e2b879a83c
@@ -1858,7 +1858,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: befacd619a68c341acea8777258db81d
     GuidInternal: 
-    m_lastTime: -8585033285767167790
+    m_lastTime: -8585031739567161490
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 05000000060000000c0000000d000000
