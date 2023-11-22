@@ -310,6 +310,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+<<<<<<< HEAD
+=======
+						<Event Name="Player_Soltar" ID="{CBC939E0-4FDB-44A8-9F79-B1C7217ABB25}">
+							<ChildrenList>
+								<Action Name="" ID="{0BFBF20A-FAD6-4F09-9EDB-4F2EA59BD2DE}" ShortID="571453248">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Soltar" ID="{DB24761A-2201-49C4-AB4E-8614919A82AD}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+>>>>>>> 4417656fee556b9c347cbb2509653ad515943a66
 						<Event Name="Player_Desplazamiento" ID="{4DC45938-FC27-44CC-9D35-427FC694228B}">
 							<ChildrenList>
 								<Action Name="" ID="{9635C4E9-14B9-415E-AE70-542FE5FB38DB}" ShortID="624430475">
@@ -321,6 +335,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+<<<<<<< HEAD
+=======
+						<Event Name="Player_Agarrar" ID="{736965DF-EECA-4B78-949F-534949C2C3EE}">
+							<ChildrenList>
+								<Action Name="" ID="{2884518B-F4F8-4209-8AA9-DD56CB846BCF}" ShortID="345227703">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Agarrar" ID="{3AF7C9C3-9CF1-40A8-9301-A52563081D0F}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+>>>>>>> 4417656fee556b9c347cbb2509653ad515943a66
 						<Event Name="Player_SonidoRandom" ID="{5C5190B9-67FE-4A21-9B10-C2B53452B293}">
 							<ChildrenList>
 								<Action Name="" ID="{B8EBF467-41CA-4BA3-BB19-39BCBCE1B175}" ShortID="788253905">
@@ -378,6 +406,7 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+<<<<<<< HEAD
 								<Action Name="" ID="{65709A18-ABFA-4D97-9802-752620DC67B4}" ShortID="135211627">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
@@ -385,12 +414,26 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Pocion_Preparandose" ID="{BC1CDFDF-23E0-4DB9-B38E-79FAD4B300EE}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+=======
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Caldero" ID="{FB6379C0-DEFE-4904-BA85-E4AB9C35BFC3}">
+							<ChildrenList>
+								<Action Name="" ID="{D83A09FC-05EB-4AAE-A3C5-AD690D55F812}" ShortID="602920956">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SonidoRandom_Caldero" ID="{7DA5B050-DA76-4E3A-B80D-7FF611068C03}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+>>>>>>> 4417656fee556b9c347cbb2509653ad515943a66
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
+<<<<<<< HEAD
 						<Event Name="Play_SonidoRandom_Caldero" ID="{A47633F1-053D-4922-AA02-A576DC0D654C}">
+=======
+						<Event Name="SonidoRandom_Caldero" ID="{A47633F1-053D-4922-AA02-A576DC0D654C}">
+>>>>>>> 4417656fee556b9c347cbb2509653ad515943a66
 							<ChildrenList>
 								<Action Name="" ID="{97D4234F-43EE-4E26-84B6-06C7A86D60C0}" ShortID="454246831">
 									<ReferenceList>
@@ -471,6 +514,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+<<<<<<< HEAD
 						<Event Name="Player_Soltar" ID="{CBC939E0-4FDB-44A8-9F79-B1C7217ABB25}">
 							<ChildrenList>
 								<Action Name="" ID="{0BFBF20A-FAD6-4F09-9EDB-4F2EA59BD2DE}" ShortID="571453248">
@@ -515,6 +559,8 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+=======
+>>>>>>> 4417656fee556b9c347cbb2509653ad515943a66
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Turrets" ID="{4E60238F-2643-401B-9A33-B1911F950776}" ShortID="694265754">
@@ -705,6 +751,31 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+<<<<<<< HEAD
+=======
+						<Event Name="Play_libro_abrir_3" ID="{EC4215EC-8949-4306-BC20-8A0B55E77645}">
+							<ChildrenList>
+								<Action Name="" ID="{B67F7038-2ACF-40C8-92A0-38B1D7D624E9}" ShortID="144555996">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="libro_abrir_3" ID="{83318A96-A1E2-48AE-A2F8-E89E77AAC563}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Recetario_Cerrar" ID="{2D1ECF0C-F0DC-4CEF-BF34-BDDE0CE087B6}">
+							<ChildrenList>
+								<Action Name="" ID="{8F59BF0C-5DFE-4834-9DDD-59E03A9F71AC}" ShortID="281795928">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cerrar Libro" ID="{FCFC7DCB-8E66-4C2C-87C4-3C2414A26DB9}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+>>>>>>> 4417656fee556b9c347cbb2509653ad515943a66
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{D0B9B598-6EDD-422F-98A8-B076EE2835F7}" ShortID="380775374">
