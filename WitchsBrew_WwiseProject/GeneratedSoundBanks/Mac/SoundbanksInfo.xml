@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\silvi\Desktop\Covid 19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\silvi\Desktop\Covid 19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\silvi\Desktop\Covid 19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\silvi\Desktop\Covid 19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>E:\WitchsBrew\WitchsBrew\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -26,7 +26,7 @@
 				<GameParameter Id="4056684167" Name="Master" ObjectPath="\Game Parameters\Default Work Unit\Master"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3604647259" Language="SFX" Hash="1471552625">
+		<SoundBank Id="3604647259" Language="SFX" Hash="3324737798">
 			<ObjectPath>\SoundBanks\Default Work Unit\MainMenu</ObjectPath>
 			<ShortName>MainMenu</ShortName>
 			<Path>MainMenu.bnk</Path>
@@ -42,7 +42,7 @@
 				<Event Id="1420342416" Name="StopMainMenuMusic" ObjectPath="\Events\MainMenu\StopMainMenuMusic" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3762955427" Language="SFX" Hash="3493487114">
+		<SoundBank Id="3762955427" Language="SFX" Hash="3860860291">
 			<ObjectPath>\SoundBanks\Default Work Unit\Tutorial</ObjectPath>
 			<ShortName>Tutorial</ShortName>
 			<Path>Tutorial.bnk</Path>
@@ -87,27 +87,27 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2814344719" Name="Explosive_Disparo" ObjectPath="\Events\Tutorial\Turrets\Explosive_Disparo" DurationType="OneShot" DurationMin="4." DurationMax="4.">
+				<Event Id="2814344719" Name="Explosive_Disparo" ObjectPath="\Events\Tutorial\Turrets\Explosive_Disparo" DurationType="OneShot" DurationMin="3.845272" DurationMax="3.845272">
 					<IncludedMemoryFiles>
 						<File Id="422007141" Language="SFX">
 							<ShortName>Torretas\Explosive_Disparo.wav</ShortName>
-							<Path>SFX\Torretas\Explosive_Disparo_10C4C929.wem</Path>
+							<Path>SFX\Torretas\Explosive_Disparo_F95EE3AC.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3296522035" Name="Explosive_Muerte" ObjectPath="\Events\Tutorial\Turrets\Explosive_Muerte" DurationType="OneShot" DurationMin="0.779581" DurationMax="0.982211">
+				<Event Id="3296522035" Name="Explosive_Muerte" ObjectPath="\Events\Tutorial\Turrets\Explosive_Muerte" DurationType="OneShot" DurationMin="0.581894" DurationMax="0.73314">
 					<IncludedMemoryFiles>
 						<File Id="66053801" Language="SFX">
 							<ShortName>Torretas\Explosive_Muerte.wav</ShortName>
-							<Path>SFX\Torretas\Explosive_Muerte_10C4C929.wem</Path>
+							<Path>SFX\Torretas\Explosive_Muerte_07DC6565.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2541590549" Name="Explosive_SonidoEspecial" ObjectPath="\Events\Tutorial\Turrets\Explosive_SonidoEspecial" DurationType="OneShot" DurationMin="1.438582" DurationMax="2.155438">
+				<Event Id="2541590549" Name="Explosive_SonidoEspecial" ObjectPath="\Events\Tutorial\Turrets\Explosive_SonidoEspecial" DurationType="OneShot" DurationMin="1.236604" DurationMax="1.852812">
 					<IncludedMemoryFiles>
 						<File Id="144211292" Language="SFX">
 							<ShortName>Torretas\Explosive_SonidoEspecial.wav</ShortName>
-							<Path>SFX\Torretas\Explosive_SonidoEspecial_10C4C929.wem</Path>
+							<Path>SFX\Torretas\Explosive_SonidoEspecial_7698D633.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -127,11 +127,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3116544519" Name="Laser_Muerte" ObjectPath="\Events\Tutorial\Turrets\Laser_Muerte" DurationType="OneShot" DurationMin="1.313901" DurationMax="1.5625">
+				<Event Id="3116544519" Name="Laser_Muerte" ObjectPath="\Events\Tutorial\Turrets\Laser_Muerte" DurationType="OneShot" DurationMin="1.272488" DurationMax="1.513252">
 					<IncludedMemoryFiles>
 						<File Id="343120297" Language="SFX">
 							<ShortName>Torretas\Laser_Muerte.wav</ShortName>
-							<Path>SFX\Torretas\Laser_Muerte_10C4C929.wem</Path>
+							<Path>SFX\Torretas\Laser_Muerte_C67627AE.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -151,11 +151,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2191355065" Name="Play_Agarrar_item_Porcion" ObjectPath="\Events\Tutorial\Couldron\Play_Agarrar_item_Porcion" DurationType="OneShot" DurationMin="0.875" DurationMax="0.875">
+				<Event Id="2191355065" Name="Play_Agarrar_item_Porcion" ObjectPath="\Events\Tutorial\Couldron\Play_Agarrar_item_Porcion" DurationType="OneShot" DurationMin="0.837393" DurationMax="0.837393">
 					<IncludedMemoryFiles>
 						<File Id="460792029" Language="SFX">
 							<ShortName>Cocina\Agarrar_item_Porcion.wav</ShortName>
-							<Path>SFX\Cocina\Agarrar_item_Porcion_10C4C929.wem</Path>
+							<Path>SFX\Cocina\Agarrar_item_Porcion_5E0A26A6.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -187,47 +187,47 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2386456392" Name="Play_Charger_Esfuerzo_Ataque" ObjectPath="\Events\Tutorial\Enemies\Play_Charger_Esfuerzo_Ataque" DurationType="OneShot" DurationMin="1.741146" DurationMax="1.741146">
+				<Event Id="2386456392" Name="Play_Charger_Esfuerzo_Ataque" ObjectPath="\Events\Tutorial\Enemies\Play_Charger_Esfuerzo_Ataque" DurationType="OneShot" DurationMin="0.888476" DurationMax="1.083045">
 					<IncludedMemoryFiles>
 						<File Id="133583972" Language="SFX">
 							<ShortName>Charger_Esfuerzo4.wav</ShortName>
-							<Path>SFX\Charger_Esfuerzo4_10C4C929.wem</Path>
+							<Path>SFX\Charger_Esfuerzo4_C4989980.wem</Path>
 						</File>
 						<File Id="172895656" Language="SFX">
 							<ShortName>Charger_Esfuerzo3.wav</ShortName>
-							<Path>SFX\Charger_Esfuerzo3_10C4C929.wem</Path>
+							<Path>SFX\Charger_Esfuerzo3_9E7A68D7.wem</Path>
 						</File>
 						<File Id="278312360" Language="SFX">
 							<ShortName>Charger_Ataca1.wav</ShortName>
-							<Path>SFX\Charger_Ataca1_10C4C929.wem</Path>
+							<Path>SFX\Charger_Ataca1_7B75E5C7.wem</Path>
 						</File>
 						<File Id="296355418" Language="SFX">
 							<ShortName>Charger_Ataca3.wav</ShortName>
-							<Path>SFX\Charger_Ataca3_10C4C929.wem</Path>
+							<Path>SFX\Charger_Ataca3_38B52183.wem</Path>
 						</File>
 						<File Id="694474887" Language="SFX">
 							<ShortName>Charger_Esfuerzo2.wav</ShortName>
-							<Path>SFX\Charger_Esfuerzo2_10C4C929.wem</Path>
+							<Path>SFX\Charger_Esfuerzo2_4A3F9DAB.wem</Path>
 						</File>
 						<File Id="701479000" Language="SFX">
 							<ShortName>Charger_Ataca2.wav</ShortName>
-							<Path>SFX\Charger_Ataca2_10C4C929.wem</Path>
+							<Path>SFX\Charger_Ataca2_47049C40.wem</Path>
 						</File>
 						<File Id="868196858" Language="SFX">
 							<ShortName>Charger_Esfuerzo1.wav</ShortName>
-							<Path>SFX\Charger_Esfuerzo1_10C4C929.wem</Path>
+							<Path>SFX\Charger_Esfuerzo1_40610952.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1925760625" Name="Play_Charger_Muerte" ObjectPath="\Events\Tutorial\Enemies\Play_Charger_Muerte" DurationType="OneShot" DurationMin="2.092924" DurationMax="3.227078">
+				<Event Id="1925760625" Name="Play_Charger_Muerte" ObjectPath="\Events\Tutorial\Enemies\Play_Charger_Muerte" DurationType="OneShot" DurationMin="0.975521" DurationMax="2.806155">
 					<IncludedMemoryFiles>
 						<File Id="221519041" Language="SFX">
 							<ShortName>Charger_Muerte3.wav</ShortName>
-							<Path>SFX\Charger_Muerte3_10C4C929.wem</Path>
+							<Path>SFX\Charger_Muerte3_DF614ED3.wem</Path>
 						</File>
 						<File Id="318871400" Language="SFX">
 							<ShortName>Charger_Muerte4.wav</ShortName>
-							<Path>SFX\Charger_Muerte4_10C4C929.wem</Path>
+							<Path>SFX\Charger_Muerte4_6F6D38F8.wem</Path>
 						</File>
 						<File Id="437482894" Language="SFX">
 							<ShortName>Charger_Muerte2.wav</ShortName>
@@ -235,67 +235,67 @@
 						</File>
 						<File Id="695110819" Language="SFX">
 							<ShortName>Charger_Muerte1.wav</ShortName>
-							<Path>SFX\Charger_Muerte1_10C4C929.wem</Path>
+							<Path>SFX\Charger_Muerte1_D98E395F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="63562060" Name="Play_Charger_RecibeDa_o" ObjectPath="\Events\Tutorial\Enemies\Play_Charger_RecibeDa_o" DurationType="OneShot" DurationMin="0.836458" DurationMax="1.625">
+				<Event Id="63562060" Name="Play_Charger_RecibeDa_o" ObjectPath="\Events\Tutorial\Enemies\Play_Charger_RecibeDa_o" DurationType="OneShot" DurationMin="0.267241" DurationMax="0.770595">
 					<IncludedMemoryFiles>
 						<File Id="632861586" Language="SFX">
 							<ShortName>Charger_RecibeDaño3.wav</ShortName>
-							<Path>SFX\Charger_RecibeDaño3_10C4C929.wem</Path>
+							<Path>SFX\Charger_RecibeDaño3_83A655CF.wem</Path>
 						</File>
 						<File Id="638041759" Language="SFX">
 							<ShortName>Charger_RecibeDaño1.wav</ShortName>
-							<Path>SFX\Charger_RecibeDaño1_10C4C929.wem</Path>
+							<Path>SFX\Charger_RecibeDaño1_D4798AAA.wem</Path>
 						</File>
 						<File Id="797375037" Language="SFX">
 							<ShortName>Charger_RecibeDaño4.wav</ShortName>
-							<Path>SFX\Charger_RecibeDaño4_10C4C929.wem</Path>
+							<Path>SFX\Charger_RecibeDaño4_E1CD072D.wem</Path>
 						</File>
 						<File Id="805146545" Language="SFX">
 							<ShortName>Charger_RecibeDaño2.wav</ShortName>
-							<Path>SFX\Charger_RecibeDaño2_10C4C929.wem</Path>
+							<Path>SFX\Charger_RecibeDaño2_A2811826.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3362525071" Name="Play_Charger_SonidoAdicional" ObjectPath="\Events\Tutorial\Enemies\Play_Charger_SonidoAdicional" DurationType="OneShot" DurationMin="1.824001" DurationMax="1.824001">
+				<Event Id="3362525071" Name="Play_Charger_SonidoAdicional" ObjectPath="\Events\Tutorial\Enemies\Play_Charger_SonidoAdicional" DurationType="OneShot" DurationMin="0.585353" DurationMax="0.914614">
 					<IncludedMemoryFiles>
 						<File Id="366194911" Language="SFX">
 							<ShortName>Charger_SonidoAdicional3.wav</ShortName>
-							<Path>SFX\Charger_SonidoAdicional3_10C4C929.wem</Path>
+							<Path>SFX\Charger_SonidoAdicional3_A862EA83.wem</Path>
 						</File>
 						<File Id="793188003" Language="SFX">
 							<ShortName>Charger_SonidoAdicional2.wav</ShortName>
-							<Path>SFX\Charger_SonidoAdicional2_10C4C929.wem</Path>
+							<Path>SFX\Charger_SonidoAdicional2_F6BAA844.wem</Path>
 						</File>
 						<File Id="793741605" Language="SFX">
 							<ShortName>Charger_SonidoAdicional1.wav</ShortName>
-							<Path>SFX\Charger_SonidoAdicional1_10C4C929.wem</Path>
+							<Path>SFX\Charger_SonidoAdicional1_A3EA034C.wem</Path>
 						</File>
 						<File Id="958496512" Language="SFX">
 							<ShortName>Charger_SonidoAdicional4.wav</ShortName>
-							<Path>SFX\Charger_SonidoAdicional4_10C4C929.wem</Path>
+							<Path>SFX\Charger_SonidoAdicional4_B260352A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2563681920" Name="Play_Charger_SonidoRandom" ObjectPath="\Events\Tutorial\Enemies\Play_Charger_SonidoRandom" DurationType="OneShot" DurationMin="2.645833" DurationMax="2.905208">
+				<Event Id="2563681920" Name="Play_Charger_SonidoRandom" ObjectPath="\Events\Tutorial\Enemies\Play_Charger_SonidoRandom" DurationType="OneShot" DurationMin="0.982277" DurationMax="1.497284">
 					<IncludedMemoryFiles>
 						<File Id="564336624" Language="SFX">
 							<ShortName>Charger_SonidoRandom4.wav</ShortName>
-							<Path>SFX\Charger_SonidoRandom4_10C4C929.wem</Path>
+							<Path>SFX\Charger_SonidoRandom4_21BEF867.wem</Path>
 						</File>
 						<File Id="681582290" Language="SFX">
 							<ShortName>Charger_SonidoRandom3.wav</ShortName>
-							<Path>SFX\Charger_SonidoRandom3_10C4C929.wem</Path>
+							<Path>SFX\Charger_SonidoRandom3_1D18F28C.wem</Path>
 						</File>
 						<File Id="855955729" Language="SFX">
 							<ShortName>Charger_SonidoRandom2.wav</ShortName>
-							<Path>SFX\Charger_SonidoRandom2_10C4C929.wem</Path>
+							<Path>SFX\Charger_SonidoRandom2_0DB8A991.wem</Path>
 						</File>
 						<File Id="887695824" Language="SFX">
 							<ShortName>Charger_SonidoRandom1.wav</ShortName>
-							<Path>SFX\Charger_SonidoRandom1_10C4C929.wem</Path>
+							<Path>SFX\Charger_SonidoRandom1_3CE24C3C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -499,7 +499,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="707032169" Name="Play_libro_abrir_3" ObjectPath="\Events\Tutorial\Table\Play_libro_abrir_3" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="707032169" Name="Play_libro_abrir_3" ObjectPath="\Events\Tutorial\Table\Play_libro_abrir_3" DurationType="OneShot" DurationMin="0.985663" DurationMax="1.029897">
 					<IncludedMemoryFiles>
 						<File Id="789842628" Language="SFX">
 							<ShortName>Recetario\libro_abrir_3.wav</ShortName>
@@ -543,23 +543,23 @@
 					<IncludedMemoryFiles>
 						<File Id="566978199" Language="SFX">
 							<ShortName>Cocina\Pocion preparandose.wav</ShortName>
-							<Path>SFX\Cocina\Pocion preparandose_D79FB2B7.wem</Path>
+							<Path>SFX\Cocina\Pocion preparandose_BB95A4C8.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1672850383" Name="Play_Poner_Item_caldero" ObjectPath="\Events\Tutorial\Couldron\Play_Poner_Item_caldero" DurationType="OneShot" DurationMin="1.125" DurationMax="1.125">
+				<Event Id="1672850383" Name="Play_Poner_Item_caldero" ObjectPath="\Events\Tutorial\Couldron\Play_Poner_Item_caldero" DurationType="OneShot" DurationMin="0.949319" DurationMax="0.949319">
 					<IncludedMemoryFiles>
 						<File Id="785466920" Language="SFX">
 							<ShortName>Cocina\Poner item en caldero.wav</ShortName>
-							<Path>SFX\Cocina\Poner item en caldero_10C4C929.wem</Path>
+							<Path>SFX\Cocina\Poner item en caldero_D5EE9EE9.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3638962258" Name="Play_Procesar_Agarrar" ObjectPath="\Events\Tutorial\Table\Play_Procesar_Agarrar" DurationType="OneShot" DurationMin="1.14424" DurationMax="1.14424">
+				<Event Id="3638962258" Name="Play_Procesar_Agarrar" ObjectPath="\Events\Tutorial\Table\Play_Procesar_Agarrar" DurationType="OneShot" DurationMin="0.521302" DurationMax="0.521302">
 					<IncludedMemoryFiles>
 						<File Id="396932545" Language="SFX">
 							<ShortName>Procesar Agarrar Item.wav</ShortName>
-							<Path>SFX\Procesar Agarrar Item_10C4C929.wem</Path>
+							<Path>SFX\Procesar Agarrar Item_4B33EA83.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -627,27 +627,55 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1061034442" Name="Procesar_Item" ObjectPath="\Events\Tutorial\Table\Procesar_Item" DurationType="OneShot" DurationMin="2.625" DurationMax="2.625">
+				<Event Id="1061034442" Name="Procesar_Item" ObjectPath="\Events\Tutorial\Table\Procesar_Item" DurationType="OneShot" DurationMin="0.127788" DurationMax="0.166451">
 					<IncludedMemoryFiles>
-						<File Id="26688086" Language="SFX">
+						<File Id="74052067" Language="SFX">
 							<ShortName>Procesar item.wav</ShortName>
-							<Path>SFX\Procesar item_10C4C929.wem</Path>
+							<Path>SFX\Procesar item_4881620E.wem</Path>
+						</File>
+						<File Id="91886125" Language="SFX">
+							<ShortName>Procesar item.wav</ShortName>
+							<Path>SFX\Procesar item_E7168CC1.wem</Path>
+						</File>
+						<File Id="381775547" Language="SFX">
+							<ShortName>Procesar item.wav</ShortName>
+							<Path>SFX\Procesar item_1FB345AB.wem</Path>
+						</File>
+						<File Id="610065741" Language="SFX">
+							<ShortName>Procesar item.wav</ShortName>
+							<Path>SFX\Procesar item_2CD4D06B.wem</Path>
+						</File>
+						<File Id="656045732" Language="SFX">
+							<ShortName>Procesar item.wav</ShortName>
+							<Path>SFX\Procesar item_D6050255.wem</Path>
+						</File>
+						<File Id="714228155" Language="SFX">
+							<ShortName>Procesar item.wav</ShortName>
+							<Path>SFX\Procesar item_25C4E96A.wem</Path>
+						</File>
+						<File Id="856019913" Language="SFX">
+							<ShortName>Procesar item.wav</ShortName>
+							<Path>SFX\Procesar item_D5CBE5C2.wem</Path>
+						</File>
+						<File Id="958109958" Language="SFX">
+							<ShortName>Procesar item.wav</ShortName>
+							<Path>SFX\Procesar item_53A59E71.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4000783731" Name="Proyectil_Disparo" ObjectPath="\Events\Tutorial\Turrets\Proyectil_Disparo" DurationType="OneShot" DurationMin="1.002261" DurationMax="1.26277">
+				<Event Id="4000783731" Name="Proyectil_Disparo" ObjectPath="\Events\Tutorial\Turrets\Proyectil_Disparo" DurationType="OneShot" DurationMin="0.941953" DurationMax="1.186787">
 					<IncludedMemoryFiles>
 						<File Id="220912553" Language="SFX">
 							<ShortName>Torretas\Proyectil_Disparo.wav</ShortName>
-							<Path>SFX\Torretas\Proyectil_Disparo_10C4C929.wem</Path>
+							<Path>SFX\Torretas\Proyectil_Disparo_CC0DB7ED.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1918569767" Name="Proyectil_Muerte" ObjectPath="\Events\Tutorial\Turrets\Proyectil_Muerte" DurationType="OneShot" DurationMin="0.501433" DurationMax="0.56284">
+				<Event Id="1918569767" Name="Proyectil_Muerte" ObjectPath="\Events\Tutorial\Turrets\Proyectil_Muerte" DurationType="OneShot" DurationMin="0.405888" DurationMax="0.455594">
 					<IncludedMemoryFiles>
 						<File Id="862371418" Language="SFX">
 							<ShortName>Torretas\Proyectil_Muerte.wav</ShortName>
-							<Path>SFX\Torretas\Proyectil_Muerte_10C4C929.wem</Path>
+							<Path>SFX\Torretas\Proyectil_Muerte_7A44EDA2.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -659,83 +687,91 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="9216990" Name="Rango_Esfuerzo_Ataque" ObjectPath="\Events\Tutorial\Enemies\Rango_Esfuerzo_Ataque" DurationType="OneShot" DurationMin="1.366457" DurationMax="1.932462">
+				<Event Id="9216990" Name="Rango_Esfuerzo_Ataque" ObjectPath="\Events\Tutorial\Enemies\Rango_Esfuerzo_Ataque" DurationType="OneShot" DurationMin="0.646033" DurationMax="0.827802">
 					<IncludedMemoryFiles>
+						<File Id="358979740" Language="SFX">
+							<ShortName>Rango_Ataque1.wav</ShortName>
+							<Path>SFX\Rango_Ataque1_4DF1CC53.wem</Path>
+						</File>
 						<File Id="398892533" Language="SFX">
 							<ShortName>Rango_Esfuerzo1 .wav</ShortName>
-							<Path>SFX\Rango_Esfuerzo1 _10C4C929.wem</Path>
+							<Path>SFX\Rango_Esfuerzo1 _1DDA6F83.wem</Path>
 						</File>
 						<File Id="562732224" Language="SFX">
 							<ShortName>Rango_Ataque1.wav</ShortName>
-							<Path>SFX\Rango_Ataque1_10C4C929.wem</Path>
+							<Path>SFX\Rango_Ataque1_1DDBA8A8.wem</Path>
 						</File>
 						<File Id="578004247" Language="SFX">
 							<ShortName>Rango_Esfuerzo3.wav</ShortName>
-							<Path>SFX\Rango_Esfuerzo3_10C4C929.wem</Path>
+							<Path>SFX\Rango_Esfuerzo3_6459602E.wem</Path>
+						</File>
+						<File Id="594654920" Language="SFX">
+							<ShortName>Rango_Ataque1.wav</ShortName>
+							<Path>SFX\Rango_Ataque1_F97A906A.wem</Path>
 						</File>
 						<File Id="629652365" Language="SFX">
 							<ShortName>Rango_Esfuerzo2.wav</ShortName>
-							<Path>SFX\Rango_Esfuerzo2_10C4C929.wem</Path>
+							<Path>SFX\Rango_Esfuerzo2_ED14242B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="263685855" Name="Rango_Muerte" ObjectPath="\Events\Tutorial\Enemies\Rango_Muerte" DurationType="OneShot" DurationMin="0.6875" DurationMax="0.972272">
+				<Event Id="263685855" Name="Rango_Muerte" ObjectPath="\Events\Tutorial\Enemies\Rango_Muerte" DurationType="OneShot" DurationMin="0.656966" DurationMax="0.883124">
 					<IncludedMemoryFiles>
 						<File Id="121789417" Language="SFX">
 							<ShortName>Rango_Muerte3.wav</ShortName>
-							<Path>SFX\Rango_Muerte3_10C4C929.wem</Path>
+							<Path>SFX\Rango_Muerte3_1842086E.wem</Path>
 						</File>
 						<File Id="303722948" Language="SFX">
 							<ShortName>Rango_Muerte1.wav</ShortName>
-							<Path>SFX\Rango_Muerte1_10C4C929.wem</Path>
+							<Path>SFX\Rango_Muerte1_975573E5.wem</Path>
 						</File>
 						<File Id="305948462" Language="SFX">
 							<ShortName>Rango_Muerte4.wav</ShortName>
-							<Path>SFX\Rango_Muerte4_10C4C929.wem</Path>
+							<Path>SFX\Rango_Muerte4_B1429E10.wem</Path>
 						</File>
 						<File Id="345241130" Language="SFX">
 							<ShortName>Rango_Muerte2.wav</ShortName>
-							<Path>SFX\Rango_Muerte2_10C4C929.wem</Path>
+							<Path>SFX\Rango_Muerte2_ED67E4C5.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="202375290" Name="Rango_RecibeDa_o" ObjectPath="\Events\Tutorial\Enemies\Rango_RecibeDa_o" DurationType="OneShot" DurationMin="1.416667" DurationMax="1.416667">
+				<Event Id="202375290" Name="Rango_RecibeDa_o" ObjectPath="\Events\Tutorial\Enemies\Rango_RecibeDa_o" DurationType="OneShot" DurationMin="0.436366" DurationMax="0.556113">
 					<IncludedMemoryFiles>
 						<File Id="126444222" Language="SFX">
 							<ShortName>Rango_RecibeDaño3.wav</ShortName>
-							<Path>SFX\Rango_RecibeDaño3_10C4C929.wem</Path>
+							<Path>SFX\Rango_RecibeDaño3_54F634E4.wem</Path>
 						</File>
 						<File Id="267401591" Language="SFX">
 							<ShortName>Rango_RecibeDaño1.wav</ShortName>
-							<Path>SFX\Rango_RecibeDaño1_10C4C929.wem</Path>
+							<Path>SFX\Rango_RecibeDaño1_38487626.wem</Path>
 						</File>
 						<File Id="663546188" Language="SFX">
 							<ShortName>Rango_RecibeDaño4.wav</ShortName>
-							<Path>SFX\Rango_RecibeDaño4_10C4C929.wem</Path>
+							<Path>SFX\Rango_RecibeDaño4_06AD20FB.wem</Path>
 						</File>
 						<File Id="877118790" Language="SFX">
 							<ShortName>Rango_RecibeDaño2.wav</ShortName>
-							<Path>SFX\Rango_RecibeDaño2_10C4C929.wem</Path>
+							<Path>SFX\Rango_RecibeDaño2_0F8E6FDB.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2238034958" Name="Rango_SonidoRandom" ObjectPath="\Events\Tutorial\Enemies\Rango_SonidoRandom" DurationType="OneShot" DurationMin="3.458333" DurationMax="4.875">
+				<Event Id="2238034958" Name="Rango_SonidoRandom" ObjectPath="\Events\Tutorial\Enemies\Rango_SonidoRandom" DurationType="OneShot" DurationMin="1.580528" DurationMax="3.464183">
 					<IncludedMemoryFiles>
 						<File Id="5376380" Language="SFX">
 							<ShortName>Rango_SonidoRandom4.wav</ShortName>
-							<Path>SFX\Rango_SonidoRandom4_10C4C929.wem</Path>
+							<Path>SFX\Rango_SonidoRandom4_F1485377.wem</Path>
 						</File>
 						<File Id="5654933" Language="SFX">
 							<ShortName>Rango_SonidoRandom1.wav</ShortName>
-							<Path>SFX\Rango_SonidoRandom1_10C4C929.wem</Path>
+							<Path>SFX\Rango_SonidoRandom1_D4CA5526.wem</Path>
 						</File>
 						<File Id="36059316" Language="SFX">
 							<ShortName>Rango_SonidoRandom2.wav</ShortName>
-							<Path>SFX\Rango_SonidoRandom2_10C4C929.wem</Path>
+							<Path>SFX\Rango_SonidoRandom2_43F68CEF.wem</Path>
 						</File>
 						<File Id="210168708" Language="SFX">
 							<ShortName>Rango_SonidoRandom3.wav</ShortName>
-							<Path>SFX\Rango_SonidoRandom3_10C4C929.wem</Path>
+							<Path>SFX\Rango_SonidoRandom3_145CA078.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -787,11 +823,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="32974598" Name="Simple_Ataca" ObjectPath="\Events\Tutorial\Enemies\Simple_Ataca" DurationType="OneShot" DurationMin="1.503392" DurationMax="1.894155">
+				<Event Id="32974598" Name="Simple_Ataca" ObjectPath="\Events\Tutorial\Enemies\Simple_Ataca" DurationType="OneShot" DurationMin="1.337545" DurationMax="1.685201">
 					<IncludedMemoryFiles>
 						<File Id="234819874" Language="SFX">
 							<ShortName>Simple_Ataca.wav</ShortName>
-							<Path>SFX\Simple_Ataca_10C4C929.wem</Path>
+							<Path>SFX\Simple_Ataca_5DD82964.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -803,7 +839,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1574582848" Name="Simple_Muerte" ObjectPath="\Events\Tutorial\Enemies\Simple_Muerte" DurationType="OneShot" DurationMin="0.833066" DurationMax="0.990687">
+				<Event Id="1574582848" Name="Simple_Muerte" ObjectPath="\Events\Tutorial\Enemies\Simple_Muerte" DurationType="OneShot" DurationMin="0.257722" DurationMax="0.990687">
 					<IncludedMemoryFiles>
 						<File Id="227384290" Language="SFX">
 							<ShortName>Simple_Muerte2.wav</ShortName>
@@ -811,7 +847,7 @@
 						</File>
 						<File Id="811572311" Language="SFX">
 							<ShortName>Simple_Muerte.wav</ShortName>
-							<Path>SFX\Simple_Muerte_10C4C929.wem</Path>
+							<Path>SFX\Simple_Muerte_CEAC7D4E.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -823,11 +859,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4237093597" Name="Simple_SonidoRandom" ObjectPath="\Events\Tutorial\Enemies\Simple_SonidoRandom" DurationType="OneShot" DurationMin="1.388976" DurationMax="1.964309">
+				<Event Id="4237093597" Name="Simple_SonidoRandom" ObjectPath="\Events\Tutorial\Enemies\Simple_SonidoRandom" DurationType="OneShot" DurationMin="0.654689" DurationMax="0.92587">
 					<IncludedMemoryFiles>
 						<File Id="192562094" Language="SFX">
 							<ShortName>Simple_SonidoRandom.wav</ShortName>
-							<Path>SFX\Simple_SonidoRandom_10C4C929.wem</Path>
+							<Path>SFX\Simple_SonidoRandom_46C9C2A7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -839,11 +875,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3256636576" Name="Useless_SonidoEspecial" ObjectPath="\Events\Tutorial\Turrets\Useless_SonidoEspecial" DurationType="OneShot" DurationMin="0.910971" DurationMax="1.083333">
+				<Event Id="3256636576" Name="Useless_SonidoEspecial" ObjectPath="\Events\Tutorial\Turrets\Useless_SonidoEspecial" DurationType="OneShot" DurationMin="0.8418" DurationMax="1.001075">
 					<IncludedMemoryFiles>
 						<File Id="270813895" Language="SFX">
 							<ShortName>Torretas\Useless_SonidoEspecial.wav</ShortName>
-							<Path>SFX\Torretas\Useless_SonidoEspecial_10C4C929.wem</Path>
+							<Path>SFX\Torretas\Useless_SonidoEspecial_EC3F6339.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
