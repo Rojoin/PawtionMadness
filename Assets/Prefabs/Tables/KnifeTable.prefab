@@ -107,7 +107,7 @@ MonoBehaviour:
   OnItemPickUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -103978619902434043, guid: 1713327efd79cdf4bb83235b5087666f, type: 3}
+      - m_Target: {fileID: -6494001215724721210}
         m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
         m_MethodName: PlayPickItem
         m_Mode: 1
@@ -122,7 +122,7 @@ MonoBehaviour:
   OnItemDrop:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -103978619902434043, guid: 1713327efd79cdf4bb83235b5087666f, type: 3}
+      - m_Target: {fileID: -6494001215724721210}
         m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
         m_MethodName: PlayPlaceItem
         m_Mode: 1
@@ -137,7 +137,7 @@ MonoBehaviour:
   OnFailedInteraction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -103978619902434043, guid: 1713327efd79cdf4bb83235b5087666f, type: 3}
+      - m_Target: {fileID: -6494001215724721210}
         m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
         m_MethodName: PlayCantPlaceItem
         m_Mode: 1
@@ -168,6 +168,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -6494001215724721210}
+        m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
+        m_MethodName: PlayInteractItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-6494001215724721210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,15 +195,15 @@ MonoBehaviour:
   pickItem:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 40ecffeab08572349a27833fa6e2d1ce, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 9eb104e65946ad749b205e134da5fae2, type: 2}
   placeItem:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 21abf068007747942b8304c5634c4885, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: db8e18b587468bc4c9f9378fae11c66a, type: 2}
   interactItem:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 068c086dea5e8904b849593a90d6a2bb, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 9fc5b13229e1c0544b47762b235a1954, type: 2}
 --- !u!114 &3687993603046843959
 MonoBehaviour:
   m_ObjectHideFlags: 0

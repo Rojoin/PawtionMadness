@@ -115,6 +115,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  <OnInteract>k__BackingField:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6299659296046057855}
+        m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
+        m_MethodName: PlayPlaceItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6299659296046057855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,11 +149,11 @@ MonoBehaviour:
   placeItem:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 21abf068007747942b8304c5634c4885, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: db8e18b587468bc4c9f9378fae11c66a, type: 2}
   interactItem:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: db8e18b587468bc4c9f9378fae11c66a, type: 2}
 --- !u!114 &2938994507482363744
 MonoBehaviour:
   m_ObjectHideFlags: 0
