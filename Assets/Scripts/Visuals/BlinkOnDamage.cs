@@ -15,7 +15,7 @@ namespace Visuals
         private List<Renderer> childRenderers;
         private List<Material> materials;
         private Coroutine _blinking;
-        
+
         private void Awake()
         {
             Transform[] children = transform.GetComponentsInChildren<Transform>();
@@ -28,6 +28,14 @@ namespace Visuals
                 {
                     childRenderers.Add(childRen);
                     materials.Add(childRen.material);
+                }
+            }
+
+            for (int i = 0; i < children.Length; i++)
+            {
+                if (children[i].TryGetComponent<Renderer>(out var childRen))
+                {
+                    childRen.material = childRen.sharedMaterial;
                 }
             }
         }
