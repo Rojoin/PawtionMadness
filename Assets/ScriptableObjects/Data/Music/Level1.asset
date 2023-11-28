@@ -15,9 +15,37 @@ MonoBehaviour:
   callInitMusic:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: f7ead338f49998040aefb4455de96c00, type: 2}
   callStopMusic:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
-  SwitchStates: []
+  LoseMusicState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f14be546dbda8ee449778fc68f5b8c66, type: 2}
+  WinMusicState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 66abe1f5bca8cd2488f53cb9bf9b996c, type: 2}
+  SwitchGroup: ingamemusic_level
+  SwitchStates:
+  - idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9f84a64a903725d4a9078ec2124d2923, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 48f9a1e40a0f5194788c42cc5fc87bc5, type: 2}
+  - idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: acb08c1a3d4dc65478aeb603c1b19c67, type: 2}
