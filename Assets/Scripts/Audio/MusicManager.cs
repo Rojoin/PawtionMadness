@@ -12,30 +12,25 @@ public class MusicManager : MonoBehaviour
         AkSoundEngine.PostEvent(musicSo.callInitMusic.ToString(), gameObject);
     }
 
-    private void Update()
-    {
-        Debug.Log(currentState + " = " + musicSo.SwitchStates[currentState].ToString());
-    }
-
     public void StopMusic()
     {
         AkSoundEngine.PostEvent(musicSo.callStopMusic.ToString(), gameObject);
     }
 
-    [ContextMenu("Change State")]
+    [ContextMenu("Change to next State")]
     public void SetNewState()
     {
         currentState++;
         AkSoundEngine.SetSwitch(musicSo.SwitchGroup.ToString(), musicSo.SwitchStates[currentState].ToString(), gameObject);
     }
 
-    [ContextMenu("Change State")]
+    [ContextMenu("Change to Lose State")]
     public void callLoseState()
     {
         AkSoundEngine.SetSwitch(musicSo.SwitchGroup.ToString(), musicSo.LoseMusicState.ToString(), gameObject);
     }
 
-    [ContextMenu("Change State")]
+    [ContextMenu("Change to Win State")]
     public void callWinState()
     {
         AkSoundEngine.SetSwitch(musicSo.SwitchGroup.ToString(), musicSo.WinMusicState.ToString(), gameObject);
