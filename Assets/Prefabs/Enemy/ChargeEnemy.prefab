@@ -64,9 +64,63 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: -519976210648170196}
+        m_TargetAssemblyTypeName: EnemySFX, Assembly-CSharp
+        m_MethodName: PlayTakeDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -519976210648170196}
+        m_TargetAssemblyTypeName: EnemySFX, Assembly-CSharp
+        m_MethodName: PlayDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onSpecialInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -519976210648170196}
+        m_TargetAssemblyTypeName: EnemySFX, Assembly-CSharp
+        m_MethodName: PlaySpecialSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onAttack:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -519976210648170196}
+        m_TargetAssemblyTypeName: EnemySFX, Assembly-CSharp
+        m_MethodName: PlayAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _animator: {fileID: 6333782299529572339}
   _onDeathParticle: {fileID: 4637355595762871865}
 --- !u!65 &8368428818595137118
@@ -105,11 +159,11 @@ MonoBehaviour:
   Attack:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: c2d006723f46ca34f926fb032a04362a, type: 2}
   Death:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: bf87059dd6e2e8346a53781fdda07bb7, type: 2}
   TakeDamage:
     idInternal: 0
     valueGuidInternal: 
@@ -121,7 +175,7 @@ MonoBehaviour:
   SpecialSound:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 83a390b8b6f07734e90e905adaf9a3b2, type: 2}
 --- !u!1001 &4637355595781091837
 PrefabInstance:
   m_ObjectHideFlags: 0
