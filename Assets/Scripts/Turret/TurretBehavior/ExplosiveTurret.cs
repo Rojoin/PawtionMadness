@@ -1,5 +1,7 @@
+using System;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ExplosiveTurret : InstantTurret
 {
@@ -9,6 +11,13 @@ public class ExplosiveTurret : InstantTurret
     private float timer = 0;
     private bool canAttack = true;
     private static readonly int Shoot = Animator.StringToHash("Shoot");
+    public UnityEvent onSpawn;
+    public UnityEvent onExplosion;
+
+    private void Start()
+    {
+        onSpawn.Invoke();
+    }
 
     private void Update()
     {
@@ -28,6 +37,7 @@ public class ExplosiveTurret : InstantTurret
 
         var explotion = Instantiate(explotionFX,transform.position,Quaternion.identity);
         explotion.Play();
+        onExplosion.Invoke();
         impulseSource.GenerateImpulseWithForce(explotionShakeForce);
         for (int i = 0; i < hits.Length; i++)
         {
