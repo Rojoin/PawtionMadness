@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3784753992734210510}
   - component: {fileID: 7632185328495556519}
   - component: {fileID: 263899017366062727}
+  - component: {fileID: 8553402290493088019}
   m_Layer: 7
   m_Name: ProyectileTurret
   m_TagString: turret
@@ -65,12 +66,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onTurretDeath:
+  onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8553402290493088019}
+        m_TargetAssemblyTypeName: TurretSFX, Assembly-CSharp
+        m_MethodName: PlayDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onAttack:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8553402290493088019}
+        m_TargetAssemblyTypeName: TurretSFX, Assembly-CSharp
+        m_MethodName: PlayShoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &263899017366062727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92,6 +117,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5, y: 3.7756205, z: 1.2446508}
   m_Center: {x: 0, y: 0.98435116, z: -0.04445207}
+--- !u!114 &8553402290493088019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269579828861770395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a7bc0094c85b5439b03a499f48dd31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 536326925becb724185551bd4312a02b, type: 2}
+  Death:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7e372e53c10040843acffe408566ba8a, type: 2}
+  SpecialSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &8163160403981343447
 GameObject:
   m_ObjectHideFlags: 0

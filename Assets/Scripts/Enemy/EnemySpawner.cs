@@ -23,6 +23,7 @@ public class EnemySpawner : MonoBehaviour
     [Header("Events")]
     public UnityEvent<float> OnGameBarUpdated = new UnityEvent<float>();
     public UnityEvent<float> OnNewWaveAdded = new UnityEvent<float>();
+    public UnityEvent OnWaveStart = new UnityEvent();
     public UnityEvent OnIncomingWave = new UnityEvent();
     public EnemyInvokeChannel invokeEnemyChannel;
     public BoolChannelSO OnWaveFinishChannel;
@@ -107,6 +108,7 @@ public class EnemySpawner : MonoBehaviour
                     spawnPeriod = waveList[actualWave].delayBeforeWave;
                     enemyCount = 0;
                     OnIncomingWave.Invoke();
+                    OnWaveStart.Invoke();
                 }
             }
         }
@@ -130,5 +132,4 @@ public class EnemySpawner : MonoBehaviour
             }
         }
     }
-
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4003253030492811443}
   - component: {fileID: 2336076344106375985}
   - component: {fileID: 3520758312852241187}
+  - component: {fileID: 4708652321155818185}
   m_Layer: 7
   m_Name: ExplosiveTurret
   m_TagString: turret
@@ -74,6 +75,9 @@ MonoBehaviour:
   _onHit:
     m_PersistentCalls:
       m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
   explotionFX: {fileID: 4593184484909914550, guid: 2e1e9506f5904a64b81744324fb7cd50, type: 3}
   impulseSource: {fileID: 3520758312852241187}
   explotionShakeForce: 1
@@ -130,6 +134,30 @@ MonoBehaviour:
     m_DissipationDistance: 100
     m_PropagationSpeed: 343
   m_DefaultVelocity: {x: 0, y: -1, z: 0}
+--- !u!114 &4708652321155818185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3485406449842763306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a7bc0094c85b5439b03a499f48dd31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  Death:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  SpecialSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1001 &4617745038677774390
 PrefabInstance:
   m_ObjectHideFlags: 0

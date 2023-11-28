@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6211174335237488796}
   - component: {fileID: 8232723196618809625}
   - component: {fileID: 2486498811297812854}
+  - component: {fileID: -2614063856151168901}
   m_Layer: 6
   m_Name: ReinforcedEnemy
   m_TagString: enemy
@@ -89,6 +90,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2.33, z: 1.1235929}
   m_Center: {x: 0, y: 0.24799758, z: 0.06179647}
+--- !u!114 &-2614063856151168901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551146121632253173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5a58cd6a95ef445af887d801a8a541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Attack:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  Death:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  TakeDamage:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  RandomSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  SpecialSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1001 &127235578202739163
 PrefabInstance:
   m_ObjectHideFlags: 0

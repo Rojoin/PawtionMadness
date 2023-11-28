@@ -6,6 +6,7 @@ public class MusicManager : MonoBehaviour
 {
     public MusicSo musicSo;
     public int currentState = 0;
+    private int musicStateSwitch = 0;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class MusicManager : MonoBehaviour
     }
 
     [ContextMenu("Change to next State")]
-    public void SetNewState()
+    public void SetNextState()
     {
         currentState++;
         AkSoundEngine.SetSwitch(musicSo.SwitchGroup.ToString(), musicSo.SwitchStates[currentState].ToString(), gameObject);

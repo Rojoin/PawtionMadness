@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 196cb691de8f584c827edddbacf02d6b
     GuidInternal: 
-    m_lastTime: -8585005163919721014
+    m_lastTime: -8585033285767157794
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: aa66b2e34fd8ed42a53d5a4e3b0d167d
     GuidInternal: 
-    m_lastTime: -8585005163924844091
+    m_lastTime: -8585015993811378535
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e7a312c7f9c3cb4d8311f6565e852255
     GuidInternal: 
-    m_lastTime: -8585005163919770880
+    m_lastTime: -8585015993806161001
     List:
     - name: InGame
       guid: da7fa68ead5f7149b4970b88eb6b420d
@@ -156,7 +156,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2621f2e587216f4092b302108c4d8946
     GuidInternal: 
-    m_lastTime: -8585005163936781316
+    m_lastTime: -8585009894735817330
     List: []
   - PhysicalPath: Events\InGame.wwu
     PathAndIcons:
@@ -169,7 +169,7 @@ MonoBehaviour:
     ParentPath: Events\InGame
     guid: e8c7ad57f028174ba6dbfb95905729f6
     GuidInternal: 
-    m_lastTime: -8585005163936771341
+    m_lastTime: -8585015993818935008
     List: []
   - PhysicalPath: Events\MainMenu.wwu
     PathAndIcons:
@@ -182,7 +182,7 @@ MonoBehaviour:
     ParentPath: Events\MainMenu
     guid: 90e94a09cbc25e498ac985591e320b8e
     GuidInternal: 
-    m_lastTime: -8585005163936761368
+    m_lastTime: -8585015993818925006
     List:
     - name: MainMenuMusic
       guid: 20d3f76c0f8fcb4cbd425a5bd70e4e98
@@ -246,7 +246,7 @@ MonoBehaviour:
     ParentPath: Events\Tutorial
     guid: 090215d47f508a4c8e101bbd3392b83a
     GuidInternal: 
-    m_lastTime: -8585005163936751397
+    m_lastTime: -8585003975551280714
     List:
     - name: Ambient
       guid: 6c92e374d455ed4f9ad5a1931bbf86d2
@@ -497,8 +497,8 @@ MonoBehaviour:
         guid: 9f816537e6b6e54d8eb2818de946f797
       Path: Events\Tutorial\Turrets\Laser_Disparo
       maxAttenuation: 0
-      maxDuration: 4.10542
-      minDuration: 3.657513
+      maxDuration: 0.964597
+      minDuration: 0.859358
     - name: Laser_Muerte
       guid: 415f00341a0aa64b8a9c892d2c62b715
       id: 3116544519
@@ -1676,7 +1676,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: eda32d6682632e48b8937bccdfa5c6be
     GuidInternal: 
-    m_lastTime: -8585005163936751397
+    m_lastTime: -8585015993818884996
     List:
     - name: Master
       guid: 8a36ad170602d64e96318d211728477e
@@ -1732,7 +1732,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 453e836da4731d43aaf2ace66950652e
     GuidInternal: 
-    m_lastTime: -8585005163919750935
+    m_lastTime: -8585033285767177793
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -1746,7 +1746,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d95443d702661b448cd3207c91b5b886
     GuidInternal: 
-    m_lastTime: -8585005163919730987
+    m_lastTime: -8585003975551130625
     List:
     - name: ingamemusic_level
       guid: 29bcdb2a22c379459eec19e2b879a83c
@@ -1846,6 +1846,72 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: ingamemusic_tutorial
+      guid: b7c9abfca947d640a7824da78c892ec4
+      id: 2707460344
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d95443d702661b448cd3207c91b5b886
+      - ElementName: ingamemusic_tutorial
+        ObjectType: 11
+        guid: b7c9abfca947d640a7824da78c892ec4
+      Path: Switches\Default Work Unit\ingamemusic_tutorial
+      values:
+      - name: LOOSE
+        guid: ad64fae77bb926459dda9f7f3c30edd9
+        id: 174960569
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_tutorial
+          ObjectType: 11
+          guid: b7c9abfca947d640a7824da78c892ec4
+        - ElementName: LOOSE
+          ObjectType: 10
+          guid: ad64fae77bb926459dda9f7f3c30edd9
+      - name: wave1
+        guid: b83ac7acde303846b773d905f57c6564
+        id: 2453122375
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_tutorial
+          ObjectType: 11
+          guid: b7c9abfca947d640a7824da78c892ec4
+        - ElementName: wave1
+          ObjectType: 10
+          guid: b83ac7acde303846b773d905f57c6564
+      - name: WIN
+        guid: 41495b3a55ecd44bb47ef5587787d9d3
+        id: 979765101
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_tutorial
+          ObjectType: 11
+          guid: b7c9abfca947d640a7824da78c892ec4
+        - ElementName: WIN
+          ObjectType: 10
+          guid: 41495b3a55ecd44bb47ef5587787d9d3
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -1858,11 +1924,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: befacd619a68c341acea8777258db81d
     GuidInternal: 
-    m_lastTime: -8585005163919681118
+    m_lastTime: -8585033285767167790
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000c0000000d000000
-  AutoSyncSelection: 1
+  ExpandedWaapiItemIds: 050000000a0000000c0000001000000011000000150000001d0000001e0000001f00000058000000590000005b000000
+  AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
   CurrentPluginConfig: 
