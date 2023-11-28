@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 196cb691de8f584c827edddbacf02d6b
     GuidInternal: 
-    m_lastTime: -8585033285767157794
+    m_lastTime: -8585005163919721014
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: aa66b2e34fd8ed42a53d5a4e3b0d167d
     GuidInternal: 
-    m_lastTime: -8585015993811378535
+    m_lastTime: -8585005163924844091
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e7a312c7f9c3cb4d8311f6565e852255
     GuidInternal: 
-    m_lastTime: -8585015993806161001
+    m_lastTime: -8585005163919770880
     List:
     - name: InGame
       guid: da7fa68ead5f7149b4970b88eb6b420d
@@ -156,7 +156,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2621f2e587216f4092b302108c4d8946
     GuidInternal: 
-    m_lastTime: -8585009987183924206
+    m_lastTime: -8585005163936781316
     List: []
   - PhysicalPath: Events\InGame.wwu
     PathAndIcons:
@@ -169,7 +169,7 @@ MonoBehaviour:
     ParentPath: Events\InGame
     guid: e8c7ad57f028174ba6dbfb95905729f6
     GuidInternal: 
-    m_lastTime: -8585015993818935008
+    m_lastTime: -8585005163936771341
     List: []
   - PhysicalPath: Events\MainMenu.wwu
     PathAndIcons:
@@ -182,7 +182,7 @@ MonoBehaviour:
     ParentPath: Events\MainMenu
     guid: 90e94a09cbc25e498ac985591e320b8e
     GuidInternal: 
-    m_lastTime: -8585015993818925006
+    m_lastTime: -8585005163936761368
     List:
     - name: MainMenuMusic
       guid: 20d3f76c0f8fcb4cbd425a5bd70e4e98
@@ -246,7 +246,7 @@ MonoBehaviour:
     ParentPath: Events\Tutorial
     guid: 090215d47f508a4c8e101bbd3392b83a
     GuidInternal: 
-    m_lastTime: -8585009987184184426
+    m_lastTime: -8585005163936751397
     List:
     - name: Ambient
       guid: 6c92e374d455ed4f9ad5a1931bbf86d2
@@ -417,8 +417,8 @@ MonoBehaviour:
         guid: 8411edbb7c92044ba27be1a089f1c118
       Path: Events\Tutorial\Turrets\Explosive_Disparo
       maxAttenuation: 0
-      maxDuration: 4
-      minDuration: 4
+      maxDuration: 3.845272
+      minDuration: 3.845272
     - name: Explosive_Muerte
       guid: e4f999d5e029854cb381afc46c5697a7
       id: 3296522035
@@ -437,8 +437,8 @@ MonoBehaviour:
         guid: e4f999d5e029854cb381afc46c5697a7
       Path: Events\Tutorial\Turrets\Explosive_Muerte
       maxAttenuation: 0
-      maxDuration: 0.982211
-      minDuration: 0.779581
+      maxDuration: 0.73314
+      minDuration: 0.581894
     - name: Explosive_SonidoEspecial
       guid: fde4a7f4abb26f44a2028b5feae6c705
       id: 2541590549
@@ -457,8 +457,8 @@ MonoBehaviour:
         guid: fde4a7f4abb26f44a2028b5feae6c705
       Path: Events\Tutorial\Turrets\Explosive_SonidoEspecial
       maxAttenuation: 0
-      maxDuration: 2.155438
-      minDuration: 1.438582
+      maxDuration: 1.852812
+      minDuration: 1.236604
     - name: Interfaz_AceptarContinuar
       guid: f108b2afdbf9d94e8a129dfcebd70b4e
       id: 3880584468
@@ -517,8 +517,8 @@ MonoBehaviour:
         guid: 415f00341a0aa64b8a9c892d2c62b715
       Path: Events\Tutorial\Turrets\Laser_Muerte
       maxAttenuation: 0
-      maxDuration: 1.5625
-      minDuration: 1.313901
+      maxDuration: 1.513252
+      minDuration: 1.272488
     - name: Laser_SonidoEspecial
       guid: af97792261fd8d498348d7b0a5ace0af
       id: 2203504569
@@ -594,8 +594,8 @@ MonoBehaviour:
         guid: a7abf4710b467a4ca10497656f8eb7f7
       Path: Events\Tutorial\Couldron\Play_Agarrar_item_Porcion
       maxAttenuation: 0
-      maxDuration: 0.875
-      minDuration: 0.875
+      maxDuration: 0.837393
+      minDuration: 0.837393
     - name: Play_AMB_Bosque_Noche
       guid: a1c210c0c7f81449ba28992f9c5ece69
       id: 1452442514
@@ -674,8 +674,8 @@ MonoBehaviour:
         guid: 7dfbc9627a95e3458e49373137765ff7
       Path: Events\Tutorial\Enemies\Play_Charger_Esfuerzo_Ataque
       maxAttenuation: 0
-      maxDuration: 1.741146
-      minDuration: 1.741146
+      maxDuration: 1.083045
+      minDuration: 0.888476
     - name: Play_Charger_Muerte
       guid: cf97a45ef3f661448f0dbbfd29d36dce
       id: 1925760625
@@ -694,8 +694,8 @@ MonoBehaviour:
         guid: cf97a45ef3f661448f0dbbfd29d36dce
       Path: Events\Tutorial\Enemies\Play_Charger_Muerte
       maxAttenuation: 0
-      maxDuration: 3.227078
-      minDuration: 2.092924
+      maxDuration: 2.806155
+      minDuration: 0.975521
     - name: Play_Charger_RecibeDa_o
       guid: a477ef8a2955f54eba00357d1c350edb
       id: 63562060
@@ -714,8 +714,8 @@ MonoBehaviour:
         guid: a477ef8a2955f54eba00357d1c350edb
       Path: Events\Tutorial\Enemies\Play_Charger_RecibeDa_o
       maxAttenuation: 0
-      maxDuration: 1.625
-      minDuration: 0.836458
+      maxDuration: 0.770595
+      minDuration: 0.267241
     - name: Play_Charger_SonidoAdicional
       guid: fa41be04bf489c4087167f55ffcd2d8c
       id: 3362525071
@@ -734,8 +734,8 @@ MonoBehaviour:
         guid: fa41be04bf489c4087167f55ffcd2d8c
       Path: Events\Tutorial\Enemies\Play_Charger_SonidoAdicional
       maxAttenuation: 0
-      maxDuration: 1.824001
-      minDuration: 1.824001
+      maxDuration: 0.914614
+      minDuration: 0.585353
     - name: Play_Charger_SonidoRandom
       guid: 9206453fc376d94aa8b22ce0c20ba91c
       id: 2563681920
@@ -754,8 +754,8 @@ MonoBehaviour:
         guid: 9206453fc376d94aa8b22ce0c20ba91c
       Path: Events\Tutorial\Enemies\Play_Charger_SonidoRandom
       maxAttenuation: 0
-      maxDuration: 2.905208
-      minDuration: 2.645833
+      maxDuration: 1.497284
+      minDuration: 0.982277
     - name: Play_Enoajdo_adicional
       guid: 0557dc7aea214c4896db5caae58f8502
       id: 1475103013
@@ -906,16 +906,16 @@ MonoBehaviour:
       - ElementName: Tutorial
         ObjectType: 12
         guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: UI
+      - ElementName: Table
         ObjectType: 4
-        guid: 21a76287218894459eb36f22cc7e5676
+        guid: 14f8c6b495194049a1b8af72cf8886a1
       - ElementName: Play_libro_abrir_3
         ObjectType: 3
         guid: ec1542ec49890643bc208a0b55e77645
-      Path: Events\Tutorial\UI\Play_libro_abrir_3
+      Path: Events\Tutorial\Table\Play_libro_abrir_3
       maxAttenuation: 0
-      maxDuration: 1
-      minDuration: 1
+      maxDuration: 1.029897
+      minDuration: 0.985663
     - name: Play_Oleada
       guid: a51ea37c9d39a448823490fce01ad297
       id: 417218340
@@ -1014,8 +1014,8 @@ MonoBehaviour:
         guid: 17ab5b1fb990cf4bb66d73e6a03ab3dc
       Path: Events\Tutorial\Couldron\Play_Pocion_Preparandose
       maxAttenuation: 0
-      maxDuration: 5.833333
-      minDuration: 5.833333
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Poner_Item_caldero
       guid: 39808d42d0505b448d6c0b7f1019032b
       id: 1672850383
@@ -1034,8 +1034,8 @@ MonoBehaviour:
         guid: 39808d42d0505b448d6c0b7f1019032b
       Path: Events\Tutorial\Couldron\Play_Poner_Item_caldero
       maxAttenuation: 0
-      maxDuration: 1.125
-      minDuration: 1.125
+      maxDuration: 0.949319
+      minDuration: 0.949319
     - name: Play_Procesar_Agarrar
       guid: 861081d81c6a074bae335289dac2a7eb
       id: 3638962258
@@ -1054,8 +1054,8 @@ MonoBehaviour:
         guid: 861081d81c6a074bae335289dac2a7eb
       Path: Events\Tutorial\Table\Play_Procesar_Agarrar
       maxAttenuation: 0
-      maxDuration: 1.14424
-      minDuration: 1.14424
+      maxDuration: 0.521302
+      minDuration: 0.521302
     - name: Play_SonidoRandom_Caldero
       guid: f13376a43d052249aa02a576dc0d654c
       id: 3760360352
@@ -1103,13 +1103,13 @@ MonoBehaviour:
       - ElementName: Tutorial
         ObjectType: 12
         guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Player
+      - ElementName: Table
         ObjectType: 4
-        guid: f2c1dcaef3244345967e12cf093cdc8a
+        guid: 14f8c6b495194049a1b8af72cf8886a1
       - ElementName: Player_Agarrar
         ObjectType: 3
         guid: df656973caee784b949f534949c2c3ee
-      Path: Events\Tutorial\Player\Player_Agarrar
+      Path: Events\Tutorial\Table\Player_Agarrar
       maxAttenuation: 0
       maxDuration: 0.375521
       minDuration: 0.375521
@@ -1163,13 +1163,13 @@ MonoBehaviour:
       - ElementName: Tutorial
         ObjectType: 12
         guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Player
+      - ElementName: Table
         ObjectType: 4
-        guid: f2c1dcaef3244345967e12cf093cdc8a
+        guid: 14f8c6b495194049a1b8af72cf8886a1
       - ElementName: Player_Soltar
         ObjectType: 3
         guid: e039c9cbdb4fa8449f79b1c7217abb25
-      Path: Events\Tutorial\Player\Player_Soltar
+      Path: Events\Tutorial\Table\Player_Soltar
       maxAttenuation: 0
       maxDuration: 0.375521
       minDuration: 0.375521
@@ -1211,8 +1211,8 @@ MonoBehaviour:
         guid: 69e78ca6a103f046bc5f306ffa81b59e
       Path: Events\Tutorial\Table\Procesar_Item
       maxAttenuation: 0
-      maxDuration: 2.625
-      minDuration: 2.625
+      maxDuration: 0.166451
+      minDuration: 0.127788
     - name: Proyectil_Disparo
       guid: d2a2044c2e5da34c97f4dd6ead0de963
       id: 4000783731
@@ -1231,8 +1231,8 @@ MonoBehaviour:
         guid: d2a2044c2e5da34c97f4dd6ead0de963
       Path: Events\Tutorial\Turrets\Proyectil_Disparo
       maxAttenuation: 0
-      maxDuration: 1.26277
-      minDuration: 1.002261
+      maxDuration: 1.186787
+      minDuration: 0.941953
     - name: Proyectil_Muerte
       guid: 97c1c36e30ac1444a33c0528006a2693
       id: 1918569767
@@ -1251,8 +1251,8 @@ MonoBehaviour:
         guid: 97c1c36e30ac1444a33c0528006a2693
       Path: Events\Tutorial\Turrets\Proyectil_Muerte
       maxAttenuation: 0
-      maxDuration: 0.56284
-      minDuration: 0.501433
+      maxDuration: 0.455594
+      minDuration: 0.405888
     - name: Rango_Desplazamiento
       guid: 52a976eec316694e9a00cc6d61a8dd1c
       id: 2498537471
@@ -1291,8 +1291,8 @@ MonoBehaviour:
         guid: e392e7b419468845b373a15b15e000f1
       Path: Events\Tutorial\Enemies\Rango_Esfuerzo_Ataque
       maxAttenuation: 0
-      maxDuration: 1.932462
-      minDuration: 1.366457
+      maxDuration: 0.827802
+      minDuration: 0.646033
     - name: Rango_Muerte
       guid: f858375faba52241a32f5c4cee7ab39e
       id: 263685855
@@ -1311,8 +1311,8 @@ MonoBehaviour:
         guid: f858375faba52241a32f5c4cee7ab39e
       Path: Events\Tutorial\Enemies\Rango_Muerte
       maxAttenuation: 0
-      maxDuration: 0.972272
-      minDuration: 0.6875
+      maxDuration: 0.883124
+      minDuration: 0.656966
     - name: Rango_RecibeDa_o
       guid: c3c27a8f0445b0458e74d96c1fdea425
       id: 202375290
@@ -1331,8 +1331,8 @@ MonoBehaviour:
         guid: c3c27a8f0445b0458e74d96c1fdea425
       Path: Events\Tutorial\Enemies\Rango_RecibeDa_o
       maxAttenuation: 0
-      maxDuration: 1.416667
-      minDuration: 1.416667
+      maxDuration: 0.556113
+      minDuration: 0.436366
     - name: Rango_SonidoRandom
       guid: 4c217bb8b58c87468111c1a3560a06bd
       id: 2238034958
@@ -1351,8 +1351,8 @@ MonoBehaviour:
         guid: 4c217bb8b58c87468111c1a3560a06bd
       Path: Events\Tutorial\Enemies\Rango_SonidoRandom
       maxAttenuation: 0
-      maxDuration: 4.875
-      minDuration: 3.458333
+      maxDuration: 3.464183
+      minDuration: 1.580528
     - name: Recetario_Cerrar
       guid: 0ccf1e2ddcf0ef4cbf34bdde0ce087b6
       id: 3840329095
@@ -1363,13 +1363,13 @@ MonoBehaviour:
       - ElementName: Tutorial
         ObjectType: 12
         guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: UI
+      - ElementName: Table
         ObjectType: 4
-        guid: 21a76287218894459eb36f22cc7e5676
+        guid: 14f8c6b495194049a1b8af72cf8886a1
       - ElementName: Recetario_Cerrar
         ObjectType: 3
         guid: 0ccf1e2ddcf0ef4cbf34bdde0ce087b6
-      Path: Events\Tutorial\UI\Recetario_Cerrar
+      Path: Events\Tutorial\Table\Recetario_Cerrar
       maxAttenuation: 0
       maxDuration: 0.69712
       minDuration: 0.69712
@@ -1491,8 +1491,8 @@ MonoBehaviour:
         guid: 6d3fcbb01af3cd45bb48d3cce1b1a18b
       Path: Events\Tutorial\Enemies\Simple_Ataca
       maxAttenuation: 0
-      maxDuration: 1.894155
-      minDuration: 1.503392
+      maxDuration: 1.685201
+      minDuration: 1.337545
     - name: Simple_Desplazamiento
       guid: 045e5bd32a318849a29a9da25c8c2cfc
       id: 2558775992
@@ -1532,7 +1532,7 @@ MonoBehaviour:
       Path: Events\Tutorial\Enemies\Simple_Muerte
       maxAttenuation: 0
       maxDuration: 0.990687
-      minDuration: 0.833066
+      minDuration: 0.257722
     - name: Simple_RecibeDano
       guid: 447c33a48ec6814e899a04556fd155b7
       id: 1545430338
@@ -1571,8 +1571,8 @@ MonoBehaviour:
         guid: c4624f59fbd0de4cb301a57b665a9e31
       Path: Events\Tutorial\Enemies\Simple_SonidoRandom
       maxAttenuation: 0
-      maxDuration: 1.964309
-      minDuration: 1.388976
+      maxDuration: 0.92587
+      minDuration: 0.654689
     - name: Table
       guid: 14f8c6b495194049a1b8af72cf8886a1
       id: 2048817515
@@ -1662,8 +1662,8 @@ MonoBehaviour:
         guid: e70c9c449ac3b049b8688bc5c6fd341e
       Path: Events\Tutorial\Turrets\Useless_SonidoEspecial
       maxAttenuation: 0
-      maxDuration: 1.083333
-      minDuration: 0.910971
+      maxDuration: 1.001075
+      minDuration: 0.8418
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1676,7 +1676,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: eda32d6682632e48b8937bccdfa5c6be
     GuidInternal: 
-    m_lastTime: -8585015993818884996
+    m_lastTime: -8585005163936751397
     List:
     - name: Master
       guid: 8a36ad170602d64e96318d211728477e
@@ -1732,7 +1732,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 453e836da4731d43aaf2ace66950652e
     GuidInternal: 
-    m_lastTime: -8585033285767177793
+    m_lastTime: -8585005163919750935
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -1746,7 +1746,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d95443d702661b448cd3207c91b5b886
     GuidInternal: 
-    m_lastTime: -8585010041473697073
+    m_lastTime: -8585005163919730987
     List:
     - name: ingamemusic_level
       guid: 29bcdb2a22c379459eec19e2b879a83c
@@ -1858,11 +1858,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: befacd619a68c341acea8777258db81d
     GuidInternal: 
-    m_lastTime: -8585033285767167790
+    m_lastTime: -8585005163919681118
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 05000000060000000c0000000d000000
-  AutoSyncSelection: 0
+  AutoSyncSelection: 1
   autoPopulateEnabled: 1
   currentDataSource: 0
   CurrentPluginConfig: 

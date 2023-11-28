@@ -2,6 +2,7 @@
 using System.Collections;
 using CustomSceneSwitcher.Switcher;
 using CustomSceneSwitcher.Switcher.Data;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -21,12 +22,14 @@ namespace Menu
         [SerializeField] private CanvasGroup menuCanvas;
         [SerializeField] private CanvasGroup optionsCanvas;
         [SerializeField] private CanvasGroup creditsCanvas;
+        [SerializeField] private TextMeshProUGUI versionNumber;
         private bool isOptionsActive;
         private bool isHowToPlayActive;
 
         private void Awake()
         {
             Cursor.visible = true;
+            versionNumber.text = $"V:{Application.version}";
             startGameButton.onClick.AddListener(StartGame);
             optionsButton.onClick.AddListener(OptionsToggle);
             backOptionsButton.onClick.AddListener(OptionsToggle);

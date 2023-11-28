@@ -14,8 +14,8 @@ namespace Table
         [SerializeField] private Ingredient ingredient;
         [SerializeField] private Transform _itemPos;
         private float cutCounter;
-        public UnityEvent OnCut = new();
-        public UnityEvent OnFailedInteraction = new();
+        public UnityEvent OnCut;
+
 
         public void Awake()
         {

@@ -9,9 +9,7 @@ namespace Table
     {
         private Pickable _pickable;
         [SerializeField] private Transform _itemPos;
-        public UnityEvent OnItemPickUp = new();
-        public UnityEvent OnItemDrop = new();
-        public UnityEvent OnFailInteraction = new();
+
         public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
             OnInteract.Invoke();
@@ -30,7 +28,7 @@ namespace Table
             }
             else
             {
-                OnFailInteraction.Invoke(); 
+                OnFailedInteraction.Invoke(); 
             }
         }
     }

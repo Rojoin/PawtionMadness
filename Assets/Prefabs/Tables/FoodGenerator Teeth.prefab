@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1808285976846051515}
   - component: {fileID: 7163254133791438829}
   - component: {fileID: 3780869395991066987}
+  - component: {fileID: -2253901637203904411}
+  - component: {fileID: 424069231488782942}
   m_Layer: 0
   m_Name: FoodGenerator Teeth
   m_TagString: Untagged
@@ -69,6 +71,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183e96dd66b34ab448e8c16591e49ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnItemPickUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -2253901637203904411}
+        m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
+        m_MethodName: PlayPickItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnItemDrop:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -2253901637203904411}
+        m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
+        m_MethodName: PlayPlaceItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFailedInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -2253901637203904411}
+        m_TargetAssemblyTypeName: TablesSFX, Assembly-CSharp
+        m_MethodName: PlayCantPlaceItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   item: {fileID: 11400000, guid: 80eae94900a5d3d4596e2ed2d9e8718c, type: 2}
 --- !u!114 &3780869395991066987
 MonoBehaviour:
@@ -83,6 +130,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _outlineConfig: {fileID: 11400000, guid: e15b8a632493d3b4595d0d34357d7a1f, type: 2}
+--- !u!114 &-2253901637203904411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301425965914552185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2665dd750fa7da1449b66d1c57b7d3a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickItem:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 29c1613e27ed4674792fb9e32e69b908, type: 2}
+  placeItem:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  interactItem:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+--- !u!114 &424069231488782942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301425965914552185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d69a9b7b87fbad41a7feee963a8c6e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &5212549419664793040
 GameObject:
   m_ObjectHideFlags: 0
