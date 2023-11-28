@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, ISelectHandler, IDeselectHandler
+public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler,
+    ISelectHandler, IDeselectHandler
 {
     public Action onButtonEnter;
     public Action onButtonExit;
-    
+
     [Header("RayCast Collision:")]
     [Tooltip("Chequea Alphas en el raycast. Modificar el Read/Write Enabled en la imagen si éste es true.")]
     [SerializeField] private bool modifyHitBox;
@@ -25,10 +26,11 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     [Header("Effect Image:")]
     [SerializeField] private bool modifyImage;
+    [SerializeField] private bool baseImageIsTransparent;
 
     [SerializeField] private Sprite imageDefault;
     [SerializeField] private Sprite imageHighlighted;
-    private Image currentImage;
+    [SerializeField] private Image currentImage;
 
     [Header("Effect Color Text:")]
     [SerializeField] private bool textHighlight;
@@ -52,7 +54,8 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             GetComponent<Image>().alphaHitTestMinimumThreshold = alphaRayCast;
 
         if (modifyImage)
-            currentImage = GetComponent<Image>();
+            if (!currentImage)
+                currentImage = GetComponent<Image>();
 
         if (enableObject)
         {
@@ -73,6 +76,8 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             else
                 colorNormal = textToHighlight.color;
         }
+
+        OnMouseExitButton();
     }
 
     private void OnEnable()
@@ -105,7 +110,10 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         increment = true;
 
         if (modifyImage)
+        {
             currentImage.sprite = imageHighlighted;
+            currentImage.color = Color.white;
+        }
 
         if (enableObject)
             objectToEnable.SetActive(true);
@@ -120,7 +128,13 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         increment = false;
 
         if (modifyImage)
+        {
             currentImage.sprite = imageDefault;
+            if (baseImageIsTransparent)
+            {
+                currentImage.color = Color.clear;
+            }
+        }
 
         if (enableObject)
             objectToEnable.SetActive(false);
