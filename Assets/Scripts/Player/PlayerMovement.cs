@@ -26,6 +26,7 @@ namespace Player
         private void OnDisable()
         {
             OnMoveChannel.Unsubscribe(Move);
+            StopCoroutine(movement);
         }
 
         private void Move(Vector2 dir)
