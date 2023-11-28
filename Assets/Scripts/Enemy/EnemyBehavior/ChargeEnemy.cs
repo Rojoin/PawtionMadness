@@ -71,10 +71,12 @@ public class ChargeEnemy : BaseEnemy
         {
             targetDamage.ReceiveDamage(ChargeDamage);
             isCharging = false;
+            onAttack.Invoke();
         }
         else
         {
             targetDamage.ReceiveDamage(Damage);
+            onAttack.Invoke();
         }
 
         canAttack = false;

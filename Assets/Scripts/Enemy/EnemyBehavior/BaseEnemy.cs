@@ -8,8 +8,10 @@ namespace Enemy
     public class BaseEnemy : MonoBehaviour, IHealthComponent
     {
         [SerializeField] protected EnemySO enemyType;
-        [SerializeField] protected UnityEvent onDamage;
+        [SerializeField] public UnityEvent onDamage;
         [SerializeField] public UnityEvent<GameObject> onDeath;
+        [SerializeField] public UnityEvent onSpecialInteraction;
+        [SerializeField] public UnityEvent onAttack;
         [SerializeField] protected Animator _animator;
         [SerializeField] protected ParticleSystem _onDeathParticle;
         private float currentHealth;
