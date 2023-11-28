@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Aula 2\Desktop\PawtionMadness\WitchsBrew_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Aula 2\Desktop\PawtionMadness\WitchsBrew_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Aula 2\Desktop\PawtionMadness\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Aula 2\Desktop\PawtionMadness\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -26,7 +26,7 @@
 				<GameParameter Id="4056684167" Name="Master" ObjectPath="\Game Parameters\Default Work Unit\Master"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3604647259" Language="SFX" Hash="1374902200">
+		<SoundBank Id="3604647259" Language="SFX" Hash="1471552625">
 			<ObjectPath>\SoundBanks\Default Work Unit\MainMenu</ObjectPath>
 			<ShortName>MainMenu</ShortName>
 			<Path>MainMenu.bnk</Path>
@@ -42,7 +42,7 @@
 				<Event Id="1420342416" Name="StopMainMenuMusic" ObjectPath="\Events\MainMenu\StopMainMenuMusic" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3762955427" Language="SFX" Hash="3564587076">
+		<SoundBank Id="3762955427" Language="SFX" Hash="3151675167">
 			<ObjectPath>\SoundBanks\Default Work Unit\Tutorial</ObjectPath>
 			<ShortName>Tutorial</ShortName>
 			<Path>Tutorial.bnk</Path>
@@ -119,11 +119,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3298473939" Name="Laser_Disparo" ObjectPath="\Events\Tutorial\Turrets\Laser_Disparo" DurationType="OneShot" DurationMin="3.657513" DurationMax="4.10542">
+				<Event Id="3298473939" Name="Laser_Disparo" ObjectPath="\Events\Tutorial\Turrets\Laser_Disparo" DurationType="OneShot" DurationMin="0.859358" DurationMax="0.964597">
 					<IncludedMemoryFiles>
 						<File Id="596125856" Language="SFX">
 							<ShortName>Torretas\Laser_Disparo.wav</ShortName>
-							<Path>SFX\Torretas\Laser_Disparo_10C4C929.wem</Path>
+							<Path>SFX\Torretas\Laser_Disparo_D8200C47.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -481,10 +481,6 @@
 				</Event>
 				<Event Id="2248956983" Name="Play_ingamemusic_tutorial" ObjectPath="\Events\Tutorial\Music\Play_ingamemusic_tutorial" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="443992359" Language="SFX">
-							<ShortName>GAMEPLAY_B_155.wav</ShortName>
-							<Path>SFX\GAMEPLAY_B_155_D79FB2B7.wem</Path>
-						</File>
 						<File Id="452233697" Language="SFX">
 							<ShortName>GAMEPLAY_C_155.wav</ShortName>
 							<Path>SFX\GAMEPLAY_C_155_D79FB2B7.wem</Path>
@@ -493,11 +489,37 @@
 							<ShortName>Comienzo_de_juego.wav</ShortName>
 							<Path>SFX\Comienzo_de_juego_10C4C929.wem</Path>
 						</File>
-						<File Id="795429319" Language="SFX">
-							<ShortName>GAMEPLAY_A_155.wav</ShortName>
-							<Path>SFX\GAMEPLAY_A_155_D79FB2B7.wem</Path>
+						<File Id="818862688" Language="SFX">
+							<ShortName>GAMEPLAY_Loose_talereverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Loose_talereverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1060214257" Language="SFX">
+							<ShortName>GAMEPLAY_Winmusic_talereverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Winmusic_talereverb_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{ACC73AB8-30DE-4638-B773-D905F57C6564}">
+							<Media>
+								<File Id="452233697"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E7FA64AD-B97B-4526-9DDA-9F7F3C30EDD9}">
+							<Media>
+								<File Id="818862688"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{3A5B4941-EC55-4BD4-B47E-F5587787D9D3}">
+							<Media>
+								<File Id="1060214257"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{FCABC9B7-47A9-40D6-A782-4DA78C892EC4}">
+							<Media>
+								<File Id="452233697"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
 				</Event>
 				<Event Id="707032169" Name="Play_libro_abrir_3" ObjectPath="\Events\Tutorial\Table\Play_libro_abrir_3" DurationType="OneShot" DurationMin="0.985663" DurationMax="1.029897">
 					<IncludedMemoryFiles>
@@ -892,6 +914,13 @@
 						<Switch Id="1453692857" Name="wave_2" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\wave_2" GUID="{ED723FBA-EE10-4712-973D-5EEE926EC1F4}"/>
 						<Switch Id="174960569" Name="LOOSE" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\LOOSE" GUID="{3930D937-FEAE-4340-9FAA-F226DBA1E665}"/>
 						<Switch Id="979765101" Name="WIN" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\WIN" GUID="{38AE8664-B5B4-4A8C-A3E7-A54B772C1F05}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2707460344" Name="ingamemusic_tutorial" ObjectPath="\Switches\Default Work Unit\ingamemusic_tutorial" GUID="{FCABC9B7-47A9-40D6-A782-4DA78C892EC4}">
+					<Switches>
+						<Switch Id="2453122375" Name="wave1" ObjectPath="\Switches\Default Work Unit\ingamemusic_tutorial\wave1" GUID="{ACC73AB8-30DE-4638-B773-D905F57C6564}"/>
+						<Switch Id="174960569" Name="LOOSE" ObjectPath="\Switches\Default Work Unit\ingamemusic_tutorial\LOOSE" GUID="{E7FA64AD-B97B-4526-9DDA-9F7F3C30EDD9}"/>
+						<Switch Id="979765101" Name="WIN" ObjectPath="\Switches\Default Work Unit\ingamemusic_tutorial\WIN" GUID="{3A5B4941-EC55-4BD4-B47E-F5587787D9D3}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>

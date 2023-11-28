@@ -521,6 +521,16 @@
 					<ChildrenList>
 						<Event Name="Laser_Disparo" ID="{3765819F-B6E6-4DE5-8EB2-818DE946F797}">
 							<ChildrenList>
+								<Action Name="" ID="{EA290588-9321-46B3-99D9-2498F4238D73}" ShortID="530316306">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Laser_Disparo" ID="{DE421D2E-3BFD-48CC-BF5A-11A63C5DFEA9}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{136A1891-5ABD-413D-8A29-CFEC0BEC4C6F}" ShortID="529394443">
 									<ReferenceList>
 										<Reference Name="Target">
@@ -711,13 +721,13 @@
 					<ChildrenList>
 						<Event Name="Play_ingamemusic_level" ID="{503A21C3-FC34-4E9D-9778-A26449B5ED57}">
 							<ChildrenList>
-								<Action Name="" ID="{03C08966-F881-4FDF-AF28-82DD106FE1BA}" ShortID="596962211">
+								<Action Name="" ID="{08E73DDF-DBB0-4BF2-92AF-61BDB529BF15}" ShortID="883506691">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="ingamemusic_tutorial" ID="{524ECB04-B8A7-4883-BDCD-E6A08AA46681}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+											<ObjectRef Name="ingamemusic_tutorial1" ID="{66571F30-7D0E-4B74-8321-B0412BFDB1DC}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -762,14 +772,10 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-								<Action Name="" ID="{9897ADA0-136C-41B8-B7D1-5336E197EB1F}" ShortID="142519363">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="1"/>
-										<Property Name="FadeTime" Type="Real64" Value="2"/>
-									</PropertyList>
+								<Action Name="" ID="{A8D1EE4B-6CAE-4690-9D9B-EDCBBDAD40AC}" ShortID="404205850">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="ingamemusic_tutorial" ID="{524ECB04-B8A7-4883-BDCD-E6A08AA46681}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+											<ObjectRef Name="ingamemusic_tutorial1" ID="{66571F30-7D0E-4B74-8321-B0412BFDB1DC}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
     [Header("Events")] 
     
     public UnityEvent deActivateRecipe;
+    public UnityEvent callWinGame;
+    public UnityEvent callLoseGame;
     
     private bool isPaused;
     private bool isGridActivated;
@@ -126,6 +128,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [ContextMenu("Lose Game")]
     private void GameOver()
     {
         pauseChannelSO.Unsubscribe(PauseLevel);
@@ -133,6 +136,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         uiManager.ActivateGameOverCanvas();
         Cursor.visible = true;
+        callLoseGame.Invoke();
     }
 
     private void ShowRecipes()
@@ -166,13 +170,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    [ContextMenu ("Win Game")]
     public void WinGame()
     {
         Cursor.visible = true;
         pauseChannelSO.Unsubscribe(PauseLevel);
         enemyManager.activateWinScreenChannel.RemoveAllListeners();
         uiManager.ActivateWinScreen();
+        callWinGame.Invoke();
     }
 
     [ContextMenu("Go To Menu")]
