@@ -29,7 +29,7 @@ namespace Menu
         private void Awake()
         {
             Cursor.visible = true;
-            versionNumber.text = $"Version : {Application.version}";
+            versionNumber.text = $"V:{Application.version}";
             startGameButton.onClick.AddListener(StartGame);
             optionsButton.onClick.AddListener(OptionsToggle);
             backOptionsButton.onClick.AddListener(OptionsToggle);
