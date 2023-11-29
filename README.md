@@ -4,7 +4,7 @@
 
 # Poner nombre del juego acá
 
-PONER LA DESCRIPCION LARGA DEL JUEGO ACA.
+Tower defense and cooking games mix in this frenetic experience. Brew magical potions to summon cute creatures and defend your house from the looming threat of the fairy empire!
 
 This is a game being developed by students from <a href="https://www.imagecampus.edu.ar/">Image Campus</a>
 
