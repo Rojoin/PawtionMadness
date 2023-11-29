@@ -2,7 +2,7 @@
 <img src="logo.png" alt="Pawtion Madness"/>
 </p>
 
-# Poner nombre del juego acá
+# Pawtion Madness
 
 Tower defense and cooking games mix in this frenetic experience. Brew magical potions to summon cute creatures and defend your house from the looming threat of the fairy empire!
 
@@ -17,7 +17,6 @@ This is a game being developed by students from <a href="https://www.imagecampus
 
 ## Credits
 
-- **Nombre Apellido (ORDENAR IGUAL QUE CREDITOS EN JUEGO)** - *Programming*
 - **Ignacio Arrastua** - *Programming*
 - **Enzo Coletta** - *Programming*
 - **Zoe Cazas Telias** - *Art*
