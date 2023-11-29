@@ -1180,11 +1180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9165205167079950305, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.455265
+      value: 26.45777
       objectReference: {fileID: 0}
     - target: {fileID: 9165205167079950305, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.723598
+      value: -26.726292
       objectReference: {fileID: 0}
     - target: {fileID: 9165205167079950305, guid: 2f98605646676c54a9ed0c0981863499, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1324,20 +1324,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemySpawner: {fileID: 2112892181}
   texts:
-  - Welcome to Pawtion Madness!  You can move with <sprite name="WASD">.
-  - We are going to teach you how to make a <sprite name="Potion">. Go to the <sprite
-    name="Mushroom"> And pick a one with <sprite name="LetterE">, also know as your
-    Interact key.
-  - Great! Now go to the cauldron and press <sprite name="LetterE"> again to put
-    the ingredient in the brew.
+  - Welcome to Pawtion Madness!  You can move with <sprite name="WASD">/<sprite name="Stick">
+    .
+  - 'We are going to teach you how to make a <sprite name="Potion">. Go to the <sprite
+    name="Mushroom"> And pick a one with <sprite name="LetterE">/<sprite name="XButton">
+    . '
+  - Great! Now go to the cauldron and press <sprite name="LetterE">/<sprite name="XButton">
+    to put the ingredient in the brew.
   - The ingredient will be cooked overtime. To make a potion you need to cook 3 ingredients.Now
     lets look for another <sprite name="Mushroom">.
-  - Try cutting the ingredient. Go to the Knife Table and press <sprite name="LetterE">
-    .
-  - Press the <sprite name="LetterE">  to cut it. .
+  - Try cutting the ingredient. Go to the Knife Table and press <sprite name="LetterE">/<sprite
+    name="XButton"> .
+  - Press the <sprite name="LetterE">/<sprite name="XButton">  to cut it. .
   - When the ingredient is sliced it will cook faster!. Press it again!
   - Press it one more time! Each ingredient needs to be cut differently.
-  - Now your item is sliced! Take it with the <sprite name="LetterE">.
+  - Now your item is sliced! Take it with the <sprite name="LetterE">/<sprite name="XButton">.
   - Now put it on the cauldron!
   - We are almost there! Now look for a <sprite name="Fruit">.
   - Now take the knife!
@@ -1346,10 +1347,12 @@ MonoBehaviour:
   - Take it!
   - Put it in the cauldron to finish your <sprite name="Potion">!
   - Well done! Take the <sprite name="Potion"> from the cauldron with the <sprite
-    name="LetterE">.
-  - To use it go to the <sprite name="Cristal"> and press <sprite name="LetterE">.
-  - Now you are controlling the grid, move it with <sprite name="WASD"> and press
-    <sprite name="LetterE"> to put it.
+    name="LetterE">/<sprite name="XButton">.
+  - To use it go to the <sprite name="Cristal"> and press <sprite name="LetterE">/<sprite
+    name="XButton">.
+  - Now you are controlling the grid, move it with  <sprite name="WASD">/<sprite
+    name="Stick"> and press <sprite name="LetterE">/<sprite name="XButton">to put
+    it.
   - 'Now you know how to cook! Now go and protect your house from those rats! '
   interactions:
   - {fileID: 1787326714}
@@ -2814,7 +2817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223280389243143638, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000020980835
+      value: 0.000005722046
       objectReference: {fileID: 0}
     - target: {fileID: 1234946973280734815, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3507,11 +3510,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2175325850640389915, guid: f829f23532c73da4f8593536bacde88f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.455265
+      value: 26.45777
       objectReference: {fileID: 0}
     - target: {fileID: 2175325850640389915, guid: f829f23532c73da4f8593536bacde88f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.723598
+      value: -26.726292
       objectReference: {fileID: 0}
     - target: {fileID: 2175325850640389915, guid: f829f23532c73da4f8593536bacde88f, type: 3}
       propertyPath: m_LocalRotation.w

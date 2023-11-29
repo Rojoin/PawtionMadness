@@ -82,6 +82,18 @@ MonoBehaviour:
     m_Scale: 1
     m_Name: Cristal
     m_HashCode: -1968305326
+  - m_ElementType: 2
+    m_Unicode: 65534
+    m_GlyphIndex: 7
+    m_Scale: 1
+    m_Name: Stick
+    m_HashCode: 99195878
+  - m_ElementType: 2
+    m_Unicode: 65534
+    m_GlyphIndex: 8
+    m_Scale: 1
+    m_Name: XButton
+    m_HashCode: -493521522
   m_SpriteGlyphTable:
   - m_Index: 0
     m_Metrics:
@@ -117,11 +129,11 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 88cfd1162b6390a4b915002d06d6be52, type: 3}
   - m_Index: 2
     m_Metrics:
-      m_Width: 112
-      m_Height: 95.6
+      m_Width: 125.4
+      m_Height: 101
       m_HorizontalBearingX: -2.9
       m_HorizontalBearingY: 82.5
-      m_HorizontalAdvance: 158.5
+      m_HorizontalAdvance: 110.9
     m_GlyphRect:
       m_X: 226
       m_Y: 0
@@ -133,8 +145,8 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 88cfd1162b6390a4b915002d06d6be52, type: 3}
   - m_Index: 3
     m_Metrics:
-      m_Width: 112
-      m_Height: 95.6
+      m_Width: 132
+      m_Height: 103.7
       m_HorizontalBearingX: -2.9
       m_HorizontalBearingY: 82.5
       m_HorizontalAdvance: 158.5
@@ -171,10 +183,10 @@ MonoBehaviour:
       m_HorizontalBearingY: 78.7
       m_HorizontalAdvance: 134.32
     m_GlyphRect:
-      m_X: 581
+      m_X: 570
       m_Y: 0
-      m_Width: 136
-      m_Height: 101
+      m_Width: 148
+      m_Height: 116
     m_Scale: 1.5
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
@@ -187,9 +199,41 @@ MonoBehaviour:
       m_HorizontalBearingY: 83.6
       m_HorizontalAdvance: 101.24
     m_GlyphRect:
-      m_X: 708
+      m_X: 716
       m_Y: 0
-      m_Width: 75
+      m_Width: 60
+      m_Height: 101
+    m_Scale: 1.2
+    m_AtlasIndex: 0
+    m_ClassDefinitionType: 0
+    sprite: {fileID: 21300000, guid: 88cfd1162b6390a4b915002d06d6be52, type: 3}
+  - m_Index: 7
+    m_Metrics:
+      m_Width: 91.3
+      m_Height: 95.6
+      m_HorizontalBearingX: -2.9
+      m_HorizontalBearingY: 77.8
+      m_HorizontalAdvance: 54.1
+    m_GlyphRect:
+      m_X: 779
+      m_Y: 0
+      m_Width: 89
+      m_Height: 101
+    m_Scale: 1.2
+    m_AtlasIndex: 0
+    m_ClassDefinitionType: 0
+    sprite: {fileID: 21300000, guid: 88cfd1162b6390a4b915002d06d6be52, type: 3}
+  - m_Index: 8
+    m_Metrics:
+      m_Width: 111.3
+      m_Height: 115
+      m_HorizontalBearingX: -2.9
+      m_HorizontalBearingY: 83.6
+      m_HorizontalAdvance: 74.7
+    m_GlyphRect:
+      m_X: 876
+      m_Y: 0
+      m_Width: 104
       m_Height: 101
     m_Scale: 1.2
     m_AtlasIndex: 0
