@@ -69,11 +69,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemySpawner: {fileID: 0}
+  _cameraManager: {fileID: 0}
+  enemyManager: {fileID: 0}
   uiManager: {fileID: 0}
   actionChannelSO: {fileID: 11400000, guid: 38d87044a7ab8284a8146a0e7c7fc405, type: 2}
   pauseChannelSO: {fileID: 11400000, guid: 31fd85e9f5e17714a82062a5719bdd7d, type: 2}
+  gridToggleChannelSO: {fileID: 11400000, guid: 6da3fdb0ff273a044939e59fbefada8a, type: 2}
+  backInputChannel: {fileID: 11400000, guid: 7e1fc974e5aa4c849ac3022332ea360e, type: 2}
   showRecipesChannelSO: {fileID: 11400000, guid: b728d78206d9b544d9ae56791cbedc92, type: 2}
+  initialCounterChannelSO: {fileID: 11400000, guid: 84a1d72521bad9346a4aa64486c0d6ac, type: 2}
   timeUntilGameOver: 0.2
+  timeUntilActivateEvents: 4.8
+  isTutorialScene: 0
+  mainMenu:
+    sceneReference:
+      sceneAsset: {fileID: 102900000, guid: 342970b751a8c204db5d79056d52bbb3, type: 3}
+      scenePath: Assets/Scenes/MainMenu.unity
+    transitionControlPrefab: {fileID: 5566928794715677815, guid: f3ff1d07a71d772458ad32f3f713998d, type: 3}
+    transitionSpeed: 0.5
+    minTransitionTime: 1
+    loadingBarPrefab: {fileID: 0}
+    loadingBarVisibility: 0
+  currentScene:
+    sceneReference:
+      sceneAsset: {fileID: 0}
+      scenePath: 
+    transitionControlPrefab: {fileID: 0}
+    transitionSpeed: 0
+    minTransitionTime: 0
+    loadingBarPrefab: {fileID: 0}
+    loadingBarVisibility: 0
+  nextScene:
+    sceneReference:
+      sceneAsset: {fileID: 0}
+      scenePath: 
+    transitionControlPrefab: {fileID: 0}
+    transitionSpeed: 0
+    minTransitionTime: 0
+    loadingBarPrefab: {fileID: 0}
+    loadingBarVisibility: 0
   deActivateRecipe:
     m_PersistentCalls:
       m_Calls:

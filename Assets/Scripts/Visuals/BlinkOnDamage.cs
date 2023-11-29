@@ -9,25 +9,33 @@ namespace Visuals
     public class BlinkOnDamage : MonoBehaviour
     {
         [SerializeField] private DamageBlink values;
+        [SerializeField] private Material damagedMaterial;
         private float BlinkDuration => values.blinkTime;
         private float blinkSpeed => values.blinkSpeed;
         private List<Renderer> childRenderers;
-        private List<Color> originalColors;
+        private List<Material> materials;
         private Coroutine _blinking;
-        private Color _colorToBlink => values.color;
 
         private void Awake()
         {
             Transform[] children = transform.GetComponentsInChildren<Transform>();
             childRenderers = new List<Renderer>();
-            originalColors = new List<Color>();
+            materials = new List<Material>();
 
             for (int i = 0; i < children.Length; i++)
             {
                 if (children[i].TryGetComponent<Renderer>(out var childRen))
                 {
                     childRenderers.Add(childRen);
-                    originalColors.Add(childRen.material.color);
+                    materials.Add(childRen.material);
+                }
+            }
+
+            for (int i = 0; i < children.Length; i++)
+            {
+                if (children[i].TryGetComponent<Renderer>(out var childRen))
+                {
+                    childRen.material = childRen.sharedMaterial;
                 }
             }
         }
@@ -50,8 +58,7 @@ namespace Visuals
                 float t = Mathf.PingPong(elapsedTime * blinkSpeed, 1.0f);
                 for (int i = 0; i < childRenderers.Count; i++)
                 {
-                    Color blinkColor = Color.Lerp(originalColors[i], _colorToBlink, t);
-                    childRenderers[i].material.color = blinkColor;
+                    childRenderers[i].material = damagedMaterial;
                 }
 
                 elapsedTime += Time.deltaTime;
@@ -60,7 +67,7 @@ namespace Visuals
 
             for (int i = 0; i < childRenderers.Count; i++)
             {
-                childRenderers[i].material.color = originalColors[i];
+                childRenderers[i].material = materials[i];
             }
 
             yield break;

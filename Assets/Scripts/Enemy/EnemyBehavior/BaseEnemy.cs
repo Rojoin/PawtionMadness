@@ -8,14 +8,18 @@ namespace Enemy
     public class BaseEnemy : MonoBehaviour, IHealthComponent
     {
         [SerializeField] protected EnemySO enemyType;
-        [SerializeField] protected UnityEvent onDamage;
+        [SerializeField] public UnityEvent onDamage;
         [SerializeField] public UnityEvent<GameObject> onDeath;
+        [SerializeField] public UnityEvent onSpecialInteraction;
+        [SerializeField] public UnityEvent onAttack;
         [SerializeField] protected Animator _animator;
+        [SerializeField] protected ParticleSystem _onDeathParticle;
         private float currentHealth;
         protected bool isAlive;
         private static readonly int Death1 = Animator.StringToHash("Death");
         private static readonly int Damage1 = Animator.StringToHash("Damage");
         private BoxCollider boxCollider;
+        public EnemySO EnemyType => enemyType;
         
         public float MoveSpeed { get => enemyType.moveSpeed; }
         public float Damage { get => enemyType.damage;  }
@@ -26,6 +30,7 @@ namespace Enemy
 
         public virtual void Init()
         {
+            this.StopAllCoroutines();
             CurrentHealth = enemyType.maxHealth;
             boxCollider = GetComponent<BoxCollider>();
             boxCollider.enabled = true;
@@ -35,6 +40,7 @@ namespace Enemy
         {
             _animator?.SetTrigger(Death1);
             boxCollider.enabled = false;
+            _onDeathParticle.Play();
             Invoke(nameof(DestroyEnemy),DeathTime);
         }
 

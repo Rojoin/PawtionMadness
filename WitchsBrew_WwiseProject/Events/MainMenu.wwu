@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{094AE990-C2CB-495E-8AC9-85591E320B8E}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="MainMenu" ID="{094AE990-C2CB-495E-8AC9-85591E320B8E}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="11"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Event Name="MainMenuMusic" ID="{6CF7D320-8F0F-4CCB-BD42-5A5BD70E4E98}">
+					<ChildrenList>
+						<Action Name="" ID="{217333D1-F19F-4671-A686-93BF5E432025}" ShortID="739832513">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="main menu music" ID="{D80337C4-0625-4E77-B77A-BC650C554D04}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_Menu_Madera" ID="{4FF90D5A-9F8C-4A96-917D-C48FFF04F513}">
+					<ChildrenList>
+						<Action Name="" ID="{80ABC3BD-0C01-4161-A4A8-E0B4B63F3594}" ShortID="655316528">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Menu_Madera" ID="{7E0861FC-BBF1-4CB0-A1F3-998479601534}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StopMainMenuMusic" ID="{6F589988-FD01-4930-BCBE-7A0900DF1AA9}">
+					<ChildrenList>
+						<Action Name="" ID="{3CF95CC8-033A-4716-962D-92DFC1106870}" ShortID="218123694">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="main menu music" ID="{D80337C4-0625-4E77-B77A-BC650C554D04}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

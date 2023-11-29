@@ -11,12 +11,15 @@ namespace Table
         private BoxCollider boxCollider;
         protected bool canInteract = true;
 
+        public UnityEvent OnItemPickUp = new();
+        public UnityEvent OnItemDrop = new();
+        public UnityEvent OnFailedInteraction = new();
         public void OnEnable()
         {
             TryGetComponent<BoxCollider>(out boxCollider);
         }
 
-        public UnityEvent OnInteract { get; set; } = new UnityEvent();
+        [field: SerializeField]public UnityEvent OnInteract { get; set; } = new UnityEvent();
         public virtual void OnInteraction(PlayerInventory playerInventory = null, PlayerInteract playerInteract = null)
         {
             Debug.Log("Interaction!", gameObject);

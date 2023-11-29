@@ -32,14 +32,15 @@ namespace Table
         [SerializeField] private PotionRecipeSO[] posiblePotions;
         [SerializeField] private int maxIngredientInCauldron = 3;
         private int currentIngredientCounter = 0;
-
+        [SerializeField] private Animator spoon;
         private List<IngredientData> cauldronStuff = new List<IngredientData>();
         [Header("Events")]
         public UnityEvent<float> OnFillAmountUpdated = new UnityEvent<float>();
         public UnityEvent<Sprite> OnIngredientAdded = new UnityEvent<Sprite>();
         public UnityEvent OnCookingFinished = new UnityEvent();
 
-     
+  
+      
 
         private void Start()
         {
@@ -59,6 +60,7 @@ namespace Table
                         PotionRecipeSO potionToGet = GetRecipePotion();
                         potionFromRecipe = InstantiatePotion(potionToGet);
                         cauldronStuff.Clear();
+                        spoon.speed = 0;
                     }
                 }
                 else
@@ -79,6 +81,7 @@ namespace Table
                 case CauldronState.Done when !playerInventory.hasPickable():
                     playerInventory.SetPickable(potionFromRecipe);
                     ResetCauldron();
+                    OnItemPickUp.Invoke();
                     break;
                 case CauldronState.Empty when playerInventory.hasIngredient():
                 case CauldronState.Cooking when playerInventory.hasIngredient():
@@ -86,8 +89,12 @@ namespace Table
                     {
                         AddIngredientToCook(playerInventory.GetPickable() as Ingredient);
                         playerInventory.NullPickable();
+                        OnItemDrop.Invoke();
+                        spoon.speed = 1;
                     }
-
+                    break;
+                default:
+                    OnFailedInteraction.Invoke();
                     break;
             }
         }
@@ -132,7 +139,7 @@ namespace Table
             currentTime = 0.0f;
             timerMax = 0.0f;
             state = CauldronState.Empty;
-
+            spoon.speed = 0;
             currentIngredientCounter = 0;
         }
         

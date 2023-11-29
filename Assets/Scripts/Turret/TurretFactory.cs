@@ -1,16 +1,22 @@
-using Enemy;
-using System.Collections;
-using System.Collections.Generic;
 using Turret;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class TurretFactory
 {
-    public void NewTurretConfigure(ref GameObject turret, Transform position)
+    public void NewTurretConfigure(GameObject newTurret, Transform turretPosition, Transform maxRange)
     {
-        turret.transform.rotation = position.rotation;
-        turret.transform.position = position.position;
-        turret.GetComponent<BaseTurret>().Init();
-    }
+        newTurret.transform.position = turretPosition.position;
 
+        AttackTurret newAttackTurret = newTurret.GetComponent<AttackTurret>();
+
+        float maxTurretRange = Vector3.Distance(newTurret.transform.position, maxRange.position);
+
+        if (newAttackTurret != null && newAttackTurret.AttackRangeSO > maxTurretRange)
+        {
+            newAttackTurret.SetAttackRange(maxTurretRange);
+        }
+
+        newTurret.GetComponent<BaseTurret>().Init();
+    }
 }

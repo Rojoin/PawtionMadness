@@ -15,7 +15,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private TMPro.TMP_Text tutorialText;
     [SerializeField] private int tutorialScreenCounter = 0;
     [SerializeField] private int interactableCounter = 0;
-   
+
     [SerializeField] private float timeBetweenText = 0.2f;
 
     private void Awake()
@@ -25,11 +25,12 @@ public class TutorialManager : MonoBehaviour
         {
             table.InteractionState(false);
         }
+
         Player.SetActive(true);
         tutorialText.text = texts[tutorialScreenCounter];
         playerMovementChannel.Subscribe(ChangeToNextScene);
     }
-    
+
 
     private void ChangeToNextScene(Vector2 dir)
     {
@@ -45,15 +46,16 @@ public class TutorialManager : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
+
         timer = 0.0f;
         tutorialScreenCounter++;
-        tutorialText.text = texts[tutorialScreenCounter];
-        if (interactableCounter < interactions.Length-1)
+        tutorialText.text = tutorialScreenCounter < texts.Length ? texts[tutorialScreenCounter] : "";
+        if (interactableCounter < interactions.Length - 1)
         {
             interactions[interactableCounter].OnInteract.AddListener(ChangeScene);
             interactions[interactableCounter].InteractionState(true);
         }
-        else if (interactableCounter == interactions.Length-1)
+        else if (interactableCounter == interactions.Length - 1)
         {
             interactChannel.Subscribe(FinalMessage);
         }
@@ -64,9 +66,11 @@ public class TutorialManager : MonoBehaviour
                 timer += Time.deltaTime;
                 yield return null;
             }
+
             tutorialText.transform.parent.gameObject.SetActive(false);
         }
     }
+
 //TODO: Change so it desactivates the collider of the object if no longer needed.
     private void ChangeScene()
     {
@@ -75,6 +79,7 @@ public class TutorialManager : MonoBehaviour
         interactableCounter++;
         StartCoroutine(ChangeToNextScene());
     }
+
     private void FinalMessage()
     {
         interactChannel.Unsubscribe(FinalMessage);
@@ -85,6 +90,6 @@ public class TutorialManager : MonoBehaviour
         }
 
         _enemySpawner.enabled = true;
+        _enemySpawner.gameObject.SetActive(true);
     }
-    
 }

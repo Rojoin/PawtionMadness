@@ -1,10 +1,12 @@
 ﻿using Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Table
 {
     public class TrashCan : Table
     {
+     
         public override void OnInteraction(PlayerInventory playerInventory = null,PlayerInteract playerInteract = null)
         {
             if (playerInventory.hasPickable())

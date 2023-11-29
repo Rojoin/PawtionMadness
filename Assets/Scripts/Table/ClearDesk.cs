@@ -1,6 +1,7 @@
 ﻿using Item;
 using Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Table
 {
@@ -17,11 +18,17 @@ namespace Table
                 playerInventory.GetPickable().SetNewParent(_itemPos);
                 _pickable = playerInventory.GetPickable();
                 playerInventory.NullPickable();
+                OnItemDrop.Invoke();
             }
             else if (_pickable && !playerInventory.hasPickable())
             {
                 playerInventory.SetPickable(_pickable);
                 _pickable = null;
+                OnItemPickUp.Invoke();
+            }
+            else
+            {
+                OnFailedInteraction.Invoke(); 
             }
         }
     }

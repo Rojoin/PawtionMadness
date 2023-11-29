@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{DBAAA6C8-E473-4D05-8FCD-6E42E4923B64}" SchemaVersion="103">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{DBAAA6C8-E473-4D05-8FCD-6E42E4923B64}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{DBAAA6C8-E473-4D05-8FCD-6E42E4923B64}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="mixer" ID="{64CF34B2-6CD5-4F20-9EFC-84B907187DBB}">
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="Music" ID="{500A95A8-78C0-46DF-8406-19F2D6B1D1B6}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SFX" ID="{F9541EE8-38E2-474D-986F-52BE4833ABD0}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Master" ID="{17AD368A-0206-4ED6-9631-8D211728477E}"/>
+							<Value>100</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="wave_1" ID="{03ED9C28-5FCC-466C-A5D3-B5D3BFA03977}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

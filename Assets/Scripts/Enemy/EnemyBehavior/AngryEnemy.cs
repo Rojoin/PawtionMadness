@@ -69,10 +69,12 @@ public class AngryEnemy : ChangingEnemy
         if (!changedState)
         {
             timer -= enemyType.attackSpeed;
+            onAttack.Invoke();
         }
         else
         {
             timer -= AngryAttackSpeed;
+            onAttack.Invoke();
         }
 
         if (!targetDamage.IsAlive())

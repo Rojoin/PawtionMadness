@@ -4,17 +4,35 @@
 		<WorkUnit Name="Default Work Unit" ID="{C712A3E7-C3F9-4DCB-8311-F6565E852255}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="MainMenu" ID="{A7CE2627-A9D8-4B1F-B4F8-B3080A0E1FC8}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="11"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ObjectInclusionList>
-						<ObjectRef Name="Default Work Unit" ID="{E5F22126-2187-406F-92B3-02108C4D8946}" WorkUnitID="{E5F22126-2187-406F-92B3-02108C4D8946}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="MainMenuMusic" ID="{6CF7D320-8F0F-4CCB-BD42-5A5BD70E4E98}" WorkUnitID="{E5F22126-2187-406F-92B3-02108C4D8946}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_ingamemusic" ID="{C44B7B60-3FC1-4DC2-BD79-5A4D1F7B7B7E}" WorkUnitID="{E5F22126-2187-406F-92B3-02108C4D8946}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="StopMainMenuMusic" ID="{6F589988-FD01-4930-BCBE-7A0900DF1AA9}" WorkUnitID="{094AE990-C2CB-495E-8AC9-85591E320B8E}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MainMenuMusic" ID="{6CF7D320-8F0F-4CCB-BD42-5A5BD70E4E98}" WorkUnitID="{094AE990-C2CB-495E-8AC9-85591E320B8E}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
 				<SoundBank Name="Tutorial" ID="{8E38C8D3-CC17-4DD8-83C1-3502D57EBA9F}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="14"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ObjectInclusionList>
-						<ObjectRef Name="TutorialMusic" ID="{10A2A97B-8967-412B-8E82-CA6A0F452547}" WorkUnitID="{E5F22126-2187-406F-92B3-02108C4D8946}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Tutorial" ID="{D4150209-507F-4C8A-8E10-1BBD3392B83A}" WorkUnitID="{D4150209-507F-4C8A-8E10-1BBD3392B83A}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="InGame" ID="{8EA67FDA-5FAD-4971-B497-0B88EB6B420D}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="5"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ObjectInclusionList>
+						<ObjectRef Name="InGame" ID="{57ADC7E8-28F0-4B17-A6DB-FB95905729F6}" WorkUnitID="{57ADC7E8-28F0-4B17-A6DB-FB95905729F6}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

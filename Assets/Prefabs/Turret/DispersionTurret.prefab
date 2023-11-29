@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3290489715727736552}
   - component: {fileID: 7955790783000337893}
   - component: {fileID: 2804196864711947729}
+  - component: {fileID: -660724618160649930}
   m_Layer: 7
   m_Name: DispersionTurret
   m_TagString: turret
@@ -85,6 +86,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -660724618160649930}
+        m_TargetAssemblyTypeName: TurretSFX, Assembly-CSharp
+        m_MethodName: PlayDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onAttack:
     m_PersistentCalls:
       m_Calls:
@@ -112,6 +128,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: -660724618160649930}
+        m_TargetAssemblyTypeName: TurretSFX, Assembly-CSharp
+        m_MethodName: PlayShoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &-660724618160649930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983957397655289760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a7bc0094c85b5439b03a499f48dd31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shoot:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: dcd38aa5f01656643aa6735e621eac3f, type: 2}
+  Death:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 809804bea095a2343b01b155c8a8d85e, type: 2}
+  SpecialSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 13dcf943e9fac6644b9b19f6e5609abd, type: 2}
 --- !u!1001 &3172548592783634656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -218,7 +270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7911567190939450591, guid: 08b9d6c2e63c00c4a8dadc54e6a3d995, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 7911567190939450591, guid: 08b9d6c2e63c00c4a8dadc54e6a3d995, type: 3}
       propertyPath: m_LocalPosition.y
@@ -347,31 +399,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5256473701780935605, guid: 5c9194d09361fc8428e57f0b730168ac, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.7050228
       objectReference: {fileID: 0}
     - target: {fileID: 5256473701780935605, guid: 5c9194d09361fc8428e57f0b730168ac, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.18241663
       objectReference: {fileID: 0}
     - target: {fileID: 5256473701780935605, guid: 5c9194d09361fc8428e57f0b730168ac, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: -0.6831722
       objectReference: {fileID: 0}
     - target: {fileID: 5256473701780935605, guid: 5c9194d09361fc8428e57f0b730168ac, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.05424851
       objectReference: {fileID: 0}
     - target: {fileID: 5256473701780935605, guid: 5c9194d09361fc8428e57f0b730168ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -10.55
       objectReference: {fileID: 0}
     - target: {fileID: 5256473701780935605, guid: 5c9194d09361fc8428e57f0b730168ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 5256473701780935605, guid: 5c9194d09361fc8428e57f0b730168ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 19.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761567175149227112, guid: 5c9194d09361fc8428e57f0b730168ac, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Value
+      value: 1.85
       objectReference: {fileID: 0}
     - target: {fileID: 7299676057005617144, guid: 5c9194d09361fc8428e57f0b730168ac, type: 3}
       propertyPath: m_Name

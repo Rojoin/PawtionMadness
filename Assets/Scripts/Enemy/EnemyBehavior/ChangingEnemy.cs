@@ -20,9 +20,10 @@ public class ChangingEnemy : BaseEnemy
         CurrentHealth -= damage;
         onDamage.Invoke();
 
-        if (CurrentHealth <= LifeToChangeState)
+        if (CurrentHealth <= LifeToChangeState && !changedState)
         {
             changedState = true;
+            onSpecialInteraction.Invoke();
         }
 
         if (CurrentHealth <= 0)

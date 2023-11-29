@@ -23,6 +23,7 @@ public class ChargeEnemy : BaseEnemy
     public override void Init()
     {
         base.Init();
+        onSpecialInteraction.Invoke();
         stopMoving = false;
         canAttack = true;
         isCharging = true;
@@ -71,10 +72,12 @@ public class ChargeEnemy : BaseEnemy
         {
             targetDamage.ReceiveDamage(ChargeDamage);
             isCharging = false;
+            onAttack.Invoke();
         }
         else
         {
             targetDamage.ReceiveDamage(Damage);
+            onAttack.Invoke();
         }
 
         canAttack = false;

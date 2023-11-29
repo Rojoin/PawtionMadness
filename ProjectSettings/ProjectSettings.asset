@@ -14,15 +14,15 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: MichiBrujas
   productName: Pawtion Madness
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: 74421cc0ada754f4ebf981f4371101f8, type: 3}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.13101831, g: 0.0015574975, b: 0.3301887, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 1
-  m_SplashScreenDrawMode: 0
+  m_SplashScreenDrawMode: 1
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
   m_SplashScreenBackgroundLandscapeAspect: 1
@@ -40,7 +40,9 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: ff35b33de3251bd41b8ed38e9deb03f1, type: 3}
+  - logo: {fileID: 10404, guid: 0000000000000000f000000000000000, type: 0}
+    duration: 2
+  - logo: {fileID: 21300000, guid: 09a2c18a21a1f83478f0bd7728c71b33, type: 3}
     duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
@@ -137,7 +139,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 0.10.0
+  bundleVersion: 0.14.0
   preloadedAssets:
   - {fileID: 11400000, guid: e8d00a26cf1e4cb4088d02e58a3d3c8a, type: 2}
   metroInputSource: 0
@@ -159,7 +161,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Standalone: com.MichiBrujas.Witch-sBrew
+    Standalone: com.MichiBrujas.Pawtion-Madness
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -284,7 +286,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: ff35b33de3251bd41b8ed38e9deb03f1, type: 3}
+      m_Icon: {fileID: 2800000, guid: 4b50f2ae84e449d40a40f09b373654af, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

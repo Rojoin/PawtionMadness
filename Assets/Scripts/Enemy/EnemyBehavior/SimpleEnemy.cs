@@ -23,7 +23,7 @@ public class SimpleEnemy : BaseEnemy
     private void Update()
     {
         if (!isAlive) return;
-        
+
         DetectEntity();
 
         if (!canAttack)
@@ -55,11 +55,12 @@ public class SimpleEnemy : BaseEnemy
         _animator?.SetTrigger(AttackTrigger);
         yield return new WaitForSeconds(enemyType.attackDelay);
         targetDamage.ReceiveDamage(Damage);
-
+        onAttack.Invoke();
         if (!targetDamage.IsAlive())
         {
             stopMoving = false;
         }
+
         yield break;
     }
 

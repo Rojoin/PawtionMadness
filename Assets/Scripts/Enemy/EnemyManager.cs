@@ -13,26 +13,13 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private float timeUntilWin = 5f;
     [SerializeField] private Transform enemyParent;
 
-    [SerializeField] private int simpleEnemyPoolSize;
-    [SerializeField] private int specialEnemyPoolSize;
 
     private List<GameObject> enemySpawned;
-    private ObjectPool<GameObject> simpleEnemyPool;
-    private ObjectPool<GameObject> reinforcedEnemyPool;
-    private ObjectPool<GameObject> rangeEnemyPool;
-    private ObjectPool<GameObject> chargeEnemyPool;
-    private ObjectPool<GameObject> angryEnemyPool;
-    private ObjectPool<GameObject> changingLineEnemyPool;
-
-    [SerializeField] private EnemySO simpleEnemy;
-    [SerializeField] private EnemySO reinforcedEnemy;
-    [SerializeField] private EnemySO rangeEnemy;
-    [SerializeField] private EnemyChargeSO chargeEnemy;
-    [SerializeField] private AngryEnemySO angryEnemy;
-    [SerializeField] private ChangingEnemySO changinLineEnemy;
+    [SerializeField] private List<EnemySO> EnemiesSO = new();
+    private Dictionary<string, ObjectPool<GameObject>> EnemyPoolById = new();
+    [SerializeField] private int EnemyPoolSize;
 
     private bool wavesEnded;
-
     private EnemyFactory enemyFactory = new EnemyFactory();
 
     private void Awake()
@@ -43,29 +30,12 @@ public class EnemyManager : MonoBehaviour
         enemySpawned = new List<GameObject>();
         onEnemySpawnChannel.Subscribe(addNewEnemy);
 
-        simpleEnemyPool = new ObjectPool<GameObject>(() => Instantiate(simpleEnemy.asset, enemyParent),
+        foreach (var e in EnemiesSO)
+        {
+            EnemyPoolById.Add(e.id, new ObjectPool<GameObject>(() => Instantiate(e.asset.gameObject, enemyParent),
             enemy => { enemy.gameObject.SetActive(true); }, enemy => { enemy.gameObject.SetActive(false); },
-            enemy => { Destroy(enemy.gameObject); }, false, simpleEnemyPoolSize, 100);
-
-        reinforcedEnemyPool = new ObjectPool<GameObject>(() => Instantiate(reinforcedEnemy.asset, enemyParent),
-            enemy => { enemy.gameObject.SetActive(true); }, enemy => { enemy.gameObject.SetActive(false); },
-            enemy => { Destroy(enemy.gameObject); }, false, simpleEnemyPoolSize, 100);
-
-        rangeEnemyPool = new ObjectPool<GameObject>(() => Instantiate(rangeEnemy.asset, enemyParent),
-            enemy => { enemy.gameObject.SetActive(true); }, enemy => { enemy.gameObject.SetActive(false); },
-            enemy => { Destroy(enemy.gameObject); }, false, specialEnemyPoolSize, 100);
-
-        chargeEnemyPool = new ObjectPool<GameObject>(() => Instantiate(chargeEnemy.asset, enemyParent),
-            enemy => { enemy.gameObject.SetActive(true); }, enemy => { enemy.gameObject.SetActive(false); },
-            enemy => { Destroy(enemy.gameObject); }, false, specialEnemyPoolSize, 100);
-
-        angryEnemyPool = new ObjectPool<GameObject>(() => Instantiate(angryEnemy.asset, enemyParent),
-            enemy => { enemy.gameObject.SetActive(true); }, enemy => { enemy.gameObject.SetActive(false); },
-            enemy => { Destroy(enemy.gameObject); }, false, specialEnemyPoolSize, 100);
-
-        changingLineEnemyPool = new ObjectPool<GameObject>(() => Instantiate(changinLineEnemy.asset, enemyParent),
-            enemy => { enemy.gameObject.SetActive(true); }, enemy => { enemy.gameObject.SetActive(false); },
-            enemy => { Destroy(enemy.gameObject); }, false, specialEnemyPoolSize, 100);
+            enemy => { Destroy(enemy.gameObject); }, false, EnemyPoolSize, 100));
+        }
     }
 
     private void OnDestroy()
@@ -86,84 +56,28 @@ public class EnemyManager : MonoBehaviour
         Transform spawnPosition = spawnPoints[Random.Range(0, spawnPoints.Length)];
         EnemySO enemyType = probList[Random.Range(0, probList.Count)];
 
-        GameObject newEnemy = null;
-
-
-        switch (enemyType.enemyType)
+        var pool = EnemyPoolById[enemyType.id];
+        if (pool == null) 
         {
-            case EnemySO.EnemyTypes.Simple:
-                simpleEnemyPool.Get(out newEnemy);
-                newEnemy.GetComponent<BaseEnemy>().onDeath.AddListener(OnKillSimpleEnemy);
-                break;
-            case EnemySO.EnemyTypes.Reinforced:
-                reinforcedEnemyPool.Get(out newEnemy);
-                newEnemy.GetComponent<BaseEnemy>().onDeath.AddListener(OnKillReinforcedEnemy);
-                break;
-            case EnemySO.EnemyTypes.Range:
-                rangeEnemyPool.Get(out newEnemy);
-                newEnemy.GetComponent<BaseEnemy>().onDeath.AddListener(OnKillRangeEnemy);
-                break;
-            case EnemySO.EnemyTypes.Charge:
-                chargeEnemyPool.Get(out newEnemy);
-                newEnemy.GetComponent<BaseEnemy>().onDeath.AddListener(OnKillChargeEnemy);
-                break;
-            case EnemySO.EnemyTypes.Angry:
-                angryEnemyPool.Get(out newEnemy);
-                newEnemy.GetComponent<BaseEnemy>().onDeath.AddListener(OnKillAngryEnemy);
-                break;
-            case EnemySO.EnemyTypes.ChangeLine:
-                changingLineEnemyPool.Get(out newEnemy);
-                newEnemy.GetComponent<BaseEnemy>().onDeath.AddListener(OnKillChangingLineEnemy);
-                break;
-            default:
-                break;
+            Debug.LogError("Enemy Pool not found");
+            return;
         }
+        GameObject newEnemy = null;
+        pool.Get(out newEnemy);
+        newEnemy.GetComponent<BaseEnemy>().onDeath.AddListener(OnKillEnemy);
 
         enemyFactory.NewEnemyConfigure(ref newEnemy, spawnPosition);
         enemySpawned.Add(newEnemy);
 
     }
 
-    private void OnKillSimpleEnemy(GameObject simpleEnemy)
+    private void OnKillEnemy(GameObject enemy)
     {
-        simpleEnemy.GetComponent<BaseEnemy>().onDeath.RemoveListener(OnKillSimpleEnemy);
-        simpleEnemyPool.Release(simpleEnemy);
-        enemySpawned.Remove(simpleEnemy);
-    }
-
-    private void OnKillReinforcedEnemy(GameObject reinforcedEnemy)
-    {
-        reinforcedEnemy.GetComponent<BaseEnemy>().onDeath.RemoveListener(OnKillReinforcedEnemy);
-        reinforcedEnemyPool.Release(reinforcedEnemy);
-        enemySpawned.Remove(reinforcedEnemy);
-    }
-
-    private void OnKillRangeEnemy(GameObject rangeEnemy)
-    {
-        rangeEnemy.GetComponent<BaseEnemy>().onDeath.RemoveListener(OnKillRangeEnemy);
-        rangeEnemyPool.Release(rangeEnemy);
-        enemySpawned.Remove(rangeEnemy);
-    }
-
-    private void OnKillChargeEnemy(GameObject chargeEnemy)
-    {
-        chargeEnemy.GetComponent<BaseEnemy>().onDeath.RemoveListener(OnKillChargeEnemy);
-        chargeEnemyPool.Release(chargeEnemy);
-        enemySpawned.Remove(chargeEnemy);
-    }
-
-    private void OnKillAngryEnemy(GameObject angryEnemy)
-    {
-        angryEnemy.GetComponent<BaseEnemy>().onDeath.RemoveListener(OnKillAngryEnemy);
-        angryEnemyPool.Release(angryEnemy);
-        enemySpawned.Remove(angryEnemy);
-    }
-
-    private void OnKillChangingLineEnemy(GameObject changeLineEnemy)
-    {
-        changeLineEnemy.GetComponent<BaseEnemy>().onDeath.RemoveListener(OnKillChangingLineEnemy);
-        changingLineEnemyPool.Release(changeLineEnemy);
-        enemySpawned.Remove(changeLineEnemy);
+        BaseEnemy baseEnemy = enemy.GetComponent<BaseEnemy>();
+        baseEnemy.onDeath.RemoveListener(OnKillEnemy);
+        ObjectPool<GameObject> pool = EnemyPoolById[baseEnemy.EnemyType.id];
+        pool.Release(enemy);
+        enemySpawned.Remove(enemy);
     }
 
     private void WinGame()
