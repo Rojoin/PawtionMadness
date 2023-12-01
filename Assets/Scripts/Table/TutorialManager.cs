@@ -61,7 +61,7 @@ public class TutorialManager : MonoBehaviour
         }
         else
         {
-            while (timer < timeBetweenText)
+            while (timer < timeBetweenText *4)
             {
                 timer += Time.deltaTime;
                 yield return null;
