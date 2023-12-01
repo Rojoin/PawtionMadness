@@ -20,7 +20,7 @@ namespace Enemy
         private static readonly int Damage1 = Animator.StringToHash("Damage");
         private BoxCollider boxCollider;
         public EnemySO EnemyType => enemyType;
-        
+        protected Coroutine isAttacking;
         public float MoveSpeed { get => enemyType.moveSpeed; }
         public float Damage { get => enemyType.damage;  }
         public float AttackSpeed { get => enemyType.attackSpeed;  }

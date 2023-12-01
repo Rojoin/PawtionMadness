@@ -1,8 +1,10 @@
+using System.Collections;
 using UnityEngine;
 using Enemy;
 
 public class AngryEnemy : ChangingEnemy
 {
+    private static readonly int AttackTrigger = Animator.StringToHash("Attack");
     private bool stopMoving;
     private bool canAttack;
     private float timer;
@@ -61,29 +63,23 @@ public class AngryEnemy : ChangingEnemy
         }
     }
 
-    private void Attack(IHealthComponent targetDamage)
+
+
+    private IEnumerator Attack(IHealthComponent targetDamage)
     {
-        targetDamage.ReceiveDamage(Damage);
         canAttack = false;
-
-        if (!changedState)
-        {
-            timer -= enemyType.attackSpeed;
-            onAttack.Invoke();
-        }
-        else
-        {
-            timer -= AngryAttackSpeed;
-            onAttack.Invoke();
-        }
-
+        timer -= changedState ? AngryAttackSpeed : enemyType.attackSpeed;
+        _animator?.SetTrigger(AttackTrigger);
+        yield return new WaitForSeconds(changedState ? AngryAttackSpeed : enemyType.attackSpeed);
+        targetDamage.ReceiveDamage(Damage);
+        onAttack.Invoke();
         if (!targetDamage.IsAlive())
         {
             stopMoving = false;
         }
 
+        yield break;
     }
-
     private void DetectEntity()
     {
         int layerMask = 1 << gameObject.layer;
@@ -96,7 +92,7 @@ public class AngryEnemy : ChangingEnemy
                 stopMoving = true;
                 if (canAttack)
                 {
-                    Attack(entity);
+                    isAttacking = StartCoroutine(Attack(entity));
                 }
             }
         }
