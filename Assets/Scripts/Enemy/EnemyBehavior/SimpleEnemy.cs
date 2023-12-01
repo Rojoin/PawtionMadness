@@ -9,7 +9,7 @@ public class SimpleEnemy : BaseEnemy
     private float timer;
     private Vector3 initRayPosition;
     private static readonly int AttackTrigger = Animator.StringToHash("Attack");
-    private Coroutine isAttacking;
+
 
     public override void Init()
     {

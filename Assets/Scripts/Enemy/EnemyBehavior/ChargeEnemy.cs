@@ -1,9 +1,11 @@
+using System.Collections;
 using UnityEngine;
 using Enemy;
 using Unity.VisualScripting;
 
 public class ChargeEnemy : BaseEnemy
 {
+    private static readonly int AttackTrigger = Animator.StringToHash("Attack");
     private bool stopMoving;
     private bool canAttack;
     private bool isCharging;
@@ -49,7 +51,6 @@ public class ChargeEnemy : BaseEnemy
         {
             Movement();
         }
-
     }
 
     public void Movement()
@@ -65,29 +66,31 @@ public class ChargeEnemy : BaseEnemy
 
         initRayPosition = transform.position + (-transform.forward * transform.localScale.x / 2);
     }
+    
 
-    private void Attack(IHealthComponent targetDamage)
+    private IEnumerator Attack(IHealthComponent targetDamage)
     {
+        canAttack = false;
+        timer -= enemyType.attackSpeed;
+        _animator?.SetTrigger(AttackTrigger);
+        yield return new WaitForSeconds(enemyType.attackDelay);
         if (isCharging)
         {
             targetDamage.ReceiveDamage(ChargeDamage);
             isCharging = false;
-            onAttack.Invoke();
         }
         else
         {
             targetDamage.ReceiveDamage(Damage);
-            onAttack.Invoke();
         }
 
-        canAttack = false;
-        timer -= enemyType.attackSpeed;
-
+        onAttack.Invoke();
         if (!targetDamage.IsAlive())
         {
             stopMoving = false;
         }
 
+        yield break;
     }
 
     private void DetectEntity()
@@ -106,7 +109,7 @@ public class ChargeEnemy : BaseEnemy
                 stopMoving = true;
                 if (canAttack)
                 {
-                    Attack(entity);
+                    isAttacking = StartCoroutine(Attack(entity));
                 }
             }
             //else
