@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VoidChannelSO actionChannelSO;
     [SerializeField] private VoidChannelSO pauseChannelSO;
     [SerializeField] private VoidChannelSO gridToggleChannelSO;
+    [SerializeField] private VoidChannelSO changeToPlayerChannelSO;
     [SerializeField] private VoidChannelSO backInputChannel;
     [SerializeField] private VoidChannelSO showRecipesChannelSO;
     [SerializeField] private VoidChannelSO initialCounterChannelSO;
@@ -45,7 +46,6 @@ public class GameManager : MonoBehaviour
     public UnityEvent deActivateRecipe;
     public UnityEvent callWinGame;
     public UnityEvent callLoseGame;
-    
     private bool isPaused;
     private bool isGridActivated;
     private bool isRecipesOn;
@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
     {
         player.SetActive(true);
         pauseChannelSO.Subscribe(PauseLevel);
+        _cameraManager.gameObject.SetActive(true);
         if (isTutorialScene)
         {
             InitGame();
@@ -63,10 +64,10 @@ public class GameManager : MonoBehaviour
         else
         {
             player.GetComponent<PlayerMovement>().enabled = false;
-            _cameraManager.gameObject.SetActive(true);
             Invoke(nameof(InitGame), timeUntilActivateEvents);
             
         }
+
     }
 
     private void InitGame()
@@ -78,6 +79,7 @@ public class GameManager : MonoBehaviour
         enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
         enemyManager.activateWinScreenChannel.AddListener(WinGame);
         gridToggleChannelSO.Subscribe(GridToggle);
+        changeToPlayerChannelSO.Subscribe(GridToggle);
         initialCounterChannelSO.RaiseEvent();
         enemySpawner.gameObject.SetActive(!isTutorialScene);
         Invoke(nameof(InitPlayer),timeUntilActivateEvents);
@@ -97,6 +99,7 @@ public class GameManager : MonoBehaviour
         enemySpawner.OnIncomingWave.RemoveListener(uiManager.ShowNewWaveAlert);
         enemyManager.activateWinScreenChannel.RemoveAllListeners();
         gridToggleChannelSO.Unsubscribe(GridToggle);
+        changeToPlayerChannelSO.Unsubscribe(GridToggle);
     }
 
     private void Start()
@@ -117,6 +120,7 @@ public class GameManager : MonoBehaviour
     private void GridToggle()
     {
         isGridActivated = !isGridActivated;
+        _cameraManager.ChangeToGridCamera(isGridActivated);
     }
 
 
@@ -160,7 +164,6 @@ public class GameManager : MonoBehaviour
         else if (isGridActivated)
         {
             backInputChannel.RaiseEvent();
-            GridToggle();
         }
         else
         {

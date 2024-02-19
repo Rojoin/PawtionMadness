@@ -1,32 +1,42 @@
 using System;
 using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class CameraManager : MonoBehaviour
 {
-    [FormerlySerializedAs("virtualCamera")]
+  
     [Header("Setup")]
-    [SerializeField] private CinemachineVirtualCamera cameraWithTracking;
-    [SerializeField] private CinemachineVirtualCamera cameraWithTransposer;
-    [SerializeField] private CameraLerp cameraLerp;
+    [SerializeField] private CinemachineVirtualCamera waveFocusCamera;
+    [SerializeField] private CinemachineVirtualCamera gridFocusCamera;
+    [SerializeField] private CinemachineVirtualCamera kitchenCamera;
+    [FormerlySerializedAs("cameraLerp")] [SerializeField] private CameraLerp waveFocusCameraLerp;
 
     private void Awake()
     {
-        cameraLerp.endCameraLerp.AddListener(OnEndCameraLerp);
-        cameraWithTracking.Follow = cameraLerp.cameraPosition;
+        if (!waveFocusCamera) return;
+        waveFocusCameraLerp.endCameraLerp.AddListener(OnEndCameraLerp);
+        waveFocusCamera.Follow = waveFocusCameraLerp.cameraPosition;
     }
 
     private void OnDestroy()
     {
-        cameraLerp.endCameraLerp.RemoveAllListeners();
+        if (!waveFocusCamera) return;
+        waveFocusCameraLerp.endCameraLerp.RemoveAllListeners();
     }
 
     private void OnEndCameraLerp()
     {
-        cameraLerp.enabled = false;
-        cameraWithTracking.gameObject.SetActive(false);
-        cameraWithTransposer.gameObject.SetActive(true);
+        waveFocusCameraLerp.enabled = false;
+        waveFocusCamera.gameObject.SetActive(false);
+        kitchenCamera.gameObject.SetActive(true);
         Debug.Log("end lerp");
+    }
+    public void ChangeToGridCamera(bool state)
+    {
+        kitchenCamera.gameObject.SetActive(!state);
+        gridFocusCamera.gameObject.SetActive(state);
     }
 }

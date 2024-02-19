@@ -81,8 +81,7 @@ namespace Grid
 
             _moveGrid = StartCoroutine(MoveGrid());
         }
-
-//Todo: move grid with continuos imput
+        
         private IEnumerator MoveGrid()
         {
             Vector2 currentInput = _input;
