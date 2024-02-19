@@ -75,6 +75,7 @@ MonoBehaviour:
   actionChannelSO: {fileID: 11400000, guid: 38d87044a7ab8284a8146a0e7c7fc405, type: 2}
   pauseChannelSO: {fileID: 11400000, guid: 31fd85e9f5e17714a82062a5719bdd7d, type: 2}
   gridToggleChannelSO: {fileID: 11400000, guid: 6da3fdb0ff273a044939e59fbefada8a, type: 2}
+  changeToPlayerChannelSO: {fileID: 11400000, guid: 29ea2a2a088550c4a8b285e8324a62ae, type: 2}
   backInputChannel: {fileID: 11400000, guid: 7e1fc974e5aa4c849ac3022332ea360e, type: 2}
   showRecipesChannelSO: {fileID: 11400000, guid: b728d78206d9b544d9ae56791cbedc92, type: 2}
   initialCounterChannelSO: {fileID: 11400000, guid: 84a1d72521bad9346a4aa64486c0d6ac, type: 2}
@@ -123,6 +124,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  callWinGame:
+    m_PersistentCalls:
+      m_Calls: []
+  callLoseGame:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &2347047456568114724
 Rigidbody:
   m_ObjectHideFlags: 0
