@@ -5823,6 +5823,78 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2068543782
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2286964478556679467, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 2286964478556679467, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 26.451868
+      objectReference: {fileID: 0}
+    - target: {fileID: 2286964478556679467, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.719906
+      objectReference: {fileID: 0}
+    - target: {fileID: 2286964478556679467, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.88878536
+      objectReference: {fileID: 0}
+    - target: {fileID: 2286964478556679467, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4583238
+      objectReference: {fileID: 0}
+    - target: {fileID: 2286964478556679467, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2286964478556679467, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2286964478556679467, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 54.558
+      objectReference: {fileID: 0}
+    - target: {fileID: 2286964478556679467, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2286964478556679467, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288085279024736592, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+      propertyPath: m_Name
+      value: GridCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288085279024736592, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+--- !u!114 &2068543783 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6850228178716124135, guid: 3aca996854a4666469725c49a0e2c5c7, type: 3}
+  m_PrefabInstance: {fileID: 2068543782}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2112892180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6205,7 +6277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223280389243143638, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000034332275
+      value: -0.000032424927
       objectReference: {fileID: 0}
     - target: {fileID: 1234946973280734815, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6796,7 +6868,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5512521094392669774, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: kitchenCamera
+      value: 
+      objectReference: {fileID: 1927572022}
+    - target: {fileID: 5512521094392669774, guid: abc95546846c58d4db902d676c070e73, type: 3}
       propertyPath: virtualCamera
+      value: 
+      objectReference: {fileID: 598601673}
+    - target: {fileID: 5512521094392669774, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: gridFocusCamera
+      value: 
+      objectReference: {fileID: 2068543783}
+    - target: {fileID: 5512521094392669774, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: waveFocusCamera
       value: 
       objectReference: {fileID: 598601673}
     - target: {fileID: 5512521094392669774, guid: abc95546846c58d4db902d676c070e73, type: 3}
@@ -7571,6 +7655,7 @@ SceneRoots:
   - {fileID: 2117339949090522814}
   - {fileID: 1488956036}
   - {fileID: 1009055565}
+  - {fileID: 2068543782}
   - {fileID: 1612643301}
   - {fileID: 6727167848939879312}
   - {fileID: 407094608}
