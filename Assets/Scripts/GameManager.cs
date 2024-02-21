@@ -65,7 +65,6 @@ public class GameManager : MonoBehaviour
         {
             player.GetComponent<PlayerMovement>().enabled = false;
             Invoke(nameof(InitGame), timeUntilActivateEvents);
-            
         }
 
     }
