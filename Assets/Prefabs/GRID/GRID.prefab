@@ -3556,14 +3556,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d455e0943e1dd4eb3635d9f99b8178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerStats: {fileID: 11400000, guid: 10b9e947ea07c4641a87009c5acf938e, type: 2}
   playerInventory: {fileID: 0}
+  _turretManager: {fileID: 0}
   indicatorYOffset: 1
   gridIndicator: {fileID: 1145303220674201892}
   movementChannel: {fileID: 11400000, guid: eaec2b3d812c08d47aa21093f371c875, type: 2}
   interactChannel: {fileID: 11400000, guid: 38d87044a7ab8284a8146a0e7c7fc405, type: 2}
   backInputChannel: {fileID: 11400000, guid: 7e1fc974e5aa4c849ac3022332ea360e, type: 2}
   changeToPlayerChannel: {fileID: 11400000, guid: 29ea2a2a088550c4a8b285e8324a62ae, type: 2}
-  _playerStats: {fileID: 11400000, guid: 10b9e947ea07c4641a87009c5acf938e, type: 2}
+  timeControllerData: {fileID: 11400000, guid: b65004861dcd4b54ca3d92214c5142bd, type: 2}
+  timeToHold: 0.5
+  _defaultPos: {x: 0, y: 0}
 --- !u!1 &7481909580352469952
 GameObject:
   m_ObjectHideFlags: 0
