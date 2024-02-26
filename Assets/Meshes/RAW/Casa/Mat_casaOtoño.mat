@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2209453986807536552
+--- !u!114 &-4868994176153837671
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Trees_WindShader
-  m_Shader: {fileID: 4800000, guid: aa39e15a9f5d0ed47aa0951572b2dc9e, type: 3}
+  m_Name: "Mat_casaOto\xF1o"
+  m_Shader: {fileID: 4800000, guid: 16286bfc3b9364945bf9ef49a985768d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -32,12 +32,12 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: _MBAmplitudeOffset
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 60e4bd538b1c2494c81929c6a6a5ce4b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7a88d532ac2e37f40b4239cf2b3fb5d3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -61,15 +61,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6719e26725e6e3f46b66f150c3fc1b31, type: 3}
+        m_Texture: {fileID: 2800000, guid: 60e4bd538b1c2494c81929c6a6a5ce4b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _NoiseTexture:
-        m_Texture: {fileID: 2800000, guid: 325d48ff66bae3245b768b66049c7718, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -104,13 +100,12 @@ Material:
     m_Floats:
     - _AdditionalLightIgnoreCelShade: 0.9
     - _AlphaClip: 0
-    - _AlphaCutoff: 0.5
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
-    - _CelShadeMidPoint: 0.59
-    - _CelShadeSoftness: 0.05
+    - _CelShadeMidPoint: 0.42
+    - _CelShadeSoftness: 0.099
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -127,22 +122,13 @@ Material:
     - _GlossyReflections: 1
     - _IndirectLightMultiplier: 1
     - _IsFace: 0
-    - _MBAmplitude: 6.33
-    - _MBAmplitudeOffset: 25.52
-    - _MBDefaultBending: 0.02
-    - _MBFrequency: 1.86
-    - _MBFrequencyOffset: 0.75
-    - _MBMaxHeight: 20.56
-    - _MBPhase: 2.61
-    - _MBWindDir: 258
-    - _MBWindDirOffset: 34.5
     - _MainLightIgnoreCelShade: 0
-    - _Metallic: 0.708
+    - _Metallic: 0
     - _Mode: 0
     - _OcclusionRemapEnd: 1
     - _OcclusionRemapStart: 0
     - _OcclusionStrength: 1
-    - _OutlineWidth: 1
+    - _OutlineWidth: 12.26
     - _OutlineZOffset: 0.0001
     - _OutlineZOffsetMaskRemapEnd: 1
     - _OutlineZOffsetMaskRemapStart: 0
@@ -164,15 +150,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.4000089, g: 0.8134824, b: 0.9528302, a: 1}
-    - _Color: {r: 0.46457815, g: 0.6792453, b: 0.588229, a: 1}
+    - _BaseColor: {r: 0.8537736, g: 0.9571423, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionMapChannelMask: {r: 1, g: 1, b: 1, a: 0}
-    - _IndirectLightMinColor: {r: 0, g: 0.06940437, b: 0.26415092, a: 1}
-    - _NoisePannerSpeed: {r: 0.05, g: 0.03, b: 0, a: 0}
-    - _NoiseTextureTilling: {r: 1, g: 1, b: 1, a: 1}
+    - _IndirectLightMinColor: {r: 0.047169805, g: 0.15674265, b: 0.18867922, a: 1}
     - _OcclusionMapChannelMask: {r: 1, g: 0, b: 0, a: 0}
-    - _OutlineColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _ShadowMapColor: {r: 0.38861695, g: 0.60438645, b: 0.6698113, a: 1}
+    - _OutlineColor: {r: 0.030037384, g: 0.23584908, b: 0.102596745, a: 1}
+    - _ShadowMapColor: {r: 0.7372549, g: 0.648297, b: 0.54509807, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
