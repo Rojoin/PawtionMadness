@@ -121,6 +121,7 @@ public class GameManager : MonoBehaviour
     {
         isGridActivated = !isGridActivated;
         _cameraManager.ChangeToGridCamera(isGridActivated);
+        uiManager.ToggleFocusPanel(isGridActivated);
     }
 
 

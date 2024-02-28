@@ -4,6 +4,7 @@ using UI;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -14,13 +15,18 @@ public class UIManager : MonoBehaviour
     [SerializeField] private CanvasGroup SettingsScreen;
     [SerializeField] private CanvasGroup RecipesScreen;
     [SerializeField] private CanvasGroup TutorialScreen;
+    [SerializeField] private CanvasGroup FocusScreen;
 
     [Header("InGame")] [SerializeField] private CustomSlider waveGameBar;
     [SerializeField] private GameObject textBeforeWave;
     [SerializeField] private float waveTextTimer;
     [SerializeField] private float textSize = 2.0f;
     private UIAnimation _uiManager = new UIAnimation();
-
+    [SerializeField] private float focusSpeedFadeIn = 1.0f;
+    [SerializeField] private float focusSpeedFadeOut = 1.5f;
+    private bool isFadingIn = false;
+    private Coroutine focusFadingIn;
+    private Coroutine focusFadingOut;
 
     public void Init()
     {
@@ -29,6 +35,7 @@ public class UIManager : MonoBehaviour
         SetCanvasVisibility(PauseScreen, false);
         SetCanvasVisibility(RecipesScreen, false);
         SetCanvasVisibility(SettingsScreen, false);
+        SetCanvasVisibility(FocusScreen, false);
         Cursor.visible = false;
     }
 
@@ -103,6 +110,47 @@ public class UIManager : MonoBehaviour
         Cursor.visible = isPaused;
         SetCanvasVisibility(PauseScreen, isPaused);
         SetCanvasVisibility(SettingsScreen, false);
+    }
+
+    public void ToggleFocusPanel(bool isActive)
+    {
+        isFadingIn = isActive;
+        if (isActive)
+        {
+            if (focusFadingOut != null)
+            {
+                StopCoroutine(focusFadingOut);
+            }
+
+            focusFadingIn = StartCoroutine(FadeInFocus());
+        }
+        else
+        {
+            if (focusFadingIn != null)
+            {
+                StopCoroutine(focusFadingIn);
+            }
+
+            focusFadingOut = StartCoroutine(FadeOutFocus());
+        }
+    }
+
+    private IEnumerator FadeInFocus()
+    {
+        while (FocusScreen.alpha != 1.0f)
+        {
+            FocusScreen.alpha += Time.fixedDeltaTime * focusSpeedFadeIn;
+            yield return null;
+        }
+    }
+
+    private IEnumerator FadeOutFocus()
+    {
+        while (FocusScreen.alpha != 0.0f)
+        {
+            FocusScreen.alpha -= Time.fixedDeltaTime * focusSpeedFadeOut;
+            yield return null;
+        }
     }
 
     public void ShowNewWaveAlert()
