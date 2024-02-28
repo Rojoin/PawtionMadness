@@ -6,4 +6,5 @@ public class PlayerStats : ScriptableObject
     public float speed;
     public float interactDistance;
     public bool shouldGridControllerReset = false;
+    public bool isTutorialOn = false;
 }
