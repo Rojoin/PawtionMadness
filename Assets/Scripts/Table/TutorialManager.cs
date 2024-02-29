@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -17,7 +18,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private int interactableCounter = 0;
 
     [SerializeField] private float timeBetweenText = 0.2f;
-
+    [SerializeField] private ArrowPointer arrowPointer;
     private void Awake()
     {
         _enemySpawner.enabled = false;
@@ -54,9 +55,15 @@ public class TutorialManager : MonoBehaviour
         {
             interactions[interactableCounter].OnInteract.AddListener(ChangeScene);
             interactions[interactableCounter].InteractionState(true);
+            arrowPointer.LookPosition = interactions[interactableCounter].transform.position;
+            if (!arrowPointer.gameObject.activeSelf)
+            {
+                arrowPointer.gameObject.SetActive(true);
+            }
         }
         else if (interactableCounter == interactions.Length - 1)
         {
+            arrowPointer.gameObject.SetActive(false);
             interactChannel.Subscribe(FinalMessage);
         }
         else
