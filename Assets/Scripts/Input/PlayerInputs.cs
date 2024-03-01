@@ -134,6 +134,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CheatShowConsole"",
+                    ""type"": ""Button"",
+                    ""id"": ""f16ac01a-0b20-44ef-9733-60da5c37fe32"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -479,17 +488,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""2e91451b-194f-415c-b4d7-90618e08a8db"",
-                    ""path"": ""<Keyboard>/p"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
                     ""name"": ""WASD"",
                     ""id"": ""f07fa9eb-b2c0-49b3-9139-6bf21cdea74f"",
                     ""path"": ""Dpad"",
@@ -741,6 +739,17 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""SetCheatsState"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1416b76f-b078-4eb1-bc27-f5a90610c1b9"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CheatShowConsole"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -1288,6 +1297,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Player_CheatWinGame = m_Player.FindAction("CheatWinGame", throwIfNotFound: true);
         m_Player_CheatLoseGame = m_Player.FindAction("CheatLoseGame", throwIfNotFound: true);
         m_Player_SetCheatsState = m_Player.FindAction("SetCheatsState", throwIfNotFound: true);
+        m_Player_CheatShowConsole = m_Player.FindAction("CheatShowConsole", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1373,6 +1383,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_CheatWinGame;
     private readonly InputAction m_Player_CheatLoseGame;
     private readonly InputAction m_Player_SetCheatsState;
+    private readonly InputAction m_Player_CheatShowConsole;
     public struct PlayerActions
     {
         private @PlayerInputs m_Wrapper;
@@ -1389,6 +1400,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @CheatWinGame => m_Wrapper.m_Player_CheatWinGame;
         public InputAction @CheatLoseGame => m_Wrapper.m_Player_CheatLoseGame;
         public InputAction @SetCheatsState => m_Wrapper.m_Player_SetCheatsState;
+        public InputAction @CheatShowConsole => m_Wrapper.m_Player_CheatShowConsole;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1434,6 +1446,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @SetCheatsState.started += instance.OnSetCheatsState;
             @SetCheatsState.performed += instance.OnSetCheatsState;
             @SetCheatsState.canceled += instance.OnSetCheatsState;
+            @CheatShowConsole.started += instance.OnCheatShowConsole;
+            @CheatShowConsole.performed += instance.OnCheatShowConsole;
+            @CheatShowConsole.canceled += instance.OnCheatShowConsole;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1474,6 +1489,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @SetCheatsState.started -= instance.OnSetCheatsState;
             @SetCheatsState.performed -= instance.OnSetCheatsState;
             @SetCheatsState.canceled -= instance.OnSetCheatsState;
+            @CheatShowConsole.started -= instance.OnCheatShowConsole;
+            @CheatShowConsole.performed -= instance.OnCheatShowConsole;
+            @CheatShowConsole.canceled -= instance.OnCheatShowConsole;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1623,6 +1641,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnCheatWinGame(InputAction.CallbackContext context);
         void OnCheatLoseGame(InputAction.CallbackContext context);
         void OnSetCheatsState(InputAction.CallbackContext context);
+        void OnCheatShowConsole(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

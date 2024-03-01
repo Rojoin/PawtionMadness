@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7483951904999194688}
   - component: {fileID: 6414676308316224321}
   - component: {fileID: 2663239920300573646}
+  - component: {fileID: 6575034348687799614}
   - component: {fileID: 2347047456568114724}
   m_Layer: 0
   m_Name: GameManager
@@ -133,6 +134,19 @@ MonoBehaviour:
   callLoseGame:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6575034348687799614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836566035947589402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a0013f4cdee71b4bb9c4ec19c18da81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnCheatToggleConsole: {fileID: 11400000, guid: a1ab07886dd0cff4ebb5aa6f6767191a, type: 2}
 --- !u!54 &2347047456568114724
 Rigidbody:
   m_ObjectHideFlags: 0

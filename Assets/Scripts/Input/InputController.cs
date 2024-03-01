@@ -16,6 +16,7 @@ namespace GameInputs
         [SerializeField] private VoidChannelSO OnCheatKillScreenEnemy;
         [SerializeField] private VoidChannelSO OnCheatWinGame;
         [SerializeField] private VoidChannelSO OnCheatLoseGame;
+        [SerializeField] private VoidChannelSO OnCheatToggleConsole;
         [SerializeField] float offsetController = 0.70f;
         private Vector2 previousGridInput = Vector2.zero;
         private bool cheats;
@@ -155,6 +156,14 @@ namespace GameInputs
                 {
                     OnCheatLoseGame.RaiseEvent();
                 }
+            }
+        }
+
+        public void OnShowConsole(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                OnCheatToggleConsole.RaiseEvent();
             }
         }
     }
