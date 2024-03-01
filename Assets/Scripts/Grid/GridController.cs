@@ -16,10 +16,13 @@ namespace Grid
         [SerializeField] private VoidChannelSO interactChannel;
         [SerializeField] private VoidChannelSO backInputChannel;
         [SerializeField] private VoidChannelSO changeToPlayerChannel;
+        [Header("Data")]
+        [SerializeField] private TimeController timeControllerData;
         [Header("Values")]
         [Range(0.1f, 1.0f)]
         [SerializeField] private float timeToHold = 0.5f;
         [SerializeField] private Vector2Int _defaultPos = new Vector2Int(0, 0);
+        
         private Vector2 _input;
         private Vector2Int _cursorPos = new Vector2Int(0, 0);
         private Vector2Int _previousInput = new Vector2Int(0, 0);
@@ -51,6 +54,7 @@ namespace Grid
             }
 
             SelectCurrentTile();
+            Time.timeScale = timeControllerData.slowTimeScale;
         }
 
         private void OnDisable()
@@ -64,6 +68,7 @@ namespace Grid
             movementChannel.Unsubscribe(OnMove);
             interactChannel.Unsubscribe(OnInteract);
             backInputChannel.Unsubscribe(OnBackChannel);
+            Time.timeScale = timeControllerData.defaultTimeScale;
         }
 
         private void OnMove(Vector2 input)

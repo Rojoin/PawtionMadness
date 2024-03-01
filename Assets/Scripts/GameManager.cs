@@ -33,7 +33,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] float timeUntilGameOver = 0.2f;
     [SerializeField] float timeUntilActivateEvents = 10f;
     [SerializeField] bool isTutorialScene = false;
-
+    [Header("Data")]
+    [SerializeField] private PlayerStats playerStats;
     [Header("SceneChanger")] 
     
     [SerializeField] private SceneChangeData mainMenu;
@@ -57,7 +58,7 @@ public class GameManager : MonoBehaviour
         player.SetActive(true);
         pauseChannelSO.Subscribe(PauseLevel);
         _cameraManager.gameObject.SetActive(true);
-        if (isTutorialScene)
+        if (playerStats.isTutorialOn)
         {
             InitGame();
         }
@@ -120,6 +121,7 @@ public class GameManager : MonoBehaviour
     {
         isGridActivated = !isGridActivated;
         _cameraManager.ChangeToGridCamera(isGridActivated);
+        uiManager.ToggleFocusPanel(isGridActivated);
     }
 
 
