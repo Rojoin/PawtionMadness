@@ -149,7 +149,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicPlaylistContainer Name="wave2" ID="{D328FA84-318D-4B7F-BCCD-8BEB842D422F}" ShortID="717994604">
+						<MusicPlaylistContainer Name="A2summer_mid" ID="{D328FA84-318D-4B7F-BCCD-8BEB842D422F}" ShortID="717994604">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -334,7 +334,7 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
-						<MusicPlaylistContainer Name="wave1" ID="{3521BA1E-EE7C-4EE1-A078-74A84768E04E}" ShortID="672315909">
+						<MusicPlaylistContainer Name="A1summer_easy" ID="{3521BA1E-EE7C-4EE1-A078-74A84768E04E}" ShortID="672315909">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -519,7 +519,7 @@
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
-						<MusicPlaylistContainer Name="wave3" ID="{08948604-83E1-4DEF-A846-1B11EB91BB7A}" ShortID="75605032">
+						<MusicPlaylistContainer Name="A3summer_hard" ID="{08948604-83E1-4DEF-A846-1B11EB91BB7A}" ShortID="75605032">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
@@ -1205,6 +1205,558 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicSegment>
+						<MusicPlaylistContainer Name="C1winter_easy" ID="{A1EEB941-6F88-4669-8789-B5BC49135631}" ShortID="764787451">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="GAMEPLAY_Winter_1st wave_tale reverb" ID="{F559CA82-CE85-4FD4-A073-255BDA4CA8B8}" ShortID="465017452">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="27870.9583333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="GAMEPLAY_Winter_1st wave_tale reverb" ID="{60A4FAD2-60F5-46F1-81D4-36C286B7AF77}" ShortID="350757424">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GAMEPLAY_Winter_1st wave_tale reverb" ID="{935795FE-11BC-4A95-B952-19E460A6578D}">
+													<Language>SFX</Language>
+													<AudioFile>GAMEPLAY_Winter_1st wave_tale reverb.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="75689933"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{D51071AF-C7C6-4D15-AE22-B03DC7283051}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{A7DC3584-466A-4A27-AD2E-BB5C8E7B906D}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="GAMEPLAY_Winter_1st wave_tale reverb" ID="{A05EFFA4-1F90-4309-A2BE-9BFF18FE4E9A}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="25935.4838709677"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="862.544165054805"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="GAMEPLAY_Winter_1st wave_tale reverb" ID="{935795FE-11BC-4A95-B952-19E460A6578D}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{A5F7B8CE-AF94-471B-ADC8-7E437481269D}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>25.93548</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{32916C36-47AC-4C2B-B031-B67DF1CF9843}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>25.93548</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{45D95AD8-CD99-4032-A218-7CD3C4248AFB}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>25.93548</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{DAB09A15-2B5E-416D-9A2C-063384B39496}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{CD433421-4923-46CB-9532-EFC8EC697BA2}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="24774.1935483871"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{FD34D4C4-F900-4A6A-951E-997679464267}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{1F7300D4-0BFC-4287-8FFB-FDF6A32E2437}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{DD32F4FD-6628-42C4-BB12-E0CAE1A7960A}" ShortID="480912292">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{03D2C44C-F4DF-442C-905F-BD8DF1E990A7}" ShortID="337153544">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="GAMEPLAY_Winter_1st wave_tale reverb" ID="{F559CA82-CE85-4FD4-A073-255BDA4CA8B8}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="C2winter_mid" ID="{B751AFF5-983D-4C79-85A7-C73DDDA209B4}" ShortID="796022728">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="GAMEPLAY_Winter_2nd wave_tale reverb" ID="{4F10D64A-52C2-4509-8CE6-FBD888C52668}" ShortID="33892305">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26322.5833333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="GAMEPLAY_Winter_2nd wave_tale reverb" ID="{537661AB-52F2-4FD8-9DEA-D91688E78E93}" ShortID="280943241">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GAMEPLAY_Winter_2nd wave_tale reverb" ID="{2625B5C0-7F74-4941-9C75-88D73AF0D061}">
+													<Language>SFX</Language>
+													<AudioFile>GAMEPLAY_Winter_2nd wave_tale reverb.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="493093940"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{AA4D898A-5CBD-417E-B071-1A798D37A7A7}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{5B258E62-D67F-4186-A970-5D171344D743}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="GAMEPLAY_Winter_2nd wave_tale reverb" ID="{7F73AAB7-9A79-4ED6-94F6-116070284AC4}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="25161.2903225806"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="330.941569954866"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="GAMEPLAY_Winter_2nd wave_tale reverb" ID="{2625B5C0-7F74-4941-9C75-88D73AF0D061}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{850E0684-9551-45F9-AE75-F23286F96ECA}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>25.16129</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{E9C6C98A-4FA5-45EB-A5AA-DC86BE2FAC8E}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>25.16129</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{20DAB9A8-A05D-4FDC-8B88-7E663943E4DA}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>25.16129</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{82C4F06D-95C9-42DC-9572-95DA83BE52BB}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{F4CC07EA-DA7B-4F9B-A244-122E66AB24F8}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="24774.1935483871"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{A96796B1-F855-4B5D-B82A-427315F75337}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{745103B5-79C0-45AA-8116-90F756216C84}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{487ECFA2-B4DC-42B5-824B-DFB1BA71E22F}" ShortID="23807763">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{05D64E26-C8E3-4779-91B5-46A99E56A749}" ShortID="948223728">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="GAMEPLAY_Winter_2nd wave_tale reverb" ID="{4F10D64A-52C2-4509-8CE6-FBD888C52668}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="C3winter_hard" ID="{F8A00A79-BAF5-4971-BC46-469139EA16F2}" ShortID="527568166">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="GAMEPLAY_Winter_3stwave_tale reverb" ID="{3F3E71CE-4B25-4FAB-A621-6FDD47CC5356}" ShortID="182482350">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="26322.5833333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A896C7F1-CCA0-401C-96F5-3F012033E1C7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="GAMEPLAY_Winter_3stwave_tale reverb" ID="{11A6565B-D9AB-49E3-863C-932AFCE8C155}" ShortID="608566526">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E3B266AA-D84F-42ED-A53D-5A4E3B0D167D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GAMEPLAY_Winter_3stwave_tale reverb" ID="{2985CDAE-B6AB-432D-8931-98B2189691A2}">
+													<Language>SFX</Language>
+													<AudioFile>GAMEPLAY_Winter_3stwave_tale reverb.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="834745886"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{8D6BE0FA-97B2-48E2-8D42-4517A808F8D4}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{32200E94-A6E2-48E5-A589-FE1E1B2D06A4}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="GAMEPLAY_Winter_3stwave_tale reverb" ID="{12D6FE2D-5E43-487A-984B-7348A7C834E3}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="25935.4838709677"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutDuration" Type="Real64" Value="560.054964539009"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="GAMEPLAY_Winter_3stwave_tale reverb" ID="{2985CDAE-B6AB-432D-8931-98B2189691A2}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{1444CC42-2BF2-4EDB-8D89-2255791DD9D2}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>25.93548</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{D778A482-5ACF-48E0-BE09-C2B4E245CD4A}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>25.93548</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{127BE088-4788-4BE0-8DA4-85500D1209B5}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>25.93548</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{80055B18-C7AB-4F7D-AD3D-6603FC3063B8}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{12461CD4-EBFC-475E-9235-A992E4857D4B}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="24774.1935483871"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{AB3FCB09-6536-4942-9C25-80A397811DC6}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{04B408F5-0231-48C1-9618-1F5387FFCBE0}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists/>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{AF5706B2-6B5E-4186-A113-73324348E12C}" ShortID="235274811">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{4488FFCA-A9C5-411B-BD32-5627B3A2D97D}" ShortID="865096475">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="GAMEPLAY_Winter_3stwave_tale reverb" ID="{3F3E71CE-4B25-4FAB-A621-6FDD47CC5356}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
 					</ChildrenList>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{FB1E6049-D23C-47F3-8057-0D4F2FB63144}">
@@ -1250,7 +1802,7 @@
 								<PathElementRef Name="wave_1" ID="{03ED9C28-5FCC-466C-A5D3-B5D3BFA03977}"/>
 							</Path>
 							<AudioNodeInfo>
-								<AudioNodeRef Name="wave1" ID="{3521BA1E-EE7C-4EE1-A078-74A84768E04E}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
+								<AudioNodeRef Name="A1summer_easy" ID="{3521BA1E-EE7C-4EE1-A078-74A84768E04E}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1258,7 +1810,7 @@
 								<PathElementRef Name="wave_2" ID="{ED723FBA-EE10-4712-973D-5EEE926EC1F4}"/>
 							</Path>
 							<AudioNodeInfo>
-								<AudioNodeRef Name="wave2" ID="{D328FA84-318D-4B7F-BCCD-8BEB842D422F}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
+								<AudioNodeRef Name="A2summer_mid" ID="{D328FA84-318D-4B7F-BCCD-8BEB842D422F}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1266,7 +1818,7 @@
 								<PathElementRef Name="wave_3" ID="{9E050B27-95DF-445D-B3E8-E9B97C385A17}"/>
 							</Path>
 							<AudioNodeInfo>
-								<AudioNodeRef Name="wave3" ID="{08948604-83E1-4DEF-A846-1B11EB91BB7A}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
+								<AudioNodeRef Name="A3summer_hard" ID="{08948604-83E1-4DEF-A846-1B11EB91BB7A}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1274,7 +1826,7 @@
 								<PathElementRef Name="ingamemusic_level" ID="{2ADBBC29-C322-4579-9EEC-19E2B879A83C}"/>
 							</Path>
 							<AudioNodeInfo>
-								<AudioNodeRef Name="wave1" ID="{3521BA1E-EE7C-4EE1-A078-74A84768E04E}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
+								<AudioNodeRef Name="A1summer_easy" ID="{3521BA1E-EE7C-4EE1-A078-74A84768E04E}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1291,6 +1843,30 @@
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="WIN" ID="{25FAA937-2A85-4E23-8282-076CEAC7445E}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Cwinter_easy" ID="{F1C82E02-A236-4BF6-AA49-CBF2F66B6185}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="C1winter_easy" ID="{A1EEB941-6F88-4669-8789-B5BC49135631}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Cwinter_hard" ID="{F31BB0C7-BCD0-4CD5-88CF-00D752D20328}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="C3winter_hard" ID="{F8A00A79-BAF5-4971-BC46-469139EA16F2}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Cwinter_mid" ID="{2F5737E0-75CB-4981-BD67-76FBC1E5B7C2}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="C2winter_mid" ID="{B751AFF5-983D-4C79-85A7-C73DDDA209B4}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 					</EntryList>
