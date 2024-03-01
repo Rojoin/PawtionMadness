@@ -27,7 +27,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VoidChannelSO changeToPlayerChannelSO;
     [SerializeField] private VoidChannelSO backInputChannel;
     [SerializeField] private VoidChannelSO showRecipesChannelSO;
-    [SerializeField] private VoidChannelSO initialCounterChannelSO;
+    [SerializeField] private VoidChannelSO initialCounterChannelSO; 
+    [SerializeField] private VoidChannelSO OnCheatWinGame;
+    [SerializeField] private VoidChannelSO OnCheatLoseGame;
     [Header("Values")] 
     
     [SerializeField] float timeUntilGameOver = 0.2f;
@@ -57,6 +59,8 @@ public class GameManager : MonoBehaviour
     {
         player.SetActive(true);
         pauseChannelSO.Subscribe(PauseLevel);
+        OnCheatWinGame.Subscribe(WinGame);
+        OnCheatLoseGame.Subscribe(GameOver);
         _cameraManager.gameObject.SetActive(true);
         if (playerStats.isTutorialOn)
         {

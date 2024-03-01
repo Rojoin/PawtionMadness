@@ -14,8 +14,11 @@ namespace GameInputs
         [SerializeField] private VoidChannelSO OnInteractChannel;
         [SerializeField] private VoidChannelSO OnBackInteractChannel;
         [SerializeField] private VoidChannelSO OnCheatKillScreenEnemy;
+        [SerializeField] private VoidChannelSO OnCheatWinGame;
+        [SerializeField] private VoidChannelSO OnCheatLoseGame;
         [SerializeField] float offsetController = 0.70f;
         private Vector2 previousGridInput = Vector2.zero;
+        private bool cheats;
 
         public void OnMove(InputAction.CallbackContext ctx)
         {
@@ -27,7 +30,7 @@ namespace GameInputs
             if (ctx.performed)
             {
                 Vector2 ctxInput = ctx.ReadValue<Vector2>();
-                
+
                 OnGridMoveChannel.RaiseEvent(ctxInput);
             }
 
@@ -42,11 +45,11 @@ namespace GameInputs
             {
                 Vector2 ctxInput = ctx.ReadValue<Vector2>();
 
-                if(ctxInput.x >offsetController)
+                if (ctxInput.x > offsetController)
                 {
                     ctxInput.x = 1;
                 }
-                else if (ctxInput.x <-offsetController)
+                else if (ctxInput.x < -offsetController)
                 {
                     ctxInput.x = -1;
                 }
@@ -54,11 +57,11 @@ namespace GameInputs
                 {
                     ctxInput.x = 0;
                 }
-                if(ctxInput.y >offsetController)
+                if (ctxInput.y > offsetController)
                 {
                     ctxInput.y = 1;
                 }
-                else if (ctxInput.y <-offsetController)
+                else if (ctxInput.y < -offsetController)
                 {
                     ctxInput.y = -1;
                 }
@@ -106,11 +109,52 @@ namespace GameInputs
             }
         }
 
+        public void OnCheatsSetState(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                cheats = !cheats;
+                if (cheats)
+                {
+                    Debug.Log("Cheats Enable");
+                }
+                else
+                {
+                    Debug.Log("Cheats Disable");
+                }
+            }
+        }
+
         public void OnCheatKillScreenEnemies(InputAction.CallbackContext ctx)
         {
             if (ctx.performed)
             {
-                OnCheatKillScreenEnemy.RaiseEvent();
+                if (cheats)
+                {
+                    OnCheatKillScreenEnemy.RaiseEvent();
+                }
+            }
+        }
+
+        public void OnCheatWinScreen(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                if (cheats)
+                {
+                    OnCheatWinGame.RaiseEvent();
+                }
+            }
+        }
+
+        public void OnCheatLoseScreen(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                if (cheats)
+                {
+                    OnCheatLoseGame.RaiseEvent();
+                }
             }
         }
     }
