@@ -76,6 +76,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "CheatKillAllEnemies",
+                    "type": "Button",
+                    "id": "1e9faeee-2f34-4245-ac12-28e937bd6c9f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -615,6 +624,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "OnGridMovementStick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "86899d0b-a07f-4b68-97e8-017885dc1bc5",
+                    "path": "<Keyboard>/f1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CheatKillAllEnemies",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

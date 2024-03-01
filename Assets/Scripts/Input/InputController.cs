@@ -13,6 +13,7 @@ namespace GameInputs
         [SerializeField] private VoidChannelSO OnPauseChannel;
         [SerializeField] private VoidChannelSO OnInteractChannel;
         [SerializeField] private VoidChannelSO OnBackInteractChannel;
+        [SerializeField] private VoidChannelSO OnCheatKillScreenEnemy;
         [SerializeField] float offsetController = 0.70f;
         private Vector2 previousGridInput = Vector2.zero;
 
@@ -102,6 +103,14 @@ namespace GameInputs
             if (ctx.performed)
             {
                 OnPauseChannel.RaiseEvent();
+            }
+        }
+
+        public void OnCheatKillScreenEnemies(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                OnCheatKillScreenEnemy.RaiseEvent();
             }
         }
     }

@@ -98,6 +98,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CheatKillAllEnemies"",
+                    ""type"": ""Button"",
+                    ""id"": ""1e9faeee-2f34-4245-ac12-28e937bd6c9f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -637,6 +646,17 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""OnGridMovementStick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""86899d0b-a07f-4b68-97e8-017885dc1bc5"",
+                    ""path"": ""<Keyboard>/f1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CheatKillAllEnemies"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1182,6 +1202,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Back = m_Player.FindAction("Back", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+        m_Player_CheatKillAllEnemies = m_Player.FindAction("CheatKillAllEnemies", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1263,6 +1284,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Back;
     private readonly InputAction m_Player_Pause;
+    private readonly InputAction m_Player_CheatKillAllEnemies;
     public struct PlayerActions
     {
         private @PlayerInputs m_Wrapper;
@@ -1275,6 +1297,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Back => m_Wrapper.m_Player_Back;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
+        public InputAction @CheatKillAllEnemies => m_Wrapper.m_Player_CheatKillAllEnemies;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1308,6 +1331,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
+            @CheatKillAllEnemies.started += instance.OnCheatKillAllEnemies;
+            @CheatKillAllEnemies.performed += instance.OnCheatKillAllEnemies;
+            @CheatKillAllEnemies.canceled += instance.OnCheatKillAllEnemies;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1336,6 +1362,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
+            @CheatKillAllEnemies.started -= instance.OnCheatKillAllEnemies;
+            @CheatKillAllEnemies.performed -= instance.OnCheatKillAllEnemies;
+            @CheatKillAllEnemies.canceled -= instance.OnCheatKillAllEnemies;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1481,6 +1510,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnBack(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnCheatKillAllEnemies(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
