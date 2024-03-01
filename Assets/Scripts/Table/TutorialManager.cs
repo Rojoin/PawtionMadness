@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
+using TMPro;
 using UI;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class TutorialManager : MonoBehaviour
@@ -19,6 +21,8 @@ public class TutorialManager : MonoBehaviour
 
     [SerializeField] private float timeBetweenText = 0.2f;
     [SerializeField] private ArrowPointer arrowPointer;
+    private Coroutine changingTutorialInteractions;
+
     private void Awake()
     {
         _enemySpawner.enabled = false;
@@ -36,24 +40,27 @@ public class TutorialManager : MonoBehaviour
     private void ChangeToNextScene(Vector2 dir)
     {
         playerMovementChannel.Unsubscribe(ChangeToNextScene);
-        StartCoroutine(ChangeToNextScene());
+        changingTutorialInteractions = StartCoroutine(ChangeToNextScene());
     }
 
     private IEnumerator ChangeToNextScene()
     {
         float timer = 0.0f;
-        while (timer < timeBetweenText)
-        {
-            timer += Time.deltaTime;
-            yield return null;
-        }
-
-        timer = 0.0f;
         tutorialScreenCounter++;
         tutorialText.text = tutorialScreenCounter < texts.Length ? texts[tutorialScreenCounter] : "";
         if (interactableCounter < interactions.Length - 1)
         {
-            interactions[interactableCounter].OnInteract.AddListener(ChangeScene);
+            if (interactions[interactableCounter] is Table.CutTable &&
+                interactions[interactableCounter] == interactions[interactableCounter - 1])
+            {
+                interactions[interactableCounter].OnItemPickUp.AddListener(ChangeScene);
+            }
+
+            else
+            {
+                interactions[interactableCounter].OnInteract.AddListener(ChangeScene);
+            }
+
             interactions[interactableCounter].InteractionState(true);
             arrowPointer.LookPosition = interactions[interactableCounter].transform.position;
             if (!arrowPointer.gameObject.activeSelf)
@@ -68,7 +75,7 @@ public class TutorialManager : MonoBehaviour
         }
         else
         {
-            while (timer < timeBetweenText *4)
+            while (timer < timeBetweenText * 4)
             {
                 timer += Time.deltaTime;
                 yield return null;
@@ -76,15 +83,30 @@ public class TutorialManager : MonoBehaviour
 
             tutorialText.transform.parent.gameObject.SetActive(false);
         }
+       
     }
 
-//TODO: Change so it desactivates the collider of the object if no longer needed.
+
     private void ChangeScene()
     {
-        interactions[interactableCounter].OnInteract.RemoveListener(ChangeScene);
+        if (interactions[interactableCounter] is Table.CutTable &&
+            interactions[interactableCounter] == interactions[interactableCounter - 1])
+        {
+            interactions[interactableCounter].OnItemPickUp.RemoveListener(ChangeScene);
+        }
+        else
+        {
+            interactions[interactableCounter].OnInteract.RemoveListener(ChangeScene);
+        }
+
         interactions[interactableCounter].InteractionState(false);
         interactableCounter++;
-        StartCoroutine(ChangeToNextScene());
+        if (changingTutorialInteractions != null)
+        {
+            StopCoroutine(changingTutorialInteractions);
+        }
+
+        changingTutorialInteractions = StartCoroutine(ChangeToNextScene());
     }
 
     private void FinalMessage()
