@@ -4,7 +4,7 @@ public class ConsoleViewer : MonoBehaviour
     [SerializeField] private VoidChannelSO OnCheatToggleConsole;
     string myLog = "*begin log";
     string filename = "";
-    bool doShow = true;
+    bool doShow = false;
     int kChars = 700;
     void OnEnable()
     {

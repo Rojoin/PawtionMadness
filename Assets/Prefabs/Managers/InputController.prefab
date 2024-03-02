@@ -203,6 +203,86 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 367d245e-05db-434a-ae38-a875a0ee197c
     m_ActionName: Player/OnGridMovementStick[/DualSenseGamepadHID/leftStick]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6695719010644051287}
+        m_TargetAssemblyTypeName: GameInputs.InputController, Assembly-CSharp
+        m_MethodName: OnCheatKillScreenEnemies
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1e9faeee-2f34-4245-ac12-28e937bd6c9f
+    m_ActionName: Player/CheatKillAllEnemies[/Keyboard/f1]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6695719010644051287}
+        m_TargetAssemblyTypeName: GameInputs.InputController, Assembly-CSharp
+        m_MethodName: OnCheatWinScreen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0b62acb4-6560-4708-88c8-9a0f06213a04
+    m_ActionName: Player/CheatWinGame[/Keyboard/f2]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6695719010644051287}
+        m_TargetAssemblyTypeName: GameInputs.InputController, Assembly-CSharp
+        m_MethodName: OnCheatLoseScreen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 29ab7bfd-d1c4-4259-bf93-997935f79498
+    m_ActionName: Player/CheatLoseGame[/Keyboard/f3]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6695719010644051287}
+        m_TargetAssemblyTypeName: GameInputs.InputController, Assembly-CSharp
+        m_MethodName: OnCheatsSetState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2a3188af-15d2-480d-b3b4-a16d5bdc0701
+    m_ActionName: Player/SetCheatsState[/Keyboard/shift,/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6695719010644051287}
+        m_TargetAssemblyTypeName: GameInputs.InputController, Assembly-CSharp
+        m_MethodName: OnShowConsole
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f16ac01a-0b20-44ef-9733-60da5c37fe32
+    m_ActionName: Player/CheatShowConsole[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

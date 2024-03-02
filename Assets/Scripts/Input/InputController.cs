@@ -163,7 +163,10 @@ namespace GameInputs
         {
             if (ctx.performed)
             {
-                OnCheatToggleConsole.RaiseEvent();
+                if (cheats)
+                {
+                    OnCheatToggleConsole.RaiseEvent();
+                }
             }
         }
     }
