@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Table;
 using TMPro;
 using UI;
 using UnityEngine;
@@ -14,17 +15,35 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] private Table.Table[] interactableTable;
     [SerializeField] private GameObject Player;
     [SerializeField] private Vector2ChannelSO playerMovementChannel;
-    [SerializeField] private VoidChannelSO interactChannel;
-    [SerializeField] private TMPro.TMP_Text tutorialText;
+    [SerializeField] private VoidChannelSO onTurretPlaced;
+    [SerializeField] private TMP_Text kitchenTutorialText;
     [SerializeField] private int tutorialScreenCounter = 0;
     [SerializeField] private int interactableCounter = 0;
+    [FormerlySerializedAs("_controlPointerPlayerMovement")] [SerializeField]
+    private ControlPointer controlPointerPlayerMovement;
 
     [SerializeField] private float timeBetweenText = 0.2f;
     [SerializeField] private ArrowPointer arrowPointer;
     private Coroutine changingTutorialInteractions;
+    [SerializeField] private float secondsUntilMovementTutorialFades = 5.0f;
+
+    private Table.Table currentInteractable;
+    private Table.Table previousInteractable;
+
+    [Header("Text Settings")]
+    [SerializeField] private RectTransform textPositionInGrid;
+    [SerializeField] private float timeBetweenChars = 20;
+    private RectTransform parentTextRectTransform;
+    private Vector2 defaultPosition;
+    private int _currentVisibleCharactersIndex;
+    private Coroutine textBeingWritten;
+    private WaitForSeconds _textLetterDelay;
 
     private void Awake()
     {
+        parentTextRectTransform = kitchenTutorialText.transform.parent.GetComponent<RectTransform>();
+        defaultPosition = parentTextRectTransform.anchoredPosition;
+        _textLetterDelay = new WaitForSeconds(timeBetweenChars);
         _enemySpawner.enabled = false;
         foreach (Table.Table table in interactableTable)
         {
@@ -32,37 +51,83 @@ public class TutorialManager : MonoBehaviour
         }
 
         Player.SetActive(true);
-        tutorialText.text = texts[tutorialScreenCounter];
+        kitchenTutorialText.text = texts[tutorialScreenCounter];
         playerMovementChannel.Subscribe(ChangeToNextScene);
+        controlPointerPlayerMovement.gameObject.SetActive(true);
     }
 
+    private void SetText(string text, TMP_Text textBox)
+    {
+        textBox.text = text;
+        textBox.maxVisibleCharacters = 0;
+        _currentVisibleCharactersIndex = 0;
+        if (textBeingWritten != null)
+        {
+            StopCoroutine(textBeingWritten);
+        }
+
+        textBeingWritten = StartCoroutine(WrittingText(textBox));
+    }
+
+    private IEnumerator WrittingText(TMP_Text textBox)
+    {
+        TMP_TextInfo textInfo = textBox.textInfo;
+        while (_currentVisibleCharactersIndex < textInfo.characterCount + 1)
+        {
+            char character = textInfo.characterInfo[_currentVisibleCharactersIndex].character;
+            textBox.maxVisibleCharacters++;
+            yield return _textLetterDelay;
+            _currentVisibleCharactersIndex++;
+        }
+    }
 
     private void ChangeToNextScene(Vector2 dir)
     {
         playerMovementChannel.Unsubscribe(ChangeToNextScene);
         changingTutorialInteractions = StartCoroutine(ChangeToNextScene());
+        StartCoroutine(DeactivateMovementPointer());
+    }
+
+    private IEnumerator DeactivateMovementPointer()
+    {
+        yield return new WaitForSeconds(secondsUntilMovementTutorialFades);
+        controlPointerPlayerMovement.gameObject.SetActive(false);
     }
 
     private IEnumerator ChangeToNextScene()
     {
         float timer = 0.0f;
         tutorialScreenCounter++;
-        tutorialText.text = tutorialScreenCounter < texts.Length ? texts[tutorialScreenCounter] : "";
+        string textToBeDisplayed = tutorialScreenCounter < texts.Length ? texts[tutorialScreenCounter] : "";
+        SetText(textToBeDisplayed, kitchenTutorialText);
+
         if (interactableCounter < interactions.Length - 1)
         {
-            if (interactions[interactableCounter] is Table.CutTable &&
-                interactions[interactableCounter] == interactions[interactableCounter - 1])
-            {
-                interactions[interactableCounter].OnItemPickUp.AddListener(ChangeScene);
-            }
+            currentInteractable = interactions[interactableCounter];
+            previousInteractable = interactableCounter - 1 < 0 ? null : interactions[interactableCounter - 1];
 
+            if (currentInteractable is CutTable && currentInteractable == previousInteractable)
+            {
+                currentInteractable.OnItemPickUp.AddListener(ChangeScene);
+            }
+            else if (currentInteractable is GridTableController controller && controller == previousInteractable)
+            {
+                controller.OnBackInput.Subscribe(ChangeScene);
+                parentTextRectTransform.anchoredPosition = textPositionInGrid.anchoredPosition;
+                currentInteractable._controlPointer.UseAlternativeImages = true;
+            }
             else
             {
-                interactions[interactableCounter].OnInteract.AddListener(ChangeScene);
+                currentInteractable.OnInteract.AddListener(ChangeScene);
             }
 
-            interactions[interactableCounter].InteractionState(true);
-            arrowPointer.LookPosition = interactions[interactableCounter].transform.position;
+            if (currentInteractable._controlPointer)
+            {
+                currentInteractable._controlPointer.gameObject.SetActive(true);
+            }
+
+            currentInteractable.InteractionState(true);
+            arrowPointer.LookPosition = currentInteractable.transform.position;
             if (!arrowPointer.gameObject.activeSelf)
             {
                 arrowPointer.gameObject.SetActive(true);
@@ -71,7 +136,8 @@ public class TutorialManager : MonoBehaviour
         else if (interactableCounter == interactions.Length - 1)
         {
             arrowPointer.gameObject.SetActive(false);
-            interactChannel.Subscribe(FinalMessage);
+            parentTextRectTransform.anchoredPosition = textPositionInGrid.anchoredPosition;
+            onTurretPlaced.Subscribe(FinalMessage);
         }
         else
         {
@@ -81,26 +147,37 @@ public class TutorialManager : MonoBehaviour
                 yield return null;
             }
 
-            tutorialText.transform.parent.gameObject.SetActive(false);
+            parentTextRectTransform.gameObject.SetActive(false);
         }
-       
     }
 
 
     private void ChangeScene()
     {
-        if (interactions[interactableCounter] is Table.CutTable &&
-            interactions[interactableCounter] == interactions[interactableCounter - 1])
+        if (currentInteractable is CutTable &&
+            currentInteractable == previousInteractable)
         {
-            interactions[interactableCounter].OnItemPickUp.RemoveListener(ChangeScene);
+            currentInteractable.OnItemPickUp.RemoveListener(ChangeScene);
+        }
+        else if (currentInteractable is GridTableController controller && controller == previousInteractable)
+        {
+            controller.OnBackInput.Unsubscribe(ChangeScene);
+            parentTextRectTransform.anchoredPosition = defaultPosition;
+            currentInteractable._controlPointer.UseAlternativeImages = false;
         }
         else
         {
-            interactions[interactableCounter].OnInteract.RemoveListener(ChangeScene);
+            currentInteractable.OnInteract.RemoveListener(ChangeScene);
         }
 
-        interactions[interactableCounter].InteractionState(false);
+        if (currentInteractable._controlPointer)
+        {
+            currentInteractable._controlPointer.gameObject.SetActive(false);
+        }
+
+        currentInteractable.InteractionState(interactableCounter == interactions.Length - 2 ? true : false);
         interactableCounter++;
+
         if (changingTutorialInteractions != null)
         {
             StopCoroutine(changingTutorialInteractions);
@@ -111,7 +188,7 @@ public class TutorialManager : MonoBehaviour
 
     private void FinalMessage()
     {
-        interactChannel.Unsubscribe(FinalMessage);
+        onTurretPlaced.Unsubscribe(FinalMessage);
         ChangeScene();
         foreach (Table.Table table in interactableTable)
         {
