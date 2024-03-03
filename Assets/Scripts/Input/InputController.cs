@@ -182,6 +182,24 @@ namespace GameInputs
             }
         }
 
+        public void OnCheatTimeSpeed(InputAction.CallbackContext ctx)
+        {
+            if (ctx.performed)
+            {
+                if (cheats)
+                {
+                    if (Time.timeScale != 1)
+                    {
+                        Time.timeScale = 1;
+                    }
+                    else
+                    {
+                        Time.timeScale = 4;
+                    }
+                }
+            }
+        }
+
         public void OnShowConsole(InputAction.CallbackContext ctx)
         {
             if (ctx.performed)

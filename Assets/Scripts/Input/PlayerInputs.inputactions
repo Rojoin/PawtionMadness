@@ -105,6 +105,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "CheatTimeSpeed",
+                    "type": "Button",
+                    "id": "0db587ee-7abd-46a5-9052-fd5e4f015f87",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "SetCheatsState",
                     "type": "Button",
                     "id": "2a3188af-15d2-480d-b3b4-a16d5bdc0701",
@@ -726,6 +735,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "CheatShowConsole",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d5f9ab72-c82b-4083-93fe-1d1e9b3eea9b",
+                    "path": "<Keyboard>/f4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CheatTimeSpeed",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

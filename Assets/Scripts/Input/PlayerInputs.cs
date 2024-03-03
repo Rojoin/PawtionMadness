@@ -127,6 +127,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""CheatTimeSpeed"",
+                    ""type"": ""Button"",
+                    ""id"": ""0db587ee-7abd-46a5-9052-fd5e4f015f87"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""SetCheatsState"",
                     ""type"": ""Button"",
                     ""id"": ""2a3188af-15d2-480d-b3b4-a16d5bdc0701"",
@@ -750,6 +759,17 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""CheatShowConsole"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d5f9ab72-c82b-4083-93fe-1d1e9b3eea9b"",
+                    ""path"": ""<Keyboard>/f4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CheatTimeSpeed"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -1319,6 +1339,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Player_CheatKillAllEnemies = m_Player.FindAction("CheatKillAllEnemies", throwIfNotFound: true);
         m_Player_CheatWinGame = m_Player.FindAction("CheatWinGame", throwIfNotFound: true);
         m_Player_CheatLoseGame = m_Player.FindAction("CheatLoseGame", throwIfNotFound: true);
+        m_Player_CheatTimeSpeed = m_Player.FindAction("CheatTimeSpeed", throwIfNotFound: true);
         m_Player_SetCheatsState = m_Player.FindAction("SetCheatsState", throwIfNotFound: true);
         m_Player_CheatShowConsole = m_Player.FindAction("CheatShowConsole", throwIfNotFound: true);
         // UI
@@ -1405,6 +1426,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_CheatKillAllEnemies;
     private readonly InputAction m_Player_CheatWinGame;
     private readonly InputAction m_Player_CheatLoseGame;
+    private readonly InputAction m_Player_CheatTimeSpeed;
     private readonly InputAction m_Player_SetCheatsState;
     private readonly InputAction m_Player_CheatShowConsole;
     public struct PlayerActions
@@ -1422,6 +1444,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @CheatKillAllEnemies => m_Wrapper.m_Player_CheatKillAllEnemies;
         public InputAction @CheatWinGame => m_Wrapper.m_Player_CheatWinGame;
         public InputAction @CheatLoseGame => m_Wrapper.m_Player_CheatLoseGame;
+        public InputAction @CheatTimeSpeed => m_Wrapper.m_Player_CheatTimeSpeed;
         public InputAction @SetCheatsState => m_Wrapper.m_Player_SetCheatsState;
         public InputAction @CheatShowConsole => m_Wrapper.m_Player_CheatShowConsole;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -1466,6 +1489,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @CheatLoseGame.started += instance.OnCheatLoseGame;
             @CheatLoseGame.performed += instance.OnCheatLoseGame;
             @CheatLoseGame.canceled += instance.OnCheatLoseGame;
+            @CheatTimeSpeed.started += instance.OnCheatTimeSpeed;
+            @CheatTimeSpeed.performed += instance.OnCheatTimeSpeed;
+            @CheatTimeSpeed.canceled += instance.OnCheatTimeSpeed;
             @SetCheatsState.started += instance.OnSetCheatsState;
             @SetCheatsState.performed += instance.OnSetCheatsState;
             @SetCheatsState.canceled += instance.OnSetCheatsState;
@@ -1509,6 +1535,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @CheatLoseGame.started -= instance.OnCheatLoseGame;
             @CheatLoseGame.performed -= instance.OnCheatLoseGame;
             @CheatLoseGame.canceled -= instance.OnCheatLoseGame;
+            @CheatTimeSpeed.started -= instance.OnCheatTimeSpeed;
+            @CheatTimeSpeed.performed -= instance.OnCheatTimeSpeed;
+            @CheatTimeSpeed.canceled -= instance.OnCheatTimeSpeed;
             @SetCheatsState.started -= instance.OnSetCheatsState;
             @SetCheatsState.performed -= instance.OnSetCheatsState;
             @SetCheatsState.canceled -= instance.OnSetCheatsState;
@@ -1681,6 +1710,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnCheatKillAllEnemies(InputAction.CallbackContext context);
         void OnCheatWinGame(InputAction.CallbackContext context);
         void OnCheatLoseGame(InputAction.CallbackContext context);
+        void OnCheatTimeSpeed(InputAction.CallbackContext context);
         void OnSetCheatsState(InputAction.CallbackContext context);
         void OnCheatShowConsole(InputAction.CallbackContext context);
     }
