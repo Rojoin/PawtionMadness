@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VoidChannelSO initialCounterChannelSO; 
     [SerializeField] private VoidChannelSO OnCheatWinGame;
     [SerializeField] private VoidChannelSO OnCheatLoseGame;
+    [SerializeField] private VoidChannelSO OnStartEnemySpawner;
+
     [Header("Values")] 
     
     [SerializeField] float timeUntilGameOver = 0.2f;
@@ -72,6 +74,14 @@ public class GameManager : MonoBehaviour
             Invoke(nameof(InitGame), timeUntilActivateEvents);
         }
 
+        OnStartEnemySpawner.Subscribe(EnableEnemySpawner);
+        enemySpawner.StartEnemySpawner();
+        enemySpawner.enabled = false;
+    }
+
+    private void EnableEnemySpawner()
+    {
+        enemySpawner.enabled = true;
     }
 
     private void InitGame()
