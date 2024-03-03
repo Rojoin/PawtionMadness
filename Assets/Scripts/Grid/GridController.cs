@@ -16,6 +16,7 @@ namespace Grid
         [SerializeField] private VoidChannelSO interactChannel;
         [SerializeField] private VoidChannelSO backInputChannel;
         [SerializeField] private VoidChannelSO changeToPlayerChannel;
+        [SerializeField] private VoidChannelSO onTurretPlaced;
         [Header("Data")]
         [SerializeField] private TimeController timeControllerData;
         [Header("Values")]
@@ -139,13 +140,10 @@ namespace Grid
             {
                 SetTurretOnTile(_currentTile, playerInventory.GetTurret());
                 playerInventory.DestroyPickable();
+                onTurretPlaced.RaiseEvent();
                 OnBackChannel();
             }
-            else if (!_currentTile.IsAvailable() && !playerInventory.hasPotion())
-            {
-                _currentTile.DestroyTurret();
-                OnBackChannel();
-            }
+           
         }
 
         /// <summary>
