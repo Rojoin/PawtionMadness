@@ -22,6 +22,7 @@ public class TutorialManager : MonoBehaviour
     [FormerlySerializedAs("_controlPointerPlayerMovement")] [SerializeField]
     private ControlPointer controlPointerPlayerMovement;
 
+    public UnityEvent OnTutorialEnd;
     [SerializeField] private float timeBetweenText = 0.2f;
     [SerializeField] private ArrowPointer arrowPointer;
     private Coroutine changingTutorialInteractions;
@@ -42,16 +43,17 @@ public class TutorialManager : MonoBehaviour
     private void Awake()
     {
         parentTextRectTransform = kitchenTutorialText.transform.parent.GetComponent<RectTransform>();
+        parentTextRectTransform.gameObject.SetActive(true);
         defaultPosition = parentTextRectTransform.anchoredPosition;
         _textLetterDelay = new WaitForSeconds(timeBetweenChars);
-        _enemySpawner.enabled = false;
+       
         foreach (Table.Table table in interactableTable)
         {
             table.InteractionState(false);
         }
 
-        Player.SetActive(true);
-        kitchenTutorialText.text = texts[tutorialScreenCounter];
+ 
+        SetText(texts[tutorialScreenCounter], kitchenTutorialText);
         playerMovementChannel.Subscribe(ChangeToNextScene);
         controlPointerPlayerMovement.gameObject.SetActive(true);
     }
@@ -71,8 +73,9 @@ public class TutorialManager : MonoBehaviour
 
     private IEnumerator WrittingText(TMP_Text textBox)
     {
+        yield return null;
         TMP_TextInfo textInfo = textBox.textInfo;
-        while (_currentVisibleCharactersIndex < textInfo.characterCount + 1)
+        while (_currentVisibleCharactersIndex < textInfo.characterCount)
         {
             char character = textInfo.characterInfo[_currentVisibleCharactersIndex].character;
             textBox.maxVisibleCharacters++;
@@ -147,6 +150,7 @@ public class TutorialManager : MonoBehaviour
                 yield return null;
             }
 
+            OnTutorialEnd.Invoke();
             parentTextRectTransform.gameObject.SetActive(false);
         }
     }
@@ -194,8 +198,6 @@ public class TutorialManager : MonoBehaviour
         {
             table.InteractionState(true);
         }
-
-        _enemySpawner.enabled = true;
-        _enemySpawner.gameObject.SetActive(true);
+        
     }
 }
