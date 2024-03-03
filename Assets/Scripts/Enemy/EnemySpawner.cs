@@ -36,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
 
         foreach (var wave in waveList)
         {
-            float waveTimerBeforeWave = wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.TimeBeforeNewPreWaveStart;
+            float waveTimerBeforeWave = wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.TimeBeforeNewPreWaveStart + wave.totalEnemyWave * wave.SpawnTimeInWave;
 
             maxGameBarTimer += waveTimerBeforeWave;
             Debug.Log(maxGameBarTimer);
@@ -52,7 +52,7 @@ public class EnemySpawner : MonoBehaviour
             float imageNormalizePosition =
                 (waveTimer + wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.TimeBeforeNewPreWaveStart) / maxGameBarTimer;
 
-            waveTimer += wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.TimeBeforeNewPreWaveStart;
+            waveTimer += wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.TimeBeforeNewPreWaveStart + wave.totalEnemyWave * wave.SpawnTimeInWave;
             Debug.Log(waveTimer);
             OnNewWaveAdded.Invoke(imageNormalizePosition);
         }
