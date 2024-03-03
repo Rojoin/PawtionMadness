@@ -1,5 +1,6 @@
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class CameraManager : MonoBehaviour
@@ -9,8 +10,9 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera waveFocusCamera;
     [SerializeField] private CinemachineVirtualCamera gridFocusCamera;
     [SerializeField] private CinemachineVirtualCamera kitchenCamera;
-    [SerializeField] private VoidChannelSO OnStartEnemySpawner;
+    [FormerlySerializedAs("OnStartEnemySpawner")] [SerializeField] public VoidChannelSO OnLerpEndChannel;
     [FormerlySerializedAs("cameraLerp")] [SerializeField] private CameraLerp waveFocusCameraLerp;
+ 
 
     private void Awake()
     {
@@ -31,7 +33,7 @@ public class CameraManager : MonoBehaviour
         waveFocusCamera.gameObject.SetActive(false);
         kitchenCamera.gameObject.SetActive(true);
         Debug.Log("end lerp");
-        OnStartEnemySpawner.RaiseEvent();
+        OnLerpEndChannel.RaiseEvent();
     }
     public void ChangeToGridCamera(bool state)
     {
