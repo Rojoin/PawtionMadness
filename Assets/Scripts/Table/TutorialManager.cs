@@ -9,18 +9,15 @@ using UnityEngine.Serialization;
 
 public class TutorialManager : MonoBehaviour
 {
-    [SerializeField] private EnemySpawner _enemySpawner;
     [SerializeField] private string[] texts;
     [SerializeField] private Table.Table[] interactions;
     [SerializeField] private Table.Table[] interactableTable;
-    [SerializeField] private GameObject Player;
     [SerializeField] private Vector2ChannelSO playerMovementChannel;
     [SerializeField] private VoidChannelSO onTurretPlaced;
     [SerializeField] private TMP_Text kitchenTutorialText;
     [SerializeField] private int tutorialScreenCounter = 0;
     [SerializeField] private int interactableCounter = 0;
-    [FormerlySerializedAs("_controlPointerPlayerMovement")] [SerializeField]
-    private ControlPointer controlPointerPlayerMovement;
+    [SerializeField] private ControlPointer controlPointerPlayerMovement;
 
     public UnityEvent OnTutorialEnd;
     [SerializeField] private float timeBetweenText = 0.2f;
@@ -30,7 +27,8 @@ public class TutorialManager : MonoBehaviour
 
     private Table.Table currentInteractable;
     private Table.Table previousInteractable;
-
+    [SerializeField] private BaseTurretSO turretForTutorial;
+    [SerializeField] private Grid.GridController grid;
     [Header("Text Settings")]
     [SerializeField] private RectTransform textPositionInGrid;
     [SerializeField] private float timeBetweenChars = 20;
@@ -42,6 +40,10 @@ public class TutorialManager : MonoBehaviour
 
     private void Awake()
     {
+        if (turretForTutorial)
+        {
+            grid.SpawnDefaultTurret(turretForTutorial);
+        }
         parentTextRectTransform = kitchenTutorialText.transform.parent.GetComponent<RectTransform>();
         parentTextRectTransform.gameObject.SetActive(true);
         defaultPosition = parentTextRectTransform.anchoredPosition;

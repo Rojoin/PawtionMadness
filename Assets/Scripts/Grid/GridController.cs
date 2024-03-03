@@ -157,6 +157,12 @@ namespace Grid
                 currentTile.transform));
         }
 
+        public void SpawnDefaultTurret(BaseTurretSO baseTurretSo)
+        {
+            Tile defaultTile = _grid.GetTile(Vector2Int.zero);
+            defaultTile.SetTurret(_turretManager.AddNewTurret(baseTurretSo, defaultTile.GetTurretPosition(),
+                defaultTile.transform));
+        }
         /// <summary>
         /// Deactivates the GridController
         /// </summary>
