@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
         gridToggleChannelSO.Unsubscribe(GridToggle);
         changeToPlayerChannelSO.Unsubscribe(GridToggle);
         _cameraManager.OnLerpEndChannel.Unsubscribe(InitializeGameMode);
+        initialCounterChannelSO.Unsubscribe(InitCountdown);
     }
 
     private void InitializeGameMode()
