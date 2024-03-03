@@ -7,9 +7,9 @@ public class WaveSO : ScriptableObject
 
     [Header("Basic Info Wave")]
     public float TimeBeforeNewPreWaveStart;
-    public float newSpawnTime;
 
     [Header("Pre Wave")]
+    public float newSpawnTime;
     public int totalEnemyBeforeWave;
     public float delayBeforeWave;
 

@@ -36,9 +36,11 @@ public class EnemySpawner : MonoBehaviour
 
         foreach (var wave in waveList)
         {
-            float waveTimerBeforeWave = wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave;
+            float waveTimerBeforeWave = wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.TimeBeforeNewPreWaveStart;
 
             maxGameBarTimer += waveTimerBeforeWave;
+            Debug.Log(maxGameBarTimer);
+
         }
 
         currentTimer = timerGameBar / maxGameBarTimer;
@@ -48,9 +50,10 @@ public class EnemySpawner : MonoBehaviour
         foreach (var wave in waveList)
         {
             float imageNormalizePosition =
-                (waveTimer + wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave) / maxGameBarTimer;
+                (waveTimer + wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.TimeBeforeNewPreWaveStart) / maxGameBarTimer;
 
-            waveTimer += wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave;
+            waveTimer += wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.TimeBeforeNewPreWaveStart;
+            Debug.Log(waveTimer);
             OnNewWaveAdded.Invoke(imageNormalizePosition);
         }
 
@@ -88,8 +91,8 @@ public class EnemySpawner : MonoBehaviour
             {
                 SpawnNewEnemy();
             }
-            
-            if(!waitWave)
+
+            if (!waitWave)
             {
                 spawnTimer += Time.deltaTime;
             }
@@ -144,7 +147,11 @@ public class EnemySpawner : MonoBehaviour
 
         currentWave++;
 
-        spawnPeriod = waveList[currentWave].newSpawnTime;
+        if (currentWave < waveList.Length)
+        {
+            spawnPeriod = waveList[currentWave].newSpawnTime;
+        }
+
         OnWaveStart.Invoke();
 
         activeWave = false;
