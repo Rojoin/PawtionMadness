@@ -9,7 +9,6 @@ namespace GameInputs
         [Header("Inputs")]
         [SerializeField] private Vector2ChannelSO OnMoveChannel;
         [SerializeField] private Vector2ChannelSO OnGridMoveChannel;
-        //[SerializeField] private VoidChannelSO OnRollChannel;
         [SerializeField] private VoidChannelSO OnPauseChannel;
         [SerializeField] private VoidChannelSO OnInteractChannel;
         [SerializeField] private VoidChannelSO OnBackInteractChannel;
@@ -17,9 +16,31 @@ namespace GameInputs
         [SerializeField] private VoidChannelSO OnCheatWinGame;
         [SerializeField] private VoidChannelSO OnCheatLoseGame;
         [SerializeField] private VoidChannelSO OnCheatToggleConsole;
+        [SerializeField] private IntChannelSO OnControlSchemeChange;
+        [Header("Data")]
+        [SerializeField] private PlayerStats _playerStats;
         [SerializeField] float offsetController = 0.70f;
         private Vector2 previousGridInput = Vector2.zero;
         private bool cheats;
+        private const int keyboardSchemeValue = 0;
+        private const int gamepadSchemeValue = 1;
+
+        public void OnChangeInput(PlayerInput input)
+        {
+            string inputCurrentControlScheme = input.currentControlScheme;
+            if (inputCurrentControlScheme.Equals("Gamepad"))
+            {
+                OnControlSchemeChange.RaiseEvent(gamepadSchemeValue);
+                Debug.Log("Using Gamepad:" + inputCurrentControlScheme);
+                _playerStats.ChangeControllerInput(gamepadSchemeValue);
+            }
+            else
+            {
+                OnControlSchemeChange.RaiseEvent(keyboardSchemeValue);
+                _playerStats.ChangeControllerInput(keyboardSchemeValue);
+                Debug.Log("Using Mouse & Keywoard");
+            }
+        }
 
         public void OnMove(InputAction.CallbackContext ctx)
         {
@@ -40,6 +61,7 @@ namespace GameInputs
                 OnGridMoveChannel.RaiseEvent(Vector2.zero);
             }
         }
+
         public void OnStickGridMove(InputAction.CallbackContext ctx)
         {
             if (ctx.performed)
@@ -58,6 +80,7 @@ namespace GameInputs
                 {
                     ctxInput.x = 0;
                 }
+
                 if (ctxInput.y > offsetController)
                 {
                     ctxInput.y = 1;
