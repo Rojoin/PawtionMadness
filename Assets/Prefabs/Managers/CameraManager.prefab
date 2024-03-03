@@ -196,8 +196,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c278540139bf84781cf61a5306f89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  virtualCamera: {fileID: 0}
-  cameraLerp: {fileID: 5646896430725891702}
+  waveFocusCamera: {fileID: 0}
+  gridFocusCamera: {fileID: 0}
+  kitchenCamera: {fileID: 0}
+  OnStartEnemySpawner: {fileID: 11400000, guid: e3503b2b698fc754ba3c32acdc6cf92d, type: 2}
+  waveFocusCameraLerp: {fileID: 5646896430725891702}
 --- !u!1 &8711538581599887559
 GameObject:
   m_ObjectHideFlags: 0
