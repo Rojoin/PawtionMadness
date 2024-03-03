@@ -1340,7 +1340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74c1de9a9144986afa42c422fa5a7ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemySpawner: {fileID: 2112892181}
   texts:
   - Try to move around the kitchen.
   - Lets go to the garden.
@@ -1398,7 +1397,6 @@ MonoBehaviour:
   - {fileID: 1536126963}
   - {fileID: 340386567}
   - {fileID: 1536237127}
-  Player: {fileID: 489287922}
   playerMovementChannel: {fileID: 11400000, guid: d3f8a5e4b12d752438553a0a580b5c45, type: 2}
   onTurretPlaced: {fileID: 11400000, guid: d3964fee23bce0444aa73c30ce46ef3b, type: 2}
   kitchenTutorialText: {fileID: 1153263079}
@@ -1411,6 +1409,8 @@ MonoBehaviour:
   timeBetweenText: 1
   arrowPointer: {fileID: 2087599128}
   secondsUntilMovementTutorialFades: 5
+  turretForTutorial: {fileID: 11400000, guid: 74ea892627157a34ca8e7742957b168c, type: 2}
+  grid: {fileID: 1270615633}
   textPositionInGrid: {fileID: 1485659849}
   timeBetweenChars: 0.01
 --- !u!114 &1151582294 stripped
@@ -3127,7 +3127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223280389243143638, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000038146973
+      value: -0.000017166138
       objectReference: {fileID: 0}
     - target: {fileID: 1234946973280734815, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchorMax.y
