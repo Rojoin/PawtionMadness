@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VoidChannelSO initialCounterChannelSO;
     [SerializeField] private VoidChannelSO OnCheatWinGame;
     [SerializeField] private VoidChannelSO OnCheatLoseGame;
-    [FormerlySerializedAs("OnStartEnemySpawner")] [SerializeField] private VoidChannelSO OnEndLerpChannel;
+    [FormerlySerializedAs("OnStartEnemySpawner")] [SerializeField]
+    private VoidChannelSO OnEndLerpChannel;
 
     [Header("Values")]
     [SerializeField] float timeUntilGameOver = 0.2f;
@@ -60,7 +61,7 @@ public class GameManager : MonoBehaviour
         OnCheatLoseGame.Subscribe(GameOver);
         _cameraManager.gameObject.SetActive(true);
         _cameraManager.OnLerpEndChannel.Subscribe(InitializeGameMode);
-  
+
 
         enemySpawner.StartEnemySpawner();
         enemySpawner.enabled = false;
@@ -78,6 +79,9 @@ public class GameManager : MonoBehaviour
         changeToPlayerChannelSO.Unsubscribe(GridToggle);
         _cameraManager.OnLerpEndChannel.Unsubscribe(InitializeGameMode);
         initialCounterChannelSO.Unsubscribe(InitCountdown);
+        initialCounterChannelSO.Unsubscribe(InitPlayerAndEnemy);
+        tutorialManager.OnTutorialEnd.RemoveAllListeners();
+        StopAllCoroutines();
     }
 
     private void InitializeGameMode()
@@ -98,21 +102,28 @@ public class GameManager : MonoBehaviour
 
     private void InitCountdown()
     {
+        if (tutorialManager)
+        {
+            tutorialManager.OnTutorialEnd.RemoveAllListeners();
+        }
+
         initialCounterChannelSO.RaiseEvent();
         initialCounterChannelSO.Subscribe(InitPlayerAndEnemy);
     }
+
     private void InitPlayerAndEnemy()
     {
         enemySpawner.gameObject.SetActive(true);
         enemySpawner.enabled = true;
-        initialCounterChannelSO.Unsubscribe(InitCountdown);
+        initialCounterChannelSO.Unsubscribe(InitPlayerAndEnemy);
         InitPlayer();
     }
+
     private void InitGame()
     {
         uiManager.Init();
         showRecipesChannelSO.Subscribe(ShowRecipes);
-      
+
         gridToggleChannelSO.Subscribe(GridToggle);
         changeToPlayerChannelSO.Subscribe(GridToggle);
     }
@@ -152,7 +163,7 @@ public class GameManager : MonoBehaviour
         _cameraManager.ChangeToGridCamera(isGridActivated);
         uiManager.ToggleFocusPanel(isGridActivated);
     }
-    
+
 
     [ContextMenu("Lose Game")]
     private void GameOver()
