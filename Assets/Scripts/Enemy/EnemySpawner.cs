@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,7 @@ public class EnemySpawner : MonoBehaviour
     private bool activeWave;
     private bool canSpawnEnemies;
     private int currentWave = 0;
+    private bool hasEnded = false;
 
     [Header("Events")]
     public UnityEvent<float> OnGameBarUpdated = new UnityEvent<float>();
@@ -32,15 +34,16 @@ public class EnemySpawner : MonoBehaviour
 
     public void StartEnemySpawner()
     {
+        hasEnded = false;
         spawnPeriod = waveList[currentWave].newSpawnTime;
 
         foreach (var wave in waveList)
         {
-            float waveTimerBeforeWave = wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.TimeBeforeNewPreWaveStart + wave.totalEnemyWave * wave.SpawnTimeInWave;
+            float waveTimerBeforeWave = wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave +
+                                        wave.TimeBeforeNewPreWaveStart + wave.totalEnemyWave * wave.SpawnTimeInWave;
 
             maxGameBarTimer += waveTimerBeforeWave;
             Debug.Log(maxGameBarTimer);
-
         }
 
         currentTimer = timerGameBar / maxGameBarTimer;
@@ -50,9 +53,11 @@ public class EnemySpawner : MonoBehaviour
         foreach (var wave in waveList)
         {
             float imageNormalizePosition =
-                (waveTimer + wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.TimeBeforeNewPreWaveStart) / maxGameBarTimer;
+                (waveTimer + wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave +
+                 wave.TimeBeforeNewPreWaveStart) / maxGameBarTimer;
 
-            waveTimer += wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.TimeBeforeNewPreWaveStart + wave.totalEnemyWave * wave.SpawnTimeInWave;
+            waveTimer += wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave +
+                         wave.TimeBeforeNewPreWaveStart + wave.totalEnemyWave * wave.SpawnTimeInWave;
             Debug.Log(waveTimer);
             OnNewWaveAdded.Invoke(imageNormalizePosition);
         }
@@ -62,13 +67,9 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (timerGameBar < maxGameBarTimer)
-        {
-            timerGameBar += Time.deltaTime;
-        }
-
+        timerGameBar += Time.deltaTime;
         currentTimer = timerGameBar / maxGameBarTimer;
-        OnGameBarUpdated.Invoke(currentTimer);
+        OnGameBarUpdated.Invoke(Mathf.Clamp01(currentTimer));
 
         //Check if all wave have finish
         if (currentWave < waveList.Length)
@@ -97,10 +98,10 @@ public class EnemySpawner : MonoBehaviour
                 spawnTimer += Time.deltaTime;
             }
         }
-        else
+        else if (!hasEnded)
         {
-            OnWaveFinishChannel.RaiseEvent(true);
-            this.gameObject.SetActive(false);
+            hasEnded = true;
+            OnWaveFinishChannel.RaiseEvent(hasEnded);
         }
     }
 
