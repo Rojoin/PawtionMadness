@@ -4,6 +4,7 @@ using CustomSceneSwitcher.Switcher;
 using CustomSceneSwitcher.Switcher.Data;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Main_Menu
@@ -12,13 +13,13 @@ namespace Main_Menu
     {
         [SerializeField] private Button _playTutorialButton;
         [SerializeField] private Button _skipTutorialButton;
-        [SerializeField] private SceneChangeData _tutorialScene;
-        [SerializeField] private SceneChangeData _gameScene;
+         [SerializeField] private SceneChangeData _firstLevel;
+         [SerializeField] private PlayerStats _playerStats;
 
         public void Awake()
         {
-            _playTutorialButton.onClick.AddListener(GoToTutorial);
-            _skipTutorialButton.onClick.AddListener(GoToGame);
+            _playTutorialButton.onClick.AddListener(PlayTutorial);
+            _skipTutorialButton.onClick.AddListener(PlayGame);
         }
 
         private IEnumerator Start()
@@ -36,13 +37,20 @@ namespace Main_Menu
             _skipTutorialButton.onClick.RemoveAllListeners();
         }
 
-        private void GoToTutorial()
+        private void PlayTutorial()
         {
-            SceneSwitcher.ChangeScene(_tutorialScene);
+            _playerStats.isTutorialOn = true;
+            ChangeScene();
         }
-        private void GoToGame()
+        private void PlayGame()
         {
-            SceneSwitcher.ChangeScene(_gameScene);
+            _playerStats.isTutorialOn = false;
+            ChangeScene();
+        }
+
+        private void ChangeScene()
+        {
+            SceneSwitcher.ChangeScene(_firstLevel);
         }
     }
 }
