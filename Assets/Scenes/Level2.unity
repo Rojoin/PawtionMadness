@@ -1236,12 +1236,12 @@ PrefabInstance:
       objectReference: {fileID: 102900000, guid: 342970b751a8c204db5d79056d52bbb3, type: 3}
     - target: {fileID: 2663239920300573646, guid: b6eea28283c4fa64a910c5472d183de3, type: 3}
       propertyPath: nextScene.sceneReference.scenePath
-      value: Assets/Scenes/MainMenu.unity
+      value: Assets/Scenes/Level3.unity
       objectReference: {fileID: 0}
     - target: {fileID: 2663239920300573646, guid: b6eea28283c4fa64a910c5472d183de3, type: 3}
       propertyPath: nextScene.sceneReference.sceneAsset
       value: 
-      objectReference: {fileID: 102900000, guid: 342970b751a8c204db5d79056d52bbb3, type: 3}
+      objectReference: {fileID: 102900000, guid: d84e5f337b36afd48a43feeb8a2ca8c2, type: 3}
     - target: {fileID: 2663239920300573646, guid: b6eea28283c4fa64a910c5472d183de3, type: 3}
       propertyPath: currentScene.transitionControlPrefab
       value: 
@@ -4510,7 +4510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223280389243143638, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000038146973
+      value: 0.000019073486
       objectReference: {fileID: 0}
     - target: {fileID: 1234946973280734815, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5677,6 +5677,10 @@ PrefabInstance:
       propertyPath: OnCut.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 833250308}
+    - target: {fileID: 6437239837743590980, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: isStaticObject
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9010425507972152782, guid: 03582489449adaf4294f64acb57ca435, type: 3}
     m_RemovedGameObjects: []
