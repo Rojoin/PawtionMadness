@@ -53,8 +53,7 @@ public class TutorialManager : MonoBehaviour
         {
             table.InteractionState(false);
         }
-
- 
+        
         SetText(texts[tutorialScreenCounter], kitchenTutorialText);
         playerMovementChannel.Subscribe(ChangeToNextScene);
         controlPointerPlayerMovement.gameObject.SetActive(true);
@@ -121,6 +120,10 @@ public class TutorialManager : MonoBehaviour
                 parentTextRectTransform.anchoredPosition = textPositionInGrid.anchoredPosition;
                 currentInteractable._controlPointer.UseAlternativeImages = true;
             }
+            else if (currentInteractable is Cauldron cauldron && cauldron == previousInteractable)
+            {
+                cauldron.OnItemPickUp.AddListener(ChangeScene);
+            }
             else
             {
                 currentInteractable.OnInteract.AddListener(ChangeScene);
@@ -170,6 +173,10 @@ public class TutorialManager : MonoBehaviour
             controller.OnBackInput.Unsubscribe(ChangeScene);
             parentTextRectTransform.anchoredPosition = defaultPosition;
             currentInteractable._controlPointer.UseAlternativeImages = false;
+        }
+        else if (currentInteractable is Cauldron cauldron && cauldron == previousInteractable)
+        {
+            cauldron.OnItemPickUp.RemoveListener(ChangeScene);
         }
         else
         {
