@@ -19,13 +19,9 @@ MonoBehaviour:
     probability: 6
   - Type: {fileID: 11400000, guid: f08ecfecd83fdb24b83c63fa733090de, type: 2}
     probability: 5
-  - Type: {fileID: 11400000, guid: 624bcce706b12194d92d6c5c55f7c1ad, type: 2}
-    probability: 4
-  - Type: {fileID: 11400000, guid: 8ec34e5e722bb674ea2c8767dbb37e55, type: 2}
-    probability: 3
-  newSpawnTime: 3
-  totalEnemyBeforeWave: 10
-  delayBeforeWave: 1
-  totalEnemyWave: 45
-  SpawnTimeInWave: 0.6
-  delayAfterWave: 22
+  TimeBeforeNewPreWaveStart: 15
+  newSpawnTime: 5
+  totalEnemyBeforeWave: 17
+  delayBeforeWave: 5
+  totalEnemyWave: 26
+  SpawnTimeInWave: 1

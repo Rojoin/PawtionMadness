@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyTypes:
   - Type: {fileID: 11400000, guid: d0091abd3ac8fef4f81e6b41a62d88cf, type: 2}
-    probability: 8
+    probability: 9
   - Type: {fileID: 11400000, guid: 50b2376bfd2ff8e43b4c9238a57bdcd7, type: 2}
-    probability: 5
+    probability: 9
   - Type: {fileID: 11400000, guid: f08ecfecd83fdb24b83c63fa733090de, type: 2}
-    probability: 5
+    probability: 6
   - Type: {fileID: 11400000, guid: 624bcce706b12194d92d6c5c55f7c1ad, type: 2}
-    probability: 3
-  newSpawnTime: 2
-  totalEnemyBeforeWave: 8
-  delayBeforeWave: 5
+    probability: 5
+  TimeBeforeNewPreWaveStart: 8
+  newSpawnTime: 6
+  totalEnemyBeforeWave: 15
+  delayBeforeWave: 4
   totalEnemyWave: 24
-  SpawnTimeInWave: 0.6
-  delayAfterWave: 10
+  SpawnTimeInWave: 1
