@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75cc639c11140a48a02ddf6f255edda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _controlPointer: {fileID: 0}
   OnItemPickUp:
     m_PersistentCalls:
       m_Calls:
@@ -145,6 +146,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  <OnInteract>k__BackingField:
+    m_PersistentCalls:
+      m_Calls: []
   _itemPos: {fileID: 8979500669993374841}
 --- !u!114 &-6173793383073146909
 MonoBehaviour:

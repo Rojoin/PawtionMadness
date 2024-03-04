@@ -39,6 +39,7 @@ namespace Table
                     ingredient = null;
                     ResetCount();
                     OnItemPickUp.Invoke();
+                    Debug.Log("OnItemPickUp:Invoked");
                 }
             }
             else if (playerInventory.hasIngredient() && !(playerInventory.GetPickable() as Ingredient).IsProcessed() &&

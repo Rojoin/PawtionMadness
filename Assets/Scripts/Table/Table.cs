@@ -10,7 +10,7 @@ namespace Table
     {
         private BoxCollider boxCollider;
         protected bool canInteract = true;
-
+        public ControlPointer _controlPointer;
         public UnityEvent OnItemPickUp = new();
         public UnityEvent OnItemDrop = new();
         public UnityEvent OnFailedInteraction = new();

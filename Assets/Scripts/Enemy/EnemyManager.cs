@@ -12,7 +12,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private BoolChannelSO OnWaveFinishChannel;
     [SerializeField] private float timeUntilWin = 5f;
     [SerializeField] private Transform enemyParent;
-
+    [SerializeField] private VoidChannelSO OnCheatKillEnemy;
 
     private List<GameObject> enemySpawned;
     [SerializeField] private List<EnemySO> EnemiesSO = new();
@@ -24,6 +24,7 @@ public class EnemyManager : MonoBehaviour
 
     private void Awake()
     {
+        OnCheatKillEnemy.Subscribe(KillAllEnemies);
         wavesEnded = false;
         OnWaveFinishChannel.Subscribe(ChangeWaveState);
 
@@ -57,7 +58,7 @@ public class EnemyManager : MonoBehaviour
         EnemySO enemyType = probList[Random.Range(0, probList.Count)];
 
         var pool = EnemyPoolById[enemyType.id];
-        if (pool == null) 
+        if (pool == null)
         {
             Debug.LogError("Enemy Pool not found");
             return;
@@ -103,5 +104,13 @@ public class EnemyManager : MonoBehaviour
     private void ChangeWaveState(bool state)
     {
         wavesEnded = state;
+    }
+
+    private void KillAllEnemies()
+    {
+        foreach (GameObject enemy in enemySpawned)
+        {
+            enemy.GetComponent<BaseEnemy>().ReceiveDamage(9999999);
+        }
     }
 }

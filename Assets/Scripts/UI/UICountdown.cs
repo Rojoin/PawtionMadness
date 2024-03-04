@@ -52,7 +52,8 @@ namespace UI
                 currentText++;
                 yield return null;
             }
-
+            activateScript.Unsubscribe(PlayAnimation);
+            activateScript.RaiseEvent();
             gameObject.SetActive(false);
             yield break;
         }
