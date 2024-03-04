@@ -11,6 +11,7 @@ public class MusicManager : MonoBehaviour
     private void Start()
     {
         AkSoundEngine.PostEvent(musicSo.callInitMusic.ToString(), gameObject);
+        AkSoundEngine.SetSwitch(musicSo.SwitchGroup.ToString(), musicSo.SwitchStates[currentState].ToString(), gameObject);
     }
 
     public void StopMusic()
