@@ -80,8 +80,14 @@ public class GameManager : MonoBehaviour
         _cameraManager.OnLerpEndChannel.Unsubscribe(InitializeGameMode);
         initialCounterChannelSO.Unsubscribe(InitCountdown);
         initialCounterChannelSO.Unsubscribe(InitPlayerAndEnemy);
-        tutorialManager.OnTutorialEnd.RemoveAllListeners();
+        if (tutorialManager)
+        {
+            tutorialManager.OnTutorialEnd.RemoveAllListeners();
+        }
         StopAllCoroutines();
+        pauseChannelSO.Unsubscribe(PauseLevel);
+        OnCheatWinGame.Unsubscribe(WinGame);
+        OnCheatLoseGame.Unsubscribe(GameOver);
     }
 
     private void InitializeGameMode()

@@ -44,19 +44,63 @@ public class TutorialManager : MonoBehaviour
         {
             grid.SpawnDefaultTurret(turretForTutorial);
         }
+
         parentTextRectTransform = kitchenTutorialText.transform.parent.GetComponent<RectTransform>();
         parentTextRectTransform.gameObject.SetActive(true);
         defaultPosition = parentTextRectTransform.anchoredPosition;
         _textLetterDelay = new WaitForSeconds(timeBetweenChars);
-       
+
         foreach (Table.Table table in interactableTable)
         {
             table.InteractionState(false);
         }
-        
+
         SetText(texts[tutorialScreenCounter], kitchenTutorialText);
         playerMovementChannel.Subscribe(ChangeToNextScene);
         controlPointerPlayerMovement.gameObject.SetActive(true);
+    }
+
+    private void OnDestroy()
+    {
+        OnTutorialEnd.RemoveAllListeners();
+        playerMovementChannel.Unsubscribe(ChangeToNextScene);
+        StopAllCoroutines();
+        previousInteractable = null;
+        foreach (Table.Table interaction in interactions)
+        {
+            RemoveEventInteraction(interaction);
+
+            previousInteractable = interaction;
+        }
+
+        onTurretPlaced.Unsubscribe(FinalMessage);
+    }
+
+    private void RemoveEventInteraction(Table.Table interaction)
+    {
+        interaction.OnInteract.RemoveAllListeners();
+        if (interaction is CutTable && interaction == previousInteractable)
+        {
+            interaction.OnItemPickUp.RemoveAllListeners();
+        }
+        else if (interaction is GridTableController controller && controller == previousInteractable)
+        {
+            controller.OnBackInput.Unsubscribe(ChangeScene);
+            if (parentTextRectTransform)
+            {
+                parentTextRectTransform.anchoredPosition = defaultPosition;
+            }
+
+            interaction._controlPointer.UseAlternativeImages = false;
+        }
+        else if (interaction is Cauldron cauldron && cauldron == previousInteractable)
+        {
+            cauldron.OnItemPickUp.RemoveAllListeners();
+        }
+        else if (interaction is BookTable book && book == previousInteractable)
+        {
+            book.OnItemDrop.RemoveAllListeners();
+        }
     }
 
     private void SetText(string text, TMP_Text textBox)
@@ -110,24 +154,7 @@ public class TutorialManager : MonoBehaviour
             currentInteractable = interactions[interactableCounter];
             previousInteractable = interactableCounter - 1 < 0 ? null : interactions[interactableCounter - 1];
 
-            if (currentInteractable is CutTable && currentInteractable == previousInteractable)
-            {
-                currentInteractable.OnItemPickUp.AddListener(ChangeScene);
-            }
-            else if (currentInteractable is GridTableController controller && controller == previousInteractable)
-            {
-                controller.OnBackInput.Subscribe(ChangeScene);
-                parentTextRectTransform.anchoredPosition = textPositionInGrid.anchoredPosition;
-                currentInteractable._controlPointer.UseAlternativeImages = true;
-            }
-            else if (currentInteractable is Cauldron cauldron && cauldron == previousInteractable)
-            {
-                cauldron.OnItemPickUp.AddListener(ChangeScene);
-            }
-            else
-            {
-                currentInteractable.OnInteract.AddListener(ChangeScene);
-            }
+            AddEventInteraction();
 
             if (currentInteractable._controlPointer)
             {
@@ -143,9 +170,30 @@ public class TutorialManager : MonoBehaviour
         }
         else if (interactableCounter == interactions.Length - 1)
         {
-            arrowPointer.gameObject.SetActive(false);
-            parentTextRectTransform.anchoredPosition = textPositionInGrid.anchoredPosition;
-            onTurretPlaced.Subscribe(FinalMessage);
+            if (currentInteractable is GridTableController)
+            {
+                arrowPointer.gameObject.SetActive(false);
+                parentTextRectTransform.anchoredPosition = textPositionInGrid.anchoredPosition;
+                onTurretPlaced.Subscribe(FinalMessage);
+            }
+            else
+            {
+                currentInteractable = interactions[interactableCounter];
+                Debug.Log(currentInteractable.name);
+                currentInteractable.OnInteract.AddListener(FinalMessage);
+
+                currentInteractable.InteractionState(true);
+                arrowPointer.LookPosition = currentInteractable.transform.position;
+                if (currentInteractable._controlPointer)
+                {
+                    currentInteractable._controlPointer.gameObject.SetActive(true);
+                }
+
+                if (!arrowPointer.gameObject.activeSelf)
+                {
+                    arrowPointer.gameObject.SetActive(true);
+                }
+            }
         }
         else
         {
@@ -155,40 +203,57 @@ public class TutorialManager : MonoBehaviour
                 yield return null;
             }
 
+            arrowPointer.gameObject.SetActive(false);
             OnTutorialEnd.Invoke();
             parentTextRectTransform.gameObject.SetActive(false);
+        }
+    }
+
+    private void AddEventInteraction()
+    {
+        if (currentInteractable is CutTable && currentInteractable == previousInteractable)
+        {
+            currentInteractable.OnItemPickUp.AddListener(ChangeScene);
+        }
+        else if (currentInteractable is GridTableController controller && controller == previousInteractable)
+        {
+            controller.OnBackInput.Subscribe(ChangeScene);
+            parentTextRectTransform.anchoredPosition = textPositionInGrid.anchoredPosition;
+            currentInteractable._controlPointer.UseAlternativeImages = true;
+        }
+        else if (currentInteractable is Cauldron cauldron && cauldron == previousInteractable)
+        {
+            cauldron.OnItemPickUp.AddListener(ChangeScene);
+        }
+        else if (currentInteractable is BookTable book && book == previousInteractable)
+        {
+            book.OnItemDrop.AddListener(ChangeScene);
+        }
+        else
+        {
+            currentInteractable.OnInteract.AddListener(ChangeScene);
         }
     }
 
 
     private void ChangeScene()
     {
-        if (currentInteractable is CutTable &&
-            currentInteractable == previousInteractable)
-        {
-            currentInteractable.OnItemPickUp.RemoveListener(ChangeScene);
-        }
-        else if (currentInteractable is GridTableController controller && controller == previousInteractable)
-        {
-            controller.OnBackInput.Unsubscribe(ChangeScene);
-            parentTextRectTransform.anchoredPosition = defaultPosition;
-            currentInteractable._controlPointer.UseAlternativeImages = false;
-        }
-        else if (currentInteractable is Cauldron cauldron && cauldron == previousInteractable)
-        {
-            cauldron.OnItemPickUp.RemoveListener(ChangeScene);
-        }
-        else
-        {
-            currentInteractable.OnInteract.RemoveListener(ChangeScene);
-        }
+        RemoveEventInteraction(currentInteractable);
 
         if (currentInteractable._controlPointer)
         {
             currentInteractable._controlPointer.gameObject.SetActive(false);
         }
 
-        currentInteractable.InteractionState(interactableCounter == interactions.Length - 2 ? true : false);
+        if (currentInteractable is GridTableController)
+        {
+            currentInteractable.InteractionState(interactableCounter == interactions.Length - 2 ? true : false);
+        }
+        else
+        {
+            currentInteractable.InteractionState(interactableCounter == interactions.Length ? true : false);
+        }
+
         interactableCounter++;
 
         if (changingTutorialInteractions != null)
@@ -201,12 +266,20 @@ public class TutorialManager : MonoBehaviour
 
     private void FinalMessage()
     {
-        onTurretPlaced.Unsubscribe(FinalMessage);
+        if (currentInteractable is GridTableController)
+        {
+            onTurretPlaced.Unsubscribe(FinalMessage);
+        }
+        else
+        {
+            currentInteractable.OnInteract.RemoveListener(FinalMessage);
+            arrowPointer.gameObject.SetActive(false);
+        }
+
         ChangeScene();
         foreach (Table.Table table in interactableTable)
         {
             table.InteractionState(true);
         }
-        
     }
 }
