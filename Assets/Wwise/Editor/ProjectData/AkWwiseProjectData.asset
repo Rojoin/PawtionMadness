@@ -246,7 +246,7 @@ MonoBehaviour:
     ParentPath: Events\Tutorial
     guid: 090215d47f508a4c8e101bbd3392b83a
     GuidInternal: 
-    m_lastTime: -8584931114319481098
+    m_lastTime: -8584924487459526218
     List:
     - name: Ambient
       guid: 6c92e374d455ed4f9ad5a1931bbf86d2
@@ -1591,8 +1591,8 @@ MonoBehaviour:
         guid: cb40f2243521e641a625e13709449945
       Path: Events\Tutorial\Music\Stop_ingamemusic_tutorial
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Table
       guid: 14f8c6b495194049a1b8af72cf8886a1
       id: 2048817515
@@ -1766,7 +1766,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d95443d702661b448cd3207c91b5b886
     GuidInternal: 
-    m_lastTime: -8584931114270261279
+    m_lastTime: -8584920295291298605
     List:
     - name: ingamemusic_level
       guid: 29bcdb2a22c379459eec19e2b879a83c
@@ -1783,6 +1783,102 @@ MonoBehaviour:
         guid: 29bcdb2a22c379459eec19e2b879a83c
       Path: Switches\Default Work Unit\ingamemusic_level
       values:
+      - name: Bautum_easy
+        guid: 4e34a55b9634374693d24e08a3e5bf65
+        id: 265221752
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Bautum_easy
+          ObjectType: 10
+          guid: 4e34a55b9634374693d24e08a3e5bf65
+      - name: Bautum_hard
+        guid: 4f57675209655a498976d83e16209602
+        id: 2900492669
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Bautum_hard
+          ObjectType: 10
+          guid: 4f57675209655a498976d83e16209602
+      - name: Bautum_mid
+        guid: 9791360f467b094c88db11012b6be166
+        id: 2706813548
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Bautum_mid
+          ObjectType: 10
+          guid: 9791360f467b094c88db11012b6be166
+      - name: Cwinter_easy
+        guid: 022ec8f136a2f64baa49cbf2f66b6185
+        id: 2671927576
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Cwinter_easy
+          ObjectType: 10
+          guid: 022ec8f136a2f64baa49cbf2f66b6185
+      - name: Cwinter_hard
+        guid: c7b01bf3d0bcd54c88cf00d752d20328
+        id: 1053807901
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Cwinter_hard
+          ObjectType: 10
+          guid: c7b01bf3d0bcd54c88cf00d752d20328
+      - name: Cwinter_mid
+        guid: e037572fcb758149bd6776fbc1e5b7c2
+        id: 1933559692
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Cwinter_mid
+          ObjectType: 10
+          guid: e037572fcb758149bd6776fbc1e5b7c2
       - name: LOOSE
         guid: 37d93039aefe40439faaf226dba1e665
         id: 174960569
@@ -1947,7 +2043,7 @@ MonoBehaviour:
     m_lastTime: -8585003761023887590
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000c0000000f000000
+  ExpandedWaapiItemIds: 010000001e0000001f00000020000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
