@@ -169,8 +169,145 @@ MonoBehaviour:
     ParentPath: Events\InGame
     guid: e8c7ad57f028174ba6dbfb95905729f6
     GuidInternal: 
-    m_lastTime: -8585003761057151003
-    List: []
+    m_lastTime: -8584920047689035735
+    List:
+    - name: Music
+      guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      Path: Events\InGame\Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ingamemusic_level
+      guid: c3213a5034fc9d4e9778a26449b5ed57
+      id: 1421871233
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_ingamemusic_level
+        ObjectType: 3
+        guid: c3213a5034fc9d4e9778a26449b5ed57
+      Path: Events\InGame\Music\Play_ingamemusic_level
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ingamemusic_tutorial
+      guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
+      id: 2248956983
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_ingamemusic_tutorial
+        ObjectType: 3
+        guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
+      Path: Events\InGame\Music\Play_ingamemusic_tutorial
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Oleada
+      guid: a51ea37c9d39a448823490fce01ad297
+      id: 417218340
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_Oleada
+        ObjectType: 3
+        guid: a51ea37c9d39a448823490fce01ad297
+      Path: Events\InGame\Music\Play_Oleada
+      maxAttenuation: 0
+      maxDuration: 3.3125
+      minDuration: 3.3125
+    - name: Play_Oleada_final
+      guid: fe905c02fb29264a953eafe08a42edaa
+      id: 3691145017
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_Oleada_final
+        ObjectType: 3
+        guid: fe905c02fb29264a953eafe08a42edaa
+      Path: Events\InGame\Music\Play_Oleada_final
+      maxAttenuation: 0
+      maxDuration: 4.901312
+      minDuration: 4.901312
+    - name: Play_Perder_Juego
+      guid: 7f0688f8eca3d14da04eb57ace82398c
+      id: 4180257511
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_Perder_Juego
+        ObjectType: 3
+        guid: 7f0688f8eca3d14da04eb57ace82398c
+      Path: Events\InGame\Music\Play_Perder_Juego
+      maxAttenuation: 0
+      maxDuration: 3.75
+      minDuration: 3.75
+    - name: Stop_ingamemusic_tutorial
+      guid: cb40f2243521e641a625e13709449945
+      id: 1845867801
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Stop_ingamemusic_tutorial
+        ObjectType: 3
+        guid: cb40f2243521e641a625e13709449945
+      Path: Events\InGame\Music\Stop_ingamemusic_tutorial
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\MainMenu.wwu
     PathAndIcons:
     - ElementName: Events
@@ -246,7 +383,7 @@ MonoBehaviour:
     ParentPath: Events\Tutorial
     guid: 090215d47f508a4c8e101bbd3392b83a
     GuidInternal: 
-    m_lastTime: -8584924487459526218
+    m_lastTime: -8584920047688905675
     List:
     - name: Ambient
       guid: 6c92e374d455ed4f9ad5a1931bbf86d2
@@ -539,23 +676,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 6.224346
       minDuration: 5.545261
-    - name: Music
-      guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      id: 3991942870
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      Path: Events\Tutorial\Music
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Play_Agarrar_Item_Frasco
       guid: 10a870c57902254ebc5e6558907bd42c
       id: 2559549617
@@ -856,46 +976,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.619101
       minDuration: 0.241355
-    - name: Play_ingamemusic_level
-      guid: c3213a5034fc9d4e9778a26449b5ed57
-      id: 1421871233
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      - ElementName: Play_ingamemusic_level
-        ObjectType: 3
-        guid: c3213a5034fc9d4e9778a26449b5ed57
-      Path: Events\Tutorial\Music\Play_ingamemusic_level
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_ingamemusic_tutorial
-      guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
-      id: 2248956983
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      - ElementName: Play_ingamemusic_tutorial
-        ObjectType: 3
-        guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
-      Path: Events\Tutorial\Music\Play_ingamemusic_tutorial
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Play_libro_abrir_3
       guid: ec1542ec49890643bc208a0b55e77645
       id: 707032169
@@ -916,66 +996,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.029897
       minDuration: 0.985663
-    - name: Play_Oleada
-      guid: a51ea37c9d39a448823490fce01ad297
-      id: 417218340
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      - ElementName: Play_Oleada
-        ObjectType: 3
-        guid: a51ea37c9d39a448823490fce01ad297
-      Path: Events\Tutorial\Music\Play_Oleada
-      maxAttenuation: 0
-      maxDuration: 3.3125
-      minDuration: 3.3125
-    - name: Play_Oleada_final
-      guid: fe905c02fb29264a953eafe08a42edaa
-      id: 3691145017
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      - ElementName: Play_Oleada_final
-        ObjectType: 3
-        guid: fe905c02fb29264a953eafe08a42edaa
-      Path: Events\Tutorial\Music\Play_Oleada_final
-      maxAttenuation: 0
-      maxDuration: 4.901312
-      minDuration: 4.901312
-    - name: Play_Perder_Juego
-      guid: 7f0688f8eca3d14da04eb57ace82398c
-      id: 4180257511
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      - ElementName: Play_Perder_Juego
-        ObjectType: 3
-        guid: 7f0688f8eca3d14da04eb57ace82398c
-      Path: Events\Tutorial\Music\Play_Perder_Juego
-      maxAttenuation: 0
-      maxDuration: 3.75
-      minDuration: 3.75
     - name: Play_Pocion_Lista
       guid: a32c4b5464d5e34f95196ca03ead2ebc
       id: 4143622118
@@ -1573,26 +1593,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.92587
       minDuration: 0.654689
-    - name: Stop_ingamemusic_tutorial
-      guid: cb40f2243521e641a625e13709449945
-      id: 1845867801
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      - ElementName: Stop_ingamemusic_tutorial
-        ObjectType: 3
-        guid: cb40f2243521e641a625e13709449945
-      Path: Events\Tutorial\Music\Stop_ingamemusic_tutorial
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
     - name: Table
       guid: 14f8c6b495194049a1b8af72cf8886a1
       id: 2048817515
@@ -2043,7 +2043,7 @@ MonoBehaviour:
     m_lastTime: -8585003761023887590
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000050000000c000000120000001d0000001e0000001f00000020000000
+  ExpandedWaapiItemIds: 1d0000001e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
