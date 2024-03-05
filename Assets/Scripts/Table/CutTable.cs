@@ -9,6 +9,7 @@ namespace Table
 {
     public class CutTable : Table
     {
+        [SerializeField] private GameObject progressBarObject;
         [SerializeField] private CuttingRecipeSO[] _cuttingRecipeArray;
         [SerializeField] private Image progressBar;
         [SerializeField] private Ingredient ingredient;
@@ -48,6 +49,7 @@ namespace Table
                 playerInventory.GetPickable().SetNewParent(_itemPos);
                 ingredient = playerInventory.GetPickable() as Ingredient;
                 playerInventory.NullPickable();
+                progressBarObject.SetActive(true);
                 progressBar.enabled = true;
                 ingredient.SetIconVisible(true);
                 progressBar.fillAmount = 0;
@@ -63,6 +65,7 @@ namespace Table
         {
             cutCounter = 0;
             progressBar.enabled = false;
+            progressBarObject.SetActive(false);
         }
 
 
@@ -83,6 +86,7 @@ namespace Table
                 Destroy(ingredient.gameObject);
                 ingredient = cutIngredient;
                 ingredient.SetProcessed();
+                progressBarObject.SetActive(false);
             }
         }
     }
