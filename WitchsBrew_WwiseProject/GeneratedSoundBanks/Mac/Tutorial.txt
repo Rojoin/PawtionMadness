@@ -8,7 +8,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	263685855	Rango_Muerte			\Tutorial\Enemies\Rango_Muerte	
 	314498979	Player_Agarrar			\Tutorial\Table\Player_Agarrar	
 	349902616	Play_Enojado_random			\Tutorial\Enemies\Play_Enojado_random	
-	417218340	Play_Oleada			\Tutorial\Music\Play_Oleada	
 	557674403	Player_Desplazamiento			\Tutorial\Player\Player_Desplazamiento	
 	707032169	Play_libro_abrir_3			\Tutorial\Table\Play_libro_abrir_3	
 	953774878	Play_Enojado_esfuerzo_y_ataque			\Tutorial\Enemies\Play_Enojado_esfuerzo_y_ataque	
@@ -16,7 +15,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	1037903552	Reforzado_Muerte			\Tutorial\Enemies\Reforzado_Muerte	
 	1061034442	Procesar_Item			\Tutorial\Table\Procesar_Item	
 	1363661528	Defense_Muerte			\Tutorial\Turrets\Defense_Muerte	
-	1421871233	Play_ingamemusic_level			\Tutorial\Music\Play_ingamemusic_level	
 	1452442514	Play_AMB_Bosque_Noche			\Tutorial\Ambient\Play_AMB_Bosque_Noche	
 	1475103013	Play_Enoajdo_adicional			\Tutorial\Enemies\Play_Enoajdo_adicional	
 	1478342869	Error_no_se_puede_poner_mas_items_en_la_mesa			\Tutorial\Table\Error_no_se_puede_poner_mas_items_en_la_mesa	
@@ -24,13 +22,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	1555542894	Error_no_se_puede_poner_cristal			\Tutorial\Table\Error_no_se_puede_poner_cristal	
 	1574582848	Simple_Muerte			\Tutorial\Enemies\Simple_Muerte	
 	1672850383	Play_Poner_Item_caldero			\Tutorial\Couldron\Play_Poner_Item_caldero	
-	1845867801	Stop_ingamemusic_tutorial			\Tutorial\Music\Stop_ingamemusic_tutorial	
 	1918569767	Proyectil_Muerte			\Tutorial\Turrets\Proyectil_Muerte	
 	1925760625	Play_Charger_Muerte			\Tutorial\Enemies\Play_Charger_Muerte	
 	2191355065	Play_Agarrar_item_Porcion			\Tutorial\Couldron\Play_Agarrar_item_Porcion	
 	2203504569	Laser_SonidoEspecial			\Tutorial\Turrets\Laser_SonidoEspecial	
 	2238034958	Rango_SonidoRandom			\Tutorial\Enemies\Rango_SonidoRandom	
-	2248956983	Play_ingamemusic_tutorial			\Tutorial\Music\Play_ingamemusic_tutorial	
 	2258568403	Eliminar_Cristal			\Tutorial\Table\Eliminar_Cristal	
 	2386456392	Play_Charger_Esfuerzo_Ataque			\Tutorial\Enemies\Play_Charger_Esfuerzo_Ataque	
 	2498537471	Rango_Desplazamiento			\Tutorial\Enemies\Rango_Desplazamiento	
@@ -51,7 +47,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	3362525071	Play_Charger_SonidoAdicional			\Tutorial\Enemies\Play_Charger_SonidoAdicional	
 	3373196541	Defense_SonidosEspeciales			\Tutorial\Turrets\Defense_SonidosEspeciales	
 	3638962258	Play_Procesar_Agarrar			\Tutorial\Table\Play_Procesar_Agarrar	
-	3691145017	Play_Oleada_final			\Tutorial\Music\Play_Oleada_final	
 	3760360352	Play_SonidoRandom_Caldero			\Tutorial\Couldron\Play_SonidoRandom_Caldero	
 	3840329095	Recetario_Cerrar			\Tutorial\Table\Recetario_Cerrar	
 	3880584468	Interfaz_AceptarContinuar			\Tutorial\UI\Interfaz_AceptarContinuar	
@@ -62,28 +57,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	4076529347	Reforzado_Random			\Tutorial\Enemies\Reforzado_Random	
 	4120818535	Play_AMB_Tutorial			\Tutorial\Ambient\Play_AMB_Tutorial	
 	4143622118	Play_Pocion_Lista			\Tutorial\Couldron\Play_Pocion_Lista	
-	4180257511	Play_Perder_Juego			\Tutorial\Music\Play_Perder_Juego	
 	4237093597	Simple_SonidoRandom			\Tutorial\Enemies\Simple_SonidoRandom	
-
-Switch Group	ID	Name			Wwise Object Path	Notes
-	563444820	ingamemusic_level			\Default Work Unit\ingamemusic_level	
-	2707460344	ingamemusic_tutorial			\Default Work Unit\ingamemusic_tutorial	
-
-Switch	ID	Name	Switch Group			Notes
-	174960569	LOOSE	ingamemusic_level			
-	265221752	Bautum_easy	ingamemusic_level			
-	979765101	WIN	ingamemusic_level			
-	1053807901	Cwinter_hard	ingamemusic_level			
-	1933559692	Cwinter_mid	ingamemusic_level			
-	2561619007	A1summer_mid	ingamemusic_level			
-	2671927576	Cwinter_easy	ingamemusic_level			
-	2706813548	Bautum_mid	ingamemusic_level			
-	2748726444	A1summer_hard	ingamemusic_level			
-	2900492669	Bautum_hard	ingamemusic_level			
-	3972850513	A1summer_easy	ingamemusic_level			
-	174960569	LOOSE	ingamemusic_tutorial			
-	979765101	WIN	ingamemusic_tutorial			
-	2453122375	wave1	ingamemusic_tutorial			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	5376380	Rango_SonidoRandom4	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Rango_SonidoRandom4_3DCDB1A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Rango\Rango_SonidoRandom\Rango_SonidoRandom4		320648
@@ -94,20 +68,16 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	39665467	Enojado_recibe daño 2	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enojado_recibe daño 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Enojado\Enojado_recibe daño\Enojado_recibe daño 2		96280
 	66053801	Explosive_Muerte	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Torretas\Explosive_Muerte_A7AE076F.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Torretas\Explosive_Muerte		132928
 	74052067	Procesar_Item_04	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Procesar item_2D2ACB26.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Mesa de Procesado\procesar_item\Procesar_Item_04		31112
-	75689933	GAMEPLAY_Winter_1st wave_tale reverb	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_Winter_1st wave_tale reverb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_level\C1winter_easy\GAMEPLAY_Winter_1st wave_tale reverb\GAMEPLAY_Winter_1st wave_tale reverb		5351288
 	91886125	Procesar_Item_07	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Procesar item_B2332E7B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Mesa de Procesado\procesar_item\Procesar_Item_07		29668
 	109182392	Reforzado Ataca	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enemigos\Reforzado Ataca_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Reforzado\Reforzado Ataca		285928
-	113840108	GAMEPLAY_Level1_2nd wave_tale reverb	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_Level1_2nd wave_tale reverb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_level\A2summer_mid\GAMEPLAY_Level1_2nd wave_tale reverb\GAMEPLAY_Level1_2nd wave_tale reverb		2675676
 	121789417	Rango_Muerte3	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Rango_Muerte3_56380986.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Rango\Rango_Muerte\Rango_Muerte3		239856
 	125234085	Player Muerte	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Player\Player Muerte_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Player Muerte		290172
 	126444222	Rango_RecibeDaño3	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Rango_RecibeDaño3_08BD4D0B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Rango\Rango_RecibeDaño\Rango_RecibeDaño3		101772
 	133583972	Charger_Esfuerzo4	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Charger_Esfuerzo4_E861D487.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Charger\Charger_Esfuerzo_Ataque\Charger_Esfuerzo\Charger_Esfuerzo4		42432
 	142673883	Enojado_atacar 2	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enojado_atacar 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Enojado\Enojado_esfuerzo y ataque\Enojado_atacar\Enojado_atacar 2		253452
 	144211292	Explosive_SonidoEspecial	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Torretas\Explosive_SonidoEspecial_4814FF62.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Torretas\Explosive_SonidoEspecial		299204
-	148464406	Perder_Juego	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Perder_Juego_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiente\Perder_Juego		720144
 	172895656	Charger_Esfuerzo3	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Charger_Esfuerzo3_977E71DF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Charger\Charger_Esfuerzo_Ataque\Charger_Esfuerzo\Charger_Esfuerzo3		65028
 	192562094	Simple_SonidoRandom	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Simple_SonidoRandom_F6A5FB63.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Simple\Simple_SonidoRandom		158436
-	198317943	Oleada final	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Ambiente\Oleada final_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiente\Oleada final		941196
 	203513851	Enojado_esfuerzo 2	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enojado_esfuerzo 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Enojado\Enojado_esfuerzo y ataque\Enojado_esfuerzo\Enojado_esfuerzo 2		128528
 	208953497	Cerrar Libro	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Cocina\Cerrar Libro_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Libro de recetas\Cerrar Libro		123100
 	210168708	Rango_SonidoRandom3	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Rango_SonidoRandom3_C943BD26.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Rango\Rango_SonidoRandom\Rango_SonidoRandom3		303528
@@ -137,7 +107,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	367186709	Enojado_random 3	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enojado_random 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Enojado\Enojado_random\Enojado_random 3		229920
 	368238731	Eliminar_Cristal	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Eliminar_Cristal_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Interaccion\Eliminar_Cristal		214044
 	375136911	Pocion_Lista	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Pocion_Lista_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Caldero\Pocion_Lista		382144
-	379388087	GAMEPLAY_Levle1_1st wave_tale reverb	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_Levle1_1st wave_tale reverb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_level\A1summer_easy\GAMEPLAY_Levle1_1st wave_tale reverb\GAMEPLAY_Levle1_1st wave_tale reverb		2972968
 	379755731	Enojado_recibe daño 3	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enojado_recibe daño 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Enojado\Enojado_recibe daño\Enojado_recibe daño 3		93572
 	380180008	AMB_Bosque_Noche	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Ambiente\AMB_Bosque_Noche_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiente\AMB_Bosque_Noche		8832144
 	381775547	Procesar_Item_03	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Procesar item_7752CB2D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Mesa de Procesado\procesar_item\Procesar_Item_03		31112
@@ -152,12 +121,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	437482894	Charger_Muerte2	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Charger_Muerte2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Charger\Charger_Muerte\Charger_Muerte2		480144
 	438486586	Useless_Muerte	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Torretas\Useless_Muerte_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Torretas\Useless_Muerte		112144
 	449914338	Enojado_muierte 2	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enojado_muierte 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Enojado\Enojado_,muerte\Enojado_muierte 2		157056
-	452233697	GAMEPLAY_C_155	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_C_155_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_tutorial1\wave1\GAMEPLAY_C_155\GAMEPLAY_C_155		2378388
 	457334395	Player_Desplazamiento3	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Player\Player_Desplazamiento3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Desplazamiento\Player_Desplazamiento3		78644
 	460792029	Agarrar_item_Porcion	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Cocina\Agarrar_item_Porcion_79F95435.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Caldero\Agarrar_item_Porcion		160844
-	471260018	Comienzo_de_juego	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Comienzo_de_juego_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiente\Comienzo_de_juego		896964
 	475716205	AMB_Pajaros_cuervos_start	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\AMB_Pajaros_cuervos_start_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiente\AMB_Pajaros_cuervos_start		16384064
-	493093940	GAMEPLAY_Winter_2nd wave_tale reverb	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_Winter_2nd wave_tale reverb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_level\C2winter_mid\GAMEPLAY_Winter_2nd wave_tale reverb\GAMEPLAY_Winter_2nd wave_tale reverb		5054000
 	505813500	Enojado_esfuerzo 1	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enojado_esfuerzo 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Enojado\Enojado_esfuerzo y ataque\Enojado_esfuerzo\Enojado_esfuerzo 1		105536
 	506128643	Agarrar_Item_Frasco	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Agarrar_Item_Frasco_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Frasco\Agarrar_Item_Frasco		248144
 	521151047	Player_Desplazamiento2	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Player\Player_Desplazamiento2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Desplazamiento\Player_Desplazamiento2		107344
@@ -169,7 +135,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	578004247	Rango_Esfuerzo3	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Rango_Esfuerzo3_71FE22BA.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Rango\Rango_Esfuerzo_Ataque\Esfuerzo\Rango_Esfuerzo3		108992
 	594654920	Rango_Ataque2	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Rango_Ataque1_8BA4164B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Rango\Rango_Esfuerzo_Ataque\Ataque\Rango_Ataque2		147572
 	596125856	Laser_Disparo	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Torretas\Laser_Disparo_110447EE.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Torretas\Laser_Disparo		174952
-	596694758	GAMEPLAY_Level1_3stwave_tale reverb	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_Level1_3stwave_tale reverb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_level\A3summer_hard\GAMEPLAY_Level1_3stwave_tale reverb\GAMEPLAY_Level1_3stwave_tale reverb		2675676
 	609132010	Enojado_atacar 1	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enojado_atacar 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Enojado\Enojado_esfuerzo y ataque\Enojado_atacar\Enojado_atacar 1		165856
 	610065741	Procesar_Item	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Procesar item_7AE4FAAB.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Mesa de Procesado\procesar_item\Procesar_Item		26780
 	629652365	Rango_Esfuerzo2	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Rango_Esfuerzo2_6ED37F10.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Rango\Rango_Esfuerzo_Ataque\Esfuerzo\Rango_Esfuerzo2		116556
@@ -186,7 +151,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	682955268	Enojado_random 1	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enojado_random 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Enojado\Enojado_random\Enojado_random 1		141080
 	694474887	Charger_Esfuerzo2	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Charger_Esfuerzo2_DAAE2368.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Charger\Charger_Esfuerzo_Ataque\Charger_Esfuerzo\Charger_Esfuerzo2		47984
 	695110819	Charger_Muerte1	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Charger_Muerte1_1A18E6AC.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Charger\Charger_Muerte\Charger_Muerte1		166928
-	699493596	GAMEPLAY_Autum_3stwave_tale reverb	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_Autum_3stwave_tale reverb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_level\B3autum_hard\GAMEPLAY_Autum_3stwave_tale reverb\GAMEPLAY_Autum_3stwave_tale reverb		5054000
 	701479000	Charger_Ataca2	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Charger_Ataca2_376D726B.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Charger\Charger_Esfuerzo_Ataque\Charger_Ataca\Charger_Ataca2		132252
 	713654616	Enojado_recibe daño 6	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enojado_recibe daño 6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Enojado\Enojado_recibe daño\Enojado_recibe daño 6		77224
 	714228155	Procesar_Item_06	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Procesar item_46A46F83.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Mesa de Procesado\procesar_item\Procesar_Item_06		28228
@@ -203,17 +167,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	805146545	Charger_RecibeDaño2	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Charger_RecibeDaño2_1A59AA37.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Charger\Charger_RecibeDaño\Charger_RecibeDaño2		148016
 	811572311	Simple_Muerte	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Simple_Muerte_84E8C819.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Simple\Simple_Muerte\Simple_Muerte		49544
 	816894155	Rango_Desplazamiento	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Rango_Desplazamiento_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Rango\Rango_Desplazamiento		2496144
-	818862688	GAMEPLAY_Loose_talereverb	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_Loose_talereverb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_level\LOOSE\GAMEPLAY_Loose_talereverb\GAMEPLAY_Loose_talereverb		1189224
 	828394097	Defense_SonidosEspeciales	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Torretas\Defense_SonidosEspeciales_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Torretas\Defense_SonidosEspeciales		576144
-	834745886	GAMEPLAY_Winter_3stwave_tale reverb	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_Winter_3stwave_tale reverb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_level\C3winter_hard\GAMEPLAY_Winter_3stwave_tale reverb\GAMEPLAY_Winter_3stwave_tale reverb		5054000
 	855955729	Charger_SonidoRandom2	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Charger_SonidoRandom2_6B70B247.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Charger\Charger_SonidoRandom\Charger_SonidoRandom2		206028
 	856019913	Procesar_Item_02	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Procesar item_C0F567C7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Mesa de Procesado\procesar_item\Procesar_Item_02		30392
-	860996437	GAMEPLAY_Autum_2nd wave_tale reverb	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_Autum_2nd wave_tale reverb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_level\B2autum_mid\GAMEPLAY_Autum_2nd wave_tale reverb\GAMEPLAY_Autum_2nd wave_tale reverb		5054000
 	862371418	Proyectil_Muerte	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Torretas\Proyectil_Muerte_5DC35B80.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Torretas\Proyectil_Muerte		82628
 	868196858	Charger_Esfuerzo1	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Charger_Esfuerzo1_021B96AF.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Charger\Charger_Esfuerzo_Ataque\Charger_Esfuerzo\Charger_Esfuerzo1		37804
 	877118790	Rango_RecibeDaño2	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Rango_RecibeDaño2_A4EFF5C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Rango\Rango_RecibeDaño\Rango_RecibeDaño2		106840
 	887695824	Charger_SonidoRandom1	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Charger_SonidoRandom1_5C0B7A7D.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Charger\Charger_SonidoRandom\Charger_SonidoRandom1		287544
-	892793745	GAMEPLAY_Autum_1st wave_tale reverb	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_Autum_1st wave_tale reverb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_level\B1autum_esay\GAMEPLAY_Autum_1st wave_tale reverb\GAMEPLAY_Autum_1st wave_tale reverb		5351288
 	904775504	Player_Soltar	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Player\Player_Soltar_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Player\Player_Soltar		72244
 	906164816	Enojado_esfuerzo 5	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enojado_esfuerzo 5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Enojado\Enojado_esfuerzo y ataque\Enojado_esfuerzo\Enojado_esfuerzo 5		82072
 	958109958	Procesar_Item_01	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Procesar item_C1C886F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Cocina\Mesa de Procesado\procesar_item\Procesar_Item_01		28948
@@ -222,7 +182,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	984934456	Enojado_atacar 3	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enojado_atacar 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Enojado\Enojado_esfuerzo y ataque\Enojado_atacar\Enojado_atacar 3		166204
 	987689379	Enojado_muierte 1	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Enojado_muierte 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Enojado\Enojado_,muerte\Enojado_muierte 1		177556
 	1028058883	aceptar continuar	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\aceptar continuar_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Interfaz\aceptar continuar		201972
-	1060214257	GAMEPLAY_Winmusic_talereverb	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\GAMEPLAY_Winmusic_talereverb_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ingamemusic_level\WIN\GAMEPLAY_Winmusic_talereverb\GAMEPLAY_Winmusic_talereverb		1635160
 	1063825271	Simple_Desplazamiento	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Simple_Desplazamiento_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Enemigos\Simple\Simple_Desplazamiento		3131776
-	1064777720	Oleada	C:\Users\silvi\Desktop\Covid19\Unity\Desarollo 3\TSDV-PP3-Arrastua-Coletta\WitchsBrew_WwiseProject\.cache\Mac\SFX\Oleada_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Ambiente\Oleada		636144
 
