@@ -66,16 +66,7 @@ public class UIManager : MonoBehaviour
         SetCanvasVisibility(SettingsScreen, false);
     }
 
-    public bool HasTutorialEnded()
-    {
-        if (TutorialScreen.GetComponent<TutorialCanvas>().NextTutorial())
-        {
-            SetCanvasVisibility(TutorialScreen, false);
-            return true;
-        }
 
-        return false;
-    }
 
     public void ActivateGameOverCanvas()
     {

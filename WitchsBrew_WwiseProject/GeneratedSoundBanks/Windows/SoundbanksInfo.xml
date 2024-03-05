@@ -11,10 +11,247 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="984691642" Language="SFX" Hash="2591855525">
+		<SoundBank Id="984691642" Language="SFX" Hash="1511582730">
 			<ObjectPath>\SoundBanks\Default Work Unit\InGame</ObjectPath>
 			<ShortName>InGame</ShortName>
 			<Path>InGame.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1421871233" Name="Play_ingamemusic_level" ObjectPath="\Events\InGame\Music\Play_ingamemusic_level" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="75689933" Language="SFX">
+							<ShortName>GAMEPLAY_Winter_1st wave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Winter_1st wave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="113840108" Language="SFX">
+							<ShortName>GAMEPLAY_Level1_2nd wave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Level1_2nd wave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="145743035" Language="SFX">
+							<ShortName>GAMEPLAY_spring_1st wave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_spring_1st wave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="379388087" Language="SFX">
+							<ShortName>GAMEPLAY_Levle1_1st wave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Levle1_1st wave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="451676811" Language="SFX">
+							<ShortName>GAMEPLAY_spring_3stwave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_spring_3stwave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="471260018" Language="SFX">
+							<ShortName>Comienzo_de_juego.wav</ShortName>
+							<Path>SFX\Comienzo_de_juego_10C4C929.wem</Path>
+						</File>
+						<File Id="493093940" Language="SFX">
+							<ShortName>GAMEPLAY_Winter_2nd wave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Winter_2nd wave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="596694758" Language="SFX">
+							<ShortName>GAMEPLAY_Level1_3stwave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Level1_3stwave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="699493596" Language="SFX">
+							<ShortName>GAMEPLAY_Autum_3stwave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Autum_3stwave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="818862688" Language="SFX">
+							<ShortName>GAMEPLAY_Loose_talereverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Loose_talereverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="834745886" Language="SFX">
+							<ShortName>GAMEPLAY_Winter_3stwave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Winter_3stwave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="860996437" Language="SFX">
+							<ShortName>GAMEPLAY_Autum_2nd wave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Autum_2nd wave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="892793745" Language="SFX">
+							<ShortName>GAMEPLAY_Autum_1st wave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Autum_1st wave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="899082917" Language="SFX">
+							<ShortName>GAMEPLAY_spring_2nd wave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_spring_2nd wave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1060214257" Language="SFX">
+							<ShortName>GAMEPLAY_Winmusic_talereverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Winmusic_talereverb_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{03ED9C28-5FCC-466C-A5D3-B5D3BFA03977}">
+							<Media>
+								<File Id="379388087"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{ED723FBA-EE10-4712-973D-5EEE926EC1F4}">
+							<Media>
+								<File Id="113840108"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{9E050B27-95DF-445D-B3E8-E9B97C385A17}">
+							<Media>
+								<File Id="596694758"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{2ADBBC29-C322-4579-9EEC-19E2B879A83C}">
+							<Media>
+								<File Id="379388087"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{3930D937-FEAE-4340-9FAA-F226DBA1E665}">
+							<Media>
+								<File Id="818862688"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{38AE8664-B5B4-4A8C-A3E7-A54B772C1F05}">
+							<Media>
+								<File Id="1060214257"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{F1C82E02-A236-4BF6-AA49-CBF2F66B6185}">
+							<Media>
+								<File Id="75689933"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{F31BB0C7-BCD0-4CD5-88CF-00D752D20328}">
+							<Media>
+								<File Id="834745886"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{2F5737E0-75CB-4981-BD67-76FBC1E5B7C2}">
+							<Media>
+								<File Id="493093940"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{5267574F-6509-495A-8976-D83E16209602}">
+							<Media>
+								<File Id="860996437"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{5BA5344E-3496-4637-93D2-4E08A3E5BF65}">
+							<Media>
+								<File Id="892793745"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{0F369197-7B46-4C09-88DB-11012B6BE166}">
+							<Media>
+								<File Id="699493596"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{028600F6-6C61-4C7C-B894-C0EF38C744E9}">
+							<Media>
+								<File Id="451676811"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{3A36854C-EDDD-46FD-A936-A112EB6E4DD9}">
+							<Media>
+								<File Id="145743035"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{A9D51253-1299-445D-BE56-313D102955A8}">
+							<Media>
+								<File Id="899082917"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2248956983" Name="Play_ingamemusic_tutorial" ObjectPath="\Events\InGame\Music\Play_ingamemusic_tutorial" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="452233697" Language="SFX">
+							<ShortName>GAMEPLAY_C_155.wav</ShortName>
+							<Path>SFX\GAMEPLAY_C_155_D79FB2B7.wem</Path>
+						</File>
+						<File Id="471260018" Language="SFX">
+							<ShortName>Comienzo_de_juego.wav</ShortName>
+							<Path>SFX\Comienzo_de_juego_10C4C929.wem</Path>
+						</File>
+						<File Id="818862688" Language="SFX">
+							<ShortName>GAMEPLAY_Loose_talereverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Loose_talereverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1060214257" Language="SFX">
+							<ShortName>GAMEPLAY_Winmusic_talereverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_Winmusic_talereverb_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{ACC73AB8-30DE-4638-B773-D905F57C6564}">
+							<Media>
+								<File Id="452233697"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{E7FA64AD-B97B-4526-9DDA-9F7F3C30EDD9}">
+							<Media>
+								<File Id="818862688"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{3A5B4941-EC55-4BD4-B47E-F5587787D9D3}">
+							<Media>
+								<File Id="1060214257"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{FCABC9B7-47A9-40D6-A782-4DA78C892EC4}">
+							<Media>
+								<File Id="452233697"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="417218340" Name="Play_Oleada" ObjectPath="\Events\InGame\Music\Play_Oleada" DurationType="OneShot" DurationMin="3.3125" DurationMax="3.3125">
+					<IncludedMemoryFiles>
+						<File Id="1064777720" Language="SFX">
+							<ShortName>Oleada.wav</ShortName>
+							<Path>SFX\Oleada_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3691145017" Name="Play_Oleada_final" ObjectPath="\Events\InGame\Music\Play_Oleada_final" DurationType="OneShot" DurationMin="4.901312" DurationMax="4.901312">
+					<IncludedMemoryFiles>
+						<File Id="198317943" Language="SFX">
+							<ShortName>Ambiente\Oleada final.wav</ShortName>
+							<Path>SFX\Ambiente\Oleada final_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4180257511" Name="Play_Perder_Juego" ObjectPath="\Events\InGame\Music\Play_Perder_Juego" DurationType="OneShot" DurationMin="3.75" DurationMax="3.75">
+					<IncludedMemoryFiles>
+						<File Id="148464406" Language="SFX">
+							<ShortName>Perder_Juego.wav</ShortName>
+							<Path>SFX\Perder_Juego_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1845867801" Name="Stop_ingamemusic_tutorial" ObjectPath="\Events\InGame\Music\Stop_ingamemusic_tutorial" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="563444820" Name="ingamemusic_level" ObjectPath="\Switches\Default Work Unit\ingamemusic_level" GUID="{2ADBBC29-C322-4579-9EEC-19E2B879A83C}">
+					<Switches>
+						<Switch Id="3972850513" Name="A1summer_easy" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\A1summer_easy" GUID="{03ED9C28-5FCC-466C-A5D3-B5D3BFA03977}"/>
+						<Switch Id="2748726444" Name="A1summer_hard" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\A1summer_hard" GUID="{9E050B27-95DF-445D-B3E8-E9B97C385A17}"/>
+						<Switch Id="2561619007" Name="A1summer_mid" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\A1summer_mid" GUID="{ED723FBA-EE10-4712-973D-5EEE926EC1F4}"/>
+						<Switch Id="174960569" Name="LOOSE" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\LOOSE" GUID="{3930D937-FEAE-4340-9FAA-F226DBA1E665}"/>
+						<Switch Id="979765101" Name="WIN" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\WIN" GUID="{38AE8664-B5B4-4A8C-A3E7-A54B772C1F05}"/>
+						<Switch Id="2671927576" Name="Cwinter_easy" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Cwinter_easy" GUID="{F1C82E02-A236-4BF6-AA49-CBF2F66B6185}"/>
+						<Switch Id="1933559692" Name="Cwinter_mid" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Cwinter_mid" GUID="{2F5737E0-75CB-4981-BD67-76FBC1E5B7C2}"/>
+						<Switch Id="1053807901" Name="Cwinter_hard" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Cwinter_hard" GUID="{F31BB0C7-BCD0-4CD5-88CF-00D752D20328}"/>
+						<Switch Id="265221752" Name="Bautum_easy" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Bautum_easy" GUID="{5BA5344E-3496-4637-93D2-4E08A3E5BF65}"/>
+						<Switch Id="2706813548" Name="Bautum_mid" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Bautum_mid" GUID="{0F369197-7B46-4C09-88DB-11012B6BE166}"/>
+						<Switch Id="2900492669" Name="Bautum_hard" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Bautum_hard" GUID="{5267574F-6509-495A-8976-D83E16209602}"/>
+						<Switch Id="1684312137" Name="Dspring_easy" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Dspring_easy" GUID="{3A36854C-EDDD-46FD-A936-A112EB6E4DD9}"/>
+						<Switch Id="881028919" Name="Dspring_mid" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Dspring_mid" GUID="{A9D51253-1299-445D-BE56-313D102955A8}"/>
+						<Switch Id="3944199108" Name="Dspring_hard" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Dspring_hard" GUID="{028600F6-6C61-4C7C-B894-C0EF38C744E9}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2707460344" Name="ingamemusic_tutorial" ObjectPath="\Switches\Default Work Unit\ingamemusic_tutorial" GUID="{FCABC9B7-47A9-40D6-A782-4DA78C892EC4}">
+					<Switches>
+						<Switch Id="2453122375" Name="wave1" ObjectPath="\Switches\Default Work Unit\ingamemusic_tutorial\wave1" GUID="{ACC73AB8-30DE-4638-B773-D905F57C6564}"/>
+						<Switch Id="174960569" Name="LOOSE" ObjectPath="\Switches\Default Work Unit\ingamemusic_tutorial\LOOSE" GUID="{E7FA64AD-B97B-4526-9DDA-9F7F3C30EDD9}"/>
+						<Switch Id="979765101" Name="WIN" ObjectPath="\Switches\Default Work Unit\ingamemusic_tutorial\WIN" GUID="{3A5B4941-EC55-4BD4-B47E-F5587787D9D3}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX" Hash="4214726102">
 			<ObjectPath>Init</ObjectPath>
@@ -26,7 +263,7 @@
 				<GameParameter Id="4056684167" Name="Master" ObjectPath="\Game Parameters\Default Work Unit\Master"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3604647259" Language="SFX" Hash="1471552625">
+		<SoundBank Id="3604647259" Language="SFX" Hash="1849664360">
 			<ObjectPath>\SoundBanks\Default Work Unit\MainMenu</ObjectPath>
 			<ShortName>MainMenu</ShortName>
 			<Path>MainMenu.bnk</Path>
@@ -42,7 +279,7 @@
 				<Event Id="1420342416" Name="StopMainMenuMusic" ObjectPath="\Events\MainMenu\StopMainMenuMusic" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3762955427" Language="SFX" Hash="3375335971">
+		<SoundBank Id="3762955427" Language="SFX" Hash="1122673069">
 			<ObjectPath>\SoundBanks\Default Work Unit\Tutorial</ObjectPath>
 			<ShortName>Tutorial</ShortName>
 			<Path>Tutorial.bnk</Path>
@@ -419,137 +656,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1421871233" Name="Play_ingamemusic_level" ObjectPath="\Events\Tutorial\Music\Play_ingamemusic_level" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="113840108" Language="SFX">
-							<ShortName>GAMEPLAY_Level1_2nd wave_tale reverb.wav</ShortName>
-							<Path>SFX\GAMEPLAY_Level1_2nd wave_tale reverb_D79FB2B7.wem</Path>
-						</File>
-						<File Id="379388087" Language="SFX">
-							<ShortName>GAMEPLAY_Levle1_1st wave_tale reverb.wav</ShortName>
-							<Path>SFX\GAMEPLAY_Levle1_1st wave_tale reverb_D79FB2B7.wem</Path>
-						</File>
-						<File Id="471260018" Language="SFX">
-							<ShortName>Comienzo_de_juego.wav</ShortName>
-							<Path>SFX\Comienzo_de_juego_10C4C929.wem</Path>
-						</File>
-						<File Id="596694758" Language="SFX">
-							<ShortName>GAMEPLAY_Level1_3stwave_tale reverb.wav</ShortName>
-							<Path>SFX\GAMEPLAY_Level1_3stwave_tale reverb_D79FB2B7.wem</Path>
-						</File>
-						<File Id="818862688" Language="SFX">
-							<ShortName>GAMEPLAY_Loose_talereverb.wav</ShortName>
-							<Path>SFX\GAMEPLAY_Loose_talereverb_D79FB2B7.wem</Path>
-						</File>
-						<File Id="1060214257" Language="SFX">
-							<ShortName>GAMEPLAY_Winmusic_talereverb.wav</ShortName>
-							<Path>SFX\GAMEPLAY_Winmusic_talereverb_D79FB2B7.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<SwitchContainers>
-						<SwitchContainer SwitchValue="{03ED9C28-5FCC-466C-A5D3-B5D3BFA03977}">
-							<Media>
-								<File Id="379388087"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{ED723FBA-EE10-4712-973D-5EEE926EC1F4}">
-							<Media>
-								<File Id="113840108"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{9E050B27-95DF-445D-B3E8-E9B97C385A17}">
-							<Media>
-								<File Id="596694758"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{2ADBBC29-C322-4579-9EEC-19E2B879A83C}">
-							<Media>
-								<File Id="379388087"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{3930D937-FEAE-4340-9FAA-F226DBA1E665}">
-							<Media>
-								<File Id="818862688"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{38AE8664-B5B4-4A8C-A3E7-A54B772C1F05}">
-							<Media>
-								<File Id="1060214257"/>
-							</Media>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
-				<Event Id="2248956983" Name="Play_ingamemusic_tutorial" ObjectPath="\Events\Tutorial\Music\Play_ingamemusic_tutorial" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="452233697" Language="SFX">
-							<ShortName>GAMEPLAY_C_155.wav</ShortName>
-							<Path>SFX\GAMEPLAY_C_155_D79FB2B7.wem</Path>
-						</File>
-						<File Id="471260018" Language="SFX">
-							<ShortName>Comienzo_de_juego.wav</ShortName>
-							<Path>SFX\Comienzo_de_juego_10C4C929.wem</Path>
-						</File>
-						<File Id="818862688" Language="SFX">
-							<ShortName>GAMEPLAY_Loose_talereverb.wav</ShortName>
-							<Path>SFX\GAMEPLAY_Loose_talereverb_D79FB2B7.wem</Path>
-						</File>
-						<File Id="1060214257" Language="SFX">
-							<ShortName>GAMEPLAY_Winmusic_talereverb.wav</ShortName>
-							<Path>SFX\GAMEPLAY_Winmusic_talereverb_D79FB2B7.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-					<SwitchContainers>
-						<SwitchContainer SwitchValue="{ACC73AB8-30DE-4638-B773-D905F57C6564}">
-							<Media>
-								<File Id="452233697"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{E7FA64AD-B97B-4526-9DDA-9F7F3C30EDD9}">
-							<Media>
-								<File Id="818862688"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{3A5B4941-EC55-4BD4-B47E-F5587787D9D3}">
-							<Media>
-								<File Id="1060214257"/>
-							</Media>
-						</SwitchContainer>
-						<SwitchContainer SwitchValue="{FCABC9B7-47A9-40D6-A782-4DA78C892EC4}">
-							<Media>
-								<File Id="452233697"/>
-							</Media>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
 				<Event Id="707032169" Name="Play_libro_abrir_3" ObjectPath="\Events\Tutorial\Table\Play_libro_abrir_3" DurationType="OneShot" DurationMin="0.985663" DurationMax="1.029897">
 					<IncludedMemoryFiles>
 						<File Id="789842628" Language="SFX">
 							<ShortName>Recetario\libro_abrir_3.wav</ShortName>
 							<Path>SFX\Recetario\libro_abrir_3_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="417218340" Name="Play_Oleada" ObjectPath="\Events\Tutorial\Music\Play_Oleada" DurationType="OneShot" DurationMin="3.3125" DurationMax="3.3125">
-					<IncludedMemoryFiles>
-						<File Id="1064777720" Language="SFX">
-							<ShortName>Oleada.wav</ShortName>
-							<Path>SFX\Oleada_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="3691145017" Name="Play_Oleada_final" ObjectPath="\Events\Tutorial\Music\Play_Oleada_final" DurationType="OneShot" DurationMin="4.901312" DurationMax="4.901312">
-					<IncludedMemoryFiles>
-						<File Id="198317943" Language="SFX">
-							<ShortName>Ambiente\Oleada final.wav</ShortName>
-							<Path>SFX\Ambiente\Oleada final_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="4180257511" Name="Play_Perder_Juego" ObjectPath="\Events\Tutorial\Music\Play_Perder_Juego" DurationType="OneShot" DurationMin="3.75" DurationMax="3.75">
-					<IncludedMemoryFiles>
-						<File Id="148464406" Language="SFX">
-							<ShortName>Perder_Juego.wav</ShortName>
-							<Path>SFX\Perder_Juego_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -889,6 +1000,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="3187575487" Name="Turret_Place" ObjectPath="\Events\Tutorial\Turrets\Turret_Place" DurationType="OneShot" DurationMin="0.687521" DurationMax="0.687521">
+					<IncludedMemoryFiles>
+						<File Id="589684827" Language="SFX">
+							<ShortName>Torreta_impact_floor (1).wav</ShortName>
+							<Path>SFX\Torreta_impact_floor (1)_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3059053578" Name="Useless_Muerte" ObjectPath="\Events\Tutorial\Turrets\Useless_Muerte" DurationType="OneShot" DurationMin="0.583333" DurationMax="0.693704">
 					<IncludedMemoryFiles>
 						<File Id="438486586" Language="SFX">
@@ -906,24 +1025,6 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
-			<SwitchGroups>
-				<SwitchGroup Id="563444820" Name="ingamemusic_level" ObjectPath="\Switches\Default Work Unit\ingamemusic_level" GUID="{2ADBBC29-C322-4579-9EEC-19E2B879A83C}">
-					<Switches>
-						<Switch Id="1453692858" Name="wave_1" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\wave_1" GUID="{03ED9C28-5FCC-466C-A5D3-B5D3BFA03977}"/>
-						<Switch Id="1453692856" Name="wave_3" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\wave_3" GUID="{9E050B27-95DF-445D-B3E8-E9B97C385A17}"/>
-						<Switch Id="1453692857" Name="wave_2" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\wave_2" GUID="{ED723FBA-EE10-4712-973D-5EEE926EC1F4}"/>
-						<Switch Id="174960569" Name="LOOSE" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\LOOSE" GUID="{3930D937-FEAE-4340-9FAA-F226DBA1E665}"/>
-						<Switch Id="979765101" Name="WIN" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\WIN" GUID="{38AE8664-B5B4-4A8C-A3E7-A54B772C1F05}"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="2707460344" Name="ingamemusic_tutorial" ObjectPath="\Switches\Default Work Unit\ingamemusic_tutorial" GUID="{FCABC9B7-47A9-40D6-A782-4DA78C892EC4}">
-					<Switches>
-						<Switch Id="2453122375" Name="wave1" ObjectPath="\Switches\Default Work Unit\ingamemusic_tutorial\wave1" GUID="{ACC73AB8-30DE-4638-B773-D905F57C6564}"/>
-						<Switch Id="174960569" Name="LOOSE" ObjectPath="\Switches\Default Work Unit\ingamemusic_tutorial\LOOSE" GUID="{E7FA64AD-B97B-4526-9DDA-9F7F3C30EDD9}"/>
-						<Switch Id="979765101" Name="WIN" ObjectPath="\Switches\Default Work Unit\ingamemusic_tutorial\WIN" GUID="{3A5B4941-EC55-4BD4-B47E-F5587787D9D3}"/>
-					</Switches>
-				</SwitchGroup>
-			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

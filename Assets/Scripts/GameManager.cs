@@ -3,7 +3,6 @@ using System.Collections;
 using CustomSceneSwitcher.Switcher;
 using CustomSceneSwitcher.Switcher.Data;
 using Player;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -11,16 +10,15 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Entities")] 
-    
+    [Header("Entities")]
     [SerializeField] private GameObject player;
     [SerializeField] private EnemySpawner enemySpawner;
     [SerializeField] private CameraManager _cameraManager;
+    [SerializeField] private TutorialManager tutorialManager;
     [SerializeField] private EnemyManager enemyManager;
     [SerializeField] private UIManager uiManager;
 
-    [Header("Channels")] 
-    
+    [Header("Channels")]
     [SerializeField] private VoidChannelSO actionChannelSO;
     [SerializeField] private VoidChannelSO pauseChannelSO;
     [SerializeField] private VoidChannelSO gridToggleChannelSO;
@@ -28,22 +26,24 @@ public class GameManager : MonoBehaviour
     [SerializeField] private VoidChannelSO backInputChannel;
     [SerializeField] private VoidChannelSO showRecipesChannelSO;
     [SerializeField] private VoidChannelSO initialCounterChannelSO;
-    [Header("Values")] 
-    
+    [SerializeField] private VoidChannelSO OnCheatWinGame;
+    [SerializeField] private VoidChannelSO OnCheatLoseGame;
+    [FormerlySerializedAs("OnStartEnemySpawner")] [SerializeField]
+    private VoidChannelSO OnEndLerpChannel;
+
+    [Header("Values")]
     [SerializeField] float timeUntilGameOver = 0.2f;
     [SerializeField] float timeUntilActivateEvents = 10f;
     [SerializeField] bool isTutorialScene = false;
     [Header("Data")]
     [SerializeField] private PlayerStats playerStats;
-    [Header("SceneChanger")] 
-    
+    [Header("SceneChanger")]
     [SerializeField] private SceneChangeData mainMenu;
 
     [SerializeField] private SceneChangeData currentScene;
     [SerializeField] private SceneChangeData nextScene;
 
-    [Header("Events")] 
-    
+    [Header("Events")]
     public UnityEvent deActivateRecipe;
     public UnityEvent callWinGame;
     public UnityEvent callLoseGame;
@@ -52,42 +52,19 @@ public class GameManager : MonoBehaviour
     private bool isRecipesOn;
 
 
-
     private void Awake()
     {
         player.SetActive(true);
+        InitUI();
         pauseChannelSO.Subscribe(PauseLevel);
+        OnCheatWinGame.Subscribe(WinGame);
+        OnCheatLoseGame.Subscribe(GameOver);
         _cameraManager.gameObject.SetActive(true);
-        if (playerStats.isTutorialOn)
-        {
-            InitGame();
-        }
-        else
-        {
-            player.GetComponent<PlayerMovement>().enabled = false;
-            Invoke(nameof(InitGame), timeUntilActivateEvents);
-        }
+        _cameraManager.OnLerpEndChannel.Subscribe(InitializeGameMode);
 
-    }
 
-    private void InitGame()
-    {
-        uiManager.Init();
-        showRecipesChannelSO.Subscribe(ShowRecipes);
-        enemySpawner.OnNewWaveAdded.AddListener(uiManager.AddWaveIcon);
-        enemySpawner.OnGameBarUpdated.AddListener(uiManager.UpdateGameBar);
-        enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
-        enemyManager.activateWinScreenChannel.AddListener(WinGame);
-        gridToggleChannelSO.Subscribe(GridToggle);
-        changeToPlayerChannelSO.Subscribe(GridToggle);
-        initialCounterChannelSO.RaiseEvent();
-        enemySpawner.gameObject.SetActive(!isTutorialScene);
-        Invoke(nameof(InitPlayer),timeUntilActivateEvents);
-    }
-
-    private void InitPlayer()
-    {
-        player.GetComponent<PlayerMovement>().enabled = true;
+        enemySpawner.StartEnemySpawner();
+        enemySpawner.enabled = false;
     }
 
     private void OnDestroy()
@@ -100,7 +77,76 @@ public class GameManager : MonoBehaviour
         enemyManager.activateWinScreenChannel.RemoveAllListeners();
         gridToggleChannelSO.Unsubscribe(GridToggle);
         changeToPlayerChannelSO.Unsubscribe(GridToggle);
+        _cameraManager.OnLerpEndChannel.Unsubscribe(InitializeGameMode);
+        initialCounterChannelSO.Unsubscribe(InitCountdown);
+        initialCounterChannelSO.Unsubscribe(InitPlayerAndEnemy);
+        if (tutorialManager)
+        {
+            tutorialManager.OnTutorialEnd.RemoveAllListeners();
+        }
+        StopAllCoroutines();
+        pauseChannelSO.Unsubscribe(PauseLevel);
+        OnCheatWinGame.Unsubscribe(WinGame);
+        OnCheatLoseGame.Unsubscribe(GameOver);
     }
+
+    private void InitializeGameMode()
+    {
+        if (playerStats.isTutorialOn && tutorialManager)
+        {
+            tutorialManager.gameObject.SetActive(true);
+            InitGame();
+            InitPlayer();
+            tutorialManager.OnTutorialEnd.AddListener(InitCountdown);
+        }
+        else
+        {
+            InitGame();
+            InitCountdown();
+        }
+    }
+
+    private void InitCountdown()
+    {
+        if (tutorialManager)
+        {
+            tutorialManager.OnTutorialEnd.RemoveAllListeners();
+        }
+
+        initialCounterChannelSO.RaiseEvent();
+        initialCounterChannelSO.Subscribe(InitPlayerAndEnemy);
+    }
+
+    private void InitPlayerAndEnemy()
+    {
+        enemySpawner.gameObject.SetActive(true);
+        enemySpawner.enabled = true;
+        initialCounterChannelSO.Unsubscribe(InitPlayerAndEnemy);
+        InitPlayer();
+    }
+
+    private void InitGame()
+    {
+        uiManager.Init();
+        showRecipesChannelSO.Subscribe(ShowRecipes);
+
+        gridToggleChannelSO.Subscribe(GridToggle);
+        changeToPlayerChannelSO.Subscribe(GridToggle);
+    }
+
+    private void InitUI()
+    {
+        enemySpawner.OnNewWaveAdded.AddListener(uiManager.AddWaveIcon);
+        enemySpawner.OnGameBarUpdated.AddListener(uiManager.UpdateGameBar);
+        enemySpawner.OnIncomingWave.AddListener(uiManager.ShowNewWaveAlert);
+        enemyManager.activateWinScreenChannel.AddListener(WinGame);
+    }
+
+    private void InitPlayer()
+    {
+        player.GetComponent<PlayerMovement>().enabled = true;
+    }
+
 
     private void Start()
     {
@@ -124,14 +170,6 @@ public class GameManager : MonoBehaviour
         uiManager.ToggleFocusPanel(isGridActivated);
     }
 
-
-    private void TutorialSequence()
-    {
-        if (uiManager.HasTutorialEnded())
-        {
-            actionChannelSO.Unsubscribe(TutorialSequence);
-        }
-    }
 
     [ContextMenu("Lose Game")]
     private void GameOver()
@@ -174,7 +212,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [ContextMenu ("Win Game")]
+    [ContextMenu("Win Game")]
     public void WinGame()
     {
         Cursor.visible = true;

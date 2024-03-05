@@ -57,7 +57,19 @@ MonoBehaviour:
       m_Calls: []
   m_ControlsChangedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6695719010644051287}
+        m_TargetAssemblyTypeName: GameInputs.InputController, Assembly-CSharp
+        m_MethodName: OnChangeInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
@@ -203,8 +215,104 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 367d245e-05db-434a-ae38-a875a0ee197c
     m_ActionName: Player/OnGridMovementStick[/DualSenseGamepadHID/leftStick]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6695719010644051287}
+        m_TargetAssemblyTypeName: GameInputs.InputController, Assembly-CSharp
+        m_MethodName: OnCheatKillScreenEnemies
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1e9faeee-2f34-4245-ac12-28e937bd6c9f
+    m_ActionName: Player/CheatKillAllEnemies[/Keyboard/f1]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6695719010644051287}
+        m_TargetAssemblyTypeName: GameInputs.InputController, Assembly-CSharp
+        m_MethodName: OnCheatWinScreen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0b62acb4-6560-4708-88c8-9a0f06213a04
+    m_ActionName: Player/CheatWinGame[/Keyboard/f2]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6695719010644051287}
+        m_TargetAssemblyTypeName: GameInputs.InputController, Assembly-CSharp
+        m_MethodName: OnCheatLoseScreen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 29ab7bfd-d1c4-4259-bf93-997935f79498
+    m_ActionName: Player/CheatLoseGame[/Keyboard/f3]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6695719010644051287}
+        m_TargetAssemblyTypeName: GameInputs.InputController, Assembly-CSharp
+        m_MethodName: OnCheatsSetState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2a3188af-15d2-480d-b3b4-a16d5bdc0701
+    m_ActionName: Player/SetCheatsState[/Keyboard/shift,/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6695719010644051287}
+        m_TargetAssemblyTypeName: GameInputs.InputController, Assembly-CSharp
+        m_MethodName: OnShowConsole
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f16ac01a-0b20-44ef-9733-60da5c37fe32
+    m_ActionName: Player/CheatShowConsole[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6695719010644051287}
+        m_TargetAssemblyTypeName: GameInputs.InputController, Assembly-CSharp
+        m_MethodName: OnCheatTimeSpeed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0db587ee-7abd-46a5-9052-fd5e4f015f87
+    m_ActionName: Player/CheatTimeSpeed[/Keyboard/f4]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -225,6 +333,12 @@ MonoBehaviour:
   OnPauseChannel: {fileID: 11400000, guid: 31fd85e9f5e17714a82062a5719bdd7d, type: 2}
   OnInteractChannel: {fileID: 11400000, guid: 38d87044a7ab8284a8146a0e7c7fc405, type: 2}
   OnBackInteractChannel: {fileID: 11400000, guid: 7e1fc974e5aa4c849ac3022332ea360e, type: 2}
+  OnCheatKillScreenEnemy: {fileID: 11400000, guid: 901da75e873c8a6468dba6ffa7a87bb6, type: 2}
+  OnCheatWinGame: {fileID: 11400000, guid: 356783133cec2814093be73c77db77e7, type: 2}
+  OnCheatLoseGame: {fileID: 11400000, guid: fccf26ac0cfcbb649974b1e6deb49557, type: 2}
+  OnCheatToggleConsole: {fileID: 11400000, guid: a1ab07886dd0cff4ebb5aa6f6767191a, type: 2}
+  OnControlSchemeChange: {fileID: 11400000, guid: 1c761cc11a0591b4c9ff9b426d46b856, type: 2}
+  _playerStats: {fileID: 11400000, guid: 10b9e947ea07c4641a87009c5acf938e, type: 2}
   offsetController: 0.7
 --- !u!114 &2416956928258719184
 MonoBehaviour:
@@ -238,6 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1991587d109cc054797e77bef4a36ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _controlPointer: {fileID: 0}
   OnItemPickUp:
     m_PersistentCalls:
       m_Calls: []
@@ -251,3 +366,4 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   ChangeToGridChannel: {fileID: 11400000, guid: 6da3fdb0ff273a044939e59fbefada8a, type: 2}
+  OnBackInput: {fileID: 11400000, guid: 7e1fc974e5aa4c849ac3022332ea360e, type: 2}

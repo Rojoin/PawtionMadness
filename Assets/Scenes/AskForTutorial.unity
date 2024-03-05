@@ -159,6 +159,12 @@ MonoBehaviour:
   OnPauseChannel: {fileID: 11400000, guid: 31fd85e9f5e17714a82062a5719bdd7d, type: 2}
   OnInteractChannel: {fileID: 11400000, guid: 38d87044a7ab8284a8146a0e7c7fc405, type: 2}
   OnBackInteractChannel: {fileID: 11400000, guid: 7e1fc974e5aa4c849ac3022332ea360e, type: 2}
+  OnCheatKillScreenEnemy: {fileID: 0}
+  OnCheatWinGame: {fileID: 0}
+  OnCheatLoseGame: {fileID: 0}
+  OnCheatToggleConsole: {fileID: 0}
+  OnControlSchemeChange: {fileID: 0}
+  _playerStats: {fileID: 0}
   offsetController: 0.7
 --- !u!114 &335557934
 MonoBehaviour:
@@ -309,6 +315,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7fcce02b-eaea-4a83-a1af-ff197ca1df6d
     m_ActionName: Player/Pause[/Keyboard/escape,/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 86feedd2-7402-4f30-a38a-8462b0832ab5
+    m_ActionName: Player/OnGridMovement[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow,/DualSenseGamepadHID/dpad/up,/XInputControllerWindows/dpad/up,/DualSenseGamepadHID/dpad/down,/XInputControllerWindows/dpad/down,/DualSenseGamepadHID/dpad/left,/XInputControllerWindows/dpad/left,/DualSenseGamepadHID/dpad/right,/XInputControllerWindows/dpad/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 367d245e-05db-434a-ae38-a875a0ee197c
+    m_ActionName: Player/OnGridMovementStick[/DualSenseGamepadHID/leftStick,/XInputControllerWindows/leftStick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1e9faeee-2f34-4245-ac12-28e937bd6c9f
+    m_ActionName: Player/CheatKillAllEnemies[/Keyboard/f1]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0b62acb4-6560-4708-88c8-9a0f06213a04
+    m_ActionName: Player/CheatWinGame[/Keyboard/f2]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 29ab7bfd-d1c4-4259-bf93-997935f79498
+    m_ActionName: Player/CheatLoseGame[/Keyboard/f3]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0db587ee-7abd-46a5-9052-fd5e4f015f87
+    m_ActionName: Player/CheatTimeSpeed[/Keyboard/f4]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2a3188af-15d2-480d-b3b4-a16d5bdc0701
+    m_ActionName: Player/SetCheatsState[/Keyboard/shift,/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f16ac01a-0b20-44ef-9733-60da5c37fe32
+    m_ActionName: Player/CheatShowConsole[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -341,6 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1991587d109cc054797e77bef4a36ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _controlPointer: {fileID: 0}
   OnItemPickUp:
     m_PersistentCalls:
       m_Calls: []
@@ -354,6 +393,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   ChangeToGridChannel: {fileID: 11400000, guid: 6da3fdb0ff273a044939e59fbefada8a, type: 2}
+  OnBackInput: {fileID: 0}
 --- !u!114 &559063057 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6928291039366430778, guid: 1e9c2bbecd1946b41aa337629d3b20b2, type: 3}
@@ -482,24 +522,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playTutorialButton: {fileID: 559063057}
   _skipTutorialButton: {fileID: 931201021}
-  _tutorialScene:
+  _firstLevel:
     sceneReference:
       sceneAsset: {fileID: 102900000, guid: 19e0392dac0af6a43a1e458ef429b3bd, type: 3}
-      scenePath: Assets/Scenes/TutorialScene.unity
+      scenePath: Assets/Scenes/Level1.unity
     transitionControlPrefab: {fileID: 5566928794715677815, guid: f3ff1d07a71d772458ad32f3f713998d, type: 3}
     transitionSpeed: 0.5
     minTransitionTime: 1
     loadingBarPrefab: {fileID: 0}
     loadingBarVisibility: 0
-  _gameScene:
-    sceneReference:
-      sceneAsset: {fileID: 102900000, guid: 43209219a073f4445b65f8aaed39f17c, type: 3}
-      scenePath: Assets/Scenes/Test.unity
-    transitionControlPrefab: {fileID: 5566928794715677815, guid: f3ff1d07a71d772458ad32f3f713998d, type: 3}
-    transitionSpeed: 0.5
-    minTransitionTime: 1
-    loadingBarPrefab: {fileID: 0}
-    loadingBarVisibility: 0
+  _playerStats: {fileID: 11400000, guid: 10b9e947ea07c4641a87009c5acf938e, type: 2}
 --- !u!115 &613741166
 MonoScript:
   m_ObjectHideFlags: 0

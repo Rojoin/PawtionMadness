@@ -10,19 +10,20 @@ namespace Grid
         [SerializeField] private PlayerInventory playerInventory;
         [SerializeField] private TurretManager _turretManager;
         [SerializeField] private float indicatorYOffset;
-        [SerializeField] private GameObject gridIndicator;
+        [SerializeField] private GridIndicator gridIndicator;
         [Header("Channels")]
         [SerializeField] private Vector2ChannelSO movementChannel;
         [SerializeField] private VoidChannelSO interactChannel;
         [SerializeField] private VoidChannelSO backInputChannel;
         [SerializeField] private VoidChannelSO changeToPlayerChannel;
+        [SerializeField] private VoidChannelSO onTurretPlaced;
         [Header("Data")]
         [SerializeField] private TimeController timeControllerData;
         [Header("Values")]
         [Range(0.1f, 1.0f)]
         [SerializeField] private float timeToHold = 0.5f;
         [SerializeField] private Vector2Int _defaultPos = new Vector2Int(0, 0);
-        
+
         private Vector2 _input;
         private Vector2Int _cursorPos = new Vector2Int(0, 0);
         private Vector2Int _previousInput = new Vector2Int(0, 0);
@@ -34,7 +35,7 @@ namespace Grid
         private void Awake()
         {
             _grid = GetComponent<GridSystem>();
-            gridIndicator.SetActive(false);
+            gridIndicator.gameObject.SetActive(false);
         }
 
         private void Start()
@@ -52,8 +53,14 @@ namespace Grid
             {
                 _cursorPos = _defaultPos;
             }
-
+            
             SelectCurrentTile();
+            if (playerInventory.GetTurret())
+            {
+                string value = playerInventory.GetTurret().id;
+                gridIndicator.SetCurrentTurret(value);
+            }
+
             Time.timeScale = timeControllerData.slowTimeScale;
         }
 
@@ -64,7 +71,7 @@ namespace Grid
                 StopCoroutine(_moveGrid);
             }
 
-            gridIndicator.SetActive(false);
+            gridIndicator.gameObject.SetActive(false);
             movementChannel.Unsubscribe(OnMove);
             interactChannel.Unsubscribe(OnInteract);
             backInputChannel.Unsubscribe(OnBackChannel);
@@ -86,7 +93,7 @@ namespace Grid
 
             _moveGrid = StartCoroutine(MoveGrid());
         }
-        
+
         private IEnumerator MoveGrid()
         {
             Vector2 currentInput = _input;
@@ -120,9 +127,9 @@ namespace Grid
 
         private void SelectCurrentTile()
         {
-            if (!gridIndicator.activeSelf)
+            if (!gridIndicator.gameObject.activeSelf)
             {
-                gridIndicator.SetActive(true);
+                gridIndicator.gameObject.SetActive(true);
             }
 
             _currentTile = _grid.GetTile(_cursorPos);
@@ -139,11 +146,8 @@ namespace Grid
             {
                 SetTurretOnTile(_currentTile, playerInventory.GetTurret());
                 playerInventory.DestroyPickable();
-                OnBackChannel();
-            }
-            else if (!_currentTile.IsAvailable() && !playerInventory.hasPotion())
-            {
-                _currentTile.DestroyTurret();
+                onTurretPlaced.RaiseEvent();
+                gridIndicator.ActivateSmokeEffect();
                 OnBackChannel();
             }
         }
@@ -157,6 +161,13 @@ namespace Grid
         {
             currentTile.SetTurret(_turretManager.AddNewTurret(baseTurretSo, currentTile.GetTurretPosition(),
                 currentTile.transform));
+        }
+
+        public void SpawnDefaultTurret(BaseTurretSO baseTurretSo)
+        {
+            Tile defaultTile = _grid.GetTile(Vector2Int.zero);
+            defaultTile.SetTurret(_turretManager.AddNewTurret(baseTurretSo, defaultTile.GetTurretPosition(),
+                defaultTile.transform));
         }
 
         /// <summary>

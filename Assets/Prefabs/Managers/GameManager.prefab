@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7483951904999194688}
   - component: {fileID: 6414676308316224321}
   - component: {fileID: 2663239920300573646}
+  - component: {fileID: 6575034348687799614}
   - component: {fileID: 2347047456568114724}
   m_Layer: 0
   m_Name: GameManager
@@ -79,6 +80,9 @@ MonoBehaviour:
   backInputChannel: {fileID: 11400000, guid: 7e1fc974e5aa4c849ac3022332ea360e, type: 2}
   showRecipesChannelSO: {fileID: 11400000, guid: b728d78206d9b544d9ae56791cbedc92, type: 2}
   initialCounterChannelSO: {fileID: 11400000, guid: 84a1d72521bad9346a4aa64486c0d6ac, type: 2}
+  OnCheatWinGame: {fileID: 11400000, guid: 356783133cec2814093be73c77db77e7, type: 2}
+  OnCheatLoseGame: {fileID: 11400000, guid: fccf26ac0cfcbb649974b1e6deb49557, type: 2}
+  OnStartEnemySpawner: {fileID: 11400000, guid: e3503b2b698fc754ba3c32acdc6cf92d, type: 2}
   timeUntilGameOver: 0.2
   timeUntilActivateEvents: 4.8
   isTutorialScene: 0
@@ -94,20 +98,20 @@ MonoBehaviour:
     loadingBarVisibility: 0
   currentScene:
     sceneReference:
-      sceneAsset: {fileID: 0}
-      scenePath: 
-    transitionControlPrefab: {fileID: 0}
-    transitionSpeed: 0
-    minTransitionTime: 0
+      sceneAsset: {fileID: 102900000, guid: 43209219a073f4445b65f8aaed39f17c, type: 3}
+      scenePath: Assets/Scenes/Level2.unity
+    transitionControlPrefab: {fileID: 5566928794715677815, guid: f3ff1d07a71d772458ad32f3f713998d, type: 3}
+    transitionSpeed: 0.5
+    minTransitionTime: 1
     loadingBarPrefab: {fileID: 0}
     loadingBarVisibility: 0
   nextScene:
     sceneReference:
-      sceneAsset: {fileID: 0}
-      scenePath: 
-    transitionControlPrefab: {fileID: 0}
-    transitionSpeed: 0
-    minTransitionTime: 0
+      sceneAsset: {fileID: 102900000, guid: 342970b751a8c204db5d79056d52bbb3, type: 3}
+      scenePath: Assets/Scenes/MainMenu.unity
+    transitionControlPrefab: {fileID: 5566928794715677815, guid: f3ff1d07a71d772458ad32f3f713998d, type: 3}
+    transitionSpeed: 0.5
+    minTransitionTime: 1
     loadingBarPrefab: {fileID: 0}
     loadingBarVisibility: 0
   deActivateRecipe:
@@ -127,10 +131,47 @@ MonoBehaviour:
         m_CallState: 2
   callWinGame:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+        m_MethodName: callWinState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   callLoseGame:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+        m_MethodName: callLoseState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6575034348687799614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836566035947589402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a0013f4cdee71b4bb9c4ec19c18da81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnCheatToggleConsole: {fileID: 11400000, guid: a1ab07886dd0cff4ebb5aa6f6767191a, type: 2}
 --- !u!54 &2347047456568114724
 Rigidbody:
   m_ObjectHideFlags: 0
