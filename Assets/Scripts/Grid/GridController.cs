@@ -55,7 +55,7 @@ namespace Grid
             }
             
             SelectCurrentTile();
-            if (playerInventory.GetTurret())
+            if (playerInventory.GetTurret() != null)
             {
                 string value = playerInventory.GetTurret().id;
                 gridIndicator.SetCurrentTurret(value);

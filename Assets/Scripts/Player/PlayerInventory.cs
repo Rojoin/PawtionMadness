@@ -46,6 +46,6 @@ public class PlayerInventory : MonoBehaviour
 
     public BaseTurretSO GetTurret()
     {
-        return ((Potion)_pickable)._baseTurretSo;
+        return _pickable is Potion potion ? potion._baseTurretSo : null;
     }
 }
