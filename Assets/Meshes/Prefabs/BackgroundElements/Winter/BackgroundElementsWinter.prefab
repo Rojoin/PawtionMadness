@@ -178,6 +178,7 @@ Transform:
   - {fileID: 6331183302140419334}
   - {fileID: 4205585913075464667}
   - {fileID: 1734569925343454182}
+  - {fileID: 6442799321848248526}
   - {fileID: 4241908694748115993}
   - {fileID: 1753782005764128573}
   - {fileID: 6373505910035186563}
@@ -1735,6 +1736,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dd2195fbf5294d7418234ae3a2a2ae2d, type: 3}
       propertyPath: m_Name
       value: Casa_v6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd2195fbf5294d7418234ae3a2a2ae2d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16560,6 +16565,84 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8331483031016796853, guid: 37afaa76972dadf4d83e90113bea1455, type: 3}
   m_PrefabInstance: {fileID: 6707334080194561173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6837540263097343781
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7330077525325763041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -31.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.13
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_Name
+      value: CasaNieve_V2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+--- !u!4 &6442799321848248526 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 78e8876dc7f95b945866399234ae7111, type: 3}
+  m_PrefabInstance: {fileID: 6837540263097343781}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6915704551894770792
 PrefabInstance:
