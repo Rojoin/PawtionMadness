@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="984691642" Language="SFX" Hash="2631849505">
+		<SoundBank Id="984691642" Language="SFX" Hash="3049131758">
 			<ObjectPath>\SoundBanks\Default Work Unit\InGame</ObjectPath>
 			<ShortName>InGame</ShortName>
 			<Path>InGame.bnk</Path>
@@ -26,9 +26,17 @@
 							<ShortName>GAMEPLAY_Level1_2nd wave_tale reverb.wav</ShortName>
 							<Path>SFX\GAMEPLAY_Level1_2nd wave_tale reverb_D79FB2B7.wem</Path>
 						</File>
+						<File Id="145743035" Language="SFX">
+							<ShortName>GAMEPLAY_spring_1st wave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_spring_1st wave_tale reverb_D79FB2B7.wem</Path>
+						</File>
 						<File Id="379388087" Language="SFX">
 							<ShortName>GAMEPLAY_Levle1_1st wave_tale reverb.wav</ShortName>
 							<Path>SFX\GAMEPLAY_Levle1_1st wave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="451676811" Language="SFX">
+							<ShortName>GAMEPLAY_spring_3stwave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_spring_3stwave_tale reverb_D79FB2B7.wem</Path>
 						</File>
 						<File Id="471260018" Language="SFX">
 							<ShortName>Comienzo_de_juego.wav</ShortName>
@@ -61,6 +69,10 @@
 						<File Id="892793745" Language="SFX">
 							<ShortName>GAMEPLAY_Autum_1st wave_tale reverb.wav</ShortName>
 							<Path>SFX\GAMEPLAY_Autum_1st wave_tale reverb_D79FB2B7.wem</Path>
+						</File>
+						<File Id="899082917" Language="SFX">
+							<ShortName>GAMEPLAY_spring_2nd wave_tale reverb.wav</ShortName>
+							<Path>SFX\GAMEPLAY_spring_2nd wave_tale reverb_D79FB2B7.wem</Path>
 						</File>
 						<File Id="1060214257" Language="SFX">
 							<ShortName>GAMEPLAY_Winmusic_talereverb.wav</ShortName>
@@ -126,6 +138,21 @@
 						<SwitchContainer SwitchValue="{0F369197-7B46-4C09-88DB-11012B6BE166}">
 							<Media>
 								<File Id="699493596"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{028600F6-6C61-4C7C-B894-C0EF38C744E9}">
+							<Media>
+								<File Id="451676811"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{3A36854C-EDDD-46FD-A936-A112EB6E4DD9}">
+							<Media>
+								<File Id="145743035"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{A9D51253-1299-445D-BE56-313D102955A8}">
+							<Media>
+								<File Id="899082917"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -212,6 +239,9 @@
 						<Switch Id="265221752" Name="Bautum_easy" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Bautum_easy" GUID="{5BA5344E-3496-4637-93D2-4E08A3E5BF65}"/>
 						<Switch Id="2706813548" Name="Bautum_mid" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Bautum_mid" GUID="{0F369197-7B46-4C09-88DB-11012B6BE166}"/>
 						<Switch Id="2900492669" Name="Bautum_hard" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Bautum_hard" GUID="{5267574F-6509-495A-8976-D83E16209602}"/>
+						<Switch Id="1684312137" Name="Dspring_easy" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Dspring_easy" GUID="{3A36854C-EDDD-46FD-A936-A112EB6E4DD9}"/>
+						<Switch Id="881028919" Name="Dspring_mid" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Dspring_mid" GUID="{A9D51253-1299-445D-BE56-313D102955A8}"/>
+						<Switch Id="3944199108" Name="Dspring_hard" ObjectPath="\Switches\Default Work Unit\ingamemusic_level\Dspring_hard" GUID="{028600F6-6C61-4C7C-B894-C0EF38C744E9}"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="2707460344" Name="ingamemusic_tutorial" ObjectPath="\Switches\Default Work Unit\ingamemusic_tutorial" GUID="{FCABC9B7-47A9-40D6-A782-4DA78C892EC4}">
