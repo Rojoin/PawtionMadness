@@ -6,7 +6,6 @@ public class MusicManager : MonoBehaviour
 {
     public MusicSo musicSo;
     public int currentState = 0;
-    private int musicStateSwitch = 0;
 
     private void Start()
     {

@@ -3026,7 +3026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223280389243143638, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00002670288
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 1234946973280734815, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3827,6 +3827,34 @@ PrefabInstance:
       propertyPath: waveList.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: bbf0074fe11779140aaafd77bf3d782f, type: 2}
+    - target: {fileID: 6134187881666428428, guid: 994cea5e0bc2a374a8cf0fa05edcc29f, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134187881666428428, guid: 994cea5e0bc2a374a8cf0fa05edcc29f, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134187881666428428, guid: 994cea5e0bc2a374a8cf0fa05edcc29f, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1796340475}
+    - target: {fileID: 6134187881666428428, guid: 994cea5e0bc2a374a8cf0fa05edcc29f, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134187881666428428, guid: 994cea5e0bc2a374a8cf0fa05edcc29f, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetNextState
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134187881666428428, guid: 994cea5e0bc2a374a8cf0fa05edcc29f, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MusicManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134187881666428428, guid: 994cea5e0bc2a374a8cf0fa05edcc29f, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6778729790075515244, guid: 994cea5e0bc2a374a8cf0fa05edcc29f, type: 3}
       propertyPath: m_Name
       value: TutorialWave
