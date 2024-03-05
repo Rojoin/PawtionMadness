@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="984691642" Language="SFX" Hash="3049131758">
+		<SoundBank Id="984691642" Language="SFX" Hash="1511582730">
 			<ObjectPath>\SoundBanks\Default Work Unit\InGame</ObjectPath>
 			<ShortName>InGame</ShortName>
 			<Path>InGame.bnk</Path>
@@ -279,7 +279,7 @@
 				<Event Id="1420342416" Name="StopMainMenuMusic" ObjectPath="\Events\MainMenu\StopMainMenuMusic" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="3762955427" Language="SFX" Hash="658298676">
+		<SoundBank Id="3762955427" Language="SFX" Hash="1122673069">
 			<ObjectPath>\SoundBanks\Default Work Unit\Tutorial</ObjectPath>
 			<ShortName>Tutorial</ShortName>
 			<Path>Tutorial.bnk</Path>
@@ -997,6 +997,14 @@
 						<File Id="192562094" Language="SFX">
 							<ShortName>Simple_SonidoRandom.wav</ShortName>
 							<Path>SFX\Simple_SonidoRandom_F6A5FB63.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3187575487" Name="Turret_Place" ObjectPath="\Events\Tutorial\Turrets\Turret_Place" DurationType="OneShot" DurationMin="0.687521" DurationMax="0.687521">
+					<IncludedMemoryFiles>
+						<File Id="589684827" Language="SFX">
+							<ShortName>Torreta_impact_floor (1).wav</ShortName>
+							<Path>SFX\Torreta_impact_floor (1)_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

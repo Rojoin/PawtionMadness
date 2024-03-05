@@ -661,6 +661,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Turret_Place" ID="{8317464B-A1B2-4895-B6E1-944116F17EFD}">
+							<ChildrenList>
+								<Action Name="" ID="{DC584F43-9861-4173-8310-E3E68002A4FE}" ShortID="1002775923">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Torreta_impact_floor" ID="{D6310E96-38B0-43C7-AD1F-B8739233DBCB}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ambient" ID="{74E3926C-55D4-4FED-9AD5-A1931BBF86D2}" ShortID="430791843">
