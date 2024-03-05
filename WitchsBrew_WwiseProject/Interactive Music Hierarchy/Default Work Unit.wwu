@@ -139,6 +139,11 @@
 						<Property Name="GridOffsetPreset" Type="int16" Value="50"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="Tempo" Type="Real64" Value="155"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -2865,11 +2870,14 @@
 								<MusicTransition Name="Transition" ID="{33621672-C842-4490-92C2-EFBC36D1A396}">
 									<PropertyList>
 										<Property Name="DestinationContextType" Type="int16" Value="2"/>
-										<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+										<Property Name="EnableTransitionFadeIn" Type="bool" Value="True"/>
+										<Property Name="EnableTransitionFadeOut" Type="bool" Value="True"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="0"/>
 										<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
 										<Property Name="PlayTransitionPostExit" Type="bool" Value="False"/>
 										<Property Name="PlayTransitionPreEntry" Type="bool" Value="False"/>
-										<Property Name="UseTransitionObject" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="DestinationContextObject">
@@ -2878,6 +2886,25 @@
 									</ReferenceList>
 									<TransitionInfo>
 										<TransitionObjectRef Name="transition 3rd wave to WIN" ID="{3E220B75-F174-4E66-B4E0-ED2A9517E96C}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{A8774DFD-96D9-4078-9C5A-E1F89D57903E}">
+												<PropertyList>
+													<Property Name="FadeCurve" Type="int16" Value="5"/>
+													<Property Name="FadeOffset" Type="Real64" Value="0.5"/>
+													<Property Name="FadeTime" Type="Real64" Value="1"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+										<DestinationFadeIn>
+											<MusicFade Name="Destination Fade-in" ID="{0E50BDC5-E247-470E-83F5-1AE6B7AE4B65}">
+												<PropertyList>
+													<Property Name="FadeCurve" Type="int16" Value="5"/>
+													<Property Name="FadeOffset" Type="Real64" Value="-0.5"/>
+													<Property Name="FadeTime" Type="Real64" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</DestinationFadeIn>
 									</TransitionInfo>
 								</MusicTransition>
 							</ChildrenList>
@@ -2891,7 +2918,7 @@
 					<EntryList>
 						<Entry>
 							<Path>
-								<PathElementRef Name="wave_1" ID="{03ED9C28-5FCC-466C-A5D3-B5D3BFA03977}"/>
+								<PathElementRef Name="A1summer_easy" ID="{03ED9C28-5FCC-466C-A5D3-B5D3BFA03977}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="A1summer_easy" ID="{3521BA1E-EE7C-4EE1-A078-74A84768E04E}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
@@ -2899,7 +2926,7 @@
 						</Entry>
 						<Entry>
 							<Path>
-								<PathElementRef Name="wave_2" ID="{ED723FBA-EE10-4712-973D-5EEE926EC1F4}"/>
+								<PathElementRef Name="A1summer_mid" ID="{ED723FBA-EE10-4712-973D-5EEE926EC1F4}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="A2summer_mid" ID="{D328FA84-318D-4B7F-BCCD-8BEB842D422F}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>
@@ -2907,7 +2934,7 @@
 						</Entry>
 						<Entry>
 							<Path>
-								<PathElementRef Name="wave_3" ID="{9E050B27-95DF-445D-B3E8-E9B97C385A17}"/>
+								<PathElementRef Name="A1summer_hard" ID="{9E050B27-95DF-445D-B3E8-E9B97C385A17}"/>
 							</Path>
 							<AudioNodeInfo>
 								<AudioNodeRef Name="A3summer_hard" ID="{08948604-83E1-4DEF-A846-1B11EB91BB7A}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}" Platform="Linked"/>

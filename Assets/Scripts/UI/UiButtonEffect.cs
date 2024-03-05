@@ -10,8 +10,7 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public Action onButtonEnter;
     public Action onButtonExit;
 
-    [Header("RayCast Collision:")]
-    [Tooltip("Chequea Alphas en el raycast. Modificar el Read/Write Enabled en la imagen si éste es true.")]
+  
     [SerializeField] private bool modifyHitBox;
 
     [SerializeField] private float alphaRayCast = 0.1f;
@@ -61,7 +60,7 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         {
             if (!objectToEnable)
             {
-                Debug.LogWarning("No tiene un objeto asignado.", gameObject);
+      
                 enableObject = false;
             }
         }
@@ -71,7 +70,7 @@ public class UiButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             if (!textToHighlight)
             {
                 textHighlight = false;
-                Debug.Log("No tiene asignado un Text.", gameObject);
+               
             }
             else
                 colorNormal = textToHighlight.color;

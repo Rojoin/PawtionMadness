@@ -2187,6 +2187,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6714638794925948983, guid: 636dae2d124625f4c9007d0a277cacde, type: 3}
+      propertyPath: musicSo
+      value: 
+      objectReference: {fileID: 11400000, guid: 53651b0b45c25f041afe1242888d008f, type: 2}
     - target: {fileID: 6832462527111201993, guid: 636dae2d124625f4c9007d0a277cacde, type: 3}
       propertyPath: m_Name
       value: MusicManager
@@ -2619,6 +2623,7 @@ GameObject:
   - component: {fileID: 882686358}
   - component: {fileID: 882686359}
   - component: {fileID: 882686357}
+  - component: {fileID: 882686360}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -2690,6 +2695,30 @@ MonoBehaviour:
   spatialAudioPoolSize: 0
   maxSoundPropagationDepth: 0
   engineLogging: 0
+--- !u!114 &882686360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882686356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1ae23240b11e94b93f54c6dee6ebbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d3e0c6f5656875c44ac78e4bd4fee980, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &964147937
 GameObject:
   m_ObjectHideFlags: 0
@@ -5896,6 +5925,10 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a26652a7d61fd0f458fef62b48c18909, type: 2}
     - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
       propertyPath: OnWaveStart.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
@@ -5907,6 +5940,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1512298710}
     - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1512298710}
+    - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
       propertyPath: OnWaveStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -5915,11 +5956,27 @@ PrefabInstance:
       value: SetNextState
       objectReference: {fileID: 0}
     - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetNextState
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
       propertyPath: OnWaveStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MusicManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MusicManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
       propertyPath: OnWaveStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497814477509773381, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
+      propertyPath: OnIncomingWave.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2997678524761425701, guid: 71cb69cb57c9e24409b3c41a7046fcaf, type: 3}
@@ -6219,9 +6276,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3051874519634943067, guid: 53c2e67f55af0f547978dae0288ad65b, type: 3}
+      propertyPath: posiblePotions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051874519634943067, guid: 53c2e67f55af0f547978dae0288ad65b, type: 3}
+      propertyPath: posiblePotions.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 59f4a139e5b4a524084a9015accfd28f, type: 2}
+    - target: {fileID: 3051874519634943067, guid: 53c2e67f55af0f547978dae0288ad65b, type: 3}
+      propertyPath: posiblePotions.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8819c0610e70f224ca595b113e23f663, type: 2}
     - target: {fileID: 4127142630987081256, guid: 53c2e67f55af0f547978dae0288ad65b, type: 3}
       propertyPath: m_Name
       value: Kitchen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718865282670422618, guid: 53c2e67f55af0f547978dae0288ad65b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718865282670422618, guid: 53c2e67f55af0f547978dae0288ad65b, type: 3}
+      propertyPath: isStaticObject
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7765889015884625529, guid: 53c2e67f55af0f547978dae0288ad65b, type: 3}
       propertyPath: isStaticObject
@@ -6318,7 +6395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223280389243143638, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000032424927
+      value: 0.000020980835
       objectReference: {fileID: 0}
     - target: {fileID: 1234946973280734815, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6962,6 +7039,46 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 489287923}
+    - target: {fileID: 5646896430725891702, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: enemiesToShow.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646896430725891702, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: enemiesToShow.Array.data[1].Type
+      value: 
+      objectReference: {fileID: 11400000, guid: 50b2376bfd2ff8e43b4c9238a57bdcd7, type: 2}
+    - target: {fileID: 5646896430725891702, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: enemiesToShow.Array.data[2].Type
+      value: 
+      objectReference: {fileID: 11400000, guid: f08ecfecd83fdb24b83c63fa733090de, type: 2}
+    - target: {fileID: 5646896430725891702, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: enemiesToShow.Array.data[3].Type
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ec34e5e722bb674ea2c8767dbb37e55, type: 2}
+    - target: {fileID: 5646896430725891702, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: enemiesToShow.Array.data[4].Type
+      value: 
+      objectReference: {fileID: 11400000, guid: 624bcce706b12194d92d6c5c55f7c1ad, type: 2}
+    - target: {fileID: 5646896430725891702, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: enemiesToShow.Array.data[0].cuantity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646896430725891702, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: enemiesToShow.Array.data[1].cuantity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646896430725891702, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: enemiesToShow.Array.data[2].cuantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646896430725891702, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: enemiesToShow.Array.data[3].cuantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646896430725891702, guid: abc95546846c58d4db902d676c070e73, type: 3}
+      propertyPath: enemiesToShow.Array.data[4].cuantity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5961990726953683778, guid: abc95546846c58d4db902d676c070e73, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.35
