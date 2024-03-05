@@ -53,9 +53,14 @@ namespace Grid
             {
                 _cursorPos = _defaultPos;
             }
-
+            
             SelectCurrentTile();
-            gridIndicator.SetCurrentTurret(playerInventory.GetTurret().id);
+            if (playerInventory.GetTurret())
+            {
+                string value = playerInventory.GetTurret().id;
+                gridIndicator.SetCurrentTurret(value);
+            }
+
             Time.timeScale = timeControllerData.slowTimeScale;
         }
 
@@ -125,7 +130,6 @@ namespace Grid
             if (!gridIndicator.gameObject.activeSelf)
             {
                 gridIndicator.gameObject.SetActive(true);
-                
             }
 
             _currentTile = _grid.GetTile(_cursorPos);
@@ -143,6 +147,7 @@ namespace Grid
                 SetTurretOnTile(_currentTile, playerInventory.GetTurret());
                 playerInventory.DestroyPickable();
                 onTurretPlaced.RaiseEvent();
+                gridIndicator.ActivateSmokeEffect();
                 OnBackChannel();
             }
         }
