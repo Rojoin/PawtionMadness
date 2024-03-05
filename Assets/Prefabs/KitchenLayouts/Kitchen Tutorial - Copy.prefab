@@ -76,7 +76,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 853114610557992469, guid: 03582489449adaf4294f64acb57ca435, type: 3}
       propertyPath: m_Name
-      value: Kitchen Variant
+      value: Kitchen Tutorial - Copy
       objectReference: {fileID: 0}
     - target: {fileID: 1226971951358514058, guid: 03582489449adaf4294f64acb57ca435, type: 3}
       propertyPath: m_LocalPosition.x
@@ -130,9 +130,49 @@ PrefabInstance:
       propertyPath: ingredientsInCauldron.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: c937f7fdcf9fa2e49bf7b6b088aac973, type: 2}
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8954917154911737456}
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayReadyPotion
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CouldronSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437239837743590980, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: isStaticObject
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7970137336524531822, guid: 03582489449adaf4294f64acb57ca435, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064950829751497319, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064950829751497319, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: isStaticObject
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -152,6 +192,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1226971951358514058, guid: 03582489449adaf4294f64acb57ca435, type: 3}
   m_PrefabInstance: {fileID: 6333923942784694404}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8954917154911737456 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3143758768225201908, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+  m_PrefabInstance: {fileID: 6333923942784694404}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad4bd8c27804475abd39844a0e50218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8743233845521462657
 PrefabInstance:
   m_ObjectHideFlags: 0
