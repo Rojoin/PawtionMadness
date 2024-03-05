@@ -28,7 +28,7 @@ namespace Turret
             attackRange = AttackRangeSO;
             base.Init();
         }
-
+     
         public virtual void Shoot()
         {
             if (animator)
