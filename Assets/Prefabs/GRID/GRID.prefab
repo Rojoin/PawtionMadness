@@ -3444,6 +3444,7 @@ GameObject:
   - component: {fileID: 8610890088938470243}
   - component: {fileID: 4475925782765480193}
   - component: {fileID: 7429116551794704064}
+  - component: {fileID: 930323071443675319}
   m_Layer: 0
   m_Name: GRID
   m_TagString: Untagged
@@ -3569,6 +3570,23 @@ MonoBehaviour:
   timeControllerData: {fileID: 11400000, guid: b65004861dcd4b54ca3d92214c5142bd, type: 2}
   timeToHold: 0.5
   _defaultPos: {x: 0, y: 0}
+--- !u!114 &930323071443675319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478063668303401436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2452246a51eb42fe9f4fc98a1c4f1e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPlacedTurret: {fileID: 11400000, guid: d3964fee23bce0444aa73c30ce46ef3b, type: 2}
+  PlaceTurret:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 74e9faa0f0cc21a4d86acf3fc34adad8, type: 2}
 --- !u!1 &7481909580352469952
 GameObject:
   m_ObjectHideFlags: 0
