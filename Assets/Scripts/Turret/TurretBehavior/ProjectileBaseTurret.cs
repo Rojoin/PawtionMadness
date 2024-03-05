@@ -35,7 +35,7 @@ public class ProjectileBaseTurret : AttackTurret
             }
         }
     }
-
+    [ContextMenu("test shoot")]
     public override void Shoot()
     {
         for (int i = 0; i < ProjectileQuantity; i++)
