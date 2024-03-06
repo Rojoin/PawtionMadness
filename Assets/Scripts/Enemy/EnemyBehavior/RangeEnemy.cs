@@ -15,13 +15,13 @@ public class RangeEnemy : SimpleEnemy
         yield return new WaitForSeconds(enemyType.attackDelay);
 
         var spell = Instantiate(attackParticle, currentObjective.position, Quaternion.identity);
+        spell.gameObject.SetActive(true);
         targetDamage.ReceiveDamage(Damage);
         onAttack.Invoke();
         if (!targetDamage.IsAlive())
         {
             stopMoving = false;
         }
-        Destroy(spell,spell.totalTime);
         yield break;
     }
 }
