@@ -2719,6 +2719,17 @@ MonoBehaviour:
   _turret: {fileID: 0}
   _turretPosition: {fileID: 1694710120}
   model: {fileID: 1694710120}
+--- !u!114 &1189906367 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3143758768225201908, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+  m_PrefabInstance: {fileID: 7377620539579056765}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad4bd8c27804475abd39844a0e50218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1237460569 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 652274944916360889, guid: abc95546846c58d4db902d676c070e73, type: 3}
@@ -4638,7 +4649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223280389243143638, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000076293945
+      value: 0.000034332275
       objectReference: {fileID: 0}
     - target: {fileID: 1234946973280734815, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5843,11 +5854,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
       propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1189906367}
     - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
       propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayReadyPotion
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CouldronSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786309300104332390, guid: 03582489449adaf4294f64acb57ca435, type: 3}
+      propertyPath: OnCookingFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4040634163976534243, guid: 03582489449adaf4294f64acb57ca435, type: 3}
       propertyPath: OnCut.m_PersistentCalls.m_Calls.Array.data[0].m_Target
