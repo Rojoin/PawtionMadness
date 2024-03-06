@@ -60,6 +60,10 @@ namespace Grid
                 string value = playerInventory.GetTurret().id;
                 gridIndicator.SetCurrentTurret(value);
             }
+            else
+            {
+                gridIndicator.SetCurrentTurret(null);
+            }
 
             Time.timeScale = timeControllerData.slowTimeScale;
         }
