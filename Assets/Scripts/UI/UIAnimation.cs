@@ -13,7 +13,7 @@ namespace UI
             Vector2 initialSize = new Vector2(sizeDelta.x, sizeDelta.y);
             Vector2 maxRezSize = initialSize * size;
             Color baseColor = text.faceColor;
-            Color initialColor = new Color32(255, 255, 255, 0);
+            Color initialColor = new Color(baseColor.r, baseColor.g, baseColor.b, 0);
             text.color = initialColor;
             float timer = 0.0f;
             text.enabled = true;
@@ -33,7 +33,7 @@ namespace UI
             rectTransform.sizeDelta = initialSize;
             yield break;
         }
-        
+
         public IEnumerator PlayAnimation(RectTransform rectTransform, float size, float timeUntilEndOfAnimation,
             AnimationCurve animationCurve,
             TextMeshProUGUI text)
@@ -42,7 +42,7 @@ namespace UI
             Vector2 initialSize = new Vector2(sizeDelta.x, sizeDelta.y);
             Vector2 maxSize = initialSize * size;
             Color baseColor = text.color;
-            Color initialColor = new Color32(255, 255, 255, 0);
+            Color initialColor = new Color(baseColor.r, baseColor.g, baseColor.b, 0);
             text.color = initialColor;
             float timer = 0.0f;
             text.enabled = true;
