@@ -3065,7 +3065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1223280389243143638, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000019073486
+      value: -0.000019073486
       objectReference: {fileID: 0}
     - target: {fileID: 1234946973280734815, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3126,6 +3126,14 @@ PrefabInstance:
     - target: {fileID: 1488501970121557859, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609139894518559833, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
+      propertyPath: m_text
+      value: You will fall as the leaves in Autumn...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609139894518559833, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
+      propertyPath: m_fontSize
+      value: 31.7
       objectReference: {fileID: 0}
     - target: {fileID: 1697431295228363607, guid: fa75eeb60840a2842a8e66785956fff1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3971,6 +3979,20 @@ PrefabInstance:
       propertyPath: kitchenTutorialText
       value: 
       objectReference: {fileID: 1153263079}
+    - target: {fileID: 5199611707697446961, guid: bb0a0725349fdb74183e803b0bd6dfe9, type: 3}
+      propertyPath: texts.Array.data[1]
+      value: Lets go to the garden. Go to the <sprite name="Cristal">.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5199611707697446961, guid: bb0a0725349fdb74183e803b0bd6dfe9, type: 3}
+      propertyPath: texts.Array.data[5]
+      value: To make a potion you need to cook 3 ingredients. Now let's look for
+        another <sprite name="Mushroom">.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5199611707697446961, guid: bb0a0725349fdb74183e803b0bd6dfe9, type: 3}
+      propertyPath: texts.Array.data[9]
+      value: It doesn't matter the order,  just the ingredients. Now take a <sprite
+        name="Fruit">.
+      objectReference: {fileID: 0}
     - target: {fileID: 5199611707697446961, guid: bb0a0725349fdb74183e803b0bd6dfe9, type: 3}
       propertyPath: interactions.Array.data[0]
       value: 
