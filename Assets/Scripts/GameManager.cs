@@ -3,6 +3,7 @@ using System.Collections;
 using CustomSceneSwitcher.Switcher;
 using CustomSceneSwitcher.Switcher.Data;
 using Player;
+using Table;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -209,6 +210,8 @@ public class GameManager : MonoBehaviour
             isPaused = !isPaused;
             uiManager.TogglePauseMenu(isPaused);
             Time.timeScale = isPaused ? 0 : 1;
+            player.GetComponent<PlayerInteract>().enabled = !isPaused;
+            player.GetComponent<PlayerController>().enabled = !isPaused;
         }
     }
 
