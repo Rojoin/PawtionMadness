@@ -28,6 +28,7 @@ namespace Enemy
         public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
         public float DeathTime { get => enemyType.deathTime; }
 
+        [ContextMenu("Activate")]
         public virtual void Init()
         {
             this.StopAllCoroutines();

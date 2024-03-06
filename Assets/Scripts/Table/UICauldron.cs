@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UICauldron : MonoBehaviour
 {
     private Cauldron _cauldron;
+    [SerializeField] private GameObject progressBarObject;
     [SerializeField] private Image _fillImage;
     [SerializeField] private Image[] backGroundImage;
     [SerializeField] private Image[] ingredientsImages;
@@ -38,6 +39,7 @@ public class UICauldron : MonoBehaviour
             image.enabled = false;
         }
 
+        progressBarObject.SetActive(false);
         foreach (Image ingredientsImage in ingredientsImages)
         {
             ingredientsImage.enabled = false;
@@ -55,7 +57,7 @@ public class UICauldron : MonoBehaviour
             {
                 image.enabled = true;
             }
-
+            progressBarObject.SetActive(true);
         }
 
         ingredientsImages[currentDisplayImages].sprite = newIngredientImage;

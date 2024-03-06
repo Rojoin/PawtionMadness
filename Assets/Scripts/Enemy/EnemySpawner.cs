@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,15 +12,17 @@ public class EnemySpawner : MonoBehaviour
     private float maxGameBarTimer = 0;
     private float timerGameBar = 0;
 
-    private float spawnTimer;
-    private float spawnPeriod;
-    private bool delayTimer;
+    private float spawnTimer = 0;
+    private float spawnPeriod = 0;
 
-    private float currentTimer;
+    private float currentTimer = 0;
 
     private int enemyCount;
+    private bool waitWave;
     private bool activeWave;
-    private int actualWave = 0;
+    private bool canSpawnEnemies;
+    private int currentWave = 0;
+    private bool hasEnded = false;
 
     [Header("Events")]
     public UnityEvent<float> OnGameBarUpdated = new UnityEvent<float>();
@@ -28,16 +32,18 @@ public class EnemySpawner : MonoBehaviour
     public EnemyInvokeChannel invokeEnemyChannel;
     public BoolChannelSO OnWaveFinishChannel;
 
-    private void Awake()
+    public void StartEnemySpawner()
     {
-        spawnPeriod = waveList[actualWave].newSpawnTime;
+        hasEnded = false;
+        spawnPeriod = waveList[currentWave].newSpawnTime;
 
         foreach (var wave in waveList)
         {
-            float waveTimerBeforeWave = wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave;
+            float waveTimerBeforeWave = wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave +
+                                        wave.TimeBeforeNewPreWaveStart + wave.totalEnemyWave * wave.SpawnTimeInWave;
 
-            maxGameBarTimer += waveTimerBeforeWave +
-                               wave.delayAfterWave;
+            maxGameBarTimer += waveTimerBeforeWave;
+            Debug.Log(maxGameBarTimer);
         }
 
         currentTimer = timerGameBar / maxGameBarTimer;
@@ -47,83 +53,122 @@ public class EnemySpawner : MonoBehaviour
         foreach (var wave in waveList)
         {
             float imageNormalizePosition =
-                (waveTimer + wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave) / maxGameBarTimer;
+                (waveTimer + wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave +
+                 wave.TimeBeforeNewPreWaveStart) / maxGameBarTimer;
 
-            waveTimer += wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave + wave.delayAfterWave;
+            waveTimer += wave.newSpawnTime * wave.totalEnemyBeforeWave + wave.delayBeforeWave +
+                         wave.TimeBeforeNewPreWaveStart + wave.totalEnemyWave * wave.SpawnTimeInWave;
+            Debug.Log(waveTimer);
             OnNewWaveAdded.Invoke(imageNormalizePosition);
         }
+
+        waitWave = true;
     }
 
     private void Update()
     {
-        if (timerGameBar < maxGameBarTimer)
-        {
-            timerGameBar += Time.deltaTime;
-        }
-
+        timerGameBar += Time.deltaTime;
         currentTimer = timerGameBar / maxGameBarTimer;
-        OnGameBarUpdated.Invoke(currentTimer);
+        OnGameBarUpdated.Invoke(Mathf.Clamp01(currentTimer));
 
-        if (actualWave < waveList.Length)
+        //Check if all wave have finish
+        if (currentWave < waveList.Length)
         {
-            spawnTimer += Time.deltaTime;
+            //check Wave
+            if (waitWave)
+            {
+                StartCoroutine(BeforeWave());
+            }
+            else if (!activeWave && enemyCount >= waveList[currentWave].totalEnemyBeforeWave)
+            {
+                StartCoroutine(EnableWave());
+            }
+            else if (activeWave && enemyCount >= waveList[currentWave].totalEnemyWave)
+            {
+                StartCoroutine(SetNextWave());
+            }
 
             if (spawnTimer > spawnPeriod)
             {
-                if (activeWave)
-                {
-                    spawnPeriod = waveList[actualWave].SpawnTimeInWave;
-                }
+                SpawnNewEnemy();
+            }
 
-                if (delayTimer)
-                {
-                    delayTimer = false;
-                    activeWave = false;
-                    actualWave++;
-                    if (actualWave < waveList.Length)
-                    {
-                        spawnPeriod = waveList[actualWave].newSpawnTime;
-                    }
-
-                    enemyCount = 0;
-                }
-
-                SortEnemies();
-
-                invokeEnemyChannel.RaiseEvent(probList);
-                enemyCount++;
-
-                spawnTimer = 0;
-
-                if (activeWave && enemyCount >= waveList[actualWave].totalEnemyWave)
-                {
-                    spawnPeriod = waveList[actualWave].delayAfterWave;
-                    delayTimer = true;
-                    enemyCount = 0;
-                }
-                else if (!activeWave && actualWave < waveList.Length &&
-                         enemyCount >= waveList[actualWave].totalEnemyBeforeWave)
-                {
-                    activeWave = true;
-                    spawnPeriod = waveList[actualWave].delayBeforeWave;
-                    enemyCount = 0;
-                    OnIncomingWave.Invoke();
-                    OnWaveStart.Invoke();
-                }
+            if (!waitWave)
+            {
+                spawnTimer += Time.deltaTime;
             }
         }
-        else
+        else if (!hasEnded)
         {
-            OnWaveFinishChannel.RaiseEvent(true);
-            this.gameObject.SetActive(false);
+            hasEnded = true;
+            OnWaveFinishChannel.RaiseEvent(hasEnded);
         }
     }
 
+    private void SpawnNewEnemy()
+    {
+        if (canSpawnEnemies)
+        {
+            spawnTimer = 0;
+
+            SortEnemies();
+
+            invokeEnemyChannel.RaiseEvent(probList);
+            enemyCount++;
+        }
+    }
+
+    private IEnumerator BeforeWave()
+    {
+        yield return new WaitForSeconds(waveList[currentWave].TimeBeforeNewPreWaveStart);
+        waitWave = false;
+        canSpawnEnemies = true;
+        yield return null;
+    }
+
+    private IEnumerator EnableWave()
+    {
+        canSpawnEnemies = false;
+        enemyCount = 0;
+
+        yield return new WaitForSeconds(waveList[currentWave].delayBeforeWave);
+
+        Debug.Log("EnableWave");
+        activeWave = true;
+        canSpawnEnemies = true;
+        spawnPeriod = waveList[currentWave].SpawnTimeInWave;
+        OnIncomingWave.Invoke();
+
+        yield return null;
+    }
+
+    private IEnumerator SetNextWave()
+    {
+        enemyCount = 0;
+
+        currentWave++;
+
+        if (currentWave < waveList.Length)
+        {
+            spawnPeriod = waveList[currentWave].newSpawnTime;
+        }
+
+        OnWaveStart.Invoke();
+
+        activeWave = false;
+        canSpawnEnemies = false;
+        waitWave = true;
+        Debug.Log("SetNextWave");
+
+        yield return null;
+    }
+
+
     private void SortEnemies()
     {
-        if (actualWave < waveList.Length)
+        if (currentWave < waveList.Length)
         {
-            foreach (EnemyTypeProb newEnemyType in waveList[actualWave].enemyTypes)
+            foreach (EnemyTypeProb newEnemyType in waveList[currentWave].enemyTypes)
             {
                 for (int i = 0; i < newEnemyType.probability; i++)
                 {

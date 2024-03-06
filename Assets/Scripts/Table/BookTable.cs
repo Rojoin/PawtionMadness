@@ -12,11 +12,13 @@ namespace Table
  
         public override void OnInteraction(PlayerInventory playerInventory = null, PlayerInteract playerInteract = null)
         {
+            OnInteract.Invoke();
             isCanvasActive = !isCanvasActive;
             activateRecipesCanvasChannel.RaiseEvent();
             if (!isCanvasActive)
             {
                 StopCoroutine(isPlayerOnObject);
+                OnItemDrop.Invoke();
             }
             else
             {
@@ -33,6 +35,8 @@ namespace Table
             }
             isCanvasActive = false;
             activateRecipesCanvasChannel.RaiseEvent();
+            OnItemDrop.Invoke();
+            Debug.Log("Not looking");
             yield break;
         }
         public void setCanvasActiveBool(bool state = false)

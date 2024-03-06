@@ -4,12 +4,12 @@ using Enemy;
 
 public class SimpleEnemy : BaseEnemy
 {
-    private bool stopMoving;
-    private bool canAttack;
-    private float timer;
-    private Vector3 initRayPosition;
-    private static readonly int AttackTrigger = Animator.StringToHash("Attack");
-
+    protected bool stopMoving;
+    protected bool canAttack;
+    protected float timer;
+    protected Vector3 initRayPosition;
+    protected static readonly int AttackTrigger = Animator.StringToHash("Attack");
+    protected Transform currentObjective;
 
     public override void Init()
     {
@@ -20,7 +20,7 @@ public class SimpleEnemy : BaseEnemy
 
     //TODO:Cambiar logica update a IEnumerator
     //TODO:Hacer FST
-    private void Update()
+    protected void Update()
     {
         if (!isAlive) return;
 
@@ -48,7 +48,7 @@ public class SimpleEnemy : BaseEnemy
         initRayPosition = transform.position + (-transform.forward * transform.localScale.x / 2);
     }
 
-    private IEnumerator Attack(IHealthComponent targetDamage)
+    protected virtual IEnumerator Attack(IHealthComponent targetDamage)
     {
         canAttack = false;
         timer -= enemyType.attackSpeed;
@@ -64,7 +64,7 @@ public class SimpleEnemy : BaseEnemy
         yield break;
     }
 
-    private void DetectEntity()
+    protected void DetectEntity()
     {
         int layerMask = 1 << gameObject.layer;
         layerMask = ~layerMask;
@@ -77,6 +77,7 @@ public class SimpleEnemy : BaseEnemy
                 if (canAttack)
                 {
                     isAttacking = StartCoroutine(Attack(entity));
+                    currentObjective = hit.collider.gameObject.transform;
                 }
             }
         }
@@ -86,7 +87,7 @@ public class SimpleEnemy : BaseEnemy
         }
     }
 
-    private void OnDrawGizmos()
+    protected void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(initRayPosition, initRayPosition + transform.forward * AttackRange);

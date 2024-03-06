@@ -31,13 +31,20 @@ namespace Visuals
                 }
             }
 
-            for (int i = 0; i < children.Length; i++)
+            for (int i = 0; i < childRenderers.Count; i++)
             {
-                if (children[i].TryGetComponent<Renderer>(out var childRen))
-                {
-                    childRen.material = childRen.sharedMaterial;
-                }
+                childRenderers[i].material = materials[i];
             }
+
+        }
+
+        private void OnDisable()
+        {
+            for (int i = 0; i < childRenderers.Count; i++)
+            {
+                childRenderers[i].material = materials[i];
+            }
+
         }
 
         public void StartBlinking()

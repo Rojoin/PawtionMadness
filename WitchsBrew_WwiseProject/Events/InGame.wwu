@@ -6,6 +6,121 @@
 				<Property Name="Color" Type="int16" Value="5"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
+			<ChildrenList>
+				<Folder Name="Music" ID="{D0B9B598-6EDD-422F-98A8-B076EE2835F7}" ShortID="380775374">
+					<ChildrenList>
+						<Event Name="Play_ingamemusic_level" ID="{503A21C3-FC34-4E9D-9778-A26449B5ED57}">
+							<ChildrenList>
+								<Action Name="" ID="{08E73DDF-DBB0-4BF2-92AF-61BDB529BF15}" ShortID="883506691">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ingamemusic_tutorial1" ID="{66571F30-7D0E-4B74-8321-B0412BFDB1DC}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{51F397FD-15FC-4432-8C3A-17E0D768C7E6}" ShortID="374945534">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Comienzo_de_juego" ID="{227A69B9-4214-4EC8-8F2A-221B65550797}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{79C03148-D01C-4B90-B672-060ED936BB57}" ShortID="68738551">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ingamemusic_level" ID="{4BDA89BE-723E-475D-A91D-AF7C32387AB6}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ingamemusic_tutorial" ID="{C44B7B60-3FC1-4DC2-BD79-5A4D1F7B7B7E}">
+							<ChildrenList>
+								<Action Name="" ID="{ED18E9CB-B698-4F6F-93E4-F210D09E33FA}" ShortID="906799162">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="main menu music" ID="{D80337C4-0625-4E77-B77A-BC650C554D04}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{89CA77ED-4824-4764-9FE1-D6BC48DF3A5E}" ShortID="414704942">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Comienzo_de_juego" ID="{227A69B9-4214-4EC8-8F2A-221B65550797}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A8D1EE4B-6CAE-4690-9D9B-EDCBBDAD40AC}" ShortID="404205850">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ingamemusic_tutorial1" ID="{66571F30-7D0E-4B74-8321-B0412BFDB1DC}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Perder_Juego" ID="{F888067F-A3EC-4DD1-A04E-B57ACE82398C}">
+							<ChildrenList>
+								<Action Name="" ID="{D845119C-6EDD-475D-9881-C85045B34D37}" ShortID="842216727">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Perder_Juego" ID="{8A961DCE-E7E8-44E7-866A-63BF24BEC5AD}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Oleada" ID="{7CA31EA5-399D-48A4-8234-90FCE01AD297}">
+							<ChildrenList>
+								<Action Name="" ID="{D4AE548F-5981-4A51-B632-E70D2CA272C7}" ShortID="731723267">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Oleada" ID="{787BD6DB-8BB2-46CF-8056-172ECA160D2D}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Oleada_final" ID="{025C90FE-29FB-4A26-953E-AFE08A42EDAA}">
+							<ChildrenList>
+								<Action Name="" ID="{2BC7393A-7109-4FA7-A95E-35925BCCEA6F}" ShortID="1011069118">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Oleada final" ID="{FC823D43-C1D0-4792-BDE2-6B6ACE0E0C77}" WorkUnitID="{47D1AD2B-8F03-4DC8-A347-D31A7993F89E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_ingamemusic_tutorial" ID="{24F240CB-2135-41E6-A625-E13709449945}">
+							<ChildrenList>
+								<Action Name="" ID="{DD7CC473-2DC1-492D-879D-0DEA0191634A}" ShortID="811666145">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ingamemusic_tutorial1" ID="{66571F30-7D0E-4B74-8321-B0412BFDB1DC}" WorkUnitID="{DE46241F-B477-4E7D-81C6-8525CAD09315}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
 		</WorkUnit>
 	</Events>
 </WwiseDocument>

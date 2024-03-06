@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7809100718179072393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7955426082690022826}
+  - component: {fileID: 5199611707697446961}
+  m_Layer: 0
+  m_Name: TutorialManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7955426082690022826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7809100718179072393}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.294745, y: 0.10349631, z: -10.055268}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5199611707697446961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7809100718179072393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b74c1de9a9144986afa42c422fa5a7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texts:
+  - Try to move around the kitchen.
+  - Lets go to the garden.
+  - Here will go your defenses! Press the key above the cristal to go back to the
+    kitchen.
+  - Let's make a <sprite name="Potion">. Pick a <sprite name="Mushroom">.
+  - Go to the cauldron and put the ingredient in the brew!
+  - To make a potion you need to cook 3 ingredients.Now let's look for another <sprite
+    name="Mushroom">.
+  - If we cut the ingredient, it will cook faster. Take it to the cutting board.
+  - Go and cut it!
+  - Now your item is sliced! Take it to the cauldron.
+  - Now take a <sprite name="Fruit">.
+  - Now take the knife!
+  - Cut it!
+  - Put it in the cauldron to finish your <sprite name="Potion">!
+  - Well done! Take the <sprite name="Potion"> from the cauldron.
+  - To use it go to the <sprite name="Cristal">.
+  - Move to an empty space and press the interaction button to place a potion.
+  - Now you know how to cook! Go and protect your house from those rats!
+  interactions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  interactableTable:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  playerMovementChannel: {fileID: 11400000, guid: d3f8a5e4b12d752438553a0a580b5c45, type: 2}
+  onTurretPlaced: {fileID: 11400000, guid: d3964fee23bce0444aa73c30ce46ef3b, type: 2}
+  kitchenTutorialText: {fileID: 0}
+  tutorialScreenCounter: 0
+  interactableCounter: 0
+  controlPointerPlayerMovement: {fileID: 0}
+  OnTutorialEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  timeBetweenText: 1
+  arrowPointer: {fileID: 0}
+  secondsUntilMovementTutorialFades: 5
+  turretForTutorial: {fileID: 11400000, guid: 74ea892627157a34ca8e7742957b168c, type: 2}
+  grid: {fileID: 0}
+  textPositionInGrid: {fileID: 0}
+  timeBetweenChars: 0.01

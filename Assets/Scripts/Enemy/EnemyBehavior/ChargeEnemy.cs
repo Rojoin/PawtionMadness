@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using Enemy;
-using Unity.VisualScripting;
 
 public class ChargeEnemy : BaseEnemy
 {

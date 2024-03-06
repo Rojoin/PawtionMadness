@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 196cb691de8f584c827edddbacf02d6b
     GuidInternal: 
-    m_lastTime: -8585003761023877587
+    m_lastTime: -8584932936144879291
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: aa66b2e34fd8ed42a53d5a4e3b0d167d
     GuidInternal: 
-    m_lastTime: -8585003761046544298
+    m_lastTime: -8584932936262221062
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e7a312c7f9c3cb4d8311f6565e852255
     GuidInternal: 
-    m_lastTime: -8585003761024779261
+    m_lastTime: -8584932936154441430
     List:
     - name: InGame
       guid: da7fa68ead5f7149b4970b88eb6b420d
@@ -156,7 +156,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2621f2e587216f4092b302108c4d8946
     GuidInternal: 
-    m_lastTime: -8585002969454683010
+    m_lastTime: -8584932936277434421
     List: []
   - PhysicalPath: Events\InGame.wwu
     PathAndIcons:
@@ -169,8 +169,145 @@ MonoBehaviour:
     ParentPath: Events\InGame
     guid: e8c7ad57f028174ba6dbfb95905729f6
     GuidInternal: 
-    m_lastTime: -8585003761057151003
-    List: []
+    m_lastTime: -8584919358861847186
+    List:
+    - name: Music
+      guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      Path: Events\InGame\Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ingamemusic_level
+      guid: c3213a5034fc9d4e9778a26449b5ed57
+      id: 1421871233
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_ingamemusic_level
+        ObjectType: 3
+        guid: c3213a5034fc9d4e9778a26449b5ed57
+      Path: Events\InGame\Music\Play_ingamemusic_level
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ingamemusic_tutorial
+      guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
+      id: 2248956983
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_ingamemusic_tutorial
+        ObjectType: 3
+        guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
+      Path: Events\InGame\Music\Play_ingamemusic_tutorial
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Oleada
+      guid: a51ea37c9d39a448823490fce01ad297
+      id: 417218340
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_Oleada
+        ObjectType: 3
+        guid: a51ea37c9d39a448823490fce01ad297
+      Path: Events\InGame\Music\Play_Oleada
+      maxAttenuation: 0
+      maxDuration: 3.3125
+      minDuration: 3.3125
+    - name: Play_Oleada_final
+      guid: fe905c02fb29264a953eafe08a42edaa
+      id: 3691145017
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_Oleada_final
+        ObjectType: 3
+        guid: fe905c02fb29264a953eafe08a42edaa
+      Path: Events\InGame\Music\Play_Oleada_final
+      maxAttenuation: 0
+      maxDuration: 4.901312
+      minDuration: 4.901312
+    - name: Play_Perder_Juego
+      guid: 7f0688f8eca3d14da04eb57ace82398c
+      id: 4180257511
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_Perder_Juego
+        ObjectType: 3
+        guid: 7f0688f8eca3d14da04eb57ace82398c
+      Path: Events\InGame\Music\Play_Perder_Juego
+      maxAttenuation: 0
+      maxDuration: 3.75
+      minDuration: 3.75
+    - name: Stop_ingamemusic_tutorial
+      guid: cb40f2243521e641a625e13709449945
+      id: 1845867801
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Stop_ingamemusic_tutorial
+        ObjectType: 3
+        guid: cb40f2243521e641a625e13709449945
+      Path: Events\InGame\Music\Stop_ingamemusic_tutorial
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events\MainMenu.wwu
     PathAndIcons:
     - ElementName: Events
@@ -182,7 +319,7 @@ MonoBehaviour:
     ParentPath: Events\MainMenu
     guid: 90e94a09cbc25e498ac985591e320b8e
     GuidInternal: 
-    m_lastTime: -8585003761057141054
+    m_lastTime: -8584932936277424418
     List:
     - name: MainMenuMusic
       guid: 20d3f76c0f8fcb4cbd425a5bd70e4e98
@@ -246,7 +383,7 @@ MonoBehaviour:
     ParentPath: Events\Tutorial
     guid: 090215d47f508a4c8e101bbd3392b83a
     GuidInternal: 
-    m_lastTime: -8585002969454583002
+    m_lastTime: -8584919358861787165
     List:
     - name: Ambient
       guid: 6c92e374d455ed4f9ad5a1931bbf86d2
@@ -539,23 +676,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 6.224346
       minDuration: 5.545261
-    - name: Music
-      guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      id: 3991942870
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      Path: Events\Tutorial\Music
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Play_Agarrar_Item_Frasco
       guid: 10a870c57902254ebc5e6558907bd42c
       id: 2559549617
@@ -856,46 +976,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.619101
       minDuration: 0.241355
-    - name: Play_ingamemusic_level
-      guid: c3213a5034fc9d4e9778a26449b5ed57
-      id: 1421871233
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      - ElementName: Play_ingamemusic_level
-        ObjectType: 3
-        guid: c3213a5034fc9d4e9778a26449b5ed57
-      Path: Events\Tutorial\Music\Play_ingamemusic_level
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_ingamemusic_tutorial
-      guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
-      id: 2248956983
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      - ElementName: Play_ingamemusic_tutorial
-        ObjectType: 3
-        guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
-      Path: Events\Tutorial\Music\Play_ingamemusic_tutorial
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Play_libro_abrir_3
       guid: ec1542ec49890643bc208a0b55e77645
       id: 707032169
@@ -916,66 +996,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.029897
       minDuration: 0.985663
-    - name: Play_Oleada
-      guid: a51ea37c9d39a448823490fce01ad297
-      id: 417218340
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      - ElementName: Play_Oleada
-        ObjectType: 3
-        guid: a51ea37c9d39a448823490fce01ad297
-      Path: Events\Tutorial\Music\Play_Oleada
-      maxAttenuation: 0
-      maxDuration: 3.3125
-      minDuration: 3.3125
-    - name: Play_Oleada_final
-      guid: fe905c02fb29264a953eafe08a42edaa
-      id: 3691145017
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      - ElementName: Play_Oleada_final
-        ObjectType: 3
-        guid: fe905c02fb29264a953eafe08a42edaa
-      Path: Events\Tutorial\Music\Play_Oleada_final
-      maxAttenuation: 0
-      maxDuration: 4.901312
-      minDuration: 4.901312
-    - name: Play_Perder_Juego
-      guid: 7f0688f8eca3d14da04eb57ace82398c
-      id: 4180257511
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      - ElementName: Play_Perder_Juego
-        ObjectType: 3
-        guid: 7f0688f8eca3d14da04eb57ace82398c
-      Path: Events\Tutorial\Music\Play_Perder_Juego
-      maxAttenuation: 0
-      maxDuration: 3.75
-      minDuration: 3.75
     - name: Play_Pocion_Lista
       guid: a32c4b5464d5e34f95196ca03ead2ebc
       id: 4143622118
@@ -1573,26 +1593,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.92587
       minDuration: 0.654689
-    - name: Stop_ingamemusic_tutorial
-      guid: cb40f2243521e641a625e13709449945
-      id: 1845867801
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Tutorial
-        ObjectType: 12
-        guid: 090215d47f508a4c8e101bbd3392b83a
-      - ElementName: Music
-        ObjectType: 4
-        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
-      - ElementName: Stop_ingamemusic_tutorial
-        ObjectType: 3
-        guid: cb40f2243521e641a625e13709449945
-      Path: Events\Tutorial\Music\Stop_ingamemusic_tutorial
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Table
       guid: 14f8c6b495194049a1b8af72cf8886a1
       id: 2048817515
@@ -1610,6 +1610,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Turret_Place
+      guid: 4b461783b2a19548b6e1944116f17efd
+      id: 3187575487
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Turret_Place
+        ObjectType: 3
+        guid: 4b461783b2a19548b6e1944116f17efd
+      Path: Events\Tutorial\Turrets\Turret_Place
+      maxAttenuation: 0
+      maxDuration: 0.687521
+      minDuration: 0.687521
     - name: Turrets
       guid: 8f23604e43261b409a33b1911f950776
       id: 212919962
@@ -1696,7 +1716,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: eda32d6682632e48b8937bccdfa5c6be
     GuidInternal: 
-    m_lastTime: -8585003761057131053
+    m_lastTime: -8584932936277424418
     List:
     - name: Master
       guid: 8a36ad170602d64e96318d211728477e
@@ -1752,7 +1772,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 453e836da4731d43aaf2ace66950652e
     GuidInternal: 
-    m_lastTime: -8585003761023897538
+    m_lastTime: -8584932936146599760
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -1766,7 +1786,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d95443d702661b448cd3207c91b5b886
     GuidInternal: 
-    m_lastTime: -8585003761023887590
+    m_lastTime: -8584919358774638698
     List:
     - name: ingamemusic_level
       guid: 29bcdb2a22c379459eec19e2b879a83c
@@ -1783,6 +1803,198 @@ MonoBehaviour:
         guid: 29bcdb2a22c379459eec19e2b879a83c
       Path: Switches\Default Work Unit\ingamemusic_level
       values:
+      - name: A1summer_easy
+        guid: 289ced03cc5f6c46a5d3b5d3bfa03977
+        id: 3972850513
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: A1summer_easy
+          ObjectType: 10
+          guid: 289ced03cc5f6c46a5d3b5d3bfa03977
+      - name: A1summer_hard
+        guid: 270b059edf955d44b3e8e9b97c385a17
+        id: 2748726444
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: A1summer_hard
+          ObjectType: 10
+          guid: 270b059edf955d44b3e8e9b97c385a17
+      - name: A1summer_mid
+        guid: ba3f72ed10ee1247973d5eee926ec1f4
+        id: 2561619007
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: A1summer_mid
+          ObjectType: 10
+          guid: ba3f72ed10ee1247973d5eee926ec1f4
+      - name: Bautum_easy
+        guid: 4e34a55b9634374693d24e08a3e5bf65
+        id: 265221752
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Bautum_easy
+          ObjectType: 10
+          guid: 4e34a55b9634374693d24e08a3e5bf65
+      - name: Bautum_hard
+        guid: 4f57675209655a498976d83e16209602
+        id: 2900492669
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Bautum_hard
+          ObjectType: 10
+          guid: 4f57675209655a498976d83e16209602
+      - name: Bautum_mid
+        guid: 9791360f467b094c88db11012b6be166
+        id: 2706813548
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Bautum_mid
+          ObjectType: 10
+          guid: 9791360f467b094c88db11012b6be166
+      - name: Cwinter_easy
+        guid: 022ec8f136a2f64baa49cbf2f66b6185
+        id: 2671927576
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Cwinter_easy
+          ObjectType: 10
+          guid: 022ec8f136a2f64baa49cbf2f66b6185
+      - name: Cwinter_hard
+        guid: c7b01bf3d0bcd54c88cf00d752d20328
+        id: 1053807901
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Cwinter_hard
+          ObjectType: 10
+          guid: c7b01bf3d0bcd54c88cf00d752d20328
+      - name: Cwinter_mid
+        guid: e037572fcb758149bd6776fbc1e5b7c2
+        id: 1933559692
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Cwinter_mid
+          ObjectType: 10
+          guid: e037572fcb758149bd6776fbc1e5b7c2
+      - name: Dspring_easy
+        guid: 4c85363addedfd46a936a112eb6e4dd9
+        id: 1684312137
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Dspring_easy
+          ObjectType: 10
+          guid: 4c85363addedfd46a936a112eb6e4dd9
+      - name: Dspring_hard
+        guid: f6008602616c7c4cb894c0ef38c744e9
+        id: 3944199108
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Dspring_hard
+          ObjectType: 10
+          guid: f6008602616c7c4cb894c0ef38c744e9
+      - name: Dspring_mid
+        guid: 5312d5a999125d44be56313d102955a8
+        id: 881028919
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Dspring_mid
+          ObjectType: 10
+          guid: 5312d5a999125d44be56313d102955a8
       - name: LOOSE
         guid: 37d93039aefe40439faaf226dba1e665
         id: 174960569
@@ -1799,54 +2011,6 @@ MonoBehaviour:
         - ElementName: LOOSE
           ObjectType: 10
           guid: 37d93039aefe40439faaf226dba1e665
-      - name: wave_1
-        guid: 289ced03cc5f6c46a5d3b5d3bfa03977
-        id: 1453692858
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: d95443d702661b448cd3207c91b5b886
-        - ElementName: ingamemusic_level
-          ObjectType: 11
-          guid: 29bcdb2a22c379459eec19e2b879a83c
-        - ElementName: wave_1
-          ObjectType: 10
-          guid: 289ced03cc5f6c46a5d3b5d3bfa03977
-      - name: wave_2
-        guid: ba3f72ed10ee1247973d5eee926ec1f4
-        id: 1453692857
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: d95443d702661b448cd3207c91b5b886
-        - ElementName: ingamemusic_level
-          ObjectType: 11
-          guid: 29bcdb2a22c379459eec19e2b879a83c
-        - ElementName: wave_2
-          ObjectType: 10
-          guid: ba3f72ed10ee1247973d5eee926ec1f4
-      - name: wave_3
-        guid: 270b059edf955d44b3e8e9b97c385a17
-        id: 1453692856
-        PathAndIcons:
-        - ElementName: Switches
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: d95443d702661b448cd3207c91b5b886
-        - ElementName: ingamemusic_level
-          ObjectType: 11
-          guid: 29bcdb2a22c379459eec19e2b879a83c
-        - ElementName: wave_3
-          ObjectType: 10
-          guid: 270b059edf955d44b3e8e9b97c385a17
       - name: WIN
         guid: 6486ae38b4b58c4aa3e7a54b772c1f05
         id: 979765101
@@ -1944,10 +2108,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: befacd619a68c341acea8777258db81d
     GuidInternal: 
-    m_lastTime: -8585003761023887590
+    m_lastTime: -8584932936144879291
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000c0000000f000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
