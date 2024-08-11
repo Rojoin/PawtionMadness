@@ -25,23 +25,25 @@ jobs:
             
 
        # Build
-      - name: ExecuteScript
+     # - name: ExecuteScript
+      #  uses: game-ci/unity-builder@v4
+     # #  env:
+       #   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+       #   UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+       #   UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+     #   with:
+      #    buildMethod : Editor.WwiseFixEditor.WwisePatches
+      # Build
+      - name: Build project
         uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          buildMethod : Editor.WwiseFixEditor.WwisePatches
-      # Build
-      - name: Build project
-        uses: game-ci/unity-builder@v3
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-        with:
           targetPlatform: StandaloneWindows
+          customImage: 'unityci/editor:2022.3.8f1-base-0'
+       
 
       # Output
       - uses: actions/upload-artifact@v3
