@@ -1,7 +1,8 @@
 name: Create build Windows🧐🙈
 
-on: [pull_request]
-
+on: 
+  workflow_dispatch: {}
+    
 
 jobs:
   build:
