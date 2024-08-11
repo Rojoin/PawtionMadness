@@ -8,6 +8,8 @@ using System;
   /// A fix for Cloud Build while using Wwise. Add to Editor Folder
   /// Based on solution from Blackbox Relaities: https://github.com/BlackBoxSimulations/wwise-unity-cloud-build-fixer
   /// </summary>
+namespace UnityBuilderAction
+{
   public class WwiseFixEditor : MonoBehaviour
   {
     class WwiseReplacement
@@ -160,3 +162,4 @@ using System;
       AkPluginActivator.ActivateRelease();
     }
   }
+}
