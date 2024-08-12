@@ -1,165 +1,128 @@
-using System;
-  using UnityEngine;
-  using UnityEditor;
-  using System.IO;
-  using System.Collections.Generic;
+/* Copyright (C) 2019 Adrian Babilinski
+* You may use, distribute and modify this code under the
+* terms of the MIT License
+*
+*Permission is hereby granted, free of charge, to any person obtaining a copy
+*of this software and associated documentation files (the "Software"), to deal
+*in the Software without restriction, including without limitation the rights
+*to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+*copies of the Software, and to permit persons to whom the Software is
+*furnished to do so, subject to the following conditions:
+*
+*The above copyright notice and this permission notice shall be included in all
+*copies or substantial portions of the Software.
+*
+*THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+*IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+*FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+*AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+*LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+*OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+*SOFTWARE.
+*
+*For more information contact adrian@blackboxrealities.com or visit blackboxrealities.com
+*/
 
-  /// <summary>
-  /// A fix for Cloud Build while using Wwise. Add to Editor Folder
-  /// Based on solution from Blackbox Relaities: https://github.com/BlackBoxSimulations/wwise-unity-cloud-build-fixer
-  /// </summary>
-namespace UnityBuilderAction
+namespace Common.Tools
 {
-  public class WwiseFixEditor : MonoBehaviour
-  {
-    class WwiseReplacement
+    using System;
+    using UnityEngine;
+    using UnityEditor;
+    using System.IO;
+    /// <summary>
+    /// A fix for Cloud Build while using Wwise. Add to Editor Folder
+    /// </summary>
+    public class WwiseFixEditor
     {
-      private string Original;
-      private string Replacement;
-
-      public WwiseReplacement(string original, string replacement)
-      {
-        Original = original;
-        Replacement = replacement;
-      }
-
-      public bool ReplaceIfNecessary(string input, out string output)
-      {
-        if (input.Equals(Original, StringComparison.OrdinalIgnoreCase))
+        [MenuItem("Tools/Fix Wwise Cloud Build")]
+        public static void CreateNewGameObject()
         {
-          output = Replacement;
-          return true;
+       
+            string path = EditorUtility.OpenFolderPanel("Wwise Root Folder in Assets", "", "");
+            GetDirectories(path);
+            AssetDatabase.Refresh();
         }
-        else if (input.Contains(Original))
+ 
+        private static void GetDirectories(string path)
         {
-          output = input.Replace(Original, Replacement);
-          return true;
-        }
-        else
-        {
-          output = null;
-          return false;
-        }
-      }
-
-      public bool ReverseReplaceIfNecessary(string input, out string output)
-      {
-        if (input.Equals(Replacement, StringComparison.OrdinalIgnoreCase))
-        {
-          output = Original;
-          return true;
-        }
-        else if (input.Contains(Replacement))
-        {
-          output = input.Replace(Replacement, Original);
-          return true;
-        }
-        else
-        {
-          output = null;
-          return false;
-        }
-      }
-    }
-
-    private static WwiseReplacement[] WwisePatches =
-    {
-      // Mac
-      new WwiseReplacement("#if (UNITY_STANDALONE_OSX && !UNITY_EDITOR) || UNITY_EDITOR_OSX", "#if (UNITY_STANDALONE_OSX && !UNITY_EDITOR) || (UNITY_EDITOR_OSX && !UNITY_STANDALONE_WIN)"),
-      // Windows
-      new WwiseReplacement("#if (UNITY_STANDALONE_WIN && !UNITY_EDITOR) || UNITY_EDITOR_WIN", "#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_WSA"),
-      //Linux
-      new WwiseReplacement("#if UNITY_STANDALONE_LINUX && ! UNITY_EDITOR", "#if UNITY_EDITOR_LINUX || (UNITY_STANDALONE_LINUX && !UNITY_EDITOR)"),
-      new WwiseReplacement("#if UNITY_STANDALONE_LINUX && !UNITY_EDITOR", "#if UNITY_EDITOR_LINUX || (UNITY_STANDALONE_LINUX && !UNITY_EDITOR)"),
-      new WwiseReplacement("#if (UNITY_SWITCH || UNITY_ANDROID || UNITY_STANDALONE_LINUX || UNITY_WEBGL) && !UNITY_EDITOR", "#if ((UNITY_SWITCH || UNITY_ANDROID || UNITY_STANDALONE_LINUX || UNITY_WEBGL) && !UNITY_EDITOR) || UNITY_EDITOR_LINUX")
-      // Android
-      new WwiseReplacement("#if UNITY_ANDROID && !UNITY_EDITOR", "#if (UNITY_ANDROID && !UNITY_EDITOR) || (UNITY_ANDROID && UNITY_EDITOR_LINUX)"),
-      new WwiseReplacement("#if UNITY_ANDROID && ! UNITY_EDITOR", "#if (UNITY_ANDROID && !UNITY_EDITOR) || (UNITY_ANDROID && UNITY_EDITOR_LINUX)"),
-      // iOS
-      new WwiseReplacement("#if (UNITY_IOS && !UNITY_EDITOR) || (UNITY_IOS && UNITY_EDITOR_LINUX)", "#if UNITY_IOS && !UNITY_EDITOR"),
-      //new WwiseReplacement("#if UNITY_IOS && ! UNITY_EDITOR", "#if (UNITY_IOS && !UNITY_EDITOR) || (UNITY_IOS && UNITY_EDITOR_LINUX)"),
-      new WwiseReplacement("#if (UNITY_IOS || UNITY_TVOS) && !UNITY_EDITOR", "#if (UNITY_IOS && !UNITY_EDITOR) || (UNITY_IOS && UNITY_EDTIOR_LINUX)"),
-      new WwiseReplacement("#if (UNITY_IOS && !UNITY_EDITOR) || (UNITY_IOS && UNITY_EDTIOR_LINUX) || (UNITY_TVOS && !UNITY_EDITOR) || (UNITY_TVOS && UNITY_EDITOR_LINUX)", "#if (UNITY_IOS && !UNITY_EDITOR) || (UNITY_IOS && UNITY_EDTIOR_LINUX)"),
-      // Switch
-      new WwiseReplacement("#if (UNITY_SWITCH || UNITY_ANDROID || UNITY_STANDALONE_LINUX || UNITY_STADIA) && !UNITY_EDITOR", "#if (UNITY_SWITCH || UNITY_ANDROID || UNITY_STANDALONE_LINUX || UNITY_STADIA) && (!UNITY_EDITOR || UNITY_EDITOR_LINUX)")
-    };
-
-    public static void ApplyWwiseScriptsFix()
-    {
-      ModifyWwiseScriptsTempFix(false);
-    }
-
-    public static void RemoveWwiseScriptsFix()
-    {
-      ModifyWwiseScriptsTempFix(true);
-    }
-
-    private static void ModifyWwiseScriptsTempFix(bool undo)
-    {
-      string path = EditorUtility.OpenFolderPanel("Wwise Root Folder in Assets", "", "");
-      GetDirectories(path, undo);
-      AssetDatabase.Refresh();
-    }
-
-    public static void GetDirectories(string path, bool undo)
-    {
-      string[] directories = Directory.GetDirectories(path);
-      ReplaceFiles(Directory.GetFiles(path), path, undo);
-
-      foreach (string directory in directories)
-        GetDirectories(directory, undo);
-    }
-
-    private static void ReplaceFiles(string[] files, string path, bool undo)
-    {
-      foreach (string file in files)
-      {
-        if (file.EndsWith(".cs"))
-        {
-          var text = File.ReadAllText(file);
-          var split = text.Split(Environment.NewLine.ToCharArray());
-          Debug.Log(String.Join("|", Environment.NewLine.ToCharArray()));
-
-          for (int i = 0; i < split.Length; i++)
-          {
-            foreach (WwiseReplacement patch in WwisePatches)
+            string[] directories = Directory.GetDirectories(path);
+            ReplaceFiles(Directory.GetFiles(path), path);
+ 
+            foreach (string directory in directories)
             {
-              if (undo)
-              {
-                if (patch.ReverseReplaceIfNecessary(split[i], out string result))
-                {
-                  // Stop trying to replace things after the first replacement occurs
-                  split[i] = result;
-                  break;
-                }
-              }
-              else
-              {
-                if (patch.ReplaceIfNecessary(split[i], out string result))
-                {
-                  // Stop trying to replace things after the first replacement occurs
-                  split[i] = result;
-                  break;
-                }
-              }
+                GetDirectories(directory);
             }
-          }
-
-          List<string> nonBlankLines = new List<string>();
-          foreach (string line in split)
-          {
-            if (!string.IsNullOrWhiteSpace(line))
-              nonBlankLines.Add(line);
-          }
-
-          File.WriteAllLines(file, nonBlankLines);
         }
-      }
+        private static void ReplaceFiles(string[] files, string path)
+        {
+ 
+            foreach (string file in files)
+            {
+                if (file.EndsWith(".cs"))
+                {
+ 
+                    var text = File.ReadAllText(file);
+ 
+ 
+                    var split = text.Split(Environment.NewLine.ToCharArray());
+ 
+                    for (int i = 0; i < split.Length; i++)
+                    {
+                        //MAC
+                        if (split[i].Contains("#if (UNITY_STANDALONE_OSX && !UNITY_EDITOR) || UNITY_EDITOR_OSX"))
+                        {
+                            var old = split[i];
+                            split[i] = old.Replace("#if (UNITY_STANDALONE_OSX && !UNITY_EDITOR) || UNITY_EDITOR_OSX",
+                                                    "#if (UNITY_STANDALONE_OSX && !UNITY_EDITOR) || (UNITY_EDITOR_OSX && !UNITY_STANDALONE_WIN)");
+                            continue;
+                        }
+                        if (split[i].Equals("#if (UNITY_STANDALONE_OSX && !UNITY_EDITOR) || UNITY_EDITOR_OSX", StringComparison.OrdinalIgnoreCase))
+                        {
+ 
+                            split[i] = "#if (UNITY_STANDALONE_OSX && !UNITY_EDITOR) || (UNITY_EDITOR_OSX && !UNITY_STANDALONE_WIN)";
+                            continue;
+                        }
+ 
+ 
+                        //WIN
+                        if (split[i].Contains("#if (UNITY_STANDALONE_WIN && !UNITY_EDITOR) || UNITY_EDITOR_WIN"))
+                        {
+                            var old = split[i];
+                            split[i] = old.Replace("#if (UNITY_STANDALONE_WIN && !UNITY_EDITOR) || UNITY_EDITOR_WIN",
+                                                   "#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_WSA");
+                            continue;
+                        }
+                        if (split[i].Equals("#if (UNITY_STANDALONE_WIN && !UNITY_EDITOR) || UNITY_EDITOR_WIN",
+                                            StringComparison.OrdinalIgnoreCase))
+                        {
+ 
+                            split[i] =
+                                "#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_WSA";
+                            continue;
+                        }
+                    }
+                    File.WriteAllLines(file, split);
+ 
+ 
+ 
+ 
+             
+ 
+                }
+            }
+        }
+ 
+ 
+ 
+ 
+ 
+        public static void SetReleaseSetting()
+        {
+ 
+            AkPluginActivator.ActivateRelease();
+ 
+        }
+ 
+ 
     }
-
-    public static void SetReleaseSetting()
-    {
-      AkPluginActivator.ActivateRelease();
-    }
-  }
 }
