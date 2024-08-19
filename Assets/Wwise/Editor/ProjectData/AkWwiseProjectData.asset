@@ -12,14 +12,2104 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba2b8610fbb6a2e448a7a68f117c66c3, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Virtual Acoustics
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 196cb691de8f584c827edddbacf02d6b
+    ParentPath: Virtual Acoustics\Default Work Unit
+    guid: 196cb691de8f584c827edddbacf02d6b
+    GuidInternal: 
+    m_lastTime: -8585031739567151095
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: aa66b2e34fd8ed42a53d5a4e3b0d167d
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    guid: aa66b2e34fd8ed42a53d5a4e3b0d167d
+    GuidInternal: 
+    m_lastTime: -8585015997489869361
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: aa66b2e34fd8ed42a53d5a4e3b0d167d
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: music
+      guid: 40af97517136ca4293683241f1401852
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: aa66b2e34fd8ed42a53d5a4e3b0d167d
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: music
+        ObjectType: 2
+        guid: 40af97517136ca4293683241f1401852
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\music
+    - name: sfx
+      guid: dbdfd75a20728e49898a6f0b137ad976
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: aa66b2e34fd8ed42a53d5a4e3b0d167d
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: sfx
+        ObjectType: 2
+        guid: dbdfd75a20728e49898a6f0b137ad976
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\sfx
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: e7a312c7f9c3cb4d8311f6565e852255
+    ParentPath: SoundBanks\Default Work Unit
+    guid: e7a312c7f9c3cb4d8311f6565e852255
+    GuidInternal: 
+    m_lastTime: -8585015997483270993
+    List:
+    - name: InGame
+      guid: da7fa68ead5f7149b4970b88eb6b420d
+      id: 984691642
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e7a312c7f9c3cb4d8311f6565e852255
+      - ElementName: InGame
+        ObjectType: 7
+        guid: da7fa68ead5f7149b4970b88eb6b420d
+      Path: SoundBanks\Default Work Unit\InGame
+    - name: MainMenu
+      guid: 2726cea7d8a91f4bb4f8b3080a0e1fc8
+      id: 3604647259
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e7a312c7f9c3cb4d8311f6565e852255
+      - ElementName: MainMenu
+        ObjectType: 7
+        guid: 2726cea7d8a91f4bb4f8b3080a0e1fc8
+      Path: SoundBanks\Default Work Unit\MainMenu
+    - name: Tutorial
+      guid: d3c8388e17ccd84d83c13502d57eba9f
+      id: 3762955427
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: e7a312c7f9c3cb4d8311f6565e852255
+      - ElementName: Tutorial
+        ObjectType: 7
+        guid: d3c8388e17ccd84d83c13502d57eba9f
+      Path: SoundBanks\Default Work Unit\Tutorial
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 2621f2e587216f4092b302108c4d8946
+    ParentPath: Events\Default Work Unit
+    guid: 2621f2e587216f4092b302108c4d8946
+    GuidInternal: 
+    m_lastTime: -8585009950224789807
+    List: []
+  - PhysicalPath: Events\InGame.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: InGame
+      ObjectType: 12
+      guid: e8c7ad57f028174ba6dbfb95905729f6
+    ParentPath: Events\InGame
+    guid: e8c7ad57f028174ba6dbfb95905729f6
+    GuidInternal: 
+    m_lastTime: -8584920013013117932
+    List:
+    - name: Music
+      guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      Path: Events\InGame\Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ingamemusic_level
+      guid: c3213a5034fc9d4e9778a26449b5ed57
+      id: 1421871233
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_ingamemusic_level
+        ObjectType: 3
+        guid: c3213a5034fc9d4e9778a26449b5ed57
+      Path: Events\InGame\Music\Play_ingamemusic_level
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ingamemusic_tutorial
+      guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
+      id: 2248956983
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_ingamemusic_tutorial
+        ObjectType: 3
+        guid: 607b4bc4c13fc24dbd795a4d1f7b7b7e
+      Path: Events\InGame\Music\Play_ingamemusic_tutorial
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Oleada
+      guid: a51ea37c9d39a448823490fce01ad297
+      id: 417218340
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_Oleada
+        ObjectType: 3
+        guid: a51ea37c9d39a448823490fce01ad297
+      Path: Events\InGame\Music\Play_Oleada
+      maxAttenuation: 0
+      maxDuration: 3.3125
+      minDuration: 3.3125
+    - name: Play_Oleada_final
+      guid: fe905c02fb29264a953eafe08a42edaa
+      id: 3691145017
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_Oleada_final
+        ObjectType: 3
+        guid: fe905c02fb29264a953eafe08a42edaa
+      Path: Events\InGame\Music\Play_Oleada_final
+      maxAttenuation: 0
+      maxDuration: 4.901312
+      minDuration: 4.901312
+    - name: Play_Perder_Juego
+      guid: 7f0688f8eca3d14da04eb57ace82398c
+      id: 4180257511
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Play_Perder_Juego
+        ObjectType: 3
+        guid: 7f0688f8eca3d14da04eb57ace82398c
+      Path: Events\InGame\Music\Play_Perder_Juego
+      maxAttenuation: 0
+      maxDuration: 3.75
+      minDuration: 3.75
+    - name: Stop_ingamemusic_tutorial
+      guid: cb40f2243521e641a625e13709449945
+      id: 1845867801
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: InGame
+        ObjectType: 12
+        guid: e8c7ad57f028174ba6dbfb95905729f6
+      - ElementName: Music
+        ObjectType: 4
+        guid: 98b5b9d0dd6e2f4298a8b076ee2835f7
+      - ElementName: Stop_ingamemusic_tutorial
+        ObjectType: 3
+        guid: cb40f2243521e641a625e13709449945
+      Path: Events\InGame\Music\Stop_ingamemusic_tutorial
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  - PhysicalPath: Events\MainMenu.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: MainMenu
+      ObjectType: 12
+      guid: 90e94a09cbc25e498ac985591e320b8e
+    ParentPath: Events\MainMenu
+    guid: 90e94a09cbc25e498ac985591e320b8e
+    GuidInternal: 
+    m_lastTime: -8585015997502438025
+    List:
+    - name: MainMenuMusic
+      guid: 20d3f76c0f8fcb4cbd425a5bd70e4e98
+      id: 1991862712
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 90e94a09cbc25e498ac985591e320b8e
+      - ElementName: MainMenuMusic
+        ObjectType: 3
+        guid: 20d3f76c0f8fcb4cbd425a5bd70e4e98
+      Path: Events\MainMenu\MainMenuMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: StopMainMenuMusic
+      guid: 8899586f01fd3049bcbe7a0900df1aa9
+      id: 1420342416
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 90e94a09cbc25e498ac985591e320b8e
+      - ElementName: StopMainMenuMusic
+        ObjectType: 3
+        guid: 8899586f01fd3049bcbe7a0900df1aa9
+      Path: Events\MainMenu\StopMainMenuMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: UI_Menu_Madera
+      guid: 5a0df94f8c9f964a917dc48fff04f513
+      id: 2247504814
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: MainMenu
+        ObjectType: 12
+        guid: 90e94a09cbc25e498ac985591e320b8e
+      - ElementName: UI_Menu_Madera
+        ObjectType: 3
+        guid: 5a0df94f8c9f964a917dc48fff04f513
+      Path: Events\MainMenu\UI_Menu_Madera
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  - PhysicalPath: Events\Tutorial.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Tutorial
+      ObjectType: 12
+      guid: 090215d47f508a4c8e101bbd3392b83a
+    ParentPath: Events\Tutorial
+    guid: 090215d47f508a4c8e101bbd3392b83a
+    GuidInternal: 
+    m_lastTime: -8584919372678339785
+    List:
+    - name: Ambient
+      guid: 6c92e374d455ed4f9ad5a1931bbf86d2
+      id: 77978275
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Ambient
+        ObjectType: 4
+        guid: 6c92e374d455ed4f9ad5a1931bbf86d2
+      Path: Events\Tutorial\Ambient
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Couldron
+      guid: bb9f63df4af39c458c393f15e322dbf1
+      id: 2345463153
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Couldron
+        ObjectType: 4
+        guid: bb9f63df4af39c458c393f15e322dbf1
+      Path: Events\Tutorial\Couldron
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Defense_Muerte
+      guid: 9cb36b429d81bc41a26822404b3a77a9
+      id: 1363661528
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Defense_Muerte
+        ObjectType: 3
+        guid: 9cb36b429d81bc41a26822404b3a77a9
+      Path: Events\Tutorial\Turrets\Defense_Muerte
+      maxAttenuation: 0
+      maxDuration: 1.216001
+      minDuration: 0.96514
+    - name: Defense_SonidosEspeciales
+      guid: e0ac827259f7ae468dfc75d88e6e00b8
+      id: 3373196541
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Defense_SonidosEspeciales
+        ObjectType: 3
+        guid: e0ac827259f7ae468dfc75d88e6e00b8
+      Path: Events\Tutorial\Turrets\Defense_SonidosEspeciales
+      maxAttenuation: 0
+      maxDuration: 3
+      minDuration: 2.450873
+    - name: Eliminar_Cristal
+      guid: daf15df3ec5d504e8de6ccd8be89399f
+      id: 2258568403
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Table
+        ObjectType: 4
+        guid: 14f8c6b495194049a1b8af72cf8886a1
+      - ElementName: Eliminar_Cristal
+        ObjectType: 3
+        guid: daf15df3ec5d504e8de6ccd8be89399f
+      Path: Events\Tutorial\Table\Eliminar_Cristal
+      maxAttenuation: 0
+      maxDuration: 1.114063
+      minDuration: 1.114063
+    - name: Enemies
+      guid: ef5172ed5c1ef9418541c4e8b95641ab
+      id: 2242381963
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      Path: Events\Tutorial\Enemies
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Error_no_se_puede_poner_cristal
+      guid: a144e224fe0e264db420c76a442ef666
+      id: 1555542894
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Table
+        ObjectType: 4
+        guid: 14f8c6b495194049a1b8af72cf8886a1
+      - ElementName: Error_no_se_puede_poner_cristal
+        ObjectType: 3
+        guid: a144e224fe0e264db420c76a442ef666
+      Path: Events\Tutorial\Table\Error_no_se_puede_poner_cristal
+      maxAttenuation: 0
+      maxDuration: 2.035417
+      minDuration: 2.035417
+    - name: Error_no_se_puede_poner_mas_items_en_la_mesa
+      guid: b873674e88e6544ab1b40a95246881f8
+      id: 1478342869
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Table
+        ObjectType: 4
+        guid: 14f8c6b495194049a1b8af72cf8886a1
+      - ElementName: Error_no_se_puede_poner_mas_items_en_la_mesa
+        ObjectType: 3
+        guid: b873674e88e6544ab1b40a95246881f8
+      Path: Events\Tutorial\Table\Error_no_se_puede_poner_mas_items_en_la_mesa
+      maxAttenuation: 0
+      maxDuration: 1.035417
+      minDuration: 1.035417
+    - name: Explosive_Disparo
+      guid: 8411edbb7c92044ba27be1a089f1c118
+      id: 2814344719
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Explosive_Disparo
+        ObjectType: 3
+        guid: 8411edbb7c92044ba27be1a089f1c118
+      Path: Events\Tutorial\Turrets\Explosive_Disparo
+      maxAttenuation: 0
+      maxDuration: 3.845272
+      minDuration: 3.845272
+    - name: Explosive_Muerte
+      guid: e4f999d5e029854cb381afc46c5697a7
+      id: 3296522035
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Explosive_Muerte
+        ObjectType: 3
+        guid: e4f999d5e029854cb381afc46c5697a7
+      Path: Events\Tutorial\Turrets\Explosive_Muerte
+      maxAttenuation: 0
+      maxDuration: 0.73314
+      minDuration: 0.581894
+    - name: Explosive_SonidoEspecial
+      guid: fde4a7f4abb26f44a2028b5feae6c705
+      id: 2541590549
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Explosive_SonidoEspecial
+        ObjectType: 3
+        guid: fde4a7f4abb26f44a2028b5feae6c705
+      Path: Events\Tutorial\Turrets\Explosive_SonidoEspecial
+      maxAttenuation: 0
+      maxDuration: 1.852812
+      minDuration: 1.236604
+    - name: Interfaz_AceptarContinuar
+      guid: f108b2afdbf9d94e8a129dfcebd70b4e
+      id: 3880584468
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: UI
+        ObjectType: 4
+        guid: 21a76287218894459eb36f22cc7e5676
+      - ElementName: Interfaz_AceptarContinuar
+        ObjectType: 3
+        guid: f108b2afdbf9d94e8a129dfcebd70b4e
+      Path: Events\Tutorial\UI\Interfaz_AceptarContinuar
+      maxAttenuation: 0
+      maxDuration: 1.14424
+      minDuration: 1.14424
+    - name: Laser_Disparo
+      guid: 9f816537e6b6e54d8eb2818de946f797
+      id: 3298473939
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Laser_Disparo
+        ObjectType: 3
+        guid: 9f816537e6b6e54d8eb2818de946f797
+      Path: Events\Tutorial\Turrets\Laser_Disparo
+      maxAttenuation: 0
+      maxDuration: 0.964597
+      minDuration: 0.859358
+    - name: Laser_Muerte
+      guid: 415f00341a0aa64b8a9c892d2c62b715
+      id: 3116544519
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Laser_Muerte
+        ObjectType: 3
+        guid: 415f00341a0aa64b8a9c892d2c62b715
+      Path: Events\Tutorial\Turrets\Laser_Muerte
+      maxAttenuation: 0
+      maxDuration: 1.513252
+      minDuration: 1.272488
+    - name: Laser_SonidoEspecial
+      guid: af97792261fd8d498348d7b0a5ace0af
+      id: 2203504569
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Laser_SonidoEspecial
+        ObjectType: 3
+        guid: af97792261fd8d498348d7b0a5ace0af
+      Path: Events\Tutorial\Turrets\Laser_SonidoEspecial
+      maxAttenuation: 0
+      maxDuration: 6.224346
+      minDuration: 5.545261
+    - name: Play_Agarrar_Item_Frasco
+      guid: 10a870c57902254ebc5e6558907bd42c
+      id: 2559549617
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Table
+        ObjectType: 4
+        guid: 14f8c6b495194049a1b8af72cf8886a1
+      - ElementName: Play_Agarrar_Item_Frasco
+        ObjectType: 3
+        guid: 10a870c57902254ebc5e6558907bd42c
+      Path: Events\Tutorial\Table\Play_Agarrar_Item_Frasco
+      maxAttenuation: 0
+      maxDuration: 1.291667
+      minDuration: 1.291667
+    - name: Play_Agarrar_item_Porcion
+      guid: a7abf4710b467a4ca10497656f8eb7f7
+      id: 2191355065
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Couldron
+        ObjectType: 4
+        guid: bb9f63df4af39c458c393f15e322dbf1
+      - ElementName: Play_Agarrar_item_Porcion
+        ObjectType: 3
+        guid: a7abf4710b467a4ca10497656f8eb7f7
+      Path: Events\Tutorial\Couldron\Play_Agarrar_item_Porcion
+      maxAttenuation: 0
+      maxDuration: 0.837393
+      minDuration: 0.837393
+    - name: Play_AMB_Bosque_Noche
+      guid: a1c210c0c7f81449ba28992f9c5ece69
+      id: 1452442514
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Ambient
+        ObjectType: 4
+        guid: 6c92e374d455ed4f9ad5a1931bbf86d2
+      - ElementName: Play_AMB_Bosque_Noche
+        ObjectType: 3
+        guid: a1c210c0c7f81449ba28992f9c5ece69
+      Path: Events\Tutorial\Ambient\Play_AMB_Bosque_Noche
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_AMB_Tutorial
+      guid: 9c6f55a4a8f4a44596943c0b9eac97a9
+      id: 4120818535
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Ambient
+        ObjectType: 4
+        guid: 6c92e374d455ed4f9ad5a1931bbf86d2
+      - ElementName: Play_AMB_Tutorial
+        ObjectType: 3
+        guid: 9c6f55a4a8f4a44596943c0b9eac97a9
+      Path: Events\Tutorial\Ambient\Play_AMB_Tutorial
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Charger_Desplazamiento
+      guid: 8748a78de80bee41ad8b716c4198178f
+      id: 2703840397
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Play_Charger_Desplazamiento
+        ObjectType: 3
+        guid: 8748a78de80bee41ad8b716c4198178f
+      Path: Events\Tutorial\Enemies\Play_Charger_Desplazamiento
+      maxAttenuation: 0
+      maxDuration: 16.378975
+      minDuration: 16.378975
+    - name: Play_Charger_Esfuerzo_Ataque
+      guid: 7dfbc9627a95e3458e49373137765ff7
+      id: 2386456392
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Play_Charger_Esfuerzo_Ataque
+        ObjectType: 3
+        guid: 7dfbc9627a95e3458e49373137765ff7
+      Path: Events\Tutorial\Enemies\Play_Charger_Esfuerzo_Ataque
+      maxAttenuation: 0
+      maxDuration: 1.083045
+      minDuration: 0.888476
+    - name: Play_Charger_Muerte
+      guid: cf97a45ef3f661448f0dbbfd29d36dce
+      id: 1925760625
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Play_Charger_Muerte
+        ObjectType: 3
+        guid: cf97a45ef3f661448f0dbbfd29d36dce
+      Path: Events\Tutorial\Enemies\Play_Charger_Muerte
+      maxAttenuation: 0
+      maxDuration: 2.806155
+      minDuration: 0.975521
+    - name: Play_Charger_RecibeDa_o
+      guid: a477ef8a2955f54eba00357d1c350edb
+      id: 63562060
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Play_Charger_RecibeDa_o
+        ObjectType: 3
+        guid: a477ef8a2955f54eba00357d1c350edb
+      Path: Events\Tutorial\Enemies\Play_Charger_RecibeDa_o
+      maxAttenuation: 0
+      maxDuration: 0.770595
+      minDuration: 0.267241
+    - name: Play_Charger_SonidoAdicional
+      guid: fa41be04bf489c4087167f55ffcd2d8c
+      id: 3362525071
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Play_Charger_SonidoAdicional
+        ObjectType: 3
+        guid: fa41be04bf489c4087167f55ffcd2d8c
+      Path: Events\Tutorial\Enemies\Play_Charger_SonidoAdicional
+      maxAttenuation: 0
+      maxDuration: 0.914614
+      minDuration: 0.585353
+    - name: Play_Charger_SonidoRandom
+      guid: 9206453fc376d94aa8b22ce0c20ba91c
+      id: 2563681920
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Play_Charger_SonidoRandom
+        ObjectType: 3
+        guid: 9206453fc376d94aa8b22ce0c20ba91c
+      Path: Events\Tutorial\Enemies\Play_Charger_SonidoRandom
+      maxAttenuation: 0
+      maxDuration: 1.497284
+      minDuration: 0.982277
+    - name: Play_Enoajdo_adicional
+      guid: 0557dc7aea214c4896db5caae58f8502
+      id: 1475103013
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Play_Enoajdo_adicional
+        ObjectType: 3
+        guid: 0557dc7aea214c4896db5caae58f8502
+      Path: Events\Tutorial\Enemies\Play_Enoajdo_adicional
+      maxAttenuation: 0
+      maxDuration: 1.073292
+      minDuration: 1.073292
+    - name: Play_Enojado__muerte
+      guid: bb24828aa223564083cd35540bd86c70
+      id: 998038978
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Play_Enojado__muerte
+        ObjectType: 3
+        guid: bb24828aa223564083cd35540bd86c70
+      Path: Events\Tutorial\Enemies\Play_Enojado__muerte
+      maxAttenuation: 0
+      maxDuration: 1.188254
+      minDuration: 0.58825
+    - name: Play_Enojado_esfuerzo_y_ataque
+      guid: cee055474472534b819c641de5f88671
+      id: 953774878
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Play_Enojado_esfuerzo_y_ataque
+        ObjectType: 3
+        guid: cee055474472534b819c641de5f88671
+      Path: Events\Tutorial\Enemies\Play_Enojado_esfuerzo_y_ataque
+      maxAttenuation: 0
+      maxDuration: 1.376424
+      minDuration: 0.776317
+    - name: Play_Enojado_random
+      guid: 62ea94a534771b48942fcd363551cbbd
+      id: 349902616
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Play_Enojado_random
+        ObjectType: 3
+        guid: 62ea94a534771b48942fcd363551cbbd
+      Path: Events\Tutorial\Enemies\Play_Enojado_random
+      maxAttenuation: 0
+      maxDuration: 1.269087
+      minDuration: 0.317077
+    - name: Play_Enojado_recibe_da_o
+      guid: 0bb1c85b4f56b14e836e068cba60d5db
+      id: 2934022031
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Play_Enojado_recibe_da_o
+        ObjectType: 3
+        guid: 0bb1c85b4f56b14e836e068cba60d5db
+      Path: Events\Tutorial\Enemies\Play_Enojado_recibe_da_o
+      maxAttenuation: 0
+      maxDuration: 0.619101
+      minDuration: 0.241355
+    - name: Play_libro_abrir_3
+      guid: ec1542ec49890643bc208a0b55e77645
+      id: 707032169
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Table
+        ObjectType: 4
+        guid: 14f8c6b495194049a1b8af72cf8886a1
+      - ElementName: Play_libro_abrir_3
+        ObjectType: 3
+        guid: ec1542ec49890643bc208a0b55e77645
+      Path: Events\Tutorial\Table\Play_libro_abrir_3
+      maxAttenuation: 0
+      maxDuration: 1.029897
+      minDuration: 0.985663
+    - name: Play_Pocion_Lista
+      guid: a32c4b5464d5e34f95196ca03ead2ebc
+      id: 4143622118
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Couldron
+        ObjectType: 4
+        guid: bb9f63df4af39c458c393f15e322dbf1
+      - ElementName: Play_Pocion_Lista
+        ObjectType: 3
+        guid: a32c4b5464d5e34f95196ca03ead2ebc
+      Path: Events\Tutorial\Couldron\Play_Pocion_Lista
+      maxAttenuation: 0
+      maxDuration: 1.989583
+      minDuration: 1.989583
+    - name: Play_Pocion_Preparandose
+      guid: 17ab5b1fb990cf4bb66d73e6a03ab3dc
+      id: 4052632251
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Couldron
+        ObjectType: 4
+        guid: bb9f63df4af39c458c393f15e322dbf1
+      - ElementName: Play_Pocion_Preparandose
+        ObjectType: 3
+        guid: 17ab5b1fb990cf4bb66d73e6a03ab3dc
+      Path: Events\Tutorial\Couldron\Play_Pocion_Preparandose
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Poner_Item_caldero
+      guid: 39808d42d0505b448d6c0b7f1019032b
+      id: 1672850383
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Couldron
+        ObjectType: 4
+        guid: bb9f63df4af39c458c393f15e322dbf1
+      - ElementName: Play_Poner_Item_caldero
+        ObjectType: 3
+        guid: 39808d42d0505b448d6c0b7f1019032b
+      Path: Events\Tutorial\Couldron\Play_Poner_Item_caldero
+      maxAttenuation: 0
+      maxDuration: 0.949319
+      minDuration: 0.949319
+    - name: Play_Procesar_Agarrar
+      guid: 861081d81c6a074bae335289dac2a7eb
+      id: 3638962258
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Table
+        ObjectType: 4
+        guid: 14f8c6b495194049a1b8af72cf8886a1
+      - ElementName: Play_Procesar_Agarrar
+        ObjectType: 3
+        guid: 861081d81c6a074bae335289dac2a7eb
+      Path: Events\Tutorial\Table\Play_Procesar_Agarrar
+      maxAttenuation: 0
+      maxDuration: 0.521302
+      minDuration: 0.521302
+    - name: Play_SonidoRandom_Caldero
+      guid: f13376a43d052249aa02a576dc0d654c
+      id: 3760360352
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Couldron
+        ObjectType: 4
+        guid: bb9f63df4af39c458c393f15e322dbf1
+      - ElementName: Play_SonidoRandom_Caldero
+        ObjectType: 3
+        guid: f13376a43d052249aa02a576dc0d654c
+      Path: Events\Tutorial\Couldron\Play_SonidoRandom_Caldero
+      maxAttenuation: 0
+      maxDuration: 18.478844
+      minDuration: 18.478844
+    - name: Player
+      guid: f2c1dcaef3244345967e12cf093cdc8a
+      id: 1069431850
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Player
+        ObjectType: 4
+        guid: f2c1dcaef3244345967e12cf093cdc8a
+      Path: Events\Tutorial\Player
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Agarrar
+      guid: df656973caee784b949f534949c2c3ee
+      id: 314498979
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Table
+        ObjectType: 4
+        guid: 14f8c6b495194049a1b8af72cf8886a1
+      - ElementName: Player_Agarrar
+        ObjectType: 3
+        guid: df656973caee784b949f534949c2c3ee
+      Path: Events\Tutorial\Table\Player_Agarrar
+      maxAttenuation: 0
+      maxDuration: 0.375521
+      minDuration: 0.375521
+    - name: Player_Desplazamiento
+      guid: 3859c44d27fccc449d35427fc694228b
+      id: 557674403
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Player
+        ObjectType: 4
+        guid: f2c1dcaef3244345967e12cf093cdc8a
+      - ElementName: Player_Desplazamiento
+        ObjectType: 3
+        guid: 3859c44d27fccc449d35427fc694228b
+      Path: Events\Tutorial\Player\Player_Desplazamiento
+      maxAttenuation: 0
+      maxDuration: 0.703456
+      minDuration: 0.221456
+    - name: Player_Muerte
+      guid: a62443225b84d244aa08488eb7d8c962
+      id: 2906595307
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Player
+        ObjectType: 4
+        guid: f2c1dcaef3244345967e12cf093cdc8a
+      - ElementName: Player_Muerte
+        ObjectType: 3
+        guid: a62443225b84d244aa08488eb7d8c962
+      Path: Events\Tutorial\Player\Player_Muerte
+      maxAttenuation: 0
+      maxDuration: 1.64424
+      minDuration: 1.64424
+    - name: Player_Soltar
+      guid: e039c9cbdb4fa8449f79b1c7217abb25
+      id: 3883559502
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Table
+        ObjectType: 4
+        guid: 14f8c6b495194049a1b8af72cf8886a1
+      - ElementName: Player_Soltar
+        ObjectType: 3
+        guid: e039c9cbdb4fa8449f79b1c7217abb25
+      Path: Events\Tutorial\Table\Player_Soltar
+      maxAttenuation: 0
+      maxDuration: 0.375521
+      minDuration: 0.375521
+    - name: Player_SonidoRandom
+      guid: b990515cfe67214a9b10c2b53452b293
+      id: 3887090402
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Player
+        ObjectType: 4
+        guid: f2c1dcaef3244345967e12cf093cdc8a
+      - ElementName: Player_SonidoRandom
+        ObjectType: 3
+        guid: b990515cfe67214a9b10c2b53452b293
+      Path: Events\Tutorial\Player\Player_SonidoRandom
+      maxAttenuation: 0
+      maxDuration: 1.75
+      minDuration: 1.75
+    - name: Procesar_Item
+      guid: 69e78ca6a103f046bc5f306ffa81b59e
+      id: 1061034442
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Table
+        ObjectType: 4
+        guid: 14f8c6b495194049a1b8af72cf8886a1
+      - ElementName: Procesar_Item
+        ObjectType: 3
+        guid: 69e78ca6a103f046bc5f306ffa81b59e
+      Path: Events\Tutorial\Table\Procesar_Item
+      maxAttenuation: 0
+      maxDuration: 0.166451
+      minDuration: 0.127788
+    - name: Proyectil_Disparo
+      guid: d2a2044c2e5da34c97f4dd6ead0de963
+      id: 4000783731
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Proyectil_Disparo
+        ObjectType: 3
+        guid: d2a2044c2e5da34c97f4dd6ead0de963
+      Path: Events\Tutorial\Turrets\Proyectil_Disparo
+      maxAttenuation: 0
+      maxDuration: 1.186787
+      minDuration: 0.941953
+    - name: Proyectil_Muerte
+      guid: 97c1c36e30ac1444a33c0528006a2693
+      id: 1918569767
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Proyectil_Muerte
+        ObjectType: 3
+        guid: 97c1c36e30ac1444a33c0528006a2693
+      Path: Events\Tutorial\Turrets\Proyectil_Muerte
+      maxAttenuation: 0
+      maxDuration: 0.455594
+      minDuration: 0.405888
+    - name: Rango_Desplazamiento
+      guid: 52a976eec316694e9a00cc6d61a8dd1c
+      id: 2498537471
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Rango_Desplazamiento
+        ObjectType: 3
+        guid: 52a976eec316694e9a00cc6d61a8dd1c
+      Path: Events\Tutorial\Enemies\Rango_Desplazamiento
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Rango_Esfuerzo_Ataque
+      guid: e392e7b419468845b373a15b15e000f1
+      id: 9216990
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Rango_Esfuerzo_Ataque
+        ObjectType: 3
+        guid: e392e7b419468845b373a15b15e000f1
+      Path: Events\Tutorial\Enemies\Rango_Esfuerzo_Ataque
+      maxAttenuation: 0
+      maxDuration: 0.827802
+      minDuration: 0.646033
+    - name: Rango_Muerte
+      guid: f858375faba52241a32f5c4cee7ab39e
+      id: 263685855
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Rango_Muerte
+        ObjectType: 3
+        guid: f858375faba52241a32f5c4cee7ab39e
+      Path: Events\Tutorial\Enemies\Rango_Muerte
+      maxAttenuation: 0
+      maxDuration: 0.883124
+      minDuration: 0.656966
+    - name: Rango_RecibeDa_o
+      guid: c3c27a8f0445b0458e74d96c1fdea425
+      id: 202375290
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Rango_RecibeDa_o
+        ObjectType: 3
+        guid: c3c27a8f0445b0458e74d96c1fdea425
+      Path: Events\Tutorial\Enemies\Rango_RecibeDa_o
+      maxAttenuation: 0
+      maxDuration: 0.556113
+      minDuration: 0.436366
+    - name: Rango_SonidoRandom
+      guid: 4c217bb8b58c87468111c1a3560a06bd
+      id: 2238034958
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Rango_SonidoRandom
+        ObjectType: 3
+        guid: 4c217bb8b58c87468111c1a3560a06bd
+      Path: Events\Tutorial\Enemies\Rango_SonidoRandom
+      maxAttenuation: 0
+      maxDuration: 3.464183
+      minDuration: 1.580528
+    - name: Recetario_Cerrar
+      guid: 0ccf1e2ddcf0ef4cbf34bdde0ce087b6
+      id: 3840329095
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Table
+        ObjectType: 4
+        guid: 14f8c6b495194049a1b8af72cf8886a1
+      - ElementName: Recetario_Cerrar
+        ObjectType: 3
+        guid: 0ccf1e2ddcf0ef4cbf34bdde0ce087b6
+      Path: Events\Tutorial\Table\Recetario_Cerrar
+      maxAttenuation: 0
+      maxDuration: 0.69712
+      minDuration: 0.69712
+    - name: Reforzado_Ataca
+      guid: 0cbf77fd3f05704482fcf884fba01dc4
+      id: 143546502
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Reforzado_Ataca
+        ObjectType: 3
+        guid: 0cbf77fd3f05704482fcf884fba01dc4
+      Path: Events\Tutorial\Enemies\Reforzado_Ataca
+      maxAttenuation: 0
+      maxDuration: 1.620181
+      minDuration: 1.620181
+    - name: Reforzado_Danio
+      guid: 7cec0158b43b8e4bb71ab724f2374936
+      id: 169283807
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Reforzado_Danio
+        ObjectType: 3
+        guid: 7cec0158b43b8e4bb71ab724f2374936
+      Path: Events\Tutorial\Enemies\Reforzado_Danio
+      maxAttenuation: 0
+      maxDuration: 1.139433
+      minDuration: 1.139433
+    - name: Reforzado_Desplazamiento
+      guid: ed0c85d67feed14db6d2808b4c398fdf
+      id: 2871512888
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Reforzado_Desplazamiento
+        ObjectType: 3
+        guid: ed0c85d67feed14db6d2808b4c398fdf
+      Path: Events\Tutorial\Enemies\Reforzado_Desplazamiento
+      maxAttenuation: 0
+      maxDuration: 16.538458
+      minDuration: 16.538458
+    - name: Reforzado_Muerte
+      guid: 5fb20ba86e3c1a45b6e44a9db1823188
+      id: 1037903552
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Reforzado_Muerte
+        ObjectType: 3
+        guid: 5fb20ba86e3c1a45b6e44a9db1823188
+      Path: Events\Tutorial\Enemies\Reforzado_Muerte
+      maxAttenuation: 0
+      maxDuration: 0.875011
+      minDuration: 0.875011
+    - name: Reforzado_Random
+      guid: cbe5a1103db8ab439e09d41d1a8ce4e7
+      id: 4076529347
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Reforzado_Random
+        ObjectType: 3
+        guid: cbe5a1103db8ab439e09d41d1a8ce4e7
+      Path: Events\Tutorial\Enemies\Reforzado_Random
+      maxAttenuation: 0
+      maxDuration: 1.754807
+      minDuration: 1.754807
+    - name: Simple_Ataca
+      guid: 6d3fcbb01af3cd45bb48d3cce1b1a18b
+      id: 32974598
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Simple_Ataca
+        ObjectType: 3
+        guid: 6d3fcbb01af3cd45bb48d3cce1b1a18b
+      Path: Events\Tutorial\Enemies\Simple_Ataca
+      maxAttenuation: 0
+      maxDuration: 1.685201
+      minDuration: 1.337545
+    - name: Simple_Desplazamiento
+      guid: 045e5bd32a318849a29a9da25c8c2cfc
+      id: 2558775992
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Simple_Desplazamiento
+        ObjectType: 3
+        guid: 045e5bd32a318849a29a9da25c8c2cfc
+      Path: Events\Tutorial\Enemies\Simple_Desplazamiento
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Simple_Muerte
+      guid: 287ec605a0ccc6419ba5620df1b04fb8
+      id: 1574582848
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Simple_Muerte
+        ObjectType: 3
+        guid: 287ec605a0ccc6419ba5620df1b04fb8
+      Path: Events\Tutorial\Enemies\Simple_Muerte
+      maxAttenuation: 0
+      maxDuration: 0.990687
+      minDuration: 0.257722
+    - name: Simple_RecibeDano
+      guid: 447c33a48ec6814e899a04556fd155b7
+      id: 1545430338
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Simple_RecibeDano
+        ObjectType: 3
+        guid: 447c33a48ec6814e899a04556fd155b7
+      Path: Events\Tutorial\Enemies\Simple_RecibeDano
+      maxAttenuation: 0
+      maxDuration: 0.6875
+      minDuration: 0.6875
+    - name: Simple_SonidoRandom
+      guid: c4624f59fbd0de4cb301a57b665a9e31
+      id: 4237093597
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: ef5172ed5c1ef9418541c4e8b95641ab
+      - ElementName: Simple_SonidoRandom
+        ObjectType: 3
+        guid: c4624f59fbd0de4cb301a57b665a9e31
+      Path: Events\Tutorial\Enemies\Simple_SonidoRandom
+      maxAttenuation: 0
+      maxDuration: 0.92587
+      minDuration: 0.654689
+    - name: Table
+      guid: 14f8c6b495194049a1b8af72cf8886a1
+      id: 2048817515
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Table
+        ObjectType: 4
+        guid: 14f8c6b495194049a1b8af72cf8886a1
+      Path: Events\Tutorial\Table
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Turret_Place
+      guid: 4b461783b2a19548b6e1944116f17efd
+      id: 3187575487
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Turret_Place
+        ObjectType: 3
+        guid: 4b461783b2a19548b6e1944116f17efd
+      Path: Events\Tutorial\Turrets\Turret_Place
+      maxAttenuation: 0
+      maxDuration: 0.687521
+      minDuration: 0.687521
+    - name: Turrets
+      guid: 8f23604e43261b409a33b1911f950776
+      id: 212919962
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      Path: Events\Tutorial\Turrets
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: UI
+      guid: 21a76287218894459eb36f22cc7e5676
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: UI
+        ObjectType: 4
+        guid: 21a76287218894459eb36f22cc7e5676
+      Path: Events\Tutorial\UI
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Useless_Muerte
+      guid: 0085786693475e4ca8fb82f4065ea625
+      id: 3059053578
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Useless_Muerte
+        ObjectType: 3
+        guid: 0085786693475e4ca8fb82f4065ea625
+      Path: Events\Tutorial\Turrets\Useless_Muerte
+      maxAttenuation: 0
+      maxDuration: 0.693704
+      minDuration: 0.583333
+    - name: Useless_SonidoEspecial
+      guid: e70c9c449ac3b049b8688bc5c6fd341e
+      id: 3256636576
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Tutorial
+        ObjectType: 12
+        guid: 090215d47f508a4c8e101bbd3392b83a
+      - ElementName: Turrets
+        ObjectType: 4
+        guid: 8f23604e43261b409a33b1911f950776
+      - ElementName: Useless_SonidoEspecial
+        ObjectType: 3
+        guid: e70c9c449ac3b049b8688bc5c6fd341e
+      Path: Events\Tutorial\Turrets\Useless_SonidoEspecial
+      maxAttenuation: 0
+      maxDuration: 1.001075
+      minDuration: 0.8418
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: eda32d6682632e48b8937bccdfa5c6be
+    ParentPath: Game Parameters\Default Work Unit
+    guid: eda32d6682632e48b8937bccdfa5c6be
+    GuidInternal: 
+    m_lastTime: -8585015997502412291
+    List:
+    - name: Master
+      guid: 8a36ad170602d64e96318d211728477e
+      id: 4056684167
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eda32d6682632e48b8937bccdfa5c6be
+      - ElementName: Master
+        ObjectType: 13
+        guid: 8a36ad170602d64e96318d211728477e
+      Path: Game Parameters\Default Work Unit\Master
+    - name: Music
+      guid: a8950a50c078df46840619f2d6b1d1b6
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eda32d6682632e48b8937bccdfa5c6be
+      - ElementName: Music
+        ObjectType: 13
+        guid: a8950a50c078df46840619f2d6b1d1b6
+      Path: Game Parameters\Default Work Unit\Music
+    - name: SFX
+      guid: e81e54f9e2384d47986f52be4833abd0
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eda32d6682632e48b8937bccdfa5c6be
+      - ElementName: SFX
+        ObjectType: 13
+        guid: e81e54f9e2384d47986f52be4833abd0
+      Path: Game Parameters\Default Work Unit\SFX
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 453e836da4731d43aaf2ace66950652e
+    ParentPath: States\Default Work Unit
+    guid: 453e836da4731d43aaf2ace66950652e
+    GuidInternal: 
+    m_lastTime: -8585031739567171995
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: d95443d702661b448cd3207c91b5b886
+    ParentPath: Switches\Default Work Unit
+    guid: d95443d702661b448cd3207c91b5b886
+    GuidInternal: 
+    m_lastTime: -8584919988502408020
+    List:
+    - name: ingamemusic_level
+      guid: 29bcdb2a22c379459eec19e2b879a83c
+      id: 563444820
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d95443d702661b448cd3207c91b5b886
+      - ElementName: ingamemusic_level
+        ObjectType: 11
+        guid: 29bcdb2a22c379459eec19e2b879a83c
+      Path: Switches\Default Work Unit\ingamemusic_level
+      values:
+      - name: A1summer_easy
+        guid: 289ced03cc5f6c46a5d3b5d3bfa03977
+        id: 3972850513
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: A1summer_easy
+          ObjectType: 10
+          guid: 289ced03cc5f6c46a5d3b5d3bfa03977
+      - name: A1summer_hard
+        guid: 270b059edf955d44b3e8e9b97c385a17
+        id: 2748726444
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: A1summer_hard
+          ObjectType: 10
+          guid: 270b059edf955d44b3e8e9b97c385a17
+      - name: A1summer_mid
+        guid: ba3f72ed10ee1247973d5eee926ec1f4
+        id: 2561619007
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: A1summer_mid
+          ObjectType: 10
+          guid: ba3f72ed10ee1247973d5eee926ec1f4
+      - name: Bautum_easy
+        guid: 4e34a55b9634374693d24e08a3e5bf65
+        id: 265221752
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Bautum_easy
+          ObjectType: 10
+          guid: 4e34a55b9634374693d24e08a3e5bf65
+      - name: Bautum_hard
+        guid: 4f57675209655a498976d83e16209602
+        id: 2900492669
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Bautum_hard
+          ObjectType: 10
+          guid: 4f57675209655a498976d83e16209602
+      - name: Bautum_mid
+        guid: 9791360f467b094c88db11012b6be166
+        id: 2706813548
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Bautum_mid
+          ObjectType: 10
+          guid: 9791360f467b094c88db11012b6be166
+      - name: Cwinter_easy
+        guid: 022ec8f136a2f64baa49cbf2f66b6185
+        id: 2671927576
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Cwinter_easy
+          ObjectType: 10
+          guid: 022ec8f136a2f64baa49cbf2f66b6185
+      - name: Cwinter_hard
+        guid: c7b01bf3d0bcd54c88cf00d752d20328
+        id: 1053807901
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Cwinter_hard
+          ObjectType: 10
+          guid: c7b01bf3d0bcd54c88cf00d752d20328
+      - name: Cwinter_mid
+        guid: e037572fcb758149bd6776fbc1e5b7c2
+        id: 1933559692
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Cwinter_mid
+          ObjectType: 10
+          guid: e037572fcb758149bd6776fbc1e5b7c2
+      - name: Dspring_easy
+        guid: 4c85363addedfd46a936a112eb6e4dd9
+        id: 1684312137
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Dspring_easy
+          ObjectType: 10
+          guid: 4c85363addedfd46a936a112eb6e4dd9
+      - name: Dspring_hard
+        guid: f6008602616c7c4cb894c0ef38c744e9
+        id: 3944199108
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Dspring_hard
+          ObjectType: 10
+          guid: f6008602616c7c4cb894c0ef38c744e9
+      - name: Dspring_mid
+        guid: 5312d5a999125d44be56313d102955a8
+        id: 881028919
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: Dspring_mid
+          ObjectType: 10
+          guid: 5312d5a999125d44be56313d102955a8
+      - name: LOOSE
+        guid: 37d93039aefe40439faaf226dba1e665
+        id: 174960569
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: LOOSE
+          ObjectType: 10
+          guid: 37d93039aefe40439faaf226dba1e665
+      - name: WIN
+        guid: 6486ae38b4b58c4aa3e7a54b772c1f05
+        id: 979765101
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_level
+          ObjectType: 11
+          guid: 29bcdb2a22c379459eec19e2b879a83c
+        - ElementName: WIN
+          ObjectType: 10
+          guid: 6486ae38b4b58c4aa3e7a54b772c1f05
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ingamemusic_tutorial
+      guid: b7c9abfca947d640a7824da78c892ec4
+      id: 2707460344
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d95443d702661b448cd3207c91b5b886
+      - ElementName: ingamemusic_tutorial
+        ObjectType: 11
+        guid: b7c9abfca947d640a7824da78c892ec4
+      Path: Switches\Default Work Unit\ingamemusic_tutorial
+      values:
+      - name: LOOSE
+        guid: ad64fae77bb926459dda9f7f3c30edd9
+        id: 174960569
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_tutorial
+          ObjectType: 11
+          guid: b7c9abfca947d640a7824da78c892ec4
+        - ElementName: LOOSE
+          ObjectType: 10
+          guid: ad64fae77bb926459dda9f7f3c30edd9
+      - name: wave1
+        guid: b83ac7acde303846b773d905f57c6564
+        id: 2453122375
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_tutorial
+          ObjectType: 11
+          guid: b7c9abfca947d640a7824da78c892ec4
+        - ElementName: wave1
+          ObjectType: 10
+          guid: b83ac7acde303846b773d905f57c6564
+      - name: WIN
+        guid: 41495b3a55ecd44bb47ef5587787d9d3
+        id: 979765101
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d95443d702661b448cd3207c91b5b886
+        - ElementName: ingamemusic_tutorial
+          ObjectType: 11
+          guid: b7c9abfca947d640a7824da78c892ec4
+        - ElementName: WIN
+          ObjectType: 10
+          guid: 41495b3a55ecd44bb47ef5587787d9d3
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: befacd619a68c341acea8777258db81d
+    ParentPath: Triggers\Default Work Unit
+    guid: befacd619a68c341acea8777258db81d
+    GuidInternal: 
+    m_lastTime: -8585031739567161490
+    List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
